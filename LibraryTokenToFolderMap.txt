@@ -1,1 +1,4 @@
-Lib:MetodiVari -> 
+Lib:Basic -> core
+Lib:Eventi -> events
+Lib:Shede -> gui
+Lib:MetodiVari -> utility
