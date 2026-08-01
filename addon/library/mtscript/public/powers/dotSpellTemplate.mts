@@ -36,7 +36,7 @@
 [h, if(sMacroEffectName == ""): sMacroEffectName = "basicDotEffect@Lib:Poteri"]
 
 <!-- effetto -->
-[h, macro("getUltimaDifesa@Lib:Combattimento"): source]
+[h, macro("combat/getUltimaDifesa@this"): source]
 [h: sDifesa = macro.return]
 
 [h: oParamMacro = json.set("","danno",sDanno,"LL",iLL,"LP",iLP,"spellLib",spellName,"lanciatore", sLanciatore,"critRes", bCrit,"potenzaCritico",getPCrit(source),"effettoAux",sEffettoAux,"difesa",sDifesa)]

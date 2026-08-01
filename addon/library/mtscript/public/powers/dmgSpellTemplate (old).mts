@@ -7,7 +7,7 @@
 [h: switchToken(source)]
 [h: elemento = getLibProperty("elemento",spellName)]
 
-[macro("getUltimoCritico@Lib:Combattimento"):source]
+[macro("combat/getUltimoCritico@this"):source]
 [h: critRes = macro.return]
 
 [h: args = json.set("","source",source,"target",target,"spellName",spellName,"critRes",critRes)]

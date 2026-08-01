@@ -1,5 +1,16 @@
 Lib:Basic -> core
 Lib:Eventi -> events
-Lib:Shede -> gui
 Lib:MetodiVari -> utility
 Lib:Poteri -> powers
+Lib:Combattimento -> combat
+
+# Next in line to be mapped
+Lib:Movement -> movement
+
+
+# Not Mapped yet 
+Lib:Sheda -> gui
+Lib:OggettiUsabili
+Lib:Meccaniche
+Lib:TokenMacros
+Lib:Mat

@@ -29,7 +29,7 @@ default: {
 	[assert(0,"Tipo di Tiro Salvezza non riconosciuto")]
 }]
 
-[h, macro("getUltimaDifesa@Lib:Combattimento"): source]
+[h, macro("combat/getUltimaDifesa@this"): source]
 [h, if(macro.return == "parato"): mod = mod +3]
 
 [h: mod = mod + getResistance(json.set("","source",source,"target",target,"spellName",spellName,"elemento",sElemento))]

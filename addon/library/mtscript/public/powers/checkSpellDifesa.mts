@@ -19,14 +19,14 @@
 
 [h: lTipo = getLibProperty("tipo",spell)]
 [r, if(lProiettile == "MATERIALE" && bOffensivo), code:{
-	[macro("checkDifesa@Lib:Combattimento"):json.append(source,target,bOpp)]
+	[macro("combat/checkDifesa@this"):json.append(source,target,bOpp)]
 	[h: sResult = macro.return]
 };{
 	[h: sResult = "impossibile"]
 }]
 
 [h, if(bSaveResult), code:{
-	[macro("setUltimaDifesa@Lib:Combattimento"): json.append(source, sResult)]
+	[macro("combat/setUltimaDifesa@this"): json.append(source, sResult)]
 }]
 
 [h: macro.return = sResult]

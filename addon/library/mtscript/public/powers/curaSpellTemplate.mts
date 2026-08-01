@@ -8,7 +8,7 @@
 [h: sElemento = getLibProperty("elemento",spellName)]
 
 [h, if(!isNumber(bCritRes)), code:{
-	[macro("getUltimoCritico@Lib:Combattimento"):source]
+	[macro("combat/getUltimoCritico@this"):source]
 	[bCritRes = macro.return]
 }]
 	

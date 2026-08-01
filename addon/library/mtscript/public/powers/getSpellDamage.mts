@@ -17,7 +17,7 @@
 [h, if(dmgPerc == ""): dmgPerc = 1]
 
 [h, if(difesa=="" && source!=""), code:{
-	[macro("getUltimaDifesa@Lib:Combattimento"):source]
+	[macro("combat/getUltimaDifesa@this"):source]
 	[h: difesa = macro.return]
 }]
 
@@ -47,7 +47,7 @@
 
 [r, if(difesa == "schivato"),code:{
 	Qua dentro non si dovrebbe mai entrare, quindi per ora lo lascio stare
-	[macro("getSchivareDmg@Lib:Combattimento"):param]
+	[macro("combat/getSchivareDmg@this"):param]
 	Schivato 
 	[h: value = result - macro.return]
 	[h: result = macro.return]
@@ -57,7 +57,7 @@
 };{}]
 
 [r, if(difesa == "parato"), code:{
-	[macro("getBloccoDmg@Lib:Combattimento"):param]	
+	[macro("combat/getBloccoDmg@this"):param]	
 	[h: value = floor(result - macro.return)]
 	[h: result = macro.return]
 	[h: message = strformat("(danni parati: %d)",value)]

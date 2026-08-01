@@ -41,8 +41,8 @@ Il che vuol dire se il safetycheck fa un abort non si ha un clean corretto degli
 
 [h: bOpp = 0]
 [h, if(isPotereOffensivo(spellName)), code:{
-	[macro("checkAttFurtivo@Lib:Combattimento"): json.append(source, target)]
-	[macro("isOpportunita@Lib:Combattimento"): json.append(source,target)]
+	[macro("combat/checkAttFurtivo@this"): json.append(source, target)]
+	[macro("combat/isOpportunita@this"): json.append(source,target)]
 	[h: bOpp = macro.return && listContains(getLibProperty("tags",spellName),"OPP")]
 }]
 

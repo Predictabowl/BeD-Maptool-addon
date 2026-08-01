@@ -15,7 +15,7 @@
 	}]
 	[if(iRange > 1): bFlag = 1; bFlag = 0]
 };{
-	[macro("isStileDistanza@Lib:Combattimento"):target]
+	[macro("combat/isStileDistanza@this"):target]
 	[bFlag = macro.return]
 }]
 

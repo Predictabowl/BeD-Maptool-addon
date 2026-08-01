@@ -6,7 +6,7 @@
 [h: sElemento = json.get(macro.args,"elemento")] <!-- opzionale -->
 
 [h, if (critRes == "" && iCD == ""), code:{
-	[macro("getUltimoCritico@Lib:Combattimento"):source]
+	[macro("combat/getUltimoCritico@this"):source]
 	[h: critRes = macro.return]
 }]
 

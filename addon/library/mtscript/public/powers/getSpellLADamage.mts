@@ -11,7 +11,7 @@
 }]
 
 [h, if(sDifesa==""), code:{
-	[macro("getUltimaDifesa@Lib:Combattimento"):source]
+	[macro("combat/getUltimaDifesa@this"):source]
 	[h: sDifesa = macro.return]
 }]
 
@@ -24,7 +24,7 @@
 
 [r, if(sDifesa == "parato"), code:{
 	[h: param = json.set("","target",target,"source",source,"danno",iResult)]
-	[macro("getBloccoDmg@Lib:Combattimento"):param]	
+	[macro("combat/getBloccoDmg@this"):param]	
 	[h: value = floor(iResult - macro.return)]
 	[h: iResult = macro.return]
 	[h: message = strformat("(danni parati: %{value})")]

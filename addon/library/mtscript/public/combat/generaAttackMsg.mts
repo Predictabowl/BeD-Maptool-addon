@@ -1,0 +1,44 @@
+[h: source=json.get(macro.args,0)]
+[h: target =json.get(macro.args,1)]
+
+[h: sHeading = strformat("<div style='margin-bottom: 10px'>%s</div>",popMessaggio(source, "headingAttacco"))]
+
+[h: sKey = "msgEventiAttacco"]
+[h: setMessaggio(source, sKey, popMessaggio(source,"msgEventOn_Opportunita"))]
+[h: appendMessaggio(source,sKey,popMessaggio(source,"msgEventOn_Attack"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Attacked"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Dodge"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Block"))]
+[h: appendMessaggio(source,sKey,popMessaggio(source,"msgEventOn_Hit"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Hitted"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Critical"))]
+[h: appendMessaggio(source,sKey,popMessaggio(source,"msgEventOn_Kill"))]
+
+[h: sKey2 = "msgResultAttacco"]
+[h: setMessaggio(source, sKey2, popMessaggio(source,"mancareResult"))]
+[h: appendMessaggio(source,sKey2,popMessaggio(source,"criticalResult"))]
+[h: appendMessaggio(source,sKey2,popMessaggio(source,"coperturaResult"))]
+[h: appendMessaggio(source,sKey2,popMessaggio(source,"difesaResult"))]
+[h: appendMessaggio(source,sKey2,popMessaggio(source,"dannoArma"))]
+[h: appendMessaggio(source,sKey2,popMessaggio(target,"strDanno"))]
+[h: appendMessaggio(source,sKey2,popMessaggio(source,"strCura"))]
+
+[h: sKey3 = "msgEffettiAttacco"]
+[h: appendMessaggio(source,sKey3,popMessaggio(source,"TSResult"))]
+[h: appendMessaggio(source,sKey3,popMessaggio(target,"msgApplicaEffetto"))]
+[h: appendMessaggio(source,sKey3,popMessaggio(target,"msgEffetto"))]
+
+[h, if(target!=source), code:{
+	[h: appendMessaggio(source,sKey3,popMessaggio(source,"strDanno"))]
+	[h: appendMessaggio(source,sKey3,popMessaggio(target,"strCura"))]
+	[h: appendMessaggio(source,sKey3,popMessaggio(source,"msgEventOn_Hitted"))]
+}]
+
+
+[h: sEventiMsg = popMessaggio(source, sKey)]
+[h, if(sEventiMsg != ""): sEventiMsg = strformat("<div style='margin-bottom:7px'>%{sEventiMsg}</div>")]
+[h: sAttackMsg = popMessaggio(source, sKey2)]
+[h: sEffettiMsg = popMessaggio(source, sKey3)]
+[h, if(sEffettiMsg != ""): sEffettiMsg = strformat("<div style='margin-top:7px'>%{sEffettiMsg}</div>")]
+[h: sFinalMsg = strformat("%{sHeading}%{sEventiMsg}%{sAttackMsg}%{sEffettiMsg}")]
+[h: return(0, sFinalMsg)]

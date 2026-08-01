@@ -11,7 +11,7 @@
 
 [h: bItem = isItemInCast(source,spell)]
 [h, if(bItem), code:{
-	[macro("setUltimoCritico@Lib:Combattimento"): json.append(source,0)]
+	[macro("combat/setUltimoCritico@this"): json.append(source,0)]
 	[return(0,0)]
 }]
 

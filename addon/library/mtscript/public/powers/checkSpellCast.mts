@@ -6,7 +6,7 @@
 [h: sSpellSchool = getLibProperty("scuola",spellName)]
 [h: spellType = upper(getLibProperty("tipo",spellName))]
 [h, if(spellType == "OFFENSIVO"), code:{
-	[macro("hasAttacks@Lib:Combattimento"): json.set("","source",source)]
+	[macro("combat/hasAttacks@this"): json.set("","source",source)]
 	[if(macro.return != 1), code:{
 		[broadcast(sWarn+getName(source) + " Non ha attacchi a disposizione",getPlayerName())]
 		[return(0,0)]

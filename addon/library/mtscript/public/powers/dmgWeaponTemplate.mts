@@ -28,10 +28,10 @@
 [macro("utility/appendMessaggio@this"):json.set("","token",source,"key","strPotere","msg",startMsg)]
 
 
-[macro("getUltimaDifesa@Lib:Combattimento"): source]
+[macro("combat/getUltimaDifesa@this"): source]
 [difesa = macro.return]
 
-[macro("getPhysDmg@Lib:Combattimento"):json.set(combatParam,"source",source,"target",target,"arma",arma,"opportunita",bOpp)]
+[macro("combat/getPhysDmg@this"):json.set(combatParam,"source",source,"target",target,"arma",arma,"opportunita",bOpp)]
 [iDanno = macro.return]
 
 
@@ -39,7 +39,7 @@
 [macro("utility/appendMessaggio@this"):json.set("","token",source,"key","strPotere","msg",macro.return)]
 
 [h: param = json.set("","source",source,"target",target,"danno",iDanno,"difesa",difesa)]
-[macro("DanniDifesaFisica@Lib:Combattimento"): param]
+[macro("combat/DanniDifesaFisica@this"): param]
 [h: iDanno = macro.return]
 
 [macro("core/DannoTarget@this"): json.set("","target",target,"valore",iDanno,"source",source,"verbose",0)]

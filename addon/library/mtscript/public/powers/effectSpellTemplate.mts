@@ -32,7 +32,7 @@
 [h: sEffectSource = json.get(oEffetto,"source")]
 [h, if(sEffectSource== ""): oEffetto = json.set(oEffetto,"source",source)]
 
-[macro("getUltimoCritico@Lib:combattimento"): source]
+[macro("combat/getUltimoCritico@this"): source]
 [h: critRes = macro.return]
 
 [h, if(spellDur == ""): spellDur = getSpellDurata(source,spellName)]

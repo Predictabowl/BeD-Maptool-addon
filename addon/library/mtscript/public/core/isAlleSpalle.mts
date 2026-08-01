@@ -3,7 +3,7 @@
 [h, if(argCount()>2), code:{
 	[bOpp = arg(2)]
 };{
-	[macro("isOpportunita@Lib:Combattimento"): json.append(source,target)]
+	[macro("combat/isOpportunita@this"): json.append(source,target)]
 	[bOpp = macro.return]
 }]
 

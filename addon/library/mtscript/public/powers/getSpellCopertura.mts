@@ -14,7 +14,7 @@
 [h: sPuntoOrigine = macro.return]
 
 [r, if(tipo != "POTENZIALE" && target != source && bUtile == 0), code:{
-	[macro("coperturaRoll@Lib:Combattimento"): json.set("","target",target,"source",source,"origine",sPuntoOrigine)]
+	[macro("combat/coperturaRoll@this"): json.set("","target",target,"source",source,"origine",sPuntoOrigine)]
 };{
 	[h: macro.return = 0]
 }]

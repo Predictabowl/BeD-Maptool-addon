@@ -7,7 +7,7 @@
 [h, if(tipo=="OFFENSIVO"), code:{
 	[consumaPotereOffensivo(source,bOpp)]
 };{
-	[macro("toggleArmaUsata@Lib:Combattimento"):source]
+	[macro("combat/toggleArmaUsata@this"):source]
 }]
 
 [macro("updatePoteri@Lib:Scheda"): "Poteri"]

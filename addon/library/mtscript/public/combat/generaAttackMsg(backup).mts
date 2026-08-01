@@ -1,0 +1,53 @@
+[h: source=json.get(macro.args,0)]
+[h: target =json.get(macro.args,1)]
+
+[h: sHeading = strformat("<div style='margin-bottom: 10px'>%s</div>",popMessaggio(source, "headingAttacco"))]
+
+[h: sKey = "msgEventiAttacco"]
+[h: setMessaggio(source, sKey, popMessaggio(source,"msgEventOn_Opportunita"))]
+[h: appendMessaggio(source,sKey,popMessaggio(source,"msgEventOn_Attack"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Attacked"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Dodge"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Block"))]
+[h: appendMessaggio(source,sKey,popMessaggio(source,"msgEventOn_Hit"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Hitted"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgEventOn_Critical"))]
+[h: appendMessaggio(source,sKey,popMessaggio(source,"msgEventOn_Kill"))]
+[h: appendMessaggio(source,sKey,popMessaggio(target,"msgApplicaEffetto"))]
+
+[h: sEventi = popMessaggio(source, "msgEventiAttacco")]
+[h, if(sEventi != ""): sEventi = strformat("<div style='margin-bottom:10px;'>%{sEventi}</div>")]
+
+
+[h: msgPotere = popMessaggio(source,"mancareResult")]
+[h: sTemp = popMessaggio(source,"criticalResult")]
+[h, if(sTemp != ""): msgPotere = strformat("%{msgPotere}<br>%{sTemp}")]
+[macro("utility/popMessaggio@this"):json.set("","token",source,"key","coperturaResult")]
+[h, if(macro.return != ""): msgPotere = msgPotere+macro.return]
+[macro("utility/popMessaggio@this"):json.set("","token",source,"key","difesaResult")]
+[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+[macro("utility/popMessaggio@this"): json.set("","token",source,"key","dannoArma")]
+[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+[macro("utility/popMessaggio@this"): json.set("","token",source,"key","TSResult")]
+[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+[macro("utility/popMessaggio@this"): json.set("","token",target,"key","msgEffetto")]
+[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+[macro("utility/popMessaggio@this"): json.set("","token",target,"key","strDanno")]
+[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+[macro("utility/popMessaggio@this"): json.set("","token",target,"key","strCura")]
+[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+[macro("utility/popMessaggio@this"): json.set("","token",source,"key","msgEventOn_Hit")]
+[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+
+[h, if(target!=source), code:{
+	[macro("utility/popMessaggio@this"): json.set("","token",source,"key","strDanno")]
+	[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+	[macro("utility/popMessaggio@this"): json.set("","token",source,"key","strCura")]
+	[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","msgEventOn_Hitted")]
+	[h, if(macro.return != ""): msgPotere = msgPotere+"<br>"+macro.return]
+}]
+
+[h: msgPotere = strformat("<div>%{msgPotere}</div>")]
+
+[h: macro.return = strformat("%{sHeading}%{sEventi}%{msgPotere}")]]

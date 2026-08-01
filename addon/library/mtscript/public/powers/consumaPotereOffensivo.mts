@@ -4,7 +4,7 @@
 [h: oToken = findToken(oToken)]
 [h, if(oToken == ""): oToken = currentToken()]
 
-[macro("toggleArmaUsata@Lib:Combattimento"):oToken]
+[macro("combat/toggleArmaUsata@this"):oToken]
 
 [h, if(!isCombat()): return(0)]
 [h: switchToken(oToken)]

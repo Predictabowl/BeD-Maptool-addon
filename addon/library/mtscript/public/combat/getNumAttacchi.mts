@@ -1,0 +1,13 @@
+[h: target = arg(0)]
+[h: att = getProperty("Num_Attacchi",target)]
+[h: att2= 0]
+[h: opp = getProperty("Num_Attacchi_Opp",target)]
+[h: opp2 = 0]
+[h: sStile = getProperty("Stile",target)]
+[h, if(sStile=="2A"), code:{
+	[h: att2 = floor(att/2)]
+	[h: att = ceil(att/2)]
+	[h: opp2 = floor(opp/2)]
+	[h: opp = ceil(opp/2)]
+}]
+[h: macro.return = json.append(att,att2,opp,opp2)]
