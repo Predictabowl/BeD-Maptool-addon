@@ -20,4 +20,4 @@
 		[Lista_Dati = deleteStrProp(Lista_Dati,sDurata)]
 	}]
 }]
-[macro("updateFrameAzioni@Lib:Scheda"): source]
+[macro("gui/updateFrameAzioni@this"): source]

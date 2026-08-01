@@ -4,3 +4,19 @@ macro("core/$1@this"
 Find macro without any folder slash and replace them
 macro\("([^\/"]*)@this"
 macro("utility/$1@this"
+
+find outside macro calls
+"([^\/"]*)@Lib:Basic"
+"core/$1@lib:it.aldinucci.piero.bed.maptool.ruleset"
+
+
+Recover find outside macro
+([^\(])"([^"\/]+)@this"
+$1"core/$2@lib:it.aldinucci.piero.bed.maptool.ruleset"
+
+Negative lookahead
+Lib:(?!(it.aldinucci.piero.bed.maptool.ruleset)).*
+
+
+Match only the word before
+([^\s\/"']+)@Lib:Basic

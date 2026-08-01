@@ -20,7 +20,7 @@
 }]
 [h: oSpawner = findToken(sSpawner)]
 [h: jEventParam = json.set("", "owner", source, "removeEffectName", sEffectName, "drawId",sDrawId)]
-[h: eventInstaller(oSpawner, "On_Death", "destroyWall", "wallCoreDeath@Lib:Eventi", jEventParam)]
+[h: eventInstaller(oSpawner, "On_Death", "destroyWall", "events/wallCoreDeath@this", jEventParam)]
 [h, if(isPC(source)): setPC(oSpawner); setNPC(oSpawner)]
 
 [macro("powers/getLivelloIndicativo@this"): json.set("","source",source,"spellName",spellName)]

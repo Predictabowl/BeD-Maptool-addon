@@ -5,7 +5,7 @@
 [h: oOwner = macro.return]
 
 [h, if(oOwner != ""), code:{
-	[sMacro = "safeDespawnOnDeath@Lib:Meccaniche"]
+	[sMacro = "mechanics/safeDespawnOnDeath@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[macro("core/getEffettoServitore@this"): oOwner]
 	[sParams = json.append(oOwner, source, macro.return)]
 	[macro("events/addDelayedSafeMacro@this"): json.append(sMacro,sParams)]

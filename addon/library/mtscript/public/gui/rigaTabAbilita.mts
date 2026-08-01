@@ -1,0 +1,61 @@
+[h: target = json.get(macro.args,0)]
+[h: sLibAbilita = json.get(macro.args,1)]
+
+[h: oAbParam = macro.args]
+
+[h: sRiga= ""]
+[macro("gui/isAbilitaNascosta@this"): oAbParam]
+[h, if(macro.return): return(0,"")]
+
+
+[h: sTipo = upper(getLibProperty("tipo",sLibAbilita))]
+[h: sNome = getLibProperty("nome_decorativo",sLibAbilita)]
+[macro("isAbilitaInUso@Lib:AbilitaClasse"): oAbParam]
+[h: sInUso = macro.return]
+[macro("getAutocastAbilita@Lib:AbilitaClasse"): oAbParam]
+[h: bAutocast = macro.return]
+
+
+[h: sImage = getImage(sLibAbilita)]
+[h: sFluff = strformat("<img src='%{sImage}' class='spellCastButton' title='Attiva/Disattiva Abilità'/>")]
+[h: jSCall = strformat('pulsanteAttivaAbilita(event,"%s")',sLibAbilita)]
+[h: sMacroL = strformat("<a href='#' onmouseup='%s' class='spellCast'>%{sFluff}</a>", jScall)]
+
+[h, switch(sTipo), code:
+case "ATTIVA":{
+	[classType = "AbAttiva"]
+};
+case "EROICA":{
+	[classType = "AbEroica"]
+};
+case "PECULIARE":{
+	[classType = "AbPeculiare"]
+};
+case "PASSIVA":{
+	[classType = "AbPassiva"]
+	[sMacroL = ""]
+	[sInUso = ""]
+	[sMacroDis = ""]
+};
+default:{
+	[classType = ""]
+}]
+
+[h, if(sInUso): sAttiva = "abilitaOn"; sAttiva=""]
+[h, if(bAutocast): sAutocast = "abilitaAutocast"; sAutocast = ""]
+[h: sActive = strformat("class='%s %s'", sAttiva, sAutocast)]
+[macro("getAbilitaPF@Lib:AbilitaClasse"): json.append(target,sLibAbilita)]
+[h: iPF = macro.return]
+[macro("getAbilitaPA@Lib:AbilitaClasse"): json.append(target,sLibAbilita)]
+[h: iPA = macro.return]
+[macro("getAbilitaPP@Lib:AbilitaClasse"): json.append(target,sLibAbilita)]
+[h: iPP = macro.return]
+[macro("getAbilitaMM@Lib:AbilitaClasse"): json.append(target,sLibAbilita)]
+[h: iMM = macro.return]
+
+[h: sJScriptParam = strformat('"%{sLibAbilita}"')]
+
+[h: sRiga = strformat("<td %{sActive}>%{sMacroL}</td><td align='left' class='%{classType}' title='Leggi descrizione'onclick='apri_dialog_descrizione(%{sJScriptParam})'>%{sNome}</td>")]
+[h, if(sTipo != "EROICA"): sRiga = strformat("%{sRiga}<td class='faticaFont'>%{iPF}</td><td class='azioneFont'>%{iPA}</td><td class='ppFont'>%{iPP}</td><td class='mmFont'>%{iMM}</td>")]
+
+[h: macro.return = sRiga]

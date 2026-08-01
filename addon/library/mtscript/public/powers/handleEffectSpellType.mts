@@ -48,7 +48,7 @@
 ]
 
 [h, if(sNewTokenImg != ""), code:{
-	[oChangeImg = json.set("","tipo","macroCall","macroName","swapTokenImg@Lib:Poteri","parametri",sNewTokenImg)]
+	[oChangeImg = json.set("","tipo","macroCall","macroName","powers/swapTokenImg@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",sNewTokenImg)]
 	[aEffects = json.get(oEffetto,"params")]
 	[aEffects = json.append(aEffects,oChangeImg)]
 	[oEffetto = json.set(oEffetto,"params",aEffects)]

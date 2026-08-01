@@ -11,7 +11,7 @@
 [macro("core/payAction@this"): oCost]
 
 [r, if(macro.return ==1), code:{
-	[macro("eseguiEquipaggiamento@Lib:Scheda"): jCallbackParams]
+	[macro("gui/eseguiEquipaggiamento@this"): jCallbackParams]
 	[h: bInterrupt = 0]
 };{
 	[h: bInterrupt = 1]

@@ -2,7 +2,7 @@
 [h: source = json.get(macro.args,0)]
 [h: iTime = json.get(macro.args,1)]
 
-[h: assert(isNumber(iTime),"getAzioneTime@Lib:TokenMacros: formato tempo azione errato"))]
+[h: assert(isNumber(iTime),"powers/getAzioneTime@this: formato tempo azione errato"))]
 [h: switchToken(source)]
 
 [macro("mobs/getDifendersiTime@this"):source]

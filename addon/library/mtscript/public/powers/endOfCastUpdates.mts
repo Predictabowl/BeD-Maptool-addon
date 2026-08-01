@@ -10,4 +10,4 @@
 	[macro("combat/toggleArmaUsata@this"):source]
 }]
 
-[macro("updatePoteri@Lib:Scheda"): "Poteri"]
+[macro("gui/updatePoteri@this"): "Poteri"]

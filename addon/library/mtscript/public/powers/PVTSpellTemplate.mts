@@ -20,7 +20,7 @@
 
 
 <!-- effetto per rimozione dell'incantesimo al termine della durata -->
-[h: sMacroEffectName = "removePVTEffectTemplate@Lib:Poteri"]
+[h: sMacroEffectName = "powers/removePVTEffectTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 [h: oParamMacro = json.set("","pvtName",spellName)]
 [h: oParamEffetto = json.set("","source",source,"tipo","macroCall","macroName",sMacroEffectName,"parametri",oParamMacro)]
 [h: oParamEffetto = json.append("",oParamEffetto)]

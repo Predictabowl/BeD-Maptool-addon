@@ -22,5 +22,5 @@ l'evento eventFinishSetup dovrebbe pulire sempre tutto... quindi bisogna essere 
 };{
 	[Lista_Dati = setStrProp(Lista_Dati,sControl,1)]
 	[macro("mechanics/setMarchio@this"): macro.args]
-	[macro("events/eventInstaller@this"): json.append(source,"on_Action_End",sControl,"eventFinishSetup@Lib:Meccaniche","")]
+	[macro("events/eventInstaller@this"): json.append(source,"on_Action_End",sControl,"mechanics/eventFinishSetup@lib:it.aldinucci.piero.bed.maptool.ruleset","")]
 }]

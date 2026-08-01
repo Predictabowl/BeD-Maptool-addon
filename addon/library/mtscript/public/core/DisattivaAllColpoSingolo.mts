@@ -13,5 +13,5 @@
 }]
 
 [h, if(bFlag), code:{
-	[macro("updateFrameAzioni@Lib:Scheda"): source]
+	[macro("gui/updateFrameAzioni@this"): source]
 }]

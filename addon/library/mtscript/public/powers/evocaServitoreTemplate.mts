@@ -21,23 +21,23 @@
 [h: iPunti30 = ""]
 
 [h, if(listContains(oSpellTags,"SERVITOREATTIVABILE")), code:{
-	[h: sMacroAtt = "attivaEvocazione@Lib:Meccaniche"]
+	[h: sMacroAtt = "mechanics/attivaEvocazione@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[h: oMacroAttParam = json.set(oMacroAttParam,"PAAttivazione",7)]
-	[h: sMacroEffetto = "servitoreAttivabileEffect@Lib:Meccaniche"]
+	[h: sMacroEffetto = "mechanics/servitoreAttivabileEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[sTipoServitore = "ATTIVABILE"]
 	[bFlag = 1]
 }]
 
 [h, if(listContains(oSpellTags,"EVOCAZIONE")), code:{
 	[h: sMacroAtt = ""]
-	[h: sMacroEffetto = "servitoreAnimato@Lib:Meccaniche"]
+	[h: sMacroEffetto = "mechanics/servitoreAnimato@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[sTipoServitore = "EVOCAZIONE"]
 	[bFlag = 1]
 }]
 
 [h, if(listContains(oSpellTags,"CONVOCAZIONE") && !bFlag), code:{
 	[h: sMacroAtt = ""]
-	[h: sMacroEffetto = "servitoreAnimato@Lib:Meccaniche"]
+	[h: sMacroEffetto = "mechanics/servitoreAnimato@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[sTipoServitore = "CONVOCAZIONE"]
 	[h: iPunti30 = -2]
 	[bFlag = 1]
@@ -46,7 +46,7 @@
 
 [h, if(!bFlag), code:{
 	[h: sMacroAtt = ""]
-	[h: sMacroEffetto = "servitoreAnimato@Lib:Meccaniche"]
+	[h: sMacroEffetto = "mechanics/servitoreAnimato@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[sTipoServitore = "ANIMAZIONE"]
 	[bFlag = 1]
 }]
@@ -77,7 +77,7 @@
 [macro("mechanics/setLivelloCreatura@this"): json.append(iLL, sSpawner, jRes)]
 [macro("mechanics/setSummonPoteri@this"): sSpawner] 
 [macro("mechanics/setSummonAbilita@this"): sSpawner] 
-[macro("events/eventInstaller@this"): json.append(sSpawner,"On_Death","despawnEvent","despawnOnDeath@Lib:Meccaniche","")]
+[macro("events/eventInstaller@this"): json.append(sSpawner,"On_Death","despawnEvent","mechanics/despawnOnDeath@lib:it.aldinucci.piero.bed.maptool.ruleset","")]
 
 [h, if(isPC(source)): setPC(sSpawner); setNPC(sSpawner)]
 
@@ -109,5 +109,5 @@
 [h: setIniziativa(oSpawned,getInitiative())]
 
 <!-- Apri la scheda -->
-[macro("UIOverlay@Lib:Scheda"): source]
+[macro("gui/UIOverlay@this"): source]
 [h: return(0,"")]

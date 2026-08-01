@@ -23,5 +23,5 @@
 		[h: param = json.set(param,"params","")]
 		[macro("core/ApplyEffect@this"): param]
 	}]
-	[macro("delPoteriRitardoCache@Lib:Scheda"): source]
+	[macro("gui/delPoteriRitardoCache@this"): source]
 }]

@@ -55,12 +55,12 @@ Il che vuol dire se il safetycheck fa un abort non si ha un clean corretto degli
 [h: sTipo = getLibProperty("tipo",spellName)]
 [h: sFluffSpell = getLibProperty("nome_decorativo",spellName)]
 [h: oMacroParam = json.set("","spellName",spellName,"isOpport",bOpp,"extraParam",extraParam)]
-[h: param = json.set("","target",target,"source",source,"action",sFluffSpell,"time",time,"color",color,"tipo",sTipo,"opp",opport,"macro","SpellCast@Lib:Poteri","macroParam",oMacroParam, "color", sActionColor)]
+[h: param = json.set("","target",target,"source",source,"action",sFluffSpell,"time",time,"color",color,"tipo",sTipo,"opp",opport,"macro","powers/SpellCast@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oMacroParam, "color", sActionColor)]
 
 [h: setMessaggio(source,"iniziaAzioneMsg",strformat("%s Inizia a lanciare un potere.",getName(source)))]
 [macro("mobs/IniziaAzione@this"):param]
 [bFlag = macro.return]
 
 [h, if(bFlag), code:{
-	[macro("events/eventInstaller@this"): json.set("","name","spellCastingInterruption","macroName","SpellCastingHittedInterrupt@Lib:Eventi","event","On_Hitted","token",source)]
+	[macro("events/eventInstaller@this"): json.set("","name","spellCastingInterruption","macroName","events/SpellCastingHittedInterrupt@this","event","On_Hitted","token",source)]
 }]

@@ -2,7 +2,7 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
 [h: oMacroParam = json.set(macro.args,"verbose",0,"messaggi",0)]
-<!-- servono tutti i parametri standard di ApplyEffect@Lib:Basic -->
+<!-- servono tutti i parametri standard di core/ApplyEffect@this -->
 
 [h: msg = ""]
 

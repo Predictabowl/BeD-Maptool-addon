@@ -28,7 +28,7 @@
 	[sCoperturaName = sCaster+"-"+spellName]
 	[macro("mechanics/addCoperturaMappa@this"): json.append(sCoperturaName, sDrawId, nCopertura)]
 	[sDecoratedMacro = eventoMacro]
-	[eventoMacro = "decoratorFixedAreaCopertura@Lib:Poteri"]
+	[eventoMacro = "powers/decoratorFixedAreaCopertura@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[evMacroParam = json.set(evMacroParam, "coperturaName", sCoperturaName, "decoratedCoperturaMacro", sDecoratedMacro)]
 }]
 
@@ -42,7 +42,7 @@
 
 <!-- Effetto per rimuovere l'evento ed il Draw -->
 [h: jEffettoParam = json.set("", "drawId", sDrawId, "eventName", sEventName, "inizioRound", bInizioRound, "coperturaName", sCoperturaName, "hasMBL", bMBL, "hasVBL", bVBL)]
-[h: temp = json.set("","tipo","macroCall","macroName", "removeFixedAreaEffect@Lib:Poteri", "parametri", jEffettoParam)]
+[h: temp = json.set("","tipo","macroCall","macroName", "powers/removeFixedAreaEffect@lib:it.aldinucci.piero.bed.maptool.ruleset", "parametri", jEffettoParam)]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set("", "params", altro, "effetto", sEffectName)]
 [macro("powers/effectSpellTemplate@this"): json.set("","source",sCaster,"target", sCaster,"spellName",spellName,"effetto",oEffetto, "bloccaTS", 1)]
@@ -52,11 +52,11 @@
 <!-- setup evento -->
 [h, if(iTriggerRange != 0), code:{
 	[h,if(iTriggerRange == ""), code:{
-		[sMoveMap = "moveInsideDraw@Lib:Eventi"]
-		[sStartRoundMap = "startInsideDraw@Lib:Eventi"]
+		[sMoveMap = "events/moveInsideDraw@this"]
+		[sStartRoundMap = "events/startInsideDraw@this"]
 	};{
-		[sMoveMap = "moveNearDraw@Lib:Eventi"]
-		[sStartRoundMap = "startNearDraw@Lib:Eventi"]
+		[sMoveMap = "events/moveNearDraw@this"]
+		[sStartRoundMap = "events/startNearDraw@this"]
 	}]
 	[h: sMapVar = findToken("MapVar")]
 	[h: jEventParam = json.set("","drawId", sDrawId, "macroEffectName", eventoMacro, "macroEffectParam", evMacroParam, "triggerRange", iTriggerRange)]

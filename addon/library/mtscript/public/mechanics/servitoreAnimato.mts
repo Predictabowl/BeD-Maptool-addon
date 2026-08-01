@@ -10,7 +10,7 @@
 	[macro("core/delEffettoServitore@this"):target]
 	[macro("mechanics/despawnCreatura@this"): oCreatura]
 	[macro("powers/delMantenimento@this"): json.append(target,spellName,0)]
-	[macro("closeServitoreOverlay@Lib:Scheda"):target]
+	[macro("gui/closeServitoreOverlay@this"):target]
 }]
 
 [h: macro.return = sMsg]

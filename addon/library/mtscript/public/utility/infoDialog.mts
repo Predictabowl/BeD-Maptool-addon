@@ -23,7 +23,7 @@
 			[r: sInfo]
 		</div>
 	</div>
-	<form method="json" id="close-form" action="[r: macroLinkText('closeWindow@Lib:Scheda')]">
+	<form method="json" id="close-form" action="[r: macroLinkText('gui/closeWindow@this')]">
 		<input type="hidden" name="name" value="[r: sDialog]">
 	</form>
 	<script>

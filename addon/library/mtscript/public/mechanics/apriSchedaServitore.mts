@@ -3,7 +3,7 @@
 
 [h, if(oServitore != ""), code:{
 	[h: oParam = json.append(oServitore,"Servitore"+getName(source))]
-	[macro("ApriScheda@Lib:Scheda"):oParam]
-	[macro("listaPoteriMem@Lib:Scheda"):oParam]
+	[macro("gui/ApriScheda@this"):oParam]
+	[macro("gui/listaPoteriMem@this"):oParam]
 	[closeDialog("DialogAbilita")]
 }]

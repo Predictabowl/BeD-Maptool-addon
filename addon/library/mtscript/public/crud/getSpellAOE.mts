@@ -7,7 +7,7 @@
 
 };{
 	[oArgs = arg(0)]
-	[assert(json.type(oArgs) == "OBJECT","getSpellAOE@Lib:Poteri chiamata con parametri errati")]
+	[assert(json.type(oArgs) == "OBJECT","powers/getSpellAOE@this chiamata con parametri errati")]
 	[source = json.get(oArgs,"source")]
 	[target = json.get(oArgs,"target")]
 	[spellName = json.get(oArgs,"spellName")]

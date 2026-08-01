@@ -9,7 +9,7 @@
 [h: sSpawnedTag = sDrawId+"spawnedCore"]
 [h: oSpawnedToken = getDaMemoria(sOwner, sSpawnedTag)]]
 [h, if(oSpawnedToken != ""), code:{
-	[macro("events/addDelayedSafeMacro@this"): json.append("despawnCreatura@Lib:Meccaniche", oSpawnedToken)]
+	[macro("events/addDelayedSafeMacro@this"): json.append("mechanics/despawnCreatura@lib:it.aldinucci.piero.bed.maptool.ruleset", oSpawnedToken)]
 	[delDaMemoria(sOwner, sSpawnedTag)]
 }]
 [h: rimuoviEffetto(sOwner, sEffect)]

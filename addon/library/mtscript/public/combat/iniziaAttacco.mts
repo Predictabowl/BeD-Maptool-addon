@@ -48,7 +48,7 @@ mtscript/public/combat
 [h: sMsg = sMsg +" contro "+ getName(target)]
 [h: setMessaggio(source,"iniziaAzioneMsg",sMsg)]
 
-[h: param = json.set("","target",target,"source",source,"macro","AttaccoFisico@Lib:Combattimento","macroParam",macroParam,"tipo",sTipo,"opp",generaOpp,"time",time,"color","red","action","Attacco")]
+[h: param = json.set("","target",target,"source",source,"macro","combat/AttaccoFisico@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",macroParam,"tipo",sTipo,"opp",generaOpp,"time",time,"color","red","action","Attacco")]
 [macro("mobs/IniziaAzione@this"):param]
 
 [h: macro.return = sMsg]

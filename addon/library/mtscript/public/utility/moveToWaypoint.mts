@@ -9,7 +9,7 @@
 
 [h, if(oTargetToken == ""): return(0,"")]
 
-[macro("getOverlayData@Lib:Scheda"): "token"]
+[macro("gui/getOverlayData@this"): "token"]
 [h: oTokenToMove = macro.return]
 
 [h: fDist = getDistance(oWaypoint, 0, oTokenToMove)]

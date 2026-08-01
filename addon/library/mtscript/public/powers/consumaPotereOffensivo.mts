@@ -21,7 +21,7 @@
 	}]
 
 	[if(iPoteri == 1), code:{
-		[macro("delPoteriTipoCache@Lib:Scheda"): json.append(oToken,"OFFENSIVO")]
+		[macro("gui/delPoteriTipoCache@this"): json.append(oToken,"OFFENSIVO")]
 	}]
 }]
 

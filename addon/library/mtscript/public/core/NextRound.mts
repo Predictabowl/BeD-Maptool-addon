@@ -46,4 +46,4 @@
 }]
 
 [macro("events/runDelaySafeMacros@this"): 0]
-[macro("updatePlayersSchede@Lib:Scheda"):0]
+[macro("gui/updatePlayersSchede@this"):0]

@@ -47,7 +47,7 @@ visualizza - visuallizza l'aura attorno al personaggio, 0: non visualizzata, 1: 
 [h: iVisualAura = json.get(macro.args,"visualizza")]
 [h: bTransitable = json.get(macro.args,"isTransitable")] <!-- Opzionale, indica che può attivarsi anche solo passando, default 0 -->
 
-[h, if(sNomeMacro == ""): sNomeMacro = "generalEffectAura@Lib:Poteri"]
+[h, if(sNomeMacro == ""): sNomeMacro = "powers/generalEffectAura@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 [h, if(caster == ""): caster = source]
 [h, if(iRange == ""): iRange = 0]
 [h, if(firstRoundUpdate == ""): firstRoundUpdate = 1]
@@ -60,7 +60,7 @@ visualizza - visuallizza l'aura attorno al personaggio, 0: non visualizzata, 1: 
 [h: effectARParamList = json.append("",effectBasicAuraRemove)]
 [h, if(updateMacro != ""), code:{
 	[eventInstaller(source,"On_Round_Start",idAura,updateMacro,updateParam)]
-	[effectARParam = json.set("","source",source,"macroName","auraUpdaterRemover@Lib:Poteri","tipo","macroCall","parametri",idAura)]
+	[effectARParam = json.set("","source",source,"macroName","powers/auraUpdaterRemover@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall","parametri",idAura)]
 	[effectARParamList = json.append(effectARParamList,effectARParam)]
 }]
 

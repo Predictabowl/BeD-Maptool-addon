@@ -33,7 +33,7 @@
 
 [h, if(!isNumber(bInizioRound)): bInizioRound = 1]
 
-[h, if(sMacroEffectName == ""): sMacroEffectName = "basicDotEffect@Lib:Poteri"]
+[h, if(sMacroEffectName == ""): sMacroEffectName = "powers/basicDotEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 
 <!-- effetto -->
 [h, macro("combat/getUltimaDifesa@this"): source]

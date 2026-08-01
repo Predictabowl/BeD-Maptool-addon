@@ -1,0 +1,11 @@
+[h: target = json.get(macro.args,"target")]
+[h: switchToken(target)]
+[h: list = LMM]
+[h: listLen = countStrProp(list)]
+[h: macroLoc = getMacroLocation()]
+[h, for (i,0,listLen,1,""), code:{
+	[h: key = indexKeyStrProp(list,i)]
+	[h: value = json.get(macro.args,key)]	
+	[setLMM(target,key,value)]
+}]
+[macro("inputLMM@"+getMacroLocation()): target]

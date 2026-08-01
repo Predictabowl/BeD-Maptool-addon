@@ -12,5 +12,5 @@
 
 [h, if(oServitore != ""), code:{
 	[macro("mobs/attivaServitore@this"): macro.args]
-	[macro("ApriTuttoInfo@Lib:Scheda"):json.append(oServitore,getName(oServitore))]
+	[macro("gui/ApriTuttoInfo@this"):json.append(oServitore,getName(oServitore))]
 }]

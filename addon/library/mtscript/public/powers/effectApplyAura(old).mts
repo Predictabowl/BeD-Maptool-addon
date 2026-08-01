@@ -46,7 +46,7 @@ visualizza - visuallizza l'aura attorno al personaggio, 0: non visualizzata, 1: 
 [h: otherAuraParams = json.get(macro.args,"otherAuraParams")]
 [h: iVisualAura = json.get(macro.args,"visualizza")]
 
-[h, if(sNomeMacro == ""): sNomeMacro = "generalEffectAura@Lib:Poteri"]
+[h, if(sNomeMacro == ""): sNomeMacro = "powers/generalEffectAura@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 [h, if(caster == ""): caster = source]
 [h, if(iRange == ""): iRange = 0]
 [h, if(firstRoundUpdate == ""): firstRoundUpdate = 1]

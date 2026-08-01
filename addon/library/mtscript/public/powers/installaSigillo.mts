@@ -7,6 +7,6 @@
 [h: sElemento = upper(macro.return)]
 
 [h: sNome = strformat("Sigillo%{sElemento}")]
-[h: sMacro = "eventSigillo@Lib:Poteri"]
+[h: sMacro = "powers/eventSigillo@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 [h: oParam = json.set("","CD",iCD,"spellSigillo",spellSigillo,"origine",source,"elemento",sElemento)]
 [macro("events/eventInstaller@this"): json.set("","name",sNome,"event","On_Spellcast","token",target,"macroName",sMacro,"macroParam",oParam)]

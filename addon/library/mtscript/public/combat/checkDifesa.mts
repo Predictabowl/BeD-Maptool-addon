@@ -10,10 +10,10 @@
 [macro("utility/getTipoDifesa@this"): target]
 [h: tipoDif = macro.return]
 [r, if (tipoDif == "Parare"), code:{
-	[h: macroCall = "testParare@this"]
+	[h: macroCall = "combat/testParare@this"]
 	[h: return = "parato"]
 };{
-	[h: macroCall = "testSchivare@this"]
+	[h: macroCall = "combat/testSchivare@this"]
 	[h: return = "schivato"]
 }]
 

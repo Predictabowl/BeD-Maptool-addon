@@ -6,7 +6,7 @@
 
 
 [h, if(oOrigine == ""): oOrigine = source]
-[h, if(sNomeMacro == ""): sNomeMacro = "generalEffectAura@Lib:Poteri"]
+[h, if(sNomeMacro == ""): sNomeMacro = "powers/generalEffectAura@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 
 [h: switchToken(source)]
 

@@ -8,7 +8,7 @@
 [h, if(json.type(Mantenimenti) != "OBJECT"): Mantenimenti = "{}"]
 
 [h, if(sMacroCosto == ""), code:{
-	[sMacroCosto = "getCostoMant@Lib:Poteri"]
+	[sMacroCosto = "powers/getCostoMant@lib:it.aldinucci.piero.bed.maptool.ruleset"]
 	[sMCostoParam = json.append(source,spellName)]
 }]
 

@@ -17,7 +17,7 @@
 [h: oActionParam = json.set("","source",source, "callbackParams", jParams)]
 [h, if(isCombat()), code:{
 	[h: iTime = calcActionTime(6,source)]
-	[h: param = json.set("","target",source,"source",source,"macro","risolviCambioArma@Lib:Combattimento","macroParam",oActionParam,"tipo","tattico","opp",bOpport,"time",iTime,"action","Cambio Arma")]
+	[h: param = json.set("","target",source,"source",source,"macro","combat/risolviCambioArma@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oActionParam,"tipo","tattico","opp",bOpport,"time",iTime,"action","Cambio Arma")]
 	[macro("mobs/IniziaAzione@this"):param]
 	[h: sMsg= strformat("%s inizia a cambiare le armi",getName(source))]
 	[h: broadcast(sMsg)]

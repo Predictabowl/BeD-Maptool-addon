@@ -5,7 +5,7 @@
 
 [h: jKeys = getLibProperty("Highlight_Keywords", getMacroLocation())]
 [h: lKeys = json.toList(jKeys, "|")]
-[h: sText = replace(sText,"\\b("+lKeys+")\\b","<a href='macro://infoDialog@Lib:MetodiVari//Impersonated?\$1'>\$1</a>")]
+[h: sText = replace(sText,"\\b("+lKeys+")\\b","<a href='macro://gui/infoDialog@this//Impersonated?\$1'>\$1</a>")]
 
 [h: return(0,sText)]
 

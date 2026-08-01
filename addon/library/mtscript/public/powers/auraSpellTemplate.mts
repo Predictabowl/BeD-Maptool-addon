@@ -49,7 +49,7 @@
 	[if(bStatic == 1): sOwner = sCaster; sOwner = sOrigine]
 	[if(bUpdate == 1), code :{
 		[h: jUpdateParam = json.set("", "auraOwner", sOwner,"idAura",idAura)]
-		[h: paramA = json.set(paramA,"updateMacro", "delayedAuraRoundUpdate@Lib:Poteri","updateParam",jUpdateParam,"firstRoundUpdate",0)]
+		[h: paramA = json.set(paramA,"updateMacro", "powers/delayedAuraRoundUpdate@lib:it.aldinucci.piero.bed.maptool.ruleset","updateParam",jUpdateParam,"firstRoundUpdate",0)]
 	}]
 }]
 
