@@ -10,7 +10,9 @@ Lib:Movement -> movement
 
 
 # Not Mapped yet 
-Lib:Sheda -> gui
+Lib:Scheda -> gui
 Lib:OggettiUsabili
 Lib:Meccaniche
 Lib:Mat
+Lib:EquipEffect
+Lib:AbilitaClasse 
