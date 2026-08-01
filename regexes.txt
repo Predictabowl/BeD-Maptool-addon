@@ -18,5 +18,9 @@ Negative lookahead
 Lib:(?!(it.aldinucci.piero.bed.maptool.ruleset)).*
 
 
-Match only the word before
-([^\s\/"']+)@Lib:Basic
+Match only the word before, excluding slashes / (negative look behind)
+(?<!\/)\b(\w+)@Lib:Sounds\b
+core/$1@this
+
+Match already changed functions
+\b(\w+)\/(\w+)@this\b

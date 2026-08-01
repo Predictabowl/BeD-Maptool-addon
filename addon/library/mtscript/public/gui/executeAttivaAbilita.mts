@@ -7,16 +7,16 @@
 [h, switch(sComando), code:
 	case "Attiva":{
 		[oParam = json.append(oToken,sAbilita)]
-		[macro("isAbilitaInUso@Lib:AbilitaClasse"): oParam]
+		[macro("class-skills/isAbilitaInUso@this"): oParam]
 		[bInUso = macro.return]
 		[if(bInUso), code:{
-			[macro("DisattivaAbilita@Lib:AbilitaClasse"): oParam]
+			[macro("class-skills/DisattivaAbilita@this"): oParam]
 		};{
-			[macro("AttivaAbilita@Lib:AbilitaClasse"): oParam]
+			[macro("class-skills/AttivaAbilita@this"): oParam]
 		}]
 	};
 	case "Autocast":{
-		[macro("toggleAutocastAbilita@Lib:AbilitaClasse"): json.append(oToken, sAbilita)]
+		[macro("class-skills/toggleAutocastAbilita@this"): json.append(oToken, sAbilita)]
 	};
 	default:{}
 ]

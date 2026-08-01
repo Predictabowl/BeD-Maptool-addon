@@ -7,15 +7,19 @@ Lib:TokenMacros -> mobs
 Lib:Movement -> movement
 Lib:Meccaniche -> mechanics
 Lib:GetSet -> crud
+Lib:Scheda -> gui
+
 
 # Next in line to be mapped
-Lib:Scheda -> gui
+Lib:AbilitaClasse -> class-skills
+
 
 # Not Mapped yet 
 Lib:OggettiUsabili
 Lib:Mat
 Lib:EquipEffect
-Lib:AbilitaClasse 
+Lib:GlobalVar
+Lib:Sounds
 
 # TODO
 powers library "addSpellInLib" need to save data into the token, must be adapted to the library, or sidestepped.

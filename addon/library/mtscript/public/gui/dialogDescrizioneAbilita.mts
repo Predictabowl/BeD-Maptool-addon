@@ -3,7 +3,7 @@
 
 [h: sDialog = "DescrizioneAbilita"]
 
-[h, macro("getAbilityDescription@Lib:AbilitaClasse"): json.append(sLibAbilita, oToken)]
+[h, macro("class-skills/getAbilityDescription@this"): json.append(sLibAbilita, oToken)]
 [h, macro("utility/textProcessHTML@this"): macro.return]
 [h: sText = macro.return]
 
@@ -18,7 +18,7 @@
 [h: imgA = getImage(sLibAbilita)]
 [h: sImage = strformat("<img src='%{imgA}' width='50' length='50'/>")]
 [h: sFluffName = getLibProperty("nome_decorativo",sLibAbilita)]
-[h, macro("getDurataAbilita@Lib:AbilitaClasse"): json.append(oToken,sLibAbilita)]
+[h, macro("class-skills/getDurataAbilita@this"): json.append(oToken,sLibAbilita)]
 [h: sDurata = macro.return]
 [h: iLiv = getLivelloAbilita(oToken,sLibAbilita)]
 [r: sImage]

@@ -116,10 +116,10 @@
 		[macro("powers/togglePoteriLancioOverride@this"): target]
 	};
 	case "ToggleNecrofuria":{
-		[macro("toggleNecrofuria@Lib:AbilitaClasse"): target]
+		[macro("class-skills/toggleNecrofuria@this"): target]
 	};
 	case "ToggleSovSpiritico":{
-		[macro("toggleSovSpiritico@Lib:AbilitaClasse"): target]
+		[macro("class-skills/toggleSovSpiritico@this"): target]
 	};
 	default :{}
 ]
