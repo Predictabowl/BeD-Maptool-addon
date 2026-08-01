@@ -4,14 +4,14 @@
 [h: bMacroCalled = json.get(macro.args,"macroCalled")]
 
 [h, if(bRemove == 1), code:{
-	[macro("addMoveModifiers@Lib:Movement"): json.set("","token",target,"MoveMul",-1)]
+	[macro("movement/addMoveModifiers@this"): json.set("","token",target,"MoveMul",-1)]
 	[popOverride(target,"bloccaOpportunitaOverride")]
 	[return(0,"")]
 }]
 
 [h, if(bMacroCalled): return(0,"")]
 
-[macro("addMoveModifiers@Lib:Movement"): json.set("","token",target,"MoveMul",1)]
+[macro("movement/addMoveModifiers@this"): json.set("","token",target,"MoveMul",1)]
 [pushOverride(target,"bloccaOpportunitaOverride")]
 
 [h, if(source != ""), code:{

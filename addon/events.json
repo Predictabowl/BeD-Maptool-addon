@@ -1,7 +1,14 @@
 {
     "events": [
         {
-            "name": "onInit", "mts": "onStartup"
+            "name": "onInit",
+            "mts": "onStartup"
+        }
+    ],
+    "legacyEvents": [
+        {
+            "name": "onTokenMove",
+            "mts": "movement/onTokenMove"
         }
     ]
 }

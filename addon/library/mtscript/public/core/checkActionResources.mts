@@ -7,7 +7,7 @@
 [h: switchToken(target)]
 [h: flag = 1]
 
-[macro("checkMovement@Lib:Movement"):json.append(target,move)]
+[macro("movement/checkMovement@this"):json.append(target,move)]
 [h: move = json.get(macro.return,0)]
 [h: azione = azione + json.get(macro.return,1)]
 [h, if(move > MM  && move > 0), code:{

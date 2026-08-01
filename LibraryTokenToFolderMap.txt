@@ -4,15 +4,18 @@ Lib:MetodiVari -> utility
 Lib:Poteri -> powers
 Lib:Combattimento -> combat
 Lib:TokenMacros -> mobs
+Lib:Movement -> movement
 
 # Next in line to be mapped
-Lib:Movement -> movement
+Lib:Meccaniche
 
 
 # Not Mapped yet 
 Lib:Scheda -> gui
 Lib:OggettiUsabili
-Lib:Meccaniche
 Lib:Mat
 Lib:EquipEffect
 Lib:AbilitaClasse 
+
+# TODO
+powers library "addSpellInLib" need to save data into the token, must be adapted to the library, or sidestepped.

@@ -1,0 +1,5 @@
+[h: source = macro.args]
+[h: lDati = getProperty ("Lista_Dati",source)]
+[h: time = Tempo]
+[h: lDati = setStrProp(lDati, "Tempo_Mov", time)]
+[h: setProperty ("Lista_Dati",lDati,source)]
