@@ -74,15 +74,15 @@
 [h: setProperty("Lista_Dati",oListaDatiCreatura,sSpawner)]
 
 [h: jRes = json.set("","puntiLiv30",iPunti30,"minCasuale",1)]
-[macro("setLivelloCreatura@Lib:Meccaniche"): json.append(iLL, sSpawner, jRes)]
-[macro("setSummonPoteri@Lib:Meccaniche"): sSpawner] 
-[macro("setSummonAbilita@Lib:Meccaniche"): sSpawner] 
+[macro("mechanics/setLivelloCreatura@this"): json.append(iLL, sSpawner, jRes)]
+[macro("mechanics/setSummonPoteri@this"): sSpawner] 
+[macro("mechanics/setSummonAbilita@this"): sSpawner] 
 [macro("events/eventInstaller@this"): json.append(sSpawner,"On_Death","despawnEvent","despawnOnDeath@Lib:Meccaniche","")]
 
 [h, if(isPC(source)): setPC(sSpawner); setNPC(sSpawner)]
 
 <!-- Spawn -->
-[r, macro("spawnCreatura@Lib:Meccaniche"): json.append(source,sSpawner,sNome,sSizeD)]
+[r, macro("mechanics/spawnCreatura@this"): json.append(source,sSpawner,sNome,sSizeD)]
 [h: oSpawned = macro.return]
 
 <!-- Effetto a tempo per il Despawn -->

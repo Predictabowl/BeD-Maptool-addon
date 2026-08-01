@@ -42,7 +42,7 @@
 [h, if(bClearance == 1), code:{
 	[macro("powers/isHarmful@this"): spellName]
 	[if(macro.return == 1), code:{
-		[macro("checkMarchi@Lib:Meccaniche"): json.append(source,target)]
+		[macro("mechanics/checkMarchi@this"): json.append(source,target)]
 	}]
 	[macro("powers/checkComponenti@this"): json.append(source,spellName)]
 	[bClearance = macro.return]

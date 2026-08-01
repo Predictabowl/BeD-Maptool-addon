@@ -1,0 +1,1 @@
+[h: macro.return = roll(1, 20)]

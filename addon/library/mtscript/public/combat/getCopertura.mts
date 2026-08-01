@@ -31,7 +31,7 @@
 	[macro("utility/getVisionCopertura@this"): json.append(attaccante,difensore)]
 	[fCopertura = 1-(1-fCopertura)*(1-macro.return)]
 	
-	[macro("getCopertureMappa@Lib:Meccaniche"): json.append(attaccante, difensore)]
+	[macro("mechanics/getCopertureMappa@this"): json.append(attaccante, difensore)]
 	[aCopertureMappa = macro.return]
 }]
 

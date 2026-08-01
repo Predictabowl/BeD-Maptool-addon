@@ -8,4 +8,4 @@
 [h: nomeDec = getLibProperty("nome_decorativo",spellName)]
 
 [h: oParam = json.set("","source",source,"target","","macroInfranto",macroInfranto,"macroParam","","tipo","SFIDA","durata",iDurata,"nome",nomeDec,"macroRemove", macroRemove)]
-[macro("setMarchio@Lib:Meccaniche"): oParam]
+[macro("mechanics/setMarchio@this"): oParam]

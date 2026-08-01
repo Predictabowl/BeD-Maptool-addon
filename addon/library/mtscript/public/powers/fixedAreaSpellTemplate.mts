@@ -26,7 +26,7 @@
 [h: sCoperturaName = ""]
 [h, if(isNumber(nCopertura)), code :{
 	[sCoperturaName = sCaster+"-"+spellName]
-	[macro("addCoperturaMappa@Lib:Meccaniche"): json.append(sCoperturaName, sDrawId, nCopertura)]
+	[macro("mechanics/addCoperturaMappa@this"): json.append(sCoperturaName, sDrawId, nCopertura)]
 	[sDecoratedMacro = eventoMacro]
 	[eventoMacro = "decoratorFixedAreaCopertura@Lib:Poteri"]
 	[evMacroParam = json.set(evMacroParam, "coperturaName", sCoperturaName, "decoratedCoperturaMacro", sDecoratedMacro)]

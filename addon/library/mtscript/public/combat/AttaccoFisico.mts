@@ -48,7 +48,7 @@
 [h: inRange = macro.return]
 
 [r, if(inRange == 1), code:{
-	[macro("checkMarchi@Lib:Meccaniche"): json.append(source,target)]
+	[macro("mechanics/checkMarchi@this"): json.append(source,target)]
 	
 	[macro("mobs/getNomeArma@this"): json.append(source,arma)]
 	[h: sArma = macro.return]

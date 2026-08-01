@@ -7,7 +7,7 @@ Lib:TokenMacros -> mobs
 Lib:Movement -> movement
 
 # Next in line to be mapped
-Lib:Meccaniche
+Lib:Meccaniche -> mechanics
 
 
 # Not Mapped yet 

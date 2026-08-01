@@ -26,7 +26,7 @@
 	[delDaMemoria(target, sSpawnedTag)]
 }]
 
-[macro("delCoperturaMappa@Lib:Meccaniche"): sCoperturaName]
+[macro("mechanics/delCoperturaMappa@this"): sCoperturaName]
 [h: eventUninstaller(mapVar, "On_Move_Map", sEventName)]
 [h, if(bInizioRound): sEvent ="On_Round_Start_Map"; sEvent = "On_Round_End_Map"]
 [h: eventUninstaller(mapVar, sEvent, sEventName)]

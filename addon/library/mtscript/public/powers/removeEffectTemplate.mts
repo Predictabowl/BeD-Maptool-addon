@@ -23,7 +23,7 @@
 
 	[oEffect = getEffetto(target, sEffect)]
 	[iRR = getRREffetto(target, oEffect)]
-	[macro("RollRimuoviEffetto@Lib:Meccaniche"): 0]
+	[macro("mechanics/RollRimuoviEffetto@this"): 0]
 	[h: iResult = macro.return]
 	[h: bResult = iResult+iPR >= iRR]
 	[h: msgOut= strformat("<div>Potenza di Rimozione: <span title='1d20 = %d'>%d</span>; CD: %d</div>", iResult, iResult+iPR, iRR)]

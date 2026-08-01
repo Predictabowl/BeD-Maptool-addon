@@ -26,7 +26,7 @@
 [macro("powers/getLivelloIndicativo@this"): json.set("","source",source,"spellName",spellName)]
 [h: iLiv = macro.return]
 [h: jRes = json.set("","puntiLiv30","","minCasuale",1)]
-[macro("setLivelloCreatura@Lib:Meccaniche"): json.append(iLiv, oSpawner, jRes)]
+[macro("mechanics/setLivelloCreatura@this"): json.append(iLiv, oSpawner, jRes)]
 
 [h, if(sMacro != ""), code: {
 	[h: jParams = json.set(macro.args, "spawnerToken", oSpawner)]
