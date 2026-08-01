@@ -6,6 +6,6 @@
 	[h: target = json.get(id,"tokenId")]
 	[macro("pagaMantenimenti@Lib:Poteri"):target]
 	[macro("core/AutoUpdateEffectTime@this"): json.append(target,iDurata)]
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",target,"key","msgEffetto")]
+	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","msgEffetto")]
 	[if(macro.return != ""): broadcast(macro.return)]
 }]

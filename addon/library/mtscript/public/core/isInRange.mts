@@ -5,7 +5,7 @@
 [macro("getDrawCoreId@Lib:Poteri"): target]
 [h: sDrawId = macro.return]
 [h, if(sDrawId != 0), code:{
-	[macro("distanzaTokenDraw@Lib:MetodiVari"): json.append(source, sDrawId)]
+	[macro("utility/distanzaTokenDraw@this"): json.append(source, sDrawId)]
 	[check = macro.return]
 };{
 	[h: check = getDistance(source,1,target)]

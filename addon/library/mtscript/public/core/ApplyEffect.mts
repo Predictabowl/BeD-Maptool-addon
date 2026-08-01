@@ -43,7 +43,7 @@
 [h, if(tipo != "NASCOSTO"), code:{
 	[h: oEventParam = json.set("","effetto",macro.args)]
 	[macro("runEvents@Lib:Eventi"): json.set("","source",target,"event","On_Effect_Received","eventParam",oEventParam)]
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",target,"key","msgEventOn_Effect_Received")]
+	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","msgEventOn_Effect_Received")]
 	[h: msgEvent = msgEvent + macro.return]
 	[h, if(msgEvent != ""): msgEvent = msgEvent+"<br>"]
 }]
@@ -53,7 +53,7 @@
 
 [h, if(bImmune), code:{
 	[msgOut = strformat("%s &egrave; immune a questo effetto",getName(target))]
-	[macro("setMessaggio@Lib:MetodiVari"):json.set("","token",target,"key","msgEffetto","msg",msgOut)]
+	[macro("utility/setMessaggio@this"):json.set("","token",target,"key","msgEffetto","msg",msgOut)]
 	[return (0,0)]
 }]
 
@@ -68,13 +68,13 @@
 [h: subList=json.set(subList,"otherInfo",oInfo)]
 <!-- è importante inserire un flag per sapere se è la prima applicazione o se l'effetto viene applicato come
  conseguenza di altri effetti durante la fese di update ad inizio e termine round -->
-[macro("isRoundUpdating@Lib:MetodiVari"):0]
+[macro("utility/isRoundUpdating@this"):0]
 [h: subList = json.set(subList,"params",params,"roundUpdating",macro.return)]
 
 [h: Lista_Effetti = json.set(Lista_Effetti,effetto,subList)] 
 
 [h, if (stato != "null"), code:{
-	[macro("pushStato@Lib:MetodiVari"):listAppend(target,stato)]
+	[macro("utility/pushStato@this"):listAppend(target,stato)]
 }]
 
 

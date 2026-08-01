@@ -1,2 +1,2 @@
-macro\("([^"]+)@Lib:Basic"
-macro("core/$1@this"
+macro\("([^"]+)@Lib:MetodiVari"
+macro("utility/$1@this"

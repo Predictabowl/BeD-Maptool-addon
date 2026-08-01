@@ -1,0 +1,11 @@
+[h: target = listGet(macro.args,0)]
+[h: nomeS = listGet(macro.args,1)]
+[h: switchToken(target)]
+[h: stackValue = getStrProp(Stack_Stati,nomeS)]
+[h, if(stackValue==""): stackValue = 0]
+[h, if(stackValue >0), code:{
+	[h: stackValue = stackValue-1]
+	[h: Stack_Stati = setStrProp(Stack_Stati,nomeS,stackValue)]
+}]
+[h, if(stackValue == 0): setState(nomeS,0,target)]
+[h: macro.return = stackValue]

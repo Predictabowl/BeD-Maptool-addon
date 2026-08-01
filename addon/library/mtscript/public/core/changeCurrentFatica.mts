@@ -9,6 +9,6 @@
 	[sMsgTag = ""]
 }]
 
-[macro("modMinMax@Lib:MetodiVari"): json.set("","target",target,"statToMod","PF","maxStat","PF_Max","modValue",modFatica)]
-[macro("annunciaModificaStat@Lib:MetodiVari"): json.set("","target",target,"colore","orange","nome","Punti Fatica","valore",macro.return,"msgTag",sMsgTag)]
-[macro("updateBars@Lib:MetodiVari"):target]
+[macro("utility/modMinMax@this"): json.set("","target",target,"statToMod","PF","maxStat","PF_Max","modValue",modFatica)]
+[macro("utility/annunciaModificaStat@this"): json.set("","target",target,"colore","orange","nome","Punti Fatica","valore",macro.return,"msgTag",sMsgTag)]
+[macro("utility/updateBars@this"):target]

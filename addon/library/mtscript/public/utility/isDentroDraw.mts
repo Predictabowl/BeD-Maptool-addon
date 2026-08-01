@@ -1,0 +1,13 @@
+[h: target = arg(0)]
+[h: sDrawId = arg(1)]
+[h, if(argCount()>2): jOptions = arg(2); jOptions = "{}"]
+[h: sMap = json.get(jOptions,"mapName")]
+[h, if(sMap == ""): sMap = getCurrentMapName()]
+
+[h: switchToken(target)]
+[h: jPoint1 = json.set("", "x", getTokenX(), "y", getTokenY())]
+[h: jPoint2 = json.set("", "x", getTokenX()+getTokenWidth(), "y", getTokenY()+getTokenHeight())]
+[h: jPath = json.append(jPoint1, jPoint2)]
+[h: aPath = movedOverDrawing(sMap, sDrawId, jPath)]
+[h, if(json.isEmpty(aPath)): return(0,0)]
+[h: macro.return = 1]

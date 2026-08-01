@@ -2,7 +2,7 @@
 [h: mod = arg(1)]
 [h, if(argCount() > 2): sFilter = arg(2); sFilter = ""]
 
-[h, macro("setRoundUpdating@Lib:MetodiVari"):1]
+[h, macro("utility/setRoundUpdating@this"):1]
 
 [h: switchToken(target)]
 [h, if(json.isEmpty(Lista_Effetti) == 1): Lista_Effetti= "{}"]
@@ -38,4 +38,4 @@
 		[r, macro("core/ProcessEffect@this"):param]
 	};{}]
 }]
-[h, macro("setRoundUpdating@Lib:MetodiVari"):0]
+[h, macro("utility/setRoundUpdating@this"):0]

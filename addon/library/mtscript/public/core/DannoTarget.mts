@@ -39,7 +39,7 @@ usano On_Before_Damaged, On_Attack, On_Attacked, On_Hit, On_Hitted
 [h, if(source != ""), code:{
 	[eventParam = json.set("","danno",Dmg, "spellName", spellName)]
 	[macro("runEvents@Lib:Eventi"): json.set("","source",id,"target",source,"event","On_Before_Damaged","eventParam",eventParam)]
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",id,"key","msgEventOn_Before_Damaged")]
+	[macro("utility/popMessaggio@this"): json.set("","token",id,"key","msgEventOn_Before_Damaged")]
 	[if(macro.return != ""): msgOutput = strformat("%{msgOutput}<br>%{macro.return}")]
 };{
 	[broadcast(getMacroName()+"@"+getMacroLocation()+" : source assente",getPlayerName())]
@@ -67,9 +67,9 @@ usano On_Before_Damaged, On_Attack, On_Attacked, On_Hit, On_Hitted
 	[macro("runEvents@Lib:Eventi"): json.set("","source",id,"target",source,"event","On_Damaged","eventParam",eventParam)]
 	[macro("runEvents@Lib:Eventi"): json.set("","source",source,"target",id,"event","On_Damage","eventParam",eventParam)]	
 
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",source,"key","msgEventOn_Damage")]
+	[macro("utility/popMessaggio@this"): json.set("","token",source,"key","msgEventOn_Damage")]
 	[if(macro.return != ""): msgOutput = strformat("%{msgOutput}<br>%{macro.return}")]
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",id,"key","msgEventOn_Damaged")]
+	[macro("utility/popMessaggio@this"): json.set("","token",id,"key","msgEventOn_Damaged")]
 	[if(macro.return != ""): msgOutput = strformat("%{msgOutput}<br>%{macro.return}")]
 };{
 	[broadcast(getMacroName()+"@"+getMacroLocation()+" : source assente",getPlayerName())]
@@ -78,7 +78,7 @@ usano On_Before_Damaged, On_Attack, On_Attacked, On_Hit, On_Hitted
 [h, if(verbose!=0): broadcast(msgOutput)]
 [h, if(bMsg != 0): appendMessaggio(id,"strDanno",msgOutput)]
 
-[macro("updateBars@Lib:MetodiVari"):id]
+[macro("utility/updateBars@this"):id]
 
 [h: parameters = json.append(0,id,"nil",1)]
 

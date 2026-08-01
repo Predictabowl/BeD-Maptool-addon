@@ -50,5 +50,5 @@
 	[h: MM = MM - json.get(jCosts,"MM")]
 	[h: PP = PP - json.get(jCosts,"PP")]
 }]
-[macro("updateBars@Lib:MetodiVari"):target]
+[macro("utility/updateBars@this"):target]
 [h: macro.return = 1]

@@ -23,7 +23,7 @@
 	[lambda = 90]
 };{
 	[m = (sy-ty)/(sx - tx)]
-	[macro("mod@Lib:MetodiVari"):json.append(math.atan(m),180)]
+	[macro("utility/mod@this"):json.append(math.atan(m),180)]
 	[lambda = macro.return]
 }]
 
@@ -36,7 +36,7 @@
 	}]
 }]
 
-[macro("mod@Lib:MetodiVari"):json.append(lambda+alfa,360)]
+[macro("utility/mod@this"):json.append(lambda+alfa,360)]
 [h: lambda = round(macro.return)]
 [h, if((lambda >= 90) && (lambda < 270)):  sReturn = "spalle"; sReturn = "fronte"]
 

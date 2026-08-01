@@ -11,4 +11,4 @@
 	[h: setInitiative(tiro)]
 	[h: Lista_Dati = setStrProp(Lista_Dati,"Frazione",tiro)]
 }]
-[macro("sortIniziativa@Lib:MetodiVari"):0]
+[macro("utility/sortIniziativa@this"):0]

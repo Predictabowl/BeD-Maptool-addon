@@ -30,7 +30,7 @@ mentre quello nuovo non ne ha bisogno -->
 	[lambda = 90]
 };{
 	[m = (sy-ty)/(sx - tx)]
-	[macro("mod@Lib:MetodiVari"):json.append(math.atan(m),180)]
+	[macro("utility/mod@this"):json.append(math.atan(m),180)]
 	[lambda = macro.return]
 }]
 
@@ -42,7 +42,7 @@ mentre quello nuovo non ne ha bisogno -->
 		[lambda = lambda + 180]
 	}]
 }]
-[macro("mod@Lib:MetodiVari"):json.append(lambda+alfa,360)]
+[macro("utility/mod@this"):json.append(lambda+alfa,360)]
 [h: lambda = macro.return]
 
 

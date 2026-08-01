@@ -1,0 +1,8 @@
+[h: broadcast(macro.args)]
+[h: sToken = arg(0)]
+[h: broadcast(sToken)]
+[h: val = 1d20]
+[h: "Arguments: " + macro.args]
+[h: "d20: " + val]
+[h: result = json.set("", "value", roll(1,20))]
+[r: result]

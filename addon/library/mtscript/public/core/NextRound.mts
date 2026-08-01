@@ -30,11 +30,11 @@
 	[h: target = json.get(id,"tokenId")]
 	[macro("core/AutoUpdateEffectTime@this"): json.append(target,-1)]
 
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",target,"key","msgEffetto")]
+	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","msgEffetto")]
 	[if(macro.return != ""): broadcast(macro.return)]
 	[macro("core/startRoundEvents@this"):target]
 
-	[macro("clearMessaggi@Lib:MetodiVari"): target]
+	[macro("utility/clearMessaggi@this"): target]
 	[macro("autocastAbilita@Lib:AbilitaClasse"): target]
 }]
 

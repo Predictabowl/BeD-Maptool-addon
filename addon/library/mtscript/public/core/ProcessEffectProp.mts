@@ -44,7 +44,7 @@ case "danno":{
 	[h, if(origine == ""): origine = replace(effetto,"_"," ")+":"]
 	[h: param = json.set("","target",target,"valore",dmg,"origine",origine,"source",source,"verbose",0)]
 	[macro("core/DannoTarget@this"): param]
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",target,"key","strDanno")]
+	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","strDanno")]
 	[h: msg = macro.return]
 };
 case "cura":{
@@ -54,7 +54,7 @@ case "cura":{
 	[h: origine = replace(effetto,"_"," ")+":"]
 	[h: param = json.set("","target",target,"source",source,"valore",heal,"origine",origine,"verbose",0)]
 	[macro("core/CuraTarget@this"): param]
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",target,"key","strCura")]
+	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","strCura")]
 	[h: msg = macro.return]
 };
 case "evento":{

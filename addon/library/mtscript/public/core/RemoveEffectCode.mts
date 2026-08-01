@@ -31,7 +31,7 @@
 [h: Lista_Effetti = json.remove(Lista_Effetti,effetto)]
 
 [h, if (stato != "null"), code:{
-	[macro("popStato@Lib:MetodiVari"):listAppend(target,stato)]
+	[macro("utility/popStato@this"):listAppend(target,stato)]
 }]
 
 [h: macro.return = endstr]

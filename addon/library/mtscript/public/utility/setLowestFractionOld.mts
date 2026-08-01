@@ -1,0 +1,5 @@
+[h: fr = getProperty("Frazione","MapVar")]
+[macro("getLowestFraz@"+getMacroLocation()):0]
+[h: lowVal = macro.return]
+[h, if(lowVal > fr): fr = lowVal]
+[h: setProperty("Frazione",fr,"MapVar")] 

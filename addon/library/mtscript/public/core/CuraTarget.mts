@@ -24,10 +24,10 @@
 	[macro("runEvents@Lib:Eventi"): json.set("","source",source,"target",target,"event","On_Heal","eventParam",eventParam)]
 	[macro("runEvents@Lib:Eventi"): json.set("","source",target,"target",source,"event","On_Healed","eventParam",eventParam)]
 
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",source,"key","msgEventOn_Heal")]
-	[macro("setMessaggio@Lib:MetodiVari"): json.set("","token",source,"key","heal","msg",macro.return)]
-	[macro("popMessaggio@Lib:MetodiVari"): json.set("","token",target,"key","msgEventOn_Healed")]
-	[macro("appendMessaggio@Lib:MetodiVari"): json.set("","token",source,"key","heal","msg",macro.return)]
+	[macro("utility/popMessaggio@this"): json.set("","token",source,"key","msgEventOn_Heal")]
+	[macro("utility/setMessaggio@this"): json.set("","token",source,"key","heal","msg",macro.return)]
+	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","msgEventOn_Healed")]
+	[macro("utility/appendMessaggio@this"): json.set("","token",source,"key","heal","msg",macro.return)]
 }]
 
 
@@ -47,9 +47,9 @@
 	[h: msgOutput = origine+getName(id)+ " Recupera <span style='color:green;font-weight:bold;'>"+curaEff+"</span> Punti Vita!"]
 	[h, if(verbose!=0): broadcast(msgOutput)]
 	[h, if(bMsg != 0), code:{
-		[macro("setMessaggio@Lib:MetodiVari"):json.set("","token",id,"key","strCura","msg",msgOutput)]
+		[macro("utility/setMessaggio@this"):json.set("","token",id,"key","strCura","msg",msgOutput)]
 	}]
 }]
-[macro("updateBars@Lib:MetodiVari"):id]
+[macro("utility/updateBars@this"):id]
 
 [h: macro.return = curaEff]

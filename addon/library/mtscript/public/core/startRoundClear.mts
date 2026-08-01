@@ -10,7 +10,7 @@
 [h: Stat_Mod = "{}"]
 [macro("clearAzione@Lib:TokenMacros"):id]
 [macro("pagaMantenimenti@Lib:Poteri"):id]
-[macro("updateBars@Lib:MetodiVari"):id]
+[macro("utility/updateBars@this"):id]
 [macro("clearAllCapRolls@Lib:TokenMacros"):id]
 [macro("delOverrideAttackerOnTargetOpp@Lib:TokenMacros"):id]
 [h: delOverride(id,"forzaSubisceOpportunita")]
