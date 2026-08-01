@@ -1,0 +1,1 @@
+[macro("mobs/setCorsa@this"):getImpersonated()]

@@ -24,9 +24,9 @@
 }]
 
 [h, if(bConc), code:{
-	[macro("InterrompiAzione@Lib:TokenMacros"): target]
+	[macro("mobs/InterrompiAzione@this"): target]
 };{
-	[macro("forzaInterrompiAzione@Lib:TokenMacros"): target]
+	[macro("mobs/forzaInterrompiAzione@this"): target]
 	[sMsg = strformat("%s fallisce la prova <span title='%{sMsg}'>Concentrazione</span>", getName(target))]
 	[return(0,sMsg)]
 }]

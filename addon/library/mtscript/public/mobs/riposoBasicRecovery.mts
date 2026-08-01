@@ -1,0 +1,11 @@
+[h: oToken = arg(0)]
+
+[h: switchToken(oToken)]
+[macro("DisattivaTutteAbilita@Lib:AbilitaClasse"):oToken]
+[h: PA = PA_Max]
+[h: MM = MM_Max]
+[h: PP = PP_Max]
+[h: resetAttacchiRimasti(oToken)]
+[h: resetPotereOffensivo(oToken)]
+[macro("powers/clearRecupero@this"): oToken]
+[macro("mobs/medicinaCuraFeriteReset@this"): oToken]

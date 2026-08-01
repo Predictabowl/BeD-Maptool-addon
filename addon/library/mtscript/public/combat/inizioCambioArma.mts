@@ -11,14 +11,14 @@
 	[return(0,sMsg)]
 }]
 
-[macro("getDifendersi@Lib:TokenMacros"): source]
+[macro("mobs/getDifendersi@this"): source]
 [if(macro.return): bOpport = 0; bOpport = 1]
 
 [h: oActionParam = json.set("","source",source, "callbackParams", jParams)]
 [h, if(isCombat()), code:{
 	[h: iTime = calcActionTime(6,source)]
 	[h: param = json.set("","target",source,"source",source,"macro","risolviCambioArma@Lib:Combattimento","macroParam",oActionParam,"tipo","tattico","opp",bOpport,"time",iTime,"action","Cambio Arma")]
-	[macro("IniziaAzione@Lib:TokenMacros"):param]
+	[macro("mobs/IniziaAzione@this"):param]
 	[h: sMsg= strformat("%s inizia a cambiare le armi",getName(source))]
 	[h: broadcast(sMsg)]
 };{

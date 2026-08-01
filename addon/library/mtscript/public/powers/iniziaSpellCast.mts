@@ -58,7 +58,7 @@ Il che vuol dire se il safetycheck fa un abort non si ha un clean corretto degli
 [h: param = json.set("","target",target,"source",source,"action",sFluffSpell,"time",time,"color",color,"tipo",sTipo,"opp",opport,"macro","SpellCast@Lib:Poteri","macroParam",oMacroParam, "color", sActionColor)]
 
 [h: setMessaggio(source,"iniziaAzioneMsg",strformat("%s Inizia a lanciare un potere.",getName(source)))]
-[macro("IniziaAzione@Lib:TokenMacros"):param]
+[macro("mobs/IniziaAzione@this"):param]
 [bFlag = macro.return]
 
 [h, if(bFlag), code:{

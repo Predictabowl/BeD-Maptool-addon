@@ -13,7 +13,7 @@
 	[if (bOpp > 0): opport = 0]
 }]
 [h, if(opport != 0), code:{
-	[macro("getDifendersi@Lib:TokenMacros"): source]
+	[macro("mobs/getDifendersi@this"): source]
 	[if(macro.return): opport = 0]
 }]
 

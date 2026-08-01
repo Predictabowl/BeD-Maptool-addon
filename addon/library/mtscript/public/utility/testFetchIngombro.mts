@@ -1,3 +1,3 @@
 [h: sToken = arg(0)]
-[h, macro("getIngombroTotale@Lib:TokenMacros"): sToken]
+[h, macro("mobs/getIngombroTotale@this"): sToken]
 [r: macro.return]

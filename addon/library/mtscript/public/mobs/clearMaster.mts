@@ -1,0 +1,1 @@
+[h: Lista_Dati = deleteStrProp(Lista_Dati,"Master")]

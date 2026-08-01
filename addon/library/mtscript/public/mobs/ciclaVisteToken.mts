@@ -1,0 +1,10 @@
+[h: oToken =arg(0)]
+
+[h: switchToken(oToken)]
+[h: sPropKey = "VistaAlternativa"]
+[macro("mobs/getVistePossedute@this"): oToken]
+[h: aViste = macro.return]
+[h: sVista = getSightType()]
+[h: iIndex = json.indexOf(aViste,sVista)]
+[h: iIndex = math.mod(iIndex+1,json.length(aViste))]
+[h: setSightType(json.get(aViste,iIndex))]

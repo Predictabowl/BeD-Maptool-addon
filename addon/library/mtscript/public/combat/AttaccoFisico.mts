@@ -50,7 +50,7 @@
 [r, if(inRange == 1), code:{
 	[macro("checkMarchi@Lib:Meccaniche"): json.append(source,target)]
 	
-	[macro("getNomeArma@Lib:TokenMacros"): json.append(source,arma)]
+	[macro("mobs/getNomeArma@this"): json.append(source,arma)]
 	[h: sArma = macro.return]
 
 	[macro("combat/getAttackPrice@this"): json.set("","source",source,"arma",arma,"opportunita",bOpp)]

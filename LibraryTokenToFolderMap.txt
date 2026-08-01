@@ -3,6 +3,7 @@ Lib:Eventi -> events
 Lib:MetodiVari -> utility
 Lib:Poteri -> powers
 Lib:Combattimento -> combat
+Lib:TokenMacros -> mobs
 
 # Next in line to be mapped
 Lib:Movement -> movement
@@ -12,5 +13,4 @@ Lib:Movement -> movement
 Lib:Sheda -> gui
 Lib:OggettiUsabili
 Lib:Meccaniche
-Lib:TokenMacros
 Lib:Mat

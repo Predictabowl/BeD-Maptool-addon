@@ -10,7 +10,7 @@
 [h: spellTag = getLibProperty("tags",spellName)]
 
 [h: switchToken(source)]
-[macro("getLastTestDL@Lib:TokenMacros"):json.set("","source",source,"spellName",spellName)]
+[macro("mobs/getLastTestDL@this"):json.set("","source",source,"spellName",spellName)]
 [h: bDLTest = macro.return]
 [macro("powers/getSpellOrigine@this"): json.append(source,spellName)]
 [h: sOrigine = macro.return]

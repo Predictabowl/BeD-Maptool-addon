@@ -22,9 +22,9 @@
 [macro("combat/isStile1A@this"): oToken]
 [h, if(macro.return), code:{
 	[PA_Max = PA_Max -1]
-	[macro("getIdArmaEquip@Lib:TokenMacros"): json.append(oToken,2)]
-	[macro("addEquipToSlotVeloce@Lib:TokenMacros"): json.append(oToken,macro.return)]
-	[macro("riponiArma@Lib:TokenMacros"): json.append(oToken,2)]
+	[macro("mobs/getIdArmaEquip@this"): json.append(oToken,2)]
+	[macro("mobs/addEquipToSlotVeloce@this"): json.append(oToken,macro.return)]
+	[macro("mobs/riponiArma@this"): json.append(oToken,2)]
 }]
 
 [macro("combat/isStile2M@this"): oToken]
@@ -35,16 +35,16 @@
 
 [macro("combat/isStileAS@this"): oToken]
 [h, if(macro.return), code:{
-	[macro("addEquipToSlotVeloce@Lib:TokenMacros"): json.append(oToken,Scudo_Equipaggiato)]
-	[macro("riponiScudo@Lib:TokenMacros"): oToken]
+	[macro("mobs/addEquipToSlotVeloce@this"): json.append(oToken,Scudo_Equipaggiato)]
+	[macro("mobs/riponiScudo@this"): oToken]
 }]
 
 
 [macro("combat/isStile2A@this"): oToken]
 [h, if(macro.return), code:{
-	[macro("getIdArmaEquip@Lib:TokenMacros"): json.append(oToken,2)]
-	[macro("addEquipToSlotVeloce@Lib:TokenMacros"): json.append(oToken,macro.return)]
-	[macro("riponiArma@Lib:TokenMacros"): json.append(oToken,2)]
+	[macro("mobs/getIdArmaEquip@this"): json.append(oToken,2)]
+	[macro("mobs/addEquipToSlotVeloce@this"): json.append(oToken,macro.return)]
+	[macro("mobs/riponiArma@this"): json.append(oToken,2)]
 	[Num_Attacchi = Num_Attacchi - 1]
 	[Num_Attacchi_Opp = Num_Attacchi_Opp - 1]
 }]
@@ -74,16 +74,16 @@
 }]
 
 [h, if(bStile2MOld != bStile2MNew), code:{
-	[macro("riequipaggiaArma@Lib:TokenMacros"): json.append(oToken,1)]
+	[macro("mobs/riequipaggiaArma@this"): json.append(oToken,1)]
 }]
 [macro("combat/checkStileConArma@this"): oToken]
 [h, if(!macro.return), code:{
-	[macro("getIdArmaEquip@Lib:TokenMacros"): json.append(oToken,1)]
-	[macro("addEquipToSlotVeloce@Lib:TokenMacros"): json.append(oToken,macro.return)]
-	[macro("getIdArmaEquip@Lib:TokenMacros"): json.append(oToken,2)]
-	[macro("addEquipToSlotVeloce@Lib:TokenMacros"): json.append(oToken,macro.return)]
-	[macro("riponiArma@Lib:TokenMacros"): json.append(oToken,1)]
-	[macro("riponiArma@Lib:TokenMacros"): json.append(oToken,2)]
+	[macro("mobs/getIdArmaEquip@this"): json.append(oToken,1)]
+	[macro("mobs/addEquipToSlotVeloce@this"): json.append(oToken,macro.return)]
+	[macro("mobs/getIdArmaEquip@this"): json.append(oToken,2)]
+	[macro("mobs/addEquipToSlotVeloce@this"): json.append(oToken,macro.return)]
+	[macro("mobs/riponiArma@this"): json.append(oToken,1)]
+	[macro("mobs/riponiArma@this"): json.append(oToken,2)]
 }]
 
 [h: macro.return = 1]

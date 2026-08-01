@@ -18,14 +18,14 @@
 	[sAttSkill = "Lotta"]
 }]
 
-[macro("rollCapacita@Lib:TokenMacros"): json.set("","source",source,"capacita",sDefSkill,"verbose",1,"storeRoll",0)]
+[macro("mobs/rollCapacita@this"): json.set("","source",source,"capacita",sDefSkill,"verbose",1,"storeRoll",0)]
 [h: iSourceRoll = macro.return]
-[macro("rollCapacita@Lib:TokenMacros"): json.set("","source",target,"capacita",sAttSkill,"verbose",1,"storeRoll",0)]
+[macro("mobs/rollCapacita@this"): json.set("","source",target,"capacita",sAttSkill,"verbose",1,"storeRoll",0)]
 [h: iTargetRoll = macro.return]
 
 [h, if(iSourceRoll < iTargetRoll): bResult = 0; bResult = 1]
 [h, if(!bResult), code:{
-	[macro("InterrompiAzione@Lib:TokenMacros"): source]	
+	[macro("mobs/InterrompiAzione@this"): source]	
 	[nomeDec = getLibProperty("nome_decorativo",sSpellInCast)]
 	[sMsg = strformat("L'incantesimo %s di %s  viene interrotto!",nomeDec,getName(source))]
 };{

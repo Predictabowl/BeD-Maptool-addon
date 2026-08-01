@@ -15,16 +15,16 @@
 [h: sConc = popMessaggio(source,"msgRollConcentrazione")]
 
 [h, if(bConc), code:{
-	[macro("InterrompiAzione@Lib:TokenMacros"): target]
+	[macro("mobs/InterrompiAzione@this"): target]
 	[sSuccess = "Fallito"]
 	[sResult = "Interruzione"]
 };{
-	[macro("forzaInterrompiAzione@Lib:TokenMacros"): target]	
+	[macro("mobs/forzaInterrompiAzione@this"): target]	
 	[sSuccess = "Riuscito"]
 	[sResult = "Interruzione Forzata"]
 }]
 
-[macro("setAttesa@Lib:TokenMacros"):target]
+[macro("mobs/setAttesa@this"):target]
 
 [h: sMsg = strformat("%{sMsg}<div>Tiro perturbazione su %s: <span title='%{sConc}' style='font-style:italic'>%{sSuccess}</span> &rarr; %{sResult}</div>", getName(target))]
 

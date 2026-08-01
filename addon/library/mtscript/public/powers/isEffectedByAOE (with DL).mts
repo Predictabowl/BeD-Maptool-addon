@@ -16,7 +16,7 @@
 [h: bServitoreHitHimself = macro.return]
 [h, if(listContains(sTipoAOE,"EXCLUDESERVITORE") && bServitoreHitHimself): return (0,0)]
 
-[macro("getLastTestDL@Lib:TokenMacros"): json.set("","source",source,"spellName",spellName)]
+[macro("mobs/getLastTestDL@this"): json.set("","source",source,"spellName",spellName)]
 [h: bDL = macro.return]
 
 [h: sTipoBer = "TUTTI"]

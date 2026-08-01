@@ -22,12 +22,12 @@
 	[r, if (action == "Attacco" || ini < 0), code:{
 		[h: param = json.set("","source",source,"target",target,"arma",arma)]
 		[macro("AttaccoCore@"+getMacroLocation()):param]
-		[macro("FineAzione@Lib:TokenMacros"):source]
+		[macro("mobs/FineAzione@this"):source]
 	};{
 		[macro("getAttackTime@"+getMacroLocation()): json.set("","target",source,"arma",arma)]
 		[h: time = macro.return]
 		[h: param = json.set("","target",target,"source",source,"action","Attacco","time",time,"color","red")]
-		[macro("IniziaAzione@Lib:TokenMacros"):param]
+		[macro("mobs/IniziaAzione@this"):param]
 		Inizio un attacco contro [r: getName(target)]
 	}]
 };{

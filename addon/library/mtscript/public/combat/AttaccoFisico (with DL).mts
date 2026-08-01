@@ -16,7 +16,7 @@
 [h: assert((macro.return==1),getName(source) + " Non ha attacchi a disposizione",0)]
 
 [h: target = ""]
-[macro("getLastTestDL@Lib:TokenMacros"): json.append(source,"ATTACCO")]
+[macro("mobs/getLastTestDL@this"): json.append(source,"ATTACCO")]
 [h: bDLTest = macro.return]
 
 [h, if(bDLTest == 1 && bOpp == 0), code:{
@@ -47,7 +47,7 @@
 [h: inRange = macro.return]
 
 [r, if(inRange == 1), code:{
-	[macro("getNomeArma@Lib:TokenMacros"): json.append(source,arma)]
+	[macro("mobs/getNomeArma@this"): json.append(source,arma)]
 	[h: sArma = macro.return]
 
 	[macro("combat/getAttackPrice@this"): json.set("","source",source,"arma",arma,"opportunita",bOpp)]
@@ -70,6 +70,6 @@
 
 [macro("combat/delUltimoCritico@this"):source]
 [h: clearStatModifiers(target)]
-[macro("clearDL@Lib:TokenMacros"):source]
+[macro("mobs/clearDL@this"):source]
 
 [h: macro.return = bInterrupt]

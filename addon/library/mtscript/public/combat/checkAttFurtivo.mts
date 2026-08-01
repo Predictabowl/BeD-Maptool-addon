@@ -7,12 +7,12 @@
 [h, if(getState("Nascosto",source) == 1), code:{
 	[h: sSCap = "Furtivita"]
 	[h: sTCap = "Percezione"]
-	[macro("provaContrapposta@Lib:TokenMacros"): json.set("","source",source,"target",target,"sCap",sSCap,"tCap",sTCap)]
+	[macro("mobs/provaContrapposta@this"): json.set("","source",source,"target",target,"sCap",sSCap,"tCap",sTCap)]
 	[h: bFurtivo = macro.return]
 }]
 
 [h, if(!bFurtivo), code:{
-	[macro("popOverrideAttackerOnTargetFurtivo@Lib:TokenMacros"): json.append(source,target)]
+	[macro("mobs/popOverrideAttackerOnTargetFurtivo@this"): json.append(source,target)]
 	[bFurtivo = macro.return]
 }]
 

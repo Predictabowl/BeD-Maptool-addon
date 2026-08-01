@@ -49,6 +49,6 @@ mtscript/public/combat
 [h: setMessaggio(source,"iniziaAzioneMsg",sMsg)]
 
 [h: param = json.set("","target",target,"source",source,"macro","AttaccoFisico@Lib:Combattimento","macroParam",macroParam,"tipo",sTipo,"opp",generaOpp,"time",time,"color","red","action","Attacco")]
-[macro("IniziaAzione@Lib:TokenMacros"):param]
+[macro("mobs/IniziaAzione@this"):param]
 
 [h: macro.return = sMsg]

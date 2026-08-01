@@ -27,7 +27,7 @@
 		[attivaParam = json.set("","abilita",sAbilita)]
 		[sMacro = "AttivaAbilita@"+getMacroLocation()]
 		[param = json.set("","target",source,"source",source,"macro",sMacro,"macroParam",attivaParam,"tipo","Abilita","time",iTempo,"action",sAbilita)]
-		[macro("IniziaAzione@Lib:TokenMacros"):param]
+		[macro("mobs/IniziaAzione@this"):param]
 		[macro("getFluffName@"+sClasse):sAbilita]
 		[broadcast(getName(source)+" inizia ad attivare <b>"+macro.return+"</b>",getPlayerName())]
 	};{

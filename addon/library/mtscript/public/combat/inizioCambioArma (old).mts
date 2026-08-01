@@ -8,10 +8,10 @@
 [h: switchToken(source)]
 
 [h, if(sArma1 != ""), code:{
-	[macro("isArmaDaLancio@Lib:TokenMacros"): json.append(source,sArma1)]
+	[macro("mobs/isArmaDaLancio@this"): json.append(source,sArma1)]
 	[h: bLancio1 = macro.return]
 	[h, if(!bLancio1), code:{
-		[macro("isArmaDaLancio@Lib:TokenMacros"): json.append(source,listGet(Armi_Equipaggiate,0))]
+		[macro("mobs/isArmaDaLancio@this"): json.append(source,listGet(Armi_Equipaggiate,0))]
 		[bLancio1 = macro.return]
 	}]
 };{
@@ -19,10 +19,10 @@
 }]
 
 [h, if(sArma2 != ""), code:{
-	[macro("isArmaDaLancio@Lib:TokenMacros"): json.append(source,sArma2)]
+	[macro("mobs/isArmaDaLancio@this"): json.append(source,sArma2)]
 	[h: bLancio2 = macro.return]
 	[h, if(!bLancio2), code:{
-		[macro("isArmaDaLancio@Lib:TokenMacros"): json.append(source,listGet(Armi_Equipaggiate,1))]
+		[macro("mobs/isArmaDaLancio@this"): json.append(source,listGet(Armi_Equipaggiate,1))]
 		[bLancio2 = macro.return]
 	}]
 };{
@@ -31,14 +31,14 @@
 
 [bLancio = bLancio1*bLancio2]
 
-[macro("getDifendersi@Lib:TokenMacros"): source]
+[macro("mobs/getDifendersi@this"): source]
 [if(macro.return): bOpport = 0; bOpport = 1]
 
 [h: oActionParam = json.set(macro.args,"armaLancio",bLancio)]
 [h, if(isCombat() && !bLancio), code:{
 	[h: iTime = calcActionTime(6,source)]
 	[h: param = json.set("","target",source,"source",source,"macro","risolviCambioArma@Lib:Combattimento","macroParam",oActionParam,"tipo","tattico","opp",bOpport,"time",iTime,"action","Cambio Arma")]
-	[macro("IniziaAzione@Lib:TokenMacros"):param]
+	[macro("mobs/IniziaAzione@this"):param]
 	[h: sMsg= strformat("%s inizia a cambiare le armi",getName(source))]
 	[h: broadcast(sMsg)]
 };{

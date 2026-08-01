@@ -20,7 +20,7 @@
 
 
 [h, if(getPropertyType(target) == "Basic"), code:{
-	[macro("popOverrideAttackerOnTargetOpp@Lib:TokenMacros"): json.append(source,target)]
+	[macro("mobs/popOverrideAttackerOnTargetOpp@this"): json.append(source,target)]
 	[h, if(macro.return): return(0,1)]
 
 	[h, if(popOverride(target,"forzaSubisceOpportunita")): return(0,1)]
@@ -30,7 +30,7 @@
 }]
 
 [h, if(bReturn == 0), code:{
-	[macro("isOpportunitaAvailable@Lib:TokenMacros"): json.append(source,target)]
+	[macro("mobs/isOpportunitaAvailable@this"): json.append(source,target)]
 	[bReturn = macro.return]
 }]
 

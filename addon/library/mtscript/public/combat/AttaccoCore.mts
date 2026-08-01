@@ -70,6 +70,6 @@
 [h: appendMessaggio(source,"endOfActionMsg",macro.return)]
 
 [h, if(bOpp == 1), code:{
-	[macro("addOpportunitaUsed@Lib:TokenMacros"): json.append(source,target)]
+	[macro("mobs/addOpportunitaUsed@this"): json.append(source,target)]
 }]
 

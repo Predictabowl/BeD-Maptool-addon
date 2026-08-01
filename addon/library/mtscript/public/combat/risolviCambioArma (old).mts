@@ -18,13 +18,13 @@
 
 [r, if(macro.return ==1), code:{
 	[if(sArma1 !=""), code:{
-		[macro("equipaggiaArma@Lib:TokenMacros"): json.append(source,1,sArma1)]
+		[macro("mobs/equipaggiaArma@this"): json.append(source,1,sArma1)]
 	}]
 	[if(sArma2 !=""), code:{
-		[macro("equipaggiaArma@Lib:TokenMacros"): json.append(source,2,sArma2)]
+		[macro("mobs/equipaggiaArma@this"): json.append(source,2,sArma2)]
 	}]
 	[if(sScudo !=""), code:{
-		[macro("equipaggiaScudo@Lib:TokenMacros"): json.append(source,sScudo)]
+		[macro("mobs/equipaggiaScudo@this"): json.append(source,sScudo)]
 	}]
 	[h: bInterrupt = 0]
 };{
@@ -33,6 +33,6 @@
 
 
 [macro("core/clearStatModifiers@this"): source]
-[macro("applyIngombroPenalties@Lib:TokenMacros"): source]
+[macro("mobs/applyIngombroPenalties@this"): source]
 
 [h: macro.return = bInterrupt]

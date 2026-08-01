@@ -16,7 +16,7 @@
 [h, if(DannoA == ""): DannoA= getDannoArma(source,iArma)]
 [h, if(!isNumber(iMoltiplicatore)): iMoltiplicatore = getProperty("Moltiplicatore_Att",source)]
 [h, if(sNomeArma == ""), code:{
-	[macro("getNomeArma@Lib:TokenMacros"): json.append(source,iArma)]
+	[macro("mobs/getNomeArma@this"): json.append(source,iArma)]
 	[sNomeArma = macro.return]
 }]
 [h, if(lDmgType == ""): lDmgType = getTipoDannoArma(source, iArma)]

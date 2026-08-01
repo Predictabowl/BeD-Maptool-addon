@@ -21,7 +21,7 @@
 	[h, if(bConc), code:{
 		[sMsg = strformat("Tiro perturbazione potere su %s: <span title='%{sMsg}' style='font-style:italic'>Fallito</span>",getName(source))]
 	};{
-		[macro("forzaInterrompiAzione@Lib:TokenMacros"): json.append(source,sSpellInCast)]	
+		[macro("mobs/forzaInterrompiAzione@this"): json.append(source,sSpellInCast)]	
 		[nomeDec = getLibProperty("nome_decorativo",sSpellInCast)]
 		[sMsg = strformat("Il potere %s di %s  viene <span title='%{sMsg}' style='font-style:italic'>Interrotto</span>",nomeDec,getName(source))]
 	}]

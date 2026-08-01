@@ -7,7 +7,7 @@
 }]
 
 [h, if(bMacroCalled == 0), code:{
-	[macro("InterrompiAzione@Lib:TokenMacros"): target]
+	[macro("mobs/InterrompiAzione@this"): target]
 	[return(0,"Un personaggio bandito è isolato e non può interagire con altre creature.")]
 }]
 

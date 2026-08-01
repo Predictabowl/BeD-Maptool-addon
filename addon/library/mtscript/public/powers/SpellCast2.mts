@@ -28,7 +28,7 @@
 	[r, if(macro.return == 1), code:{
 		[macro("powers/callSpellEffect@this"): param]
 	};{}]
-	[macro("FineAzione@Lib:TokenMacros"):source]
+	[macro("mobs/FineAzione@this"):source]
 	[macro("powers/endOfCastUpdates@this"): json.set("","source",source,"spell",spellName)]
 
 };{
@@ -39,5 +39,5 @@
 	[h: tipo = getLibProperty("tipo",spellName)]
 	[h: opport = getLibProperty("opportunita",spellName)]
 	[h: param = json.set("","target",target,"source",source,"action",spellName,"time",time,"color",color,"tipo",tipo,"opp",opport)]
-	[macro("IniziaAzione@Lib:TokenMacros"):param]
+	[macro("mobs/IniziaAzione@this"):param]
 }]
