@@ -5,10 +5,10 @@ Lib:Poteri -> powers
 Lib:Combattimento -> combat
 Lib:TokenMacros -> mobs
 Lib:Movement -> movement
-
-# Next in line to be mapped
 Lib:Meccaniche -> mechanics
 
+# Next in line to be mapped
+Lib:GetSet -> crud
 
 # Not Mapped yet 
 Lib:Scheda -> gui

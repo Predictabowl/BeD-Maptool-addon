@@ -1,0 +1,11 @@
+[h: oToken = arg(0)]
+[h: sKey = arg(1)]
+[h: sDanno = arg(2)]
+[h, if(argCount()>3): sFilter = upper(arg(3)); sFilter = ""]
+[h, if(sFilter != "DISTANZA" && sFilter != "MISCHIA"): sFilter = ""]
+
+[h: sTag = "DANNOARMIAGGIUNTIVO"]
+[h: oDanniAgg = getDaMemoria(oToken,sTag)]
+[h: oData = json.set("","danno",sDanno,"filtro",sFilter)]
+[h: oDanniAgg = json.set(oDanniAgg,sKey,oData)]
+[h: setInMemoria(oToken, sTag,oDanniAgg)]
