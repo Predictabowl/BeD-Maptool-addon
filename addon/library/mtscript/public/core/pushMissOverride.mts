@@ -1,0 +1,5 @@
+[h: broadcast("DEPRECATA: "+getMacroName()+"@"+getMacroLocation())]
+[h: source = macro.args]
+[h: switchToken(source)]
+[h, if(json.type(Overrides) != "OBJECT"): Overrides="{}"]
+[h: Overrides = json.set(Overrides,"MissOverride",1)]

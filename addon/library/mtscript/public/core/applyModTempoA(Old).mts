@@ -1,0 +1,7 @@
+[h: target = json.get(macro.args,0)]
+[h: valore = json.get(macro.args,1)]
+[h: assert(isNumber(valore),"applyModTempoA: tempo azione errato")]
+[h: switchToken(target)]
+[h: valore = valore + Mod_Tempo_Azione]
+[h, if(valore < 1): valore = 1]
+[h: macro.return = valore]

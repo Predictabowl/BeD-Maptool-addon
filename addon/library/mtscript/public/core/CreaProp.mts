@@ -1,0 +1,7 @@
+[h: listaProp = getAllPropertyNames("Basic","json")]
+[h: typeList = json.append("danno","cura","onceMod","onceSet","continuousMod")]
+[h: control =  input("key|"+json.toList(listaProp)+"|Propriet|LIST","value|0|Valore","type|"+json.toList(typeList)+"|Tipo|LIST") ]
+[h: abort(control)]
+[h: key = json.get(listaProp,key)]
+[h: type = json.get(typeList,type)]
+[h: macro.return = json.set("","key",key,"value",value,"tipo",type)]
