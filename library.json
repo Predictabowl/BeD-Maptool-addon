@@ -1,0 +1,15 @@
+{
+  "name": "BeD-ruleset",
+  "version": "0.0.1",
+  "website": "",
+  "gitUrl": "",
+  "authors": ["Piero Aldinucci"],
+  "license": "GLP 3.0",
+  "namespace": "it.aldinucci.piero.bed.maptool.ruleset",
+  "description": "Ruleset implementation for B&D. This is a work in progress, eventually will see if I can translate the hundreds of librery token into an add-on (unlikely will take years)",
+  "shortDescription": "Ruleset implementation for B&D",
+  "allowsUriAccess": true,
+  "licenseFile": "",
+  "readMeFile": "",
+  "requires": []
+}

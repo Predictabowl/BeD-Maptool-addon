@@ -1,0 +1,26 @@
+{
+    "allarme": {
+        "name": "Allarme",
+        "level": [4],
+        "school": "Abiurazione",
+        "cast-time": "1 minuto",
+        "range": 0,
+        "aoe": {
+            "value": 10,
+            "type": "CIRCLE"
+        },
+        "duration": "1 minuto"
+    },
+    "circolo-di-contenimento": {
+        "name": "Circolo di Contenimento",
+        "level": ["Incr",1,1],
+        "school": "Abiurazione",
+        "cast-time": "1 giorno",
+        "range": 1,
+        "aoe": {
+            "value": "10 m",
+            "type": "CIRCLE"
+        },
+        "duration": "Permanente"
+    }
+}
