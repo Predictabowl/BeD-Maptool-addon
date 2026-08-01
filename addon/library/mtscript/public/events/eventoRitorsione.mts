@@ -21,7 +21,7 @@
 [h, if(json.contains(jAlreadyHit, target)): return(0, "")]
 
 [h: fluffName = getLibProperty("nome_decorativo",spellName)]
-[macro("dmgSpineTemplate@Lib:Poteri"): json.set(macro.args, "spell",spellName,"danno",sDanno,"critResult",bCrit)]
+[macro("powers/dmgSpineTemplate@this"): json.set(macro.args, "spell",spellName,"danno",sDanno,"critResult",bCrit)]
 [h: iLP = json.get(macro.return,"LP")]
 [h: sSpineMsg = json.get(macro.return,"messaggio")]
 

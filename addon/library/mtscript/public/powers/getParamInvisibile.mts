@@ -1,0 +1,17 @@
+[h: target = json.get(macro.args,0)]
+[h: durata = json.get(macro.args,1)]
+[h: stato = json.get(macro.args,2)]
+
+[h: param = json.set("","target",target)]
+[h: param = json.set(param,"durata",durata)]
+[h: param = json.set(param,"effetto",effetto)]
+[h: param = json.set(param,"stato","Invisibile")]
+[h: param = json.set(param,"mutex","Invisibile")]
+[h: param = json.set(param,"subito",1)]
+[h: param = json.set(param,"potenza","null","moltiplicatore",3)]
+[h: param = json.set(param,"tipo","Magia")]
+
+[h: temp = json.set("","key","Copertura","value",15,"tipo","onceMod")]
+[h: altro = json.append("",temp)]
+[h: param = json.set(param,"params",altro)]
+[h: macro.return = param]

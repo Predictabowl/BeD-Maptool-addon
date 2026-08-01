@@ -2,6 +2,6 @@
 
 [h: lSpiriti = getArraySpiriti(oToken)]
 [h, foreach(sSpirito, lSpiriti), code:{
-	[macro("getModRichiamoSpirito@Lib:Poteri"): json.append(oToken,sSpirito)]
+	[macro("powers/getModRichiamoSpirito@this"): json.append(oToken,sSpirito)]
 	[broadcast(strformat("%{sSpirito}: %{macro.return}"),getPlayerName())]
 }]

@@ -13,11 +13,11 @@
 
 [h: fluffName = getLibProperty("nome_decorativo",spellName)]
 
-[macro("dmgSpineTemplate@Lib:Poteri"): json.set(macro.args,"spell",spellName,"danno",sDanno,"critResult",bCrit)]
+[macro("powers/dmgSpineTemplate@this"): json.set(macro.args,"spell",spellName,"danno",sDanno,"critResult",bCrit)]
 [h: iLP = json.get(macro.return,"LP")]
 [h: sSpineMsg = json.get(macro.return,"messaggio")]
 
-[macro("RemoveEffect@Lib:Basic"):json.append(source,fluffName)]
+[macro("core/RemoveEffect@this"):json.append(source,fluffName)]
 
 [h: msgOut= strformat("<img src='%s' width='25' height='25' />&nbsp;<b>%s</b> si attiva contro %s (%{sSpineMsg})",
 	getImage(spellName),fluffName,getName(target))]

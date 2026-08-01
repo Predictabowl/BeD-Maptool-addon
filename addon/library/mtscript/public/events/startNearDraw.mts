@@ -6,10 +6,10 @@
 [h: jMacroParam = json.get(macro.args, "macroEffectParam")]
 
 
-[macro("distanzaTokenDraw@Lib:MetodiVari"): json.append(sToken,sDrawId)]
+[macro("utility/distanzaTokenDraw@this"): json.append(sToken,sDrawId)]
 [if(macro.return > iRange): return(0,"")]
 
 [h, macro(sMacroName): json.set(jMacroParam, "target", target)]
 [h: sCaster = json.get(jMacroParam, "source")]
-[macro("generaSpellMsg@Lib:Poteri"):json.append(sCaster,target)]
+[macro("powers/generaSpellMsg@this"):json.append(sCaster,target)]
 [h: macro.return = popMessaggio(sCaster, "strPotere")]

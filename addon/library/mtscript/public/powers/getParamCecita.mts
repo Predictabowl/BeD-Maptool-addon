@@ -1,0 +1,23 @@
+[h: target = json.get(macro.args,"target")]
+[h: durata = json.get(macro.args,"durata")]
+[h: effetto = json.get(macro.args,"effetto")]
+[h: moltiplicatore = json.get(macro.args,"moltiplicatore")]
+[h, if (moltiplicatore == ""): moltiplicatore = 1]
+
+[h: broadcast(strformat("DEPRECATO: %s@%s",getMacroName(),getMacroLocation()))]
+
+[h: param = json.set("","target",target)]
+[h: param = json.set(param,"durata",durata)]
+[h: param = json.set(param,"effetto",effetto)]
+[h: param = json.set(param,"stato","Cecita")]
+[h: param = json.set(param,"mutex","Cecita")]
+[h: param = json.set(param,"subito",1)]
+[h: param = json.set(param,"potenza",moltiplicatore,"moltiplicatore",moltiplicatore)]
+[h: param = json.set(param,"tipo","Nocivo")]
+
+[h: temp = json.set("","key","Mancare","value",(15 * Moltiplicatore),"tipo","onceMod")]
+[h: altro = json.append("",temp)]
+[h: temp = json.set("","key","Perspicacia","value",(-4 * Moltiplicatore),"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: param = json.set(param,"params",altro)]
+[h: macro.return = param]

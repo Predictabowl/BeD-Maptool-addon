@@ -8,7 +8,7 @@
 [h, if(!json.isEmpty(otherInfo) && bFlag == 0), code:{
 	[spellName = json.get(otherInfo,"spellName")]
 	[if(spellName != ""), code:{
-		[macro("isHarmful@Lib:Poteri"): spellName]
+		[macro("powers/isHarmful@this"): spellName]
 		[bFlag = macro.return]
 	}]
 }]

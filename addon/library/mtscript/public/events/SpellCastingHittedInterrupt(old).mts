@@ -4,15 +4,15 @@
 
 [h: sMsg = ""]
 
-[macro("getSpellInCast@Lib:Poteri"): source]
+[macro("powers/getSpellInCast@this"): source]
 [h: sSpellInCast = macro.return]
 
-[macro("getSpellCapacita@Lib:Poteri"): sSpellInCast]
+[macro("powers/getSpellCapacita@this"): sSpellInCast]
 [h: sDefSkill = macro.return]
 
 [h, if(json.contains(oEventParam,"spellName")), code:{
 	[spellName = json.get(oEventParam,"spellName")]
-	[macro("getSpellCapacita@Lib:Poteri"): spellName]
+	[macro("powers/getSpellCapacita@this"): spellName]
 	[h: sAttSkill = macro.return]
 };{
 	[sAttSkill = "Lotta"]

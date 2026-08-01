@@ -26,7 +26,7 @@
 [h: aTokens = getTokens("json",jConditions)]
 [h: bCover = 0]
 [h, foreach(idToken,aTokens), code:{
-	[macro("isInLine@Lib:MetodiVari"): json.append(source,idToken,target)]
+	[macro("utility/isInLine@this"): json.append(source,idToken,target)]
 	[if(macro.return): bCover = 1]
 }]
 

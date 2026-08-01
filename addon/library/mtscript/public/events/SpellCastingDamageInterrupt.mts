@@ -14,7 +14,7 @@
 [h: sMsg = ""]
 [h, if(iDanno > 0 && !bFlag), code:{
 
-	[macro("rollConcentrazione@Lib:Poteri"): json.append(target,source)]
+	[macro("powers/rollConcentrazione@this"): json.append(target,source)]
 	[h: bConc = json.get(macro.return,0)]
 	[sMsg = popMessaggio(source,"msgRollConcentrazione")]
 

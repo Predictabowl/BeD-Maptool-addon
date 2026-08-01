@@ -2,3 +2,4 @@ Lib:Basic -> core
 Lib:Eventi -> events
 Lib:Shede -> gui
 Lib:MetodiVari -> utility
+Lib:Poteri -> powers

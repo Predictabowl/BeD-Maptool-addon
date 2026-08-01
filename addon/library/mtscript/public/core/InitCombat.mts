@@ -12,7 +12,7 @@
 [h, foreach(id, ids, ""), CODE:{
 	[if(getPropertyType(id) == "Basic"), code:{
 		[h: switchToken(id)]
-		[macro("setAnimeToDefault@Lib:Poteri"):id]
+		[macro("powers/setAnimeToDefault@this"):id]
 		[macro("delAutocastAbilita@Lib:AbilitaClasse"): id]
 		[macro("delCaricheSentenza@Lib:AbilitaClasse"): id]
 		[h: iniz = getProperty("Tiro_Iniziativa")]

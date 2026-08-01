@@ -1,5 +1,5 @@
-macro\("([^"]+)@Lib:Eventi"
-macro("events/$1@this"
+macro\("([^"]+)@Lib:Basic"
+macro("core/$1@this"
 
 Find macro without any folder slash and replace them
 macro\("([^\/"]*)@this"

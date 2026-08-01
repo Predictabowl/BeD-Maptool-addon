@@ -2,4 +2,4 @@
 [h: target = json.get(macro.args,"target")]
 [h: spell = json.get(macro.args,"nomeSpell")]
 [h: param = json.set("","source",source,"target",target,"spellName",spell)]
-[macro("SpellCast@Lib:Poteri"): param]
+[macro("powers/SpellCast@this"): param]

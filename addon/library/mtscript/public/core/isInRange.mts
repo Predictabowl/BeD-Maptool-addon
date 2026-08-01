@@ -2,7 +2,7 @@
 [h: target = json.get(macro.args,"target")]
 [h: maxDist = json.get(macro.args,"portata")]
 
-[macro("getDrawCoreId@Lib:Poteri"): target]
+[macro("powers/getDrawCoreId@this"): target]
 [h: sDrawId = macro.return]
 [h, if(sDrawId != 0), code:{
 	[macro("utility/distanzaTokenDraw@this"): json.append(source, sDrawId)]

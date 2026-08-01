@@ -9,7 +9,7 @@
 [h: Messaggi = "{}"]
 [h: Stat_Mod = "{}"]
 [macro("clearAzione@Lib:TokenMacros"):id]
-[macro("pagaMantenimenti@Lib:Poteri"):id]
+[macro("powers/pagaMantenimenti@this"):id]
 [macro("utility/updateBars@this"):id]
 [macro("clearAllCapRolls@Lib:TokenMacros"):id]
 [macro("delOverrideAttackerOnTargetOpp@Lib:TokenMacros"):id]

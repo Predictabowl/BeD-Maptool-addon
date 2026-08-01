@@ -29,7 +29,7 @@
 [h: move = json.get(macro.return,0)]
 [h: azione = azione + json.get(macro.return,1)]
 
-[macro("calcPPAzione@Lib:Poteri"):json.append(target,iPP)]
+[macro("powers/calcPPAzione@this"):json.append(target,iPP)]
 [h: iPP = json.get(macro.return,0)]
 [h: azione = azione + json.get(macro.return,1)]
 

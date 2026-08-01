@@ -17,14 +17,14 @@
 [h, if(json.type(oEventParam) == "OBJECT"), code:{
 	[spellName = json.get(oEventParam,"spellName")]
 	[h, if(spellName != ""), code:{
-		[macro("isAOESpell@Lib:Poteri"): spellName]
+		[macro("powers/isAOESpell@this"): spellName]
 		[bAOE = macro.return]
 	}]
 }]
 
 [h: msg = ""]
 [h, if(bAOE==0), code:{
-	[macro("pushStatModifier@Lib:Basic"):json.append(target,"Mancare",iMancareMod)]
+	[macro("core/pushStatModifier@this"):json.append(target,"Mancare",iMancareMod)]
 	[h: msg= msg+strformat(" %{sNomeAb}x%{iMolt} (%+d Mancare)",iMancareMod)]
 
 }]

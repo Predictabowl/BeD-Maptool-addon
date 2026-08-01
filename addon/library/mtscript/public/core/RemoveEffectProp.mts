@@ -40,7 +40,7 @@ case "macroCall":{
 case "aura":{
 	[h: source = json.get(params,"source")]
 	[h: idAura = json.get(params,"idAura")]
-	[macro("removeAura@Lib:Poteri"): json.append(source,idAura)]
+	[macro("powers/removeAura@this"): json.append(source,idAura)]
 };
 default: {
 }]

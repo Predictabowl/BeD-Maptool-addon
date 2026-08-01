@@ -14,7 +14,7 @@
 [h, while(i<iPath || bTriggered == 0), code:{
 	[jPoint = json.get(jPath,i)]
 	[aParam = json.append(json.get(jPoint,"x"),json.get(jPoint,"y"), sDrawId)]
-	[macro("distanzaXYDraw@Lib:MetodiVari"): aParam]
+	[macro("utility/distanzaXYDraw@this"): aParam]
 	[if(macro.return <= iRange): bTriggered = 1]
 	[i = i+1]
 }]
@@ -23,5 +23,5 @@
 
 [h, macro(sMacroName): json.set(jMacroParam, "target", target)]
 [h: sCaster = json.get(jMacroParam, "source")]
-[macro("generaSpellMsg@Lib:Poteri"):json.append(sCaster,target)]
+[macro("powers/generaSpellMsg@this"):json.append(sCaster,target)]
 [h: macro.return = popMessaggio(sCaster, "strPotere")]

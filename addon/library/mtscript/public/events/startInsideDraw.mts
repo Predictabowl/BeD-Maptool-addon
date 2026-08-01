@@ -5,10 +5,10 @@
 [h: jMacroParam = json.get(macro.args, "macroEffectParam")]
 
 
-[macro("isDentroDraw@Lib:MetodiVari"): json.append(target, sDrawId)]
+[macro("utility/isDentroDraw@this"): json.append(target, sDrawId)]
 [h, if(!macro.return): return(0, "")]
 
 [h, macro(sMacroName): json.set(jMacroParam, "target", target)]
 [h: sCaster = json.get(jMacroParam, "source")]
-[macro("generaSpellMsg@Lib:Poteri"):json.append(sCaster,target)]
+[macro("powers/generaSpellMsg@this"):json.append(sCaster,target)]
 [h: macro.return = popMessaggio(sCaster, "strPotere")]

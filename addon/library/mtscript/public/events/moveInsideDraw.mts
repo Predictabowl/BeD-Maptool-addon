@@ -13,5 +13,5 @@
 
 [h, macro(sMacroName): json.set(jMacroParam, "target", target)]
 [h: sCaster = json.get(jMacroParam, "source")]
-[macro("generaSpellMsg@Lib:Poteri"):json.append(sCaster,target)]
+[macro("powers/generaSpellMsg@this"):json.append(sCaster,target)]
 [h: macro.return = popMessaggio(sCaster, "strPotere")]

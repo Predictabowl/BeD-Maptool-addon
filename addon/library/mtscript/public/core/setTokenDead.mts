@@ -4,7 +4,7 @@
 [h: switchToken(oTarget)]
 
 [h: sStato = "Atterrato"]
-[macro("getParamStatoBase@Lib:Poteri"): json.set("","target",oTarget,"effetto",sStato)]
+[macro("powers/getParamStatoBase@this"): json.set("","target",oTarget,"effetto",sStato)]
 [h: parameters = macro.return]
 [macro("core/ApplyEffect@this"): parameters]
 [setState("Morente",0,oTarget)]
