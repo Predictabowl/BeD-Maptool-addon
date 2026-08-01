@@ -1,5 +1,5 @@
 [h: source = macro.args]
-[macro("isCombat@this"):0]
+[macro("utility/isCombat@this"):0]
 [h: bCombat = macro.return]
 
 [h, if(bCombat), code:{

@@ -16,7 +16,7 @@
 	[h, if(target==""): target = getImpersonated()]
 	[h: finish = temp+time]
 	[h: setInitiative(finish)]
-	[macro("sortIniziativa@this"):0]
+	[macro("utility/sortIniziativa@this"):0]
 	[macro.return = 1]
 };{
 	[macro.return = 0]

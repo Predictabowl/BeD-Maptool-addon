@@ -5,4 +5,4 @@
 [macro("utility/getCenterTokenXY@this"): sToken]
 [h: aTokenCoord = macro.return]
 
-[macro("distanzaXYDraw@this"): json.append(aTokenCoord, sDrawId, bCell)]
+[macro("utility/distanzaXYDraw@this"): json.append(aTokenCoord, sDrawId, bCell)]

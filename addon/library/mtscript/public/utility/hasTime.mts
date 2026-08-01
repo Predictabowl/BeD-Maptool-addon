@@ -1,7 +1,7 @@
 [h: oToken = json.get(macro.args,0)]
 [h: iTime  = json.get(macro.args,1)]
 
-[macro("isCombat@this"):0]
+[macro("utility/isCombat@this"):0]
 [h: combat = macro.return]
 
 

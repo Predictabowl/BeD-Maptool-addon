@@ -1,8 +1,8 @@
 [h: sKey = arg(0)]
 
-[macro("stampaAcronimo@this"): sKey]
+[macro("utility/stampaAcronimo@this"): sKey]
 [h: sAcro = json.get(macro.return, "acronimo")]
-[macro("textProcessHTML@this"): json.get(macro.return, "descrizione")]
+[macro("utility/textProcessHTML@this"): json.get(macro.return, "descrizione")]
 [h: sInfo = macro.return]
 
 [h: sDialog = "infoDialog"]

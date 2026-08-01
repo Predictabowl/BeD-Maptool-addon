@@ -18,7 +18,7 @@
 [h: aP1 = json.append(x1,y1)]
 [h, if(bA || bB), code:{
 	[h, macro("utility/rettaPerDuePunti@this"): json.append(xA, yA, xB, yB)]
-	[macro("distanzaPuntoRetta@this"): json.merge(aP1, macro.return)]
+	[macro("utility/distanzaPuntoRetta@this"): json.merge(aP1, macro.return)]
 	[return(0, macro.return)]
 }]
 

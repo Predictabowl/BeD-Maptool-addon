@@ -2,13 +2,13 @@
 [h: target = arg(1)]
 [h: bersaglio = arg(2)]
 
-[macro("getCenterTokenXY@this"): source]
+[macro("utility/getCenterTokenXY@this"): source]
 [h: sx = json.get(macro.return,0)]
 [h: sy = json.get(macro.return,1)]
-[macro("getCenterTokenXY@this"): bersaglio]
+[macro("utility/getCenterTokenXY@this"): bersaglio]
 [h: bersaglioX = json.get(macro.return,0)]
 [h: bersaglioY = json.get(macro.return,1)]
-[macro("getCenterTokenXY@this"): target]
+[macro("utility/getCenterTokenXY@this"): target]
 [h: tx = json.get(macro.return,0)-sx]
 [h: ty = json.get(macro.return,1)-sy]
 

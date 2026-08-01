@@ -15,6 +15,6 @@
 	[h: source = listGet(tokenList,source)]
 	[switchToken(source)]
 	[Lista_Dati = setStrProp(Lista_Dati,"oppTarget",target)]
-	[macro("pushOpportOverride@this"):source]
+	[macro("utility/pushOpportOverride@this"):source]
 	[broadcast(strformat("%s ha un attacco di opportunit&agrave contro %s",getName(source),getName(target)),"gm")]
 }]

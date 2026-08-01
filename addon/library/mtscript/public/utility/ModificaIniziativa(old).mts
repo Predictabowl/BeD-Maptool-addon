@@ -2,7 +2,7 @@
 [h: time = json.get(macro.args,"valore")]
 [h: target = json.get(macro.args,"target")]
 
-[macro("isCombat@this"):0]
+[macro("utility/isCombat@this"):0]
 [h: combat = macro.return]
 
 [h, if (combat==1), code:{

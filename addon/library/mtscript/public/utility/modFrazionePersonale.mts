@@ -3,7 +3,7 @@
 
 [h: switchToken(source)]
 
-[macro("getFrazionePersonale@this"): source]
+[macro("utility/getFrazionePersonale@this"): source]
 [h: iFrazione = macro.return]
 [h: iFrazione = iFrazione - iValore]
-[macro("setFrazionePersonale@this"): json.append(source,iFrazione)]
+[macro("utility/setFrazionePersonale@this"): json.append(source,iFrazione)]

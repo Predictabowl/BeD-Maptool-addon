@@ -20,5 +20,5 @@
 [h, if(bVerbose), code:{
 	[h: broadcast(msgOutput)]
 };{
-	[macro("appendMessaggio@this"): json.append(target,sMsgTag,msgOutput)]
+	[macro("utility/appendMessaggio@this"): json.append(target,sMsgTag,msgOutput)]
 }]

@@ -2,7 +2,7 @@
 
 [h: switchToken(target)]
 
-[macro("getSizePosMod@this"): target]
+[macro("utility/getSizePosMod@this"): target]
 [h: iTokenX = getTokenX()+ json.get(macro.return,0)]
 [h: iTokenY = getTokenY()+json.get(macro.return,1)]
 

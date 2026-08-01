@@ -7,15 +7,15 @@
 [h: iCellSize = 50]
 [h: iTry = 0]
 
-[macro("getCenterTokenXY@this"): source]
+[macro("utility/getCenterTokenXY@this"): source]
 [h: x1 = json.get(macro.return,0)]
 [h: y1 = json.get(macro.return,1)]
 
-[macro("getCenterTokenXY@this"): target]
+[macro("utility/getCenterTokenXY@this"): target]
 [h: x2 = json.get(macro.return,0)]
 [h: y2 = json.get(macro.return,1)]
 
-[macro("getSizePosMod@this"):target]
+[macro("utility/getSizePosMod@this"):target]
 [h: fOffsetX2 = json.get(macro.return,0)]
 [h: fOffsetY2 = json.get(macro.return,1)]
 

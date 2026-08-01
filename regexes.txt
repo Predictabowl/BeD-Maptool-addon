@@ -1,2 +1,6 @@
-macro\("([^"]+)@Lib:MetodiVari"
+macro\("([^"]+)@Lib:Basic"
+macro("utility/$1@this"
+
+Find macro without any folder slash and replace them
+macro\("([^\/"]*)@this"
 macro("utility/$1@this"

@@ -19,7 +19,7 @@
 [h: iY = getTokenY(0, oTargetToken, sMap)]	
 [h: oPartner = getServitore(oTokenToMove)]
 [h, if(oPartner == ""), code:{
-	[macro("getPadrone@Lib:Basic"): oTokenToMove]
+	[macro("core/getPadrone@this"): oTokenToMove]
 	[h: oPartner = macro.return]
 }]
 [h, if(oPartner != ""): moveTokenToMap(oPartner,sMap,iX,iY,0)]

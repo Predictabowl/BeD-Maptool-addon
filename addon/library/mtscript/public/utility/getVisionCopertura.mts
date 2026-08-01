@@ -14,7 +14,7 @@
 	case "Humongous":{[fPow = 2.9]};
 	default:{[fPow = 1.4]}
 ]
-[macro("canSeeTokenAbsolute@this"): json.append(attaccante,difensore)]
+[macro("utility/canSeeTokenAbsolute@this"): json.append(attaccante,difensore)]
 [h: fVisCopertura = math.pow((5-json.length(macro.return))*0.2,fPow)]
 
 [h: macro.return = fVisCopertura]

@@ -11,6 +11,6 @@
 
 [h: bCheck = addToInitiative(0, iTime, target)]
 [h, if(!bCheck): setInitiative(iTime,target)]
-[macro("sortIniziativa@this"):0]
+[macro("utility/sortIniziativa@this"):0]
 
 [h: macro.return = 1]
