@@ -63,7 +63,7 @@ case "evento":{
 	[h: macroName = json.get(params,"macroName")]
 	[h: macroParam = json.get(params,"macroParam")]
 	[h: eventParam = json.set("","name",nome,"event",tipo,"token",target,"macroName",macroName,"macroParam",macroParam)]
-	[macro("eventInstaller@Lib:Eventi")]
+	[macro("events/eventInstaller@this")]
 };
 case "macroCall":{
 	[h: macroName = json.get(params,"macroName")]

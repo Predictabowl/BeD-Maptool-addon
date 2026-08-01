@@ -1,7 +1,7 @@
 {
     "events": [
         {
-            "name": "onInit", "mts": "events/onStartup"
+            "name": "onInit", "mts": "onStartup"
         }
     ]
 }

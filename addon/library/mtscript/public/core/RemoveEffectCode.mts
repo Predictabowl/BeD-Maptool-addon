@@ -11,7 +11,7 @@
 	[endstr = replace(effetto,"_"," ") + " svanisce da "+  token.name+".<br>"]
 	<!-- Eventi On_Effect_Removed -->
 	[h: oEventParam = json.set("","effetto",macro.args)]
-	[macro("runEvents@Lib:Eventi"): json.set("","source",target,"event","On_Effect_Removed","eventParam",oEventParam)]
+	[macro("events/runEvents@this"): json.set("","source",target,"event","On_Effect_Removed","eventParam",oEventParam)]
 	[sRemoveMsg = popMessaggio(target,"msgEventOn_Effect_Removed")]
 	[if(sRemoveMsg != ""): endstr = strformat("{endstr}{sRemoveMsg}<br>"]
 }]

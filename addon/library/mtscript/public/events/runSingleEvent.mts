@@ -1,0 +1,16 @@
+[h: source = arg(0)]
+[h: target = arg(1)]
+[h: sEvent = arg(2)]
+[h: sEventName = arg(3)]
+[h: eventParam = arg(4)]
+
+[h: eventTag = "msgEvent"+string(sEvent)]
+
+[h: list = getProperty(sEvent,source)]
+[h: itemEvent = json.get(list, sEventName)]
+[h: eventData = json.get(list,itemEvent)]
+[h: macroName = json.get(eventData,"macroName")]
+[h: macroParam = json.get(eventData,"macroParam")]
+[h: macroParam = json.set(macroParam,"source",source,"target",target,"eventParam",eventParam)]
+[macro(macroName):macroParam]	
+[appendMessaggio(source,eventTag,macro.return)]

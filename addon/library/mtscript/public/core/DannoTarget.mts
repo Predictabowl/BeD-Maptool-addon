@@ -38,7 +38,7 @@ usano On_Before_Damaged, On_Attack, On_Attacked, On_Hit, On_Hitted
 
 [h, if(source != ""), code:{
 	[eventParam = json.set("","danno",Dmg, "spellName", spellName)]
-	[macro("runEvents@Lib:Eventi"): json.set("","source",id,"target",source,"event","On_Before_Damaged","eventParam",eventParam)]
+	[macro("events/runEvents@this"): json.set("","source",id,"target",source,"event","On_Before_Damaged","eventParam",eventParam)]
 	[macro("utility/popMessaggio@this"): json.set("","token",id,"key","msgEventOn_Before_Damaged")]
 	[if(macro.return != ""): msgOutput = strformat("%{msgOutput}<br>%{macro.return}")]
 };{
@@ -64,8 +64,8 @@ usano On_Before_Damaged, On_Attack, On_Attacked, On_Hit, On_Hitted
 [h: source = findToken(source)]
 [h, if(source != ""), code:{
 	[eventParam = json.set("","danno",Dmg, "assorbito", Assorbito, "spellName", spellName)]
-	[macro("runEvents@Lib:Eventi"): json.set("","source",id,"target",source,"event","On_Damaged","eventParam",eventParam)]
-	[macro("runEvents@Lib:Eventi"): json.set("","source",source,"target",id,"event","On_Damage","eventParam",eventParam)]	
+	[macro("events/runEvents@this"): json.set("","source",id,"target",source,"event","On_Damaged","eventParam",eventParam)]
+	[macro("events/runEvents@this"): json.set("","source",source,"target",id,"event","On_Damage","eventParam",eventParam)]	
 
 	[macro("utility/popMessaggio@this"): json.set("","token",source,"key","msgEventOn_Damage")]
 	[if(macro.return != ""): msgOutput = strformat("%{msgOutput}<br>%{macro.return}")]

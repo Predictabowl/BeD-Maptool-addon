@@ -21,8 +21,8 @@
 [h, if(source != ""), code:{
 	[target = id]
 	[h: eventParam = json.set("","cura",guar)]
-	[macro("runEvents@Lib:Eventi"): json.set("","source",source,"target",target,"event","On_Heal","eventParam",eventParam)]
-	[macro("runEvents@Lib:Eventi"): json.set("","source",target,"target",source,"event","On_Healed","eventParam",eventParam)]
+	[macro("events/runEvents@this"): json.set("","source",source,"target",target,"event","On_Heal","eventParam",eventParam)]
+	[macro("events/runEvents@this"): json.set("","source",target,"target",source,"event","On_Healed","eventParam",eventParam)]
 
 	[macro("utility/popMessaggio@this"): json.set("","token",source,"key","msgEventOn_Heal")]
 	[macro("utility/setMessaggio@this"): json.set("","token",source,"key","heal","msg",macro.return)]

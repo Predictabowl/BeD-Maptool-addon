@@ -15,9 +15,9 @@
 [h: removeFromInitiative()]
 
 [h: oSource = findToken(oSource)]
-[macro("runEvents@Lib:Eventi"): json.set("","source",oTarget,"target",oSource,"event","On_Death")]
+[macro("events/runEvents@this"): json.set("","source",oTarget,"target",oSource,"event","On_Death")]
 [h, if(oSource != ""), code:{
-	[macro("runEvents@Lib:Eventi"): json.set("","source",oSource,"target",oTarget,"event","On_Kill")]	
+	[macro("events/runEvents@this"): json.set("","source",oSource,"target",oTarget,"event","On_Kill")]	
 }]
 
 

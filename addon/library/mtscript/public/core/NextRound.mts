@@ -13,12 +13,12 @@
 [h: sMapVar = findToken("MapVar")]
 [h, foreach(id, oTokenList), code:{
 	[h: target = json.get(id,"tokenId")]
-	[macro("runEvents@Lib:Eventi"): json.set("","source", sMapVar,"target", target, "event","On_Round_End_Map")]
+	[macro("events/runEvents@this"): json.set("","source", sMapVar,"target", target, "event","On_Round_End_Map")]
 	[sMsg = popMessaggio(sMapVar,"msgEventOn_Round_End_Map")]
 	[h, if(macro.return != ""): broadcast(macro.return)]
 }]
 
-[macro("runDelaySafeMacros@Lib:Eventi"): 0]
+[macro("events/runDelaySafeMacros@this"): 0]
 [macro("core/RollIniziativa@this"):0]
 
 [h, foreach(id, oTokenList), code:{
@@ -40,10 +40,10 @@
 
 [h, foreach(id, oTokenList), code:{
 	[h: target = json.get(id,"tokenId")]
-	[macro("runEvents@Lib:Eventi"): json.set("","source", sMapVar,"target", target, "event","On_Round_Start_Map")]
+	[macro("events/runEvents@this"): json.set("","source", sMapVar,"target", target, "event","On_Round_Start_Map")]
 	[sMsg = popMessaggio(sMapVar,"msgEventOn_Round_Start_Map")]
 	[h, if(macro.return != ""): broadcast(macro.return)]
 }]
 
-[macro("runDelaySafeMacros@Lib:Eventi"): 0]
+[macro("events/runDelaySafeMacros@this"): 0]
 [macro("updatePlayersSchede@Lib:Scheda"):0]

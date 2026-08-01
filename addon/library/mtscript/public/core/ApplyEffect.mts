@@ -42,7 +42,7 @@
 [h: msgEvent = ""]
 [h, if(tipo != "NASCOSTO"), code:{
 	[h: oEventParam = json.set("","effetto",macro.args)]
-	[macro("runEvents@Lib:Eventi"): json.set("","source",target,"event","On_Effect_Received","eventParam",oEventParam)]
+	[macro("events/runEvents@this"): json.set("","source",target,"event","On_Effect_Received","eventParam",oEventParam)]
 	[macro("utility/popMessaggio@this"): json.set("","token",target,"key","msgEventOn_Effect_Received")]
 	[h: msgEvent = msgEvent + macro.return]
 	[h, if(msgEvent != ""): msgEvent = msgEvent+"<br>"]

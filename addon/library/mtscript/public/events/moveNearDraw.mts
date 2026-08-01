@@ -1,0 +1,27 @@
+[h: source = json.get(macro.args,"source")]
+[h: target = json.get(macro.args,"target")]
+[h: sDrawId = json.get(macro.args, "drawId")]
+[h: iRange =  json.get(macro.args, "triggerRange")]
+[h: sMacroName = json.get(macro.args, "macroEffectName")]
+[h: jMacroParam = json.get(macro.args, "macroEffectParam")]
+
+[h: sMap = getCurrentMapName()]
+[h: switchToken(target)]
+[h: jPath = getLastPath()]
+[h: i = 0]
+[h: iPath = json.length(jPath)]
+[h: bTriggered = 0]
+[h, while(i<iPath || bTriggered == 0), code:{
+	[jPoint = json.get(jPath,i)]
+	[aParam = json.append(json.get(jPoint,"x"),json.get(jPoint,"y"), sDrawId)]
+	[macro("distanzaXYDraw@Lib:MetodiVari"): aParam]
+	[if(macro.return <= iRange): bTriggered = 1]
+	[i = i+1]
+}]
+
+[h, if(!bTriggered): return(0,"")]
+
+[h, macro(sMacroName): json.set(jMacroParam, "target", target)]
+[h: sCaster = json.get(jMacroParam, "source")]
+[macro("generaSpellMsg@Lib:Poteri"):json.append(sCaster,target)]
+[h: macro.return = popMessaggio(sCaster, "strPotere")]

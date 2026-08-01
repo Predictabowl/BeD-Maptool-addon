@@ -29,7 +29,7 @@ case "doneSet":{
 case "evento":{
 	[h: tipo = json.get(params,"tipoEvento")]
 	[h: nome = json.get(params,"key")]
-	[macro("eventUninstaller@Lib:Eventi"): json.append(target,tipo,nome)]
+	[macro("events/eventUninstaller@this"): json.append(target,tipo,nome)]
 };
 case "macroCall":{
 	[h: macroName = json.get(params,"macroName")]

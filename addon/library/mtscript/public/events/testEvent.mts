@@ -1,0 +1,10 @@
+[h: source = json.get(macro.args,"source")]
+[h: target = json.get(macro.args,"target")]
+[h: oEventParam = json.get(macro.args, "eventParam")]
+
+[h: sMsg = "This is a test event Macro"]
+[h: broadcast("This is a test event Macro")]
+[h: broadcast(oEventParam)]
+[h: bAtt = isAttaccoArma(oEventParam)]
+[h: broadcast(strformat("is Attacco Arma: %s", bAtt))]
+[h: macro.return = sMsg]

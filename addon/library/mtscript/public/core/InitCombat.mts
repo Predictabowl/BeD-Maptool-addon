@@ -25,6 +25,6 @@
 	}]
 }]
 
-[macro("runDelaySafeMacros@Lib:Eventi"): 0]
+[macro("events/runDelaySafeMacros@this"): 0]
 [macro("utility/sortIniziativa@this"):0]
 
