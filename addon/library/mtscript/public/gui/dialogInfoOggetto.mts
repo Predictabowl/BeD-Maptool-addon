@@ -6,7 +6,7 @@
 [dialog(sDialog):{
 <html>
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css?cachelib=false">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
 	<title> Consumabili </title> 
 </head>
 <body  align="center">

@@ -36,7 +36,7 @@
 [dialog5(sDialog,"width=700; height=650; temporary=0;"):{
 <html>
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css"><!-- ?cachelib=false-->
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
 	<title> Descrizione </title>
 	<style>
 	[r:"

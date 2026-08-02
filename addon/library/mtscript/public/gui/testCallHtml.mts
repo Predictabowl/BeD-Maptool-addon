@@ -1,1 +1,1 @@
-[html.frame5("test-frame","lib://Scheda/macro/test.html")]
+[html.frame5("test-frame","lib://it.aldinucci.piero.bed.maptool.ruleset/html/test.html")]

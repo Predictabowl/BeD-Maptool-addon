@@ -83,7 +83,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css"><!-- ?cachelib=false-->
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css"><!-- ?cachelib=false-->
 	<title> Scheda </title>
 </head>
 <body class="dataCentered">
@@ -160,27 +160,27 @@
 						<tbody>
 							<tr class="evenRow">
 								<td class="description">
-									<a href="macro://guiinfoDialog@this//Impersonated?MDI">MDI</a>
+									<a href="macro://utility/infoDialog@lib:it.aldinucci.piero.bed.maptool.ruleset//Impersonated?MDI">MDI</a>
 								</td>
 								[h, macro("core/getMDIPerc@this"): source]
 								<td class="table-data">[r: round(calcPercentMod(macro.return)*100,1)+"%"]</td>
 							</tr>
 							<tr class="oddRow">
 								<td class="description">
-									<a href="macro://gui/infoDialog@this//Impersonated?MDR">MDR</a>
+									<a href="macro://utility/infoDialog@lib:it.aldinucci.piero.bed.maptool.ruleset//Impersonated?MDR">MDR</a>
 								</td>
 								<td class="table-data">[r: round(calcPercentMod(Mod_Danno_in)*100,1)+"%"]</td>
 							</tr>
 							<tr class="evenRow">
 								<td class="description">
-									<a href="macro://gui/infoDialog@this//Impersonated?MCG">MCG</a>
+									<a href="macro://utility/infoDialog@lib:it.aldinucci.piero.bed.maptool.ruleset//Impersonated?MCG">MCG</a>
 								</td>
 								[h, macro("core/getMCGPerc@this"): source]
 								<td class="table-data">[r: round(calcPercentMod(macro.return)*100,1)+"%"]</td>
 							</tr>
 							<tr class="oddRow">
 								<td class="description">
-									<a href="macro://gui/infoDialog@this//Impersonated?MCR">MCR</a>
+									<a href="macro://utility/infoDialog@lib:it.aldinucci.piero.bed.maptool.ruleset//Impersonated?MCR">MCR</a>
 								</td>
 								<td class="table-data">[r: round(calcPercentMod(Mod_Cura_in)*100,1)+"%"]</td>
 							</tr>
@@ -191,7 +191,7 @@
 							<!-- Not useful
 							<tr class="oddRow" title="Fattore Rigenerazione Mana">
 								<td class="description">
-									<a href="macro://gui/infoDialog@this//Impersonated?FRM">FRM</a>
+									<a href="macro://utility/infoDialog@lib:it.aldinucci.piero.bed.maptool.ruleset//Impersonated?FRM">FRM</a>
 								</td>
 								<td class="table-data">[r: round(getFRM(source)*100,1)+"%"]</td>
 							</tr>

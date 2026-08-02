@@ -93,7 +93,7 @@
 <html>
 
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title>Equipaggiamento</title>
 	<style>[r:"
 		.tooltipBox {
@@ -231,7 +231,7 @@
 	</div>
 	<meta id="dataNode" data-dueMani="[r:b2Mani]" data-addestramento="[r: iAddArmatura]">
 	<div id="tooltipBox" class="hiddenBox">Test</div>
-	<script src="lib://Scheda/macro/inventarioArmi.js?cachelib=true"></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/inventarioArmi.js?cachelib=true"></script>
 </body>
 </html>
 }]

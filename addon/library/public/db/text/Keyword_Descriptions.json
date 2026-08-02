@@ -1,0 +1,295 @@
+{
+    "annebbiato": {
+        "sDescr": "+6 Mancare, -2 CD"
+    },
+    "attacco": {
+        "sDescr": "Si considera un Attacco (contro uno o più bersagli) qualunque attacco Basilare o Potere Offensivo."
+    },
+    "atterrato": {
+        "sDescr": "Provoca un'Interruzione, se la vittima stava lanciando un potere deve superare un prova di Concentrazione o subire invece un'Interruzione Forzata. Tutti gli attacchi contro il personaggio sono considerati alle spalle. +1 costo MM per casella. Non è possibile infliggere attacchi di opportunità nè utilizzare armi a distanza."
+    },
+    "basilare": {
+        "sDescr": "<p>Un colpo normale portato con la propria arma impugnata contro un singolo bersaglio. Viene considerato un Attacco.</p><p>Se non si hanno più attacchi basilari a disposizione è possibile consumare il lancio di un Potere Offensivo e pagare 3 PF per effettuare un attacco basilare.</p>"
+    },
+    "cd": {
+        "sAcro": "Classe Difficoltà",
+        "sDescr": "Determina quanto è difficile per il bersaglio resistere agli effetti lanciati, contrapposto ai TS."
+    },
+    "cecita": {
+        "sDescr": "+16 Mancare, -4 Percepire"
+    },
+    "confusione": {
+        "sDescr": "-1 PA, +11 Mancare"
+    },
+    "confusione2": {
+        "sDescr": "-2 PA, +22 Mancare"
+    },
+    "confusione3": {
+        "sDescr": "-3 PA, +33 Mancare"
+    },
+    "congelamento": {
+        "sDescr": "-2 LD, -2 Resistenza Fisica, -9 VA"
+    },
+    "congelamento2": {
+        "sDescr": "-4 LD, -4 Resistenza Fisica, -18 VA"
+    },
+    "congelato": {
+        "link": "congelamento"
+    },
+    "controllo azione": {
+        "sDescr": "Determina la capacità del personaggio nel controllare l'effetto delle proprie azioni e poteri. Esempi sono la possibilità di cambiare bersaglio, scegliere i bersagli all'interno di un'area d'effetto, e terminare un effetto attivo da lui stesso lanciato."
+    },
+    "copertura": {
+        "sDescr": "Se una copertura si frappone nella traiettoria di un'azione non Potenziale, la copertura può esser colpita al posto del bersaglio originario.<br>Ogni copertura ha un valore che equivale alla probabilità di essere colpita al posto del bersaglio. I valori di coperture diverse non si cumulano, ma si considerano individualmente."
+    },
+    "crit": {
+        "sAcro": "Critico",
+        "sDescr": "Determina la probabilità di ottenere un effetto critico. Soft cap 35%, hard cap 75%."
+    },
+    "debolezza": {
+        "sDescr": "-1 LL, -1 LA, +7 Mancare"
+    },
+    "debolezza2": {
+        "sDescr": "-2 LL, -2 LA, +14 Mancare"
+    },
+    "devozione": {
+        "sDescr": "<div>Rappresenta il modificatore da usare quando si cerca di attivare uno spirito.</div><div>Ogni qual volta la devozione si riduce viene effettuato un tiro di attivazione con il valore appena ridotto, se fallisce lo spiritista subisce danno proporziale all'entità del fallimento.</div>"
+    },
+    "difendersi": {
+        "sDescr": "<p>Mentre attivo le proprie azioni non provocano un Attacco di Opportunità.</p><p>Non può prevenire attacchi di opportunità dovuti a manovre degli avversari che li generano esplicitamente.</p>"
+    },
+    "dolore": {
+        "sDescr": "-2 TS, +6 Mancare"
+    },
+    "elusione": {
+        "sAcro": "",
+        "sDescr": "Il valore di elusione si somma al valore di Mancare per tutti gli effetti che bersagliano il soggetto, siano essi benefici o nocivi."
+    },
+    "energia distruttiva": {
+        "sDescr": "Meccanica propria degli incantesimi di tipo Offensivo di Stregoneria, che permette a tali incantesimi di essere più efficaci. Attivabile solo grazie ad abilità specifiche di classe."
+    },
+    "estenuante": {
+        "sAcro": "Extenuante x",
+        "sDescr": "<p>Quando attivata, un'abilità estenuante entra in fase di estenuazione per x round, cumulabile per ogni attivazione.</p><p>Attivare l'abilità ha un costo aggiuntivo di +6 PF per ogni round rimanente di estenuazione.</p><p>Solo i round di combattimento contano ai fini del recupero.</p>"
+    },
+    "fallimento critico": {
+        "sDescr": "<p>Un Fallimento Critico si verifica quando si fallisce un TS con uno scarto superiore a 12 punti.</p><p>La conseguenza è che gli effetti dei poteri vengono incrementati di +1 LE e che la vittima, contro il potere contro il quale ha fallito il TS, subisce una penalità di +25 MDR.</p>"
+    },
+    "fragile": {
+        "sDescr": "+19 MDR"
+    },
+    "fragile2": {
+        "sDescr": "+38 MDR"
+    },
+    "frammento d’anima": {
+        "sDescr": "<p>I Frammenti d’anima sono una risorsa esclusiva richiesta per l’attivazione di alcuni specifici incantesimi di scuole Sacrileghe ed abilità di classe.</p><p>I frammenti oltre il primo sono instabili e vengono rilasciati dopo 15 round, non è quindi possibile avere più di un frammento fuori dal combattimento.</p>"
+    },
+    "frm": {
+        "sAcro": "Fattore Rigenerazione Mana",
+        "sDescr": "Modifica la quantità di mana recuperata da qualsiasi fonte, comprese pozioni, abilità di classe e riposo."
+    },
+    "furtivo": {
+        "sAcro": "Attacco Furtivo",
+        "sDescr": "<p>Si verifica quando si attacca un bersaglio Indifeso o ignaro della presenza dell'attaccante. Si considera un Attacco di Opportunità ed ottiene un bonus al danno di +1 per LPG.</p><p>Attacchi che non possono essere di opportunità (i Poteri Offensivi richiedono il tag OPP) non possono essere nemmeno furtivi.</p>"
+    },
+    "incapacitato": {
+        "sDescr": "<p>Un personaggio incapacitato non è in grado di compiere alcuna azione e si considera  Indifeso.</p><p>Deve resistere contro una prova di Perturbazione, se fallisce subisce un’Interruzione Forzata, altrimenti una semplice Interruzione.</p>"
+    },
+    "incendio": {
+        "sDescr": "Danni continuati da fuoco, esistono incantesimi che sono più efficaci contro bersagli incendiati."
+    },
+    "indifeso": {
+        "sDescr": "Non è possibile nè Parare nè Schivare, inoltre tutti gli attacchi subiti diventano attacchi di opportunità. A discrezione del GM contro un personaggio indifeso è possibile infliggere un singolo Attacco Furtivo."
+    },
+    "interruzione forzata": {
+        "sDescr": "Avviene quando il personaggio viene interrotto da un avversario e non volontariamente. In condizioni normali è identica ad una normale Interruzione, ma se si sta lanciando un potere allora si perdono metà delle risorse che il potere sarebbe costato."
+    },
+    "invisibile": {
+        "sDescr": "Un effetto di invisibilità è equivalente a Mimetizzato3."
+    },
+    "la": {
+        "sAcro": "Livello Attacco",
+        "sDescr": "Assieme al LD del bersaglio determina il danno inflitto con le armi. 1 Punto equivale a 1.5 danni per ogni attacco, oppure 2 danni nel caso di armi a due mani."
+    },
+    "lc": {
+        "sAcro": "Livello di Classe",
+        "sDescr": "Il livello che un personaggio ha su una determinata classe. La somma di tutti i livelli di classe è il LPG."
+    },
+    "ld": {
+        "sAcro": "Livello Difesa",
+        "sDescr": "Assieme al LA dell'attaccante determina quanti danni infliggono le armi. Ogni punto riduce da 1.5 a 2 danni per ogni attacco ricevuto."
+    },
+    "le": {
+        "sAcro": "Livello Effetto",
+        "sDescr": "Unità di misura di potenza per le condizioni, tutte le condizioni base sono considerate avere un livello effetto pari ad 1. Quando il livello effetto incrementa si appone tale livello come suffisso alla condizione, ed indica che i suoi valori numerici vanno moltiplicati per il livello. Ad esempio Lentezza2 ha valori di potenza doppia rispetto a Lentezza."
+    },
+    "lentezza": {
+        "sDescr": "-2 MM, -6 Schivare, -4 Parare, -15 VA"
+    },
+    "lentezza2": {
+        "sDescr": "-4 MM, -12 Schivare, -8 Parare, -30 VA"
+    },
+    "lentezza3": {
+        "sDescr": "-6 MM, -18 Schivare, -12 Parare, -45 VA"
+    },
+    "ll": {
+        "sAcro": "Livello Lancio",
+        "sDescr": "Primariamente serve a determinare il LP, e l'efficacia dei poteri di cura."
+    },
+    "lmm": {
+        "sAcro": "Livello Maestria Magia",
+        "sDescr": "L'abilità del personaggio con una specifica scuola di poteri, influisce su tutti i poteri di tale scuola, determinando la CD, il LL, ed il costo mana e PF. A dispetto del significato dell'acronimo 'magia', si applica anche per le tecniche marziali."
+    },
+    "lp": {
+        "sAcro": "Livello Potenza",
+        "sDescr": "Determina il danno inflitto calcolato come LL - resistenza del bersaglio"
+    },
+    "lpg": {
+        "sAcro": "Livello Personaggio",
+        "sDescr": "Il livello totale del personaggio, dato dalla somma di tutti i suoi LC."
+    },
+    "mancare": {
+        "sAcro": "",
+        "sDescr": "Influenza la possibilità di mancare di ogni azione in modo percentuale. Non è possibile mancare se stessi. La probabilità di mancare con un effetto ad area è ridotta ad un terzo. Soft cap 40%, Hard Cap 90%"
+    },
+    "mcg": {
+        "sAcro": "Modificatore Cure Generate",
+        "sDescr": "Valore percentuale."
+    },
+    "mcr": {
+        "sAcro": "Modificatore Cure Ricevute",
+        "sDescr": "Valore percentuale."
+    },
+    "mdi": {
+        "sAcro": "Modificatore Danno Inflitto",
+        "sDescr": "Valore percentuale. Si somma al MDR dell'avversario, e si applica dopo resistenze ed armatura."
+    },
+    "mdr": {
+        "sAcro": "Modificatore Danno Ricevuto",
+        "sDescr": "Valore percentuale. Si somma al MDI dell'attaccante, e si applica dopo resistenze ed armatura."
+    },
+    "mimetizzato": {
+        "sDescr": "+16 Elusione, +8 Furtività"
+    },
+    "mimetizzato2": {
+        "sDescr": "+32 Elusione, +8 Furtività"
+    },
+    "mimetizzato3": {
+        "sDescr": "+48 Elusione, +12 Furtività"
+    },
+    "mm": {
+        "sAcro": "Modificatore Movimento",
+        "sDescr": "Vengono consumati al posto dei PA nel caso in cui l'azione in questione richieda solo il movimento del personaggio. Vengono recuperati all'inizio di ogni round."
+    },
+    "nausea": {
+        "sDescr": "-1 PA, -5 MCR, +4 Mancare, -2 TS Volontà"
+    },
+    "nausea2": {
+        "sDescr": "-2 PA, -10 MCR, +8 Mancare, -4 TS Volontà"
+    },
+    "necrofuria": {
+        "sDescr": "<p>Al momento dell’attivazione di un’abilità il personaggio consuma 1 Frammento d’anima (posto che Necrofuria sia attiva). Quando ciò avviene l’abilità viene potenziata e si utilizzano i valori alternativi tra parentesi al posto di quelli normali.</p>"
+    },
+    "orrore": {
+        "sDescr": "Equivalente a Paura3"
+    },
+    "pa": {
+        "sAcro": "Punti Azione",
+        "sDescr": "Ogni azione ha associato un costo in punti azione. Vengono recuperati all'inizio di ogni round."
+    },
+    "panico": {
+        "sDescr": "-2 PA, +6 Mancare"
+    },
+    "panico2": {
+        "sDescr": "-4 PA, +12 Mancare"
+    },
+    "parare": {
+        "sDescr": "Quando si para un attacco si riducono i danni subiti ad un terzo del valore originale. Si possono parare solo attacchi materiali (es. non si può schivare la maggior parte degli incantesimi). La probabilità di parare attacchi alle spalle è dimezzata. Soft cap 45%, Hard Cap 99%"
+    },
+    "paura": {
+        "sDescr": "+11 Mancare, -12 VA"
+    },
+    "paura3": {
+        "sDescr": "+33 Mancare, -36 VA"
+    },
+    "pcrit": {
+        "sAcro": "Potenza Critico",
+        "sDescr": "Determina l'incremento di potenza di un effetto quando si ottiene un critico."
+    },
+    "penetrazione": {
+        "sDescr": "La penetrazione è una statistica associata agli attacchi fisici, ed è un valore che si somma al LA, ma solamente fin quando il valore del LA non raggiunge il LD del difensore."
+    },
+    "pf": {
+        "sAcro": "Punti Fatica",
+        "sDescr": "Un risorsa utilizzata per la maggior parte delle azioni. Si recupera solamente riposando."
+    },
+    "potere offensivo": {
+        "sDescr": "<p>Un potere che generalmente infligge danno ad uno o più bersagli. Indicato dallo sfondo rosso nella tabella dei poteri. Viene considerato un Attacco.</p><p>Il lancio di uno di questi poteri consuma 1 utilizzo di potere offensivo (risorsa omonima), se non si hanno più usi a disposizione è possibile comunque lanciarlo consumando un attacco Basilare e pagare 4 PF.</p>"
+    },
+    "pp": {
+        "sAcro": "Punti Potere",
+        "sDescr": "Vengono consumati al posto dei PA nel caso in cui l'azione in questione sia il lancio di un potere qualsiasi. Vengono recuperati all'inizio di ogni round."
+    },
+    "pv": {
+        "sAcro": "Punti Vita",
+        "sDescr": ""
+    },
+    "pvt": {
+        "sAcro": "Punti Vita Temporanei",
+        "sDescr": "Si cumulano solamente se generati da fonti diverse, e vengono persi dopo alcuni round. Fin quando il personaggio ha punti vita temporanei residui, esso non può subire Perturbazione in seguito ai danni."
+    },
+    "sanguinamento": {
+        "sDescr": "effetto che infligge danno su più round, alcuni poteri sono più efficaci contro bersagli sanguinanti. Esistono speciali resistenze contro il sanguinamento, che si sommano alle normali resistenze."
+    },
+    "schivare": {
+        "sAcro": "",
+        "sDescr": "Quando si schiva un attacco, si ignorano tutti i suoi effetti. Efficace solamente contro attacchi materiali (es. non si può schivare la maggior parte degli incantesimi). La probabilità di schivare attacchi alle spalle è dimezzata. Soft Cap 30%, Hard Cap 66%."
+    },
+    "sordita": {
+        "sDescr": "-2 TS Riflessi, +6 Mancare, -6 Schivare, -9 Parare, -1 VA, -4 Percezione"
+    },
+    "sovraccarico spiritico": {
+        "sDescr": "Se si ha uno spirito attivo, e Sovraccarico Spiritico è attivo, l'abilità Peculiare viene potenziata utilizzando i valori fra parentesi. Allo stesso tempo però, lo spirito subisce una penalità di -1 al suo Mod. Devozione."
+    },
+    "spossatezza": {
+        "sDescr": "-2 TS Tempra, -1 LA, -1 LL, -1 CD"
+    },
+    "stordimento": {
+        "sDescr": "-3 PA, -1 VA"
+    },
+    "stordimento2": {
+        "sDescr": "-6 PA, -2 VA"
+    },
+    "stordimento3": {
+        "sDescr": "-9 PA, -3 VA"
+    },
+    "stordita": {
+        "sDescr": "-3 PA, -1 VA"
+    },
+    "terrore": {
+        "sDescr": "<p>Chi è sotto terrore può solo rannicchiarsi al suolo e gemere.</p><p>Incapacitato, -8 TS Volontà.</p>"
+    },
+    "torpore": {
+        "sDescr": "-1 MM, -7 Schivare, -10 Parare, -10 VA"
+    },
+    "ts": {
+        "sAcro": "Tiro Salvezza",
+        "sDescr": "<p>Determina la possibilità di resistere ad un determinato effetto, tirando 1d20 + (Riflessi, Tempra o Volontà) + Resistenza Elemento. Ha successo se si ottiene un valore pari o superiore alla CD.</p><p>Un tiro di 1 è sempre un fallimento, mentre 20 è sempre un successo. Se il tiro fallisce con un scarto significativo allora diventa un Fallimento Critico.</p>"
+    },
+    "va": {
+        "sAcro": "Velocità Azione",
+        "sDescr": "Influisce sul tempo di esecuzione di ogni azione."
+    },
+    "vacillante": {
+        "sDescr": "-10 Schivare, -15 Parare, +5 MDR, -4 VA"
+    },
+    "veleno": {
+        "sDescr": "un bersaglio avvelenato subisce effetti associati al veleno fin quando questo persiste. Gli effetti possono essere sia danno sul tempo che condizioni negative. Non è possibile rimovere gli effetti associati senza rimuovere il veleno, inoltre alcuni poteri sono più efficaci contro bersagli avvelenati. Come rovescio della medaglia è possibile avere resistenze speciali al veleno, che si sommano alle normali resistenze."
+    },
+    "velocita": {
+        "sDescr": "+2 MM, +6 Schivare, +4 Parare, +15 VA"
+    },
+    "velocita2": {
+        "sDescr": "+4 MM, +12 Schivare, +8 Parare, +30 VA"
+    }
+}

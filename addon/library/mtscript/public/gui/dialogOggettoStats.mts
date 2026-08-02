@@ -19,7 +19,7 @@
 <html>
 
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title>Equipaggiamento</title>
 	<style>
 	</style>

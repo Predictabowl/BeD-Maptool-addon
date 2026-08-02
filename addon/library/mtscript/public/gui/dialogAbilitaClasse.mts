@@ -14,7 +14,7 @@
 [dialog5(sDialog, strformat("temporary=1; size=%{lSize}; closebutton=0; noframe=0; value=%{oToken}")):{
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css?cachelib=true">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
 	<title> Abilità di Classe</title> 
 </head>
 <body align="center">

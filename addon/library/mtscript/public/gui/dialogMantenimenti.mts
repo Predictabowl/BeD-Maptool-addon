@@ -6,7 +6,7 @@
 [dialog5("Mantenimento Poteri","width=450; height=250; temporary=true;"):{
 <html>
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css?cachelib=true">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
 
 	<title> Mantenimento dei Poteri</title>
 	<style>

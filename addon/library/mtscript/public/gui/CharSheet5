@@ -261,7 +261,7 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 
 
 .splitSpellList{
-<!--	height: 68%;-->
+/*	height: 68%;*/
 	width: 100%;
 	position: fixed;
 	z-index: 1;
@@ -428,7 +428,7 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 }
 
 
-<!-- Da qua in poi DA FARE -->
+/* Da qua in poi DA FARE */
 
 .overlay-list-window{
 	border:1px solid black;

@@ -35,7 +35,7 @@
 [frame5(sFrame,strformat("value=%s", oToken)):{
 <html>
 <head> 
-		<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css?cachelib=false">
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
 		<title> Poteri Memorizzati</title> 
 </head>
 <body align="center">

@@ -3,7 +3,7 @@
 [h: sAcro = ""]
 [h: sDescr = ""]
 
-[h: jData = getLibProperty("Keyword_Descriptions", getMacroLocation())]
+[h: jData = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/text/Keyword_Descriptions.json")]
 
 
 [h: jElement = json.get(jData, lower(sKey))]

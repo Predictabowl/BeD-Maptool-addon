@@ -74,7 +74,7 @@
 
 [overlay(sOverlay,"value=[r: oToken]"): {
 	<html>
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<style>
 		[r:"
 			.pServitore{margin: 4px; padding:0px; height: 38px; width: 38px; border-radius:19px;}

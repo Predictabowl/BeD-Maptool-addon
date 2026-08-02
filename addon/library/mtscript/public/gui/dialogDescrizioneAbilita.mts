@@ -10,7 +10,7 @@
 [dialog5(sDialog,"width=600; height=450; temporary=0;"):{
 <html>
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://Scheda/macro/CharSheet5_css">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 <title> Descrizione </title> 
 </head>
 <body  align="center">
