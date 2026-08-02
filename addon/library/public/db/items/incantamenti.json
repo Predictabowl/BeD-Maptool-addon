@@ -1,0 +1,10 @@
+{
+    "armaElementale-0": {
+        "installerMacro": "installerArmaElementale@Lib:EquipEffect",
+        "parametriGlobali": ""
+    },
+    "scaricaArtefattoLancio": {
+        "installerMacro": "installerPotereAggiuntivo@Lib:EquipEffect",
+        "parametriGlobali": "Lib:ScaricaArtefattoLancio"
+    }
+}

@@ -12,10 +12,10 @@
 	[macro("mobs/riponiArmatura@this"): oToken]
 }]
 
-[macro("getArmaturaFromDB@Lib:EquipEffect"): json.get(oLocal,"idDB")]
+[macro("items/getArmaturaFromDB@this"): json.get(oLocal,"idDB")]
 [h: oArmatura = json.merge(macro.return,oLocal)]
 
-[macro("processaAttributi@Lib:EquipEffect"): json.append(oToken,oArmatura)]
+[macro("items/processaAttributi@this"): json.append(oToken,oArmatura)]
 [macro("mobs/applyAddArmaturaPenalties@this"): json.append(oToken,oArmatura)]
 
 [h: Armatura = sNomeA]

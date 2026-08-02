@@ -8,16 +8,16 @@ Lib:Movement -> movement
 Lib:Meccaniche -> mechanics
 Lib:GetSet -> crud
 Lib:Scheda -> gui
+Lib:AbilitaClasse -> class-skills
 
 
 # Next in line to be mapped
-Lib:AbilitaClasse -> class-skills
+Lib:EquipEffect-> items
 
 
 # Not Mapped yet 
 Lib:OggettiUsabili
 Lib:Mat
-Lib:EquipEffect
 Lib:GlobalVar
 Lib:Sounds
 

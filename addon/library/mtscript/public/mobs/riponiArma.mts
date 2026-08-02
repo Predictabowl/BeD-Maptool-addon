@@ -9,7 +9,7 @@
 
 [h, if(json.isEmpty(oArma)): return(0,0)]
 
-[macro("runEquipMacros@Lib:EquipEffect"):json.set("","token",oToken,"numArma",iArma+1,"item",oArma,"remove",1, "idItem",sArma)]
+[macro("items/runEquipMacros@this"):json.set("","token",oToken,"numArma",iArma+1,"item",oArma,"remove",1, "idItem",sArma)]
 
 [h, if(iArma < 1), code:{
 	[Danno_Arma1 = listReplace(Danno_Arma1,0,"1d4")]
@@ -21,10 +21,10 @@
 	[Armi_Equipaggiate = listReplace(Armi_Equipaggiate,iArma, "")]
 }]
 
-[macro("processEffectInstallers@Lib:EquipEffect"): json.append(oToken,sArma, 1)]
+[macro("items/processEffectInstallers@this"): json.append(oToken,sArma, 1)]
 
 [h, if(!json.isEmpty(oArma)), code:{
-	[macro("processaAttributi@Lib:EquipEffect"): json.append(oToken,oArma,-1)]
+	[macro("items/processaAttributi@this"): json.append(oToken,oArma,-1)]
 }]
 
 <!-- Mancano da rimuovere gli eventi se hanno effetti aggiuntivi -->

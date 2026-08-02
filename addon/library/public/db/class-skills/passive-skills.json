@@ -1,0 +1,45 @@
+{
+    "MessaggerodelCaos": {
+        "nomeDecorativo": "Messaggero del Caos",
+        "descrizione": "Specializzazione.<br> Ogni qual volta il personaggio attiva un’abilità Peculiare che riduce il Mod. Devozione dello spirito attivo, c’è la possibilità che tale perdita non si verifichi.<br> La probabilità è pari al 18% per livello dell’abilità."
+    },
+    "PlacaregliSpiriti": {
+        "nomeDecorativo": "Placare gli Spiriti",
+        "descrizione": "Il personaggio è esperto nel placare gli spiriti ed ottiene un bonus sul tiro per riuscire ad incrementare il Mod. Devozione pari a +1 per livello dell'abilità."
+    },
+    "SonataEfficiente": {
+        "nomeDecorativo": "Sonata Bardica Efficiente",
+        "descrizione": "Riduce il costo di attivazione di Sonata Bardica di -4 PF per livello dell’abilità.",
+        "installMacro": 0
+    },
+    "SonataEstesa": {
+        "nomeDecorativo": "Sonata Estesa",
+        "descrizione": "Incrementa il raggio dell’area d’effetto di tutte le Sonate di +1 per livello dell’abilità.",
+        "installMacro": 0
+    },
+    "incanalareLeAnime": {
+        "nomeDecorativo": "Incanalare le Anime",
+        "descrizione": "Quando il personaggio uccide un nemico c’è il 10% per livello dell’abilità di guadagnare un Frammento d’anima. Ottenere un frammento dell’anima con questa abilità non previene la possibilità di utilizzare Intrappolare l’anima sul cadavere. Questa abilità non viene influenzata da Collezione d’anime.",
+        "installMacro": 1
+    },
+    "CollezioneAnime": {
+        "nomeDecorativo": "Collezione d'anime",
+        "descrizione": "Grazie a questa capacità il necromante è in grado di potenziare Intrappolare L’anima, ad ogni attivazione è in grado di fornire un frammento d’anima aggiuntivo per livello dell’abilità.",
+        "installMacro": 0
+    },
+    "SadismoDiabolico": {
+        "nomeDecorativo": "Sadismo Diabolico",
+        "descrizione": "Quando un Servitore sotto il controllo del personaggio muore, quest’ultimo guadagna un bonus di +1 PA ed Iniziativa per livello dell’abilità.",
+        "installMacro": 0
+    },
+    "ArpeggioArmonico": {
+        "nomeDecorativo": "Arpeggio Armonico",
+        "descrizione": "Il personaggio ha grande esperienza nell’intessere melodie, riducendo di ‑2 PA il costo di attivazione di tutte le Sonate e di Ispirazione Bardica.",
+        "installMacro": 0
+    },
+    "ImpulsoOmicida": {
+        "nomeDecorativo": "Impulso Omicida",
+        "descrizione": "Il personaggio recupera +1 PA per livello dell’abilità per il round corrente.",
+        "installMacro": 0
+    }
+}

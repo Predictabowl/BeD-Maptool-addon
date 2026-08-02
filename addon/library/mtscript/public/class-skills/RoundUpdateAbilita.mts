@@ -21,4 +21,4 @@
 		[macro("class-skills/DisattivaAbilita@this"): json.append(source,item,1)]
 	}]
 }]
-[macro("updateDialogAbilita@Lib:Scheda"): source]
+[macro("gui/updateDialogAbilita@this"): source]

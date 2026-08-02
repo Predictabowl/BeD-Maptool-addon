@@ -1,0 +1,111 @@
+{
+    "BROCCHIERE-0": {
+        "nome": "Brocchiere",
+        "attributi": {
+            "LD": 1,
+            "LD_Spalle": -1,
+            "Parare": 7,
+            "Schivare": 6
+        },
+        "ingombro": 3,
+        "addArmatura": 0,
+        "categoria": "scudo",
+        "icona": "Image:inv_shield_09"
+    },
+    "BROCCHIERE-1": {
+        "nome": "Brocchiere +1",
+        "attributi": {
+            "LD": 1,
+            "LD_Spalle": -1,
+            "Parare": 10,
+            "Schivare": 6
+        },
+        "ingombro": 3,
+        "addArmatura": 0,
+        "categoria": "scudo",
+        "icona": "Image:inv_shield_09"
+    },
+    "BROCCHIERE-3": {
+        "nome": "Fortificazione Portatile",
+        "attributi": {
+            "LD": 1,
+            "LD_Spalle": -1,
+            "Parare": 9,
+            "Schivare": 8
+        },
+        "ingombro": 3,
+        "addArmatura": 0,
+        "categoria": "scudo",
+        "icona": "Image:inv_shield_19",
+        "descrizione": "Un piccolo scudo in grado di deflettere gli attacchi ancor prima che raggiungano il bersaglio. Permette di lanciare Barricata 1 volta al giorno.",
+        "RuneInstallate": [
+            "Barricata-1"
+        ]
+    },
+    "SCUDO A MANDORLA +1-1": {
+        "nome": "Scudo a Mandorla +1",
+        "attributi": {
+            "LD": 3,
+            "LD_Spalle": -3,
+            "Parare": 18
+        },
+        "ingombro": 6,
+        "addArmatura": 6,
+        "categoria": "scudo",
+        "icona": "Image:ScudoBuono"
+    },
+    "SCUDO A MANDORLA-1": {
+        "nome": "Scudo a Mandorla",
+        "attributi": {
+            "LD": 3,
+            "LD_Spalle": -3,
+            "Parare": 15,
+            "Schivare": 0
+        },
+        "ingombro": 6,
+        "addArmatura": 6,
+        "categoria": "scudo"
+    },
+    "PAVESE+0": {
+        "nome": "Scudo Pavese",
+        "attributi": {
+            "LD": 4,
+            "LD_Spalle": -4,
+            "Parare": 15,
+            "Schivare": -10,
+            "Copertura Frontale": 10
+        },
+        "ingombro": 10,
+        "addArmatura": 10,
+        "categoria": "scudo",
+        "complex_attributes": {
+            "Copertura Frontale": {
+                "key": "copertura",
+                "direzione": 1,
+                "idCopertura": "scudo"
+            }
+        },
+        "icona": "Image:ScudoPavese"
+    },
+    "TORRE+0": {
+        "nome": "Scudo Torre",
+        "attributi": {
+            "LD": 4,
+            "LD_Spalle": -4,
+            "Parare": 15,
+            "Schivare": -6,
+            "Copertura Frontale": 2
+        },
+        "ingombro": 7,
+        "addArmatura": 8,
+        "categoria": "scudo",
+        "complex_attributes": {
+            "Copertura Frontale": {
+                "key": "copertura",
+                "direzione": 1,
+                "idCopertura": "scudo"
+            }
+        },
+        "icona": "Image:ScudoPavese"
+    }
+}

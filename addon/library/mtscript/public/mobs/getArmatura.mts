@@ -8,7 +8,7 @@
 [h: sNomeInDB = json.get(oLocal,"idDB")]
 [h, if(sNomeInDB == ""): return(0,"{}")]
 
-[macro("getArmaturaFromDB@Lib:EquipEffect"): sNomeInDB]
+[macro("items/getArmaturaFromDB@this"): sNomeInDB]
 [h: oArmatura = json.merge(oLocal,macro.return)]
 [h: oArmatura = json.set(oArmatura,"localId",sArmatura)]
 

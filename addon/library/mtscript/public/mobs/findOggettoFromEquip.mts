@@ -3,7 +3,7 @@
 
 [h: switchToken(oToken)]
 [h: jLocalData = json.get(Equipaggiamento, sItem)]
-[macro("getItemCategory@Lib:EquipEffect"): jLocalData]
+[macro("items/getItemCategory@this"): jLocalData]
 [h: sCat = macro.return]
 [h, switch(sCat), code:
 	case "arma": {

@@ -26,7 +26,7 @@ a mantenere le stringhe successive-->
 [h: sDmgType = json.get(oArma, "tipoDanno")]
 
 
-[macro("runEquipMacros@Lib:EquipEffect"):json.set("","token",oToken,"numArma",iArma+1,"item",oArma, "idItem", sArma)]
+[macro("items/runEquipMacros@this"):json.set("","token",oToken,"numArma",iArma+1,"item",oArma, "idItem", sArma)]
 
 
 [h, if(iArma < 1), code:{
@@ -39,10 +39,10 @@ a mantenere le stringhe successive-->
 	[Gittata_2 = Gittata_2 + json.get(oArma,"portata")-1]
 }]
 
-[macro("processEffectInstallers@Lib:EquipEffect"): json.append(oToken,sArma)]
+[macro("items/processEffectInstallers@this"): json.append(oToken,sArma)]
 
 [h, if(!json.isEmpty(oArma)), code:{
-	[macro("processaAttributi@Lib:EquipEffect"): json.append(oToken,oArma)]
+	[macro("items/processaAttributi@this"): json.append(oToken,oArma)]
 }]
 
 [h: Armi_Equipaggiate = listReplace(Armi_Equipaggiate,iArma,sArma)]

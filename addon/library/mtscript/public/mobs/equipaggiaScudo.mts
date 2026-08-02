@@ -16,7 +16,7 @@
 [h: oScudo = macro.return]
 
 [h, if(!json.isEmpty(oScudo)), code:{
-	[macro("processaAttributi@Lib:EquipEffect"): json.append(oToken,oScudo)]
+	[macro("items/processaAttributi@this"): json.append(oToken,oScudo)]
 	[macro("mobs/applyAddArmaturaPenalties@this"): json.append(oToken,oScudo)]
 
 	[Scudo_Equipaggiato = listInsert(Scudo_Equipaggiato,0,sScudo)]

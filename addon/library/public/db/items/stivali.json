@@ -1,0 +1,51 @@
+{
+    "SCARPE DEL GUARITORE +1-1": {
+        "nome": "Scarpe del Guaritore +1",
+        "attributi": {
+            "Mod_Cura_Out": 0.01
+        },
+        "categoria": "Stivali",
+        "icona": "Image:ScarpeAloneBlu",
+        "descrizione": "",
+        "idDB": "SCARPE DEL GUARITORE +1-1"
+    },
+    "STIVALI DEL PASSO RAPIDO-1": {
+        "nome": "Stivali del passo rapido",
+        "attributi": {
+            "MM_Max": 1
+        },
+        "categoria": "stivali",
+        "icona": "",
+        "idDB": "STIVALI DEL PASSO RAPIDO-1"
+    },
+    "STIVALI RAPIDI +3-1": {
+        "nome": "Stivali Rapidi +3",
+        "attributi": {
+            "VA": 3
+        },
+        "categoria": "Stivali",
+        "icona": "Image:StivaliRossi",
+        "idDB": "STIVALI RAPIDI +3-1"
+    },
+    "STIVALI_+1MM-1VOL": {
+        "nome": "Stivali del Corridore Sempliciotto",
+        "attributi": {
+            "MM_Max": 1,
+            "TS_Vol": -1
+        },
+        "categoria": "Stivali",
+        "icona": "Image:inv_boots_leather_raiddruid_l_01",
+        "descrizione": "Chi non ha testa abbia gambe...",
+        "idDB": "STIVALI_SCHIVARE-1"
+    },
+    "STIVALI_SCHIVARE-1": {
+        "nome": "Stivali Sfuggenti +1",
+        "attributi": {
+            "Schivare": 1
+        },
+        "categoria": "Stivali",
+        "icona": "Image:inv_boots_leather_b_01",
+        "descrizione": "",
+        "idDB": "STIVALI_SCHIVARE-1"
+    }
+}

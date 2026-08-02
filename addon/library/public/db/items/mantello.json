@@ -1,0 +1,44 @@
+{
+    "MANTELLO INSULANTE-1": {
+        "nome": "Mantello Insulante",
+        "attributi": {
+            "Res_Aria": 1
+        },
+        "categoria": "mantello",
+        "icona": ""
+    },
+    "MANTELLO SCHIVARE +1-1": {
+        "nome": "Mantello Schivare +1",
+        "attributi": {
+            "Schivare": 1
+        },
+        "categoria": "Mantello",
+        "icona": "Image:MantelloVerde"
+    },
+    "MANTELLO SCHIVARE+2": {
+        "nome": "Mantello Schivare +2",
+        "attributi": {
+            "Schivare": 2
+        },
+        "categoria": "Mantello",
+        "icona": "Image:inv_misc_cape_16"
+    },
+    "CAPPA DEL GUARITORE +1-1": {
+        "nome": "Cappa del Guaritore +1",
+        "attributi": {
+            "Mod_Cura_Out": 0.01
+        },
+        "categoria": "Mantello",
+        "icona": "Image:SciarpaMarrone",
+        "descrizione": ""
+    },
+    "MANTELLO_PARARE-2": {
+        "nome": "Mantello Deflettente +2",
+        "attributi": {
+            "Parare": 2
+        },
+        "categoria": "Mantello",
+        "icona": "Image:inv_chest_cloth_14",
+        "descrizione": ""
+    }
+}

@@ -8,11 +8,11 @@
 }]
 [h, if(argCount()>3): sStyle = arg(3); sStyle = ""]
 
-[macro("getItemIcon@Lib:EquipEffect"): oOggetto]
+[macro("items/getItemIcon@this"): oOggetto]
 [h: sIcona = macro.return]
 [h, if(sIcona == ""): return(0,"")]
 [h: sNome = json.get(oOggetto,"nome")]
-[macro("getItemCategory@Lib:EquipEffect"): oOggetto]
+[macro("items/getItemCategory@this"): oOggetto]
 [h: sCategoria = macro.return]
 
 [h: iIng = getIngombroEquip(oOggetto, oToken)]

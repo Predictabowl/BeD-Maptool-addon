@@ -28,7 +28,7 @@
 [h: oOggetto = macro.return]
 
 [h, if(!json.isEmpty(oOggetto)), code:{
-	[macro("processaAttributi@Lib:EquipEffect"): json.append(oToken,oOggetto)]
+	[macro("items/processaAttributi@this"): json.append(oToken,oOggetto)]
 }]
 
 [h: Accessori = json.set(Accessori,sSlot,sNomeA)]

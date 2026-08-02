@@ -1,0 +1,114 @@
+{
+    "ACrit+1": {
+        "idDB": "ACrit+1",
+        "nome": "Anello Critico +1",
+        "attributi": {
+            "Crit": 1
+        },
+        "categoria": "anello",
+        "icona": ""
+    },
+    "ANELLO CRITICO +2-1": {
+        "nome": "Anello Critico +2",
+        "attributi": {
+            "Crit": 2
+        },
+        "categoria": "Anello",
+        "icona": "Image:AnelloLeone",
+        "descrizione": ""
+    },
+    "ANELLO DEL FATTUCCHIERE-1": {
+        "nome": "Anello del Fattucchiere",
+        "attributi": {
+            "CD_Base": 1,
+            "LL_Base": -1
+        },
+        "categoria": "Anello",
+        "icona": "Image:AnelloAuraViola",
+        "descrizione": ""
+    },
+    "ANELLO POTENZA CRITICO +1-1": {
+        "nome": "Anello Potenza Critico +1",
+        "attributi": {
+            "PCrit": 1
+        },
+        "categoria": "Anello",
+        "icona": "Image:AnelloFricciolo"
+    },
+    "ANELLO VITA MINORE-1": {
+        "nome": "Anello Vita minore",
+        "attributi": {
+            "PV_Max": 4
+        },
+        "categoria": "anello",
+        "icona": "Image:Anello"
+    },
+    "ANELLO_+1CD-CRIT11": {
+        "nome": "Sigillo della Stabilità Minore",
+        "attributi": {
+            "CD": 1,
+            "Critico": -11
+        },
+        "categoria": "Anello",
+        "icona": "Image:inv_11_0_earthen_jewelcraftingring_color3",
+        "descrizione": ""
+    },
+    "ANELLO_MCR-1": {
+        "nome": "Anello Rinvigorente +1",
+        "attributi": {
+            "Mod_Cura_In": 0.01
+        },
+        "categoria": "Anello",
+        "icona": "Image:inv_jewelry_ring_10",
+        "descrizione": ""
+    },
+    "ANELLO_MDR-1": {
+        "nome": "Anello Barriera +1",
+        "attributi": {
+            "Mod_Danno_In": -0.01
+        },
+        "categoria": "Anello",
+        "icona": "Image:80_lvlupring_purple",
+        "descrizione": ""
+    },
+    "ANELLO_PA-1": {
+        "nome": "Azione Avventata",
+        "attributi": {
+            "PA_Max": 1,
+            "Mod_Danno_In": 0.07
+        },
+        "categoria": "Anello",
+        "icona": "Image:inv_jewelry_ring_36",
+        "descrizione": "Questo anello rimuove i limiti subconsci dettati dalla prudenza, permettendo quindi di agire più efficacemente al prezzo di una maggiore esposizione al pericolo."
+    },
+    "ANELLO_RES_SANGUINAMENTO-1": {
+        "nome": "Anello Coagulante +1",
+        "attributi": {
+            "Res_Sanguinamento": 1
+        },
+        "categoria": "Anello",
+        "icona": "Image:inv_jewelcrafting_red",
+        "descrizione": ""
+    },
+    "ANELLO_VA-3": {
+        "nome": "Anello della Rapidità +3",
+        "attributi": {
+            "VA": 3
+        },
+        "categoria": "Anello",
+        "icona": "Image:ring_oribos_01",
+        "descrizione": ""
+    },
+    "ANELLO_LUCE+1": {
+        "nome": "Anello Sacro +1",
+        "attributi": {
+            "Mod_Cura_In": 0.01
+        },
+        "categoria": "Anello",
+        "icona": "Image:inv_jewelry_ring_33",
+        "descrizione": "Questo anello emette una lieve luce sacra.",
+        "RuneInstallate": [
+            "ToccoCuraFeriteLeggere-9"
+        ]
+    }
+}

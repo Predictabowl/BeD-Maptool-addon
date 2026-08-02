@@ -6,7 +6,7 @@
 [h: switchToken(oToken)]
 [h: oArma = getArma(oToken,2)]
 [h, if(!json.isEmpty(oArma)), code:{
-	[macro("isArmaLancio@Lib:EquipEffect"): oArma]
+	[macro("items/isArmaLancio@this"): oArma]
 	[return(0, macro.return)]
 }]
 

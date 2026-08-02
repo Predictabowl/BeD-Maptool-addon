@@ -12,5 +12,5 @@
 [h: sLocalId = macro.return]
 
 [h: Equipaggiamento = json.set(Equipaggiamento,sLocalId,oDatiCustom)]
-[macro("processEffectInstallers@Lib:EquipEffect"): json.append(oToken,sLocalId,"initialize")]
+[macro("items/processEffectInstallers@this"): json.append(oToken,sLocalId,"initialize")]
 [h: macro.return = sLocalId]

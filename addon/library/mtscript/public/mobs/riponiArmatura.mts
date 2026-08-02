@@ -9,6 +9,6 @@
 
 [h, if(json.isEmpty(oArmatura)): return(0,0)]
 
-[macro("processaAttributi@Lib:EquipEffect"): json.append(oToken,oArmatura,-1)]
+[macro("items/processaAttributi@this"): json.append(oToken,oArmatura,-1)]
 [macro("mobs/applyAddArmaturaPenalties@this"): json.append(oToken,oArmatura,1)]
 [h: Armatura = ""]

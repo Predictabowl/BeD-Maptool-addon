@@ -10,7 +10,7 @@
 [h, if(json.contains(jOptions,"arma")): iArma = json.get(jOptions,"arma"); iArma = ""]
 [h, if(!isNumber(iArma)): iArma = getArmaDaUsare(source)]
 [h: oArma = getArma(source,iArma)]
-[macro("isArmaLancio@Lib:EquipEffect"): oArma]
+[macro("items/isArmaLancio@this"): oArma]
 [h, if(macro.return): return(0,0)]
 
 

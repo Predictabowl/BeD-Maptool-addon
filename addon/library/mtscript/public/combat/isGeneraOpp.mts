@@ -7,7 +7,7 @@
 [h, if(isStileDistanza(source)): return(0,1)]
 
 [h: oArma = getArma(source,iArma)]
-[h, macro("isArmaLancio@Lib:EquipEffect"): oArma]
+[h, macro("items/isArmaLancio@this"): oArma]
 [h, if(macro.return): return(0,1)]
 
 [h: macro.return = 0]

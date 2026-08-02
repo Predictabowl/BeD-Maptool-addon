@@ -1,0 +1,189 @@
+{
+    "ARMATURA BORCHIATA-1": {
+        "nome": "Armatura Borchiata",
+        "attributi": {
+            "LD": 9,
+            "Schivare": -3
+        },
+        "ingombro": 8,
+        "addArmatura": 3,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:ArmaturaBorchiata"
+    },
+    "BRIGANTINA-1": {
+        "nome": "Brigantina",
+        "attributi": {
+            "LD": 8,
+            "Schivare": -2
+        },
+        "ingombro": 7,
+        "addArmatura": 2,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:Brigantina"
+    },
+    "BRIGANTINA+1": {
+        "nome": "Brigantina +1",
+        "attributi": {
+            "LD": 9,
+            "Res_Acqua": 1,
+            "Res_Aria": 1,
+            "Res_Fuoco": 1,
+            "Res_Terra": 1,
+            "Res_Arcano": 1,
+            "Res_Mentale": 1,
+            "Res_Negativo": 1,
+            "Res_Positivo": 1,
+            "Res_Fisico": 1,
+            "Schivare": -2
+        },
+        "ingombro": 7,
+        "addArmatura": 2,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:inv_chest_leather_27v2"
+    },
+    "COTTA_MAGLIA_ELFICA-1": {
+        "nome": "Cotta di Maglia Elfica",
+        "attributi": {
+            "LD": 10
+        },
+        "ingombro": 8,
+        "potenziamento": 0,
+        "addArmatura": 4,
+        "categoria": "armatura",
+        "icona": "Image:inv_chest_chain_03"
+    },
+    "COTTA_MAGLIA_ELFICA-3": {
+        "nome": "Cotta di Maglia Elfica +2",
+        "attributi": {
+            "LD": 12,
+            "Res_Acqua": 2,
+            "Res_Aria": 2,
+            "Res_Fuoco": 2,
+            "Res_Terra": 2,
+            "Res_Arcano": 2,
+            "Res_Mentale": 2,
+            "Res_Negativo": 2,
+            "Res_Positivo": 2,
+            "Res_Fisico": 2
+        },
+        "ingombro": 8,
+        "potenziamento": 0,
+        "addArmatura": 4,
+        "categoria": "armatura",
+        "icona": "Image:inv_chest_chain_03"
+    },
+    "COTTA_MAGLIA-1": {
+        "nome": "Cotta di Maglia",
+        "attributi": {
+            "LD": 10,
+            "Schivare": -4
+        },
+        "ingombro": 9,
+        "potenziamento": 0,
+        "addArmatura": 4,
+        "categoria": "armatura",
+        "icona": "Image:inv_chest_chain"
+    },
+    "IMBOTTITA-1": {
+        "nome": "Imbottita",
+        "attributi": {
+            "LD": 7,
+            "Schivare": -1
+        },
+        "ingombro": 6,
+        "addArmatura": 1,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:Imbottita"
+    },
+    "PIASTRE-1": {
+        "nome": "Armatura a Piastre",
+        "attributi": {
+            "LD": 14,
+            "Schivare": -8
+        },
+        "ingombro": 13,
+        "addArmatura": 8,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:ArmaturaPiastre"
+    },
+    "Strisce": {
+        "idDB": "Strisce",
+        "nome": "Armatura a strisce",
+        "attributi": {
+            "LD": 13,
+            "Schivare": -7
+        },
+        "ingombro": 12,
+        "addArmatura": 7,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:ArmaturaStrisce"
+    },
+    "TUNICA RINFORZATA +1-1": {
+        "nome": "Tunica Rinforzata +1",
+        "attributi": {
+            "LD": 7,
+            "Tutte_Res": 1
+        },
+        "ingombro": 5,
+        "addArmatura": 0,
+        "potenziamento": 1,
+        "categoria": "armatura",
+        "icona": "Image:Tunica+1"
+    },
+    "PARAMENTI PRIMA LUCE +1": {
+        "nome": "Paramenti della Prima Luce",
+        "attributi": {
+            "LD": 7,
+            "Tutte_Res": 1,
+            "Concentrazione_Poteri": 2,
+            "Mod_Cura_Out": 0.02,
+            "Mana_Max": 10,
+            "Furtivita": -2
+        },
+        "ingombro": 5,
+        "addArmatura": 0,
+        "potenziamento": 1,
+        "categoria": "armatura",
+        "icona": "Image:inv_chest_cloth_04",
+        "descrizione": "Questi splendidi paramenti sacerdotali, intessuti con fili incantati, brillano della calda luce dell’alba. Il loro rifulgere costante ostacola la furtività ma funge da potente catalizzatore divino: espande in modo notevole la riserva di mana, perfeziona la concentrazione nelle arti magiche e intensifica il potere delle cure elargite, accogliendo il portatore in un lieve manto protettivo contro le avversità."
+    },
+    "TUNICA RINFORZATA-1": {
+        "nome": "Tunica da Esploratore",
+        "attributi": {
+            "LD": 5
+        },
+        "ingombro": 3,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:Tunica"
+    },
+    "TUNICA RINFORZATA-2": {
+        "nome": "Tunica Rinforzata",
+        "attributi": {
+            "LD": 6
+        },
+        "ingombro": 5,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:Tunica"
+    },
+    "TUNICA RINFORZATA-3": {
+        "nome": "Tunica da arcanista minore",
+        "attributi": {
+            "LD": 6,
+            "Mana_Max": 20,
+            "PCrit": 5,
+            "Res_Arcano": 1
+        },
+        "ingombro": 5,
+        "potenziamento": 0,
+        "categoria": "armatura",
+        "icona": "Image:TunicaArcanistaMin"
+    }
+}

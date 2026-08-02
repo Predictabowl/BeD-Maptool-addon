@@ -1,0 +1,59 @@
+{
+    "CINTURA DELLA TEMPRA +1-1": {
+        "nome": "Cintura della Tempra +1",
+        "attributi": {
+            "TS_Tem": 1
+        },
+        "categoria": "cintura",
+        "icona": ""
+    },
+    "CINTURA DELLAVVENTATEZZA-1": {
+        "nome": "Cintura dell´avventatezza",
+        "attributi": {
+            "Mod_Danno_Out": 0.07,
+            "Mod_Danno_In": 0.07
+        },
+        "categoria": "Cintura",
+        "icona": "Image:CinturaTeschio01",
+        "descrizione": ""
+    },
+    "CINTURA VITA +5-1": {
+        "nome": "Cintura Vita +5",
+        "attributi": {
+            "PV_Max": 5
+        },
+        "categoria": "Cintura",
+        "icona": "Image:CinturaGrigia"
+    },
+    "CINTURA_CARICO-3": {
+        "nome": "Cintura dalle Molte Tasche +3",
+        "attributi": {
+            "Mod_Carico": 3
+        },
+        "categoria": "Cintura",
+        "icona": "Image:inv_belt_31",
+        "descrizione": ""
+    },
+    "CINTURA_NANO-1": {
+        "nome": "Cintura dalle Molte Birre",
+        "attributi": {
+            "Tolleranza_Tossica": 25,
+            "TS_Tem": 1
+        },
+        "categoria": "Cintura",
+        "icona": "Image:inv_belt_28",
+        "descrizione": "La cintura del vero bevitore!",
+        "RuneInstallate": [
+            "SbronzaEpica-10"
+        ]
+    },
+    "CINTURA_PF-2": {
+        "nome": "Cintura della Resilienza +2",
+        "attributi": {
+            "PF_Max": 2
+        },
+        "categoria": "Cintura",
+        "icona": "Image:inv_belt_11",
+        "descrizione": ""
+    }
+}

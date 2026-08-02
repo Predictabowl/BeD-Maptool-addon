@@ -1,0 +1,75 @@
+{
+    "CAPPELLO DEL GUARITORE +1-1": {
+        "nome": "Cappello del Guaritore +1",
+        "attributi": {
+            "Mod_Cura_Out": 0.01
+        },
+        "categoria": "Elmo",
+        "icona": "Image:inv_helmet_60",
+        "descrizione": ""
+    },
+    "CAPPUCCIO DI PROTEZIONE +1-1": {
+        "nome": "Cappuccio di Protezione +1",
+        "attributi": {
+            "Mod_Danno_In": -0.01
+        },
+        "categoria": "Elmo",
+        "icona": "Image:CappuccioMarrone",
+        "descrizione": "Un umile cappuccio, non è il massimo ma è comunque in grado di offrire una minima protezione"
+    },
+    "CERCHIETTO-MANA+10-1": {
+        "nome": "Cerchietto della Mana +10",
+        "attributi": {
+            "Mana_Max": 10
+        },
+        "categoria": "Elmo",
+        "icona": "Image:inv_crown_01",
+        "descrizione": ""
+    },
+    "ELMO DEL DIFENSORE +1-1": {
+        "nome": "Elmo del Difensore +1",
+        "attributi": {
+            "Mod_Danno_In": -0.01
+        },
+        "categoria": "Elmo",
+        "icona": "Image:ElmoPiastre01",
+        "descrizione": ""
+    },
+    "ELMO_PV-2": {
+        "nome": "Elmo della Vita +6",
+        "attributi": {
+            "PV_Max": 6
+        },
+        "categoria": "Elmo",
+        "icona": "Image:Elmo",
+        "descrizione": ""
+    },
+    "ELMO_ARIA-1": {
+        "nome": "Furia del Cielo",
+        "attributi": {
+            "Res_Aria": 1,
+            "Furtivita": -4
+        },
+        "categoria": "Elmo",
+        "icona": "Image:inv_helmet_69",
+        "descrizione": "Forgiato presumibilmente in Mithril, su questo elmo argenteo sono incise due rune del fulmine, che emanano periodicamente delle scariche elettriche. Tali rune conferiscono al proprietario la capacità di scagliare attacchi elettrici di intensità diversa, ognuno una volta al giorno.<br>Le scariche elettriche generate periodicamente non sono in grado di infliggere alcun danno, ma rendono il proprietario un bersaglio chiaramente individuabile anche a distanza.",
+        "RuneInstallate": [
+            "AttaccoFulmine-1-11",
+            "AttaccoFulmine-2-11"
+        ]
+    },
+    "MITRA_PRIMA_LUCE+1": {
+        "nome": "Mitra della Prima Luce",
+        "attributi": {
+            "Res_Maledizione": 1,
+            "Mod_Cura_Out": 0.01,
+            "Furtivita": -1
+        },
+        "categoria": "Elmo",
+        "icona": "Image:inv_helm_cloth_undergroundquest_b_01",
+        "descrizione": "Questo sacro copricapo finemente ricamato emana un tenue e costante bagliore dorato, ostacolando i movimenti furtivi ma infondendo al portatore una profonda energia curativa. Benedetto dai sacerdoti dell’Alba, offre una solida protezione mistica contro le maledizioni.",
+        "RuneInstallate": [
+            "CuraFeriteGravi-10"
+        ]
+    }
+}

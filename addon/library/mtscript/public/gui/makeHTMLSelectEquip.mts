@@ -12,7 +12,7 @@
 			<select name='idDB' size='15'>")]
 
 			
-[h, macro("getListaOggettiByCat@Lib:EquipEffect"): sCat]
+[h, macro("items/getListaOggettiByCat@this"): sCat]
 [h: oItems = macro.return]
 [h, foreach(oItem,oItems), code:{
 	[sNome = json.get(oItem,"nome")]
