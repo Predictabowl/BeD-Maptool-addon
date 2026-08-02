@@ -5,7 +5,7 @@
             "Mod_Cura_Out": 0.01
         },
         "categoria": "Stivali",
-        "icona": "Image:ScarpeAloneBlu",
+        "icona": "boots/inv_boots_cloth_cataclysm_b_01.png",
         "descrizione": "",
         "idDB": "SCARPE DEL GUARITORE +1-1"
     },
@@ -24,7 +24,7 @@
             "VA": 3
         },
         "categoria": "Stivali",
-        "icona": "Image:StivaliRossi",
+        "icona": "boots/inv_boots_02.png",
         "idDB": "STIVALI RAPIDI +3-1"
     },
     "STIVALI_+1MM-1VOL": {
@@ -34,7 +34,7 @@
             "TS_Vol": -1
         },
         "categoria": "Stivali",
-        "icona": "Image:inv_boots_leather_raiddruid_l_01",
+        "icona": "boots/inv_boots_leather_raiddruid_l_01.png",
         "descrizione": "Chi non ha testa abbia gambe...",
         "idDB": "STIVALI_SCHIVARE-1"
     },
@@ -44,7 +44,7 @@
             "Schivare": 1
         },
         "categoria": "Stivali",
-        "icona": "Image:inv_boots_leather_b_01",
+        "icona": "boots/inv_boots_leather_kultirasquest_b_01.png",
         "descrizione": "",
         "idDB": "STIVALI_SCHIVARE-1"
     }

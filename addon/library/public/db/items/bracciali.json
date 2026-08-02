@@ -5,7 +5,7 @@
             "PV_Max": 5
         },
         "categoria": "Bracciali",
-        "icona": "Image:Bracciali"
+        "icona": "bracers/bracciali.png"
     },
     "BRACCIALI VITA+8": {
         "nome": "Bracciali Vita +8",
@@ -13,7 +13,7 @@
             "PV_Max": 8
         },
         "categoria": "Bracciali",
-        "icona": "Image:inv_bracer_80"
+        "icona": "bracers/inv_bracer_80.png"
     },
     "BRACCIALI_ACCURATEZZA1-1": {
         "nome": "Bracciali Accuratezza  +1",
@@ -21,7 +21,7 @@
             "Accuratezza": 1
         },
         "categoria": "Bracciali",
-        "icona": "Image:BraccialiAccuratezza01"
+        "icona": "bracers/inv_bracer_31b.png"
     },
     "BRACCIALI_PARARE1-1": {
         "nome": "Bracciali Parare  +1",
@@ -29,7 +29,7 @@
             "Parare": 1
         },
         "categoria": "Bracciali",
-        "icona": "Image:BraccialiParare01"
+        "icona": "bracers/inv_bracer_07.png"
     },
     "BRACCIALI_PRECISIONE1-1": {
         "nome": "Bracciali Precisi +1",
@@ -37,6 +37,6 @@
             "Mancare": -1
         },
         "categoria": "Bracciali",
-        "icona": "Image:inv_bracer_09"
+        "icona": "bracers/inv_bracer_09.png"
     }
 }

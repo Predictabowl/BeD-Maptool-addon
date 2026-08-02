@@ -5,7 +5,7 @@
             "PCrit": 1
         },
         "categoria": "Guanti",
-        "icona": "Image:Guanti05",
+        "icona": "gloves/inv_gauntlets_05.png",
         "idDB": "GUANTI P.CRITICO +1-1"
     },
     "GUANTI SPERICOLATI-1": {
@@ -16,7 +16,7 @@
             "Schivare": -2
         },
         "categoria": "Guanti",
-        "icona": "Image:GuantiTeschio",
+        "icona": "gloves/inv_gauntlets_32.png",
         "descrizione": "",
         "idDB": "GUANTI SPERICOLATI-1"
     },
@@ -25,8 +25,8 @@
         "attributi": {
             "Mod_Danno_Out": 0.01
         },
-        "categoria": "guanti",
-        "icona": "Image:inv_gauntlets_22"
+        "categoria": "Guanti",
+        "icona": "gloves/inv_gauntlets_22.png"
     },
     "GUANTI_PCRIT2-1": {
         "nome": "Guanti P.Critico +2",
@@ -34,7 +34,7 @@
             "PCrit": 2
         },
         "categoria": "Guanti",
-        "icona": "Image:inv_gauntlets_04",
+        "icona": "gloves/inv_gauntlets_04.png",
         "descrizione": ""
     },
     "GUANTI_VA+3": {
@@ -43,7 +43,7 @@
             "VA": 3
         },
         "categoria": "Guanti",
-        "icona": "Image:inv_gauntlets_19",
+        "icona": "gloves/inv_gauntlets_19.png",
         "descrizione": ""
     }
 }

@@ -10,7 +10,7 @@
         "ingombro": 3,
         "addArmatura": 0,
         "categoria": "scudo",
-        "icona": "Image:inv_shield_09"
+        "icona": "shields/inv_shield_09.png"
     },
     "BROCCHIERE-1": {
         "nome": "Brocchiere +1",
@@ -23,7 +23,7 @@
         "ingombro": 3,
         "addArmatura": 0,
         "categoria": "scudo",
-        "icona": "Image:inv_shield_09"
+        "icona": "shields/inv_shield_09.png"
     },
     "BROCCHIERE-3": {
         "nome": "Fortificazione Portatile",
@@ -36,7 +36,7 @@
         "ingombro": 3,
         "addArmatura": 0,
         "categoria": "scudo",
-        "icona": "Image:inv_shield_19",
+        "icona": "shields/inv_shield_19.png",
         "descrizione": "Un piccolo scudo in grado di deflettere gli attacchi ancor prima che raggiungano il bersaglio. Permette di lanciare Barricata 1 volta al giorno.",
         "RuneInstallate": [
             "Barricata-1"
@@ -52,7 +52,7 @@
         "ingombro": 6,
         "addArmatura": 6,
         "categoria": "scudo",
-        "icona": "Image:ScudoBuono"
+        "icona": "shields/scudo.png"
     },
     "SCUDO A MANDORLA-1": {
         "nome": "Scudo a Mandorla",
@@ -64,7 +64,8 @@
         },
         "ingombro": 6,
         "addArmatura": 6,
-        "categoria": "scudo"
+        "categoria": "scudo",
+        "icona": "shields/scudo.png"
     },
     "PAVESE+0": {
         "nome": "Scudo Pavese",
@@ -85,7 +86,7 @@
                 "idCopertura": "scudo"
             }
         },
-        "icona": "Image:ScudoPavese"
+        "icona": "shields/inv_shield_03.png"
     },
     "TORRE+0": {
         "nome": "Scudo Torre",
@@ -106,6 +107,6 @@
                 "idCopertura": "scudo"
             }
         },
-        "icona": "Image:ScudoPavese"
+        "icona": "shields/inv_shield_03.png"
     }
 }

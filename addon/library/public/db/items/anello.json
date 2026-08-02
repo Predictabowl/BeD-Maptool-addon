@@ -6,7 +6,7 @@
             "Crit": 1
         },
         "categoria": "anello",
-        "icona": ""
+        "icona": "rings/anelloBase.png"
     },
     "ANELLO CRITICO +2-1": {
         "nome": "Anello Critico +2",
@@ -14,7 +14,7 @@
             "Crit": 2
         },
         "categoria": "Anello",
-        "icona": "Image:AnelloLeone",
+        "icona": "rings/inv_jewelry_ring_19.png",
         "descrizione": ""
     },
     "ANELLO DEL FATTUCCHIERE-1": {
@@ -24,7 +24,7 @@
             "LL_Base": -1
         },
         "categoria": "Anello",
-        "icona": "Image:AnelloAuraViola",
+        "icona": "rings/inv_ring_80_05e.png",
         "descrizione": ""
     },
     "ANELLO POTENZA CRITICO +1-1": {
@@ -33,7 +33,7 @@
             "PCrit": 1
         },
         "categoria": "Anello",
-        "icona": "Image:AnelloFricciolo"
+        "icona": "rings/inv_jewelry_ring_14.png"
     },
     "ANELLO VITA MINORE-1": {
         "nome": "Anello Vita minore",
@@ -41,7 +41,7 @@
             "PV_Max": 4
         },
         "categoria": "anello",
-        "icona": "Image:Anello"
+        "icona": "rings/Image:Anello"
     },
     "ANELLO_+1CD-CRIT11": {
         "nome": "Sigillo della Stabilità Minore",
@@ -50,7 +50,7 @@
             "Critico": -11
         },
         "categoria": "Anello",
-        "icona": "Image:inv_11_0_earthen_jewelcraftingring_color3",
+        "icona": "rings/inv_11_0_earthen_jewelcraftingring_color3.png",
         "descrizione": ""
     },
     "ANELLO_MCR-1": {
@@ -59,7 +59,7 @@
             "Mod_Cura_In": 0.01
         },
         "categoria": "Anello",
-        "icona": "Image:inv_jewelry_ring_10",
+        "icona": "rings/inv_jewelry_ring_10.png",
         "descrizione": ""
     },
     "ANELLO_MDR-1": {
@@ -68,7 +68,7 @@
             "Mod_Danno_In": -0.01
         },
         "categoria": "Anello",
-        "icona": "Image:80_lvlupring_purple",
+        "icona": "rings/inv_jewelcrafting_80_lvlupring_purple.png",
         "descrizione": ""
     },
     "ANELLO_PA-1": {
@@ -78,7 +78,7 @@
             "Mod_Danno_In": 0.07
         },
         "categoria": "Anello",
-        "icona": "Image:inv_jewelry_ring_36",
+        "icona": "rings/inv_jewelry_ring_36.png",
         "descrizione": "Questo anello rimuove i limiti subconsci dettati dalla prudenza, permettendo quindi di agire più efficacemente al prezzo di una maggiore esposizione al pericolo."
     },
     "ANELLO_RES_SANGUINAMENTO-1": {
@@ -87,7 +87,7 @@
             "Res_Sanguinamento": 1
         },
         "categoria": "Anello",
-        "icona": "Image:inv_jewelcrafting_red",
+        "icona": "rings/inv_jewelcrafting_90_maxlvlring_red.png",
         "descrizione": ""
     },
     "ANELLO_VA-3": {
@@ -96,7 +96,7 @@
             "VA": 3
         },
         "categoria": "Anello",
-        "icona": "Image:ring_oribos_01",
+        "icona": "rings/inv_ring_oribos_01_copper.png",
         "descrizione": ""
     },
     "ANELLO_LUCE+1": {
@@ -105,7 +105,7 @@
             "Mod_Cura_In": 0.01
         },
         "categoria": "Anello",
-        "icona": "Image:inv_jewelry_ring_33",
+        "icona": "rings/inv_jewelry_ring_33.png",
         "descrizione": "Questo anello emette una lieve luce sacra.",
         "RuneInstallate": [
             "ToccoCuraFeriteLeggere-9"

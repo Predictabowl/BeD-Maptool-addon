@@ -2,7 +2,7 @@
 
 [h, if(json.type(oOggetto) != "OBJECT"): return (0,"")]
 [h: sIcon = json.get(oOggetto,"icona")]
-[h, if(findToken(sIcon,"Librerie") != ""): return(0,getImage(sIcon))]
+[h, if(sIcon != ""): return(0,strformat("lib://%s/icons/items/%{sIcon}", getMacroLocation()))]
 
 [macro("gui/getItemCategory@this"): json.append("",oOggetto)]
 [h: sCategoria = lower(macro.return)]
@@ -10,31 +10,31 @@
 
 [h, switch(sCategoria), code:
 	case "amuleto":{
-		[sIcon = getImage("Image:Amuleto")]
+		[sIcon = "amulets/amuleto.png"]
 	};
 	case "anello":{
-		[sIcon = getImage("Image:Anello")]
+		[sIcon = "rings/anelloBase.png"]
 	};
 	case "artefatto":{
 		[sIcon = getImage("Image:Artefatto")]
 	};
 	case "ascia":{
-		[sIcon = getImage("Image:Ascia")]
+		[sIcon = "axes/ascia.png"]
 	};
 	case "armatura":{
-		[sIcon = getImage("Image:ArmaturaPiastre")]
+		[sIcon = "armors/Piastre.png"]
 	};
 	case "bracciali":{
-		[sIcon = getImage("Image:Bracciali")]
+		[sIcon = "bracers/bracciali.png"]
 	};
 	case "cintura":{
-		[sIcon = getImage("Image:Cintura")]
+		[sIcon = "belts/cintura.png"]
 	};
 	case "elmo":{
-		[sIcon = getImage("Image:Elmo")]
+		[sIcon = "helmets/elmo.png"]
 	};
 	case "guanti":{
-		[sIcon = getImage("Image:Guanti")]
+		[sIcon = "gloves/guanti.png"]
 	};
 	case "lancio":{
 		[sIcon = getImage("Image:ColtelloLancio")]
@@ -46,13 +46,13 @@
 		[sIcon = getImage("Image:Mazza")]
 	};
 	case "scudo":{
-		[sIcon = getImage("Image:Scudo")]
+		[sIcon = "shields/inv_shield_09.png"]
 	};
 	case "spada":{
 		[sIcon = getImage("Image:Spada")]
 	};
 	case "stivali":{
-		[sIcon = getImage("Image:Stivali")]
+		[sIcon = "boots/stivali.png"]
 	};
 	case "tiro":{
 		[sIcon = getImage("Image:Arco")]
@@ -62,4 +62,4 @@
 	}
 ]
 
-[h: macro.return = sIcon]
+[h: macro.return = strformat("lib://%s/icons/items/%{sIcon}", getMacroLocation())]

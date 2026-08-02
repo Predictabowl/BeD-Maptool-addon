@@ -14,7 +14,7 @@
             "Mod_Danno_In": 0.07
         },
         "categoria": "Cintura",
-        "icona": "Image:CinturaTeschio01",
+        "icona": "belts/inv_belt_50.png",
         "descrizione": ""
     },
     "CINTURA VITA +5-1": {
@@ -23,7 +23,7 @@
             "PV_Max": 5
         },
         "categoria": "Cintura",
-        "icona": "Image:CinturaGrigia"
+        "icona": "belts/inv_belt_03.png"
     },
     "CINTURA_CARICO-3": {
         "nome": "Cintura dalle Molte Tasche +3",
@@ -31,7 +31,7 @@
             "Mod_Carico": 3
         },
         "categoria": "Cintura",
-        "icona": "Image:inv_belt_31",
+        "icona": "belts/inv_belt_31.png",
         "descrizione": ""
     },
     "CINTURA_NANO-1": {
@@ -41,7 +41,7 @@
             "TS_Tem": 1
         },
         "categoria": "Cintura",
-        "icona": "Image:inv_belt_28",
+        "icona": "belts/inv_belt_28.webp",
         "descrizione": "La cintura del vero bevitore!",
         "RuneInstallate": [
             "SbronzaEpica-10"
@@ -53,7 +53,7 @@
             "PF_Max": 2
         },
         "categoria": "Cintura",
-        "icona": "Image:inv_belt_11",
+        "icona": "belts/inv_belt_11.png",
         "descrizione": ""
     }
 }
