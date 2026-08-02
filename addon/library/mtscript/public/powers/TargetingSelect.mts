@@ -1,4 +1,4 @@
-[h: source =macro.args]
+[h: source = arg(0)]
 [macro("powers/getSpellInCast@this"):source]
 [h, if(macro.return != ""), code:{
 	[macro("powers/getSpellTarget@this"): json.set("","source",source,"spellName",macro.return)]

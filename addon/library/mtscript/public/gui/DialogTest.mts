@@ -10,7 +10,7 @@
 
 <table id="generic">
 [h: classType="evenRow"]
-<tr> <td><input type="image" name="Aggiorna" value="Aggiorna" src='[r: getImage("Image:refresh-small")]'/> </td>
+<tr> <td><input type="image" name="Aggiorna" value="Aggiorna" src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/refresh.png'/> </td>
 <th> Nome </th> <th> Usi </th><th> PA </th><th> Te </th></th>Liv</th> </tr>
 [r, for(i,0, 10), CODE:{
 	[h: classType = if(classType=="oddRow","evenRow","oddRow")]

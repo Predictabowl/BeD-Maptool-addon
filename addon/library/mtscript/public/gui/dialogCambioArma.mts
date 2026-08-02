@@ -42,9 +42,9 @@
 [h: iconArma = macro.return]
 [h, if(isStileDistanza(oToken)), code:{
 	[sSlotArma1Cat = "armaDistanza"]
-	[bgArma1 = "Image:ArcoBG"]
+	[bgArma1 = "ArcoBG.png"]
 };{
-	[bgArma1 = "Image:ArmaBG"]
+	[bgArma1 = "ArmaBG.png"]
 	[sSlotArma1Cat = "arma"]
 }]
 
@@ -54,7 +54,7 @@
 [macro("combat/isStile2A@this"): oToken]
 [h: b2Armi = macro.return]
 [h, if(b2Armi), code:{
-	[h: bgArma2 = "Image:ArmaBG"]
+	[h: bgArma2 = "ArmaBG.png"]
 	[h: oArma2 = getArma(oToken,2)]
 	[macro("gui/makeHtmlOggetto@this"): json.append(oArma2,oToken)]
 	[h: iconArma2 = macro.return]
@@ -68,7 +68,7 @@
 [macro("combat/isStileAS@this"): oToken]
 [h: bScudo = macro.return]
 [h, if(bScudo), code:{
-	[h: bgArma2 = "Image:ScudoBG"]
+	[h: bgArma2 = "ScudoBG.png"]
 	[macro("mobs/getScudo@this"): oToken]
 	[h: oArma2 = macro.return]
 	[macro("gui/makeHtmlOggetto@this"): json.append(oArma2,oToken)]
@@ -78,7 +78,7 @@
 
 [macro("combat/isStile1A@this"): oToken]
 [h, if(macro.return), code:{
-	[h: bgArma2 = "Image:LancioBG"]
+	[h: bgArma2 = "LancioBG.png"]
 	[h: oArma2 = getArma(oToken,2)]
 	[macro("gui/makeHtmlOggetto@this"): json.append(oArma2,oToken)]
 	[h: iconArma2 = macro.return]
@@ -123,18 +123,18 @@
 	<!-- PAPERDOLL -->
 		<div style="background-image: url('[r: getTokenHandout()]'); background-size: auto 400px; width:300px; height:400px; background-repeat:no-repeat; background-position:center; grid-row: 1/ span 2;">
 			<div class="paperdoll-container">
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotElmo",iconElmo,"Image:ElmoBG","elmo")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAmuleto",iconAmuleto,"Image:AmuletoBG","amuleto")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotArmatura",iconArmatura,"Image:ArmaturaBG","armatura")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotMantello",iconMantello,"Image:MantelloBG","mantello")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotGuanti",iconGuanti,"Image:GuantiBG","guanti")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotBracciali",iconBracciali,"Image:BraccialiBG","bracciali")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotElmo",iconElmo,"ElmoBG.png","elmo")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAmuleto",iconAmuleto,"AmuletoBG.png","amuleto")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotArmatura",iconArmatura,"ArmaturaBG.png","armatura")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotMantello",iconMantello,"MantelloBG.png","mantello")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotGuanti",iconGuanti,"GuantiBG.png","guanti")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotBracciali",iconBracciali,"BraccialiBG.png","bracciali")]
 				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotArma1",iconArma,bgArma1,sSlotArma1Cat)]
 				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotArma2",iconArma2,bgArma2,sSlotArma2Cat)]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotCintura",iconCintura,"Image:CinturaBG","cintura")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAnello1",iconAnello1,"Image:AnelloBG","anello")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotStivali",iconStivali,"Image:StivaliBG","stivali")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAnello2",iconAnello2,"Image:AnelloBG","anello")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotCintura",iconCintura,"CinturaBG.png","cintura")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAnello1",iconAnello1,"AnelloBG.png","anello")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotStivali",iconStivali,"StivaliBG.png","stivali")]
+				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAnello2",iconAnello2,"AnelloBG.png","anello")]
 			</div>
 			
 		</div>

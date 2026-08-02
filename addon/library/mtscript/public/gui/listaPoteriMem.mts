@@ -17,14 +17,14 @@
 	
 [h, if(!bDefault), code:{
 	[h: sAltreAzioniLink = strformat("<a href='%s'><img src='%s' class='pulsanteTondo' title='Altre Azioni'/></a>",
-		macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)),getImage("Image:IconaAzioni"))]
+		macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)),"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/other_actions.png")]
 	[h, if(isArmaLancioEquipped(oToken)):
-		sLancioLink = strformat("<input type='image' class='pulsanteTondo' name='AttaccaLancio' value='AttaccaLancio' src='%s' ' class='image' title='Attacco con arma da lancio' id='button-attaccoLancio'/>",getImage("Image:PulsanteLancio"));
+		sLancioLink = strformat("<input type='image' class='pulsanteTondo' name='AttaccaLancio' value='AttaccaLancio' src='%s' ' class='image' title='Attacco con arma da lancio' id='button-attaccoLancio'/>","lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Throw_Icon.png");
 		sLancioLink = ""]
 	
 	[h, macro("combat/isStileDistanza@this"): oToken]
-	[h, if(macro.return): sIconaAttacco = getImage("Image:PulsanteAttaccoDistanza");
-		sIconaAttacco =  getImage("Image:PulsanteAttacco")]
+	[h, if(macro.return): sIconaAttacco = "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Ranged_Icon.png";
+		sIconaAttacco =  "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Melee_Icon.png" ]
 }]
 
 [h, macro("powers/getDurataRecupero@this"): oToken]
@@ -51,13 +51,13 @@
 [r, if(!bDefault), code:{
 	<form name="risolviAzione" method="json" action="[r:macroLinkText("gui/pulsantiPoteri@this")]">
 	<div style="margin-left:30px; display:grid; grid-template-columns: repeat(10,auto); justify-content: space-evenly;">
-		<input type='image' class='pulsanteTondo' id='button-risolvi' name='Azione' value='Azione' src='[r: getImage("Image:PulsanteRosso")]' class='image' title='Risolvi azione'/>
+		<input type='image' class='pulsanteTondo' id='button-risolvi' name='Azione' value='Azione' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/resolve_action.png' class='image' title='Risolvi azione'/>
 		<input type='image' class='pulsanteTondo' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' class='image' title='Attacco base' id='button-attacco'/>
 		[r: sLancioLink]
-		<input type="image" class='pulsanteTondo' name='DialogAbilita' value='DialogAbilita' src='[r: getImage("Image:PulsanteAbilitaClasse")]' class='image' title='Abilità di Classe'/>
+		<input type="image" class='pulsanteTondo' name='DialogAbilita' value='DialogAbilita' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' class='image' title='Abilità di Classe'/>
 		[r: sAltreAzioniLink]
-		<input type="image" class='pulsanteTondo' name='SelBersagli' value='SelBersagli' src='[r: getImage("Image:TargetingIcon")]' class='image' title='Auto selezione bersagli'/>
-		<input type='image' class='pulsanteTondo' name='Aspettare' value='Aspettare' src='[r: getImage("Image:PulsanteAspettare")]' class='image' title='Aspetta' id='button-aspetta'/>
+		<input type="image" class='pulsanteTondo' name='SelBersagli' value='SelBersagli' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/target_select.png' class='image' title='Auto selezione bersagli'/>
+		<input type='image' class='pulsanteTondo' name='Aspettare' value='Aspettare' src='[r: "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pass_turn.png"]' class='image' title='Aspetta' id='button-aspetta'/>
 		<input type='image' class='pulsanteTondo' name='Interrompi' value='Interrompi' src='[r: getImage("Image:PulsanteStop")]' class='image' title='Interrompi azione' id='button-interrompi'/>
 		<input type="hidden" name="target" value="[r: oToken]"/>
 		<input type="hidden" name="frameName" value="[r: sFrame]"/>

@@ -33,9 +33,9 @@
 
 [h: lDmgTypes = json.get(oOggetto, "tipoDanno")]
 [h: aDmgTypes = "[]"]
-[h, if(listContains(lDmgTypes,"T")): aDmgTypes = json.append(aDmgTypes, getImage("Image:Slash_icon"))]
-[h, if(listContains(lDmgTypes,"B")): aDmgTypes = json.append(aDmgTypes, getImage("Image:Crush_icon"))]
-[h, if(listContains(lDmgTypes,"P")): aDmgTypes = json.append(aDmgTypes, getImage("Image:Pierce_icon"))]ù
+[h, if(listContains(lDmgTypes,"T")): aDmgTypes = json.append(aDmgTypes, "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/slash_icon.png")]
+[h, if(listContains(lDmgTypes,"B")): aDmgTypes = json.append(aDmgTypes, "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/crush_icon.png")]
+[h, if(listContains(lDmgTypes,"P")): aDmgTypes = json.append(aDmgTypes, "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pierce_icon.png")]ù
 
 [h: jAttributi = json.get(oOggetto, "attributi")]
 [h: jNewAttr = ""]

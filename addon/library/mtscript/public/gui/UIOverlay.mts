@@ -8,12 +8,12 @@
 [h: sSlotVelociLink = strformat("<a href='%s'><img src='%s' class='pulsanteUI' title='Slot Rapidi'/> </a>",
 	macrolinkText("gui/dialogOggettiUsabili@this","none",json.append("",oToken)),getImage("Image:PulsanteInventario"))]
 [h: sAltreAzioniLink = strformat("<a href='%s'><img src='%s' class='pulsanteUI' title='Altre Azioni'/></a>",
-	macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)),getImage("Image:IconaAzioni"))]
+	macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)),"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/other_actions.png")]
 [h, if(isArmaLancioEquipped(oToken)), code:{
 	[sClass = "pulsanteUI"]
 	[if(getOverride(oToken, "potereArmaLancio")): sClass = sClass + " pActiveBorder"]
 	[sLancioLink = strformat(
-		"<a onmouseup='pulsanteLancio(event)' title='Lancio Arma / Usa per Poteri'><img class='%{sClass}' id='throw-button-id' src='%s' /></a>",getImage("Image:PulsanteLancio"))]
+		"<a onmouseup='pulsanteLancio(event)' title='Lancio Arma / Usa per Poteri'><img class='%{sClass}' id='throw-button-id' src='%s' /></a>","lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Throw_Icon.png")]
 };{
 	[sLancioLink = ""]
 }]
@@ -21,7 +21,7 @@
 [macro("class-skills/getMotiviConosciuti@this"): oToken]
 [h, if(!json.isEmpty(macro.return)), code: {
 	[h: sScegliMotivoLink = strformat("<a href='%s'><img src='%s' class='pulsanteUI' title='Seleziona Motivo'/></a>",
-		macrolinkText("class-skills/setMotivoAttivo@this","none",json.append("",oToken)),getImage("Image:PulsantePentagramma"))]
+		macrolinkText("class-skills/setMotivoAttivo@this","none",json.append("",oToken)),"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Sonata_Icon.png")]
 };{
 	[h: sScegliMotivoLink = ""]
 }]
@@ -31,7 +31,7 @@
 	[macro("class-skills/isNecrofuriaActive@this"): oToken]
 	[if(macro.return): sNecroFClass = " pActiveBorder"; sNecroFClass = ""]
 	[sNecrofuriaLink = strformat("<a onclick='toggleNecrofuria()'><img src='%s' class='pulsanteUI%{sNecroFClass}' id='necrofuria-button' title='Attiva Necrofuria'/></a>",
-		getImage("Image:Necrofuria"))]
+		"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/necrofury.png")]
 };{
 	[sNecrofuriaLink = ""]
 }]
@@ -41,14 +41,14 @@
 	[macro("class-skills/isSovSpiriticoActive@this"): oToken]
 	[if(macro.return): sSovSpiClass = " pActiveBorder"; sSovSpiClass = ""]
 	[sSovSpiLink = strformat("<a onclick='toggleSovSpiritico()'><img src='%s' class='pulsanteUI%{sSovSpiClass}' id='sov-spiritico-button' title='Attiva Sovraccarico Spiritico'/></a>",
-		getImage("Image:SovraccaricoSpiritico"))]
+		"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/spiritic_overload.png")]
 };{
 	[sSovSpiLink = ""]
 }]
 
 [h, macro("combat/isStileDistanza@this"): oToken]
-[h, if(macro.return): sIconaAttacco = getImage("Image:PulsanteAttaccoDistanza");
-	sIconaAttacco =  getImage("Image:PulsanteAttacco")]
+[h, if(macro.return): sIconaAttacco = "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Ranged_Icon.png";
+	sIconaAttacco =  "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Melee_Icon.png"]
 
 [h: sSwapToken = getServitore(oToken)]
 [h, if(sSwapToken == ""), code:{
@@ -68,7 +68,7 @@
 
 [h: bCiclaVista = getPreferenza("BottoneCiclaVista",oToken,"Overlay")]
 [h, if(bCiclaVista == 1): 
-	sCiclaVista = strformat("<input type='image' class='pulsanteUI' name='CiclaVista' value='CiclaVista' src='%s' title='Cicla vista personaggio'/>",getImage("Image:VistaChange")); 
+	sCiclaVista = strformat("<input type='image' class='pulsanteUI' name='CiclaVista' value='CiclaVista' src='%s' title='Cicla vista personaggio'/>","lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/sight_cycle.png"); 
 	sCiclaVista = ""]
 
 
@@ -98,22 +98,22 @@
 					</a>
 				</div>
 				<a onmouseup="pulsanteRosso(event)" title='Risolvi / Interrompi azione'>
-					<img class='pulsanteUI'  src='[r: getImage("Image:PulsanteRosso")]' />
+					<img class='pulsanteUI'  src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/resolve_action.png' />
 				</a>
 				<input type='image' class='pulsanteUI' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' title='Attacco base' id='button-attacco'/>
 				[r: sLancioLink]
 				<a title='Abilità / Poteri Classe' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]">
-					<img class='pulsanteUI' src='[r: getImage("Image:PulsanteAbilitaClasse")]' />
+					<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' />
 				</a>
 				[r: sScegliMotivoLink]
 				[r: sNecrofuriaLink]
 				[r: sSovSpiLink]
 				[r: sAltreAzioniLink]
 				<a title='Selezione / Centra / Spawn' onmouseup="pulsanteBersaglio(event)">
-					<img class='pulsanteUI' src='[r: getImage("Image:TargetingIcon")]' />
+					<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/target_select.png' />
 				</a>
 				[r: sCiclaVista]
-				<input type='image' class='pulsanteUI' name='Aspettare' value='Aspettare' src='[r: getImage("Image:PulsanteAspettare")]' title='Attesa'/>
+				<input type='image' class='pulsanteUI' name='Aspettare' value='Aspettare' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pass_turn.png' title='Attesa'/>
 				<input type="hidden" name="target" value="[r: oToken]"/>
 				<input type="hidden" name="frameName" value=""/>
 				<input type="hidden" id="var-input" name="buttonPressed" value="" />

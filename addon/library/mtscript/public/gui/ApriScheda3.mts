@@ -152,7 +152,7 @@
 
 
 <table class="center">
-<tr id='generic'> <td><input type="image" name="Aggiorna" value="Aggiorna" src='[r: getImage("Image:refresh-small")]' class='image'/> </td><th> Arma 1</th> [r:tableHead]</tr>
+<tr id='generic'> <td><input type="image" name="Aggiorna" value="Aggiorna" src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/refresh.png' class='image'/> </td><th> Arma 1</th> [r:tableHead]</tr>
 [r: strTabella]
 </table>
 
