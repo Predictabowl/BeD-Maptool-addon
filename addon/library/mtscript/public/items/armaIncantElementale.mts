@@ -30,7 +30,7 @@
 	
 	[oParam = json.set("","elemento",sElemento,"nomeInc",sNome,"LL",iLL,"dannoBase",sDmgBase,"dannoLP",sDmgLP)]
 	[if(bFlag), code:{
-		[macro("gui/addWeaponMacroParams@this"):json.append(oToken,sArma,sIdMacro,oParam)]
+		[macro("items/addWeaponMacroParams@this"):json.append(oToken,sArma,sIdMacro,oParam)]
 	}]
 	[oParam = json.set(oParam,"arma",iArma)]
 

@@ -1,2 +1,2 @@
-[macro("gui/creaArmatura@this"):0]
-[macro("gui/salvaArmaturaInDB@this"): macro.return]
+[macro("items/creaArmatura@this"):0]
+[macro("items/salvaArmaturaInDB@this"): macro.return]

@@ -1,3 +1,3 @@
-[macro("gui/creaArma@this"):0]
+[macro("items/creaArma@this"):0]
 [h: oArma = macro.return]
-[macro("gui/salvaArmaInDB@this"):oArma]
+[macro("items/salvaArmaInDB@this"):oArma]

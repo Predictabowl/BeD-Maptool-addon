@@ -12,8 +12,7 @@
 [h, if(isArmaLancioEquipped(oToken)), code:{
 	[sClass = "pulsanteUI"]
 	[if(getOverride(oToken, "potereArmaLancio")): sClass = sClass + " pActiveBorder"]
-	[sLancioLink = strformat(
-		"<a onmouseup='pulsanteLancio(event)' title='Lancio Arma / Usa per Poteri'><img class='%{sClass}' id='throw-button-id' src='%s' /></a>","lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Throw_Icon.png")]
+	[sLancioLink = strformat("<a onmouseup='pulsanteLancio(event)' title='Lancio Arma / Usa per Poteri'><img class='%{sClass}' id='throw-button-id' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Throw_Icon.png' /></a>")]
 };{
 	[sLancioLink = ""]
 }]

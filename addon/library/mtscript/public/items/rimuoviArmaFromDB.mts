@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: sArma = macro.args]
 [h, if(sArma == ""): sArma = Nome_Arma]
 

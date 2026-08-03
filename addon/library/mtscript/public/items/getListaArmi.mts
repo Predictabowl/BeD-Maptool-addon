@@ -1,4 +1,5 @@
+<!-- TODO - check if it's used -->
 [h: oArmi = getLibProperty("Armi_Json",getMacroLocation())]
 
-[macro("gui/sortJson@this"): json.append(oArmi,"nome")]
+[macro("items/sortJson@this"): json.append(oArmi,"nome")]
 

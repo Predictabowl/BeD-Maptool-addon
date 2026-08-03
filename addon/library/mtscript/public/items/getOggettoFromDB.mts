@@ -7,15 +7,15 @@
 		[oOggetto = getArmaFromDB(sId)]
 	};
 	case "armatura":{
-		[macro("gui/getArmaturaFromDB@this"): sId]
+		[macro("items/getArmaturaFromDB@this"): sId]
 		[oOggetto = macro.return]
 	};
 	case "scudo":{
-		[macro("gui/getScudoFromDB@this"): sId]
+		[macro("items/getScudoFromDB@this"): sId]
 		[oOggetto = macro.return]
 	};
 	default:{
-		[macro("gui/getAccessorioFromDB@this"): json.append(sId,sCategoria)]
+		[macro("items/getAccessorioFromDB@this"): json.append(sId,sCategoria)]
 		[oOggetto = macro.return]
 	}
 ]

@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oArma = macro.args]
 
 [h: sProperty = "Scudi_Json"]
@@ -6,7 +7,7 @@
 
 [h, if(json.type(oArmi) != "OBJECT"): oArmi = "{}"]
 
-[macro("gui/generateId@this"): json.append(oArmi,json.get(oArma,"nome"))]
+[macro("items/generateId@this"): json.append(oArmi,json.get(oArma,"nome"))]
 [h: sId = macro.return]
 
 [h: sNomeA = json.get(oArma,"nome")]

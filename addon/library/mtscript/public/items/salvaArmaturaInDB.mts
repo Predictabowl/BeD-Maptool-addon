@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oOggetto = arg(0)]
 [h, if(argCount() > 1): sId = arg(1); sId = ""]
 
@@ -8,7 +9,7 @@
 [h, if(json.type(oOggetti) != "OBJECT"): oOggetti = "{}"]
 
 [h, if(sId == ""), code:{
-	[macro("gui/generateId@this"): json.append(oOggetti,json.get(oOggetto,"nome"))]
+	[macro("items/generateId@this"): json.append(oOggetti,json.get(oOggetto,"nome"))]
 	[sId = macro.return]
 }]
 	

@@ -11,7 +11,7 @@
 [h: sInputIng = "sIng|0|Ingombro"]
 [h: sInputCAa = "sCAa|Muscoli,Precisione,Combinata,CaP|Caratteristica Arma|LIST|value=string"]
 [h: sInputEquipMacro = "sEquipMacro|0|On Equip Macro"]
-[macro("gui/getListaTipoArmi@this"):0]
+[macro("items/getListaTipoArmi@this"):0]
 [h: sInputTipoA = strformat("sTipoA|%{macro.return}|Tipo|LIST|value=string")]
 [h: sInputPot = "sPot|0|Incantamento di Potenziamento"]
 [h: sInputImg = "sImg||Immagine"]

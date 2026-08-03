@@ -6,7 +6,7 @@
 [h, if(!isNumber(iIngombro)): iIngombro = 0]
 
 [h, if(oToken != ""), code:{
-	[macro("gui/getIngombroRaceMod@this"): oToken]
+	[macro("items/getIngombroRaceMod@this"): oToken]
 	[h: iIngombro = round(iIngombro * macro.return)]
 }]
 

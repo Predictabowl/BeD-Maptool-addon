@@ -1,3 +1,4 @@
+<!-- DEPRECATED - must be removed or updated to static data ->
 [h: sId = "ELMO DELLUMILTA-1"]
 [h: sTable = "elmo_Json"]
 [h: sDescr = "Questo elmo ha una descrizione a caso per vedere se funziona"]

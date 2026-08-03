@@ -1,4 +1,4 @@
-[macro("gui/getIdArma@this"): 0]
+[macro("items/getIdArma@this"): 0]
 [h: sId = macro.return]
 
 [h: oArma = getArma(sId)]
@@ -7,4 +7,4 @@
 
 
 <!-- End edits -->
-[macro("gui/salvaArmaInDB@this"): json.append(oArma,sId)]
+[macro("items/salvaArmaInDB@this"): json.append(oArma,sId)]

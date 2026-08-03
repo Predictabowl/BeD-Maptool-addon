@@ -2,9 +2,9 @@
 
 [h, if(json.type(oOggetto) != "OBJECT"): return (0,"")]
 [h: sIcon = json.get(oOggetto,"icona")]
-[h, if(sIcon != ""): return(0,strformat("lib://%s/icons/items/%{sIcon}", getMacroLocation()))]
+[h, if(sIcon != ""): return(0,strformat("lib://it.aldinucci.piero.bed.maptool.ruleset/icons/items/%{sIcon}"))]
 
-[macro("gui/getItemCategory@this"): json.append("",oOggetto)]
+[macro("items/getItemCategory@this"): json.append("",oOggetto)]
 [h: sCategoria = lower(macro.return)]
 [h, if(sCategoria=="arma"): sCategoria = lower(json.get(oOggetto,"tipoArma"))]
 
@@ -62,4 +62,4 @@
 	}
 ]
 
-[h: macro.return = strformat("lib://%s/icons/items/%{sIcon}", getMacroLocation())]
+[h: macro.return = strformat("lib://it.aldinucci.piero.bed.maptool.ruleset/icons/items/%{sIcon}")]

@@ -13,7 +13,7 @@
 		[iProp = iProp + iValue]
 		[setProperty(sAttributo,iProp,oToken)]
 	};{
-		[macro("gui/processComplexAttribute@this"): json.append(oToken, oOggetto, sAttributo, iValue) ]
+		[macro("items/processComplexAttribute@this"): json.append(oToken, oOggetto, sAttributo, iValue) ]
 	}]
 }]
 

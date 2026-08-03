@@ -7,7 +7,8 @@
 [h: sLink = macroLinkText("gui/dialogOggettoStats@lib:it.aldinucci.piero.bed.maptool.ruleset", "", oOggetto)]
 [h: sNome = json.get(oOggetto, "nome")]
 [h: sTokenName = getName(oToken)]
-[h: sImg = getImage(json.get(oOggetto, "icona"))]
+[macro("items/getItemIcon@this"): oOggetto]
+[h: sImg = macro.return]
 [h: sMsg = strformat("<table><tr>
 		<td>%{sTokenName} &rarr;</td>
 		<td><img src='%{sImg}' width='30'/></td>

@@ -1,3 +1,3 @@
-[macro("gui/creaScudo@this"):0]
+[macro("items/creaScudo@this"):0]
 [h: oArma = macro.return]
-[macro("gui/salvaScudoInDB@this"):oArma]
+[macro("items/salvaScudoInDB@this"):oArma]

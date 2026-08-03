@@ -6,7 +6,7 @@
 [h: oArma = macro.return]
 [h: oInstallers = json.get(oArma,"installers")]
 
-[h: allIncant = getLibProperty("incantamenti_Json", getMacroLocation())]
+[h: allIncant = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/items/enchantments.json")]
 [h, foreach(oInstaller, oInstallers), code:{
 	[oIncant = json.get(allIncant, oInstaller)]
 	[sMacro = json.get(oIncant,"installerMacro")]

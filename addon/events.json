@@ -8,7 +8,7 @@
     "legacyEvents": [
         {
             "name": "onTokenMove",
-            "mts": "movement/onTokenMove"
+            "mts": "TokenMoveEvent"
         }
     ]
 }

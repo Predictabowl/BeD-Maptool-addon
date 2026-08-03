@@ -8,4 +8,4 @@
 [h: sDescrizione = ""]
 
 [h: oJOggetto = json.set("","nome",sNome,"attributi",oAttributi,"categoria",sCategoria,"icona",sImg,"descrizione",sDescrizione)]
-[macro("gui/salvaAccessorioInDB@this"): oJOggetto]
+[macro("items/salvaAccessorioInDB@this"): oJOggetto]

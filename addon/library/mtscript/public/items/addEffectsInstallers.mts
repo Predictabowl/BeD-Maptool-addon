@@ -1,3 +1,4 @@
+<!-- DEPRECATED - must be removed or updated to static data ->
 [h: sId = "PUGNALE ASSIDERANTE-1"]
 [h: sTable = "Armi_Json"]
 
