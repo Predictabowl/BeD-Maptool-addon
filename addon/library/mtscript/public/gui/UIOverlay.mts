@@ -6,7 +6,7 @@
 [macro("gui/setOverlayData@this"): json.append("token",oToken)]
 
 [h: sSlotVelociLink = strformat("<a href='%s'><img src='%s' class='pulsanteUI' title='Slot Rapidi'/> </a>",
-	macrolinkText("gui/dialogOggettiUsabili@this","none",json.append("",oToken)),getImage("Image:PulsanteInventario"))]
+	macrolinkText("gui/dialogOggettiUsabili@this","none",json.append("",oToken)), "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/quick_slots.png")]
 [h: sAltreAzioniLink = strformat("<a href='%s'><img src='%s' class='pulsanteUI' title='Altre Azioni'/></a>",
 	macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)),"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/other_actions.png")]
 [h, if(isArmaLancioEquipped(oToken)), code:{

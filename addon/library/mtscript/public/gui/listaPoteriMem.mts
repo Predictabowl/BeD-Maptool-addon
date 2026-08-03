@@ -13,11 +13,11 @@
 
 [h: sAggiornaLink = strformat("<a href='%s' class='relevantTitle' title='Clicca per aggiornare'>%s</a>",macrolinkText("gui/updatePoteri@this","none",json.append("",sFrame,"clearAll")),getName(oToken))]
 [h: sSlotVelociLink = strformat("<a href='%s'><img src='%s' class='spellCastButton' title='Slot Rapidi'/> </a>",
-	macrolinkText("gui/dialogOggettiUsabili@this","none",json.append("",oToken)),getImage("Image:PulsanteInventario"))]
+	macrolinkText("gui/dialogOggettiUsabili@this","none",json.append("",oToken)), "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/quick_slots.png")]
 	
 [h, if(!bDefault), code:{
 	[h: sAltreAzioniLink = strformat("<a href='%s'><img src='%s' class='pulsanteTondo' title='Altre Azioni'/></a>",
-		macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)),"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/other_actions.png")]
+		macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)), "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/other_actions.png")]
 	[h, if(isArmaLancioEquipped(oToken)):
 		sLancioLink = strformat("<input type='image' class='pulsanteTondo' name='AttaccaLancio' value='AttaccaLancio' src='%s' ' class='image' title='Attacco con arma da lancio' id='button-attaccoLancio'/>","lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Throw_Icon.png");
 		sLancioLink = ""]

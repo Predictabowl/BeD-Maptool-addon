@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: sNome = "Cintura dell'avventatezza"]
 [h: sImg = "Image:CinturaTeschio01"]
 [h: sCategoria = "Cintura"]
