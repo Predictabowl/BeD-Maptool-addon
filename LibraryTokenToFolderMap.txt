@@ -15,7 +15,7 @@ Lib:GlobalVar -> utility
 
 
 # Next in line to be mapped
-Lib:OggettiUsabili
+Lib:OggettiUsabili -> consumables
 
 
 # Not Mapped yet 
@@ -23,3 +23,7 @@ Lib:Sounds
 
 # TODO
 powers library "addSpellInLib" need to save data into the token, must be adapted to the library, or sidestepped.
+
+
+# CSS
+"lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css"

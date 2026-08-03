@@ -21,7 +21,7 @@
 [dialog5("Capacita Generali","closebutton=0"):{
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="CharSheet5_css@[r: getMacroLocation()]">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title> Capacità Generali </title>
 </head>
 <body class="dataCentered">

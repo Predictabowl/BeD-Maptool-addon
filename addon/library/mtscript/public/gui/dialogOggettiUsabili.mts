@@ -41,26 +41,26 @@
 [h, for(i,0,iNumItems,1), CODE:{
 	[h: oOggetto = getFromSlotVeloce(target,i)]
 	[h: spellName = json.get(oOggetto,"libName")]
-	[macro("getTipoConsumabile@Lib:OggettiUsabili"): json.append(spellName, 1)]
+	[macro("consumables/getTipoConsumabile@this"): json.append(spellName, 1)]
 	[h: sTipoOggetto = macro.return]
 	[h: sNome = getLibProperty("nome_decorativo",spellName)]
-	[macro("getItemTime@Lib:OggettiUsabili"): json.append(target,spellName)]
+	[macro("consumables/getItemTime@this"): json.append(target,spellName)]
 	[h: iTempoCost = macro.return]
 
 	[h: imgA = getImage(spellName)]
 	[h: strCast = strformat("<input type='image' class='spellCastButton' src='%{imgA}' onclick='loadParams(this)'")]
 	[h: strCast = strformat("%{strCast} data-spellName='%{spellName}' title='Usa Oggetto' data-slotVeloce='%{i}'/>")]
 
-	[h, macro("getLivelloOggetto@Lib:OggettiUsabili"): json.append(oOggetto, target)]
+	[h, macro("consumables/getLivelloOggetto@this"): json.append(oOggetto, target)]
 	[h: iLiv = macro.return]
 	[h: param = json.set("","token",target,"libSpell",spellName,"consumabile",oOggetto)]
 	[h: iTossico = getTossicoOggetto(oOggetto, target)]
 	[h: iLL = getLLOggetto(iLiv)]
-	[macro("getCDOggetto@Lib:OggettiUsabili"): iLiv]
+	[macro("consumables/getCDOggetto@this"): iLiv]
 	[h: iCD = macro.return]
 
 	[if (sTipoOggetto=="POZIONE"), code: {
-		[macro("getMMOggetto@Lib:OggettiUsabili"): json.append(target, spellName, sTipoOggetto)]
+		[macro("consumables/getMMOggetto@this"): json.append(target, spellName, sTipoOggetto)]
 		[iPACost = macro.return]
 		[classType = if(classType=="oddRow","evenRow","oddRow")]
 		[sSpellLink = macrolink(sNome,"gui/dialogDescrizioneSpell@this","none",param)]
@@ -74,7 +74,7 @@
 			<td>%{iLiv}</td>
 			</tr>")]
 	};{
-		[macro("getPPOggetto@Lib:OggettiUsabili"): json.append(target, spellName, sTipoOggetto)]
+		[macro("consumables/getPPOggetto@this"): json.append(target, spellName, sTipoOggetto)]
 		[iPACost = macro.return]
 		[classTypeP = if(classTypeP=="oddRow","evenRow","oddRow")]
 		[sSpellLink = macrolinkText("gui/dialogDescrizioneSpell@this","",param)]	
@@ -102,26 +102,26 @@
 	[h: spellName = json.get(oOggetto,"libName")]
 
 	[h: sNome = getLibProperty("nome_decorativo",spellName)]
-	[macro("getTipoConsumabile@Lib:OggettiUsabili"): spellName]
-	[macro("getPPOggetto@Lib:OggettiUsabili"): json.append(target, spellName, macro.return)]
+	[macro("consumables/getTipoConsumabile@this"): spellName]
+	[macro("consumables/getPPOggetto@this"): json.append(target, spellName, macro.return)]
 	[h: iPACost = macro.return]
-	[macro("getItemTime@Lib:OggettiUsabili"): json.append(target,spellName)]
+	[macro("consumables/getItemTime@this"): json.append(target,spellName)]
 	[h: iTempoCost = macro.return]
 	[h: classType = if(classType=="oddRow","evenRow","oddRow")]
 	[h: iCariche = getCaricheRuna(target,sArma,iRuna)]
-	[macro("getMaxCaricheRuna@Lib:OggettiUsabili"): json.append(target, sArma, iRuna)]
+	[macro("consumables/getMaxCaricheRuna@this"): json.append(target, sArma, iRuna)]
 	[if(macro.return>0): iCariche = strformat("%{iCariche}/%{macro.return}")]
 
 	[h: imgA = getImage(spellName)]
 	[h: strCast = strformat("<input type='image' class='spellCastButton' src='%{imgA}' onclick='loadParams(this)'")]
 	[h: strCast = strformat("%{strCast} data-spellName='%{spellName}' title='Usa Oggetto' data-nomeArma='%{sArma}' data-slotRuna='%{iRuna}'/>")]
 
-	[h, macro("getLivelloOggetto@Lib:OggettiUsabili"): json.append(oOggetto, target)]
+	[h, macro("consumables/getLivelloOggetto@this"): json.append(oOggetto, target)]
 	[h: iLiv = macro.return]
 	[h: param = json.set("","token",target,"libSpell",spellName,"consumabile",oOggetto)]
 	[h: sSpellLink = macrolinkText("gui/dialogDescrizioneSpell@this","",param)]	
 	[h: iLL = getLLOggetto(iLiv)]
-	[macro("getCDOggetto@Lib:OggettiUsabili"): iLiv]
+	[macro("consumables/getCDOggetto@this"): iLiv]
 	[h: iCD = macro.return]
 
 	[h: sSpellType = getLibProperty("tipo",spellName)]

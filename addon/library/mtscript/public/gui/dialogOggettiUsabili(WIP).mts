@@ -68,7 +68,7 @@
 [dialog5(sDialog,"temporary=0; width=500; height=600; closebutton=0"):{
 	<html>
 	<head> 
-	<link rel="stylesheet" type="text/css" href="CharSheet5_css@[r: getMacroLocation()]">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title> Consumabili </title> 
 	<script>[r:"
 		function loadParams(elem){

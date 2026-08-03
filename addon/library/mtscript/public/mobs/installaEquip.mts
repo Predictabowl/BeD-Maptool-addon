@@ -10,7 +10,7 @@
 [h: jRune = "{}"]
 [h, foreach(sRuna, aRune), code: {
 	[i = i +1]
-	[macro("getRunaFromDB@Lib:OggettiUsabili"): sRuna]
+	[macro("consumables/getRunaFromDB@this"): sRuna]
 	[jRuna = macro.return]
 	[h: iLivRuna = json.get(jRuna,"livello")]
 	[if(!isNumber(iLivRuna)): iLivRuna = Inserisci_Livello_Runa]

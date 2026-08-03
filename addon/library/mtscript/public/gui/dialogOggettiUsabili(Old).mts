@@ -19,7 +19,7 @@
 <th> Nome </th> <th> PA </th><th> Te </th><th>Liv</th><th>Tox</th><th>LL</th></tr>
 [r, for(i,0,iNumItems,1,""), CODE:{
 	[h: oOggetto = getFromSlotVeloce(target,i)]
-	[h, macro("getInfoOggetto@Lib:OggettiUsabili"):oOggetto]
+	[h, macro("consumables/getInfoOggetto@this"):oOggetto]
 	[h: oInfoOggetto = macro.return]
 	[h: sNome = json.get(oInfoOggetto,"nomeOggetto")]
 	[h: iPACost =getUseItemPA(oOggetto,target)]

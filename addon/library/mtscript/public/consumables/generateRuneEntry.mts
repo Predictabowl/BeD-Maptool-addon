@@ -1,0 +1,20 @@
+[h: oLibToken = getMacroLocation()]
+[h: jValue = "{}"]
+
+[h: inNome = "sNome||Nome Runa"]
+[h: inValue = "iValueLL|| potenza per LL"]
+[h: inMacro = "sMacro||macro"]
+[h: inImage= "iImgID|-1|codice immagine"]
+[h: inTempo = "iTempo|7| Tempo di lancio"]
+[h: inPA = "iPA|7| PA"]
+[h: inOpport = "bOpport|0,1| Offre opportunita|LIST|value=string"]
+[h: inOffensivo = "bOffensivo|0,1| Offensivo|LIST|value=string"]
+
+
+[h: bCheck = input(inNome,inValue,inMacro,inImage,inPA,inTempo,inOpport,inOffensivo)]
+[h: assert(bCheck,"Abortito")]
+[h: sMacro = strformat("%{sMacro}@Lib:OggettiUsabili")]
+[h: jValue = json.set("","nomeOggetto",sNome,"valueLL",iValueLL,"macro",sMacro,"imageID",iImgID,"tipoOggetto","RUNA","tabellaImg","RuneImg","tempoLancio",iTempo,"PA",iPA,"opportunita",bOpport,"offensivo",bOffensivo)]
+[h: oItems = getLibMemoria(oLibToken,"RUNA")]
+[h: oItems = json.set(oItems,sNome,jValue)]
+[h: setLibMemoria(oLibToken,"RUNA",oItems)]

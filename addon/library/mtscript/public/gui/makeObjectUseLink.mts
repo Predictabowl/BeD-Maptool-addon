@@ -1,6 +1,6 @@
 [h: source = json.get(macro.args,0)]
 [h: nomeLib = json.get(macro.args,1)]
-[h, if(json.length(macro.args)>3): sMacro = json.get(macro.args,4); sMacro = "iniziaUsoConsumabile@Lib:OggettiUsabili"]
+[h, if(json.length(macro.args)>3): sMacro = json.get(macro.args,4); sMacro = "consumables/iniziaUsoConsumabile@" + getMacroLocation()]
 
 [h, if(nomeLib != ""), code:{
 	[h: imgA = getImage(nomeLib)]

@@ -6,11 +6,12 @@
 
 [h, macro("gui/getPoteriNonMem@this"):target]
 [h: tempList = macro.return]
+[h: sThis = getMacroLocation()]
 
 [dialog5("MemPoteriConosciuti"):{
 <html>
 <head> 
-<link rel="stylesheet" type="text/css" href="CharSheet5_css@[r: getMacroLocation()]">
+<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 <title> Libro Incantesimi </title> 
 <script>
 	[r:"
@@ -38,7 +39,7 @@
 	<td> <input type="submit" name="indice" value= [r: iIndice+1] onclick='add_Row()'/></td>
 	<td align='left'> [r: getLibProperty("nome_decorativo",item)]</td>
 	[h: param = json.append(target,item)]
-	<td ><span style='color:red'> [r: macrolink("X","gui/rimuoviPotereDaLibro@this","none",param)] </span></td>
+	<td ><span style='color:red'> [r: macrolink("X","gui/rimuoviPotereDaLibro@" + sThis,"none",param)] </span></td>
 	</tr>
 	[h: iIndice = iIndice +1]
 }]

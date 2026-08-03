@@ -9,7 +9,7 @@
 }]
 
 [h, if(isItemInCast(source,spell)), code:{
-	[macro("getAutoLLOggetto@Lib:OggettiUsabili"): json.append(source,spell)]
+	[macro("consumables/getAutoLLOggetto@this"): json.append(source,spell)]
 	[return(0,macro.return)]
 }]
 

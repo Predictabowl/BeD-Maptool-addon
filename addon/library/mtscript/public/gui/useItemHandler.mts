@@ -6,7 +6,7 @@
 
 
 <!-- In base al tipo si cambiano i parametri (WIP) -->
-[macro("getTipoConsumabile@Lib:OggettiUsabili"): json.append(spellName, iRuna == "null")]
+[macro("consumables/getTipoConsumabile@this"): json.append(spellName, iRuna == "null")]
 [h: sItemType = macro.return]
 
 [h: oUseParam = json.set("","tipoOggetto",sItemType)]
@@ -19,7 +19,7 @@
 		[h: oUseParam = json.set(oUseParam,"slotVeloce",iSlot)]	
 }]
 
-[h: sMacro = "iniziaUsoConsumabile@Lib:OggettiUsabili"]
+[h: sMacro = "consumables/iniziaUsoConsumabile@this"]
 [h: param = json.set("","libName",spellName,"source",oToken,"macro",sMacro,"useParam",oUseParam)]
 [macro("gui/iniziaActionBlockWrapper@this"):param]
 [h: closeDialog("OggettiConsumabili")]

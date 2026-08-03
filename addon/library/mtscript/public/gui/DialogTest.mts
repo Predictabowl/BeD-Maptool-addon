@@ -21,7 +21,7 @@
 	<td> costo </td>
 	<td class='tempoFont'> 15</td>
 	[h: param = json.set("","target","target","key","sNome")]
-	<td ><span style='color:red'> [r: macrolink("&chi","gui/rimuoviPotere@this","none",param)] </span></td>
+	<td ><span style='color:red'> [r: macrolink("&chi","gui/rimuoviPotere@" + getMacroLocation(),"none",param)] </span></td>
 	</tr>
 }]
 </table>

@@ -44,7 +44,7 @@
 [dialog5("tabellaCalcoloDanni","width=200; height=150; temporary=1;"):{
 <html>
 <head> 
-<link rel="stylesheet" type="text/css" href="CharSheet5_css@[r: getMacroLocation()]">
+<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 
 <title> Danno contro [r:getName(target)]</title> 
 </head>

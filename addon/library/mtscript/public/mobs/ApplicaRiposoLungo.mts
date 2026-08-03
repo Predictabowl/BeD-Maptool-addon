@@ -11,7 +11,7 @@
 		[h: PF = PF_Max]
 		[h: Mana = Mana_Max]
 		[setTossicoLiv(id,0)]
-		[macro("ricaricaRuneGiornaliere@Lib:OggettiUsabili"): id]
+		[macro("consumables/ricaricaRuneGiornaliere@this"): id]
 		[macro("mobs/getPVRiposoLungo@this"): id]
 		[macro("core/CuraTarget@this"): json.append(id, macro.return, "", "",0,1)]
 		[delDaMemoria(id, "riposoBreve")]

@@ -1,7 +1,8 @@
+<!-- TODO check if it's used -->
 [h: target = macro.args]
 
-
 [h: switchToken(target)]
+[h: sThis = getMacroLocation()]
 [dialog("Nascondi Abilita"):{
 <html>
 <head> 
@@ -31,7 +32,7 @@
 	<td align="left">[r: key]</td>
 	<td> <select name="[r: listGet(list,i)]"> <option value="0" [r:selected1]>No</option> <option value="1" [r:selected2]>Si</option></select></td>
 	[h: param = json.append(target,sAbilita)]
-	<td> [r: macrolink("Rimuovi","gui/rimuoviAbilita@this","none",param)] </td></tr>
+	<td> [r: macrolink("Rimuovi","gui/rimuoviAbilita@" + sThis,"none",param)] </td></tr>
 }]
 </table>
 

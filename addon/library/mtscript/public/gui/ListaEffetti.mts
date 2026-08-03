@@ -2,7 +2,7 @@
 [dialog5 ("Effetti"), code:{
 	<html>
 	<head> 
-	<link rel="stylesheet" type="text/css" href="CharSheet5_css@[r: getMacroLocation()]">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title> Effetti Attivi</title> 
 	</head>
 	<body>

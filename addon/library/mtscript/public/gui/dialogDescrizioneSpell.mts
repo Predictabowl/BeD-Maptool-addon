@@ -2,11 +2,11 @@
 [h: spellName = json.get(macro.args,"libSpell")]
 [h: oOggetto = json.get(macro.args,"consumabile")]
 [h, if(!json.isEmpty(oOggetto)), code:{
-	[macro("setForceItemCastOverride@Lib:OggettiUsabili"): oToken]
-	[macro("haveSogliaPotere@Lib:OggettiUsabili"): json.append(oToken,spellName)]
+	[macro("consumables/setForceItemCastOverride@this"): oToken]
+	[macro("consumables/haveSogliaPotere@this"): json.append(oToken,spellName)]
 	[bSoglia = macro.return]
 	[bConsumabile = 1]
-	[macro("getSogliaPotereRate@Lib:OggettiUsabili"): json.append(oToken,oOggetto)]
+	[macro("consumables/getSogliaPotereRate@this"): json.append(oToken,oOggetto)]
 	[iSogliaRate = macro.return]
 };{
 	[h: bConsumabile = 0]
@@ -90,4 +90,4 @@
 </html>
 }]
 
-[macro("setForceItemCastOverride@Lib:OggettiUsabili"): json.append(oToken,0)]
+[macro("consumables/setForceItemCastOverride@this"): json.append(oToken,0)]

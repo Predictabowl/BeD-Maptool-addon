@@ -1,3 +1,4 @@
+<!-- TODO check if is removable -->
 [h: oToken = getImpersonated()]
 [h: sFrame = "TestFrame"]
 
@@ -5,7 +6,7 @@
 [frame5(sFrame):{
 	<html>
 <head> 
-	<link rel="stylesheet" type="text/css" href="CharSheet5_css@[r: getMacroLocation()]">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<script>
 	[r: "
 		function updateDiv(){

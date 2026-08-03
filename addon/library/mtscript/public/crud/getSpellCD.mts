@@ -16,7 +16,7 @@
 }]
 
 [h, if(isItemInCast(source,spellName)), code:{
-	[macro("getAutoCDOggetto@Lib:OggettiUsabili"): json.append(source,spellName)]
+	[macro("consumables/getAutoCDOggetto@this"): json.append(source,spellName)]
 	[return(0, macro.return)]
 }]
 

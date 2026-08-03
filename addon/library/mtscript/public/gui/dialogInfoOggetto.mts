@@ -1,7 +1,8 @@
+<!-- TODO check if it's used -->
 [h: target = json.get(macro.args,0)]
 [h: sDialog = "OggettiConsumabili"]
 [h: iNumItems = countSlotVeloceItems(target)]
-
+[h: sThis = getMacroLocation()]
 
 [dialog(sDialog):{
 <html>
@@ -22,7 +23,7 @@
 <th> Nome </th> <th> Usi </th><th> PA </th><th> Te </th></th>Liv</th> </tr>
 [r, for(i,0,iNumItems), CODE:{
 	[h: oOggetto = getFromSlotVeloce(target,i)]
-	[h, macro("getInfoOggetto@Lib:OggettiUsabili"):oOggetto]
+	[h, macro("consumables/getInfoOggetto@this"):oOggetto]
 	[h: oInfoOggetto = macro.return]
 	
 	[h: sNome = getStrProp(oInfoOggetto,"nomeOggetto")]
@@ -37,7 +38,7 @@
 	<td> [r: iPACost] </td>
 	<td class='tempoFont'> [r: iTempoCost] </td>
 	[h: param = json.set("","target",target,"key",sNome)]
-	<td ><span style='color:red'> [r: macrolink("&chi","gui/rimuoviPotere@this","none",param)] </span></td>
+	<td ><span style='color:red'> [r: macrolink("&chi","gui/rimuoviPotere@" + sThis,"none",param)] </span></td>
 	</tr>
 }]
 </table>

@@ -3,7 +3,7 @@
 [dialog5("LMM"):{
 <html>
 	<head> 
-		<link rel="stylesheet" type="text/css" href="CharSheet5_css@[r: getMacroLocation()]">
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 		[h: list =  LMM]
 		[h: listLen = countStrProp(list)]
 		<title> Modifica Capacità di Combattimento</title> 
@@ -23,7 +23,7 @@
 					<td> [r: value] </td>
 					<td> <input type="text" size=2 name="[r:key]" value="[r: value]"/> </td>
 					[h: param = json.set("","target",target,"key",key)]
-					<td> [r: macrolink("Rimuovi","gui/RemoveLMM@this","none",param)] </td></tr>
+					<td> [r: macrolink("Rimuovi","gui/RemoveLMM@" + getMacroLocation(),"none",param)] </td></tr>
 				}]
 			</table>
 			[r: macrolink("Aggiungi Scuola","AddScuolaLMM@"+getMacroLocation(),"none",target)] <br><br>

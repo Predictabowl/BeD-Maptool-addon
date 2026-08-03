@@ -1,0 +1,20 @@
+[h: oLibToken = getMacroLocation()]
+[h: jValue = "{}"]
+
+[h: inNome = "sNome||Nome Pozione"]
+[h: inValue = "iValueLL|| potenza per LL"]
+[h: inMacro = "sMacro||macro"]
+[h: inImage= "iImgID|-1|codice immagine"]
+[h: inTox = "iTox|0|Tossicita"]
+[h: inTipo= "sType|POZIONE,INFUSO|codice immagine|LIST|value=string"]
+[h: inSoglia= "bSoglia|No,Si|Soglia di Potere|LIST"]
+[h: inDurata = "iDurata|0|Durata"]
+
+
+[h: bCheck = input(inNome,inValue,inMacro,inImage,inTox,inTipo,inSoglia,inDurata)]
+[h: assert(bCheck,"Abortito")]
+[h: sMacro = strformat("%{sMacro}@Lib:OggettiUsabili")]
+[h: jValue = json.set("","nomeOggetto",sNome,"valueLL",iValueLL,"macro",sMacro,"imageID",iImgID,"tipoOggetto",sType,"tabellaImg","PozioniImg","tossico",iTox,"sogliaPotere",bSoglia,"durata",iDurata)]
+[h: oItems = getLibMemoria(oLibToken,sType)]
+[h: oItems = json.set(oItems,sNome,jValue)]
+[h: setLibMemoria(oLibToken,sType,oItems)]

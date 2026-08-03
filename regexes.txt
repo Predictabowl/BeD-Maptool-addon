@@ -19,8 +19,14 @@ Lib:(?!(it.aldinucci.piero.bed.maptool.ruleset)).*
 
 
 Match only the word before, excluding slashes / (negative look behind)
-(?<!\/)\b(\w+)@Lib:GlobalVar\b
+(?<!\/)\b(\w+)@Lib:Basic\b
 core/$1@this
 
 Match already changed functions
 \b(\w+)\/(\w+)@this\b
+
+Find macrolink with @this in non direct macro calls
+(macrolink\("[^"]+"[,\s]+"[^"]+)@this"
+$1@lib:it.aldinucci.piero.bed.maptool.ruleset
+oppure se definiamo [sThis = getMacroLocation()]
+$1@" + sThis
