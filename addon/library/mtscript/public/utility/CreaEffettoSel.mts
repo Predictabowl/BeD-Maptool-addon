@@ -1,0 +1,27 @@
+[h: ids = getSelected()]
+[h: stateList = json.sort(getTokenStates("json"))]
+[h: stateList = json.merge("[null]",stateList)]
+[h: control =  input("effetto|Effetto01","stato|"+json.toList(stateList)+"|Stato|LIST","durata|2","attivo|1|Attivo a inizio round|CHECK","potenza|1","tipo|Motorio|Categoria","mutex|nessuno|Tipo Esclusivo","numProp|1|Numero Proprieta") ]
+[h: abort(control)]
+[h: stato = json.get(stateList,stato)]
+[h: propList = ""]
+[h, for(i,0,numProp), code:{
+	[macro("core/CreaProp@this"):0]
+	[propList = json.append(propList,macro.return)]
+}]
+
+[h: param = json.set("","durata",durata)]
+[h: param = json.set(param,"effetto",effetto)]
+[h: param = json.set(param,"stato",stato)]
+[h: param = json.set(param,"subito",attivo)]
+[h: param = json.set(param,"potenza",potenza)]
+[h: param = json.set(param,"tipo",tipo)]
+[h, if(mutex != "nessuno"): param = json.set(param,"mutex",mutex)]
+[h: param = json.set(param,"params",propList)]
+
+[r, foreach(id, ids, "<br>"), CODE:{
+	[h: param = json.set(param,"target",id)]
+	[macro("core/ApplyEffect@this"): param]
+	[macro("utility/popMessaggio@this"): json.set("","token",id,"key","strDanno")]
+	[h, if(macro.return != ""): broadcast(macro.return)]
+}]

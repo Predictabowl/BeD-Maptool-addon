@@ -19,7 +19,7 @@ Lib:(?!(it.aldinucci.piero.bed.maptool.ruleset)).*
 
 
 Match only the word before, excluding slashes / (negative look behind)
-(?<!\/)\b(\w+)@Lib:Sounds\b
+(?<!\/)\b(\w+)@Lib:GlobalVar\b
 core/$1@this
 
 Match already changed functions

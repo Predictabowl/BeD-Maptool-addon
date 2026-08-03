@@ -9,16 +9,16 @@ Lib:Meccaniche -> mechanics
 Lib:GetSet -> crud
 Lib:Scheda -> gui
 Lib:AbilitaClasse -> class-skills
+Lib:EquipEffect-> items
+Lib:Mat -> utility
+Lib:GlobalVar -> utility
 
 
 # Next in line to be mapped
-Lib:EquipEffect-> items
+Lib:OggettiUsabili
 
 
 # Not Mapped yet 
-Lib:OggettiUsabili
-Lib:Mat
-Lib:GlobalVar
 Lib:Sounds
 
 # TODO

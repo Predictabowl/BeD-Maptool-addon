@@ -67,7 +67,7 @@
 	[h: LDT = getProperty("LD",target)]
 	[h: dado = eval(DannoA)]
 
-	[macro("trunc@Lib:Mat"):((LAA-LDT)*iMoltiplicatore)]
+	[macro("utility/trunc@this"):((LAA-LDT)*iMoltiplicatore)]
 	[h: bonus = macro.return]
 	[h: danno = dado+bonus]
 
