@@ -16,7 +16,7 @@
 		[sIcon = "rings/anelloBase.png"]
 	};
 	case "artefatto":{
-		[sIcon = getImage("Image:Artefatto")]
+		[sIcon = "artifacts/artefatto.png"]
 	};
 	case "ascia":{
 		[sIcon = "axes/ascia.png"]
@@ -37,25 +37,25 @@
 		[sIcon = "gloves/guanti.png"]
 	};
 	case "lancio":{
-		[sIcon = getImage("Image:ColtelloLancio")]
+		[sIcon = "throwing/throwing_knife.png"]
 	};
 	case "mantello":{
-		[sIcon = getImage("Image:Mantello")]
+		[sIcon = "cloaks/mantello.png"]
 	};
 	case "mazza":{
-		[sIcon = getImage("Image:Mazza")]
+		[sIcon = "maces/mazza.png"]
 	};
 	case "scudo":{
 		[sIcon = "shields/inv_shield_09.png"]
 	};
 	case "spada":{
-		[sIcon = getImage("Image:Spada")]
+		[sIcon = "swords/spada.png"]
 	};
 	case "stivali":{
 		[sIcon = "boots/stivali.png"]
 	};
 	case "tiro":{
-		[sIcon = getImage("Image:Arco")]
+		[sIcon = "bows/Arco.png"]
 	};
 	default:{
 		[sIcon = ""]

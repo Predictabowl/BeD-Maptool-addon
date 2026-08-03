@@ -5,7 +5,7 @@
             "Res_Aria": 1
         },
         "categoria": "mantello",
-        "icona": ""
+        "icona": "cloaks/mantello.png"
     },
     "MANTELLO SCHIVARE +1-1": {
         "nome": "Mantello Schivare +1",
@@ -13,7 +13,7 @@
             "Schivare": 1
         },
         "categoria": "Mantello",
-        "icona": "Image:MantelloVerde"
+        "icona": "cloaks/inv_misc_cape_17.png"
     },
     "MANTELLO SCHIVARE+2": {
         "nome": "Mantello Schivare +2",
@@ -21,7 +21,7 @@
             "Schivare": 2
         },
         "categoria": "Mantello",
-        "icona": "Image:inv_misc_cape_16"
+        "icona": "cloaks/inv_misc_cape_16.png"
     },
     "CAPPA DEL GUARITORE +1-1": {
         "nome": "Cappa del Guaritore +1",
@@ -29,7 +29,7 @@
             "Mod_Cura_Out": 0.01
         },
         "categoria": "Mantello",
-        "icona": "Image:SciarpaMarrone",
+        "icona": "cloaks/inv_misc_cape_14.png",
         "descrizione": ""
     },
     "MANTELLO_PARARE-2": {
@@ -38,7 +38,7 @@
             "Parare": 2
         },
         "categoria": "Mantello",
-        "icona": "Image:inv_chest_cloth_14",
+        "icona": "cloaks/inv_chest_cloth_14.png",
         "descrizione": ""
     }
 }
