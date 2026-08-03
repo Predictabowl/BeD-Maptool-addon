@@ -157,7 +157,7 @@
 				style="width:280px; height:206px; border:1px solid black;
 				padding-top: 5px; padding-bottom:5px; padding-left: 10px; padding-right: 10px; 
 				overflow-y:scroll; grid-row: 3;">
-			<form id="linkInChatFormId" method="json" action="[r:macroLinkText("gui/linkOggettoInChat@this")]" style="margin:0px;">
+			<form id="linkInChatFormId" method="json" action="[r:macroLinkText("gui/linkOggettoInChat@lib:it.aldinucci.piero.bed.maptool.ruleset")]" style="margin:0px;">
 				<input type="hidden" name="itemId" value="" id="linkItemInputId">
 				<input type="hidden" name="token" value="[r: oToken]">
 			</form>
@@ -207,7 +207,7 @@
 		</div>
 	</div>
 	<div  style="display:flex; justify-content:space-evenly; margin-top:8px; margin-bottom:0px; padding-bottom:0px;">
-		<form id="equip-form" method="json" action="[r:macroLinkText("gui/inizioCambioArma@this")]" style="margin:0px;">
+		<form id="equip-form" method="json" action="[r:macroLinkText("gui/inizioCambioArma@lib:it.aldinucci.piero.bed.maptool.ruleset")]" style="margin:0px;">
 			<input type="hidden" id="input-armatura" name="input-armatura" value="">
 			<input type="hidden" id="input-amuleto" name="input-amuleto" value="">
 			<input type="hidden" id="input-anello1" name="input-anello1" value="">
@@ -224,7 +224,7 @@
 			<input type="hidden" name="token" value="[r: oToken]">
 			<input type="button" onclick="setInputValues()" name ="bottonw" value="Conferma">
 		</form>
-		<form method="json" action="[r:macroLinkText("gui/closeWindow@this")]" style="margin:0px;">
+		<form method="json" action="[r:macroLinkText("gui/closeWindow@lib:it.aldinucci.piero.bed.maptool.ruleset")]" style="margin:0px;">
 			<input type="hidden" name="name" value="[r: sDialog]">
 			<input type="submit" name="button-annulla" value="Annulla">
 		</form>

@@ -15,7 +15,7 @@
 
 
 [h, foreach(sKey, sListaStili), code:{
-	[sLink = macroLinkText("gui/changeStileFromDialog@this","none",json.append(oToken,sKey))]
+	[sLink = macroLinkText("gui/changeStileFromDialog@lib:it.aldinucci.piero.bed.maptool.ruleset","none",json.append(oToken,sKey))]
 	[sReturn = strformat("%{sReturn}
 				<a href='%{sLink}'><div class='div-list-item titleFont'>%{sKey}</div></a>
 	")]

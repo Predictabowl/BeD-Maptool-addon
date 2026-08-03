@@ -13,7 +13,7 @@
 
 <h2>[r: getName(target)]</h2>
 
-<form name="ordinaObjects" method="json" action   ="[r:macroLinkText("gui/scambiaPosizioneElementi@this")]">
+<form name="ordinaObjects" method="json" action   ="[r:macroLinkText("gui/scambiaPosizioneElementi@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 <table id="generic">
 [h: classType="evenRow"]
 [h: iIndice = 0]

@@ -39,7 +39,7 @@
 }]
 </table>
 <br>
-<form action   ="[r: macroLinkText("gui/updateFrame@this")]">
+<form action   ="[r: macroLinkText("gui/updateFrame@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 <input type="hidden" name="target" value ="[r:target]" />
 <input type="hidden" name="frame" value ="[r:getMacroName()]" />
 <input type="image" name="Aggiorna" value="Aggiorna" src='[r: getImage("Lib:refresh-small")]' />

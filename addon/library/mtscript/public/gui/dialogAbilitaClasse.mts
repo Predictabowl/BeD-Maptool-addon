@@ -19,11 +19,11 @@
 </head>
 <body align="center">
 	<div class="relevantTitle"> [r: getName(oToken)] </div>
-	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneAbilita@this")]">
+	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneAbilita@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type="hidden" name="libAbilita" value ="" id="input_lib_abilita" />
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 	</form>
-	<form id="formAttivaAbilita" method="json" action="[r:macroLinkText("gui/executeAttivaAbilita@this")]">
+	<form id="formAttivaAbilita" method="json" action="[r:macroLinkText("gui/executeAttivaAbilita@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type="hidden" id="var-input" name="comando" value =""/>
 		<input type="hidden" id="idAbilitaAttivata" name="libAbilita" value =""/>		
 		<input type="hidden" name="token" value ="[r:oToken]"/>

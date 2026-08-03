@@ -13,7 +13,7 @@
 <title> Nascondi Abilit&agrave; di classe</title> 
 </head>
 <body>
-<form action   ="[r: macroLinkText("updateAbilitaNascoste@"+ getMacroLocation())]" method="json">
+<form action   ="[r: macroLinkText("gui/updateAbilitaNascoste@"+ getMacroLocation())]" method="json">
 <h3>Seleziona quali abilità vedere nella scheda</h3>
 <table id="generic">
 [h: classType="evenRow"]

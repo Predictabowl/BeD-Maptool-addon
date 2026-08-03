@@ -13,7 +13,7 @@
 <body  align="center">
 
 <h3>[r: getName(target)]</h3>
-<form name="usaOggetto" method="json" action   ="[r:macroLinkText("gui/usaOggettoServer@this")]">
+<form name="usaOggetto" method="json" action   ="[r:macroLinkText("gui/usaOggettoServer@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 <input type="hidden" name="target" value="[r: target]"/>
 <input type="hidden" name="dialogName" value="[r: sDialog]"/>
 

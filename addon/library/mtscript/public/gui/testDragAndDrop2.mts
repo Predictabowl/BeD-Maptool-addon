@@ -39,7 +39,7 @@
 </head>
 <body align="center">
 	<h2> [r: getName(oToken)] </h2>
-	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneAbilita@this")]">
+	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneAbilita@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type="hidden" name="libAbilita" value ="" id="input_lib_abilita" />
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 	</form>

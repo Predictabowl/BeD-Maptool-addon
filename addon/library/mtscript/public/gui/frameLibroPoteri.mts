@@ -42,7 +42,7 @@
 </head>
 <body>
 	<div style="display:flex; justify-content:center;">
-		<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@this")]">
+		<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<table>
 			<thead/>
 			<tbody>
@@ -58,7 +58,7 @@
 	</div>
 
 	<!-- Form Nascosto per descrizione spell -->
-	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@this")]">
+	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type="hidden" name="libSpell" value ="" id="input_lib_spell" />
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 	</form>

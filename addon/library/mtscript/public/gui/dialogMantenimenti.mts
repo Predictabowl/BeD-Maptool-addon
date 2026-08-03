@@ -27,7 +27,7 @@
 	</style>
 </head>
 <body>
-<form action   ="[r: macroLinkText("gui/gestisciMantenimenti@this")]" method="json">
+<form action   ="[r: macroLinkText("gui/gestisciMantenimenti@lib:it.aldinucci.piero.bed.maptool.ruleset")]" method="json">
 	<h3> Mantenimento Poteri</h3>
 	<div>
 	[h: classType="evenRow"]

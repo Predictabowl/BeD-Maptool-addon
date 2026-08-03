@@ -25,7 +25,7 @@
 <title> Gestione Risorse PG</title> 
 </head>
 <body>
-<form name="modRisorse" method="json" action   ="[r:macroLinkText("applicaModRisorse@"+ getMacroLocation())]">
+<form name="modRisorse" method="json" action   ="[r:macroLinkText("gui/applicaModRisorse@"+ getMacroLocation())]">
 <h3 align="center"> [r: getName(target)] </h3>
 <table id="generic">
 [h: classType="evenRow"]

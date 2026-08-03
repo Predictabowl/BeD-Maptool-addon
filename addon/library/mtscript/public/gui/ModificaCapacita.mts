@@ -26,7 +26,7 @@
 </head>
 <body class="dataCentered">
 	<h3> [r:getName(target)] </h3>
-	<form name="modCapacita" method="json" action   ="[r: macroLinkText("gui/updateCapacita@this")]">
+	<form name="modCapacita" method="json" action   ="[r: macroLinkText("gui/updateCapacita@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	
 	<table class="center">
 		<thead>

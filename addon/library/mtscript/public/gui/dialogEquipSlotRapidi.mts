@@ -98,13 +98,13 @@
 			</div>
 		</div>
 		
-		<form id="form_update_items" method="json" action="[r:macroLinkText("gui/updateSlotVeloci@this")]">
+		<form id="form_update_items" method="json" action="[r:macroLinkText("gui/updateSlotVeloci@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type='hidden' name='source' value='[r:target]'/>
 		<input id='toSlot' type='hidden' name='toSlot' value=''/>
 		<input id='item-index' type='hidden' name='item-index' value=''/>		
 		</form>
 
-		<form method="json" action="[r:macroLinkText("gui/transitionDialogSlotVeloci@this")]">
+		<form method="json" action="[r:macroLinkText("gui/transitionDialogSlotVeloci@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type='hidden' name='source' value='[r:target]'/>
 		<input type='hidden' name='toSlots' value='toSlots'/>
 		<input type="submit" value='Indietro'/>		

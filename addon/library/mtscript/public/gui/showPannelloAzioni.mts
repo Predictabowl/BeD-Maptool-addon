@@ -34,7 +34,7 @@
 		<button type="button" onclick="pressButton('openDiarioCampagna')" >Diario Campagna</button>
 		<button type="button" onclick="pressButton('trasferisciEquip')" >Trasferisci Equip.</button>
 	</div>
-	<form id="main-form" method="json" action="[r:macroLinkText("gui/eseguiAzione@this")]">
+	<form id="main-form" method="json" action="[r:macroLinkText("gui/eseguiAzione@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type="hidden" id="action-performed" name="action-performed" value="">
 		<input type="hidden" name="token" value="[r: oToken]">
 	</form>

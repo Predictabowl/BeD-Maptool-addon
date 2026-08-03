@@ -68,7 +68,7 @@
 		</div>
 	</div>
 
-	<form id="main-form" method="json" action="[r:macroLinkText("gui/execFormDiario@this")]">
+	<form id="main-form" method="json" action="[r:macroLinkText("gui/execFormDiario@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type="hidden" id="action-performed" name="action-performed" value="">
 		<input type="hidden" id="key-value" name="key-value" value="[r: sJournalSel]">
 		<input type="hidden" name="token" value="[r: oToken]">

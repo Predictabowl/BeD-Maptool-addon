@@ -27,7 +27,7 @@
 
 <h2>[r: getName(target)]</h2>
 
-<form name="memorizzaPoteri" method="json" action   ="[r:macroLinkText("gui/memorizzaPoteri@this")]">
+<form name="memorizzaPoteri" method="json" action   ="[r:macroLinkText("gui/memorizzaPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 <table class="centerNoCollapse">
 [h: classType="evenRow"]
 [h: iIndice = 0]

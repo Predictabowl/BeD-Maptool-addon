@@ -42,14 +42,14 @@
 <div>[r: sAggiornaLink]</div>
 
 <!-- Form Nascosto per descrizione spell -->
-<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@this")]">
+<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type="hidden" name="libSpell" value ="" id="input_lib_spell" />
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 </form>
 
 <!-- Form pulsanti azioni -->
 [r, if(!bDefault), code:{
-	<form name="risolviAzione" method="json" action="[r:macroLinkText("gui/pulsantiPoteri@this")]">
+	<form name="risolviAzione" method="json" action="[r:macroLinkText("gui/pulsantiPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<div style="margin-left:30px; display:grid; grid-template-columns: repeat(10,auto); justify-content: space-evenly;">
 		<input type='image' class='pulsanteTondo' id='button-risolvi' name='Azione' value='Azione' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/resolve_action.png' class='image' title='Risolvi azione'/>
 		<input type='image' class='pulsanteTondo' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' class='image' title='Attacco base' id='button-attacco'/>
@@ -83,7 +83,7 @@
 }]
 </table>
 
-<form id="form_table_spell" name="managePoteri" method="json" action="[r:macroLinkText("gui/spellCastingHandler@this")]">
+<form id="form_table_spell" name="managePoteri" method="json" action="[r:macroLinkText("gui/spellCastingHandler@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type='hidden' name='source' value='[r:oToken]'/>
 	<input id='spell_Azione' type='hidden' name='tipoAzione' value=''/>
 	<input id='spell_Macro' type='hidden' name='macro' value=''/>
@@ -92,7 +92,7 @@
 	<input type='hidden' name='frame' value='[r: sFrame]'/>
 </form>
 
-<form  name="memPoteri" method="json" action   ="[r:macroLinkText("pulsantiGestionePoteri@"+ getMacroLocation())]" style="display:flex; flex-wrap:wrap; justify-content:center; gap:5px;">
+<form  name="memPoteri" method="json" action="[r:macroLinkText("gui/pulsantiGestionePoteri@"+ getMacroLocation())]" style="display:flex; flex-wrap:wrap; justify-content:center; gap:5px;">
 	<input type="submit" name="Mantieni" value="Mantieni" /> &nbsp;
 	[h: oLibro = getLibroPoteri(oToken)]
 	[h, if(json.isEmpty(oLibro)), code:{

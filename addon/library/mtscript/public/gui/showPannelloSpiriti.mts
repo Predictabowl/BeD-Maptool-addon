@@ -50,7 +50,7 @@
 			</div>
 		}]
 	</div>
-	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@this")]">
+	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type="hidden" name="libSpell" value ="" id="input_lib_spell" />
 		<input type="hidden" name="token" value ="[r:oToken]"/>
 	</form>

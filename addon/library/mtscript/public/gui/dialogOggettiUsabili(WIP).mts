@@ -103,7 +103,7 @@
 	</table>
 
 	<!-- Form che gestisce l'azione di attivazione degli oggetti -->
-	<form id="form_use_item" method="json" action="[r:macroLinkText("gui/useItemHandler@this")]">
+	<form id="form_use_item" method="json" action="[r:macroLinkText("gui/useItemHandler@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type='hidden' name='source' value='[r:oToken]'/>
 	<input id='spell_SpellName' type='hidden' name='spellName' value=''/>
 	<input id='item_Type' type='hidden' name='itemType' value=''/>

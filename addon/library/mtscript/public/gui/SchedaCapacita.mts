@@ -27,7 +27,7 @@
 </head>
 <body class="dataCentered">
 <h2> [r:getName(target)] </h2>
-<form method="json" action   = '[r: macroLinkText("gui/rollCapacita@this")]'>
+<form method="json" action   = '[r: macroLinkText("gui/rollCapacita@lib:it.aldinucci.piero.bed.maptool.ruleset")]'>
 
 <table>
 <tr id="generic"> <th>Capacità</td><th> Grado</th></tr>
@@ -36,7 +36,7 @@
 <br>
 <input type="hidden" name="target" value="[r:target]"/>
 </form>
-<form action   ='[r: macroLinkText("gui/updateFrame@this")]'>
+<form action   ='[r: macroLinkText("gui/updateFrame@lib:it.aldinucci.piero.bed.maptool.ruleset")]'>
 <input type="hidden" name="frame" value ="[r:getMacroName()]" />
 <input type="image" name="Aggiorna" value="Aggiorna" src='[r: getImage("Lib:refresh-small")]' />
 </form>

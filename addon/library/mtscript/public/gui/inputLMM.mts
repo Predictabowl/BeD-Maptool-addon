@@ -9,7 +9,7 @@
 		<title> Modifica Capacità di Combattimento</title> 
 	</head>
 	<body>
-		<form action='[r: macroLinkText("setLMM@"+ getMacroLocation())]'>
+		<form action='[r: macroLinkText("gui/setLMM@"+ getMacroLocation())]'>
 			tscript/public/gui<h3>Modifica i valori di LMM</h3>
 			<table class="center">
 				[h: classType="evenRow"]

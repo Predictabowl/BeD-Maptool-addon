@@ -1,7 +1,7 @@
 [h: oToken = arg(0)]
 [h: sCat = arg(1)]
 
-[h: sMacro = macroLinkText("gui/installaEquipToToken@this")]
+[h: sMacro = macroLinkText("gui/installaEquipToToken@lib:it.aldinucci.piero.bed.maptool.ruleset")]
 
 [h: sHtml = strformat("
 	<div>

@@ -26,7 +26,7 @@
 </head>
 <body class="dataCentered">
 <h3> [r:getName(target)] </h3>
-<form action   ="[r: macroLinkText("gui/updateFrame@this")]">
+<form action   ="[r: macroLinkText("gui/updateFrame@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 
 <table>
 <tr id="generic"> <th>Capacità</td><th> Grado</th></tr>

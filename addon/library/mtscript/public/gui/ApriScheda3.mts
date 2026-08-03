@@ -148,7 +148,7 @@
 <body class="dataCentered">
 
 <table  class="center"> <tr id="generic"> <td><img src='[r: getTokenImage(60)]'/> </td><td valign="middle" style="font-size:140%; font-weight:bold;"> [r:getName(source)]</td></tr> </table>
-<form method="json" action='[r: macroLinkText("gui/changeConfig@this")]'>
+<form method="json" action='[r: macroLinkText("gui/changeConfig@lib:it.aldinucci.piero.bed.maptool.ruleset")]'>
 
 
 <table class="center">
@@ -182,7 +182,7 @@ Mod. LA attuale: <b>[r:strformat("&nbsp;%+d",fakeLAMod)]</b>
 [r: damageTab]
 </table>
 <br>
-<form method='json' action='[r: macroLinkText("gui/inputFakeLAMod@this")]'>
+<form method='json' action='[r: macroLinkText("gui/inputFakeLAMod@lib:it.aldinucci.piero.bed.maptool.ruleset")]'>
 <input type='submit' value='Cambia Mod. LA'/> 
 <input type='hidden' name='source' value='[r:source]'/>
 </form>
@@ -218,7 +218,7 @@ Mod. LA attuale: <b>[r:strformat("&nbsp;%+d",fakeLAMod)]</b>
 
 [macro("gui/generaTabellaHTML@this"):arrayTabella]
 [h: strTabella = macro.return]
-<form method="json" action   = '[r: macroLinkText("gui/rollCapacita@this")]'>
+<form method="json" action   = '[r: macroLinkText("gui/rollCapacita@lib:it.aldinucci.piero.bed.maptool.ruleset")]'>
 <table class="center" >
 <tr> <td>Tiro segreto</td><td><input type="checkbox" name="bSecretRoll" value=1></td></tr>
 <tr id="generic"> <th>Capacità</td><th> Grado</th></tr>

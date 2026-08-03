@@ -18,7 +18,7 @@
 
 <h2>[r: getName(target)]</h2>
 
-<form name="ordinaObjects" method="json" action   ="[r:macroLinkText("gui/posizionaElementoDialog@this")]">
+<form name="ordinaObjects" method="json" action   ="[r:macroLinkText("gui/posizionaElementoDialog@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 <table id="generic">
 [h: classType="evenRow"]
 [h: iIndice = 0]

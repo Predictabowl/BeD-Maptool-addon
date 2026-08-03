@@ -259,7 +259,7 @@
 			<p id="descrizioneOggetto"></p>
 		</div>
 	</div>
-	<form id="equip-form" method="json" action="[r:macroLinkText("gui/eseguiEquipaggiamento@this")]">
+	<form id="equip-form" method="json" action="[r:macroLinkText("gui/eseguiEquipaggiamento@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type="hidden" id="input-armatura" name="input-armatura" value="">
 		<input type="hidden" id="input-amuleto" name="input-amuleto" value="">
 		<input type="hidden" id="input-anello1" name="input-anello1" value="">

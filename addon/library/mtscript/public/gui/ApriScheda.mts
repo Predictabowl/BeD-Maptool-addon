@@ -89,7 +89,7 @@
 <body class="dataCentered">
 
 <!-- Form Preferenze -->
-<form id="savePreferenceForm" action="[r: macroLinkText("gui/saveHTMLPreference@this")]">
+<form id="savePreferenceForm" action="[r: macroLinkText("gui/saveHTMLPreference@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 <input type="hidden" name="preference" value ="" id="id_component_value" />
 <input type="hidden" name="token" value ="[r:source]"/>
 <input type="hidden" name="componente" id="id_component_field" value =""/>
@@ -275,7 +275,7 @@
 	<div class="sectionbox">
 		[h, macro("core/getListaCapacita@this"): 0]
 		[h: listCap = macro.return]
-		<form method="json" id="form-capacita" action   = '[r: macroLinkText("gui/rollCapacita@this")]'>
+		<form method="json" id="form-capacita" action   = '[r: macroLinkText("gui/rollCapacita@lib:it.aldinucci.piero.bed.maptool.ruleset")]'>
 		<div class="sectionTitle">Capacità</div>
 		<div style="display:flex; align-items:center; justify-content:center; font-size:95%">
 			<label style="margin-right:5px;">Tiro segreto</label><input type="checkbox" name="bSecretRoll" value=1>
