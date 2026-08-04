@@ -92,7 +92,7 @@
 [dialog5(sDialog, strformat("temporary=1; width=640; height=745; closebutton=0; noframe=1;")):{
 <html>
 
-<head> 
+<head>
 	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title>Equipaggiamento</title>
 	<style>[r:"

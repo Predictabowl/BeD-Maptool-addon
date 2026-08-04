@@ -75,8 +75,8 @@
 	"]
 	</script>
 	<head> 
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
-	<title> Consumabili </title> 
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
+		<title> Consumabili </title> 
 	</head>
 	<body  align="center">
 		<div style="display:grid; grid-template-columns: auto auto auto; justify-items:center; align-items:center; gap: 5px;">

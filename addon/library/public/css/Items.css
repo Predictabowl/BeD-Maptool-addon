@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Homemade+Apple&family=Macondo&display=swap');
+
 a {
   text-decoration: none;
   color: blue;
@@ -26,7 +28,7 @@ a:active {
 }
 
 .pagina-libro {
-  font-family: "Morris Roman";
+  font-family: "Macondo", 'Georgia', serif;
   text-align: left;
   font-size: 20px;
   margin: 1rem;
@@ -46,7 +48,7 @@ a:active {
 }
 
 .manoscritto {
-  font-family: "Satisfy";
+  font-family: "Homemade Apple", 'Segoe Script', cursive;
 }
 
 .pagina-libro footer {
@@ -64,7 +66,7 @@ a:active {
 }
 
 .titoloLibro {
-  font-family: "Dumbledor 1";
+  font-family: "Almendra", 'Palatino Linotype', 'Book Antiqua', serif;
   text-align: center;
   color: #5a3a1a;
   font-size: 32px;

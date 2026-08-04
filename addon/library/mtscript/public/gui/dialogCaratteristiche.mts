@@ -11,7 +11,7 @@
 
 [dialog5(sDialog, "width=520; height=280; temporary=1; closebutton=1; noframe=1"):{
 	<html>
-	<head> 
+	<head>
 		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
 		<title> Caratteristiche </title>
 		<style>[r: "

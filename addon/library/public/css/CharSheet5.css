@@ -1,14 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Metamorphous&display=swap');
+
 form {
 	text-align:center;
-}
-@font-face {
-	font-family: "Vecna";
-	src: local("Vecna"), url("lib://it.aldinucci.piero.bed.maptool.ruleset/fonts/Vecna.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "EB Garamond";
-	src: local("EB Garamond"), url("lib://it.aldinucci.piero.bed.maptool.ruleset/fonts/EBGaramond-VariableFont_wght.ttf") format("truetype");
 }
 
 body {
@@ -35,12 +28,12 @@ input.tableSize{
 }
 
 .titleFont{
-	font-family:"Dumbledor 1";
+	font-family:"Almendra";
 	font-size:115%;
 }
 
 .relevantTitle{
-	font-family:"Dumbledor 1";
+	font-family:"Almendra";
 	font-size:34px;
 	color: maroon;
 }
@@ -50,7 +43,7 @@ a.relevantTitle:hover{
 }
 
 .sectionTitle{
-	font-family:"Dumbledor 1";
+	font-family:"Almendra";
 	font-size:26px;
 	text-shadow: 2px 2px 3px black;
 	color: gold;
@@ -68,12 +61,12 @@ a.sectionTitle:hover{
 }
 
 .spellFont{
-	font-family:"Vecna";
+	font-family:"Metamorphous";
 	font-size: 18px;
 }
 
 .spellTitle{
-	font-family:"Vecna";
+	font-family:"Metamorphous";
 	font-size: 24px;
 	font-weight:bold;
 	margin: 10px;
@@ -113,7 +106,7 @@ table.spellData{
 	margin-left:auto; margin-right:auto;
 }
 
-.genericTable th{ background-color: #113311; color: #FFFFFF; border:2px solid black; font-family:"Dumbledor 1"; font-size:21px;}
+.genericTable th{ background-color: #113311; color: #FFFFFF; border:2px solid black; font-family:"Almendra"; font-size:21px;}
 
 
 .pulsanteTondo{padding: 3px; height: 32px; width: 32px;}

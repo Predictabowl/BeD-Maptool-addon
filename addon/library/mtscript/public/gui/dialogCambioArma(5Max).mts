@@ -76,7 +76,7 @@
 [dialog5(sDialog, strformat("temporary=0; width=%{iLarg}; height=%{iAltezza}; closebutton=0")):{
 <html>
 
-<head> 
+<head>
 	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title> Abilità di Classe</title> 
 	<script>

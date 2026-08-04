@@ -9,9 +9,9 @@
 
 [Dialog("FrameManager"):{
 <html>
-<head
-<link rel="stylesheet" type="text/css" href="CharSheet_css@[r: getMacroLocation()]">>
-<title> Scheda PG </title>
+<head>
+    <link rel="stylesheet" type="text/css" href="CharSheet_css@[r: getMacroLocation()]">>
+    <title> Scheda PG </title>
 </head>
 <body>
 <h2 class="dataCentered">  [r: getName(target)] </h2>
