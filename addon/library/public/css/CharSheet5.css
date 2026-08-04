@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Metamorphous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=New+Rocker&family=Yeseva+One&display=swap');
 
 form {
-	text-align:center;
+	text-align: center;
 }
 
 body {
@@ -9,124 +9,206 @@ body {
 	font-size: 18px;
 }
 
-input{
-	font-family:"EB Garamond";
+input {
+	font-family: "EB Garamond";
 	font-size: 16px;
 }
 
-table{
-	font-size:18px;
+table {
+	font-size: 18px;
 }
 
-button{
-	font-family:"EB Garamond";
+button {
+	font-family: "EB Garamond";
 	font-size: 16px;
 }
 
-input.tableSize{
-	width:95px;
+input.tableSize {
+	width: 95px;
 }
 
-.titleFont{
-	font-family:"Almendra";
-	font-size:115%;
+.titleFont {
+	font-family: "Yeseva One";
+	font-size: 115%;
 }
 
-.relevantTitle{
-	font-family:"Almendra";
-	font-size:34px;
+.relevantTitle {
+	font-family: "Yeseva One";
+	font-size: 34px;
 	color: maroon;
 }
 
-a.relevantTitle:hover{
+a.relevantTitle:hover {
 	color: red;
 }
 
-.sectionTitle{
-	font-family:"Almendra";
-	font-size:26px;
+.sectionTitle {
+	font-family: "Yeseva One";
+	font-size: 26px;
 	text-shadow: 2px 2px 3px black;
 	color: gold;
 }
 
-a.sectionTitle:hover{
+a.sectionTitle:hover {
 	color: yellow;
 }
 
-.sectionbox{
+.sectionbox {
 	border: 3px ridge;
-	padding:0.5rem;
+	padding: 0.5rem;
 	margin-right: 1rem;
 	margin-left: 1rem;
 }
 
-.spellFont{
-	font-family:"Metamorphous";
+.spellFont {
+	font-family: "New Rocker";
 	font-size: 18px;
 }
 
-.spellTitle{
-	font-family:"Metamorphous";
+.spellTitle {
+	font-family: "New Rocker";
 	font-size: 24px;
-	font-weight:bold;
+	font-weight: normal;
 	margin: 10px;
 }
 
 .description {
-	text-align:left;
+	text-align: left;
 }
 
 .table-data {
 	max-width: 120px;
 	padding-left: 5px;
 	padding-right: 5px;
-	font-family:"EB Garamond semibold";
+	font-family: "EB Garamond semibold";
 }
 
-select{
+select {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-h1 {font-size: 160%;}
-h2 {font-size: 140%;}
-h3 {font-size: 120%;}
-h4 {font-size: 90%;}
-
-strong{font-size: 110%;}
-
-table.center{margin-left:auto; margin-right:auto; border-collapse:collapse; margin-top:0;}
-table.centerNoCollapse{margin-left:auto; margin-right:auto;}
-table.scrollBarSpace{margin-right:15px;}
-table.spellData{
-	font-family: "EB Garamond";
-	font-size: 20px;
-	text-align:left;
-	background-color: #FFFFFF;
-	margin-left:auto; margin-right:auto;
+h1 {
+	font-size: 160%;
 }
 
-.genericTable th{ background-color: #113311; color: #FFFFFF; border:2px solid black; font-family:"Almendra"; font-size:21px;}
+h2 {
+	font-size: 140%;
+}
+
+h3 {
+	font-size: 120%;
+}
+
+h4 {
+	font-size: 90%;
+}
+
+strong {
+	font-size: 110%;
+}
+
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	margin-top: 0;
+}
+
+table.centerNoCollapse {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.scrollBarSpace {
+	margin-right: 15px;
+}
+
+table.spellData {
+	font-family: "EB Garamond";
+	font-size: 20px;
+	text-align: left;
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.genericTable th {
+	background-color: #113311;
+	color: #FFFFFF;
+	border: 2px solid black;
+	font-family: "Yeseva One";
+	font-size: 18px;
+}
 
 
-.pulsanteTondo{padding: 3px; height: 32px; width: 32px;}
-.pulsanteTondo:hover{padding: 0px; height: 38px; width: 38px;}
-.pulsanteTondo:active{padding: 4px; height: 30px; width: 30px;}
+.pulsanteTondo {
+	padding: 3px;
+	height: 32px;
+	width: 32px;
+}
+
+.pulsanteTondo:hover {
+	padding: 0px;
+	height: 38px;
+	width: 38px;
+}
+
+.pulsanteTondo:active {
+	padding: 4px;
+	height: 30px;
+	width: 30px;
+}
 
 
-.pulsanteUI{padding: 2px; height: 36px; width: 36px; }
-.pulsanteUI:hover{padding: 0px; height: 50px; width: 50px; cursor:pointer;}
-.pulsanteUI:active{padding: 8px; height: 34px; width: 34px; cursor:pointer;}
+.pulsanteUI {
+	padding: 2px;
+	height: 36px;
+	width: 36px;
+}
 
-.pulsanteGrande{margin: 0px; height: 56px; width: 56px;}
-.pulsanteGrande:hover{color: rgb(0,0,0,0.5);opacity: 1.0; filter: drop-shadow(8px 8px 10px gray); filter:saturate(200%); filter: contrast(140%);filter: brightness(120%); cursor:pointer;}
-.pulsanteGrande:active{padding: 7px; height: 45px; width: 45px; cursor:pointer;}
+.pulsanteUI:hover {
+	padding: 0px;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.pulsanteUI:active {
+	padding: 8px;
+	height: 34px;
+	width: 34px;
+	cursor: pointer;
+}
+
+.pulsanteGrande {
+	margin: 0px;
+	height: 56px;
+	width: 56px;
+}
+
+.pulsanteGrande:hover {
+	color: rgb(0, 0, 0, 0.5);
+	opacity: 1.0;
+	filter: drop-shadow(8px 8px 10px gray);
+	filter: saturate(200%);
+	filter: contrast(140%);
+	filter: brightness(120%);
+	cursor: pointer;
+}
+
+.pulsanteGrande:active {
+	padding: 7px;
+	height: 45px;
+	width: 45px;
+	cursor: pointer;
+}
 
 a[title].tooltip:hover {
 	transition-delay: 0.2s;
 }
 
-.tooltiptext{
+.tooltiptext {
 	visibility: hidden;
 	width: 120px;
 	background-color: black;
@@ -139,102 +221,323 @@ a[title].tooltip:hover {
 }
 
 
-.spellCastButton{padding: 3px; height: 29px; width: 29px;}
-.spellCastButton:hover{padding: 0px; height: 35px; width: 35px;}
-.spellCastButton:active{padding: 3px; height: 29px; width: 29px;}
+.spellCastButton {
+	padding: 3px;
+	height: 29px;
+	width: 29px;
+}
 
-a.rimuoviLink{color:red;}
-a.rimuoviLink:hover{opacity: 1;	background:black;}
+.spellCastButton:hover {
+	padding: 0px;
+	height: 35px;
+	width: 35px;
+}
 
-.spellCast{opacity: 1; color:white;}
-.spellCast:hover{opacity: 1; color:black;}
-.spellCast:active{opacity: 1; color:red;}
+.spellCastButton:active {
+	padding: 3px;
+	height: 29px;
+	width: 29px;
+}
+
+a.rimuoviLink {
+	color: red;
+}
+
+a.rimuoviLink:hover {
+	opacity: 1;
+	background: black;
+}
+
+.spellCast {
+	opacity: 1;
+	color: white;
+}
+
+.spellCast:hover {
+	opacity: 1;
+	color: black;
+}
+
+.spellCast:active {
+	opacity: 1;
+	color: red;
+}
 
 
-a{text-decoration: none; color:blue;}
-a:hover{color:purple;}
-a:active{color:red;}
-a.spellLink{color: white;}
+a {
+	text-decoration: none;
+	color: blue;
+}
 
-.activeButton{
+a:hover {
+	color: purple;
+}
+
+a:active {
+	color: red;
+}
+
+a.spellLink {
+	color: white;
+}
+
+.activeButton {
 	background-color: lime;
 }
 
-th.tabHeaderLink{color: #FFFF80;}
-th.tabHeaderLink:hover{color: #113311; background-color: #FFFF80;}
-th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
+th.tabHeaderLink {
+	color: #FFFF80;
+}
+
+th.tabHeaderLink:hover {
+	color: #113311;
+	background-color: #FFFF80;
+}
+
+th.tabHeaderLink:active {
+	color: #FFFF00;
+	background-color: darkred;
+}
 
 .recupero-container {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .recupero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  
-  /* Background with 50% opacity (rgba) */
-  background-color: rgba(0, 123, 255, 0.5); 
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  
-  /* Center the number inside the overlay */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  /* Match the input's border radius if it has one */
-  border-radius: 4px; 
-  
-  /* CRITICAL: Allows clicks to pass through to the input underneath */
-  pointer-events: none; 
-  
-  /* Optional: Smooth transition if you want to hide it on focus */
-  transition: opacity 0.2s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	/* Background with 50% opacity (rgba) */
+	background-color: rgba(0, 123, 255, 0.5);
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+
+	/* Center the number inside the overlay */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	/* Match the input's border radius if it has one */
+	border-radius: 4px;
+
+	/* CRITICAL: Allows clicks to pass through to the input underneath */
+	pointer-events: none;
+
+	/* Optional: Smooth transition if you want to hide it on focus */
+	transition: opacity 0.2s ease;
 }
 
-.center {margin-left:auto; margin-right:auto;}
-.oddRow { background-color: #FFFFFF; text-align:center; }
-.evenRow { background-color: #FFFFE6; text-align:center; }
-.selectedRow { background-color: #000000; color: #FFFFFF;}
-.abilitaOn{font-weight: bold; color:red; background-color:red;}
-.abilitaAutocast{border:2px dashed black;}
-.AbAttiva { background-color: #FFFF66; text-align:center; padding:1px;}
-.AbAttiva:hover { background-color:yellow; border:1px solid; padding:0; cursor: pointer;}
-.AbEroica { background-color: #ff3333; text-align:center; font-weight: bold;}
-.AbEroica:hover { background-color: red; border:1px solid; padding:0; cursor: pointer;}
-.AbASecondaria { background-color: #FFFF66; text-align:center; font-weight: bold;}
-.AbPeculiare{ background-color: #6CD05C; text-align:center; padding:1px;}
-.AbPeculiare:hover{ background-color: #59EA43; border:1px solid; padding:0; cursor: pointer;}
-.AbPassiva { background-color: #99CCFF; text-align:center; font-weight: bold;}
-.OFFENSIVO { background-color: #800000; color:white; text-align:left; padding:1px;}
-.OFFENSIVO:hover { background-color: #B30000; cursor:pointer; padding:0px; border: 1px solid black;}
-.MUTAFORMA { background-color: #CC6600; color:white; text-align:left; padding:1px;}
-.MUTAFORMA:hover { background-color: #FF8000; cursor:pointer; padding:0px; border: 1px solid black;}
-.MARCHIO { background-color: #666666; color:white; text-align:left; padding:1px;}
-.MARCHIO:hover { background-color: #808080; cursor:pointer; padding:0px; border: 1px solid black;}
-.CONTROLLO { background-color: #008080; color:white; text-align:left; padding:1px;}
-.CONTROLLO:hover { background-color: #00B3B3; cursor:pointer; padding:0px; border: 1px solid black;}
-.MALATTIA { background-color: #666600; color:white; text-align:left; padding:1px;}
-.MALATTIA:hover { background-color: #999900; cursor:pointer; padding:0px; border: 1px solid black;}
-.MALEDIZIONE { background-color: #4700B8; color:white; text-align:left; padding:1px;}
-.MALEDIZIONE:hover { background-color: #6200FF; cursor:pointer; padding:0px; border: 1px solid black;}
-.SUPPORTO { background-color: #0000FF; color:white; text-align:left; padding:1px;}
-.SUPPORTO:hover { background-color: #0040FF; cursor:pointer; padding:0px; border: 1px solid black;}
-.SERVITORE { background-color: #008000; color:white; text-align:left; padding:1px;}
-.SERVITORE:hover { background-color: #00B300; cursor:pointer; padding:0px; border: 1px solid black;}
-.dataCentered {text-align:center;}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
 
-.warning{font-weight:bold; color:red;}
+.oddRow {
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.evenRow {
+	background-color: #FFFFE6;
+	text-align: center;
+}
+
+.selectedRow {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.abilitaOn {
+	font-weight: bold;
+	color: red;
+	background-color: red;
+}
+
+.abilitaAutocast {
+	border: 2px dashed black;
+}
+
+.AbAttiva {
+	background-color: #FFFF66;
+	text-align: center;
+	padding: 1px;
+}
+
+.AbAttiva:hover {
+	background-color: yellow;
+	border: 1px solid;
+	padding: 0;
+	cursor: pointer;
+}
+
+.AbEroica {
+	background-color: #ff3333;
+	text-align: center;
+	font-weight: bold;
+}
+
+.AbEroica:hover {
+	background-color: red;
+	border: 1px solid;
+	padding: 0;
+	cursor: pointer;
+}
+
+.AbASecondaria {
+	background-color: #FFFF66;
+	text-align: center;
+	font-weight: bold;
+}
+
+.AbPeculiare {
+	background-color: #6CD05C;
+	text-align: center;
+	padding: 1px;
+}
+
+.AbPeculiare:hover {
+	background-color: #59EA43;
+	border: 1px solid;
+	padding: 0;
+	cursor: pointer;
+}
+
+.AbPassiva {
+	background-color: #99CCFF;
+	text-align: center;
+	font-weight: bold;
+}
+
+.OFFENSIVO {
+	background-color: #800000;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.OFFENSIVO:hover {
+	background-color: #B30000;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.MUTAFORMA {
+	background-color: #CC6600;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.MUTAFORMA:hover {
+	background-color: #FF8000;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.MARCHIO {
+	background-color: #666666;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.MARCHIO:hover {
+	background-color: #808080;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.CONTROLLO {
+	background-color: #008080;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.CONTROLLO:hover {
+	background-color: #00B3B3;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.MALATTIA {
+	background-color: #666600;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.MALATTIA:hover {
+	background-color: #999900;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.MALEDIZIONE {
+	background-color: #4700B8;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.MALEDIZIONE:hover {
+	background-color: #6200FF;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.SUPPORTO {
+	background-color: #0000FF;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.SUPPORTO:hover {
+	background-color: #0040FF;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.SERVITORE {
+	background-color: #008000;
+	color: white;
+	text-align: left;
+	padding: 1px;
+}
+
+.SERVITORE:hover {
+	background-color: #00B300;
+	cursor: pointer;
+	padding: 0px;
+	border: 1px solid black;
+}
+
+.dataCentered {
+	text-align: center;
+}
+
+.warning {
+	font-weight: bold;
+	color: red;
+}
 
 .descrizione {
-	font-family:"EB Garamond";
+	font-family: "EB Garamond";
 	font-size: 18px;
-	text-align:justify;
+	text-align: justify;
 	margin: 10px;
 	padding: 15px;
 	background-color: #FFFFFF;
@@ -242,24 +545,44 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 	overflow-y: scroll;
 }
 
-.centeredImg{
+.centeredImg {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
 }
 
-.manaFont{color:#0000FF;}
-.faticaFont{color:orange; }
-.tempoFont{color:darkgreen;}
-.azioneFont{color:red; }
-.toxicFont{color:magenta; }
-.mmFont{color:purple;}
-.ppFont{color:#b30000;}
+.manaFont {
+	color: #0000FF;
+}
+
+.faticaFont {
+	color: orange;
+}
+
+.tempoFont {
+	color: darkgreen;
+}
+
+.azioneFont {
+	color: red;
+}
+
+.toxicFont {
+	color: magenta;
+}
+
+.mmFont {
+	color: purple;
+}
+
+.ppFont {
+	color: #b30000;
+}
 
 
-.splitSpellList{
-/*	height: 68%;*/
+.splitSpellList {
+	/*	height: 68%;*/
 	width: 100%;
 	position: fixed;
 	z-index: 1;
@@ -268,7 +591,7 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 	overflow-y: scroll;
 }
 
-.splitSkillList{
+.splitSkillList {
 	height: 19%;
 	width: 98%;
 	position: fixed;
@@ -277,7 +600,7 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 	overflow-y: scroll;
 }
 
-.splitscheda{
+.splitscheda {
 	height: 90%;
 	width: 98%;
 	position: fixed;
@@ -287,110 +610,108 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 }
 
 
-.heroicBarBG{
+.heroicBarBG {
 	background-color: #000000;
-	text-align:center;
-	font-weight:bold;
-	font-size:16px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
 }
 
-.heroicBar{
-	background-color:#cc0000;
-	background: repeating-linear-gradient(
-		45deg,
-		#cc0000,
-		#cc0000 10px,
-	    #e60000 10px,
-        #e60000 20px
-	);
-	
-	color:white;
+.heroicBar {
+	background-color: #cc0000;
+	background: repeating-linear-gradient(45deg,
+			#cc0000,
+			#cc0000 10px,
+			#e60000 10px,
+			#e60000 20px);
+
+	color: white;
 }
 
-.heroicGlow{
-	 box-shadow: 0px 0px 20px 3px #ffd700;
+.heroicGlow {
+	box-shadow: 0px 0px 20px 3px #ffd700;
 }
 
-.toxicBarBG{
-	background-color:#339933;
-	text-align:center;
-	font-weight:bold;
-	font-size:16px;
+.toxicBarBG {
+	background-color: #339933;
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
 }
 
-.toxicBar{
-	background-color:#862d86;
-	color:white; 
+.toxicBar {
+	background-color: #862d86;
+	color: white;
 }
 
-.paperdoll-container{
+.paperdoll-container {
 	display: grid;
 	grid-template-columns: auto auto;
-	grid-column-gap:0px; 
-	grid-row-gap:0px; 
-	justify-content:space-between;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	justify-content: space-between;
 
 }
 
-.paperdoll-item{
-	width:52px;
-	height:52px;
-	padding:2px;
+.paperdoll-item {
+	width: 52px;
+	height: 52px;
+	padding: 2px;
 	margin: 4px;
-	border:1px solid white;
-	color:white;
+	border: 1px solid white;
+	color: white;
 	font-size: 12px;
 }
 
-.paperdoll-item:hover{
+.paperdoll-item:hover {
 	border: 1px solid blue;
 }
 
-.drag-paperdoll-item{
+.drag-paperdoll-item {
 	border: 1px solid green;
-	background-color:rgba(0,128,0,0.6);
+	background-color: rgba(0, 128, 0, 0.6);
 }
 
-.nodrag-paperdoll-item{
+.nodrag-paperdoll-item {
 	border: 1px solid red;
-	background-color:rgba(255,0,0,0.6);
+	background-color: rgba(255, 0, 0, 0.6);
 }
 
-.inventory-container{
+.inventory-container {
 	display: grid;
 	grid-template-columns: repeat(5, auto);
-	grid-column-gap:4px; 
-	grid-row-gap:4px; 
-	justify-content:start;
-	align-content:start;
+	grid-column-gap: 4px;
+	grid-row-gap: 4px;
+	justify-content: start;
+	align-content: start;
 	border: 1px solid black;
 	padding: 5px;
-	overflow-y:scroll;
+	overflow-y: scroll;
 }
 
 .itemInfo {
-	font-family:"EB Garamond";
-	font-size:16px;
-	text-align:left;
-	background-color:white;
+	font-family: "EB Garamond";
+	font-size: 16px;
+	text-align: left;
+	background-color: white;
 	box-shadow: inset 0px 0px 30px 5px silver;
 }
 
-.grid-container{
+.grid-container {
 	display: grid;
 	gap: 5px;
-	margin:10px; 
-	padding:5px; 
+	margin: 10px;
+	padding: 5px;
 	width: 64px;
-	border:1px solid black;
+	border: 1px solid black;
 }
 
-.test-drag{
+.test-drag {
 	border: 1px solid blue;
-	background-color:cyan;
+	background-color: cyan;
 }
 
-.div-stile{
+.div-stile {
 	background-color: black;
 	color: palegreen;
 	border: 1px solid palegreen;
@@ -402,25 +723,26 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 	border: 1px solid black;
 }
 
-.div-stile:active{
+.div-stile:active {
 	background-color: lightgreen;
 	color: black;
 	border: 1px solid black;
 }
 
-.div-list-window{
-	border:1px solid black;
-	position:absolute;
+.div-list-window {
+	border: 1px solid black;
+	position: absolute;
 	background-color: white;
-	margin-left:auto;
-	margin-right:auto;
+	margin-left: auto;
+	margin-right: auto;
 }
-.div-list-item{
-	background-color:white;
+
+.div-list-item {
+	background-color: white;
 	color: black;
 }
 
-.div-list-item:hover{
+.div-list-item:hover {
 	background-color: black;
 	color: palegreen;
 }
@@ -428,23 +750,23 @@ th.tabHeaderLink:active{color: #FFFF00; background-color: darkred;}
 
 /* Da qua in poi DA FARE */
 
-.overlay-list-window{
-	border:1px solid black;
-	position:absolute;
-	display:none;
+.overlay-list-window {
+	border: 1px solid black;
+	position: absolute;
+	display: none;
 	background-color: white;
-	margin-left:auto;
-	margin-right:auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	z-index:1;
-	top:-50px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	top: -50px;
 }
 
-.overlay-list-trigger{
-  position: relative;
-  display: inline-block;
+.overlay-list-trigger {
+	position: relative;
+	display: inline-block;
 }
 
-.overlay-list-trigger:hover .overlay-list-window{
-	display:block;
+.overlay-list-trigger:hover .overlay-list-window {
+	display: block;
 }

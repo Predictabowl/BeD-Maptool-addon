@@ -49,7 +49,7 @@ Il che vuol dire se il safetycheck fa un abort non si ha un clean corretto degli
 [h: bFlag = macro.return]
 
 [h, if(bFlag), code:{
-	[macro("events/eventInstaller@this"): json.set("","name","spellCastingInterruption","macroName","events/SpellCastingHittedInterrupt@it.aldinucci.piero.bed.maptool.ruleset","event","On_Hitted","token",source)]
+	[macro("events/eventInstaller@this"): json.set("","name","spellCastingInterruption","macroName","events/SpellCastingHittedInterrupt@lib:it.aldinucci.piero.bed.maptool.ruleset","event","On_Hitted","token",source)]
 
 	[macro("powers/isHarmful@this"): sItemName]
 	[if(macro.return == 1), code:{

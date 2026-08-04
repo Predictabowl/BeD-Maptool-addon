@@ -95,11 +95,11 @@
 <head> 
 	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
 	<title>Equipaggiamento</title>
-	<style>[r:"
+	<style>[r:'
 		.tooltipBox {
 			position: absolute;
 			display:inline-block;
-			font-family: Vecna;
+			font-family: "New Rocker";
 			font-weight:bold;
 			font-size: 0.875em;
 			position: absolute;
@@ -113,7 +113,7 @@
 		.hiddenBox {
 			display:none;
 		}
-		"]
+		']
 	</style>
 </head>
 <body align="center">

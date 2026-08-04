@@ -11,10 +11,10 @@
 	[oParam = json.set("","spellNameAtt",json.get(oEventParam,"spellName"))]
 }]
 
-[macro("events/eventInstaller@this"): json.set("","token",source,"event","On_Damaged","name","SpellCastingDamageInterrupt","macroName","events/SpellCastingDamageInterrupt@it.aldinucci.piero.bed.maptool.ruleset","macroParam",oParam)]
+[macro("events/eventInstaller@this"): json.set("","token",source,"event","On_Damaged","name","SpellCastingDamageInterrupt","macroName","events/SpellCastingDamageInterrupt@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oParam)]
 
 [h: oSafetyParam = json.set("","origine",target)]
-[macro("events/eventInstaller@this"): json.set("","token",target,"event","On_Action_End","name","SpellCastingInterruptSafety","macroName","events/SpellCastingInterruptSafety@it.aldinucci.piero.bed.maptool.ruleset","macroParam",oSafetyParam)]
-[macro("events/eventInstaller@this"): json.set("","token",target,"event","On_Action_Interrupt","name","SpellCastingInterruptSafety","macroName","events/SpellCastingInterruptSafety@it.aldinucci.piero.bed.maptool.ruleset","macroParam",oSafetyParam)]
+[macro("events/eventInstaller@this"): json.set("","token",target,"event","On_Action_End","name","SpellCastingInterruptSafety","macroName","events/SpellCastingInterruptSafety@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oSafetyParam)]
+[macro("events/eventInstaller@this"): json.set("","token",target,"event","On_Action_Interrupt","name","SpellCastingInterruptSafety","macroName","events/SpellCastingInterruptSafety@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oSafetyParam)]
 
 [h: macro.return = ""]

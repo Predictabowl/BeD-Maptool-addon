@@ -28,6 +28,6 @@
 [sDmgLP = json.get(oLocalParam,"dannoLP")]
 
 [oLocalParam = json.set(oLocalParam,"idArma",sArma)]
-[eventInstaller(oToken,sEvent,sNomeInc,"items/eventDannoElementale@it.aldinucci.piero.bed.maptool.ruleset",oLocalParam)]
+[eventInstaller(oToken,sEvent,sNomeInc,"items/eventDannoElementale@lib:it.aldinucci.piero.bed.maptool.ruleset",oLocalParam)]
 
 

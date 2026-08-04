@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Homemade+Apple&family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Macondo&family=Yeseva+One&display=swap');
 
 a {
   text-decoration: none;
@@ -66,7 +66,7 @@ a:active {
 }
 
 .titoloLibro {
-  font-family: "Almendra", 'Palatino Linotype', 'Book Antiqua', serif;
+  font-family: "Yeseva One", 'Palatino Linotype', 'Book Antiqua', serif;
   text-align: center;
   color: #5a3a1a;
   font-size: 32px;

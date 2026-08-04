@@ -34,5 +34,5 @@
 	}]
 	[oParam = json.set(oParam,"arma",iArma)]
 
-	[eventInstaller(oToken,"On_Hit",sNomeInc,"items/eventDannoElementale@it.aldinucci.piero.bed.maptool.ruleset",oParam)]
+	[eventInstaller(oToken,"On_Hit",sNomeInc,"items/eventDannoElementale@lib:it.aldinucci.piero.bed.maptool.ruleset",oParam)]
 }]

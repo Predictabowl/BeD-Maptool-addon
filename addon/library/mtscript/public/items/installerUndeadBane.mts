@@ -11,5 +11,5 @@
 	[return(0,"")]
 }]
 
-[h: eventInstaller(oToken, "On_Attack", sEventId, "items/undeadBane@it.aldinucci.piero.bed.maptool.ruleset", oParGlobali)]
+[h: eventInstaller(oToken, "On_Attack", sEventId, "items/undeadBane@lib:it.aldinucci.piero.bed.maptool.ruleset", oParGlobali)]
 [h: macro.return = ""]

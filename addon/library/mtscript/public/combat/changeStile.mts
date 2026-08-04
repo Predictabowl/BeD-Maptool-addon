@@ -52,7 +52,7 @@
 [macro("combat/setStile@this"): macro.args]
 
 [h, if(isStileDistanza(oToken)), code:{
-	[eventInstaller(oToken,"On_Attack", "PenalitaStileDistanza","events/PenalitaAttaccoDistanza@it.aldinucci.piero.bed.maptool.ruleset")]
+	[eventInstaller(oToken,"On_Attack", "PenalitaStileDistanza","events/PenalitaAttaccoDistanza@lib:it.aldinucci.piero.bed.maptool.ruleset")]
 	[Num_Attacchi_Opp = Num_Attacchi_Opp - 1]
 }]
 

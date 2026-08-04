@@ -1,16 +1,33 @@
 # Font used
+
+## Change fonts
+* Vecna -> Alemendra SC
+* Eb Garamond =
+* Dumbledor -> Yeseva One
+* Satisfy -> Homemade Apple
+* Morris Roman -> Macondo
+
 ## CharSheet55.css
 ``` html
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Metamorphous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Yeseva+One&display=swap" rel="stylesheet">
 ```
-or
-```
-@import url('https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Metamorphous&display=swap');
 
+or
+
+``` css
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Yeseva+One&display=swap');
+</style>
+```
 
 ## items.css
+``` css
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Macondo&family=Yeseva+One&display=swap');
+</style>
+```
 
 ## Alternatives to Morris Roman (Celtic / medieval uncial look)
 Morris Roman is based on William Morris's 1893 Kelmscott Press lettering — rounded, ornate, semi-uncial capitals with a hand-lettered medieval feel. Closest Google Fonts matches:
