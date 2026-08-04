@@ -12,7 +12,7 @@
 	[h: iPP = json.get(macro.args,"PP")]
 	[if(!isNumber(iPP)): iPP = 0]
 };{
-	[broadcast("Deprecated Use of array argument in payAction@Lib:Basic. Use Objects instead")]
+	[broadcast("Deprecated Use of array argument in core/payAction@this. Use Objects instead")]
 	[target = arg(0)]
 	[h, if(argCount()>2), code:{
 		[iPA= arg(1)]

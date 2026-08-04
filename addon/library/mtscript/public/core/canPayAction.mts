@@ -13,7 +13,7 @@
 	[h: iPP = json.get(macro.args,"PP")]
 	[if(!isNumber(iPP)): iPP = 0]
 };{
-	[broadcast("Deprecated use of array argument in canPayAction@Lib:Basic. Use Objects instead")]
+	[broadcast("Deprecated use of array argument in core/canPayAction@this. Use Objects instead")]
 	[h: target = json.get(macro.args,0)]
 	[h: azione = json.get(macro.args,1)]
 	[h: fatica = json.get(macro.args,2)]

@@ -11,7 +11,7 @@
 
 [h: alfa = floor(getTokenFacing(target)/90)]
 [h: param = json.append(abs(alfa),2)]
-[macro("mod@Lib:Mat"):param]
+[macro("utility/mod@this"):param]
 [h: lambda = macro.return]
 
 [h: C1 = (X+Y)*(X-Y) * (-1)^lambda]

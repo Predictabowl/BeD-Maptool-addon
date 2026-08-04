@@ -1,4 +1,4 @@
-[h: broadcast("Deprecated: checkActionResources@Lib:Basic, use canPayAction instead")]
+[h: broadcast("Deprecated: core/checkActionResources@this, use canPayAction instead")]
 [h: target = arg(0)]
 [h: azione = arg(1)]
 [h: fatica = arg(2)]

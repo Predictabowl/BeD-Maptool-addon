@@ -2,7 +2,7 @@
     "events": [
         {
             "name": "onInit",
-            "mts": "onCampaignLoad"
+            "mts": "CampaignInitialize"
         }
     ],
     "legacyEvents": [

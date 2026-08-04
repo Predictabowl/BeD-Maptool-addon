@@ -1,8 +1,8 @@
 [h: target = macro.args]
 
-[macro("class-skills/getAbilitaClasseNormali@this"): json.append(target,"[PECULIARE]")]
+[macro("class_skills/getAbilitaClasseNormali@this"): json.append(target,"[PECULIARE]")]
 [h: lAbilita =  macro.return]
-[macro("class-skills/getAbilitaClasseNormali@this"): json.append(target,"[ATTIVA]")]
+[macro("class_skills/getAbilitaClasseNormali@this"): json.append(target,"[ATTIVA]")]
 [h: lAbilita =  json.merge(lAbilita,macro.return)]
 
 [h: sReturn = "<table class='centerNoCollapse' ><tr class='genericTable'><td/><td/><th>PF</th><th>PA</th><th>PP</th><th>MM</th></tr>"]

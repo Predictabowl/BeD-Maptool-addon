@@ -8,15 +8,15 @@ Lib:Movement -> movement
 Lib:Meccaniche -> mechanics
 Lib:GetSet -> crud
 Lib:Scheda -> gui
-Lib:AbilitaClasse -> class-skills
+Lib:AbilitaClasse -> class_skills
 Lib:EquipEffect-> items
 Lib:Mat -> utility
 Lib:GlobalVar -> utility
+Lib:OggettiUsabili -> consumables
 
 
 # Next in line to be mapped
-Lib:OggettiUsabili -> consumables
-
+Lib:OggettiInterattivi -> interactive
 
 # Not Mapped yet 
 Lib:Sounds
@@ -27,3 +27,6 @@ powers library "addSpellInLib" need to save data into the token, must be adapted
 
 # CSS
 "lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css"
+
+# Library
+lib:it.aldinucci.piero.bed.maptool.ruleset

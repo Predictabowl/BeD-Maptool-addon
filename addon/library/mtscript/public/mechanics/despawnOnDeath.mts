@@ -9,6 +9,6 @@
 	[macro("core/getEffettoServitore@this"): oOwner]
 	[sParams = json.append(oOwner, source, macro.return)]
 	[macro("events/addDelayedSafeMacro@this"): json.append(sMacro,sParams)]
-	[macro("class-skills/sadismoDiabolico@this"): oOwner]
+	[macro("class_skills/sadismoDiabolico@this"): oOwner]
 }]
 [h: macro.return = ""]

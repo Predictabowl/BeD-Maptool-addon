@@ -17,17 +17,17 @@
 	[sLancioLink = ""]
 }]
 
-[macro("class-skills/getMotiviConosciuti@this"): oToken]
+[macro("class_skills/getMotiviConosciuti@this"): oToken]
 [h, if(!json.isEmpty(macro.return)), code: {
 	[h: sScegliMotivoLink = strformat("<a href='%s'><img src='%s' class='pulsanteUI' title='Seleziona Motivo'/></a>",
-		macrolinkText("class-skills/setMotivoAttivo@this","none",json.append("",oToken)),"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Sonata_Icon.png")]
+		macrolinkText("class_skills/setMotivoAttivo@this","none",json.append("",oToken)),"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Sonata_Icon.png")]
 };{
 	[h: sScegliMotivoLink = ""]
 }]
 
-[macro("class-skills/hasNecrofuria@this"): oToken]
+[macro("class_skills/hasNecrofuria@this"): oToken]
 [h, if(macro.return), code:{
-	[macro("class-skills/isNecrofuriaActive@this"): oToken]
+	[macro("class_skills/isNecrofuriaActive@this"): oToken]
 	[if(macro.return): sNecroFClass = " pActiveBorder"; sNecroFClass = ""]
 	[sNecrofuriaLink = strformat("<a onclick='toggleNecrofuria()'><img src='%s' class='pulsanteUI%{sNecroFClass}' id='necrofuria-button' title='Attiva Necrofuria'/></a>",
 		"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/necrofury.png")]
@@ -35,9 +35,9 @@
 	[sNecrofuriaLink = ""]
 }]
 
-[macro("class-skills/hasSovSpiritico@this"): oToken]
+[macro("class_skills/hasSovSpiritico@this"): oToken]
 [h, if(macro.return), code:{
-	[macro("class-skills/isSovSpiriticoActive@this"): oToken]
+	[macro("class_skills/isSovSpiriticoActive@this"): oToken]
 	[if(macro.return): sSovSpiClass = " pActiveBorder"; sSovSpiClass = ""]
 	[sSovSpiLink = strformat("<a onclick='toggleSovSpiritico()'><img src='%s' class='pulsanteUI%{sSovSpiClass}' id='sov-spiritico-button' title='Attiva Sovraccarico Spiritico'/></a>",
 		"lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/spiritic_overload.png")]
@@ -55,9 +55,9 @@
 	[sSwapToken = macro.return]
 }]
 
-[h, macro("class-skills/getAbilitaInUso@this"): json.append(oToken, "PECULIARE")]
+[h, macro("class_skills/getAbilitaInUso@this"): json.append(oToken, "PECULIARE")]
 [h: bPeculiareActive = listCount(macro.return) > 0]
-[h, macro("class-skills/getAbilitaInUso@this"): json.append(oToken, "ATTIVA")]
+[h, macro("class_skills/getAbilitaInUso@this"): json.append(oToken, "ATTIVA")]
 [h: bAttivaActive = listCount(macro.return) > 0]
 [h, if(bPeculiareActive), code:{
 	[if(bAttivaActive): sAbilitaClass = "pBothSkills"; sAbilitaClass = "pPeculiareSkill"]

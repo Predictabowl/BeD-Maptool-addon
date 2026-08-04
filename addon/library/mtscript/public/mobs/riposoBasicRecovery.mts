@@ -1,7 +1,7 @@
 [h: oToken = arg(0)]
 
 [h: switchToken(oToken)]
-[macro("class-skills/DisattivaTutteAbilita@this"):oToken]
+[macro("class_skills/DisattivaTutteAbilita@this"):oToken]
 [h: PA = PA_Max]
 [h: MM = MM_Max]
 [h: PP = PP_Max]

@@ -13,8 +13,8 @@
 	[if(getPropertyType(id) == "Basic"), code:{
 		[h: switchToken(id)]
 		[macro("powers/setAnimeToDefault@this"):id]
-		[macro("delAutocastAbilita@Lib:AbilitaClasse"): id]
-		[macro("delCaricheSentenza@Lib:AbilitaClasse"): id]
+		[macro("class_skills/delAutocastAbilita@this"): id]
+		[macro("class_skills/delCaricheSentenza@this"): id]
 		[h: iniz = getProperty("Tiro_Iniziativa")]
 		[h: setTokenSnapToGrid(1)]
 		[macro("utility/rollIniziativa@this"): iniz]

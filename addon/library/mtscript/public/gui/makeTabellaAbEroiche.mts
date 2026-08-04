@@ -1,6 +1,6 @@
 [h: target = macro.args]
 
-[macro("class-skills/getAbilitaEroiche@this"): target]
+[macro("class_skills/getAbilitaEroiche@this"): target]
 [h: lAbilita =  macro.return]
 
 [h, if(json.isEmpty(lAbilita)): return(0,"")]

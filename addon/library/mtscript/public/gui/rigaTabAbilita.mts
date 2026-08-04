@@ -10,9 +10,9 @@
 
 [h: sTipo = upper(getLibProperty("tipo",sLibAbilita))]
 [h: sNome = getLibProperty("nome_decorativo",sLibAbilita)]
-[macro("class-skills/isAbilitaInUso@this"): oAbParam]
+[macro("class_skills/isAbilitaInUso@this"): oAbParam]
 [h: sInUso = macro.return]
-[macro("class-skills/getAutocastAbilita@this"): oAbParam]
+[macro("class_skills/getAutocastAbilita@this"): oAbParam]
 [h: bAutocast = macro.return]
 
 
@@ -44,13 +44,13 @@ default:{
 [h, if(sInUso): sAttiva = "abilitaOn"; sAttiva=""]
 [h, if(bAutocast): sAutocast = "abilitaAutocast"; sAutocast = ""]
 [h: sActive = strformat("class='%s %s'", sAttiva, sAutocast)]
-[macro("class-skills/getAbilitaPF@this"): json.append(target,sLibAbilita)]
+[macro("class_skills/getAbilitaPF@this"): json.append(target,sLibAbilita)]
 [h: iPF = macro.return]
-[macro("class-skills/getAbilitaPA@this"): json.append(target,sLibAbilita)]
+[macro("class_skills/getAbilitaPA@this"): json.append(target,sLibAbilita)]
 [h: iPA = macro.return]
-[macro("class-skills/getAbilitaPP@this"): json.append(target,sLibAbilita)]
+[macro("class_skills/getAbilitaPP@this"): json.append(target,sLibAbilita)]
 [h: iPP = macro.return]
-[macro("class-skills/getAbilitaMM@this"): json.append(target,sLibAbilita)]
+[macro("class_skills/getAbilitaMM@this"): json.append(target,sLibAbilita)]
 [h: iMM = macro.return]
 
 [h: sJScriptParam = strformat('"%{sLibAbilita}"')]

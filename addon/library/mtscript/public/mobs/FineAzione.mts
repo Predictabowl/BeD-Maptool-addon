@@ -17,5 +17,5 @@
 [h, if(sMsg != ""): appendMessaggio(source,"endOfActionMsg",strformat("<br>%{sMsg}"))]
 
 [macro("mobs/clearAzione@this"):source]
-[macro("class-skills/DisattivaAllColpoSingolo@this"): source]
+[macro("class_skills/DisattivaAllColpoSingolo@this"): source]
 [macro("events/runDelaySafeMacros@this"): 0]

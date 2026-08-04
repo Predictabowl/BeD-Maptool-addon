@@ -6,8 +6,8 @@
 [h, foreach(id, oTokenList), code:{
 	[h: target = json.get(id,"tokenId")]
 	[macro("core/endRoundEvents@this"):target]
-	[macro("RoundUpdateAbilita@Lib:AbilitaClasse"):target]
-	[macro("endRoundPuntiEroe@Lib:AbilitaClasse"):target]
+	[macro("class_skills/RoundUpdateAbilita@this"):target]
+	[macro("class_skills/endRoundPuntiEroe@this"):target]
 }]
 
 [h: sMapVar = findToken("MapVar")]
@@ -35,7 +35,7 @@
 	[macro("core/startRoundEvents@this"):target]
 
 	[macro("utility/clearMessaggi@this"): target]
-	[macro("autocastAbilita@Lib:AbilitaClasse"): target]
+	[macro("class_skills/autocastAbilita@this"): target]
 }]
 
 [h, foreach(id, oTokenList), code:{

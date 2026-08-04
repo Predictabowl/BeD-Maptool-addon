@@ -4,7 +4,7 @@
 [h, macro("mechanics/getSummonTableByLevel@this"): json.append(sToken, iLiv, "summon-abilita-table")]
 [h: aAbilita = macro.return]
 [h, if(json.isEmpty(aAbilita)): return(0, "")]
-[macro("class-skills/removeAllAbilitaClasse@this"): sToken]
+[macro("class_skills/removeAllAbilitaClasse@this"): sToken]
 [h, foreach(oAbilita, aAbilita), code:{
 	[oPotLiv = json.get(oAbilita, "livello")]
 	[iCounter = 0]
@@ -14,5 +14,5 @@
 		[iCounter = iCounter +1]
 	}]
 	[sAbilita = json.get(oAbilita, "nomeAbilita")]
-	[macro("class-skills/teachAbilitaClasse@this"):json.append(sToken,sAbilita,iCounter)]
+	[macro("class_skills/teachAbilitaClasse@this"):json.append(sToken,sAbilita,iCounter)]
 }]
