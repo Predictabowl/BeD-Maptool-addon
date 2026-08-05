@@ -3,7 +3,7 @@
 [dialog5("LMM"):{
 <html>
 	<head> 
-		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
+		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
 		[h: list =  LMM]
 		[h: listLen = countStrProp(list)]
 		<title> Modifica Capacità di Combattimento</title> 

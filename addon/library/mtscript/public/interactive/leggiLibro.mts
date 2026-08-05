@@ -16,7 +16,7 @@
 [dialog5("Libro","width=700; height=900; temporary=1;"):{
 <html>
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/items.css?cachelib=true">
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/ItemCssLink.html")]
 	<title> [r:getName(oToken)]</title> 
 </head>
 <body class="libroBody">

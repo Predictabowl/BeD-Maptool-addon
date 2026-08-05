@@ -68,7 +68,7 @@
 [dialog5(sDialog,"temporary=0; width=500; height=600; closebutton=0"):{
 	<html>
 	<head> 
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
 	<title> Consumabili </title> 
 	<script>[r:"
 		function loadParams(elem){

@@ -21,7 +21,7 @@
 [dialog5("Capacita Generali","closebutton=0"):{
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
 	<title> Capacità Generali </title>
 </head>
 <body class="dataCentered">

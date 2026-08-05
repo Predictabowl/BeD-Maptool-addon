@@ -93,7 +93,7 @@
 <html>
 
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
 	<title>Equipaggiamento</title>
 	<style>[r:'
 		.tooltipBox {
