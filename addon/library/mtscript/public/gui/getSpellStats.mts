@@ -16,19 +16,19 @@
 [h: iMM = json.get(macro.return, "MM")]
 [h: iTempo = getSpellTime(oParams)]
 
-[h: sPP = strformat("<span title='PP' style='cursor:pointer'>%s</span>", iPP)]
+[h: sPP = strformat("<span title='PP' style='cursor:progress'>%s</span>", iPP)]
 
-[h, if(iPA > 0): sPP = strformat("<span class='azioneFont' style='cursor:pointer' title='PA'>%d+</span>%s",iPA, sPP)]
-[h, if(iMM > 0): sPP = strformat("%s<span class='mmFont' style='cursor:pointer' title='MM'>+%d</span>", sPP, iMM)]
+[h, if(iPA > 0): sPP = strformat("<span class='azioneFont' style='cursor:progress' title='PA'>%d+</span>%s",iPA, sPP)]
+[h, if(iMM > 0): sPP = strformat("%s<span class='mmFont' style='cursor:progress' title='MM'>+%d</span>", sPP, iMM)]
 
 [macro("powers/getMantPP@this"): oParams]
-[if(macro.return>0): sPP = strformat("%{sPP} <span title='Mantenimento'>†%{macro.return}</span>")]
+[if(macro.return>0): sPP = strformat("%{sPP} <span title='Mantenimento' style='cursor: progress;'>†%{macro.return}</span>")]
 
 [macro("powers/getMantMana@this"): oParams]
-[if(macro.return>0): iMana= strformat("%{iMana} <span title='Mantenimento'>†%{macro.return}</span>")]
+[if(macro.return>0): iMana= strformat("%{iMana} <span title='Mantenimento' style='cursor: progress;'>†%{macro.return}</span>")]
 
 [macro("powers/getMantPF@this"): oParams]
-[if(macro.return>0): iPF = strformat("%{iPF} <span title='Mantenimento'>†%{macro.return}</span>")]
+[if(macro.return>0): iPF = strformat("%{iPF} <span title='Mantenimento' style='cursor: progress;'>†%{macro.return}</span>")]
 		
 
 [h: jReturn = json.append(iMana,iPF,sPP,iTempo)]
