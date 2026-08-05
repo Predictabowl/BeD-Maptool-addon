@@ -5,7 +5,7 @@
 [h: oParam = json.set("","nomeAbilita",sNomeAb)]
 
 [h, if(!bRemove), code:{
-	[eventInstaller(oToken,"on_Kill",sNomeAb,"class_skills/" sNomeAb +"Event@it.aldinucci.piero.bed.maptool.ruleset",oParam)]
+	[eventInstaller(oToken,"on_Kill",sNomeAb,"class_skills/" sNomeAb +"Event@lib:it.aldinucci.piero.bed.maptool.ruleset",oParam)]
 };{
 	[eventUninstaller(oToken,"on_Kill",sNomeAb)]	
 }]

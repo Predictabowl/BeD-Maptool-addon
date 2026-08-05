@@ -76,7 +76,7 @@
 <th> Ma </th><th> PF </th> <th> PA </th><th> Te </th>
 [r, foreach(nomeLib, lPoteri, ""), CODE:{
 	[h, if(classType=="evenRow"): classType = "oddRow"; classType = "evenRow"]
-	<tr class='[r:classType] spellFont' data-spellName='[r:nomeLib]' id='[r:nomeLib]'>
+	<tr class='[r:classType]' data-spellName='[r:nomeLib]' id='[r:nomeLib]'>
 		[h, macro("gui/makeRigaPotere@this"):json.append(oToken,nomeLib, jOptions)]
 		[r: macro.return]
 	</tr>

@@ -93,13 +93,13 @@
 <html>
 
 <head> 
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/CharSheet5.css?cachelib=true">
 	<title>Equipaggiamento</title>
 	<style>[r:'
 		.tooltipBox {
 			position: absolute;
 			display:inline-block;
-			font-family: "New Rocker";
+			font-family: var(--font-spell);
 			font-weight:bold;
 			font-size: 0.875em;
 			position: absolute;
@@ -198,7 +198,7 @@
 					[r, macro("gui/makeHtmlEquip@this"): oToken]
 				</div>
 			</div>
-			<div class="titleFont" style="margin-bottom:0px; background-color:black; color:lightblue; border: 1px solid lightblue;">
+			<div class="titleFont" style="margin-bottom:5px; background-color:black; color:lightblue; border: 1px solid lightblue;">
 				Ingombro: <span id="carico-corrente">[r: getIngombroTotale(oToken)]</span>/<span id="carico-max">[r:getCarico(oToken)]</span>
 			</div>
 			<div class="titleFont" style="margin-bottom:0px; background-color:black; color:orchid; border: 1px solid orchid;">

@@ -19,7 +19,7 @@
 [h: arrayRiga = json.append(arrayRiga,element)]
 [h: arrayTabella = json.append(arrayTabella,arrayRiga)]
 
-[h: sPierceDmg = strformat("LD <img src='%s'  title='Punta'></img>",getImage("lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pierce_icon.png"))]
+[h: sPierceDmg = strformat("LD <img src='%s'  title='Punta'></img>","lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pierce_icon.png")]
 [h: element = json.set("","value", sPierceDmg,"opzioni","class='description'")]
 [h: arrayRiga = json.append("",element)]
 [h: element = json.set("","value",getLD(source, "P"),"opzioni","class='table-data'")]

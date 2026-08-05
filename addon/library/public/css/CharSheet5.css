@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=New+Rocker&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&display=swap');
+
+:root {
+	--font-default: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
+	--font-title: 'Gabriela', 'Palatino Linotype', 'Book Antiqua', serif;
+	--font-book: 'Macondo', 'Georgia', serif;
+	--font-spell: 'New Rocker', serif;
+	--font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
+}
 
 form {
 	text-align: center;
 }
 
 body {
-	font-family: "EB Garamond";
+	font-family: var(--font-default);
 	font-size: 18px;
 }
 
 input {
-	font-family: "EB Garamond";
+	font-family: var(--font-default);
 	font-size: 16px;
 }
 
@@ -19,7 +27,7 @@ table {
 }
 
 button {
-	font-family: "EB Garamond";
+	font-family: var(--font-default);
 	font-size: 16px;
 }
 
@@ -28,12 +36,12 @@ input.tableSize {
 }
 
 .titleFont {
-	font-family: "Yeseva One";
-	font-size: 115%;
+	font-family: var(--font-title);
+	font-size: 90%;
 }
 
 .relevantTitle {
-	font-family: "Yeseva One";
+	font-family: var(--font-title);
 	font-size: 34px;
 	color: maroon;
 }
@@ -43,7 +51,7 @@ a.relevantTitle:hover {
 }
 
 .sectionTitle {
-	font-family: "Yeseva One";
+	font-family: var(--font-title);
 	font-size: 26px;
 	text-shadow: 2px 2px 3px black;
 	color: gold;
@@ -61,12 +69,12 @@ a.sectionTitle:hover {
 }
 
 .spellFont {
-	font-family: "New Rocker";
+	font-family: var(--font-spell);
 	font-size: 18px;
 }
 
 .spellTitle {
-	font-family: "New Rocker";
+	font-family: var(--font-spell);
 	font-size: 24px;
 	font-weight: normal;
 	margin: 10px;
@@ -80,7 +88,8 @@ a.sectionTitle:hover {
 	max-width: 120px;
 	padding-left: 5px;
 	padding-right: 5px;
-	font-family: "EB Garamond semibold";
+	font-family: var(--font-default);
+	font-weight: 550;
 }
 
 select {
@@ -125,7 +134,7 @@ table.scrollBarSpace {
 }
 
 table.spellData {
-	font-family: "EB Garamond";
+	font-family: var(--font-default);
 	font-size: 20px;
 	text-align: left;
 	background-color: #FFFFFF;
@@ -137,7 +146,7 @@ table.spellData {
 	background-color: #113311;
 	color: #FFFFFF;
 	border: 2px solid black;
-	font-family: "Yeseva One";
+	font-family: var(--font-title);
 	font-size: 18px;
 }
 
@@ -535,7 +544,7 @@ th.tabHeaderLink:active {
 }
 
 .descrizione {
-	font-family: "EB Garamond";
+	font-family: var(--font-default);
 	font-size: 18px;
 	text-align: justify;
 	margin: 10px;
@@ -690,7 +699,7 @@ th.tabHeaderLink:active {
 }
 
 .itemInfo {
-	font-family: "EB Garamond";
+	font-family: var(--font-default);
 	font-size: 16px;
 	text-align: left;
 	background-color: white;

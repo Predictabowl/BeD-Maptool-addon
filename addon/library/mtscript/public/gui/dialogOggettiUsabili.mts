@@ -79,9 +79,9 @@
 		[classTypeP = if(classTypeP=="oddRow","evenRow","oddRow")]
 		[sSpellLink = macrolinkText("gui/dialogDescrizioneSpell@this","",param)]	
 		[sSpellType = getLibProperty("tipo",spellName)]
-		[sTabellaSlot = strformat("%{sTabellaSlot}<tr class='%{classTypeP} spellFont'>
+		[sTabellaSlot = strformat("%{sTabellaSlot}<tr class='%{classTypeP}'>
 			<td>%{strCast}</td>
-			<td align='left' class='%{sSpellType}'><a style='color:inherit; display:block' href='%{sSpellLink}'>%{sNome}</a></td>
+			<td align='left' class='%{sSpellType} spellFont'><a style='color:inherit; display:block' href='%{sSpellLink}'>%{sNome}</a></td>
 			<td class='azioneFont'>%{iPACost}</td>
 			<td class='tempoFont'>%{iTempoCost}</td>
 			<td>%{iLL}</td>
@@ -125,7 +125,7 @@
 	[h: iCD = macro.return]
 
 	[h: sSpellType = getLibProperty("tipo",spellName)]
-	[sTabellaRune = strformat("%{sTabellaRune}<tr class='%{classType} spellFont'><td>%{strCast}</td><td align='left' class='%{sSpellType}'><a style='color:inherit; display:block;' href='%{sSpellLink}'>%{sNome}</a></td>")]
+	[sTabellaRune = strformat("%{sTabellaRune}<tr class='%{classType}'><td>%{strCast}</td><td align='left' class='%{sSpellType}'><a style='color:inherit; display:block;' class='spellFont' href='%{sSpellLink}'>%{sNome}</a></td>")]
 	[sTabellaRune = strformat("%{sTabellaRune}<td>%{iCariche}</td><td class='azioneFont'>%{iPACost}</td><td class='tempoFont'>%{iTempoCost}</td><td>%{iLL}</td><td>%{iCD}</td><td>%{iLiv}</td></tr>")]
 }]
 

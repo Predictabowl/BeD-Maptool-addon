@@ -12,7 +12,7 @@
 [h: sRowClass ="oddRow"]
 [h, foreach(item, lAbilita), CODE:{
 	[if(!isAbilitaPassiva(item)), code:{
-		[h: sReturn = strformat("%{sReturn}<tr class='%{sRowClass} spellFont'>")]
+		[h: sReturn = strformat("%{sReturn}<tr class='%{sRowClass}'>")]
 		[macro("gui/rigaTabAbilita@this"): json.append(target,item)]
 		[h: sReturn = strformat("%{sReturn}%{macro.return}</tr>")]
 		[if(sRowClass=="evenRow"): sRowClass="oddRow"; sRowClass="evenRow"]

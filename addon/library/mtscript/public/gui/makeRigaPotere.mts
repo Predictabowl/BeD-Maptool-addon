@@ -26,7 +26,7 @@
 [h: sJScriptSpell = strformat('apri_dialog_descrizione("%{nomeLib}")')]
 [h, if(bNames), code:{
 	[h: sReturn = strformat("<td>%{strCast}</td>")]
-	[sReturn = strformat("%{sReturn}<td class = '%{sSpellType}' title='Leggi descrizione' onclick='%{sJScriptSpell}'>%{sNome}</td>")]
+	[sReturn = strformat("%{sReturn}<td class = '%{sSpellType} spellFont' title='Leggi descrizione' onclick='%{sJScriptSpell}'>%{sNome}</td>")]
 };{
 	[h: sReturn = strformat("<td class = '%{sSpellType}'>%{strCast}</td>")]
 }]

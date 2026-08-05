@@ -31,7 +31,7 @@
 	<title>Diario</title> 
 	<style>[r:"
 		.diario {
-			font-family:'EB Garamond';
+			font-family:var(--font-default);
 			font-size: 16px;
 			height: 70vh;
 		}

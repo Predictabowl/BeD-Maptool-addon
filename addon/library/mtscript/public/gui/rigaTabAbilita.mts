@@ -55,7 +55,7 @@ default:{
 
 [h: sJScriptParam = strformat('"%{sLibAbilita}"')]
 
-[h: sRiga = strformat("<td %{sActive}>%{sMacroL}</td><td align='left' class='%{classType}' title='Leggi descrizione'onclick='apri_dialog_descrizione(%{sJScriptParam})'>%{sNome}</td>")]
+[h: sRiga = strformat("<td %{sActive}>%{sMacroL}</td><td align='left' class='%{classType} spellFont' title='Leggi descrizione'onclick='apri_dialog_descrizione(%{sJScriptParam})'>%{sNome}</td>")]
 [h, if(sTipo != "EROICA"): sRiga = strformat("%{sRiga}<td class='faticaFont'>%{iPF}</td><td class='azioneFont'>%{iPA}</td><td class='ppFont'>%{iPP}</td><td class='mmFont'>%{iMM}</td>")]
 
 [h: macro.return = sRiga]
