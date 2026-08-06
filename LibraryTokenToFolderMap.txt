@@ -13,10 +13,10 @@ Lib:EquipEffect-> items
 Lib:Mat -> utility
 Lib:GlobalVar -> utility
 Lib:OggettiUsabili -> consumables
+Lib:OggettiInterattivi -> interactive
 
 
 # Next in line to be mapped
-Lib:OggettiInterattivi -> interactive
 
 # Not Mapped yet 
 Lib:Sounds

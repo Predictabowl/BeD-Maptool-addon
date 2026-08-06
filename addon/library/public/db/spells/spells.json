@@ -1,0 +1,1809 @@
+{
+    "Lib_FulmineACatena": {
+        "name": "Fulmine a Catena",
+        "properties": {
+            "mana": "104",
+            "pf": "16",
+            "pa": "0",
+            "pp": "14",
+            "mm": "0",
+            "castingTime": "30",
+            "element": "Aria",
+            "school": "Aria",
+            "range": "26",
+            "areaOfEffect": "4",
+            "duration": "0",
+            "savingThrow": "No",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "CATENA",
+                "10"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "ESCLUSIVO",
+                "CONTROLLATO"
+            ]
+        },
+        "image": "chain-lightning-evocation-icon-spell-pathfinder-wrath-of-the-righteous-wiki-guide-65px.png",
+        "description": "Scatena un potente fulmine da una mano dell’esperto di magia che colpisce un bersaglio a scelta per poi rimbalzare sul bersaglio più vicino entro l’area d’effetto. Il procedimento poi si ripete, senza però mai colpire lo stesso bersaglio più di una volta, e fino ad un massimo di 10 creature diverse.\nChi viene colpito subisce 1d14-1 danni per LP da fulmine."
+    },
+    "Lib_BolidediGhiaccio": {
+        "name": "Bolide di Ghiaccio",
+        "properties": {
+            "mana": "23",
+            "pf": "0",
+            "pa": "0",
+            "pp": "7",
+            "mm": "0",
+            "castingTime": "15",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "20",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Materiale",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "265e92f4125750dcbcaae510fd268bf6.png",
+        "description": "Scaglia un blocco di ghiaccio solido contro un bersaglio infliggendo danno fisico.<br> Il bolide colpisce il bersaglio infliggendo 1d10 danni +1d10 ogni 5 LPG, ha un LA pari a Car. Potenza +1 x LL ed un moltiplicatore pari a 4."
+    },
+    "Lib_AcquadellaVita": {
+        "name": "Acqua della Vita",
+        "properties": {
+            "mana": "44",
+            "pf": "0",
+            "pa": "0",
+            "pp": "6",
+            "mm": "0",
+            "castingTime": "12",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "12",
+            "areaOfEffect": "0",
+            "duration": "5",
+            "savingThrow": "no",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "CURA"
+            ]
+        },
+        "image": "b31cb835e6e3c3536d9000aefa70645e.png",
+        "description": "Questo incantesimo evoca dell’acqua miracolosa in grado di curare le ferite del bersaglio. Il bersaglio recupera 1 punto vita per LL per ogni round di durata."
+    },
+    "Lib_RaggioSolare": {
+        "name": "Raggio Solare",
+        "properties": {
+            "mana": "23",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Positivo",
+            "school": "Luce",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "No",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_holy_holybolt.png",
+        "description": "Dirige un raggio di energia contro un avversario provocando 1d8 danni da energia positiva per LP."
+    },
+    "Lib_SchockSismico": {
+        "name": "Shock Sismico",
+        "properties": {
+            "mana": "48",
+            "pf": "4",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "26",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "26",
+            "areaOfEffect": "2",
+            "duration": "0",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "DANNOSO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "488fffcc2297fcdb84891feb756dd4ae.png",
+        "description": "L’esperto di magia crea un campo magico nella zona prescelta, per un istante la terra trema e tutte le creature presenti subiscono 1d4 danni per LP, inoltre devono superare un TS o essere Atterrato."
+    },
+    "Lib_PalladiFuoco": {
+        "name": "Palla di Fuoco",
+        "properties": {
+            "mana": "56",
+            "pf": "8",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "26",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "4",
+            "duration": "2",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "CERCHIO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_fire_fireball02.png",
+        "description": "Crea una vampata di fiamme di raggio 6m che esercitano pochissima pressione e non sono quindi in grado di spostare o distruggere oggetti, di conseguenza la sfera di fuoco che si viene a creare tende a prendere la forma dell’ambiente circostante espandendosi oltre i suoi confini, dove possibile, se non c’è sufficiente spazio per farla detonare in tutte le direzioni (ad esempio in un corridoio, anche se solo un pazzoide o un essere immune al fuoco utilizzerebbe una palla di fuoco in un corridoio).<br> Chi viene colpito subisce 1d6 danni per LP, ed un effetto Incendio se sbaglia il TS. L’incendio infligge 1 danno per LP al termine di ogni round per 2 round."
+    },
+    "Lib_CreareFiamme": {
+        "name": "Creare Fiamme",
+        "properties": {
+            "mana": "17",
+            "pf": "0",
+            "pa": "0",
+            "pp": "7",
+            "mm": "0",
+            "castingTime": "15",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "4",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "inv_summerfest_firespirit.png",
+        "description": "Questo incantesimo genera delle fiamme nel punto d'impatto prescelto. Le fiamme generate dall'incantesimo bruciano normalmente, obbedendo alle normali leggi fisiche del bersaglio che ha preso fuoco, senza limiti di tempo.\nSe questo incantesimo viene utilizzato su di una creatura questa subisce un effetto Incendio che infligge 1 danno per LP al termine di ogni round."
+    },
+    "Lib_ArmaElementaleGelo": {
+        "name": "Arma Elementale (Gelo)",
+        "properties": {
+            "mana": "50",
+            "pf": "0",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "10",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "12",
+            "savingThrow": "No",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "NOCRITICO"
+            ]
+        },
+        "image": "2220ce51b2bbf805e7d761493f02590b.png",
+        "description": "L’incantatore è in grado di incantare le armi impugnate da una creatura entro il raggio d'azione con un effetto elementale. Tutti gli attacchi della creatura infliggono danno elementale aggiuntivo pari a 1 per LP.<br>Dopo 8 colpi andati a segno l’incantesimo termina a prescindere dalla durata. I colpi schivati si considerato non andati a segno, mentre i colpi parati sono considerati a segno, anche se infliggono metà danno.<br>Una creatura può beneficiare solamente di 1 arma elementale per volta, un nuovo incantesimo di arma elementale sostituisce uno eventualmente esistente."
+    },
+    "Lib_LanciaTermica": {
+        "name": "Lancia Termica",
+        "properties": {
+            "mana": "27",
+            "pf": "0",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "17",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "2",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "3c1598453f842c2fa6245d45b1d674d5.png",
+        "description": "Crea un raggio di energia incandescente che colpisce il bersaglio prestabilito, la lancia viaggia in linea retta ed una copertura completa (come un muro tra il bersaglio ed il mago) è in grado di fermarla. Qualsiasi ostacolo che riesce a fermare la lancia ne subirà gli effetti al posto dell’obbiettivo. Come punto di partenza alternativo la lancia può avere un qualsiasi fuoco all’interno del raggio d’azione, tuttavia la distanza totale del bersaglio dal mago non può superare quella del raggio d’azione.<br> La lancia provoca 1d8 danni da fuoco per LP, ma se il bersaglio è preda di un effetto Incendio allora il danno incrementa a 1d10 per LP."
+    },
+    "Lib_ManiBrucianti": {
+        "name": "Mani Brucianti",
+        "properties": {
+            "mana": "29",
+            "pf": "4",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "12",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "0",
+            "areaOfEffect": "6",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "",
+            "aoeType": [
+                "CONO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "7da26cd08f752e8f50d34025c74c325f.png",
+        "description": "Aprendo le mani a ventaglio in una direzione e unendo i pollici delle stesse, si viene a creare un vampata di fuoco. Chiunque si trovi nell’area d’effetto dell’incantesimo subisce 1d6 danni da fuoco per LP."
+    },
+    "Lib_EsplosionediFuoco": {
+        "name": "Esplosione di Fuoco",
+        "properties": {
+            "mana": "48",
+            "pf": "2",
+            "pa": "0",
+            "pp": "10",
+            "mm": "0",
+            "castingTime": "2",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "4",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "Tempra",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "1",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "be0c3b4ddcc412fc9f18ba361b23cfe9.png",
+        "description": "“Una soluzione Esplosiva per il volo”\nÈ sufficiente la concentrazione ed il semplice gesto di aprire il palmo della mano stretta a pugno verso il bersaglio per potere scatenare un’Esplosione di Fuoco.\nIl bersaglio colpito subisce 1d6 danni da fuoco per LP in una deflagrante esplosione inoltre deve effettuare un TS o altrimenti essere sbalzato indietro (rispetto al mago) di 6 caselle e Atterrato. \nLe creature di taglia maggiore resistono più facilmente all’effetto, ottenendo un modificatore di +3 al TS per ogni categoria di taglia superiore a Medio."
+    },
+    "Lib_Idrolama": {
+        "name": "Idrolama",
+        "properties": {
+            "mana": "30",
+            "pf": "0",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "18",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "No",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "aecf8da8031bcf38748feadd5ae7536d.png",
+        "description": "Grazie a questo incantesimo il lanciatore crea dal palmo aperto verso l’altro della propria mano una vorticante fontana d’acqua che a velocità impressionante di trasforma in un getto d’acqua ad alta pressione che vola dritto verso il bersaglio provocando seri danni. Chiunque viene colpito da quest’incantesimo subisce 1d10 danni per LP."
+    },
+    "Lib_Incenerire": {
+        "name": "Incenerire",
+        "properties": {
+            "mana": "32",
+            "pf": "0",
+            "pa": "0",
+            "pp": "11",
+            "mm": "0",
+            "castingTime": "20",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "pyrokinetic-15-17.png",
+        "description": "Questo incantesimo colpisce con un calore molto intenso in grado di incenerire l’obbiettivo, che subisce 1d12 danni da fuoco per LP.\nUna creatura uccisa da questo incantesimo viene ridotta ad un cumulo di cenere e non può essere soggetta a nessun incantesimo che funzioni con i cadaveri. Prima di poter resuscitare un bersaglio incenerito è necessario un incantesimo Rigenerare lanciato sulle ceneri. "
+    },
+    "Lib_PugnoStritolante": {
+        "name": "Pugno Stritolante",
+        "properties": {
+            "mana": "27",
+            "pf": "0",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "17",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "ability_warrior_titansgrip.png",
+        "description": "Crea un enorme pugno di pietra sopra l’obbiettivo che lo colpisce violentemente schiacciandolo contro il terreno.\nL’attacco infligge 1d6 danni per LP, se il bersaglio è Atterrato infligge invece 1d9+1 danni per LP."
+    },
+    "Lib_NubeIncendiaria": {
+        "name": "Nube Incendiaria",
+        "properties": {
+            "mana": "69",
+            "pf": "9",
+            "pa": "0",
+            "pp": "11",
+            "mm": "0",
+            "castingTime": "25",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "16",
+            "areaOfEffect": "6",
+            "duration": "5",
+            "savingThrow": "Riflessi",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "DANNOSO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "CELLTARGET"
+            ]
+        },
+        "image": "ability_foundryraid_blastwave.png",
+        "description": "Genera una densa nube di gas incandescenti nell'area d'effetto, che oscurano la vista ed ustionano le vittime al suo interno e che permane per tutta la durata.\nTutte le creature che transitano nell’area d’effetto devono superare un TS, se falliscono subiscono una penalità di +15 Mancare ed un effetto Incendio che infligge 1 danno per LP. Entrambi gli effetti permangono per 1 round.\nL’effetto può verificarsi al massimo una volta per round."
+    },
+    "Lib_ArmaElementaleFuoco": {
+        "name": "Arma Elementale (Fuoco)",
+        "properties": {
+            "mana": "50",
+            "pf": "0",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "10",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "12",
+            "savingThrow": "No",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "NOCRITICO"
+            ]
+        },
+        "image": "16715de77e1a3e6d4e6c7e2256f2c5a3.png",
+        "description": ""
+    },
+    "Lib_PioggiaDiPietre": {
+        "name": "Pioggia di Pietre",
+        "properties": {
+            "mana": "80",
+            "pf": "10",
+            "pa": "0",
+            "pp": "13",
+            "mm": "0",
+            "castingTime": "27",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "26",
+            "areaOfEffect": "5",
+            "duration": "3",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "DANNOSO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "CELLTARGET"
+            ]
+        },
+        "image": "spell_fire_meteorstorm.png",
+        "description": "Una moltitudine di piccoli massi piovono dal cielo nell’area prescelta per tutta la durata dell’incantesimo, colpendo violentemente le sfortunate vittime che si trovano al loro interno.\nOgni creatura che transita nell’area d’effetto subisce 1d4 danni per LP e deve effettuare un TS o divenire Vacillante per 1 round. Entrambi gli effetti possono verificarsi solamente una volta per round.\nNota: L’incantesimo funziona anche al coperto, le pietre si materializzeranno all’altezza del soffitto."
+    },
+    "Lib_RafficaDiPietre": {
+        "name": "Raffica di Pietre",
+        "properties": {
+            "mana": "23",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "Tempra",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "geomancer_pyroclastic_eruption-icon.png",
+        "description": "Una volta lanciato l’incantesimo delle rocce fluttuanti appaiono intorno all’incantatore, per poi andare a colpire il bersalgio prescelto, il quale subisce 1d8 danni da per LP."
+    },
+    "Lib_AssideramentoMagico": {
+        "name": "Assideramento Magico",
+        "properties": {
+            "mana": "11",
+            "pf": "0",
+            "pa": "0",
+            "pp": "5",
+            "mm": "0",
+            "castingTime": "12",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "3",
+            "savingThrow": "Riflessi",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "a7afb4b555ff3e41940bab63d1be2ac7.png",
+        "description": ""
+    },
+    "Lib_DisgregazionePsichica": {
+        "name": "Disgregazione Psichica",
+        "properties": {
+            "mana": "62",
+            "pf": "8",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "25",
+            "element": "Mentale",
+            "school": "Mente",
+            "range": "26",
+            "areaOfEffect": "5",
+            "duration": "5",
+            "savingThrow": "No",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "CERCHIO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "CONTROLLATO"
+            ]
+        },
+        "image": "spell_shadow_mindflay.png",
+        "description": "Tutti i nemici colpiti dall'impatto iniziale subiscono danno ogni round pari a 1 x LP fino al termine dell'incantesimo."
+    },
+    "Lib_TremoreLocalizzato": {
+        "name": "Tremore Localizzato",
+        "properties": {
+            "mana": "18",
+            "pf": "0",
+            "pa": "0",
+            "pp": "5",
+            "mm": "0",
+            "castingTime": "12",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "Riflessi",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_shaman_earthquake.png",
+        "description": "Questo incantesimo è in grado di fare tremare il terreno direttamente sotto la vittima prescelta, senza che gli effetti di tale scossa si propaghino oltre la casella che occupa.\nIl bersaglio deve superare un TS o essere Atterrato."
+    },
+    "Lib_GettoAcqueo": {
+        "name": "Getto Acqueo",
+        "properties": {
+            "mana": "23",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "No",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "5bc80a8f594e024c3c5ef0bd7bca0f89.jpeg",
+        "description": "Dalle mani unite a ventaglio con i palmi diretti verso il nemico scaturisce un getto d’acqua che infligge 1d8 danni per LP al bersaglio prescelto."
+    },
+    "Lib_BarrieraPolare": {
+        "name": "Barriera Polare",
+        "properties": {
+            "mana": "35",
+            "pf": "0",
+            "pa": "0",
+            "pp": "3",
+            "mm": "0",
+            "castingTime": "1",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "14",
+            "areaOfEffect": "0",
+            "duration": "4",
+            "savingThrow": "Riflessi",
+            "type": "Marchio",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "MARCHIOPROTEZIONE"
+            ]
+        },
+        "image": "a6a1b47207e57582bd7036df5dedc6e8.jpeg",
+        "description": "Questo incantesimo lancia un Marchio di Protezione sul bersaglio. Chi infrange il marchio deve superare un TS o subire un effetto Congelamentox3, se riesce nel TS comunque subisce un effetto Congelamento . Gli effetti durano 1 round.<br>Tale effetto può verificarsi una volta a round per ogni bersaglio."
+    },
+    "Lib_TempestaDiGhiaccio": {
+        "name": "Tempesta di Ghiaccio",
+        "properties": {
+            "mana": "76",
+            "pf": "11",
+            "pa": "0",
+            "pp": "13",
+            "mm": "0",
+            "castingTime": "27",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "26",
+            "areaOfEffect": "5",
+            "duration": "2",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "DANNOSO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_frost_ice-shards.png",
+        "description": "La temperatura nell’area di effetto di abbassa drasticamente e si viene a creare una tempesta di grandine e neve, accompagnata da un forte vento che soffia innaturalmente in modo circolare nell’area d’effetto. L’area è immobile e permane per tutta la durata dell’incantesimo.\nLe creature presenti nell’area d’effetto al momento del lancio subiscono 1d7 danni per LP e devono superare un TS o subire un effetto Congelamento."
+    },
+    "Lib_FreddoProfondo": {
+        "name": "Freddo Profondo",
+        "properties": {
+            "mana": "50",
+            "pf": "0",
+            "pa": "0",
+            "pp": "10",
+            "mm": "0",
+            "castingTime": "10",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "4",
+            "savingThrow": "Tempra",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "01398a561bdf771e5a4e7f1672201230.png",
+        "description": ""
+    },
+    "Lib_EmanazioneTerra": {
+        "name": "Emanazione Terra",
+        "properties": {
+            "mana": "43",
+            "pf": "3",
+            "pa": "0",
+            "pp": "4",
+            "mm": "0",
+            "castingTime": "8",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "0",
+            "areaOfEffect": "4",
+            "duration": "2",
+            "savingThrow": "Riflessi",
+            "type": "Marchio",
+            "projectile": "Potenziale",
+            "opportunityAttack": false,
+            "cooldown": "",
+            "aoeType": [
+                "NEMICI"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "MARCHIOSFIDA",
+                "PRECAST"
+            ]
+        },
+        "image": "inv_misc_volatileearth.png",
+        "description": "Infligge un Marchio di Sfida a tutti i nemici presenti nell'area. \nChi infrange il marchio deve superare un TS o subire un effetto Lentezza3 fino al termine del round."
+    },
+    "Lib_TorrenteDistruttivo": {
+        "name": "Torrente Distruttivo",
+        "properties": {
+            "mana": "23",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Arcano",
+            "school": "Arcano",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "ability_mage_arcanebarrage.png",
+        "description": "Versione più potente di Dardi Incantati, che infligge 1d6+1 danni per LP. "
+    },
+    "Lib_VelocitaMassa": {
+        "name": "Velocità di Massa",
+        "properties": {
+            "mana": "62,VarX",
+            "pf": "8,VarX",
+            "pa": "0",
+            "pp": "11",
+            "mm": "0",
+            "castingTime": "25",
+            "element": "Aria",
+            "school": "Aria",
+            "range": "0",
+            "areaOfEffect": "4",
+            "duration": "5",
+            "savingThrow": "no",
+            "type": "Supporto",
+            "projectile": "",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": []
+        },
+        "image": "spell_shaman_spiritwalkersgrace.png",
+        "description": ""
+    },
+    "Lib_MuroDiGhiaccio": {
+        "name": "Muro di Ghiaccio",
+        "properties": {
+            "mana": "60",
+            "pf": "6",
+            "pa": "0",
+            "pp": "11",
+            "mm": "0",
+            "castingTime": "25",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "16",
+            "areaOfEffect": "12",
+            "duration": "4",
+            "savingThrow": "Tempra",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "LINEA"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "PRECAST",
+                "DRAWTARGET"
+            ]
+        },
+        "image": "ability_mage_icewall.png",
+        "description": "Questo incantesimo erige un solido muro di ghiaccio (80% resistenza), spesso una casella ed alto 3, mentre la lunghezza è pari alla sua area d’effetto in caselle, e può assumere la forma desiderata al momento del lancio.\nIl muro è completamento solido, fornendo copertura totale (100), ma senza ostruire la visuale. Inoltre emana un’aura gelida, tanto che tutte le creature che transitano entro una casella di distanza dal muro devono superare un TS o subire Congelamento per 1 round.\nIl muro subisce danni come una normale creatura ed ha un Livello Indicativo pari al LL, che ne determina i PV e le varie difese e resistenze. A prescindere dal livello è immune a Malattia, Maledizione, Sanguinamento e Veleno."
+    },
+    "Lib_FulmineMagico": {
+        "name": "Fulmine Magico",
+        "properties": {
+            "mana": "43",
+            "pf": "5",
+            "pa": "0",
+            "pp": "10",
+            "mm": "0",
+            "castingTime": "23",
+            "element": "Aria",
+            "school": "Aria",
+            "range": "0",
+            "areaOfEffect": "30",
+            "duration": "0",
+            "savingThrow": "No",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "LINEA"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "lightning_bolt_spell_pathfinder_wrath_of_the_righteous_wiki_guide_64px.png",
+        "description": "Dalla mano del lanciatore si viene a creare un fulmine che colpisce in linea retta verso il bersaglio designato dal lanciatore, continuando oltre di esso e colpendo qualsiasi cosa incontri durante il tragitto fino ad esaurire l’area d’effetto o fin quando non colpisce un ostacolo sufficientemente grande da bloccarlo.\nChi viene colpito subisce 1d11-1 danni da elettricità per LP.\nIl fulmine può incendiare oggetti infiammabili non indossati e barriere di legno. È in grado di fondere metalli a bassa temperatura di fusione."
+    },
+    "Lib_EclisseDiTenebra": {
+        "name": "Eclisse di Tenebra",
+        "properties": {
+            "mana": "78",
+            "pf": "12",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "22",
+            "element": "Negativo",
+            "school": "Ombra",
+            "range": "26",
+            "areaOfEffect": "5",
+            "duration": "3",
+            "savingThrow": "No",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "CERCHIO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "ability_druid_eclipse.png",
+        "description": "Genera una zona di oscurità nell’area d’effetto, la zone interessata diventa buia per una frazione e si sente un acuto rumore stridulo. Tutti coloro che si trovano nell’area subiscono 1d4 danni da energia negativa per LP, inoltre le vittime al termine di ogni round, compreso quello di lancio, subiscono 1 danno per LP."
+    },
+    "Lib_MuroDiFuoco": {
+        "name": "Muro di Fuoco",
+        "properties": {
+            "mana": "62",
+            "pf": "5",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "26",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "20",
+            "duration": "4",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "LINEA"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "PRECAST",
+                "DRAWTARGET"
+            ]
+        },
+        "image": "pyrokinetic_ignition-icon.png",
+        "description": "Una volta lanciato l’incantesimo, l’area interessata viene avvolta da alte fiamme che danneggiano chiunque si trovi si trovi all’interno ed offre Copertura 50 in entrambi i sensi.\nOgni volta che una creatura transita all’interno del muro o se termina il round al suo interno, subisce 1d4 danni per LP. Il muro non infligge danno immediatamente se creato sotto i piedi di una creatura, ma questa subirà danno nel momento in cui si sposta o se termina il round. Il muro di fuoco non incendia o danneggia cose o creature che si trovano all’esterno della sua area d’effetto.\nLa forma del muro è a scelta dell'incantatore al momento del lancio, a patto che la sua superficie rimanga entro i limiti dell'area d'effetto."
+    },
+    "Lib_LentezzaMagica": {
+        "name": "Lentezza Magica",
+        "properties": {
+            "mana": "26",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "3",
+            "savingThrow": "Tempra",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "603ab91c66840db2220cd1c9fc95cbcf.png",
+        "description": "Questo incantesimo influenza una creatura entro il raggio d’azione, se tale creatura non riesce in un TS tempra allora viene influenzata dall’incantesimo e si muove più lentamente del normale.\nQuesto incantesimo infligge un effetto di Lentezzax2."
+    },
+    "Lib_Meteora": {
+        "name": "Meteorite",
+        "properties": {
+            "mana": "34",
+            "pf": "0",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "21",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "2",
+            "savingThrow": "Tempra",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_mage_meteor.png",
+        "description": "Si viene a creare un grande meteora che compare vicino all’incantatore e poi vola a colpire l’obbiettivo, evitando eventuali ostacoli che non coprano completamente l’obbiettivo, che comunque deve essere in vista all’incantatore. All’impatto con il bersaglio la meteora provoca 1d10 danni per LP da terra e l’obbiettivo deve effettuare un TS per evitare diventare Vacillante."
+    },
+    "Lib_LampoScintillante": {
+        "name": "Lampo Scintillante",
+        "properties": {
+            "mana": "36",
+            "pf": "6",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "21",
+            "element": "Positivo",
+            "school": "Luce",
+            "range": "0",
+            "areaOfEffect": "6",
+            "duration": "2",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "FRONTALE"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_paladin_lightofdawn.png",
+        "description": "Crea un’esplosione di luce di fronte al lanciatore, le creature colpite subiscono 1d4 danni da energia positiva per LP e devono superare un TS o subire un effetto Cecità fino al termine dell’incantesimo."
+    },
+    "Lib_ArmaturaMagica": {
+        "name": "Armatura Magica",
+        "properties": {
+            "mana": "50,VarX",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "19",
+            "element": "Arcano",
+            "school": "Universale",
+            "range": "0",
+            "areaOfEffect": "0",
+            "duration": "7",
+            "savingThrow": "No",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "0",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "ARMATURA"
+            ]
+        },
+        "image": "f94db9caa8dccaf67a3ab51d721f1f35.png",
+        "description": "Questo particolare incantesimo è in grado di sviluppare un’armatura invisibile attorno all’esperto di magia.  L’armatura aumenta il LD di +4."
+    },
+    "Lib_SciameDiMeteore": {
+        "name": "Sciame di Meteore",
+        "properties": {
+            "mana": "104",
+            "pf": "16",
+            "pa": "0",
+            "pp": "14",
+            "mm": "0",
+            "castingTime": "30",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "6",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "CERCHIO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "ESCLUSIVO"
+            ]
+        },
+        "image": "pyrokinetic-18-1.png",
+        "description": "Una serie di sfere fiammeggianti precipitano dal cielo nell’area d’effetto, una volta raggiunto il suolo deflagrano in un’esplosione di fiamme in grado di carbonizzare tutte le creature presenti.\nTutti coloro che si trovano nell’area designata come bersaglio subiscono 2d6 danni da fuoco per LP.\nQuesto incantesimo funziona anche al chiuso."
+    },
+    "Lib_PugnaleGelido": {
+        "name": "Pugnale Gelido",
+        "properties": {
+            "mana": "18",
+            "pf": "0",
+            "pa": "0",
+            "pp": "7",
+            "mm": "0",
+            "castingTime": "15",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "null",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "9dade8eed3aa3e018afc12fccaa735a3.jpeg",
+        "description": "Scaglia una lama formata di ghiaccio contro il bersaglio, infliggendogli 1d4 danni per LP.<br> Se il bersaglio è Congelato infligge invece 2d4 danni per LP, ma rimuove l'effetto di congelamento."
+    },
+    "Lib_TrasformazionedaCombattimento": {
+        "name": "Prodezza Marziale",
+        "properties": {
+            "mana": "83, VarUp",
+            "pf": "0",
+            "pa": "0",
+            "pp": "7",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Mente",
+            "school": "Universale",
+            "range": "0",
+            "areaOfEffect": "0",
+            "duration": "5",
+            "savingThrow": "No",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "2",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "NOCRITICO",
+                "AGGRESSIONE"
+            ]
+        },
+        "image": "631d0380c3901443f75159242c76814f.png",
+        "description": "Aumenta le capacità combattive del lanciatore, il quale guadagna un bonus +1 LA ed un ulteriore +1 LA per LMM."
+    },
+    "Lib_Ustionare": {
+        "name": "Ustionare",
+        "properties": {
+            "mana": "17",
+            "pf": "0",
+            "pa": "0",
+            "pp": "6",
+            "mm": "0",
+            "castingTime": "13",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "4111094a9ad434a23e4c7f06ef2378d8.png",
+        "description": "Aumenta vertiginosamente la temperatura attorno alla creatura bersaglio provocandogli gravi ustioni. Non genera nessun proiettile visibile ma utilizza comunque le normali meccaniche dei proiettili cinetici.<br> Provoca 1d4 danni da fuoco per LP, se il bersaglio è sotto un effetto di Incendio il danno aumenta a 1d6 per LP."
+    },
+    "Lib_BarrieraAntimagia": {
+        "name": "Barriera Antimagia",
+        "properties": {
+            "mana": "66",
+            "pf": "0",
+            "pa": "0",
+            "pp": "11",
+            "mm": "0",
+            "castingTime": "18",
+            "element": "Fisico",
+            "school": "Universale",
+            "range": "0",
+            "areaOfEffect": "0",
+            "duration": "4",
+            "savingThrow": "no",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "5",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "7e82c67fc4832abce949ceb91aec4461.png",
+        "description": ""
+    },
+    "Lib_MuroDiPietra": {
+        "name": "Muro di Pietra",
+        "properties": {
+            "mana": "63",
+            "pf": "6",
+            "pa": "0",
+            "pp": "11",
+            "mm": "0",
+            "castingTime": "28",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "16",
+            "areaOfEffect": "18",
+            "duration": "4",
+            "savingThrow": "no",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "LINEA"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "PRECAST",
+                "DRAWTARGET"
+            ]
+        },
+        "image": "inv_misc_stonetablet_02.png",
+        "description": "Questo incantesimo erige un solido muro di pietra, spesso una casella ed alto 3, mentre la lunghezza è pari alla sua area d’effetto in caselle, e può assumere la forma desiderata al momento del lancio.\nIl muro è completamento solido, fornendo copertura totale (100) ed ostruendo la visuale.\nIl muro subisce danni come una normale creatura ed ha un Livello Indicativo pari al LL, che ne determina i PV e le varie difese e resistenze. A prescindere dal livello è immune a Malattia, Maledizione, Sanguinamento e Veleno."
+    },
+    "Lib_DardiIncantati": {
+        "name": "Dardi Incantati",
+        "properties": {
+            "mana": "20",
+            "pf": "0",
+            "pa": "0",
+            "pp": "6",
+            "mm": "0",
+            "castingTime": "14",
+            "element": "Arcano",
+            "school": "Arcano",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_fire_twilightflamestrike.png",
+        "description": "Si viene a creare una moltitudine di dardi magici luminosi di colore verde-azzurro che vanno a colpire un singolo bersaglio a scelta dell’incantatore. \nQuando un dardo colpisce un bersaglio provoca 1d4+1 danni da magia pura ed è possibile creare tanti dardi quanto è il proprio LP. La resistenza magica può prevenire l’effetto di un dardo per ogni punto resistenza. \nIl Dardo incantato colpisce solo gli obbiettivi che si possono vedere e che non siano completamente riparati, come ad esempio da un cupola di forza, ma può colpire bersagli che non siamo riparati da ogni lato perché troverà sempre e comunque magicamente la via per colpire il bersaglio se questa esiste e se l’incantatore è in grado di vedere l’obbiettivo."
+    },
+    "Lib_DardoGelido": {
+        "name": "Dardo Gelido",
+        "properties": {
+            "mana": "20",
+            "pf": "0",
+            "pa": "0",
+            "pp": "7",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "2",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "ac3439698d184f5fafdd27da08fa3b51.png",
+        "description": "Crea un dardo gelido che vola in linea retta e colpisce un bersaglio visibile se non incontra ostacoli lungo il suo cammino, provocando 1d4 danni da gelo per LP. È necessario effettuare un TS Riflessi o subire un effetto Congelamento."
+    },
+    "Lib_SorgenteCurativa": {
+        "name": "Sorgente Curativa",
+        "properties": {
+            "mana": "90",
+            "pf": "3",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "10",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "8",
+            "areaOfEffect": "4",
+            "duration": "3",
+            "savingThrow": "no",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "UTILE",
+                "CERCHIO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "SELFTARGET",
+                "CURA"
+            ]
+        },
+        "image": "ce7f532e264939eb23469cdb862511f3.png",
+        "description": ""
+    },
+    "Lib_Velocita": {
+        "name": "Velocità",
+        "properties": {
+            "mana": "36,VarX",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "15",
+            "element": "Aria",
+            "school": "Aria",
+            "range": "8",
+            "areaOfEffect": "0",
+            "duration": "5",
+            "savingThrow": "no",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "3cdee5c9aa61d4d5afd51a931f4c609b.png",
+        "description": "Questo incantesimo influenza una creatura entro il raggio d’azione, la creatura influenzata riesce a muoversi più velocemente del normale. Chi beneficia di questo incantesimo ottiene l’effetto omonimo di Velocita. Se il lanciatore lancia questo incantesimo su se stesso allora recupera 2 PA al momento del lancio."
+    },
+    "Lib_FulmineDirompente": {
+        "name": "Fulmine Dirompente",
+        "properties": {
+            "mana": "33",
+            "pf": "0",
+            "pa": "0",
+            "pp": "11",
+            "mm": "0",
+            "castingTime": "20",
+            "element": "Aria",
+            "school": "Aria",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "null",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "ability_thunderking_thunderstruck.png",
+        "description": "Scaglia un violento fulmine che possiede una grande capacità distruttiva, colpendo il bersaglio prescelto per un danno pari a 1d14-1 per LP."
+    },
+    "Lib_TrasformazioneBerserker": {
+        "name": "Trasformazione Berserker",
+        "properties": {
+            "mana": "78,VarUp",
+            "pf": "0",
+            "pa": "0",
+            "pp": "6",
+            "mm": "0",
+            "castingTime": "19",
+            "element": "Fuoco",
+            "school": "Universale",
+            "range": "0",
+            "areaOfEffect": "0",
+            "duration": "5",
+            "savingThrow": "No",
+            "type": "Mutaforma",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "NOCRITICO",
+                "AGGRESSIONE"
+            ]
+        },
+        "image": "spell_winston_rage.png",
+        "description": "Trasforma il lanciatore in un temibile e furioso combattente, con i seguenti Modificatori:\n    • +1 LA ed un ulteriore +1 LA per LMM\n    • +3 PV massimi ed attuali per LL. Vengono persi entrambi quando l’incantesimo termina, tale effetto può uccidere il lanciatore.\n    • +1 CD\n    • +7 VA\n    • Tutti i poteri lanciati hanno una penalità di +50% sul costo mana."
+    },
+    "Lib_PanicoRovente": {
+        "name": "Panico Rovente",
+        "properties": {
+            "mana": "18",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "15",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "2",
+            "savingThrow": "Volonta",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_fire_incinerate.png",
+        "description": "Il bersaglio di questo incantesimo subisce un effetto Panico2 per tutta la durata dell'incantesimo se fallisce il proprio TS.\nSe la vittima è sotto un effetto di Incendio la durata dell’incantesimo aumenta di +1 round."
+    },
+    "Lib_FontedellaVita": {
+        "name": "Fonte della Vita",
+        "properties": {
+            "mana": "66",
+            "pf": "0",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "7",
+            "element": "Acqua",
+            "school": "Tempo",
+            "range": "8",
+            "areaOfEffect": "0",
+            "duration": "4",
+            "savingThrow": "no",
+            "type": "Supporto",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "CURA"
+            ]
+        },
+        "image": "2b20db3bf332a220c8e82427144235de.png",
+        "description": ""
+    },
+    "Lib_DissolviMagia": {
+        "name": "Dissolvi Magia",
+        "properties": {
+            "mana": "35",
+            "pf": "0",
+            "pa": "0",
+            "pp": "4",
+            "mm": "0",
+            "castingTime": "8",
+            "element": "Negativo",
+            "school": "Universale",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "66558f2172ff608a4fc529cf955abb54.png",
+        "description": "Quando lancia quest’incantesimo, l’esperto di magia ottiene un Rimuovi effetto con penalità di -5 sul tiro su un potere bersaglio. È efficace contro poteri di tipo Controllo, Mutaforma, Offensivo, Supporto e può anche eliminare condizioni da essi inflitti. È inefficace contro Servitori, Maledizioni, Malattie, Marchi e Veleni.<br>\nDa notare che se più creature vengono influenzate da un singolo potere in modo indipendente è possibile dissolvere il potere solamente da una creatura alla volta.<br>\nQuesto incantesimo può avere effetto anche se lanciato su oggetti. Può rendere inservibile una pozione magica, consumare cariche di un oggetto a cariche, ma non ha efficacia contro oggetti incantati ad effetto permanente. Se lanciato su un oggetto a cariche ne vengono dissolte 1d6.<br>\nSi considera magia qualsiasi effetto che utilizzi Mana come fonte di energia, quindi compresi anche poteri psionici e quant'altro."
+    },
+    "Lib_DissolviMagiaSuperiore": {
+        "name": "Dissolvi Magia Superiore",
+        "properties": {
+            "mana": "40",
+            "pf": "0",
+            "pa": "0",
+            "pp": "6",
+            "mm": "0",
+            "castingTime": "6",
+            "element": "Negativo",
+            "school": "Universale",
+            "range": "16",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "afcb62df6dcd74b0836c5bf0501729bd.png",
+        "description": ""
+    },
+    "Lib_Invisibilita": {
+        "name": "Invisibilità",
+        "properties": {
+            "mana": "44",
+            "pf": "0",
+            "pa": "0",
+            "pp": "13",
+            "mm": "0",
+            "castingTime": "12",
+            "element": "Mentale",
+            "school": "Mente",
+            "range": "0",
+            "areaOfEffect": "0",
+            "duration": "4",
+            "savingThrow": "Volonta",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "d0b888a3ed74b5b2d2904b915b0e9acf.png",
+        "description": "Questo incantesimo permette all’esperto di rendersi completamente Invisibile (Mimetizzatox3) a qualsiasi tipo di vista (infravisione, scurovisione ecc.). Questo incantesimo non è altro che un illusione che nasconde l’esperto di magia alla vista, senza però influenzare gli altri sensi come l’udito e l’olfatto.<br>Se una creatura ha ragione di credere che ci sia una presenza invisibile in zona, se ad esempio ne percepisce il suono con Perspicacia oppure se la vede diventare invisibile sotto i suoi occhi, può comunque tentare di attaccarla.<br>Se il beneficiario dell’incantesimo esegue un’azione contro qualcuno considerata dannosa in qualunque modo, il bersaglio di tale azione può tentate un TS (fase di risoluzione), se riesce l’incantesimo di invisibilità termina all’istante. Nel caso di attacchi ad area è sufficiente che un singolo bersaglio riesca nel TS."
+    },
+    "Lib_ColpodiFuoco": {
+        "name": "Colpo di Fuoco",
+        "properties": {
+            "mana": "23",
+            "pf": "0",
+            "pa": "0",
+            "pp": "8",
+            "mm": "0",
+            "castingTime": "16",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "0",
+            "duration": "0",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_fire_flamebolt.png",
+        "description": "Crea un dardo infuocato che vola in linea retta e colpisce un bersaglio visibile se non incontra ostacoli lungo il suo cammino, provocando 1d8 danni da fuoco per LP."
+    },
+    "Lib_TempestaDiFuoco": {
+        "name": "Tempesta di Fuoco",
+        "properties": {
+            "mana": "78",
+            "pf": "10",
+            "pa": "0",
+            "pp": "13",
+            "mm": "0",
+            "castingTime": "25",
+            "element": "Fuoco",
+            "school": "Fuoco",
+            "range": "26",
+            "areaOfEffect": "5",
+            "duration": "3",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "ability_evoker_firestorm.png",
+        "description": "Una violenta raffica di fiamme colpisce l’area d’effetto, tutti coloro che si trovano nell’area subiscono un effetto Incendio.  Le vittime dell’incendio subiscono 1d3 danni per LP ogni round per tutta la durata."
+    },
+    "Lib_OndaMentale": {
+        "name": "Onda Mentale",
+        "properties": {
+            "mana": "60",
+            "pf": "8",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "26",
+            "element": "Mentale",
+            "school": "Mente",
+            "range": "26",
+            "areaOfEffect": "4",
+            "duration": "2",
+            "savingThrow": "Volonta",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "CERCHIO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "ability_warlock_coil2.png",
+        "description": "Infligge un attacco ad area di tipo mentale, per tale ragione il suo volume non è costante, e non si deforma in spazi angusti, barriere o altri ostacoli sono in normalmente in grado di fermarne l’effetto comunque. Le vittime dell’incantesimo subiscono 1d6 danni per LP da mente, inoltre devono riuscire in un TS o rimanere Storditi per la durata dell’effetto."
+    },
+    "Lib_Inondazione": {
+        "name": "Inondazione",
+        "properties": {
+            "mana": "60",
+            "pf": "8",
+            "pa": "0",
+            "pp": "12",
+            "mm": "0",
+            "castingTime": "26",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "26",
+            "areaOfEffect": "4",
+            "duration": "0",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "5f894f3c9556f952e542168c1c18763a.png",
+        "description": "Si viene a creare un’onda d’acqua che travolge l’area d’effetto e tutte le creature presenti al suo interno. Chiunque venga colpito dall’onda subisce 1d6 danni da acqua per LP.\nÈ necessario effettuare un TS o subire un effetto di Atterramento."
+    },
+    "Lib_NovaGlaciale": {
+        "name": "Nova Glaciale",
+        "properties": {
+            "mana": "30",
+            "pf": "6",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "20",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "0",
+            "areaOfEffect": "4",
+            "duration": "2",
+            "savingThrow": "Riflessi",
+            "type": "Controllo",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "",
+            "aoeType": [
+                "Cerchio"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "7a31629ba6ba7c01513d1e2b9e88e6c6.png",
+        "description": ""
+    },
+    "Lib_TempestaAcida": {
+        "name": "Tempesta Acida",
+        "properties": {
+            "mana": "105",
+            "pf": "14",
+            "pa": "0",
+            "pp": "14",
+            "mm": "0",
+            "castingTime": "30",
+            "element": "Terra",
+            "school": "Terra",
+            "range": "26",
+            "areaOfEffect": "6",
+            "duration": "3",
+            "savingThrow": "no",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "RISOLUTO",
+                "ESCLUSIVO"
+            ]
+        },
+        "image": "ability_warlock_burningembersgreen.png",
+        "description": "Si viene creare una raffica sferzante di acido corrosivo ed appiccicoso, che travolge l’area bersaglio per un fugace istante.\nOgni creatura presente nell’area d’effetto al momento del lancio viene investita e ricoperta dall’acido, che gli si appiccica addosso e gli infligge 1d4 danni per LP all’inizio ogni round per tutta la durata."
+    },
+    "Lib_GloboCongelante": {
+        "name": "Globo Congelante",
+        "properties": {
+            "mana": "108",
+            "pf": "14",
+            "pa": "0",
+            "pp": "14",
+            "mm": "0",
+            "castingTime": "31",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "26",
+            "areaOfEffect": "6",
+            "duration": "3",
+            "savingThrow": "Riflessi",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [
+                "DANNOSO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE",
+                "SICURO"
+            ]
+        },
+        "image": "spell_mage_frostbomb.png",
+        "description": "Il mago deve tenere nel proprio pugno la sfera di cristallo e concentrare le proprie energie, la sfera di cristallo inizierà a brillare di un colore azzurro e bianco dal suo interno a quel punto il mago è in grado di creare una globo gelido all’interno del raggio d’azione dell’incantesimo. Una volta creato, tale globo produrrà un’area di gelo intorno ad esso, e tutte le creature presenti nell’area d’effetto devono effettuare un TS.\nChi riesce nel TS subisce solamente 1d4 danni per LP, chi invece fallisce subisce 1d10 danni per LP ed un effetto Congelamento."
+    },
+    "Lib_OscuritaDivorante": {
+        "name": "Oscurità Divorante",
+        "properties": {
+            "mana": "53",
+            "pf": "6",
+            "pa": "0",
+            "pp": "10",
+            "mm": "0",
+            "castingTime": "22",
+            "element": "Negativo",
+            "school": "Ombra",
+            "range": "26",
+            "areaOfEffect": "4",
+            "duration": "2",
+            "savingThrow": "Tempra",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": true,
+            "cooldown": "",
+            "aoeType": [],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "a7baed691e2b15b5725493514835821d.png",
+        "description": "Le creature nell'area d'effetto subiscono 1d4 danni per LP e devono superare un TS o subire un effetto Vulnerabilità."
+    },
+    "Lib_ConoDiFreddo": {
+        "name": "Cono di Freddo",
+        "properties": {
+            "mana": "40",
+            "pf": "4",
+            "pa": "0",
+            "pp": "9",
+            "mm": "0",
+            "castingTime": "22",
+            "element": "Acqua",
+            "school": "Acqua",
+            "range": "0",
+            "areaOfEffect": "6",
+            "duration": "2",
+            "savingThrow": "Tempra",
+            "type": "Offensivo",
+            "projectile": "Energetico",
+            "opportunityAttack": false,
+            "cooldown": "",
+            "aoeType": [
+                "CONO"
+            ],
+            "targetType": [],
+            "tags": [
+                "SCUOLEARCANE"
+            ]
+        },
+        "image": "spell_frost_chillingblast.png",
+        "description": "Si viene a creare un’area a forma di cono che risucchia il calore e causa 1d4 danni per LP da gelo a tutti i presenti all’interno dell’area. È necessario effettuare un TS o subire un effetto Congelamento."
+    }
+}

@@ -13,7 +13,7 @@
 
 [h: bCheck = input(inNome,inValue,inMacro,inImage,inTox,inTipo,inSoglia,inDurata)]
 [h: assert(bCheck,"Abortito")]
-[h: sMacro = strformat("%{sMacro}@Lib:OggettiUsabili")]
+[h: sMacro = strformat("consumables/%{sMacro}@lib:it.aldinucci.piero.bed.maptool.ruleset")]
 [h: jValue = json.set("","nomeOggetto",sNome,"valueLL",iValueLL,"macro",sMacro,"imageID",iImgID,"tipoOggetto",sType,"tabellaImg","PozioniImg","tossico",iTox,"sogliaPotere",bSoglia,"durata",iDurata)]
 [h: oItems = getLibMemoria(oLibToken,sType)]
 [h: oItems = json.set(oItems,sNome,jValue)]
