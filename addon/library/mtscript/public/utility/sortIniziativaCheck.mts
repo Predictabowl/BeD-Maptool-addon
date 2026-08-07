@@ -7,7 +7,7 @@
 	[h: target = json.get(id,"tokenId")]
 	[h: switchToken(target)]
 	[h: iniz = getInitiative()]
-	[macro("checkIniziativa@"+getMacroLocation()):iniz]
+	[macro("utility/checkIniziativa@"+getMacroLocation()):iniz]
 	[h: iniz = -macro.return]
 	[h: setInitiative(iniz)]
 }]

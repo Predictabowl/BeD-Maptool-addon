@@ -40,7 +40,7 @@
 
 [macro("utility/setMessaggio@this"):json.set("","token",source,"key","attacco","msg",startMsg)]
 
-[macro("getPhysDmg@"+getMacroLocation()):json.set("","source",source,"target",target,"arma",arma,"critRes",critRes,"opportunita",bOpp)]
+[macro("combat/getPhysDmg@"+getMacroLocation()):json.set("","source",source,"target",target,"arma",arma,"critRes",critRes,"opportunita",bOpp)]
 
 [h: danno = macro.return]
 [r, if(difesa == ""), code:{

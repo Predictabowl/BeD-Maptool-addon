@@ -40,7 +40,7 @@ case "Annebbiato":{
 
 case "Atterrato":{
 	[oParam = json.set(oParam,"durata",-1,"moltiplicatore",1,"tipo","Nocivo")]
-	[h: temp = json.set("","macroName","AtterratoMacro@"+getMacroLocation(),"tipo","macroCall")]
+	[h: temp = json.set("","macroName","powers/AtterratoMacro@"+getMacroLocation(),"tipo","macroCall")]
 	[h: altro = json.append("",temp)]
 	[h: temp = json.set("","key","Spalle_Override","value",1,"tipo","onceMod","moltiplicabile",0)]
 	[h: altro = json.append(altro,temp)]
@@ -184,7 +184,7 @@ case "Paralisi":{
 	[oParam = json.set(oParam,"tipo","Nocivo","moltiplicatore",iMolt)]
 	[h: temp = json.set("","key","TS_Rif","value",-8,"tipo","onceMod","moltiplicabile",0)]
 	[h: altro = json.append("",temp)]
-	[h: temp = json.set("","macroName","IncapacitatoMacro@"+getMacroLocation(), "tipo","macroCall")]
+	[h: temp = json.set("","macroName","powers/IncapacitatoMacro@"+getMacroLocation(), "tipo","macroCall")]
 	[h: altro = json.append(altro,temp)]	
 	[h: oParam = json.set(oParam,"params",altro)]
 };
@@ -215,7 +215,7 @@ case "Pietrificato":{
 	[h: altro = json.append(altro,temp)]
 	[h: temp = json.set("","key","Res_Maledizione","value",20,"tipo","onceMod","moltiplicabile",0)]
 	[h: altro = json.append(altro,temp)]
-	[h: temp = json.set("","macroName","PietrificatoMacro@"+getMacroLocation(), "tipo","macroCall")]
+	[h: temp = json.set("","macroName","powers/PietrificatoMacro@"+getMacroLocation(), "tipo","macroCall")]
 	[h: altro = json.append(altro,temp)]
 	[h: oParam = json.set(oParam,"params",altro)]
 };
@@ -294,7 +294,7 @@ case "Terrore":{
 	[oParam = json.set(oParam,"tipo","Nocivo")]
 	[h: temp = json.set("","key","TS_Vol","value", -8,"tipo","onceMod","moltiplicabile",0)]
 	[h: altro = json.append("",temp)]
-	[h: temp = json.set("","macroName","IncapacitatoMacro@"+getMacroLocation(), "tipo","macroCall")]
+	[h: temp = json.set("","macroName","powers/IncapacitatoMacro@"+getMacroLocation(), "tipo","macroCall")]
 	[h: altro = json.append(altro,temp)]
 	[h: oParam = json.set(oParam,"params",altro)]
 };
@@ -318,9 +318,9 @@ case "Tramortito":{
 	[if (iMolt < 5): iMolt = 5]
 	[oParam = json.set(oParam,"tipo","Nocivo","moltiplicatore",iMolt)]
 	[h: oParam2 = json.set("","effetto","Atterrato")]
-	[h: temp = json.set("","macroName","standardEffectTemplate@"+getMacroLocation(), "tipo","macroCall","parametri",oParam2)]
+	[h: temp = json.set("","macroName","powers/standardEffectTemplate@"+getMacroLocation(), "tipo","macroCall","parametri",oParam2)]
 	[h: altro = json.append("",temp)]
-	[h: temp = json.set("","macroName","IncapacitatoMacro@"+getMacroLocation(), "tipo","macroCall")]
+	[h: temp = json.set("","macroName","powers/IncapacitatoMacro@"+getMacroLocation(), "tipo","macroCall")]
 	[h: altro = json.append(altro,temp)]
 	[h: oParam = json.set(oParam,"params",altro)]
 };

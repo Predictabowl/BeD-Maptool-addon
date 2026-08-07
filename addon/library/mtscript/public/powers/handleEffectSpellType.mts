@@ -1,3 +1,4 @@
+<!-- TODO getImageAsset ,ust be fixed in all spells -->
 [h: source = arg(0)]
 [h: target = arg(1)]
 [h: spellName = arg(2)]
@@ -33,7 +34,7 @@
 		[idToken = findToken(spellName,"Librerie")]
 		[bMacro = hasMacro("getImageAsset",idToken,"Librerie")]
 		[if(bMacro), code:{
-			[macro("getImageAsset@"+spellName): json.append(source,target)]
+			[macro("powers/spells/"+spellName+"/getImageAsset@"+getMacroLocation()): json.append(source,target)]
 			[sNewTokenImg = macro.return]
 		}]
 	};

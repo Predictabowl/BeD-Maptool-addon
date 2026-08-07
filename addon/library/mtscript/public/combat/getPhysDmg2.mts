@@ -13,7 +13,7 @@
 [h, if(LAA == ""), code:{
 	[macro("combat/getLA@this"):json.set("","source",source,"arma",arma)]
 	[h: LAA= macro.return]
-	[macro("getModLAPos@"+getMacroLocation()):json.append(source,target,bOpp)]
+	[macro("combat/getModLAPos@"+getMacroLocation()):json.append(source,target,bOpp)]
 	[h: LAA = LAA + macro.return]
 }]
 
@@ -37,21 +37,21 @@
 
 
 [r, if(critRoll ==""), code:{
-	[macro("criticalRoll@"+getMacroLocation()): json.set("","mancare",Mancare,"critico",CFA,"source",source)]
+	[macro("combat/criticalRoll@"+getMacroLocation()): json.set("","mancare",Mancare,"critico",CFA,"source",source)]
 	[h: critRoll =macro.return]
 	[macro("utility/popMessaggio@this"):json.set("","token",source,"key","criticalResult")]
 	[h: msgOutput = msgOutput +"<br>"+macro.return]
 };{}]
 
 [r, if(critRoll != -1), code: {
-	[macro("coperturaRoll@"+getMacroLocation()): json.set("","target",target,"source",source)]
+	[macro("combat/coperturaRoll@"+getMacroLocation()): json.set("","target",target,"source",source)]
 	[h: critRoll = if(macro.return == 1,-1,critRoll)]
 	[macro("utility/popMessaggio@this"):json.set("","token",source,"key","coperturaResult")]
 	[h: msgOutput = msgOutput +macro.return]
 };{}]
 
 <!-- Importante getCritPower deve essere sempre chiamata, altrimenti non viene fatto il clear dei bonus temporanei e questi si cumulano -->
-[macro("getCritPower@"+getMacroLocation()): json.set("","target",source,"type",arma)]
+[macro("combat/getCritPower@"+getMacroLocation()): json.set("","target",source,"type",arma)]
 [h, if(iPCF == ""), code:{
 	[iPCF = macro.return]
 }]

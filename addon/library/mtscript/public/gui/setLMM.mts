@@ -8,4 +8,4 @@
 	[h: value = json.get(macro.args,key)]	
 	[setLMM(target,key,value)]
 }]
-[macro("inputLMM@"+getMacroLocation()): target]
+[macro("gui/inputLMM@"+getMacroLocation()): target]

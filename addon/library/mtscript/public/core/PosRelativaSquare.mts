@@ -1,6 +1,6 @@
 [h: source = json.get(macro.args,0)]
 [h: target = json.get(macro.args,1)]
-[macro("getSizePosMod@"+getMacroLocation()): target]
+[macro("core/getSizePosMod@"+getMacroLocation()): target]
 [h: offset = macro.return]
 [h: tx = getTokenX(0,target)+offset]
 [h: ty = getTokenY(0,target)+offset]

@@ -20,5 +20,5 @@
 
 [h: setMessaggio(source, "iniziaAzioneMsg", sMsg)]
 
-[h: param = json.set("","source",source,"macro","AzioneAlzarsi@"+getMacroLocation(),"tipo","Generica","opp",generaOpp,"time",time,"action","Alzarsi")]
+[h: param = json.set("","source",source,"macro","mobs/AzioneAlzarsi@"+getMacroLocation(),"tipo","Generica","opp",generaOpp,"time",time,"action","Alzarsi")]
 [macro("mobs/IniziaAzione@this"):param]

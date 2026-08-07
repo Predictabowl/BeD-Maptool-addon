@@ -30,3 +30,9 @@ Find macrolink with @this in non direct macro calls
 $1@lib:it.aldinucci.piero.bed.maptool.ruleset
 oppure se definiamo [sThis = getMacroLocation()]
 $1@" + sThis
+
+getMacroLocation:
+"(\w+)@("\s*\+\s*(getMacroLocation\(\)|\w+)\s*)
+"prefix/$1@$2
+oppure: "prefix/$1@this"
+oppure se necessita di essere esplicito: "prefix/$1@lib:it.aldinucci.piero.bed.maptool.ruleset" oppure "class_skills/$1@$2

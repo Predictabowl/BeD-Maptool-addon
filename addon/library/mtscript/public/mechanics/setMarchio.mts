@@ -32,7 +32,7 @@
 [h: param = json.set(param,"verbose",0)]
 [h: param = json.set(param,"messaggi",0)]
 
-[h: temp = json.set("","macroName","effectRemoveMarchio@"+getMacroLocation(),"tipo","macroCall")]
+[h: temp = json.set("","macroName","mechanics/effectRemoveMarchio@"+getMacroLocation(),"tipo","macroCall")]
 [h: altro = json.append("",temp)]
 [h: param = json.set(param,"params",altro)]
 

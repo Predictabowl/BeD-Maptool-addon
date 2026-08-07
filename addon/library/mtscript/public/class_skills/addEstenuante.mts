@@ -10,4 +10,4 @@
 [h: oData = json.set(oData, sNomeAb, iValue)]
 [h: setInMemoria(oToken, "estenuante-cooldown", oData)]
 
-[h: eventInstaller(oToken, "On_Round_End", "estenuante-cooldown", "estenuanteEndRoundUpdater@" + getMacroLocation())]
+[h: eventInstaller(oToken, "On_Round_End", "estenuante-cooldown", "class_skills/estenuanteEndRoundUpdater@" + getMacroLocation())]

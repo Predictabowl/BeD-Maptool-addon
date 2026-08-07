@@ -22,7 +22,7 @@
 
 [r, if (action == SpellName || ini < 0), code:{
 	[h: param = json.set(param,"target",target)]
-	[macro("getSpellPrice@"+getMacroLocation()):param]
+	[macro("powers/getSpellPrice@"+getMacroLocation()):param]
 	
 	[macro("core/payAction@this"): macro.return]
 	[r, if(macro.return == 1), code:{

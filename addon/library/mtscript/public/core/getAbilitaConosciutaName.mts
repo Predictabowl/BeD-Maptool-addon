@@ -1,4 +1,4 @@
-<!-- Ricava il nome di un abilita conosciuta da un Token -->
+<!-- Ricava il nome di un abilita conosciuta da un Token - DEPRECATED -->
 [h: oToken = json.get(macro.args,0)]
 [h: sAbilita = json.get(macro.args,1)]
 

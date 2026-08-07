@@ -13,7 +13,7 @@
 	[h: sMsg = getName(source) + " Inizia a Nascondersi"]
 	[setMessaggio(source,"iniziaAzioneMsg",sMsg)]
 
-	[h: param = json.set("","source",source,"macro","AzioneNascondersi@"+getMacroLocation(),"tipo","Generica","opp",generaOpp,"time",time,"action","Nascondersi")]
+	[h: param = json.set("","source",source,"macro","mobs/AzioneNascondersi@"+getMacroLocation(),"tipo","Generica","opp",generaOpp,"time",time,"action","Nascondersi")]
 	[macro("mobs/IniziaAzione@this"):param]
 };{
 	[macro("mobs/RimuoviNascondersi@this"): source]

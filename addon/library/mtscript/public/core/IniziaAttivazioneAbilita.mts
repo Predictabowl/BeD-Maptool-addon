@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: source = json.get(macro.args,0)]
 [h: sAbilita = json.get(macro.args,1)]
 

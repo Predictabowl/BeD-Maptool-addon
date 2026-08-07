@@ -1,4 +1,4 @@
-<!-- Restituisce un abilità di classe da un token PG-->
+<!-- Restituisce un abilità di classe da un token PG - DEPRECATED -->
 [h: source = json.get(macro.args,0)]
 [h: nomeAbilita = json.get(macro.args,1)]
 

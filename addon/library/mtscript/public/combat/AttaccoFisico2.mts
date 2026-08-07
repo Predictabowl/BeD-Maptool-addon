@@ -11,7 +11,7 @@
 [h, if(source ==""): source = getImpersonated()]
 [h: switchToken(source)]
 
-[macro("hasAttacks@"+getMacroLocation()): json.set("","source",source,"tipo","normale","opportunita",bOpp)]
+[macro("combat/hasAttacks@"+getMacroLocation()): json.set("","source",source,"tipo","normale","opportunita",bOpp)]
 [h: assert((macro.return==1),getName(source) + " Non ha attacchi a disposizione",0)]
 
 [h: target = json.get(getProperty("Azione_Corrente",source),"Bersaglio")]
@@ -26,7 +26,7 @@
 	[macro("combat/getArmaDaUsare@this"):json.set("","source",source,"opportunita",bOpp)]
 	[h: arma = macro.return]
 	
-	[macro("getAttackPrice@"+getMacroLocation()): json.set("","source",source,"arma",arma,"opportunita",bOpp)]
+	[macro("combat/getAttackPrice@"+getMacroLocation()): json.set("","source",source,"arma",arma,"opportunita",bOpp)]
 	[h: cost = macro.return]
 	[macro("core/payAction@this"): cost]
 

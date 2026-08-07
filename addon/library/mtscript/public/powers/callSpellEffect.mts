@@ -7,7 +7,7 @@
 [h: bIsAoE = json.get(macro.args, "isAoE")]
 
 [h: jProcParam = macro.args]
-[h, if(sSpellMacro == ""): jProcParam = json.set(jProcParam, "spellMacro", "spellEffect@"+spellName)]
+[h, if(sSpellMacro == ""): jProcParam = json.set(jProcParam, "spellMacro", "powers/spells/"+spellName+"/spellEffect@this")]
 
 [h: switchToken(source)]
 

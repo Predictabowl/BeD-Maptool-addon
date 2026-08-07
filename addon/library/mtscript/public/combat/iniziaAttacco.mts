@@ -26,7 +26,7 @@ mtscript/public/combat
 [macro("combat/isOpportunita@this"): json.append(source,target,json.set("","arma",arma))]
 [h: bOpp = macro.return]
 
-[macro("hasAttacks@"+getMacroLocation()): json.set("","source",source,"opportunita",bOpp)]
+[macro("combat/hasAttacks@"+getMacroLocation()): json.set("","source",source,"opportunita",bOpp)]
 [h: assert((macro.return==1),getName(source) + " Non ha attacchi a disposizione",0)]
 
 [h, if(arma==""), code:{

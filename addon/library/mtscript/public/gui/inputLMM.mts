@@ -26,7 +26,7 @@
 					<td> [r: macrolink("Rimuovi","gui/RemoveLMM@" + getMacroLocation(),"none",param)] </td></tr>
 				}]
 			</table>
-			[r: macrolink("Aggiungi Scuola","AddScuolaLMM@"+getMacroLocation(),"none",target)] <br><br>
+			[r: macrolink("Aggiungi Scuola","gui/AddScuolaLMM@"+getMacroLocation(),"none",target)] <br><br>
 			<input type="hidden" name="target" value="[r: target]"/>
 			<input type="submit" value="Salva"/>
 		</form>

@@ -1,7 +1,7 @@
 [h: source = getImpersonated()]
 [h: switchToken(source)]
 
-[macro("hasAttacks@"+getMacroLocation()): json.set("","source",source,"tipo","normale")]
+[macro("combat/hasAttacks@"+getMacroLocation()): json.set("","source",source,"tipo","normale")]
 [h: assert((macro.return==1),"Non hai attacchi a disposizione",0)]
 
 [h: target = json.get(getProperty("Azione_Corrente",source),"Bersaglio")]
@@ -16,15 +16,15 @@
 [h, if(isNumber(ini)==0): ini = -1]
 
 [r, if(inRange == 1), code:{
-	[macro("getArmaDaUsare@"+getMacroLocation()):source]
+	[macro("combat/getArmaDaUsare@"+getMacroLocation()):source]
 	[h: arma = macro.return]
 
 	[r, if (action == "Attacco" || ini < 0), code:{
 		[h: param = json.set("","source",source,"target",target,"arma",arma)]
-		[macro("AttaccoCore@"+getMacroLocation()):param]
+		[macro("combat/AttaccoCore@"+getMacroLocation()):param]
 		[macro("mobs/FineAzione@this"):source]
 	};{
-		[macro("getAttackTime@"+getMacroLocation()): json.set("","target",source,"arma",arma)]
+		[macro("combat/getAttackTime@"+getMacroLocation()): json.set("","target",source,"arma",arma)]
 		[h: time = macro.return]
 		[h: param = json.set("","target",target,"source",source,"action","Attacco","time",time,"color","red")]
 		[macro("mobs/IniziaAzione@this"):param]
