@@ -20,7 +20,7 @@
 [macro("core/RemoveEffect@this"):json.append(source,fluffName)]
 
 [h: msgOut= strformat("<img src='%s' width='25' height='25' />&nbsp;<b>%s</b> si attiva contro %s (%{sSpineMsg})",
-	getImage(spellName),fluffName,getName(target))]
+	fetchSpellImage(spellName),fluffName,getName(target))]
 
 [h: sMsgDifesa = popMessaggio(source, "difesaResult")]
 [h: sMsgCopertura = popMessaggio(source, "coperturaResult")]

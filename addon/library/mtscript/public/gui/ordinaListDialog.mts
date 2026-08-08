@@ -24,7 +24,7 @@
 [h: iIndice = 0]
 
 [r, foreach(oEntry, list, "<br>"), CODE:{
-	[h: item = getLibProperty("nome_decorativo",oEntry)]
+	[h: item = fetchSpellProp(oEntry,"nome_decorativo")]
 	[h: isOdd = math.mod(iIndice,2)]
 	[h: classType = if(isOdd == 0,"evenRow","oddRow")]
 	<tr class="[r: classType]">

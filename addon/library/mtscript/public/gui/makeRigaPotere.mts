@@ -6,7 +6,7 @@
 [h: iRecupero = json.get(jOptions, "recupero")]
 [h, if(!isNumber(iRecupero)): iRecupero = -1]
 
-[h: sNome = getLibProperty("nome_decorativo",nomeLib)]	
+[h: sNome = fetchSpellProp(nomeLib,"nome_decorativo")]	
 [h, macro("gui/getSpellStats@this"): json.append("",target,nomeLib)]
 [h: iManaCost =json.get( macro.return,0)]
 [h: iPFCost =json.get( macro.return,1)]
@@ -16,12 +16,12 @@
 [h, macro("powers/getSpellRecuperoStat@this"): nomeLib]
 [h: bRecupero = macro.return]
 
-[h: imgA = getImage(nomeLib)]
+[h: imgA = fetchSpellImage(nomeLib)]
 [h: strCast = strformat("<input type='image' class='spellCastButton' src='%{imgA}' onclick='loadParams(this)'")]
 [h, if(bNames): sIconTitle = "Lancia Potere"; sIconTitle = sNome]
 [h: strCast = strformat('%{strCast} data-macro="gui/iniziaSpellCastWrapper@this" data-spellName="%{nomeLib}" title="%{sIconTitle}"/>')]
 [h, if(iRecupero > 0 && bRecupero > 0): strCast = strformat("<span class='recupero-container'>%{strCast}<div class='recupero-overlay'>%d</div></span>", iRecupero)]
-[h: sSpellType = getLibProperty("tipo",nomeLib)]
+[h: sSpellType = fetchSpellProp(nomeLib,"tipo")]
 
 [h: sJScriptSpell = strformat('apri_dialog_descrizione("%{nomeLib}")')]
 [h, if(bNames), code:{

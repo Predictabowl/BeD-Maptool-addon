@@ -26,7 +26,7 @@
 [h, if(iSourceRoll < iTargetRoll): bResult = 0; bResult = 1]
 [h, if(!bResult), code:{
 	[macro("mobs/InterrompiAzione@this"): source]	
-	[nomeDec = getLibProperty("nome_decorativo",sSpellInCast)]
+	[nomeDec = fetchSpellProp(sSpellInCast,"nome_decorativo")]
 	[sMsg = strformat("L'incantesimo %s di %s  viene interrotto!",nomeDec,getName(source))]
 };{
 	[sMsg = strformat("%s resiste con successo e non perde il proprio incantesimo",getName(source))]

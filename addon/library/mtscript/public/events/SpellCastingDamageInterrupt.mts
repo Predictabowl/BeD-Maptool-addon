@@ -22,7 +22,7 @@
 		[sMsg = strformat("Tiro perturbazione potere su %s: <span title='%{sMsg}' style='font-style:italic'>Fallito</span>",getName(source))]
 	};{
 		[macro("mobs/forzaInterrompiAzione@this"): json.append(source,sSpellInCast)]	
-		[nomeDec = getLibProperty("nome_decorativo",sSpellInCast)]
+		[nomeDec = fetchSpellProp(sSpellInCast,"nome_decorativo")]
 		[sMsg = strformat("Il potere %s di %s  viene <span title='%{sMsg}' style='font-style:italic'>Interrotto</span>",nomeDec,getName(source))]
 	}]
 }]

@@ -1,6 +1,6 @@
 [h: source = json.get(macro.args,"source")]
 
-[h: libName = "PreghieraIStintodiSopravvivenza"]
+[h: libName = "PreghieraIstintodiSopravvivenza"]
 [h: switchToken(source)]
 
 [h: sNomeMacro = "powers/generalEffectAura@lib:it.aldinucci.piero.bed.maptool.ruleset"]

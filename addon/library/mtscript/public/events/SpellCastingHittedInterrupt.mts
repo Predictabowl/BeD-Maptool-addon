@@ -6,7 +6,7 @@
 [h: oParam = ""]
 [h, if(json.contains(oEventParam,"spellName")), code:{
 	[sSpellAttack = json.get(oEventParam, "spellName")]
-	[sTipoSpell = upper(getLibProperty("tipo", sSpellAttack))]
+	[sTipoSpell = upper(fetchSpellProp(sSpellAttack,"tipo"))]
 	[if (sTipoSpell != "OFFENSIVO"): return(0,"")]
 	[oParam = json.set("","spellNameAtt",json.get(oEventParam,"spellName"))]
 }]

@@ -29,7 +29,7 @@
 [h: jData = json.set(jData, "ritorsione-hitted", jAlreadyHit)]
 [h: setSpellData(source, sEffectName, jData)]
 
-[h: msgOut= strformat("<img src='%s' width='25' height='25' />&nbsp;<b>%s</b> si attiva contro %s (%{sSpineMsg})", getImage(spellName),fluffName,getName(target))]
+[h: msgOut= strformat("<img src='%s' width='25' height='25' />&nbsp;<b>%s</b> si attiva contro %s (%{sSpineMsg})", fetchSpellImage(spellName),fluffName,getName(target))]
 [h: sMsgDifesa = popMessaggio(source, "difesaResult")]
 [h: sMsgCopertura = popMessaggio(source, "coperturaResult")]
 [h, if(sMsgDifesa != "" && sMsgCopertura != ""): sMsgDifesa = sMsgDifesa + "<br>"]

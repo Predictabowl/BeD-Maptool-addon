@@ -9,8 +9,8 @@
 [h: iIndex = 0]
 [h, foreach(oInc, oListaPot), code:{
 	[sJScriptSpell = strformat('apri_dialog_descrizione("%{oInc}")')]
-	[sNameInc = getLibProperty("nome_decorativo",oInc)]
-	[sSpellType = getLibProperty("tipo",oInc)]
+	[sNameInc = fetchSpellProp(oInc,"nome_decorativo")]
+	[sSpellType = fetchSpellProp(oInc,"tipo")]
 	[if(json.contains(oMemList,oInc)), code:{
 		[sMem = "checked"]
 		[iMemCount = iMemCount +1]

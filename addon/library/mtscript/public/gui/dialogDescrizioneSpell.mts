@@ -61,7 +61,7 @@
 </head>
 <body  align="center">
 
-[h: imgA = getImage(spellName)]
+[h: imgA = fetchSpellImage(spellName)]
 [h: sImage = strformat("<img src='%{imgA}' width='50' length='50'/>")]
 [h: sFluffName = fetchSpellProp(spellName,"nome_decorativo")]
 [r: sImage]

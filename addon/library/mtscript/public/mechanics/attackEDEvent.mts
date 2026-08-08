@@ -4,9 +4,9 @@
 [h: sEventName = "Energia Distruttiva"]
 [h: spellName = json.get(eventParam,"spellName")]
 [h, if(spellName != ""), code:{
-	[h: tagList = getLibProperty("tags",spellName)]
-	[h: nomeDec = getLibProperty("nome_decorativo",spellName)]
-	[h: sTipo  = upper(getLibProperty("tipo",spellName))]
+	[h: tagList = fetchSpellProp(spellName,"tags")]
+	[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
+	[h: sTipo  = upper(fetchSpellProp(spellName,"tipo"))]
 
 	[h, if(listContains(tagList,"MACRODISTRUTTIVA")), code:{
 		[sMacroName = strformat("energiaDistruttiva@%{spellName}")]
@@ -17,7 +17,7 @@
 
 	[macro("mechanics/isEDAble@this"): spellName]
 	[h, if(macro.return), code:{
-		[im = getImage(spellName)]
+		[im = fetchSpellImage(spellName)]
 		[msg = strformat("<br><img src='%{im}' width='25' height='25' /> Energia distruttiva &egrave attiva per %s",nomeDec)]
 	}]
 

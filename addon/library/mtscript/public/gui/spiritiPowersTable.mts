@@ -5,8 +5,8 @@
 [h: sTableBody = "<table><thead/><tbody>"]
 [h, foreach(oInc, aListaPot), code:{
 	[sJScriptSpell = strformat('apri_dialog_descrizione("%{oInc}")')]
-	[sNameInc = getLibProperty("nome_decorativo",oInc)]
-	[sSpellType = getLibProperty("tipo",oInc)]
+	[sNameInc = fetchSpellProp(oInc,"nome_decorativo")]
+	[sSpellType = fetchSpellProp(oInc,"tipo")]
 	[sRow = strformat("<tr class='spellFont'>
 		<td class = '%{sSpellType}' title='Leggi descrizione' onclick='%{sJScriptSpell}'>%{sNameInc}</td>
 		</tr>")]

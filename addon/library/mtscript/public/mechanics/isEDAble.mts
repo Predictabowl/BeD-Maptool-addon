@@ -1,7 +1,7 @@
 [h: spellName = macro.args]
 
-[h: sTipo = upper(getLibProperty("tipo",spellName))]
-[h: tagList = getLibProperty("tags",spellName)]
+[h: sTipo = upper(fetchSpellProp(spellName,"tipo"))]
+[h: tagList = fetchSpellProp(spellName,"tags")]
 
 [h: bResult = 0]
 

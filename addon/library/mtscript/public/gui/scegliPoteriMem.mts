@@ -37,7 +37,7 @@
 	[h: classType = if(isOdd == 0,"evenRow","oddRow")]
 	<tr class="[r: classType]">
 	<td> <input type="submit" name="indice" value= [r: iIndice+1] onclick='add_Row()'/></td>
-	<td align='left'> [r: getLibProperty("nome_decorativo",item)]</td>
+	<td align='left'> [r: fetchSpellProp(item,"nome_decorativo")]</td>
 	[h: param = json.append(target,item)]
 	<td ><span style='color:red'> [r: macrolink("X","gui/rimuoviPotereDaLibro@" + sThis,"none",param)] </span></td>
 	</tr>
