@@ -32,12 +32,12 @@
 	[macro("powers/endOfCastUpdates@this"): json.set("","source",source,"spell",spellName)]
 
 };{
-	[h: time = getLibProperty("tempo",spellName)]
+	[h: time = fetchSpellProp(spellName,"tempo")]
 	[macro("powers/getSpellTimeMod@this"):source]
 	[h, if(macro.return+time <1): time = 1; time = macro.return+time]
-	[h: color = getLibProperty("colore_decorativo",spellName)]
-	[h: tipo = getLibProperty("tipo",spellName)]
-	[h: opport = getLibProperty("opportunita",spellName)]
+	[h: color = fetchSpellProp(spellName,"colore_decorativo")]
+	[h: tipo = fetchSpellProp(spellName,"tipo")]
+	[h: opport = fetchSpellProp(spellName,"opportunita")]
 	[h: param = json.set("","target",target,"source",source,"action",spellName,"time",time,"color",color,"tipo",tipo,"opp",opport)]
 	[macro("mobs/IniziaAzione@this"):param]
 }]

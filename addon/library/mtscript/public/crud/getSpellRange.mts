@@ -14,7 +14,7 @@
 }]
 
 
-[h: iRange = getLibProperty("raggio",spellName)]
+[h: iRange = fetchSpellProp(spellName,"raggio")]
 
 [h, if(!isNumber(iRange)), code:{
 	[iRange = upper(iRange)]

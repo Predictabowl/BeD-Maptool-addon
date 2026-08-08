@@ -14,8 +14,8 @@
 [h, if(bTSBlock == ""): bTSBlock = 0]
 
 [h: switchToken(source)]
-[h: sSpellTags = getLibProperty("tags",spellName)]
-[h: sFluffName = getLibProperty("nome_decorativo",spellName)]
+[h: sSpellTags = fetchSpellProp(spellName,"tags")]
+[h: sFluffName = fetchSpellProp(spellName,"nome_decorativo")]
 
 [h, if(!isNumber(iRR)): iRR = getSpellRRValue(source, spellName)]
 
@@ -24,7 +24,7 @@
 
 [h, if(sEffectName == ""), code:{
 	[sEffectName = sFluffName]
-	[sTipo = upper(getLibProperty("tipo", spellName))]
+	[sTipo = upper(fetchSpellProp(spellName,"tipo"))]
 	[if(sTipo == "OFFENSIVO"): sEffectName = strformat("%{sEffectName}(%s)",getName(source))]
 }]
 [h: sEffectTarget = json.get(oEffetto,"target")]
@@ -46,7 +46,7 @@
 [h, if(bTSBlock), code:{
 	[sTSType = "NO"]
 };{
-	[h: sTSType = upper(getLibProperty("TS",spellName))]
+	[h: sTSType = upper(fetchSpellProp(spellName,"TS"))]
 }]
 
 [if (!isNumber(iCD)): iCD = getSpellCD(json.set("","source",source,"target",target,"spellName",spellName,"critRes",critRes))]

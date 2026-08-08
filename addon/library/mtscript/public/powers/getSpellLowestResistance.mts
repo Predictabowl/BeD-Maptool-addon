@@ -2,7 +2,7 @@
 [h: target = arg(1)]
 [h: spellName = arg(2)]
 
-[h: sElemento = upper(getLibProperty("elemento",spellName))]
+[h: sElemento = upper(fetchSpellProp(spellName,"elemento"))]
 [h, if(listCount(sElemento) < 2): return(0, sElemento)]
 
 [h: sLowest = listGet(sElemento, 0)]

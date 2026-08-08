@@ -12,6 +12,6 @@
 	[sMCostoParam = json.append(source,spellName)]
 }]
 
-[h: nomeDec = getLibProperty("nome_decorativo",spellName)]
+[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 [h: oMant = json.set("","macroCosto",sMacroCosto,"macroCostoParam",sMCostoParam,"nome",nomeDec)]
 [h: Mantenimenti = json.set(Mantenimenti,spellName,oMant)]

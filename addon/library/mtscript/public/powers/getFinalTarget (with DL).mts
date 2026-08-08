@@ -7,7 +7,7 @@
 }]
 
 [h: target = ""]
-[h: spellTag = getLibProperty("tags",spellName)]
+[h: spellTag = fetchSpellProp(spellName,"tags")]
 
 [h: switchToken(source)]
 [macro("mobs/getLastTestDL@this"):json.set("","source",source,"spellName",spellName)]

@@ -8,7 +8,7 @@
 [h: iTriggerRange = json.get(macro.args, "triggerRange")] <!-- default is move over, 0 = no trigger, > 0 is near the draw within that range-->
 
 [h: sEventName = spellName+"-"+getName(sCaster)]
-[h: sEffectName = getLibProperty("nome_decorativo", spellName)]
+[h: sEffectName = fetchSpellProp(spellName,"nome_decorativo")]
 [h: sMap = getCurrentMapName()]
 <!-- Evento che viene applicato a chi si muove nell'area -->
 [h: eventoMacro = json.get(macro.args, "eventoMacro")]

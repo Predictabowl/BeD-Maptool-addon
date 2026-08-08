@@ -2,7 +2,7 @@
 [h: spellName = arg(1)]
 [h, if(argCount() > 2): target = arg(2); target = ""] <!-- Unused for now, will be used later, with Inquisitor -->
 
-[h: opport = getLibProperty("opportunita",spellName)]
+[h: opport = fetchSpellProp(spellName,"opportunita")]
 [h, if(opport != 0), code:{
 	[macro("core/getOverride@this"):json.append(source,"SpellRangeTouch")]
 	[if (macro.return > 0): opport = 0]

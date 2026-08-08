@@ -3,7 +3,7 @@
 [h: bOpp = json.get(macro.args,"isOpport")]
 [h, if(!isNumber(bOpp)): bOpp = 0]
 
-[h: tipo = upper(getLibProperty("tipo",spell))]
+[h: tipo = upper(fetchSpellProp(spell,"tipo"))]
 [h, if(tipo=="OFFENSIVO"), code:{
 	[consumaPotereOffensivo(source,bOpp)]
 };{

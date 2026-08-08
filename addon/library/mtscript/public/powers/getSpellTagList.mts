@@ -1,3 +1,3 @@
 [h: spellName = arg(0)]
 
-[h: macro.return = upper(getLibProperty("tags", spellName))]
+[h: macro.return = upper(fetchSpellProp(spellName,"tags"))]

@@ -7,7 +7,7 @@
 
 [h, if(listContains(sComponenti,"V")), code:{
 	[macro("core/pushOverride@this"): json.append(source,"SpellBlock")]
-	[sMsg = strformat("L'effetto di Silenzio impedisce a %s di lanciare il potere %s",getName(source),getLibProperty("nome_decorativo",spellName))]
+	[sMsg = strformat("L'effetto di Silenzio impedisce a %s di lanciare il potere %s",getName(source),fetchSpellProp(spellName,"nome_decorativo"))]
 	[broadcast(sMsg)]
 }]
 

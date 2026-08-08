@@ -13,7 +13,7 @@
 
 [h, if(target == ""): target = getSelected()]
 
-[h: targetType = upper(getLibProperty("tipo_bersaglio",spellName))]
+[h: targetType = upper(fetchSpellProp(spellName,"tipo_bersaglio"))]
 [h, if(targetType == ""): targetType = "TUTTI"]
 
 [h: iSpellRange = getSpellRange(source,spellName)]
@@ -22,7 +22,7 @@
 [h: flag  = 1]
 [h, if(iSpellRange == 0 && iSpellAOE ==0): target = source]
 
-[h: sTipo = upper(getLibProperty("tipo",spellName))]
+[h: sTipo = upper(fetchSpellProp(spellName,"tipo"))]
 [h, if(sTipo == "SERVITORE"): target = source]
 
 [h, if(iSpellRange != 0 && iSpellAOE ==0),code :{

@@ -3,9 +3,9 @@
 [h: modType = json.get(macro.args,2)]
 
 [h: switchToken(source)]
-[h: spellTipo = upper(getLibProperty("tipo",spellName))]
-[h: spellScuola = upper(getLibProperty("scuola",spellName))]
-[h: spellTags = getLibProperty("tags",spellName)]
+[h: spellTipo = upper(fetchSpellProp(spellName,"tipo"))]
+[h: spellScuola = upper(fetchSpellProp(spellName,"scuola"))]
+[h: spellTags = fetchSpellProp(spellName,"tags")]
 
 [h, if(listContains(spellTags,"OGGETTO")): return(0,json.set("","mod",0,"perc",0))]
 

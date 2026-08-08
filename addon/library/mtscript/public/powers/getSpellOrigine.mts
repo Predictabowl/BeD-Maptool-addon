@@ -4,7 +4,7 @@
 
 <!-- DA FINIRE -->
 
-[h: lTags = upper(getLibProperty("tags",spellName))]
+[h: lTags = upper(fetchSpellProp(spellName,"tags"))]
 
 [h, if(listContains(lTags,"SERVITOREORIGIN")), code:{
 	[oServitore = findToken(getServitore(source))]

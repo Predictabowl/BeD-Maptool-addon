@@ -5,7 +5,7 @@
 [h: iLL = json.get(macro.args,"LL")]
 [h: bCritRes = json.get(macro.args,"critRes")]
 
-[h: sElemento = getLibProperty("elemento",spellName)]
+[h: sElemento = fetchSpellProp(spellName,"elemento")]
 
 [h, if(!isNumber(bCritRes)), code:{
 	[macro("combat/getUltimoCritico@this"):source]

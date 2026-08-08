@@ -5,7 +5,7 @@
 [h: iLL = json.get(macro.args,"LL")] <!-- Opzionale -->
 [h: bBloccaTS = json.get(macro.args,"bloccaTS")] <!-- Opzionale -->
 
-[h: sEffetto = getLibProperty("nome_decorativo",spellName)]
+[h: sEffetto = fetchSpellProp(spellName,"nome_decorativo")]
 
 [h: oEffetto = json.set(oEffetto,"effetto",sEffetto,"stato","Benedizione","tipo","Benedizione","mutex","")]
 

@@ -43,17 +43,17 @@ Il che vuol dire se il safetycheck fa un abort non si ha un clean corretto degli
 [h, if(isPotereOffensivo(spellName)), code:{
 	[macro("combat/checkAttFurtivo@this"): json.append(source, target)]
 	[macro("combat/isOpportunita@this"): json.append(source,target)]
-	[h: bOpp = macro.return && listContains(getLibProperty("tags",spellName),"OPP")]
+	[h: bOpp = macro.return && listContains(fetchSpellProp(spellName,"tags"),"OPP")]
 }]
 
 [h: time = getSpellTime(source,spellName,bOpp)]
 [h, macro("powers/getSpellActionColor@this"): spellName]
 [h: sActionColor = macro.return]
-[h: color = getLibProperty("colore_decorativo",spellName)]
+[h: color = fetchSpellProp(spellName,"colore_decorativo")]
 [macro("powers/generaOpportunita@this"):json.append(source,spellName)]
 [h: opport = macro.return]
-[h: sTipo = getLibProperty("tipo",spellName)]
-[h: sFluffSpell = getLibProperty("nome_decorativo",spellName)]
+[h: sTipo = fetchSpellProp(spellName,"tipo")]
+[h: sFluffSpell = fetchSpellProp(spellName,"nome_decorativo")]
 [h: oMacroParam = json.set("","spellName",spellName,"isOpport",bOpp,"extraParam",extraParam)]
 [h: param = json.set("","target",target,"source",source,"action",sFluffSpell,"time",time,"color",color,"tipo",sTipo,"opp",opport,"macro","powers/SpellCast@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oMacroParam, "color", sActionColor)]
 

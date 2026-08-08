@@ -7,4 +7,4 @@
 	[h: spellName = json.get(macro.args,"spell")]
 }]
 
-[h: macro.return = getLibProperty("scuola",spellName)]
+[h: macro.return = fetchSpellProp(spellName,"scuola")]

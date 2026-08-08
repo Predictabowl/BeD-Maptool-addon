@@ -10,7 +10,7 @@
 
 [h: iRecupero = 1]
 [h, if(spellName!=""), code:{
-	[h: iRecupero = getLibProperty("recupero",spellName)]
+	[h: iRecupero = fetchSpellProp(spellName,"recupero")]
 	[h, if(!isNumber(iRecupero)): iRecupero = 0]
 }]
 

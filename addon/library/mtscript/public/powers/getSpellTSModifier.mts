@@ -10,7 +10,7 @@
 	[h: sElemento = json.get(macro.args,"elemento")]
 }]
 
-[h: TStype = upper(getLibProperty("TS",spellName))]
+[h: TStype = upper(fetchSpellProp(spellName,"TS"))]
 [h: switchToken(target)]
 
 

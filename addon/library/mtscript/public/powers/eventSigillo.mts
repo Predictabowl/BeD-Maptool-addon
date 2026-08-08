@@ -1,3 +1,4 @@
+<!-- TODO fa riferimento getSpellElement su powers, che non esiste, è deprecated?-->
 [h: source = json.get(macro.args,"source")]
 [h: spellSigillo = upper(json.get(macro.args,"spellSigillo"))]
 [h: sElemento1 = upper(json.get(macro.args,"elemento"))]
@@ -22,7 +23,7 @@
 		[macro("core/pushOverride@this"): json.append(source,"SpellBlock")]
 		[macro("powers/getSpellPrice@this"):json.set("","source",source,"spellName",spellName)]
 		[macro("core/payAction@this"): macro.return]
-		[sMsg = strformat("%{sMsg}<br>L'incantesimo %s viene <i>Disturbato</i> dall'effetto di %s",getLibProperty("nome_decorativo",spellName),getLibProperty("nome_decorativo",spellSigillo))]
+		[sMsg = strformat("%{sMsg}<br>L'incantesimo %s viene <i>Disturbato</i> dall'effetto di %s",fetchSpellProp(spellName,"nome_decorativo"),fetchSpellProp(spellSigillo,"nome_decorativo"))]
 	}]
 	[broadcast(sMsg)]
 }]

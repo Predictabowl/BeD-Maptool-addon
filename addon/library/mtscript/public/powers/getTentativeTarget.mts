@@ -11,7 +11,7 @@
 
 [h: target = getSelected()]
 
-[h: spellTag = getLibProperty("tags",spellName)]
+[h: spellTag = fetchSpellProp(spellName,"tags")]
 [h: bFlag = 1]
 [h: iSpellRange = getSpellRange(source,spellName)]
 [h: iSpellAOE = getSpellAoE(source,spellName)]

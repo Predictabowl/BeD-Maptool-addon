@@ -3,7 +3,7 @@
 [h: spellName = arg(1)]
 
 [h: iSpellRange = getSpellRange(macro.args)]
-[h: spellTags = getLibProperty("tags",spellName)]
+[h: spellTags = fetchSpellProp(spellName,"tags")]
 
 
 [h, if(iSpellRange==0 || listContains(spellTags,"SELFTARGET")): bReturn = 1; bReturn = 0]

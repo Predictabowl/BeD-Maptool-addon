@@ -26,7 +26,7 @@
 [h, if(json.contains(macro.args,"selected")), code:{
 
 	[spellName = json.get(macro.args,"selected")]
-	[h: broadcast(strformat("%s sta memorizzando %s (Giocatore: %s)",getName(target),getLibProperty("nome_decorativo",spellName),getPlayerName()),"GM")]
+	[h: broadcast(strformat("%s sta memorizzando %s (Giocatore: %s)",getName(target),fetchSpellProp(spellName,"nome_decorativo"),getPlayerName()),"GM")]
 	[if(isCombat()), code:{
 		[broadcast("Non puoi cambiare i poteri memorizzati durate il combattimento",getPlayerName())]
 		[macro("gui/listaPoteriMem@this"):target]

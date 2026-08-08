@@ -8,8 +8,8 @@
 
 [macro("powers/spawnTokenBersaglio@this"): source]
 [h: tokenBersaglio = macro.return]
-[h: sTipoAOE = getLibProperty("tipo_AOE",spellName)]
-[h: lTags = getLibProperty("tags",spellName)]
+[h: sTipoAOE = fetchSpellProp(spellName,"tipo_AOE")]
+[h: lTags = fetchSpellProp(spellName,"tags")]
 
 [h, if(listContains(sTipoAOE,"SERVITOREORIGIN") || listContains(lTags,"SERVITOREORIGIN")), code:{
 	[oServitore = findToken(getServitore(source))]

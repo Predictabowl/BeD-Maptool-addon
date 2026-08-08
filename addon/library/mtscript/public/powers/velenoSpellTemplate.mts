@@ -3,7 +3,7 @@
 [h: spellName = json.get(macro.args,"spellName")]
 [h: oEffetto = json.get(macro.args,"effetto")]
 
-[h: nomeDec = getLibProperty("nome_decorativo",spellName)]
+[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 [h: sState = "Veleno"]
 
 [h: oEffetto = json.set(oEffetto,"target",target,"effetto",nomeDec,"stato",sState,"subito",1,"tipo",sState,"categoria",sState)]

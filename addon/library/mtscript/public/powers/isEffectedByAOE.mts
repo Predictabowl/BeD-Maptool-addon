@@ -9,7 +9,7 @@
 [macro("utility/isHostile@this"): json.append(source,target)]
 [h: bHostile =macro.return]
 
-[h: sTipoAOE = upper(getLibProperty("tipo_AOE",spellName))]
+[h: sTipoAOE = upper(fetchSpellProp(spellName,"tipo_AOE"))]
 
 [h, if(listContains(sTipoAOE,"EXCLUDESELF") && source == target): return (0,0)]
 [h, if(listContains(sTipoAOE,"EXCLUDEORIGIN") && origin == target): return (0,0)]

@@ -10,7 +10,7 @@
 [macro("utility/isHostile@this"): json.append(source,target)]
 [h: bHostile =macro.return]
 
-[h: sTipoAOE = upper(getLibProperty("tipo_AOE",spellName))]
+[h: sTipoAOE = upper(fetchSpellProp(spellName,"tipo_AOE"))]
 
 [h, macro("powers/isServitoreHittingHimself@this"):json.append(source,target,spellName)]
 [h: bServitoreHitHimself = macro.return]

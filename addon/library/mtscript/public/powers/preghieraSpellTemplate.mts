@@ -10,13 +10,13 @@
 
 [h: switchToken(source)]
 
-[h: idAura = getLibProperty("nome_decorativo",libName)]
+[h: idAura = fetchSpellProp(libName,"nome_decorativo")]
 [h: expandedAura = idAura+"-"+getName(source)]
 
 [h: iDurata = getSpellDurata(source,libName)]
 [h: iAOE = getSpellAoE(source,libName)]
 
-[h: sTipoBersaglio = getLibProperty("tipo_AOE",libName)]
+[h: sTipoBersaglio = fetchSpellProp(libName,"tipo_AOE")]
 
 
 <!-- Al momento non viene calcolata la potenza perché non serve -->

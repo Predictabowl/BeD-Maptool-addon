@@ -36,6 +36,8 @@
 [h: defineFunction("esisteProprieta","utility/isPropertyDefined@this")]
 [h: defineFunction("eventInstaller","events/eventInstaller@this")]
 [h: defineFunction("eventUninstaller","events/eventUninstaller@this")]
+[h: defineFunction("fetchConsumableImage","crud/fetchConsumableImage@this")]
+[h: defineFunction("fetchConsumableProp","crud/fetchConsumableProp@this")]
 [h: defineFunction("fetchSpellImage","crud/fetchSpellImage@this")]
 [h: defineFunction("fetchSpellProp","crud/fetchSpellProp@this")]
 [h: defineFunction("getAccuratezza","crud/getAccuratezza@this")]

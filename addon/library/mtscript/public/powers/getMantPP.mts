@@ -1,7 +1,7 @@
 [h: source = json.get(macro.args,"source")]
 [h: libName = json.get(macro.args,"spellName")]
 
-[h: Pazione= getLibProperty("PP",libName)]
+[h: Pazione= fetchSpellProp(libName,"PP")]
 
 [h, if(isNumber(Pazione)): return (0,0)]
 

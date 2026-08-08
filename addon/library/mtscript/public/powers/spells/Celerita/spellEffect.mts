@@ -1,0 +1,17 @@
+[h: source = json.get(macro.args,"source")]
+[h: target = json.get(macro.args,"target")]
+
+
+[h: switchToken(source)]
+[h: spellName = "Celerita"]
+[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
+
+
+[h: param = json.set("","target",target,"nome",nomeDec,"effetto","Velocita","moltiplicatore",1)]
+[macro("powers/getParamStatoBase@lib:it.aldinucci.piero.bed.maptool.ruleset"):param]
+[h: oEffetto = macro.return]
+
+[macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto)]
+
+[macro("powers/generaSpellMsg@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append("",source,target)]
+

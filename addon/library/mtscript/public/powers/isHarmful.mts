@@ -1,11 +1,11 @@
 [h: spellName = arg(0)]
 
-[h: spellType = upper(getLibProperty("tipo",spellName))]
+[h: spellType = upper(fetchSpellProp(spellName,"tipo"))]
 [h: sAttacks = "OFFENSIVO,CONTROLLO,MALEDIZIONE,MALATTIA"]
 
 [h, if(listContains(sAttacks,spellType)): bFlag = 1; bFlag = 0]
 
-[h: sTipoBer = upper(getLibProperty("tipo_bersaglio",spellName))]
+[h: sTipoBer = upper(fetchSpellProp(spellName,"tipo_bersaglio"))]
 [h, if(listContains(sTipoBer,"TUTTI")): bFlag = 0]
 [h, if(listContains(sTipoBer,"UTILE")): bFlag = 0]
 [h, if(listContains(sTipoBer,"DANNOSO")): bFlag = 1]

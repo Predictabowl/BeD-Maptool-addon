@@ -1,0 +1,12 @@
+[h: source = json.get(macro.args,"source")]
+[h: target = json.get(macro.args,"target")]
+
+[h: spellName = "Terremoto"]
+
+
+[macro("powers/getParamStatoBase@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"target",target,"effetto","Atterrato")]
+[h: oEffectParam = json.set("","source",source,"target",target,"spellName",spellName,"effetto",macro.return)]
+[macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): oEffectParam]
+[h: iLL = json.get(macro.return,"LL")]
+
+[macro("powers/dmgSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spell",spellName,"danno","1d5","LL",iLL)]

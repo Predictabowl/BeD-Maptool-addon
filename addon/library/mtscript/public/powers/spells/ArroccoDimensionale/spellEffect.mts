@@ -1,0 +1,10 @@
+[h: source = json.get(macro.args,"source")]
+[h: oOrigine = json.get(macro.args,"origine")]
+[h: target = json.get(macro.args, "target")]
+
+[sourceX = getTokenX(0,oOrigine)]
+[sourceY = getTokenY(0,oOrigine)]
+[targetX = getTokenX(0,target)]
+[targetY = getTokenY(0,target)]
+[moveToken(sourceX,sourceY,0,target)]
+[moveToken(targetX,targetY,0,oOrigine)]

@@ -3,7 +3,7 @@
 [h: sLibrary = getMacroLocation()]
 [h: sMemoryTag = "LISTEINCANTESIMI"]
 
-[h: sScuola = upper(getLibProperty("scuola",spellName))]
+[h: sScuola = upper(fetchSpellProp(spellName,"scuola"))]
 
 [h: oFullGroup = getLibMemoria(sLibrary,sMemoryTag)]
 [h, if(json.type(oFullGroup) != "OBJECT"): oFullGroup = "{}"]

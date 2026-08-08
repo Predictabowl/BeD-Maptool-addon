@@ -3,7 +3,7 @@
 
 [h:sRecupero = "Recupero"]
 
-[h: iDurataRec = getLibProperty("recupero",spellName)]
+[h: iDurataRec = fetchSpellProp(spellName,"recupero")]
 [h, if(isNumber(iDurataRec) == 0): iDurataRec = 0]
 
 [h, if(iDurataRec > 0), code:{

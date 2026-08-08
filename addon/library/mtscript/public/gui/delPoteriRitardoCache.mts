@@ -3,7 +3,7 @@
 [h: oCache = getDaCache(oToken,"SpellStats")]
 
 [h, foreach(spellName, oCache), code:{
-	[iRecupero = getLibProperty("recupero",spellName)]
+	[iRecupero = fetchSpellProp(spellName,"recupero")]
 	[if(isNumber(iRecupero)), code:{
 		[if(iRecupero > 0): oCache = json.remove(oCache, spellName)]
 	}]

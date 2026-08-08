@@ -1,0 +1,48 @@
+[h: source = json.get(macro.args,"difensore")]
+[h: target = json.get(macro.args,"attaccante")]
+[h: iCD= json.get(macro.args,"CD")]
+[h: iDurata = json.get(macro.args,"Durata")]
+
+[h:spellName = "Salvezza"]
+[h: nomeEffetto = "Marchio: "+fetchSpellProp(spellName,"nome_decorativo")]
+
+[h: param = json.set("","target",target,"source",source,"spellToken",spellName,"CD",iCD)]
+[macro("powers/getSpellTSResult@lib:it.aldinucci.piero.bed.maptool.ruleset"):param]	
+[TSResult = macro.return]
+[h, if(TSResult == 0), code:{
+	[iDurata = 1]
+	[h: iBonus = 4]
+	[sMacro = "core/ApplyEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+};{
+	[h: iBonus = 1]
+	[sMacro = "core/ApplyEffectIfNotPresent@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+}]
+
+
+[h: param = json.set("","target",source,"durata",iDurata,"effetto",nomeEffetto,"subito",1,"potenza","null","tipo","Marchio")]
+[h: temp = json.set("","key","LD","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append("",temp)]
+[h: temp = json.set("","key","Res_Acqua","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Aria","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Fuoco","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Terra","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Arcano","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Mentale","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Positivo","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Negativo","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Fisico","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+
+[h: param = json.set(param,"params",altro,"verbose",0)]
+[macro(sMacro): param]
+
+[macro("powers/generaSpellMsg@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append("",source,target)]
+[macro("utility/popMessaggio@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","token",source,"key","strPotere")]

@@ -6,7 +6,7 @@
 [h: sMacro = json.get(macro.args,"macroForSpawner")] <!-- Opzionale -->
 
 
-[h: sCoreName =  getLibProperty("nome_decorativo", spellName)+ "- " + getName(source)]
+[h: sCoreName =  fetchSpellProp(spellName,"nome_decorativo")+ "- " + getName(source)]
 [h: aPath = json.get(getDrawingInfo(getCurrentMapName(), sDrawId), "path")]
 [h: iPoint = ceil(json.length(aPath)/2)-1]
 [h: jPoint = json.get(aPath, iPoint)]

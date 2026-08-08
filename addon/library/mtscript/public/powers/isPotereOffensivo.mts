@@ -1,6 +1,6 @@
 [h: spellName = arg(0)]
 
-[h: spellType = upper(getLibProperty("tipo",spellName))]
+[h: spellType = upper(fetchSpellProp(spellName,"tipo"))]
 [h, if(spellType == "OFFENSIVO"): return(0,1)]
 
 [h: macro.return = 0]

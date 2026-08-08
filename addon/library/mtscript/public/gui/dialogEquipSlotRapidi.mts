@@ -18,7 +18,7 @@
 	[h: oOggetto = getFromSlotVeloce(target,i)]
 	[h: iLiv = json.get(oOggetto,"livello")]
 	[h: spellName = json.get(oOggetto,"libName")]
-	[h: sNome = getLibProperty("nome_decorativo",spellName)]
+	[h: sNome = fetchSpellProp(spellName,"nome_decorativo")]
 	
 	[sSlotVeloci = strformat("%{sSlotVeloci}<option value='%{i}'>
 		%{sNome}, Liv: %{iLiv}
@@ -32,7 +32,7 @@
 	[oItem = json.get(Consumabili,i)]
 	[h: iLiv = json.get(oItem,"livello")]
 	[h: spellName = json.get(oItem,"libName")]
-	[h: sNome = getLibProperty("nome_decorativo",spellName)]
+	[h: sNome = fetchSpellProp(spellName,"nome_decorativo")]
 	
 	[sConsumabili = strformat("%{sConsumabili}<option value='%{i}'>
 		%{sNome}, Liv: %{iLiv}

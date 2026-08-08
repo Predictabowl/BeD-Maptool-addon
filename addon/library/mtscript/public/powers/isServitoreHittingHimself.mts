@@ -4,8 +4,8 @@
 
 [h: oServitore = getServitore(source)]
 [h, if(oServitore == ""): return(0,0)]
-[h: lTipoAOE = upper(getLibProperty("tipo_AOE",spellName))]
-[h: lTags = upper(getLibProperty("tags",spellName))]
+[h: lTipoAOE = upper(fetchSpellProp(spellName,"tipo_AOE"))]
+[h: lTags = upper(fetchSpellProp(spellName,"tags"))]
 [h: bReturn = 0]
 
 [h, if(listcontains(lTags,"SERVITOREORIGIN") || listcontains(lTipoAOE,"SERVITOREORIGIN")), code:{

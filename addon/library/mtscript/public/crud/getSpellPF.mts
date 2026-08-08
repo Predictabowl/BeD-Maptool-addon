@@ -5,7 +5,7 @@
 
 [h, if(isItemInCast(source,libName)): return(0,0)]
 
-[h: Pfatica = getLibProperty("PF",libName)]
+[h: Pfatica = fetchSpellProp(libName,"PF")]
 [h, if(!isNumber(bCrit)): bCrit = getUltimoCritico(source)]
 [h, if(!isNumber(bCrit)): bCrit = 0]
 
@@ -54,7 +54,7 @@
 
 [h: offU = getNumPoteriOffensivi(source)]
 [h, if(offU < 1), code:{
-	[sTipo = upper(getLibProperty("tipo",libName))]
+	[sTipo = upper(fetchSpellProp(libName,"tipo"))]
 	[if(sTipo == "OFFENSIVO"): Pfatica = Pfatica +4]
 }]
 

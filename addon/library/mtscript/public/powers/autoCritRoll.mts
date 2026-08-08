@@ -18,7 +18,7 @@
 [h: critRes = getUltimoCritico(source)]
 [h, if(bForceReroll != 1 && isNumber(critRes)): return(0,critRes)]
 
-[h: lSpellTags = getLibProperty("tags",spell)]
+[h: lSpellTags = fetchSpellProp(spell,"tags")]
 [h: fCrit = getCritProb(getCrit(source))]
 
 [h: bNoCrit1 = listContains(lSpellTags,"NOCRITICO")]

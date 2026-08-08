@@ -19,7 +19,7 @@
 	[if (isAoEHarmfulSpell(spellName)):	iColore = 1; iColore = 2]
 }]
 
-[h: idAura = getLibProperty("nome_decorativo",spellName)]
+[h: idAura = fetchSpellProp(spellName,"nome_decorativo")]
 [h: idExpandedAura = idAura+"-Expanded"]
 
 
@@ -28,7 +28,7 @@
 [h: iCD = getSpellCD(sCaster,spellName)]
 [h: iDurata = getSpellDurata(sCaster,spellName)]
 [h: iAOE = getSpellAoE(sCaster,spellName)]
-[h: sTipoBersaglio = getLibProperty("tipo_AOE",spellName)]
+[h: sTipoBersaglio = fetchSpellProp(spellName,"tipo_AOE")]
 [h: iPortata = getSpellRange(sCaster,spellName)]
 
 [h: oEffetto = json.set(oEffetto, "effetto", idExpandedAura, "tipo", "Nascosto", "LL", iLL, "CD", iCD)]

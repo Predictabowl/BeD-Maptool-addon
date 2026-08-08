@@ -14,7 +14,7 @@
 }]
 
 [h: sDialog = "DescrizioneIncantesimo"]
-[h: sTags = upper(getLibProperty("tags", spellName))]
+[h: sTags = upper(fetchSpellProp(spellName,"tags"))]
 [h: sTagText = ""]
 [h, if(listContains(sTags, "AGGRESSIONE")): sTagText = listAppend(sTagText, "Aggressione")]
 [h, if(listContains(sTags, "ARMATURA")): sTagText = listAppend(sTagText, "Armatura")]
@@ -26,10 +26,10 @@
 [h, macro("powers/generaOpportunita@this"): json.append(oToken,spellName)]
 [h, if(macro.return): sOpp = "Sì"; sOpp = "No"]
 
-[h, macro("utility/textProcessHTML@this"): getLibProperty("descrizione",spellName)]
+[h, macro("utility/textProcessHTML@this"): fetchSpellProp(spellName,"descrizione")]
 [h: sText = macro.return]
 
-[h: iRecupero = getLibProperty("recupero",spellName)]
+[h: iRecupero = fetchSpellProp(spellName,"recupero")]
 [h, if(!isNumber(iRecupero)): iRecupero = 0]
 [h: sArea = strformat("%d %s",getSpellAoE(oToken,spellName),getAoEShape(spellName,oToken))]
 
@@ -63,24 +63,24 @@
 
 [h: imgA = getImage(spellName)]
 [h: sImage = strformat("<img src='%{imgA}' width='50' length='50'/>")]
-[h: sFluffName = getLibProperty("nome_decorativo",spellName)]
+[h: sFluffName = fetchSpellProp(spellName,"nome_decorativo")]
 [r: sImage]
 <div class="spellTitle">[r: sFluffName]</div>
 <div class="spellData">
 	<div>Scuola: <span>[r: getScuola(oToken,spellName)]</span></div>
-	<div>Tipo: <span>[r: getLibProperty("tipo",spellName)]</span></div>
-	<div>Elemento: <span>[r: getLibProperty("elemento",spellName)]</span></div>
+	<div>Tipo: <span>[r: fetchSpellProp(spellName,"tipo")]</span></div>
+	<div>Elemento: <span>[r: fetchSpellProp(spellName,"elemento")]</span></div>
 	<div>Durata: <span>[r: getSpellDurata(oToken,spellName)]</span></div>
 	<div>Raggio d&rsquo;azione: <span>[r: getSpellRange(oToken,spellName)]</span></div>
 	<div>Area d&rsquo;effetto: <span>[r: sArea]</span></div>
-	<div>Tiro Salvezza: <span>[r: getLibProperty("TS",spellName)]</span></div>
-	<div>Componenti: <span>[r: getLibProperty("componenti",spellName)]</span></div>
+	<div>Tiro Salvezza: <span>[r: fetchSpellProp(spellName,"TS")]</span></div>
+	<div>Componenti: <span>[r: fetchSpellProp(spellName,"componenti")]</span></div>
 	<div>Recupero: <span>[r: iRecupero]</span></div>
 	<div>Opportunità: <span>[r: sOpp]</span></div>
-	<div>Medium: <span>[r: getLibProperty("proiettile",spellName)]</span></div>
+	<div>Medium: <span>[r: fetchSpellProp(spellName,"proiettile")]</span></div>
 	<div>[r: sTagText]</div>
 </div>
-[h: sTags = getLibProperty("tags",spellName)]
+[h: sTags = fetchSpellProp(spellName,"tags")]
 <div class="descrizione" style="max-height: 20rem;">
 	[h, if(bSoglia): sText = strformat("<div style='font-style: italic; margin-bottom: 5px;'>Soglia di Potere: %{iSogliaRate}%</div>%{sText}")]
 	[r: sText]

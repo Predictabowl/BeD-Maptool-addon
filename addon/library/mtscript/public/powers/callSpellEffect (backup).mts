@@ -7,8 +7,8 @@
 [h: bIsAoE = json.get(macro.args, "isAoE")]
 [h: switchToken(source)]
 
-[h: fluff = getLibProperty("nome_decorativo",spellName)]
-[h: spellTags = getLibProperty("tags",spellName)]
+[h: fluff = fetchSpellProp(spellName,"nome_decorativo")]
+[h: spellTags = fetchSpellProp(spellName,"tags")]
 [r: getSpeech(fluff)]
 [h: im = getImage(spellName)]
 [h: msgOutput = strformat("<table style='border-collapse: collapse; margin:0px; padding:0px;'><td><img src='%{im}' width='35' height='35' /></td>")]

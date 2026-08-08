@@ -22,7 +22,7 @@
 [h: rollResult = 1d20]
 [h: iTSResult = rollResult + iTSMod]
 [h: strOut = strformat("1d20 (%{rollResult}) %+d = <b> %{iTSResult}</b>",iTSMod)]
-[h: TStype = getLibProperty("TS",spellToken)]
+[h: TStype = fetchSpellProp(spellToken,"TS")]
 
 
 [h: msgOutput = strformat("%s effettua un Tiro Salvezza ( %{TStype}, %{sElemento}), %{strOut} contro CD %{iCD}: ",getName(target))]

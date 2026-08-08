@@ -1,6 +1,6 @@
 [h: spellName = arg(0)]
 
-[h: sType = upper(getLibProperty("tipo", spellName))]
+[h: sType = upper(fetchSpellProp(spellName,"tipo"))]
 
 [h, switch(sType), code:
 	case "CONTROLLO":{

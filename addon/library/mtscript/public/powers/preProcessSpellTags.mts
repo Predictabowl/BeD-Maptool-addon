@@ -1,7 +1,7 @@
 [h: source = arg(0)]
 [h: spellName = arg(1)]
 	
-[h: sTags = getLibProperty("tags",spellName)]
+[h: sTags = fetchSpellProp(spellName,"tags")]
 [h, if(listContains(sTags,"LANCIO")), code:{
 	[addSpellStartData(source,"lancio",1)]
 };{

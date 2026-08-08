@@ -2,7 +2,7 @@
 [h: spellName = arg(1)]
 [h: bOpp = arg(2)]
 
-[h: time = getLibProperty("tempo",spellName)]
+[h: time = fetchSpellProp(spellName,"tempo")]
 [h, if(time == 0): return (0,0)]
 
 [h, if(!isNumber(time)), code:{

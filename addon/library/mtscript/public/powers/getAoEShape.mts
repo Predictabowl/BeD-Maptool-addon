@@ -2,7 +2,7 @@
 [h, if(argCount()>1): oToken = arg(1); oToken = ""]
 [h, if(argCount()>2): oParams = arg(2); oParams = "{}"]
 
-[h: lAoETags = upper(getLibProperty("tipo_AOE",spellName))]
+[h: lAoETags = upper(fetchSpellProp(spellName,"tipo_AOE"))]
 
 [h: bAoE = isAoESpell(spellName, oToken, oParams)]
 [h, if(!bAoE): return (0,"")]

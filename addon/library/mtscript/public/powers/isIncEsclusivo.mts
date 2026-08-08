@@ -1,6 +1,6 @@
 [h: spellName = arg(0)]
 
-[h: lTags = upper(getLibProperty("tags", spellName))]
+[h: lTags = upper(fetchSpellProp(spellName,"tags"))]
 
 [h: iCount = listContains(lTags,"ESCLUSIVO")]
 

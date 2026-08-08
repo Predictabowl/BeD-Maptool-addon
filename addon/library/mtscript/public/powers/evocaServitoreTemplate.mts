@@ -5,9 +5,9 @@
 [h: spellName = json.get(macro.args,"spellName")]
 [h: sNome = json.get(macro.args,"nomeCreatura")]
 
-[h: oSpellTags = getLibProperty("tags",spellName)]
-[h: fluffName = getLibProperty("nome_decorativo",spellName)]
-[h: spellType = getLibProperty("tipo", spellName)]
+[h: oSpellTags = fetchSpellProp(spellName,"tags")]
+[h: fluffName = fetchSpellProp(spellName,"nome_decorativo")]
+[h: spellType = fetchSpellProp(spellName,"tipo")]
 
 [macro("powers/getLivelloIndicativo@this"): json.set("","source",source,"target",target,"spellName",spellName)]
 [h: iLL = macro.return]

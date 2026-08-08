@@ -5,7 +5,7 @@
 [h: sEffetto = json.get(macro.args,"effetto")]
 
 [h: switchToken(source)]
-[h: elemento = getLibProperty("elemento",spellName)]
+[h: elemento = fetchSpellProp(spellName,"elemento")]
 
 [macro("combat/getUltimoCritico@this"):source]
 [h: critRes = macro.return]
@@ -38,7 +38,7 @@
 	[macro("powers/getDurata@this"): json.set("","source",source,"spellName",spellName)]
 	[iDurata = macro.return]
 	
-	[h: param = json.set("","target",target,"LP",iLP,"TSRes",TSResult,"durata",iDurata,"nomeEffetto",sEffetto,"stato",sEffetto,"spellName",getLibProperty("nome_decorativo",spellName))]
+	[h: param = json.set("","target",target,"LP",iLP,"TSRes",TSResult,"durata",iDurata,"nomeEffetto",sEffetto,"stato",sEffetto,"spellName",fetchSpellProp(spellName,"nome_decorativo"))]
 
 	[macro("powers/ifTSEffect@this"):param]
 }]

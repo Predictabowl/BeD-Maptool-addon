@@ -1,7 +1,7 @@
 [h: source = arg(0)]
 [h: spellName = arg(1)]
 
-[h: spellTag = getLibProperty("tags",spellName)]
+[h: spellTag = fetchSpellProp(spellName,"tags")]
 
 [h, if(listContains(spellTag,"CELLTARGET")): return(0,1)]
 [h, if(listContains(spellTag,"DRAWTARGET")): return(0,0)]

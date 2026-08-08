@@ -10,7 +10,7 @@
 	[h: libName = json.get(macro.args,"spellName")]
 }]
 
-[h: iDurata = getLibProperty("durata",libName)]
+[h: iDurata = fetchSpellProp(libName,"durata")]
 [h: sScuola = upper(getScuola(source,libName))]
 [h, if(sScuola == "RUNA"): bFlag = 0; bFlag = 1]
 

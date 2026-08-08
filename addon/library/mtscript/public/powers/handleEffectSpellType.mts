@@ -4,7 +4,7 @@
 [h: spellName = arg(2)]
 [h: oEffetto = arg(3)]
 
-[h: sTipo = upper(getLibProperty("tipo",spellName))]
+[h: sTipo = upper(fetchSpellProp(spellName,"tipo"))]
 
 [macro("powers/getStateIcon@this"): spellName]
 [h: sState = macro.return]
@@ -55,7 +55,7 @@
 	[oEffetto = json.set(oEffetto,"params",aEffects)]
 }]
 
-[h: lTags = upper(getLibProperty("tags", spellName))]
+[h: lTags = upper(fetchSpellProp(spellName,"tags"))]
 [h, if(listContains(lTags, "AGGRESSIONE")): lMutex = listappend(lMutex, "AGGRESSIONE")]
 [macro("powers/isArmaturaSpell@this"): spellName]
 [h, if(macro.return): lMutex = listappend(lMutex, "ARMATURA")]

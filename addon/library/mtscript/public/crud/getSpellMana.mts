@@ -6,7 +6,7 @@
 [h: bIsItem = isItemInCast(source,libName)]
 [h, if(bIsItem): return(0,0)]
 
-[h: Pmana = getLibProperty("mana",libName)]
+[h: Pmana = fetchSpellProp(libName,"mana")]
 [h, if(!isNumber(bCrit)): bCrit = getUltimoCritico(source)]
 [h, if(!isNumber(bCrit)): bCrit = 0]
 

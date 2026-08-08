@@ -20,7 +20,7 @@
 [h: jAlreadyHit = json.get(jData, "ritorsione-hitted")]
 [h, if(json.contains(jAlreadyHit, target)): return(0, "")]
 
-[h: fluffName = getLibProperty("nome_decorativo",spellName)]
+[h: fluffName = fetchSpellProp(spellName,"nome_decorativo")]
 [macro("powers/dmgSpineTemplate@this"): json.set(macro.args, "spell",spellName,"danno",sDanno,"critResult",bCrit)]
 [h: iLP = json.get(macro.return,"LP")]
 [h: sSpineMsg = json.get(macro.return,"messaggio")]

@@ -3,11 +3,11 @@
 [h, if(argCount()>2): bOpp = arg(2); bOpp = 0]
 [h, if(argCount()>3): bFlag= arg(3); bFlag = 1] <!-- Determina se usare i modificatori di stat -->
 
-[h: Pazione= getLibProperty("PA",libName)]
+[h: Pazione= fetchSpellProp(libName,"PA")]
 [h: sScuola = upper(getScuola(source,libName))]
 
 [h, if(sScuola == "RUNA"): bFlag = 0]
-[h: sTag = getLibProperty("tags",libName)]
+[h: sTag = fetchSpellProp(libName,"tags")]
 [h, if(listContains(sTag,"OGGETTO")): bFlag = 0]
 
 [h, if(!isNumber(Pazione)), code:{

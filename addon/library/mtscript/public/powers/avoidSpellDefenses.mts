@@ -13,7 +13,7 @@
 [macro("powers/checkSpellDifesa@this"):json.set("","target",target,"spell",spellName,"source",source,"isOpport",bOpp)]
 [h, if(macro.return == "schivato"): return(0,0)]
 [h, if(macro.return == "parato"), code:{
-	[sTipo = upper(getLibProperty("tipo", spellName))]
+	[sTipo = upper(fetchSpellProp(spellName,"tipo"))]
 	[if (sTipo != "OFFENSIVO"): return(0,0)]
 }]
 

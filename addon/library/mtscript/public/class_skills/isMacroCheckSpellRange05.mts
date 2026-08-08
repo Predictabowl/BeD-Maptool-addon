@@ -1,7 +1,7 @@
 [h: source = json.get(macro.args,0)]
 [h: spellName = json.get(macro.args,1)]
 
-[h: iRange = getLibProperty("raggio",spellName)]
+[h: iRange = fetchSpellProp(spellName,"raggio")]
 
 [h: iReturn = 0]
 

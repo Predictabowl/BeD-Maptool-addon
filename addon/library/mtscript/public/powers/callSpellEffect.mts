@@ -11,7 +11,7 @@
 
 [h: switchToken(source)]
 
-[h: fluff = getLibProperty("nome_decorativo",spellName)]
+[h: fluff = fetchSpellProp(spellName,"nome_decorativo")]
 [r: getSpeech(fluff)]
 [h: im = getImage(spellName)]
 [h: msgOutput = strformat("<table style='border-collapse: collapse; margin:0px; padding:0px;'><td><img src='%{im}' width='35' height='35' /></td>")]

@@ -4,8 +4,8 @@
 [h: spellName = json.get(macro.args,"spellName")]
 [h: oEffetto = json.get(macro.args,"effetto")]
 
-[h: nomeDec = getLibProperty("nome_decorativo",spellName)]
-[h: sTipo = getLibProperty("tipo",spellName)]
+[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
+[h: sTipo = fetchSpellProp(spellName,"tipo")]
 
 [macro("powers/getStateIcon@this"): spellName]
 [h: sState = macro.return]

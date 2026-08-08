@@ -4,7 +4,7 @@
 [h: oCache = getDaCache(oToken,"SpellStats")]
 
 [h, foreach(spellName, oCache), code:{
-	[spellType = upper(getLibProperty("tipo",spellName))]
+	[spellType = upper(fetchSpellProp(spellName,"tipo"))]
 	[if(spellType == sTipo): oCache = json.remove(oCache, spellName)]
 }]
 

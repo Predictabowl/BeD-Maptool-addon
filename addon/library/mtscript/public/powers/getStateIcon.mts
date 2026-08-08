@@ -1,6 +1,6 @@
 [h: spellName = macro.args]
 
-[h: sTipo = upper(getLibProperty("tipo",spellName))]
+[h: sTipo = upper(fetchSpellProp(spellName,"tipo"))]
 
 [h, switch(sTipo), code:
 case "MALATTIA":{

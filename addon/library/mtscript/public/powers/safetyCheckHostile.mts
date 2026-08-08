@@ -10,7 +10,7 @@
 [h: oTipo = getPropertyType(target)]
 [h, if (oTipo != "Basic"): return(0,0)]
 
-[h: spellTag = getLibProperty("tags",spellName)]
+[h: spellTag = fetchSpellProp(spellName,"tags")]
 [h, if(listContains(spellTag,"SELFTARGET") == 1): return(0,0)]
 [h, if(listContains(spellTag,"CELLTARGET") == 1): return(0,0)]
 
@@ -24,7 +24,7 @@
 
 
 [h, if((bHostile && bHelpful) || (!bHostile && bHarmful)), code:{
-	[nomeDec = getLibProperty("nome_decorativo",spellName)]
+	[nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 	[h: sMsg = strformat("sNoUse|ATTENZIONE: Stai lanciando %s su %s||LABEL|Span=TRUE",nomeDec,getName(target))]
 	[return (0,!input (sMsg))]
 }]

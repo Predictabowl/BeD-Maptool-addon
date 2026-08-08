@@ -6,7 +6,7 @@
 [h: oMap = "{}"]
 [h: aNames = "[]"]
 [h, foreach(oItem, oData), code:{
-	[sNome = getLibProperty("nome_decorativo",oItem)]
+	[sNome = fetchSpellProp(oItem,"nome_decorativo")]
 	[oMap = json.set(oMap,sNome,oItem)]
 	[aNames = json.append(aNames,sNome)]
 }]

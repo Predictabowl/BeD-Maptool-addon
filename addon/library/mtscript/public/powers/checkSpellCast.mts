@@ -3,8 +3,8 @@
 
 [h: sWarn = "<span style='color: green; font-weight:bold;'>ATTENZIONE:</span>&nbsp;"]
 
-[h: sSpellSchool = getLibProperty("scuola",spellName)]
-[h: spellType = upper(getLibProperty("tipo",spellName))]
+[h: sSpellSchool = fetchSpellProp(spellName,"scuola")]
+[h: spellType = upper(fetchSpellProp(spellName,"tipo"))]
 [h, if(spellType == "OFFENSIVO"), code:{
 	[macro("combat/hasAttacks@this"): json.set("","source",source)]
 	[if(macro.return != 1), code:{
@@ -20,7 +20,7 @@
 	[return(0,0)]
 }]
 
-[h: lSpellTags = upper(getLibProperty("tags",spellName))]
+[h: lSpellTags = upper(fetchSpellProp(spellName,"tags"))]
 [h: bStileDistanza = isStileDistanza(source)]
 [h, if(listContains(lSpellTags,"MISCHIA") && bStileDistanza), code:{
 	[broadcast(sWarn+"Questo potere può essere utilizzato solo in mischia",getPlayerName())]

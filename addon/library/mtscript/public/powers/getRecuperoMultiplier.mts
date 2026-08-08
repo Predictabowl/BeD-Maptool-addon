@@ -2,7 +2,7 @@
 [h, if(argCount() > 1): spellName = arg(1); spellName = ""]
 
 [h, if(spellName!=""), code:{
-	[h: iRecupero = getLibProperty("recupero",spellName)]
+	[h: iRecupero = fetchSpellProp(spellName,"recupero")]
 	[h, if(!isNumber(iRecupero)): iRecupero = 0]
 	[if(iRecupero == 0): return(0,1)]
 }]

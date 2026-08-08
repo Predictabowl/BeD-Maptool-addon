@@ -36,3 +36,13 @@ getMacroLocation:
 "prefix/$1@$2
 oppure: "prefix/$1@this"
 oppure se necessita di essere esplicito: "prefix/$1@lib:it.aldinucci.piero.bed.maptool.ruleset" oppure "class_skills/$1@$2
+
+
+Replace i GetLibProperties per le nuove scuole
+getLibProperty\((["']\w+["'])\s*,\s*(["'\w]+)\)
+fetchSpellProp($2,$1)
+
+Serve una per le immagini
+getImage
+
+PreghieraIStintodiSopravvivenza

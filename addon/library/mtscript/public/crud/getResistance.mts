@@ -25,9 +25,9 @@
 
 [h, if(spellName != ""), code:{
 	[if(element == ""): element = getSpellElement(json.set("", "source",source, "target", target, "spellName", spellName))]
-	[h: sSpellTipo = getLibProperty("tipo",spellName)]
+	[h: sSpellTipo = fetchSpellProp(spellName,"tipo")]
 	[h: tagList = listAppend("",sSpellTipo)]
-	[h: oSpellTags = getLibProperty("tags",spellName)]
+	[h: oSpellTags = fetchSpellProp(spellName,"tags")]
 	[h: tagList = listAppend(tagList,oSpellTags)]
 }; {
 	[tagList = ""]

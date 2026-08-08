@@ -2,7 +2,7 @@
 [h, if(argCount()>1): oToken = arg(1); oToken = ""]
 <!-- Al momento oToken non è utilizzato, è presente per permettere di cambiare area dinamicamente -->
 
-[h: lAoETags = upper(getLibProperty("tipo_AOE",spellName))]
+[h: lAoETags = upper(fetchSpellProp(spellName,"tipo_AOE"))]
 
 [h, foreach(sTag, lAoeTags), code :{
 	[h, if(isNumber(sTag)): return(0, sTag)]

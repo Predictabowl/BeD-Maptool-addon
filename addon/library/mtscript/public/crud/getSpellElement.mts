@@ -36,7 +36,7 @@ case "SERVITORE":{
 	};{
 		[oOtherInfo = json.get(oEff,"otherInfo")]
 		[servitoreSpell = json.get(oOtherInfo,"spellName")]
-		[sElemento = upper(getLibProperty("elemento",servitoreSpell))]
+		[sElemento = upper(fetchSpellProp(servitoreSpell,"elemento"))]
 	}]
 };
 

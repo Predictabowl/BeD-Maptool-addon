@@ -17,7 +17,7 @@
 [h: bOverride = getOverride(target,"difesaEnergetico")]
 [h, if(bOverride && lProiettile == "ENERGETICO"): lProiettile = "MATERIALE"]
 
-[h: lTipo = getLibProperty("tipo",spell)]
+[h: lTipo = fetchSpellProp(spell,"tipo")]
 [r, if(lProiettile == "MATERIALE" && bOffensivo), code:{
 	[macro("combat/checkDifesa@this"):json.append(source,target,bOpp)]
 	[h: sResult = macro.return]
