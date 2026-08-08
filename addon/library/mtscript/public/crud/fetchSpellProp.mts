@@ -1,8 +1,9 @@
 [h: spellId = arg(0)]
 [h: key = lower(arg(1))]
 
-[h: data = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/spells/spells.json")]
-[h: spellData = json.get(data, spellId)]
+[h: spellData = fetchSpellProps(spellId, key)]
+[h, if(json.isEmpty(spellData)): spellData = fetchConsumableProps(spellId, key)]
+
 [h: aExternal = json.append("nome_decorativo", "descrizione")]
 [h, if(json.contains(aExternal, key)), code:{
     [value = json.get(spellData, key)]

@@ -1,3 +1,4 @@
+<-- DEPRECATED -->
 [h: spellName = arg(0)]
 [h: broadcast(strformat("The use of DL is Deprecated. %s@%s", getMacroName(), getMacroLocation()))]
 

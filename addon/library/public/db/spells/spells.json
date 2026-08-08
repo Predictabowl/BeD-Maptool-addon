@@ -281,7 +281,7 @@
     },
     "AnimareMummia": {
         "descrizione": "Anima una Mummia (60%) di Livello Indicativo pari al LL.",
-        "image": "inv_mummypet.webp",
+        "image": "inv_mummypet.png",
         "nome_decorativo": "Animare Mummia",
         "properties": {
             "area": "0",
@@ -309,7 +309,7 @@
     },
     "AnimareScheletro": {
         "descrizione": "Un servitore Scheletro (20%) di livello indicativo pari al LL che combatte per il suo creatore. \nAl momento della sua creazione possiede sempre equipaggiamento a caso estremamente rovinato, mirato al combattimento in mischia.",
-        "image": "spell_shadow_raisedead.webp",
+        "image": "spell_shadow_raisedead.png",
         "nome_decorativo": "Animare Scheletro",
         "properties": {
             "area": "0",
@@ -2605,7 +2605,7 @@
     },
     "CuraMalattia": {
         "descrizione": "Questo incantesimo può rimuovere un effetto Malattia con +7 PR.",
-        "image": "spell_holy_nullifydisease.webp",
+        "image": "spell_holy_nullifydisease.png",
         "nome_decorativo": "Cura Malattia",
         "properties": {
             "area": "0",
@@ -5937,7 +5937,7 @@
     },
     "MalattiaAbbraccioDellaMorte": {
         "descrizione": "La vittima cade preda di un effetto Torpore per tutta la durata della malattia.",
-        "image": "spell_deathknight_necroticplague.webp",
+        "image": "spell_deathknight_necroticplague.png",
         "nome_decorativo": "Delirio Soporifero",
         "properties": {
             "area": "0",
@@ -6721,7 +6721,7 @@
     },
     "MantoDiNegazione": {
         "descrizione": "Questo incantesimo crea una barriera intorno al bersaglio che offre +15 Copertura.",
-        "image": "spell_arcane_prismaticcloak.webp",
+        "image": "spell_arcane_prismaticcloak.png",
         "nome_decorativo": "Manto di Negazione",
         "properties": {
             "area": "0",
@@ -6973,7 +6973,7 @@
     },
     "MorsoAppestato01": {
         "descrizione": "Un attacco che può ammalare la vittima rendendola permanentemente sotto un effetto di Nausea.",
-        "image": "ability_creature_poison_01.webp",
+        "image": "ability_creature_poison_01.png",
         "nome_decorativo": "Morso Nauseante",
         "properties": {
             "area": "0",
@@ -8121,7 +8121,7 @@
     },
     "PresenzaTerrificante": {
         "descrizione": "Il sacerdote alza al cielo il proprio simbolo sacro e pronuncia la parola del potere della propria divinità, scatenando un’imponente aura che provoca un effetto Terrore a tutte le creature presenti nell’area d’effetto che sbagliano un TS volontà per tutta la durata dell’incantesimo.",
-        "image": "spell_shadow_skull.webp",
+        "image": "spell_shadow_skull.png",
         "nome_decorativo": "Presenza Terrificante",
         "properties": {
             "area": "4",
@@ -9717,7 +9717,7 @@
     },
     "SoffioDragoVerde": {
         "descrizione": "Il soffio del drago verde colpisce tutte le creature nell'area avvelenandole. Ogni vittima subisce 1d6 danni per LP per round.",
-        "image": "ability_monk_jadeserpentbreath.webp",
+        "image": "ability_monk_jadeserpentbreath.png",
         "nome_decorativo": "Soffio Velenoso",
         "properties": {
             "area": "8",
