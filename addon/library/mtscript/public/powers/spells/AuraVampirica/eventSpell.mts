@@ -17,7 +17,7 @@
 	[spellName = "AuraVampirica"]
 	[h: nomeFluff = fetchSpellProp(spellName,"nome_decorativo")]
 
-	[h: aImg = getImage("AuraVampirica")]
+	[h: aImg = fetchSpellImage("AuraVampirica")]
 	[h: msg = strformat("<br><img src='%{aImg}' width='25' height='25' /> ")]
 	[h: msg =strformat("%{msg} %{nomeFluff} (%{fPCura}% Cura)")]
 	[macro("core/CuraTarget@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","target",source,"valore",iCura,"verbose",1)]

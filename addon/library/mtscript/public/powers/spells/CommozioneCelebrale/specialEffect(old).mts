@@ -5,7 +5,7 @@
 [h: source = json.get(oParam,"source")]
 [h: spellName = "CommozioneCelebrale"]
 [h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
-[h: sOrigine = strformat("<br><img src='%s' width='25' height='25' /> &nbsp; %s",getImage(spellName), nomeDec)]
+[h: sOrigine = strformat("<br><img src='%s' width='25' height='25' /> &nbsp; %s",fetchSpellImage(spellName), nomeDec)]
 [h: nomeEffetto = strformat("%s %s",nomeDec,getName(source))]
 
 [h: msg = ""]

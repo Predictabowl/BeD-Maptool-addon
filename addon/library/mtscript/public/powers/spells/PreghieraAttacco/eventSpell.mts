@@ -3,7 +3,7 @@
 [h: iDado = roll(1,100)]
 [h: nomeFluff = fetchSpellProp("PreghieraAttacco","nome_decorativo")]
 
-[h: im = getImage("PreghieraAttacco")]
+[h: im = fetchSpellImage("PreghieraAttacco")]
 [h: msg = "<br><img src='"+ im+"' width='25' height='25' /> "]
 [h: msg =msg+strformat(" %{nomeFluff} (20%) 1d100 = %{iDado}")]
 

@@ -10,7 +10,7 @@
 	[spellId = "MaledizioneContrappasso"]
 	[iMancare = 24 * iMolt]
 	[pushStatModifier(source,"Mancare",iMancare)]
-	[sMsg= strformat("<br><img src='%s' width='25' height='25'/> %s. %s subisce una penalità di %+d Mancare",getImage(spellId),fetchSpellProp(spellId,"nome_decorativo"),
+	[sMsg= strformat("<br><img src='%s' width='25' height='25'/> %s. %s subisce una penalità di %+d Mancare",fetchSpellImage(spellId),fetchSpellProp(spellId,"nome_decorativo"),
 		getName(source), iMancare)]
 }]
 

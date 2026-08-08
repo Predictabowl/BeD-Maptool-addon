@@ -23,5 +23,5 @@
 
 [macro("powers/addBersaglioColpitoAura@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source, target, spellName)]
 [macro("powers/generaSpellMsg@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source, target)]
-[h: sMsgOut = strformat("<div style='border: 1px black dotted'><div><img src='%s' width='25' height='25'/> %s</div><div>%s</div></div>", getImage(spellName), fetchSpellProp(spellName,"nome_decorativo"), popMessaggio(source, "strPotere"))]
+[h: sMsgOut = strformat("<div style='border: 1px black dotted'><div><img src='%s' width='25' height='25'/> %s</div><div>%s</div></div>", fetchSpellImage(spellName), fetchSpellProp(spellName,"nome_decorativo"), popMessaggio(source, "strPotere"))]
 [h: return(0, sMsgOut)]

@@ -24,7 +24,7 @@
 
 [h, foreach(sStatus, lBlockStatus), code:{	
 	[if(getState(sStatus, target)): return(0, strformat("<img src='%s' width='25' height='25'/> %s. Lo stato %{sStatus} previene l'effetto di rigenerazione su %s.",
-			getImage(spellId), fetchSpellProp(spellId,"nome_decorativo"), getName(target)))]
+			fetchSpellImage(spellId), fetchSpellProp(spellId,"nome_decorativo"), getName(target)))]
 }]
 
 [h: oOrigine = findToken(oOrigine)]
@@ -37,7 +37,7 @@
 [h, if(macro.return > 0), code:{
 	[h: sRolledDice = popMessaggio(target,"spellRolledDice")]
 	[h: sTooltip = strformat("Cura(%{sDanno}) = %{sRolledDice}")]
-	[h: sMsg= strformat("<img src='%s' width='25' height='25'/> <span title='%{sTooltip}'>%s</span>. %s",getImage(spellId),
+	[h: sMsg= strformat("<img src='%s' width='25' height='25'/> <span title='%{sTooltip}'>%s</span>. %s",fetchSpellImage(spellId),
 		fetchSpellProp(spellId,"nome_decorativo"),popMessaggio(target,"strCura"))]
 }]
 

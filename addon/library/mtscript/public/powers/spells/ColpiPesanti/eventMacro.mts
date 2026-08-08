@@ -13,7 +13,7 @@
 		[iBonus = 3]
 		[macro("core/pushStatModifier@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,"LA",iBonus)]
 		[h: sNomeFluff = fetchSpellProp(spellName,"nome_decorativo")]
-		[h: oIm = getImage(spellName)]
+		[h: oIm = fetchSpellImage(spellName)]
 		[h: sMsg = "<br><img src='"+ oIm+"' width='25' height='25' /> "]
 		[h: sMsg = strformat("%{sMsg}&nbsp;%{sNomeFluff} (%+d LA contro i nemici Atterrati)",iBonus)]
 	}]

@@ -13,7 +13,7 @@
 	[h: iDanno = json.get(oParam,"danno")]
 	[iMaxDurata = json.get(oParam,"durata")]
 	[nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
-	[sOrigine = strformat("<br><img src='%s' width='25' height='25' /> &nbsp; %s",getImage(spellName), nomeDec)]
+	[sOrigine = strformat("<br><img src='%s' width='25' height='25' /> &nbsp; %s",fetchSpellImage(spellName), nomeDec)]
 	
 	[h: nomeEffetto = strformat("%s (%s)",nomeDec,getName(source))]
 

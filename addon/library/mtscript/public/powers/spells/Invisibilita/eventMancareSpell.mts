@@ -13,7 +13,7 @@
 	[iMancare= 45]
 	[macro("core/pushStatModifier@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append(target,spellName,1)]
 	[macro("core/pushStatModifier@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append(target,"Mancare",iMancare)]
-	[msgOut = strformat("<br><img src='%s' width='25' height='25' /> &nbsp; %s infligge una penalit&agrave; di %+d Mancare a %s",getImage(spellName), nomeDec,iMancare,getName(target))]
+	[msgOut = strformat("<br><img src='%s' width='25' height='25' /> &nbsp; %s infligge una penalit&agrave; di %+d Mancare a %s",fetchSpellImage(spellName), nomeDec,iMancare,getName(target))]
 
 }]
 

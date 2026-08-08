@@ -1,8 +1,8 @@
 :root {
 	--font-default: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
-	--font-title: 'Gabriela', 'Palatino Linotype', 'Book Antiqua', serif;
-	--font-book: 'Macondo', 'Georgia', serif;
-	--font-spell: 'New Rocker', serif;
+	--font-title: 'Gabriela',  'Dumbledor 1', 'Palatino Linotype', 'Book Antiqua', serif;
+	--font-book: 'Macondo', 'Morris Roman', 'Georgia', serif;
+	--font-spell: 'New Rocker', 'Vecna', serif;
 	--font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
 }
 

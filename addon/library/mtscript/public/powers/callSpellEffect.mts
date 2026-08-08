@@ -13,7 +13,7 @@
 
 [h: fluff = fetchSpellProp(spellName,"nome_decorativo")]
 [r: getSpeech(fluff)]
-[h: im = getImage(spellName)]
+[h: im = fetchSpellImage(spellName)]
 [h: msgOutput = strformat("<table style='border-collapse: collapse; margin:0px; padding:0px;'><td><img src='%{im}' width='35' height='35' /></td>")]
 [h: msgOutput = strformat("%{msgOutput}<td><span style='font-size:medium; font-weight:bold'> %s: %{fluff}</span></td></table>",getName(source))]
 
@@ -33,7 +33,6 @@
 [h: appendMessaggio(source,"endOfActionMsg",msgOutput)]
 
 [h, macro("powers/processSpellEffect@this"): json.set(jProcParam, "origine", sOrigine, "isAttack", bIsAttack)]
-
 
 [h: sProcessMsg = popMessaggio(source, "processSpellEffect")]
 [h: appendMessaggio(source,"endOfActionMsg",sProcessMsg)]

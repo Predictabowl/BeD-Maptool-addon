@@ -31,7 +31,7 @@
 		[macro("core/DannoTarget@this") : json.set("","target",target,"source",source,"valore",iDanno,"verbose",0,"origine",sNomeInc)]
 		[macro("utility/popMessaggio@this"): json.set("","token",target,"key","strDanno")]
 		[sMsg = macro.return]
-		[discoverResistenzaBersaglio(sElemento,source,target)]
+		[discoverResistenzaBersaglio(sElemento,source,target, json.set("", "isElement", 1))]
 	}]
 }]
 [h: macro.return = sMsg]

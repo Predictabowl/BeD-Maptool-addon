@@ -34,7 +34,7 @@
 [if(iCura > 0), code:{
 	[macro("powers/addBersaglioColpitoAura@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,target,idAura)]
 
-	[h: im = getImage(spellName)]
+	[h: im = fetchSpellImage(spellName)]
 	[h: msg = strformat("<br><img src='"+ im+"' width='25' height='25' /> %s",nomeDec)]
 	[macro("powers/generaSpellMsg@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append("",sCaster,target)]
 	[macro("utility/popMessaggio@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","token",sCaster,"key","strPotere")]

@@ -26,7 +26,7 @@
 
 	[h: sTooltip = strformat("Danno(%{sDanno}x%{iLP}) = %{sRolledDice}")]
 	[h: sMsg= strformat("<img src='%s' width='25' height='25'/> <span title='%{sTooltip}'>%s</span>. %s",
-		getImage(spellName),fetchSpellProp(spellName,"nome_decorativo"),popMessaggio(target,"strDanno"))]
+		fetchSpellImage(spellName),fetchSpellProp(spellName,"nome_decorativo"),popMessaggio(target,"strDanno"))]
 	
 	[macro("powers/addBersaglioColpitoAura@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(sCaster,target,idAura)]
 }]

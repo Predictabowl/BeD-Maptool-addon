@@ -14,7 +14,7 @@
 
 [macro("core/RemoveEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,effectName)]
 
-[h: iImage = getImage("Sfidare")]
+[h: iImage = fetchSpellImage("Sfidare")]
 [h: msgOut = strformat("<br><img src='%{iImage}' width='25' height='25' /> %{fluffName}")]
 [h: msgOut= strformat("%{msgOut}&nbsp;incrementa il danno inflitto di %{sDanno}")]
 

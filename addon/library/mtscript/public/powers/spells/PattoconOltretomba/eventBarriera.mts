@@ -35,7 +35,7 @@
 	[iCariche = iCariche -1]
 	[setSpellData(source, sEffect, iCariche)]
 
-	[h: sImg = getImage(spellName)]
+	[h: sImg = fetchSpellImage(spellName)]
 	[nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 	[h: msgOut = strformat("<br><img src='%{sImg}' width='25' height='25' /> %s genera una barriera (+%{iBarriera} PVT <span style='color:orange;font-weight:bold;'>-1 </span>PF) ",nomeDec)]
 }]

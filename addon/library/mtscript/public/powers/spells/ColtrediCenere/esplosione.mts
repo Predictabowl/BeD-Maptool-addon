@@ -7,7 +7,7 @@
 	[h: spellName = "ColtrediCenere"]
 	[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 	
-	[h: im = getImage(spellName)]
+	[h: im = fetchSpellImage(spellName)]
 	[h: sMsg = strformat("<img src='%{im}' width='25' height='25' /> %s",nomeDec)]
 
 	[macro("powers/getSpellTarget@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"spellName",spellName)]
