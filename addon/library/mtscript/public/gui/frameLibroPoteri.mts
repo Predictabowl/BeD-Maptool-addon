@@ -17,10 +17,10 @@
 	};{
 		[sMem = ""]
 	}]
-	[sRow = strformat("<tr class='spellFont'>
-		<td class = '%{sSpellType}' title='Leggi descrizione' onclick='%{sJScriptSpell}'>%{sNameInc}</td>
-		<td><input type='checkbox' id='checkbox-%{iIndex}' name='%{oInc}' onclick='clickBox(%{iIndex})' %{sMem}></td>
-		</tr>")]
+	[sRow = strformat("<div class='v-grid-row'>
+		<span class='spellFont %{sSpellType}' title='Leggi descrizione' onclick='%{sJScriptSpell}'>%{sNameInc}</span>
+		<span><input type='checkbox' id='checkbox-%{iIndex}' name='%{oInc}' onclick='clickBox(%{iIndex})' %{sMem}></span>
+		</div>")]
 	[sTableBody = strformat("%{sTableBody}%{sRow}")]
 	[iIndex = iIndex+1]
 }]
@@ -28,31 +28,26 @@
 
 [h: sGruppoPreferenze = "Dialog_Libro_Poteri"]
 [h: iLarg = getPreferenza("larghezza",oToken,sGruppoPreferenze)]
-[h, if(!isNumber(iLarg)): iLarg = 350]
+[h, if(!isNumber(iLarg)): iLarg = 100]
 [h: iAltezza = getPreferenza("altezza",oToken,sGruppoPreferenze)]
-[h, if(!isNumber(iAltezza)): iAltezza = 350]
+[h, if(!isNumber(iAltezza)): iAltezza = 700]
 [h: lSize = setStrProp("","width",iLarg)]
 [h: lSize = setStrProp(lSize,"height",iAltezza)]
 
-[dialog5("memorizzaPoteri",strformat("temporary=1; size=%{lSize}; closebutton=0")):{
+[dialog5("memorizzaPoteri",strformat("temporary=1; %{lSize}; closebutton=0")):{
 <html>	
 <head>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
 	<title>Libro Poteri</title>
 </head>
 <body>
-	<div style="display:flex; justify-content:center;">
-		<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
-		<table>
-			<thead/>
-			<tbody>
-				[r: sTableBody]
-			</tbody>			
-		</table>
+	<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
+		<div class="vertical-grid">
+			[r: sTableBody]
+		</div>
 		<input type="hidden" name="token" value="[r: oToken]"/>
-		<input type="submit" value="Conferma" style="margin:10px"/>
-		</form>
-	</div>
+		<input type="submit" value="Conferma" style="margin:5px"/>
+	</form>
 	<div style="text-align:center">
 		Memorizzati: <span id="mem-num">[r: iMemCount]</span>/[r: getProperty("Inc_Memorizzabili",oToken)]
 	</div>

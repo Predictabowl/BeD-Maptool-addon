@@ -2,7 +2,7 @@
 [h: sLibName = arg(1)]
 [h: oUseItem = arg(2)]
 
-[h: sTipoOgg = upper(getLibProperty("tipo_oggetto",sLibName))]
+[h: sTipoOgg = upper(fetchConsumableProp(sLibName,"tipo_oggetto"))]
 [h: bClearance = 1]
 
 [h:switchToken(source)]

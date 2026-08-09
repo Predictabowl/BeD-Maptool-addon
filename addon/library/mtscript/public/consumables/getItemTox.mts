@@ -2,7 +2,7 @@
 [h: oToken = arg(1)]
 [h: sLibName = json.get(oOggetto,"libName")]
 
-[h: iTox = getLibProperty("Tossicita",sLibName)]
+[h: iTox = fetchConsumableProp(sLibName,"Tossicita")]
 [h, if(isNumber(iTox)): return(0, iTox)]
 
 [h: baseM = listGet(iTox,0)]

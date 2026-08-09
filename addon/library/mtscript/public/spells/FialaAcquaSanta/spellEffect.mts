@@ -6,7 +6,7 @@
 
 [h: sCatRaz = upper(trim(getProperty("Cat_Razziale",target)))]
 [h, if(sCatRaz != "NON MORTO" && sCatRaz != "DEMONE"), code:{
-	[appendMessaggio(source,"strPotere",strformat("%s è immune agli effetti di ",getName(target), getLibProperty("nome_decorativo", spellName)))]
+	[appendMessaggio(source,"strPotere",strformat("%s è immune agli effetti di ",getName(target), fetchConsumableProp(spellName,"nome_decorativo")))]
 	[return(0,"")]
 }]
 

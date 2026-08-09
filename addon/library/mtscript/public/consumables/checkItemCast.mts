@@ -4,7 +4,7 @@
 
 [h: sWarn = "<span style='color: green; font-weight:bold;'>ATTENZIONE:</span>&nbsp;"]
 
-[h: sItemType = upper(getLibProperty("tipo",sItemName))]
+[h: sItemType = upper(fetchConsumableProp(sItemName,"tipo"))]
 [h, if(sItemType == "OFFENSIVO"), code:{
 	[macro("combat/hasAttacks@this"): json.set("","source",source)]
 	[if(macro.return != 1), code:{

@@ -17,7 +17,7 @@
 
 [h: imgA = fetchClassSkillImage(sLibAbilita)]
 [h: sImage = strformat("<img src='%{imgA}' width='50' length='50'/>")]
-[h: sFluffName = getLibProperty("nome_decorativo",sLibAbilita)]
+[h: sFluffName = fetchClassSkillProp(sLibAbilita,"nome_decorativo")]
 [h, macro("class_skills/getDurataAbilita@this"): json.append(oToken,sLibAbilita)]
 [h: sDurata = macro.return]
 [h: iLiv = getLivelloAbilita(oToken,sLibAbilita)]

@@ -3,7 +3,7 @@
 [h: sLibrary = getMacroLocation()]
 [h: sMemoryTag = "LISTECONSUMABILI"]
 
-[h: sTipo = upper(getLibProperty("tipo_oggetto",spellName))]
+[h: sTipo = upper(fetchConsumableProp(spellName,"tipo_oggetto"))]
 
 [h: oFullGroup = getLibMemoria(sLibrary,sMemoryTag)]
 [h, if(json.type(oFullGroup) != "OBJECT"): oFullGroup = "{}"]

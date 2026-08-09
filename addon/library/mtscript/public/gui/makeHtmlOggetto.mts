@@ -27,7 +27,7 @@
 	[oRuna = json.get(oRune,sRuna)]
 	[sLibName = json.get(oRuna,"libName")]
 	[sImgRuna = fetchSpellImage(sLibName)]
-	[aRuneData = json.append(sImgRuna,getLibProperty("nome_decorativo",sLibName))]
+	[aRuneData = json.append(sImgRuna,fetchSpellProp(sLibName,"nome_decorativo"))]
 	[aRune = json.append(aRune,aRuneData)]
 }]
 

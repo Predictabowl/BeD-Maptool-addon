@@ -4,7 +4,7 @@
 
 
 [h: spellName = "PozionePotenzaGrezza"]
-[h: nomeDec = getLibProperty("nome_decorativo",spellName)]
+[h: nomeDec = fetchConsumableProp(spellName,"nome_decorativo")]
 
 [h: param = json.set("","target",target,"effetto",nomeDec,"stato","Potenziamento","subito",1,"tipo","Magia")]
 [h: temp = json.set("","key","Mod_Danno_Out","value",0.1,"tipo","onceMod")]

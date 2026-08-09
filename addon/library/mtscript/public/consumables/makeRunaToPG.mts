@@ -9,7 +9,7 @@
 [h: inSlot = "iSlot|1,2,3|Slot Runa|LIST"]
 [h: bCheck = input(inLiv,inCariche,inMaxCariche,inArma,inSlot)]
 [h: assert(bCheck,"Abortito")]
-[h, if(iCariche == 0): iCariche = getLibProperty("cariche_base",sRuna)]
+[h, if(iCariche == 0): iCariche = fetchConsumableProp(sRuna,"cariche_base")]
 [h, if(iMaxCariche <= 0): iMaxCariche = iCariche]
 
 [h: iSlot = iSlot +1]

@@ -13,7 +13,7 @@
 [h: lSpellFluff = ""]
 [h: lSpellList = json.get(oAllSpells,sScuola)]
 [h, foreach(spellName,lSpellList), code:{
-	[sFluff = getLibProperty("nome_decorativo",spellName)]
+	[sFluff = fetchSpellProp(spellName,"nome_decorativo")]
 	[lSpellFluff = listAppend(lSpellFluff,sFluff)]
 }]
 

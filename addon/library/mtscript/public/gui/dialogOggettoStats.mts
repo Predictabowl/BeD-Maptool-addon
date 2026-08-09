@@ -87,7 +87,7 @@
 						<td>
 							[h: spellName = json.get(oRuna, "libName")]
 							[h: jDescArgs = json.set("", "token", getImpersonated(), "libSpell", spellName)]
-							[r: macroLink(getLibProperty("nome_decorativo", spellName), "gui/dialogDescrizioneSpell@this", "", jDescArgs)]
+							[r: macroLink(fetchConsumableProp(spellName,"nome_decorativo"), "gui/dialogDescrizioneSpell@this", "", jDescArgs)]
 						</td>
 						<td>
 							Liv. [r: json.get(oRuna, "livello")]

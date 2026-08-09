@@ -3,8 +3,8 @@
 [h: extraParam = json.get(macro.args,"extraParam")]
 
 [h: spellName = "PozioneScuroVisione"]
-[h: sTipo = getLibProperty("tipo",spellName)]
-[h: sNomeEff = getLibProperty("nome_decorativo",spellName)]
+[h: sTipo = fetchConsumableProp(spellName,"tipo")]
+[h: sNomeEff = fetchConsumableProp(spellName,"nome_decorativo")]
 
 [h: sVisione = getSightType(source)]
 [h: oParam = json.set("","vistaOriginale",sVisione)]

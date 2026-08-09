@@ -121,5 +121,15 @@
 	case "ToggleSovSpiritico":{
 		[macro("class_skills/toggleSovSpiritico@this"): target]
 	};
+	case "LibroIncantesimi":{
+		[if(isDialogVisible("memorizzaPoteri")), code:{
+			[oProperties = getDialogProperties("memorizzaPoteri")]
+			[setPreferenza("larghezza",json.get(oProperties,"width"),target,"Dialog_Libro_Poteri")]
+			[setPreferenza("altezza",json.get(oProperties,"height"),target,"Dialog_Libro_Poteri")]
+			[closeDialog("memorizzaPoteri")]
+		};{
+			[macro("gui/frameLibroPoteri@this"): target]
+		}]
+	};
 	default :{}
 ]

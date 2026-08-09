@@ -34,8 +34,8 @@ Il che vuol dire se il safetycheck fa un abort non si ha un clean corretto degli
 
 [h, macro("consumables/isOpportunita@this"):json.append(source,sItemName)]
 [h: bOpport = macro.return]
-[h: sDecoName = getLibProperty("nome_decorativo",sItemName)]
-[h: sTipo = getLibProperty("tipo",sItemName)]
+[h: sDecoName = fetchConsumableProp(sItemName,"nome_decorativo")]
+[h: sTipo = fetchConsumableProp(sItemName,"tipo")]
 [h: oMacroParam = json.set("","spellName",sItemName,"useParam",oUseParam)]
 [h: param = json.set("","target",target,"source",source,"action",sDecoName,"time",iTime,"tipo",sTipo,"opp",bOpport,"macro","consumables/usaConsumabile@this","macroParam",oMacroParam)]
 

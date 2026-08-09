@@ -3,7 +3,7 @@
 [h: oUseItem = arg(2)]
 
 [h: sTipoOgg = upper(json.get(oUseItem,"tipoOggetto"))]
-[h, if(sTipoOgg == ""): sTipoOgg = upper(getLibProperty("tipo",sLibName))]
+[h, if(sTipoOgg == ""): sTipoOgg = upper(fetchConsumableProp(sLibName,"tipo"))]
 [h: bClearance = 1]
 
 [h:switchToken(source)]

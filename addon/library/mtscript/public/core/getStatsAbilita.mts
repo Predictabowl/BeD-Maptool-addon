@@ -1,3 +1,4 @@
+<-- DEPRECATED -->
 [h: source = json.get(macro.args,0)]
 [h: sNome = json.get(macro.args,1)]
 

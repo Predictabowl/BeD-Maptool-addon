@@ -25,7 +25,7 @@
 [h, if(!macro.return): return (0,1)]
 
 
-[h: sDecName = getLibProperty("nome_decorativo",sItemName)]
+[h: sDecName = fetchConsumableProp(sItemName,"nome_decorativo")]
 [h: sImg = getImage(sItemName)]
 [h: msgOutput = strformat("<table><td><img src='%{sImg}' width='35' height='35' /></td>")]
 [h: msgOutput = strformat("%{msgOutput}<td><p style='font-size:medium; font-weight:bold'> %s: %{sDecName}</p></td></table>",getName(source))]
@@ -88,7 +88,7 @@
 [h: appendMessaggio(source,"endOfActionMsg",msgOutput)]
 
 
-[h: sTipo = upper(getLibProperty("tipo",sItemName))]
+[h: sTipo = upper(fetchConsumableProp(sItemName,"tipo"))]
 [h, if(sTipo=="OFFENSIVO"): consumaPotereOffensivo(source)]
 [macro("consumables/consumeItem@this"): json.append(source,sItemName,oUseParam)]
 <!-- L'oggetto viene consumato al termine per avere la libertà di eliminarlo se esaurito senza perderne le info-->

@@ -8,8 +8,8 @@
 [h, if(macro.return): return(0,"")]
 
 
-[h: sTipo = upper(getLibProperty("tipo",sLibAbilita))]
-[h: sNome = getLibProperty("nome_decorativo",sLibAbilita)]
+[h: sTipo = upper(fetchClassSkillProp(sLibAbilita,"tipo"))]
+[h: sNome = fetchClassSkillProp(sLibAbilita,"nome_decorativo")]
 [macro("class_skills/isAbilitaInUso@this"): oAbParam]
 [h: sInUso = macro.return]
 [macro("class_skills/getAutocastAbilita@this"): oAbParam]

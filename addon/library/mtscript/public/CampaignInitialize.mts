@@ -42,6 +42,7 @@
 [h: defineFunction("fetchClassSkillImage","crud/fetchClassSkillImage@this")]
 [h: defineFunction("fetchClassSkillProp","crud/fetchClassSkillProp@this")]
 [h: defineFunction("fetchConsumableData","crud/fetchConsumableData@this")]
+[h: defineFunction("fetchConsumableProp","crud/fetchConsumableProp@this")]
 [h: defineFunction("fetchSpellImage","crud/fetchSpellImage@this")]
 [h: defineFunction("fetchSpellProp","crud/fetchSpellProp@this")]
 [h: defineFunction("fetchSpellData","crud/fetchSpellData@this")]

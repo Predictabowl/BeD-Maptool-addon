@@ -43,7 +43,7 @@
 	[h: spellName = json.get(oOggetto,"libName")]
 	[macro("consumables/getTipoConsumabile@this"): json.append(spellName, 1)]
 	[h: sTipoOggetto = macro.return]
-	[h: sNome = getLibProperty("nome_decorativo",spellName)]
+	[h: sNome = fetchConsumableProp(spellName,"nome_decorativo")]
 	[macro("consumables/getItemTime@this"): json.append(target,spellName)]
 	[h: iTempoCost = macro.return]
 
@@ -78,7 +78,7 @@
 		[iPACost = macro.return]
 		[classTypeP = if(classTypeP=="oddRow","evenRow","oddRow")]
 		[sSpellLink = macrolinkText("gui/dialogDescrizioneSpell@this","",param)]	
-		[sSpellType = getLibProperty("tipo",spellName)]
+		[sSpellType = fetchConsumableProp(spellName,"tipo")]
 		[sTabellaSlot = strformat("%{sTabellaSlot}<tr class='%{classTypeP}'>
 			<td>%{strCast}</td>
 			<td align='left' class='%{sSpellType} spellFont'><a style='color:inherit; display:block' href='%{sSpellLink}'>%{sNome}</a></td>
@@ -101,7 +101,7 @@
 	[h: oOggetto = getRunaFromArma(target,sArma,iRuna)]
 	[h: spellName = json.get(oOggetto,"libName")]
 
-	[h: sNome = getLibProperty("nome_decorativo",spellName)]
+	[h: sNome = fetchConsumableProp(spellName,"nome_decorativo")]
 	[macro("consumables/getTipoConsumabile@this"): spellName]
 	[macro("consumables/getPPOggetto@this"): json.append(target, spellName, macro.return)]
 	[h: iPACost = macro.return]
@@ -124,7 +124,7 @@
 	[macro("consumables/getCDOggetto@this"): iLiv]
 	[h: iCD = macro.return]
 
-	[h: sSpellType = getLibProperty("tipo",spellName)]
+	[h: sSpellType = fetchConsumableProp(spellName,"tipo")]
 	[sTabellaRune = strformat("%{sTabellaRune}<tr class='%{classType}'><td>%{strCast}</td><td align='left' class='%{sSpellType}'><a style='color:inherit; display:block;' class='spellFont' href='%{sSpellLink}'>%{sNome}</a></td>")]
 	[sTabellaRune = strformat("%{sTabellaRune}<td>%{iCariche}</td><td class='azioneFont'>%{iPACost}</td><td class='tempoFont'>%{iTempoCost}</td><td>%{iLL}</td><td>%{iCD}</td><td>%{iLiv}</td></tr>")]
 }]

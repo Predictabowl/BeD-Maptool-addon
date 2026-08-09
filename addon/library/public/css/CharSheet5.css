@@ -14,7 +14,6 @@ body {
 	font-family: var(--font-default);
 	font-size: 18px;
 }
-
 input {
 	font-family: var(--font-default);
 	font-size: 16px;
@@ -754,6 +753,35 @@ th.tabHeaderLink:active {
 	color: palegreen;
 }
 
+
+.vertical-grid {
+	/*justify-content:center;*/
+	display:grid;
+	grid-template-rows: repeat(25, 1rem);
+	grid-auto-columns: 1fr;
+	grid-auto-flow: column;
+	height: max-content;
+	gap: 10px;
+	overflow-y: scroll;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+
+.v-grid-row {
+	display: flex;
+	align-items: center;
+}
+
+.v-grid-row > :first-child {
+	flex: 1;
+	width: max-content;
+	white-space: nowrap;
+}
+
+.v-grid-row > :nth-child(2) {
+	padding-left: 5px;
+	padding-right: 15px;
+}
 
 /* Da qua in poi DA FARE */
 

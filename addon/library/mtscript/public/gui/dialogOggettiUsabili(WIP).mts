@@ -1,3 +1,4 @@
+<-- TODO must be completed? is still needed? -->
 [h: target = json.get(macro.args,0)]
 [h: sDialog = "OggettiConsumabili"]
 
@@ -9,7 +10,7 @@
 [h, for(i,0,iNumItems,1), CODE:{
 	[h: oOggetto = getFromSlotVeloce(target,i)]
 	[h: spellName = json.get(oOggetto,"spellName")]
-	[h: sNome = getLibProperty("nome_decorativo",spellName)]
+	[h: sNome = fetchConsumableProp(spellName,"nome_decorativo")]
 	[h: iPACost = getSpellPA(target,spellName)]
 	[h: iTempoCost = getSpellTime(target,spellName,1)]
 
@@ -43,9 +44,9 @@
 	[h: oOggetto = getRunaFromArma(target,sArma,iRuna)]
 	[h: spellName = json.get(oOggetto,"libName")]
 
-	[h: sNome = getLibProperty("nome_decorativo",spellName)]
-	[h: iPACost = getLibProperty("PA",spellName)]
-	[h: iTempoCost = calcActionTime(getLibProperty("tempo",spellName),target)]
+	[h: sNome = fetchConsumableProp(spellName,"nome_decorativo")]
+	[h: iPACost = fetchConsumableProp(spellName,"PA")]
+	[h: iTempoCost = calcActionTime(fetchConsumableProp(spellName,"tempo"),target)]
 	[h: classType = if(classType=="oddRow","evenRow","oddRow")]
 	[h: iCariche = getCaricheRuna(target,sArma,iRuna)]
 

@@ -1,3 +1,4 @@
+<-- DEPRECATED -->
 [h: sAbilita = json.get(macro.args,0)]
 [h: sClasse = json.get(macro.args,1)]
 

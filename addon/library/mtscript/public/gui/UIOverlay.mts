@@ -71,53 +71,65 @@
 	sCiclaVista = ""]
 
 
+[h: oLibro = getLibroPoteri(oToken)]
+[h, if(json.isEmpty(oLibro)): showBook = "none"; showBook = "block"]	
+
 [overlay(sOverlay,"value=[r: oToken]"): {
 	<html>
-	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
-	<style>
-		[r:"
-			.pServitore{margin: 4px; padding:0px; height: 38px; width: 38px; border-radius:19px;}
-			.pServitore:hover{color: rgb(0,0,0,0.5);opacity: 1.0; box-shadow: 0px 0px 15px green; }
-			.pActiveBorder{filter: drop-shadow(0px 0px 5px gold);}
-			.pPeculiareSkill{filter: drop-shadow(0px -3px 4px rgba(0,190,30,0.7));}
-			.pAttivaSkill{filter: drop-shadow(0px 3px 4px rgba(255,230,30,0.7));}
-			.pBothSkills{filter: drop-shadow(0px -3px 4px rgba(0,190,30,0.7)) drop-shadow(0px 3px 4px rgba(255,230,30,0.7));}
-		"]
-	</style>
-	
+	<head>
+		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/UIOverlay.css?cachelib=false">
+	</head>
+	<body>
 	<div>
 		<!-- Form pulsanti azioni -->
 		<form id="formRisolviAzione" method="json" action="[r:macroLinkText("gui/pulsantiPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
-		<div style="position:absolute; bottom:0px; left:50px; display:flex; justify-content:start; margin:0px; padding:0px;">
-			<div style="heigth:100%; width:min-content; display:grid; gap:0px; grid-template-columns: repeat(15,auto); justify-content: center; align-content: end; align-items:center; background-color:rgba(0,0,0,0.2); border-radius:28px;">
-			
-				<div style="margin:0px; padding-right: 5px;">
-					<a style="color:inherit;" onmouseup="pulsanteToken(event)" title='Apri Scheda / Equipaggiamento'>
-						<img src="[r: getTokenImage()]" class="pulsanteGrande" style="box-shadow: 0px 0px 8px; border-radius:28px;" />
+			<div style="position:absolute; bottom:0px; left:50px; display:flex; justify-content:start; margin:0px; padding:0px;">
+				<div style="heigth:100%; width:min-content; display:grid; gap:0px; grid-template-columns: repeat(15,auto); justify-content: center; align-content: end; align-items:center; background-color:rgba(0,0,0,0.2); border-radius:28px;">
+				
+					<div style="margin:0px; padding-right: 5px;">
+						<a style="color:inherit;" onmouseup="pulsanteToken(event)" title='Apri Scheda / Equipaggiamento'>
+							<img src="[r: getTokenImage()]" class="pulsanteGrande" style="box-shadow: 0px 0px 8px; border-radius:28px;" />
+						</a>
+					</div>
+					<a onmouseup="pulsanteRosso(event)" title='Risolvi / Apri Menu'>
+						<img class='pulsanteUI'  src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/resolve_action.png' />
 					</a>
+					<input type='image' class='pulsanteUI' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' title='Attacco base' id='button-attacco'/>
+					[r: sLancioLink]
+					<a title='Abilità / Apri Menu' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]">
+						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' />
+					</a>
+					[r: sScegliMotivoLink]
+					[r: sNecrofuriaLink]
+					[r: sSovSpiLink]
+					[r: sAltreAzioniLink]
+					<a title='Selezione / Spawn / Apri Menu' onmouseup="pulsanteBersaglio(event)">
+						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/target_select.png' />
+					</a>
+					[r: sCiclaVista]
+					<input type='image' class='pulsanteUI' name='Aspettare' value='Aspettare' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pass_turn.png' title='Attesa'/>
+					<input type="hidden" name="target" value="[r: oToken]"/>
+					<input type="hidden" name="frameName" value=""/>
+					<input type="hidden" id="var-input" name="buttonPressed" value="" />
 				</div>
-				<a onmouseup="pulsanteRosso(event)" title='Risolvi / Interrompi azione'>
-					<img class='pulsanteUI'  src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/resolve_action.png' />
-				</a>
-				<input type='image' class='pulsanteUI' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' title='Attacco base' id='button-attacco'/>
-				[r: sLancioLink]
-				<a title='Abilità / Poteri Classe' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]">
-					<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' />
-				</a>
-				[r: sScegliMotivoLink]
-				[r: sNecrofuriaLink]
-				[r: sSovSpiLink]
-				[r: sAltreAzioniLink]
-				<a title='Selezione / Centra / Spawn' onmouseup="pulsanteBersaglio(event)">
-					<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/target_select.png' />
-				</a>
-				[r: sCiclaVista]
-				<input type='image' class='pulsanteUI' name='Aspettare' value='Aspettare' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pass_turn.png' title='Attesa'/>
-				<input type="hidden" name="target" value="[r: oToken]"/>
-				<input type="hidden" name="frameName" value=""/>
-				<input type="hidden" id="var-input" name="buttonPressed" value="" />
 			</div>
-		</div>
+			<div id="floatingSubmenu" class="submenu"  onmouseleave="scheduleSubmenuClose()" onmouseenter="cancelSubmenuClose()"></div>
+			<template id="submenu-azione">
+				<a onmouseup="scegliEvento(event,'Azione')">Risolvi</a>
+				<a onmouseup="scegliEvento(event,'Interrompi')">Annulla</a>
+			</template>
+			<template id="submenu-poteri">
+				<a onclick="scegliEvento(event,'AbilitaClasse')">Abilità di Classe</a>
+				<a onmouseup="scegliEvento(event,'PoteriClasse')">Incantesimi e Poteri</a>
+				<a onmouseup="scegliEvento(event,'Sortilegi')">Sortilegi</a>
+				<a onmouseup="scegliEvento(event,'LibroIncantesimi')" style="display:[r:showBook];">Libro Incantesimi</a>
+			</template>
+			<template id="submenu-bersaglio">
+				<a onclick="scegliEvento(event,'SelBersagli')">Autoseleziona bersagli</a>
+				<a onmouseup="scegliEvento(event,'DespawnTokenBersaglio')">Spawn Mirino</a>
+				<a onmouseup="scegliEvento(event,'CentraToken')">Centra Personaggio</a>
+			</template>			
 		</form>
 	</div>
 
@@ -129,95 +141,7 @@
 	</form>
 	}]
 
-	<script>
-	[r:"
-
-		input.addEventListener('keypress', logKey);
-		
-		function logKey(e) {
-			console.log(e.code);
-		}
-	
-		function toggle_show_list() {
-            var eDisplay = document.getElementById('dropdown-list');
-            if (eDisplay.style.display == 'none'){
-                eDisplay.style.display = 'block';
-            }
-            else{
-                eDisplay.style.display = 'none';
-            }
-        }
-
-        function pulsanteRosso(event){
-    		var elem = document.getElementById('var-input');
-        	if(event.button == 2){
-        		elem.setAttribute('value','Interrompi');
-        	} else {
-        		elem.setAttribute('value','Azione');
-        	}
-        	document.getElementById('formRisolviAzione').submit();
-        }
-
-        function pulsanteToken(event){
-    		var elem = document.getElementById('var-input');
-        	if(event.button == 2){
-        		elem.setAttribute('value','Equipaggiamento');
-        	} else {
-        		elem.setAttribute('value','FrameScheda');
-        	}
-        	document.getElementById('formRisolviAzione').submit();
-        }
-
-        function pulsanteBersaglio(event){
-    		var elem = document.getElementById('var-input');
-        	if(event.button == 2){
-	    		elem.setAttribute('value','DespawnTokenBersaglio');
-        	} else {
-               	if(event.button == 1){
-	        		elem.setAttribute('value','CentraToken');
-	        	} else {
-	        		elem.setAttribute('value','SelBersagli');
-	        	}
-        	}
-        	document.getElementById('formRisolviAzione').submit();
-        }
-
-        function pulsantePoteri(event){
-    		var elem = document.getElementById('var-input');
-        	if(event.button == 2){
-        		elem.setAttribute('value','PoteriClasse');
-        	} else {
-        		elem.setAttribute('value','AbilitaClasse');
-        	}
-        	document.getElementById('formRisolviAzione').submit();
-        }
-
-        function pulsanteLancio(event){
-    		var elem = document.getElementById('var-input');
-        	if(event.button == 2){
-        		elem.setAttribute('value','TogglePoteriLancio');
-        		document.getElementById('throw-button-id').classList.toggle('pActiveBorder');
-        	} else {
-        		elem.setAttribute('value','AttaccaLancio');
-        	}
-        	document.getElementById('formRisolviAzione').submit();
-        }
-
-        function toggleNecrofuria() {
-        	document.getElementById('necrofuria-button').classList.toggle('pActiveBorder');
-    		var elem = document.getElementById('var-input');
-    		elem.setAttribute('value','ToggleNecrofuria');
-        	document.getElementById('formRisolviAzione').submit();
-        }
-
-        function toggleSovSpiritico() {
-        	document.getElementById('sov-spiritico-button').classList.toggle('pActiveBorder');
-    		var elem = document.getElementById('var-input');
-    		elem.setAttribute('value','ToggleSovSpiritico');
-        	document.getElementById('formRisolviAzione').submit();
-        }
-
-	"]
-	</script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=false" defer></script>
+	</body>
 	</html>
 }]

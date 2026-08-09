@@ -57,7 +57,7 @@
 	[h: oOggetto = getRunaFromArma(target,iArma,iRuna)]
 	[h: spellName = json.get(oOggetto,"spellName")]
 
-	[h: sNome = getLibProperty("nome_decorativo",spellName)]
+	[h: sNome = fetchConsumableProp(spellName,"nome_decorativo")]
 	[h: iPACost = getSpellPA(target,spellName)]
 	[h: iTempoCost = getSpellTime(target,spellName)]
 	[h: classType = if(classType=="oddRow","evenRow","oddRow")]
