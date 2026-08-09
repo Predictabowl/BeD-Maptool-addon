@@ -6,7 +6,7 @@
 	[sNomeAb = arg(1)]
 }]
 
-[macro("core/getAbilitaClasse@this"): json.append(source,sNomeAb)]
+[macro("class_skills/getAbilitaClasse@this"): json.append(source,sNomeAb)]
 [h: oAbilita = macro.return]
 [h: iLiv = ""]
 [h, if(json.isEmpty(oAbilita) != 1): iLiv = json.get(oAbilita,"livello")]	
