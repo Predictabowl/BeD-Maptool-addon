@@ -10,7 +10,7 @@
 
 [h: spellTags = fetchSpellProp(spellName,"tags")]
 [h, if(listContains(spellTags,"PRECAST")), code:{
-	[macro("powers/spells/"+spellName+"/spellPreCast@"+getMacroLocation()): json.set("","source",source)]
+	[macro("spells/"+spellName+"/spellPreCast@"+getMacroLocation()): json.set("","source",source)]
 	[extraParam = macro.return]
 };{
 	[extraParam = ""]

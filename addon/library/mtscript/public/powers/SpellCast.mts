@@ -2,10 +2,9 @@
 [h: source = json.get(macro.args,"source")]
 [h: spellName = json.get(macro.args,"spellName")]
 [h: bOpp = json.get(macro.args,"isOpport")]
-[h: sSpellMacro = json.get(macro.args, "spellMacro")]
 
 [h: iArma = getArmaDaUsare(source)]
-[h: param = json.set(macro.args, "arma", iArma, "spellMacro", sSpellMacro)]
+[h: param = json.set(macro.args, "arma", iArma)]
 
 [h: switchToken(source)]
 [h: bClearance = 1]

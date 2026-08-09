@@ -1,0 +1,53 @@
+[h: source = json.get(macro.args,"source")]
+[h: target = json.get(macro.args,"target")]
+
+[h: switchToken(source)]
+[h: spellName = "Salvezza"]
+[h: macroInfranto = "spells/Salvezza/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[: macroRemove = "spells/Salvezza/marchioRemove@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
+
+[macro("powers/getDurata@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"target",target,"spellName",spellName)]
+[h: iDurata = macro.return]
+
+[macro("combat/getUltimoCritico@lib:it.aldinucci.piero.bed.maptool.ruleset"):source]
+[h: critRes = macro.return]
+[h: paramCD = json.set("","source",source,"spellName",spellName,"critRes",critRes)]
+[macro("powers/getCDSpell@lib:it.aldinucci.piero.bed.maptool.ruleset"): paramCD]
+[h: iCD = macro.return]
+
+[h: macroParam = json.set("","CD",iCD,"Durata",iDurata)]
+[h: paramMarchio = json.set("","source",source,"target",target,"macroInfranto",macroInfranto,"macroParam",macroParam,"tipo","PROTEZIONE","durata",iDurata,"nome",nomeDec)]
+[h: paramMarchio = json.set(paramMarchio,"macroRemove", macroRemove)]
+[macro("mechanics/setupMarchio@lib:it.aldinucci.piero.bed.maptool.ruleset"): paramMarchio]
+
+[h: nomeEffetto = "Marchio: "+nomeDec]
+[h: param = json.set("","target",target,"durata",iDurata,"effetto",nomeEffetto,"subito",1,"potenza","null","tipo","Marchio")]
+[h: iBonus = 1]
+[h: temp = json.set("","key","LD","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append("",temp)]
+[h: temp = json.set("","key","Res_Acqua","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Aria","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Fuoco","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Terra","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Arcano","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Mentale","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Positivo","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Negativo","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Res_Fisico","value",iBonus,"tipo","onceMod")]
+[h: altro = json.append(altro,temp)]
+
+[h: param = json.set(param,"params",altro,"verbose",0)]
+[macro("core/ApplyEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"): param]
+
+
+
+[macro("powers/generaSpellMsg@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append("",source,target)]

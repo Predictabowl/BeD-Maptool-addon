@@ -17,7 +17,7 @@
 [macro("powers/getSpellComponents@this"): json.append(source,spellName)]
 [h: listComponenti = macro.return]
 [h, if(listContains(listComponenti,"M") && bCheck), code:{
-	[macro("powers/spells/"+spellName+"/componenteMateriale@this"): json.set("","source",source)]
+	[macro("spells/"+spellName+"/componenteMateriale@this"): json.set("","source",source)]
 	[bCheck = macro.return]
 	[if(!bCheck), code:{
 		[msg = strformat("<span style='color:red;font-weight:bold;'>Componente Materiale mancante.</span>")]  
@@ -27,7 +27,7 @@
 }]
 
 [h, if(listContains(listComponenti,"F") && bCheck), code:{
-	[macro("powers/spells/"+spellName+"/componenteFocus@this"): json.set("","source",source)]
+	[macro("spells/"+spellName+"/componenteFocus@this"): json.set("","source",source)]
 	[bCheck = macro.return]
 	[if(!bCheck), code:{
 		[msg = strformat("<span style='color:red;font-weight:bold;'>Componente Focus mancante.</span>")]  

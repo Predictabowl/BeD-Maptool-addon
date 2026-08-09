@@ -1,8 +1,8 @@
 [h: spellId = arg(0)]
 [h: key = lower(arg(1))]
 
-[h: spellData = fetchSpellProps(spellId, key)]
-[h, if(json.isEmpty(spellData)): spellData = fetchConsumableProps(spellId, key)]
+[h: spellData = fetchSpellData(spellId, key)]
+[h, if(json.isEmpty(spellData)): spellData = fetchConsumableData(spellId, key)]
 
 [h: aExternal = json.append("nome_decorativo", "descrizione")]
 [h, if(json.contains(aExternal, key)), code:{

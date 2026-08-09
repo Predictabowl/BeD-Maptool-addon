@@ -3,11 +3,16 @@
 [h: target = json.get(macro.args,"target")]
 [h: bOpp = json.get(macro.args,"isOpport")]
 [h: iArma = json.get(macro.args, "arma")]
-[h: sSpellMacro = json.get(macro.args, "spellMacro")]
 [h: bIsAoE = json.get(macro.args, "isAoE")]
 
-[h: jProcParam = macro.args]
-[h, if(sSpellMacro == ""): jProcParam = json.set(jProcParam, "spellMacro", "powers/spells/"+spellName+"/spellEffect@this")]
+[h, if(json.type(spellName) == "OBJECT"), code:{
+    [spellId = json.get(spellName, "id")]
+    [namespace = json.get(spellName, "namespace")]
+    [spellMacro = strformat("spells/%{spellId}/spellEffect@lib:%{namespace}")]
+};{
+    [spellMacro = "spells/"+spellName+"/spellEffect@this"]
+}]
+[jProcParam = json.set(macro.args, "spellMacro", spellMacro)]
 
 [h: switchToken(source)]
 
