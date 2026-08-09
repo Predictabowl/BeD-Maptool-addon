@@ -23,7 +23,7 @@
 [h, if(oCorpse != ""), code:{
 	[switchToken(oCorpse)]
 	[Lista_Dati = setStrProp(Lista_Dati,sTag,1)]
-	[macro("class_skills/macros/IntrappolareAnima/calBonus@lib:it.aldinucci.piero.bed.maptool.ruleset"): source]
+	[macro(buildClassSkillMacroName("IntrappolareAnima","calBonus")): source]
 	[h: iNumAnime = macro.return]
 	[macro("powers/modAnime@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,iNumAnime)]
 	[sMsg = strformat("Frammenti di anima guadagnati =%{iNumAnime}")]

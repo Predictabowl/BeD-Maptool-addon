@@ -6,6 +6,6 @@
 
 [h: switchToken(source)]
 [h: addSpellMod(source, "Offensivo", "PF", 2)]
-[h: eventInstaller(source,"On_Attack",sNomeAb,"class_skills/macros/EnergiaDistruttiva/spellcastEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(source,"On_Attack",sNomeAb,buildClassSkillMacroName("EnergiaDistruttiva","spellcastEffect"))]
 
 [h: return(0,0)]

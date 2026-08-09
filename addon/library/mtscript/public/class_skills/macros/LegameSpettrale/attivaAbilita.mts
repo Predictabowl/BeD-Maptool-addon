@@ -8,7 +8,7 @@
 	[return(0,1)]
 }]
 
-[h: eventInstaller(source, "On_Damaged", sNomeAb, "class_skills/macros/LegameSpettrale/dmgRedirect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(source, "On_Damaged", sNomeAb, buildClassSkillMacroName("LegameSpettrale","dmgRedirect"))]
 [h, macro("powers/modAnime@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,-1)]
 
 [h: sMsg = strformat("Collegamento stabilito")]

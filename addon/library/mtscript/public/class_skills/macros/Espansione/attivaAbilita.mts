@@ -7,6 +7,6 @@
 [h:switchToken(source)]
 [h: Mancare = Mancare + 5]
 [h: Controllo_Poteri = Controllo_Poteri -2 ]
-[h: addSpellMod(source, "class_skills/macros/Espansione/isEligibleForAoE@lib:it.aldinucci.piero.bed.maptool.ruleset", "AoE", 3)]
+[h: addSpellMod(source, buildClassSkillMacroName("Espansione","isEligibleForAoE"), "AoE", 3)]
 
 [h: macro.return = 0]

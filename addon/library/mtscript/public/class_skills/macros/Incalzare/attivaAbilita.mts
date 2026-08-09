@@ -5,5 +5,5 @@
 [h: switchToken(source)]
 [h: VA = VA +5]
 
-[h: eventInstaller(source,sEvento,sLibName,"class_skills/macros/Incalzare/trigger@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(source,sEvento,sLibName,buildClassSkillMacroName("Incalzare","trigger"))]
 [h: macro.return = 0]

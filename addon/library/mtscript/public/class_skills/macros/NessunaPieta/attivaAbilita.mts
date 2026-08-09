@@ -9,7 +9,7 @@
 [h: sLibName = "NessunaPieta"]
 [h: eventName = sLibName+source]
 [h: jParams = json.set("", "tokenToExclude", source)]
-[h: eventInstaller(target, "On_Attacked", eventName, "class_skills/macros/NessunaPieta/trigger@lib:it.aldinucci.piero.bed.maptool.ruleset", jParams)]
+[h: eventInstaller(target, "On_Attacked", eventName, buildClassSkillMacroName("NessunaPieta","trigger"), jParams)]
 [macro("class_skills/setMemAbilita@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source, sLibName, target)]
 
 [h: appendMessaggio(source,"strAbilitaAttivata", strformat("%s", getName(target)))]

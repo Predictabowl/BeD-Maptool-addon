@@ -8,7 +8,7 @@
 [h: sDanno = iLiv+"d6"]
 [h: addDannoArmaAgg(source, sLibName, sDanno)]
 [h: eventUninstaller(source,"On_Attack",sLibName)]
-[h: eventInstaller(source, "On_Action_Teardown", sLibName, "class_skills/macros/PrecisioneLetale/removeDamage@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(source, "On_Action_Teardown", sLibName, buildClassSkillMacroName("PrecisioneLetale","removeDamage"))]
 
 [h: sNome = fetchClassSkillProp(sLibName,"nome_decorativo")]
 [h: sImg = fetchClassSkillImage(sLibName)]

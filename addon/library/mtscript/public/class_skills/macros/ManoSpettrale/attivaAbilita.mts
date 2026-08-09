@@ -11,7 +11,7 @@
 	[return(0,1)]
 }]
 
-[h, macro("class_skills/macros/ManoSpettrale/calcBonus@lib:it.aldinucci.piero.bed.maptool.ruleset"): source]
+[h, macro(buildClassSkillMacroName("ManoSpettrale","calcBonus")): source]
 [h: iBonus = macro.return]
 [h: addSpellMod(source,"class_skills/isMacroCheckSpellRange5@lib:it.aldinucci.piero.bed.maptool.ruleset","spellRange",iBonus)]
 

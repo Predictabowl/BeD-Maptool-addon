@@ -8,7 +8,7 @@
 	[return(0,1)]
 }]
 
-[h: eventInstaller(source, "On_Spellcast_at", sNomeAb, "class_skills/macros/Necropotenza/potenziaLE@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(source, "On_Spellcast_at", sNomeAb, buildClassSkillMacroName("Necropotenza","potenziaLE"))]
 [h: iMod = 0]
 [h: fMod = 0.5]
 [addSpellMod(source, "Malattia", "PP", iMod, fMod)]

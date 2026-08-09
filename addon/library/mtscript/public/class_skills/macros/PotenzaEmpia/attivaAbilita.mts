@@ -16,7 +16,7 @@
 
 [h: switchToken(oToken)]
 [h: LA = LA + iLA]
-[h: eventInstaller(oToken, "On_Spellcast_at", sNomeAb, "class_skills/macros/PotenzaEmpia/spellCastEvent@lib:it.aldinucci.piero.bed.maptool.ruleset", jParam)]
-[h: eventInstaller(oToken, "On_Attack", sNomeAb, "class_skills/macros/PotenzaEmpia/attackEvent@lib:it.aldinucci.piero.bed.maptool.ruleset", jParam)]
+[h: eventInstaller(oToken, "On_Spellcast_at", sNomeAb, buildClassSkillMacroName("PotenzaEmpia","spellCastEvent"), jParam)]
+[h: eventInstaller(oToken, "On_Attack", sNomeAb, buildClassSkillMacroName("PotenzaEmpia","attackEvent"), jParam)]
 
 [h: macro.return = 0]

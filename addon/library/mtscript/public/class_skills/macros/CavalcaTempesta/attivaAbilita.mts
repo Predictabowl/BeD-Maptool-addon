@@ -2,6 +2,6 @@
 
 [h: sNomeAb = "CavalcaTempesta"]
 
-[h: eventInstaller(source,"On_Spellcast",sNomeAb,"class_skills/macros/CavalcaTempesta/spellcastEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(source,"On_Spellcast",sNomeAb,buildClassSkillMacroName("CavalcaTempesta","spellcastEffect"))]
 
 [h: return(0,0)]

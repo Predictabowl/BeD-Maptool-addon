@@ -6,4 +6,4 @@
 [h: sTipo = json.get(jEventParam, "tipo")]
 [h, if(sTipo == "SPELL"): return(0, "")]
 
-[h, macro("class_skills/macros/PotenzaEmpia/applyCritEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source, iCrit)]
+[h, macro(buildClassSkillMacroName("PotenzaEmpia","applyCritEffect")): json.append(source, iCrit)]
