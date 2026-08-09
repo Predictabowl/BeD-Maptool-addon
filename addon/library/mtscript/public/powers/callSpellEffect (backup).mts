@@ -28,7 +28,7 @@
 [h: bIsAttack = macro.return]
 
 [h, if(listContains(spellTags,"PRECAST")), code:{
-	[macro("spells/"+spellName+"/spellPreCast@this"): json.set("","source",source)]
+	[macro(buildSpellMacroName(spellName,"spellPreCast")): json.set("","source",source)]
 	[extraParam = macro.return]
 };{
 	[extraParam = ""]

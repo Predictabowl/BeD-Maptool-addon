@@ -49,7 +49,7 @@
 	[h: classType = if(classType=="oddRow","evenRow","oddRow")]
 	[h: iCariche = getCaricheRuna(target,sArma,iRuna)]
 
-	[h: imgA = getImage(spellName)]
+	[h: imgA = fetchSpellImage(spellName)]
 	[h: strCast = strformat("<input type='image' class='spellCastButton' src='%{imgA}' onclick='loadParams(this)'")]
 	[h: strCast = strformat("%{strCast} data-spellName='%{spellName}' data-itemType = 'RUNA' title='Usa Oggetto'
 		data-nomeArma='%{sArma}' data-slotRuna='%{iRuna}'/>")]

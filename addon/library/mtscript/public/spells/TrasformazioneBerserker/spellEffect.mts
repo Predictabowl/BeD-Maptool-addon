@@ -30,7 +30,7 @@
 [h: temp = json.set("","key","VA","value",7,"tipo","onceMod")]
 [h: altro = json.append(altro,temp)]
 <!-- Aggiunge una Macro per rimuovere gli eventi -->
-[h: temp = json.set("","macroName","spells/TrasformazioneBerserker/manaPenalty@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("TrasformazioneBerserker","manaPenalty"),"tipo","macroCall")]
 [h: altro = json.append(altro,temp)]
 [h: param = json.set(param,"params",altro,"verbose",0)]
 

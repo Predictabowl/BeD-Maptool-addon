@@ -28,7 +28,7 @@
 [h: temp = json.set("","key","PV","value",iBonusPV,"tipo","onceMod")]
 [h: altro = json.append(altro,temp)]
 <!-- Aggiunge una Macro per rimuovere gli eventi -->
-[h: temp = json.set("","macroName","spells/TrasformazioneBerserker/removeEvent@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("TrasformazioneBerserker","removeEvent"),"tipo","macroCall")]
 [h: altro = json.append(altro,temp)]
 [h: param = json.set(param,"params",altro,"verbose",0)]
 
@@ -38,8 +38,8 @@
 
 
 <!-- Richiede un evento On_SpellCast che blocca il lancio degli incantesimi-->
-[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","token",source,"event","On_Spellcast","name",spellName,"macroName","spells/TrasformazioneBerserker/spellCastBlock@lib:it.aldinucci.piero.bed.maptool.ruleset")]
-[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","token",source,"event","On_Spellstart","name",spellName,"macroName","spells/TrasformazioneBerserker/spellCastBlock@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","token",source,"event","On_Spellcast","name",spellName,"macroName",buildSpellMacroName("TrasformazioneBerserker","spellCastBlock"))]
+[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","token",source,"event","On_Spellstart","name",spellName,"macroName",buildSpellMacroName("TrasformazioneBerserker","spellCastBlock"))]
 
 [macro("gui/updateSchedaAttacco@lib:it.aldinucci.piero.bed.maptool.ruleset"):source]
 [macro("powers/generaSpellMsg@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append("",source,source)]

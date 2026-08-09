@@ -47,7 +47,7 @@
 	[macro("consumables/getItemTime@this"): json.append(target,spellName)]
 	[h: iTempoCost = macro.return]
 
-	[h: imgA = getImage(spellName)]
+	[h: imgA = fetchSpellImage(spellName)]
 	[h: strCast = strformat("<input type='image' class='spellCastButton' src='%{imgA}' onclick='loadParams(this)'")]
 	[h: strCast = strformat("%{strCast} data-spellName='%{spellName}' title='Usa Oggetto' data-slotVeloce='%{i}'/>")]
 
@@ -112,7 +112,7 @@
 	[macro("consumables/getMaxCaricheRuna@this"): json.append(target, sArma, iRuna)]
 	[if(macro.return>0): iCariche = strformat("%{iCariche}/%{macro.return}")]
 
-	[h: imgA = getImage(spellName)]
+	[h: imgA = fetchSpellImage(spellName)]
 	[h: strCast = strformat("<input type='image' class='spellCastButton' src='%{imgA}' onclick='loadParams(this)'")]
 	[h: strCast = strformat("%{strCast} data-spellName='%{spellName}' title='Usa Oggetto' data-nomeArma='%{sArma}' data-slotRuna='%{iRuna}'/>")]
 

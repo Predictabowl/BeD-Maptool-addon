@@ -31,7 +31,7 @@
 [h: altro = json.append(altro,temp)]
 [h: temp = json.set("","key","Mod_Danno_In","value",-0.1,"tipo","onceMod","moltiplicabile",0)]
 [h: altro = json.append(altro,temp)]
-[h: temp = json.set("","macroName","spells/AlbaDelRevenant/cleanup@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",json.set("","caster",source),"tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("AlbaDelRevenant","cleanup"),"parametri",json.set("","caster",source),"tipo","macroCall")]
 [h: altro = json.append(altro,temp)]
 [h: oEffetto = json.set("","params",altro,"effetto",fetchSpellProp(spellName,"nome_decorativo"))]
 

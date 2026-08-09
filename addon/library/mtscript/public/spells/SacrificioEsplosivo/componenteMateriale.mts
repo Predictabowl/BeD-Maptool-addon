@@ -18,7 +18,7 @@
 	[switchToken(source)]
 	[Lista_Dati = setStrProp(Lista_Dati,"SacrificioEsplosivoDanno",sDanno)]
 
-	[sMacroName = "spells/SacrificioEsplosivo/removeServitore@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+	[sMacroName = buildSpellMacroName("SacrificioEsplosivo","removeServitore")]
 	[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,"On_Action_End",spellName,sMacroName,"")]
 };{
 	[macro("core/getServitore@lib:it.aldinucci.piero.bed.maptool.ruleset"): source]

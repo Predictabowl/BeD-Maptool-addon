@@ -14,7 +14,7 @@
 
 [h: lReturn = ""]
 [h, foreach(item,oAbilita), code:{
-	[h: sTipo = getLibProperty("tipo",item)]
+	[h: sTipo = fetchClassSkillProp(item,"tipo")]
 	[if (listContains(lTipo,sTipo)): lReturn = listAppend(lReturn,item)]
 }]
 

@@ -1,9 +1,9 @@
 [h: oToken = json.get(macro.args,0)]
 [h: sLibAbilita = json.get(macro.args,1)]
 
-[h: iBase = getLibProperty("PP",sLibAbilita)]
+[h: iBase = fetchClassSkillProp(sLibAbilita,"PP")]
 
 [h, if(iBase == ""): return(0,0)]
 [h, if(isNumber(iBase)): return(0, iBase)]
 
-[h, macro("getPPBase@"+ sLibAbilita): json.append(oToken, iBase)]
+[h, macro(buildClassSkillMacroName(sLibAbilita,"getPPBase")): json.append(oToken, iBase)]

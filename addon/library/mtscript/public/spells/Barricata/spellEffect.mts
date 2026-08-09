@@ -4,7 +4,7 @@
 [h: spellName = "Barricata"]
 [h: setCoperturaSlot(0.18, source, spellName)]
 
-[h: temp = json.set("","macroName","spells/Barricata/removeEffect@lib:it.aldinucci.piero.bed.maptool.ruleset", "tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("Barricata","removeEffect"), "tipo","macroCall")]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set("","target",source,"tipo","Fisico","params",altro,"verbose",0, "stato", "Copertura")]
 

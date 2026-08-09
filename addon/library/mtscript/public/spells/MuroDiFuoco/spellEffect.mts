@@ -14,4 +14,4 @@
 
 [macro("mobs/getLastTestDL@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","source",source,"spellName",spellName)]
 [h: bDLTest = macro.return]
-[macro("spells/MuroDiFuoco/damageEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("", "source", source, "target", target, "drawId", sDrawId, "critRes", bCritRes, "DLTest", bDLTest)]
+[macro(buildSpellMacroName("MuroDiFuoco","damageEffect")): json.set("", "source", source, "target", target, "drawId", sDrawId, "critRes", bCritRes, "DLTest", bDLTest)]

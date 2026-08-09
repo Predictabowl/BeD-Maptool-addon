@@ -21,12 +21,11 @@
 
 	[h, if(bFlag), code:{
 		[if(isAbilitaEroica(sLibAbilita)): modPuntiEroe(source,-1000)]
-		[h: sActivator = strformat("attivaAbilita@%{sLibAbilita}")]
-		[macro(sActivator):source]
+		[macro(buildClassSkillMacroName(sLibAbilita,"attivaAbilita")):source]
 		[bInterrupt = macro.return]
 		[h: returnStr = popMessaggio(source,"strAbilitaAttivata")]
-		[h: sNomeAb = getLibProperty("nome_decorativo",sLibAbilita)]
-		[h: im = getImage(sLibAbilita)]
+		[h: sNomeAb = fetchClassSkillProp(sLibAbilita,"nome_decorativo")]
+		[h: im = fetchClassSkillImage(sLibAbilita)]
 		[h: msg = strformat("<br><img src='%{im}' width='25' height='25' /> ")]
 		[h: msg = strformat("%{msg} Abilit&agrave;: <b> %{sNomeAb} </b> %{returnStr}")]
 		[broadcast(msg,getPlayerName())]

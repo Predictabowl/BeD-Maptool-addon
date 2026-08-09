@@ -3,7 +3,7 @@
 
 [h: switchToken(source)]
 [h: spellName = "BarrieraPolare"]
-[h: macroInfranto = "spells/BarrieraPolare/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: macroInfranto = buildSpellMacroName("BarrieraPolare","specialEffect")]
 [h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 
 [macro("combat/getUltimoCritico@lib:it.aldinucci.piero.bed.maptool.ruleset"):source]

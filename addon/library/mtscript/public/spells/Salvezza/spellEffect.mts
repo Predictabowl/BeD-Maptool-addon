@@ -3,8 +3,8 @@
 
 [h: switchToken(source)]
 [h: spellName = "Salvezza"]
-[h: macroInfranto = "spells/Salvezza/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"]
-[: macroRemove = "spells/Salvezza/marchioRemove@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: macroInfranto = buildSpellMacroName("Salvezza","specialEffect")]
+[: macroRemove = buildSpellMacroName("Salvezza","marchioRemove")]
 [h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 
 [macro("powers/getDurata@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"target",target,"spellName",spellName)]

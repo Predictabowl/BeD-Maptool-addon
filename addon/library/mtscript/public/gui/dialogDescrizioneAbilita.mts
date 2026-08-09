@@ -15,7 +15,7 @@
 </head>
 <body  align="center">
 
-[h: imgA = getImage(sLibAbilita)]
+[h: imgA = fetchClassSkillImage(sLibAbilita)]
 [h: sImage = strformat("<img src='%{imgA}' width='50' length='50'/>")]
 [h: sFluffName = getLibProperty("nome_decorativo",sLibAbilita)]
 [h, macro("class_skills/getDurataAbilita@this"): json.append(oToken,sLibAbilita)]

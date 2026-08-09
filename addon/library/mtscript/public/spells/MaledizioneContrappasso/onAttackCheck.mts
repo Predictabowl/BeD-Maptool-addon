@@ -5,4 +5,4 @@
 
 
 [h, if(spellName!="") : return(0, "")]
-[macro("spells/MaledizioneContrappasso/macroEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"): macro.args]
+[macro(buildSpellMacroName("MaledizioneContrappasso","macroEffect")): macro.args]

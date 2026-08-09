@@ -13,7 +13,7 @@
 [h: nomeEff = fetchSpellProp(spellName,"nome_decorativo")]
 [h: param = json.set("","target",target,"effetto",nomeEff,"stato","Protezione","tipo","Benefico","Categoria",sTipo,"verbose",0)]
 
-[h: temp = json.set("","macroName","spells/ArmaturaOssa/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("ArmaturaOssa","specialEffect"),"tipo","macroCall")]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set(param,"params",altro)]
 

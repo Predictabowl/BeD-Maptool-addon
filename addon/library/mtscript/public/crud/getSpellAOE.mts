@@ -17,7 +17,7 @@
 
 [h: iAOE = fetchSpellProp(spellName,"area")]
 [h, if(!isNumber(iAOE)), code:{
-	[macro("getAOE@"+spellName): json.set("","source",source)]
+	[macro(buildSpellMacroName(spellName,"getAOE")): json.set("","source",source)]
 	[iAOE = macro.return]
 }]
 

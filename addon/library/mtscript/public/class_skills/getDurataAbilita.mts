@@ -2,7 +2,7 @@
 [h: sLibAbilita = json.get(macro.args,1)]
 [h, if(argCount() > 2): bNumber = arg(2); bNumber = 0]
 
-[h: iDurata = getLibProperty("durata",sLibAbilita)]
+[h: iDurata = fetchClassSkillProp(sLibAbilita,"durata")]
 
 [h, if(isNumber(iDurata)): return(0, iDurata)]
 

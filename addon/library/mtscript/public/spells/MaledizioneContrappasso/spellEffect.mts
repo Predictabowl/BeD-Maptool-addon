@@ -3,7 +3,7 @@
 
 [h: spellName = "MaledizioneContrappasso"]
 
-[h: temp = json.set("","tipo","macroCall","macroName","spells/MaledizioneContrappasso/removeEvents@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("MaledizioneContrappasso","removeEvents"))]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set("","params",altro,"verbose",0)]
 
@@ -14,8 +14,8 @@
 
 [h, if(!bTSResult), code:{
 	[jParam = json.set("","moltiplicatore", iMolt)]
-	[eventInstaller(target,"on_Attack",spellName,"spells/MaledizioneContrappasso/onAttackCheck@lib:it.aldinucci.piero.bed.maptool.ruleset", jParam)]
-	[eventInstaller(target,"on_Spellcast_at",spellName,"spells/MaledizioneContrappasso/onSpellcastCheck@lib:it.aldinucci.piero.bed.maptool.ruleset", jParam)]
+	[eventInstaller(target,"on_Attack",spellName,buildSpellMacroName("MaledizioneContrappasso","onAttackCheck"), jParam)]
+	[eventInstaller(target,"on_Spellcast_at",spellName,buildSpellMacroName("MaledizioneContrappasso","onSpellcastCheck"), jParam)]
 }]
 
 

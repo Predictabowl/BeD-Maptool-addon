@@ -41,7 +41,7 @@ Bersaglio: [r: getName(id)]
 	[h: param = json.set(param,"mutex",mutex)]
 
 	[h: macroParam = json.set("","danno",iLP)]
-	[h: temp = json.set("","tipo","macroCall","macroName","spells/MalattiaEmorragia/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",macroParam)]
+	[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("MalattiaEmorragia","specialEffect"),"parametri",macroParam)]
 	[h: altro = json.append("",temp)]
 
 

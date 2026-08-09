@@ -10,7 +10,7 @@
     [namespace = json.get(spellName, "namespace")]
     [spellMacro = strformat("spells/%{spellId}/spellEffect@lib:%{namespace}")]
 };{
-    [spellMacro = "spells/"+spellName+"/spellEffect@this"]
+    [spellMacro = buildSpellMacroName(spellName,"spellEffect")]
 }]
 [jProcParam = json.set(macro.args, "spellMacro", spellMacro)]
 

@@ -16,7 +16,7 @@
 [h: altro = json.append("",temp)]
 [h: temp = json.set("","key","Res_Acqua","value",-1,"tipo","onceMod")]
 [h: altro = json.append(altro,temp)]
-[h: temp = json.set("","macroName","spells/FormaLavica/cleanup@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",json.set("","caster",source),"tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("FormaLavica","cleanup"),"parametri",json.set("","caster",source),"tipo","macroCall")]
 [h: altro = json.append(altro,temp)]
 [h: oEffetto = json.set("","target",source,"tipo","Magia","params",altro,"verbose",0)]
 
@@ -28,12 +28,12 @@
 [macro("core/modPVT@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(target,iPVT,spellName)]
 
 [h: addPoteriMem(source,"Lib:ColpodiFuocoElementalismo")]
-[h: addSpellMod(source, "spells/FormaLavica/costModChecker@lib:it.aldinucci.piero.bed.maptool.ruleset", "PP", 0, 0.4)]
+[h: addSpellMod(source, buildSpellMacroName("FormaLavica","costModChecker"), "PP", 0, 0.4)]
 
 <!-- Inizio generazione Aura -->
 
 [h: sNomeMacro = "powers/generalEffectAura@lib:it.aldinucci.piero.bed.maptool.ruleset"]
-[h: sMacroAura = "spells/FormaLavica/macroAura@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: sMacroAura = buildSpellMacroName("FormaLavica","macroAura")]
 [h: idAura = strformat("%s - Generatore",sNomeEff)]
 [h: expandedAura = strformat("%s - Effetto",sNomeEff)]
 

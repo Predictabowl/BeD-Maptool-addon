@@ -14,7 +14,7 @@
 	[h: oTargets = macro.return]
 
 	[h, foreach(target,oTargets), code:{
-		[macro("spells/ColtrediCenere/simpleDmgBersaglio@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,target,spellName)]
+		[macro(buildSpellMacroName("ColtrediCenere","simpleDmgBersaglio")): json.append(source,target,spellName)]
 		[sMsg = strformat("%{sMsg}%{macro.return}")]
 	}]	
 }]

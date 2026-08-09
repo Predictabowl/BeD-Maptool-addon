@@ -1,7 +1,7 @@
 [h: oToken = json.get(macro.args,0)]
 [h: sLibAbilita = json.get(macro.args,1)]
 
-[h: iPABase = getLibProperty("PA",sLibAbilita)]
+[h: iPABase = fetchClassSkillProp(sLibAbilita,"PA")]
 
 [h, if(isNumber(iPABase)): return(0, iPABase)]
 

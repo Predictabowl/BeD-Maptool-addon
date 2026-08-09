@@ -5,7 +5,7 @@
 [h: sMutex = "SPINESPIRITICHE"]
 
 [h: param = json.set("","target",target,"subito",1,"tipo","Magia","mutex",sMutex)]
-[h: temp = json.set("","macroName","spells/SpineSpiriticheMaggioriTerra/removeEvent@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("SpineSpiriticheMaggioriTerra","removeEvent"),"tipo","macroCall")]
 [h: altro = json.append("",temp)]
 [h: param = json.set(param,"params",altro,"verbose",0)]
 

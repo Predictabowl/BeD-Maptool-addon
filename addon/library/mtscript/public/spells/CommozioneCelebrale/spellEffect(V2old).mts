@@ -29,7 +29,7 @@
 
 [h: oEffetto = json.set("","target",target,"effetto",nomeEffetto,"subito",1,"tipo","Magia","verbose",0)]
 [h: macroParam = json.set("","danno",sDmg,"durata",iDurata,"effettoAux",nomeEffAux,"LL",iLL,"LP",iLP,"spellLib",spellName,"lanciatore",source,"critRes",getUltimoCritico(source),"potenzaCritico",getPCrit(source))]
-[h: temp = json.set("","tipo","macroCall","macroName","spells/CommozioneCelebrale/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",macroParam)]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("CommozioneCelebrale","specialEffect"),"parametri",macroParam)]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set(oEffetto ,"params",altro)]
 [macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto,"LL",iLL,"durata",iDurata,"bloccaTS",1)]

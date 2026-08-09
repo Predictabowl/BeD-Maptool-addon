@@ -79,7 +79,7 @@
 				[r, foreach(key, aRune, ""), code:{
 					[h: oRuna = json.get(aRune, key)]
 					[h: sLibSpell = json.get(oRuna, "libName")]
-					[h: sImg = getImage(sLibSpell)]
+					[h: sImg = fetchSpellImage(sLibSpell)]
 					<tr>
 						<td>
 							<img src="[r: sImg]" width='25' height='25'/>

@@ -1,4 +1,5 @@
 [h: sLibAbilita = arg(0)]
 
-[h, if(isAbilitaPassiva(sLibAbilita)): return(0,"PASSIVA")]
-[h: macro.return = upper(getLibProperty("tipo",sLibAbilita))]
+[h: abType = upper(fetchClassSkillProp(sLibAbilita,"tipo"))]
+[h, if(abType == ""): abType = "PASSIVA"]
+[h: macro.return = abType]

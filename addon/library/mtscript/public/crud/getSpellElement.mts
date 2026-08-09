@@ -41,7 +41,7 @@ case "SERVITORE":{
 };
 
 case "MACRO":{
-	[macro("getElemento@"+spellName): source]
+	[macro(buildSpellMacroName(spellName,"getElemento")): source]
 	[sElemento = macro.return]
 };
 

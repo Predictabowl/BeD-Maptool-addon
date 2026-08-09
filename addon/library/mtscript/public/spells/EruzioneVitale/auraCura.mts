@@ -29,7 +29,7 @@
 [iCura = macro.return]
 
 [h: oMacroParam = json.set("","auraOwner",source,"idAura",idAura)]
-[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","name",spellName,"macroName","spells/EruzioneVitale/eventAura@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oMacroParam,"event","On_Damaged","token",target)]
+[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","name",spellName,"macroName",buildSpellMacroName("EruzioneVitale","eventAura"),"macroParam",oMacroParam,"event","On_Damaged","token",target)]
 
 [if(iCura > 0), code:{
 	[macro("powers/addBersaglioColpitoAura@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,target,idAura)]

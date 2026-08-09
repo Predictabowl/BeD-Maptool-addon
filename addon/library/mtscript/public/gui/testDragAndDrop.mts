@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oToken = arg(0)]
 [h: sDialog = "DialogCambioArmi"]
 

@@ -12,6 +12,6 @@
 	[macro("core/removePVT@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(target,spellName)]
 	[macro("core/RemoveEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(target,idAura)]
 	[delPoteriMem(target,"Lib:ColpodiFuocoElementalismo")]
-	[macro("powers/delSpellMod@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append(target, "spells/FormaLavica/costModChecker@lib:it.aldinucci.piero.bed.maptool.ruleset", "PP")] 
+	[macro("powers/delSpellMod@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append(target, buildSpellMacroName("FormaLavica","costModChecker"), "PP")] 
 	[macro("gui/updatePoteri@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append("", "", "clearAll")]
 }]

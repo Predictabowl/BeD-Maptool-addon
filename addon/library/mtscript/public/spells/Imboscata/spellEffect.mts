@@ -4,7 +4,7 @@
 [h: spellName = "Imboscata"]
 
 [h: oEffetto = json.set("","moltiplicatore",1,"tipo","Nocivo")]
-[h: temp = json.set("","macroName","spells/Imboscata/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall", "parametri", json.set("", "source", source))]
+[h: temp = json.set("","macroName",buildSpellMacroName("Imboscata","specialEffect"),"tipo","macroCall", "parametri", json.set("", "source", source))]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set(oEffetto,"params",altro)]
 

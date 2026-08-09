@@ -1,7 +1,7 @@
 [h: oToken = arg(0)]
 [h: sAbilita = arg(1)]
 
-[h: sTipo = getLibProperty("tipo", sAbilita)]
+[h: sTipo = fetchClassSkillProp(sAbilita,"tipo")]
 
 [h: jMem = getDaMemoria(oToken,"AUTOCAST")]
 [h, if(json.type(jMem) != "OBJECT"): return(0,0)]

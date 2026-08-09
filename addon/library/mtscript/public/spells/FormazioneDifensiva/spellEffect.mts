@@ -4,7 +4,7 @@
 [h: spellName = "FormazioneDifensiva"]
 
 [h: oEffectParam  = json.set("","origine",source)]
-[h: temp = json.set("","macroName","spells/FormazioneDifensiva/auraEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall","parametri",oEffectParam)]
+[h: temp = json.set("","macroName",buildSpellMacroName("FormazioneDifensiva","auraEffect"),"tipo","macroCall","parametri",oEffectParam)]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set("","stato","Copertura","subito",1,"params",altro,"verbose",0)]
 

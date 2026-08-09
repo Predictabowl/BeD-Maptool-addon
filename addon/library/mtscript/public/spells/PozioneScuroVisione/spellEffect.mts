@@ -8,7 +8,7 @@
 
 [h: sVisione = getSightType(source)]
 [h: oParam = json.set("","vistaOriginale",sVisione)]
-[h: temp = json.set("","macroName","spells/PozioneScuroVisione/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall","parametri",oParam)]
+[h: temp = json.set("","macroName",buildSpellMacroName("PozioneScuroVisione","specialEffect"),"tipo","macroCall","parametri",oParam)]
 [h: altro = json.append("",temp)]
 
 [h: oEffetto = json.set("","target",source,"effetto",sNomeEff,"tipo","Utile","params",altro,"verbose",0,"categoria",sTipo,"mutex",sTipo)]

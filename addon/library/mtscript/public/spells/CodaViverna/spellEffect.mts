@@ -50,7 +50,7 @@ Bersaglio: [r: getName(target)]
 	[h: param = json.set("","target",target,"source",source,"spellToken",spellName,"critRes",critRes)]
 	[macro("powers/getSpellTSResult@lib:it.aldinucci.piero.bed.maptool.ruleset"):param]
 	[h: TSRes = macro.return]
-	[macro("spells/CodaViverna/getPoisonStack@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","target",target)]
+	[macro(buildSpellMacroName("CodaViverna","getPoisonStack")):json.set("","target",target)]
 	[h: poisonStack = macro.return]
 
 
@@ -69,7 +69,7 @@ Bersaglio: [r: getName(target)]
 	[h: param = json.set(param,"mutex",mutex)]
 
 	[h: macroParam = json.set("","iLP",iLP,"stack",poisonStack)]
-	[h: temp = json.set("","tipo","macroCall","macroName","spells/CodaViverna/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",macroParam)]
+	[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("CodaViverna","specialEffect"),"parametri",macroParam)]
 	[h: altro = json.append("",temp)]
 
 	[h: customEffect = json.set(param,"params",altro)]

@@ -1,4 +1,4 @@
-<!-- chiamando questa macro direttamente non viene terminata o interrotta l'azione -->
+<!-- DEPRECATED: chiamando questa macro direttamente non viene terminata o interrotta l'azione -->
 [h: source = json.get(macro.args,"source")]
 [h: sItemName = json.get(macro.args,"itemName")]
 [h: oUseParam = json.get(macro.args,"useParam")]
@@ -52,7 +52,7 @@
 		[oEventParam = json.set("","itemName",sItemName)]
 		[macro("events/runEvents@this"): json.set("","source",id,"target",source,"event","On_Item_Used","eventParam",oEventParam)]
 		[msgOutput = msgOutput + popMessaggio(id,"msgEventOn_Item_Used")]
-	}]
+	}]sItemMacro
 
 	[h, if(bIsAttack == 1 && bIsLegal == 1), code:{
 		<!-- il campo tipoAttacco è deprecato, ma non so se qualcuno lo usa quindi lo lascio -->

@@ -9,7 +9,7 @@
 
 [h: temp = json.set("","tipo","onceMod","key","Parare","value",9,"moltiplicabile",1)]
 [h: altro = json.append("",temp)]
-[h: temp = json.set("","tipo","macroCall","macroName","spells/ScudoCristallino/removeEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("ScudoCristallino","removeEffect"))]
 [h: altro = json.append(altro,temp)]
 [h: oEffetto = json.set(oEffetto,"params",altro,"verbose",0)]
 

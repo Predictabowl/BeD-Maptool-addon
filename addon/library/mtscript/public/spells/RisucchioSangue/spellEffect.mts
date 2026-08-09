@@ -43,11 +43,11 @@
 	[h: mutex = tipo+"_"+getName(source)]
 	[h: param = json.set(param,"mutex",mutex)]
 
-	[macro("spells/RisucchioSangue/getMultiplier@lib:it.aldinucci.piero.bed.maptool.ruleset"):id]
+	[macro(buildSpellMacroName("RisucchioSangue","getMultiplier")):id]
 	[h: moltiplicatore = macro.return]
 
 	[h: param2 = json.set("","moltiplicatore",moltiplicatore)]
-	[h: temp = json.set("","tipo","macroCall","macroName","spells/RisucchioSangue/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",param2)]
+	[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("RisucchioSangue","specialEffect"),"parametri",param2)]
 	[h: altro = json.append("",temp)]
 	[h: param = json.set(param,"params",altro)]
 	[macro("core/ApplyEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"):param]

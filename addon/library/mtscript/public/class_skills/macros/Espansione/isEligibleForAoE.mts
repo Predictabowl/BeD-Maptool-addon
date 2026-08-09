@@ -1,0 +1,10 @@
+[h: source = arg(0)]
+[h: spellName = arg(1)]
+[h: modType = arg(2)]
+
+[h, if(!isPotereSpiritico(spellName)): return (0, 0)]
+[h: oParams = json.set("", "baseValue", 1)]
+[h, if(isAoESpell(spellName, source, oParams)): return(0, 0)]
+[h: oParams = json.set(oParams, "isAoE", 0)]
+[h, if(isPersonalSpell(source,spellName, oParams)): return(0, 0)]
+[h: macro.return = 1]

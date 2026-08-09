@@ -1,7 +1,7 @@
 [h: oToken = arg(0)]
 [h: sAbilita = arg(1)]
 
-[h: sTipo = upper(getLibProperty("tipo", sAbilita))]
+[h: sTipo = upper(fetchClassSkillProp(sAbilita,"tipo"))]
 [h, if(!listContains("ATTIVA,PECULIARE", sTipo)): return(0,"")]
 
 [h: jMem = getDaMemoria(oToken,"AUTOCAST")]

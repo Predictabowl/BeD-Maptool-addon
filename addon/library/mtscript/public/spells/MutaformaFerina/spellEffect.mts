@@ -24,7 +24,7 @@
 [h: altro = json.append(altro,temp)]
 [h: temp = json.set(temp,"key","PV","value",iLL*2,"tipo","onceMod")]
 [h: altro = json.append(altro,temp)]
-[h: temp = json.set("","macroName","spells/MutaformaFerina/cleanup@lib:it.aldinucci.piero.bed.maptool.ruleset","parametri",json.set("","caster",source),"tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("MutaformaFerina","cleanup"),"parametri",json.set("","caster",source),"tipo","macroCall")]
 [h: altro = json.append(altro,temp)]
 [h: param = json.set(param,"params",altro,"verbose",0)]
 
@@ -33,4 +33,4 @@
 
 [h: pushOverride(source,"InventarioBloccato")]
 [h: pushOverride(source,"StileBloccato")]
-[h: eventInstaller(target,"on_Spellstart",spellName,"spells/MutaformaFerina/spellCheck@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(target,"on_Spellstart",spellName,buildSpellMacroName("MutaformaFerina","spellCheck"))]

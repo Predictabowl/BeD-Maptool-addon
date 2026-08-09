@@ -20,7 +20,7 @@
 
 [h: oEffetto = json.set("","target",source,"effetto",sBarriera,"durata",1,"subito",1,"tipo","Nascosto")]
 
-[h: temp = json.set("","tipo","macroCall","macroName","spells/PattoconOltretomba/effettoBarriera@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("PattoconOltretomba","effettoBarriera"))]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set(oEffetto,"params",altro,"verbose",0,"messaggi",0)]
 

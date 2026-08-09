@@ -29,7 +29,7 @@
 		[iCura = macro.return]
 		
 		[h: oMacroParam = json.set("","auraOwner",source)]
-		[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","name",spellName,"macroName","spells/SorgenteCurativa/eventAura@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oMacroParam,"event","On_Damaged","token",target)]
+		[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","name",spellName,"macroName",buildSpellMacroName("SorgenteCurativa","eventAura"),"macroParam",oMacroParam,"event","On_Damaged","token",target)]
 	}]
 
 	[h, if(iCura > 0) ,code:{

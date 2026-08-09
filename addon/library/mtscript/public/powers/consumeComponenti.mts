@@ -9,5 +9,5 @@
 [macro("powers/getSpellComponents@this"): json.append(source,spellName)]
 [h: listComponenti = macro.return]
 [h, if(listContains(listComponenti,"M")), code:{
-	[macro("spells/"+spellName+"/componenteMateriale@this"): json.set("","source",source,"consume",1)]
+	[macro(buildSpellMacroName(spellName,"componenteMateriale")): json.set("","source",source,"consume",1)]
 }]

@@ -7,6 +7,6 @@
 
 [h: spellName = "SacrificioEsplosivo"]
 
-[h: eventInstaller(source,"On_Action_End",spellName,"spells/SacrificioEsplosivo/dannoServitore@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: eventInstaller(source,"On_Action_End",spellName,buildSpellMacroName("SacrificioEsplosivo","dannoServitore"))]
 
 [h:macro.return = 1]

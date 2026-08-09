@@ -6,5 +6,5 @@
 };{
     [namespace = "it.aldinucci.piero.bed.maptool.ruleset"]
 }]
-[h: jData = data.getStaticData(namespace, "public/db/spells/comsumables.json")]
+[h: jData = data.getStaticData(namespace, "public/db/spells/consumables.json")]
 [h: macro.return = json.get(jData, spellId)]

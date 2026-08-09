@@ -8,5 +8,5 @@
 [h, if(remove == 1), code:{
 	[macro("events/eventUninstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","name",spellName,"event",sTipo,"token",target)]
 };{
-	[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","name",spellName,"event",sTipo,"token",target,"macroName","spells/AuraVampirica/eventSpell@lib:it.aldinucci.piero.bed.maptool.ruleset","macroParam",oMacroParam)]
+	[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","name",spellName,"event",sTipo,"token",target,"macroName",buildSpellMacroName("AuraVampirica","eventSpell"),"macroParam",oMacroParam)]
 }]

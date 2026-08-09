@@ -3,7 +3,7 @@
 
 [h: spellName = "MalattiaLabirintite"]
 
-[h: temp = json.set("","tipo","macroCall","macroName","spells/MalattiaLabirintite/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("MalattiaLabirintite","specialEffect"))]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set("","params",altro,"verbose",0)]
 

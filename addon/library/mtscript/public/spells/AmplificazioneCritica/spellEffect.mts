@@ -3,7 +3,7 @@
 
 [h: spellName = "AmplificazioneCritica"]
 
-[h: temp = json.set("","tipo","macroCall","macroName","spells/AmplificazioneCritica/cleanEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("AmplificazioneCritica","cleanEffect"))]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set("","params",altro,"verbose",0)]
 
@@ -12,8 +12,8 @@
 [h: bTS = json.get(macro.return,"TSResult")]
 
 [h, if(!bTS), code:{
-	[eventInstaller(target,"On_Attacked",spellName,"spells/AmplificazioneCritica/attackedEvent@lib:it.aldinucci.piero.bed.maptool.ruleset")]
-	[eventInstaller(target,"On_Spellcasted",spellName,"spells/AmplificazioneCritica/spellcastedEvent@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+	[eventInstaller(target,"On_Attacked",spellName,buildSpellMacroName("AmplificazioneCritica","attackedEvent"))]
+	[eventInstaller(target,"On_Spellcasted",spellName,buildSpellMacroName("AmplificazioneCritica","spellcastedEvent"))]
 }]
 
 

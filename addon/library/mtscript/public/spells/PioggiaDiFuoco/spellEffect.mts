@@ -9,5 +9,5 @@
 }]
 
 [h: jAuraEffectParam = json.set("", "dannoPerRound", sDanno)]
-[h: jParams = json.set("", "origine", source, "caster", source, "spellName", spellName,	"isStatic", 1, "auraEffectMacro", "spells/PioggiaDiFuoco/auraMacro@lib:it.aldinucci.piero.bed.maptool.ruleset", "effetto", jAuraEffectParam, "isTransitable", 1, "autoRoundUpdate", 1)]
+[h: jParams = json.set("", "origine", source, "caster", source, "spellName", spellName,	"isStatic", 1, "auraEffectMacro", buildSpellMacroName("PioggiaDiFuoco","auraMacro"), "effetto", jAuraEffectParam, "isTransitable", 1, "autoRoundUpdate", 1)]
 [macro("powers/auraSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): jParams]

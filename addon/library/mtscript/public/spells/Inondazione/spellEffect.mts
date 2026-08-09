@@ -3,13 +3,13 @@
 
 [h: spellName = "Inondazione"]
 
-
 [macro("powers/dmgSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spell",spellName,"danno","1d6")]
+[h: iLL = json.get(macro.return,"LL")]
 
 [h: sEffetto = "Atterrato"]
 [h: iMolt = 1]
 
-[macro("getParam"+sEffetto+"@Lib:Poteri"): json.set(macro.args,"effetto",sEffetto,"moltiplicatore",iMolt)]
+[macro("powers/getParamStatoBase@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"effetto",sEffetto,"moltiplicatore",iMolt)]
 [h: oEffetto = macro.return]
 
-[macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto,"durata",-1)]
+[macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto,"LL",iLL)]

@@ -6,7 +6,7 @@
 
 [h: param = json.set("","target",target,"stato","Copertura","subito",1,"tipo","Magia","mutex",spellName)]
 
-[h: temp = json.set("","macroName","spells/MantoDiNegazione/removeEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("MantoDiNegazione","removeEffect"),"tipo","macroCall")]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set(param,"params",altro,"verbose",0)]
 

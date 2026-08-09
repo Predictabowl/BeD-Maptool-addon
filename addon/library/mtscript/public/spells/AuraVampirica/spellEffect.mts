@@ -4,7 +4,7 @@
 [h: spellName = "AuraVampirica"]
 
 [h: oEffectParam  = json.set("","origine",source)]
-[h: temp = json.set("","macroName","spells/AuraVampirica/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall","parametri",oEffectParam)]
+[h: temp = json.set("","macroName",buildSpellMacroName("AuraVampirica","specialEffect"),"tipo","macroCall","parametri",oEffectParam)]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set("","stato","AuraOscura","subito",1,"params",altro,"verbose",0)]
 

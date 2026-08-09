@@ -2,7 +2,7 @@
 [h: target = source]
 
 [h: spellName = "ColpiPesanti"]
-[h: sMacroName = "spells/ColpiPesanti/eventMacro@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: sMacroName = buildSpellMacroName("ColpiPesanti","eventMacro")]
 
 [macro("events/isEventInstalled@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,"On_Attack",spellName)]
 [h: bCheck = macro.return]
@@ -11,6 +11,6 @@
 	[macro("events/eventInstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"):paramON]
 	[broadcast(strformat("Abilit&agrave;  Attivata"),getPlayerName())]
 };{
-	[macro("spells/ColpiPesanti/uninstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"):source]
+	[macro(buildSpellMacroName("ColpiPesanti","uninstaller")):source]
 	[broadcast("Abilit&agrave; Disattivata",getPlayerName())]
 }]

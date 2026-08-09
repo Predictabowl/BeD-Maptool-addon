@@ -6,7 +6,7 @@
 [h: sName = fetchSpellProp(spellName,"nome_decorativo")]
 
 <!-- Effetto di rimozione -->
-[h: oParamEffetto = json.set("","source",source,"tipo","macroCall","macroName","spells/RafficaLetale/removeEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: oParamEffetto = json.set("","source",source,"tipo","macroCall","macroName",buildSpellMacroName("RafficaLetale","removeEffect"))]
 [h: oParamEffetto = json.append("",oParamEffetto)]
 [h: oEffetto = json.set("","effetto",sName,"subito",1,"tipo","Fisico","params",oParamEffetto,"spellName",spellName,"stato","Maestria")]
 

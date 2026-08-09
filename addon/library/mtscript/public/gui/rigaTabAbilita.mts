@@ -16,7 +16,7 @@
 [h: bAutocast = macro.return]
 
 
-[h: sImage = getImage(sLibAbilita)]
+[h: sImage = fetchClassSkillImage(sLibAbilita)]
 [h: sFluff = strformat("<img src='%{sImage}' class='spellCastButton' title='Attiva/Disattiva Abilità'/>")]
 [h: jSCall = strformat('pulsanteAttivaAbilita(event,"%s")',sLibAbilita)]
 [h: sMacroL = strformat("<a href='#' onmouseup='%s' class='spellCast'>%{sFluff}</a>", jScall)]

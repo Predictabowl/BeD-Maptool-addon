@@ -2,7 +2,7 @@
 
 [h: spellName = "MarchioCompulsione"]
 [h: macroRemove = ""]
-[h: macroInfranto = "spells/MarchioCompulsione/macroMarchio@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: macroInfranto = buildSpellMacroName("MarchioCompulsione","macroMarchio")]
 [h: iDurata = getSpellDurata(source,spellName)]
 [h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 

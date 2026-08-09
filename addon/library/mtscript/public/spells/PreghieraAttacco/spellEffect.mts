@@ -25,7 +25,7 @@
 
 [h: oMacroParam = json.set("","target",source,"durata",iDurata,"effetto",expandedAura,"stato","Preghiera","subito",1,"potenza",0,"tipo","Nascosto","mutex","Effetto-Preghiera")]
 
-[h: temp = json.set("","macroName","spells/PreghieraAttacco/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset","tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("PreghieraAttacco","specialEffect"),"tipo","macroCall")]
 [h: altro = json.append("",temp)]
 [h: oMacroParam = json.set(oMacroParam,"params",altro,"verbose",0)]
 

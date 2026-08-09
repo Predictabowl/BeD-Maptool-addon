@@ -10,7 +10,13 @@ Right now there are duplicate names but these duplicates are all Deprecated, and
 ### Accepting Spells from other addons
 
 the macros `fetchSpellData` and `fetchConsumableData` are implemented to accept spells from other addons, but right now it won't work because the macro that launch the spell only check in it's own namespace. Maybe will be supported in the future.
-Probably `powers/iniziaSpellCast` and `powers/callSpellEffect` are the places where to implement this, as it should check the spellId and if it's a composite key (json object) should build the macro name from that.
+Macros to check:
+
+* `powers/iniziaSpellCast`
+* `powers/callSpellEffect`
+* `crud/getSpellAOE`
+
+it should check the spellId and if it's a composite key (json object) should build the macro name from that.
 
 The format should be consistent in other addons:
 `powers/spells/<spellId>/spellEffect@lib:<namespace>`

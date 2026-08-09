@@ -34,7 +34,7 @@
 		[idToken = findToken(spellName,"Librerie")]
 		[bMacro = hasMacro("getImageAsset",idToken,"Librerie")]
 		[if(bMacro), code:{
-			[macro("spells/"+spellName+"/getImageAsset@"+getMacroLocation()): json.append(source,target)]
+			[macro(buildSpellMacroName(spellName,"getImageAsset")): json.append(source,target)]
 			[sNewTokenImg = macro.return]
 		}]
 	};

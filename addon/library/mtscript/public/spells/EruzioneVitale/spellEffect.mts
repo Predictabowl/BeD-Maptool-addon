@@ -16,5 +16,5 @@
 }]
 [h: lTokens = getTokens(",",jSearchCond)]
 
-[h: jSecondParams = json.set("", "source", source, "target", lTokens, "spellName", spellName, "spellMacro", "spells/EruzioneVitale/spellEffectHeal@lib:it.aldinucci.piero.bed.maptool.ruleset", "isAttack", 0)]
+[h: jSecondParams = json.set("", "source", source, "target", lTokens, "spellName", spellName, "spellMacro", buildSpellMacroName("EruzioneVitale","spellEffectHeal"), "isAttack", 0)]
 [h, macro("powers/processSpellEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"): jSecondParams]

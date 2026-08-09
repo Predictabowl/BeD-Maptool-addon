@@ -12,4 +12,4 @@
 [Mod_Cura_In = Mod_Cura_In +0.12]
 
 [macro("powers/rigeneraVitaTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"target",target,"spell",spellName,"danno","1d2",
-	"macroEffectName","spells/SporeVitali/specialHotEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+	"macroEffectName",buildSpellMacroName("SporeVitali","specialHotEffect"))]

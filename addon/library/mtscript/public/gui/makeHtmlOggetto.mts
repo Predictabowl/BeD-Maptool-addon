@@ -26,7 +26,7 @@
 [h, foreach(sRuna, oRune), code:{
 	[oRuna = json.get(oRune,sRuna)]
 	[sLibName = json.get(oRuna,"libName")]
-	[sImgRuna = getImage(sLibName)]
+	[sImgRuna = fetchSpellImage(sLibName)]
 	[aRuneData = json.append(sImgRuna,getLibProperty("nome_decorativo",sLibName))]
 	[aRune = json.append(aRune,aRuneData)]
 }]

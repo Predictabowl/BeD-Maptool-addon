@@ -12,6 +12,7 @@
 	[macro("class_skills/getAbilitaPassiva@this"):nomeAbilita]
 	[bMacro = json.get(macro.return,"installMacro")]
 	[if(bMacro == 1), code:{
-		[macro(nomeAbilita+"@this"): json.append(source, 0, jData)]
+		[macroName = strformat("class_skills/%{nomeAbilita}@%s", getMacroLocation())]
+		[macro(macroName): json.append(source, 0, jData)]
 	}]
 }]

@@ -40,7 +40,7 @@ Bersaglio: [r: getName(id)]
 	[h: mutex = tipo+"_"+getName(source)]
 	[h: param = json.set(param,"mutex",mutex)]
 
-	[h: temp = json.set("","tipo","macroCall","macroName","spells/MalattiaPsicosi/specialEffect@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+	[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("MalattiaPsicosi","specialEffect"))]
 	[h: altro = json.append("",temp)]
 
 

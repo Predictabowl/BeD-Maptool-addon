@@ -21,13 +21,13 @@
 
 
 [h: oAuraParam = json.set("", "LP", iLP)]
-[h: jParams = json.set("", "origine", target, "caster", source, "spellName", spellName, "isStatic", 0, "auraEffectMacro", "spells/EruzioneVitale/auraCura@lib:it.aldinucci.piero.bed.maptool.ruleset", "effetto", oAuraParam, "isTransitable", 0, "autoRoundUpdate", 1)]
+[h: jParams = json.set("", "origine", target, "caster", source, "spellName", spellName, "isStatic", 0, "auraEffectMacro", buildSpellMacroName("EruzioneVitale","auraCura"), "effetto", oAuraParam, "isTransitable", 0, "autoRoundUpdate", 1)]
 [macro("powers/auraSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): jParams]
 [h: appendMessaggio(target,"msgEffetto",sDotMsg)]
 [h: return(0,"")]
 
 <!-- old code never called as replaced by the template, but left for future reference-->
-[h: sNomeMacro = "spells/EruzioneVitale/auraCura@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: sNomeMacro = buildSpellMacroName("EruzioneVitale","auraCura")]
 
 [h: iDurata = getSpellDurata(source,spellName,target)]
 [h: iAOE = getSpellAoE(source,spellName,target)]

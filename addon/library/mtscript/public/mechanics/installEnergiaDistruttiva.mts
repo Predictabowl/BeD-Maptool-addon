@@ -3,8 +3,8 @@
 
 [h: sEventName = "Energia Distruttiva"]
 [h: thisPlace = getMacroLocation()]
-[h: sAttack= "attackEDEvent@"+thisPlace]
-[h: sActionClean= "actionCleanEDEvent@"+thisPlace]
+[h: sAttack= "mechanics/attackEDEvent@"+thisPlace]
+[h: sActionClean= "mechanics/actionCleanEDEvent@"+thisPlace]
 
 <!-- l'evento On_Attack avviene dopo l'evento On_Spellcast, quindi si può usare On_Spellcast per lanciare macro prima del controllo di Energia Distruttiva -->
 

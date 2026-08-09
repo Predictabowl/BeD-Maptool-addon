@@ -6,7 +6,7 @@
 
 [h: oEffetto = json.set("","effetto",sName,"stato","Protezione","subito",1,"tipo","Magia","mutex",spellName)]
 
-[h: temp = json.set("","tipo","macroCall","macroName","spells/BarrieraVegetale/cleanUp@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("BarrieraVegetale","cleanUp"))]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set(oEffetto,"params",altro,"verbose",0)]
 [macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto)]

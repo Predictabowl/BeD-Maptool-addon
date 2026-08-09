@@ -5,7 +5,7 @@
 [h: libName = "SorgenteCurativa"]
 [h: switchToken(source)]
 
-[h: sNomeMacro = "spells/SorgenteCurativa/auraEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"]
+[h: sNomeMacro = buildSpellMacroName("SorgenteCurativa","auraEffect")]
 [h: idAura = fetchSpellProp(libName,"nome_decorativo")]
 [h: expandedAura = idAura+"-"+getName(source)]
 
@@ -26,7 +26,7 @@
 
 <!-- Parametri Aura -->
 [h: paramA = json.set("","source",source,"nomeMacro",sNomeMacro,"nomeAura",idAura,"durata",iDurata,"portata",iPortata,"AOE",iAOE,"tipo","magia","potenza",iLL,"FOF",tipoBersaglio,"tipoMov","STATIC")]
-[h: paramA = json.set(paramA,"updateMacro","spells/SorgenteCurativa/updateRoundAura@lib:it.aldinucci.piero.bed.maptool.ruleset")]
+[h: paramA = json.set(paramA,"updateMacro",buildSpellMacroName("SorgenteCurativa","updateRoundAura"))]
 
 
 
