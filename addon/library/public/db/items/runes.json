@@ -1,76 +1,76 @@
 {
     "AttaccoFulmine-1-11": {
-        "libName": "Lib:RunaAttaccoAria",
+        "libName": "RunaAttaccoAria",
         "livello": 11,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "AttaccoFulmine-2-11": {
-        "libName": "Lib:RunaAttaccoAriaMaggiore",
+        "libName": "RunaAttaccoAriaMaggiore",
         "livello": 11,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "AttaccoTerra-1": {
-        "libName": "Lib:RunaAttaccoTerra",
+        "libName": "RunaAttaccoTerra",
         "livello": 8,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "CuraFeriteGravi-10": {
-        "libName": "Lib:CuraFeriteGravi",
+        "libName": "CuraFeriteGravi",
         "livello": 10,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "Barricata-1": {
-        "libName": "Lib:Barricata",
+        "libName": "Barricata",
         "livello": 8,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "FendenteSanguinario-9": {
-        "libName": "Lib:FendenteSanguinario",
+        "libName": "FendenteSanguinario",
         "livello": 9,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "SbronzaEpica-10": {
-        "libName": "Lib:SbronzaEpica",
+        "libName": "SbronzaEpica",
         "livello": 10,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "SoffioDragoVerde-15": {
-        "libName": "Lib:SoffioDragoVerde",
+        "libName": "SoffioDragoVerde",
         "livello": 15,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "PreghieraSoffioDragoVerde-15": {
-        "libName": "Lib:SoffioDragoVerde",
+        "libName": "SoffioDragoVerde",
         "livello": 15,
         "tipo": "RUNA",
         "cariche": 1,
         "maxCariche": 1
     },
     "IncantaArma-2": {
-        "libName": "Lib:IncantaArma",
+        "libName": "IncantaArma",
         "livello": 10,
         "tipo": "RUNA",
         "cariche": 2,
         "maxCariche": 2
     },
     "ToccoCuraFeriteLeggere-9": {
-        "libName": "Lib:ToccodiCuraLeggero",
+        "libName": "ToccodiCuraLeggero",
         "livello": 9,
         "tipo": "RUNA",
         "cariche": 2,
