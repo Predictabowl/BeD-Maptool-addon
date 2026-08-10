@@ -1,6 +1,14 @@
 [h: oArgs = arg(0)]
-[h: oToken = json.get(macro.args,"token")]
+[h: oToken = json.get(oArgs,"token")]
 
+[h: oProperties = getDialogProperties("memorizzaPoteri")]
+[h: setPreferenza("larghezza",json.get(oProperties,"width"),oToken,"Dialog_Libro_Poteri")]
+[h: setPreferenza("altezza",json.get(oProperties,"height"),oToken,"Dialog_Libro_Poteri")]
+
+[h, if(json.contains(oArgs, "Annulla")), code:{
+	[closeDialog("memorizzaPoteri")]	
+	[return(0,"")]
+}]
 
 [h: broadcast(strformat("%s ha memorizzato nuovi incantesimi per %s",getPlayerName(),getName(oToken)),"gm")]
 [h, if(isCombat()), code:{
@@ -19,6 +27,6 @@
 	[if (bMemOld && !bMemNew): delPoteriMem(oToken, oInc)]	
 }]
 
-[macro("gui/updateFrameIfVisible@this"): json.append(oToken,"Poteri","gui/listaPoteriMem@this")]
+[h, macro("gui/updateFrameIfVisible@this"): json.append(oToken,"Poteri","gui/listaPoteriMem@this")]
 [h: closeDialog("memorizzaPoteri")]
 [h: macro.return = ""]

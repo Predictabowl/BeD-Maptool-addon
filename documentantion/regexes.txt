@@ -46,3 +46,8 @@ Serve una per le immagini
 getImage
 
 PreghieraIStintodiSopravvivenza
+
+
+Add id inside json
+("\w+"):\{([^\{\}]+\{[^\{\}]+\}\})
+$1:{"id":$1,$2

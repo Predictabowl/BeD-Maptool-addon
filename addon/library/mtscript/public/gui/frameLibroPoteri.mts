@@ -28,13 +28,13 @@
 
 [h: sGruppoPreferenze = "Dialog_Libro_Poteri"]
 [h: iLarg = getPreferenza("larghezza",oToken,sGruppoPreferenze)]
-[h, if(!isNumber(iLarg)): iLarg = 100]
+[h, if(!isNumber(iLarg)): iLarg = 1000]
 [h: iAltezza = getPreferenza("altezza",oToken,sGruppoPreferenze)]
-[h, if(!isNumber(iAltezza)): iAltezza = 700]
+[h, if(!isNumber(iAltezza)): iAltezza = 720]
 [h: lSize = setStrProp("","width",iLarg)]
 [h: lSize = setStrProp(lSize,"height",iAltezza)]
 
-[dialog5("memorizzaPoteri",strformat("temporary=1; %{lSize}; closebutton=0")):{
+[dialog5("memorizzaPoteri",strformat("temporary=1; %{lSize}; closebutton=0;")):{
 <html>	
 <head>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
@@ -46,7 +46,8 @@
 			[r: sTableBody]
 		</div>
 		<input type="hidden" name="token" value="[r: oToken]"/>
-		<input type="submit" value="Conferma" style="margin:5px"/>
+		<input type="submit" name="Conferma" value="Conferma" style="margin:5px"/>
+		<input type="submit" name="Annulla" value="Annulla" style="margin:5px"/>
 	</form>
 	<div style="text-align:center">
 		Memorizzati: <span id="mem-num">[r: iMemCount]</span>/[r: getProperty("Inc_Memorizzabili",oToken)]

@@ -1,7 +1,8 @@
 [h: oToken = macro.args]
 
 [h: oLibrary = getMacroLocation()]
-[h: oAllSpells = getLibMemoria(oLibrary,"LISTEINCANTESIMI")]
+[h, macro("crud/fetchSpellNamesBySchool@this"):""]
+[h: oAllSpells = macro.return]
 
 [h: lKeys = json.fields(oAllSpells)]
 [h: lKeys = listSort(lKeys,"A")]
