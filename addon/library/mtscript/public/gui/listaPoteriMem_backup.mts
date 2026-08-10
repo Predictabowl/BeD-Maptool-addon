@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oToken = arg(0)]
 [h: sFrame = "Poteri"]
 [h, if(argCount() > 1), code:{

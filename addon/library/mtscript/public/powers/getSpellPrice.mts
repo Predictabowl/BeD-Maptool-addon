@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: source = json.get(macro.args,"source")]
 [h: spellName = json.get(macro.args,"spellName")]
 [h: bOpp = json.get(macro.args,"isOpport")]

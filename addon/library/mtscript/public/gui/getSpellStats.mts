@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oToken = json.get(macro.args,0)]
 [h: spellName = json.get(macro.args,1)]
 

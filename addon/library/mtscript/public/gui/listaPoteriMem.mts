@@ -59,15 +59,15 @@
 [r, foreach(nomeLib, lPoteri, ""), CODE:{
 	[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,nomeLib)]
 	[h: oSpellData = macro.return]
-	[h: iRecupero = json.get(oSpellData, "recupero")]
-	[h, if(iRecupero > 0), code:{
+	[h: iRecuperoSpell = json.get(oSpellData, "recupero")]
+	[h, if(iRecuperoSpell > 0 && iRecuperoDurata > 0), code:{
 		[recuperoContainer = "<span class='recupero-container'>"]
-		[recuperoOverlay = strformat("<div class='recupero-overlay'>%{iRecupero}</div></span>")]
+		[recuperoOverlay = strformat("<div class='recupero-overlay'>%{iRecuperoDurata}</div></span>")]
 	};{
 		[recuperoContainer = ""]
 		[recuperoOverlay = ""]
 	}]
- <!-- Esempio di Card con i nuovi colori ottimizzati -->
+ 	<!-- Spell Card -->
     <div class="spell-card">
 		[r: recuperoContainer]
 			<input type="image" class="spell-icon-btn" title="Lancia" src='[r: json.get(oSpellData, "image")]' onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="[r: nomeLib]"/>
