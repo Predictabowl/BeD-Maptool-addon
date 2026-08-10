@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimorio - Gestione Sortilegi</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --panel-bg: #2a2a2a;
+            --accent-color: #8a2be2; /* Colore magico/viola */
+            --accent-hover: #9932cc;
+            --text-color: #f0f0f0;
+            --text-muted: #aaa;
+            --border-color: #444;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Finestra Principale / Dialog */
+        .spellbook-dialog {
+            background-color: var(--panel-bg);
+            border: 2px solid var(--accent-color);
+            border-radius: 8px;
+            width: 900px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        /* Header del Dialog */
+        .dialog-header {
+            padding: 15px 20px;
+            background-color: #222;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dialog-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        /* Tabs di Navigazione (Tutti / Conosciuti) */
+        .tabs {
+            display: flex;
+            background-color: #222;
+            padding: 0 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            color: var(--text-color);
+            border-bottom-color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* Contenitore Principale (Lista + Dettaglio) */
+        .dialog-body {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+
+        /* Colonna Sinistra: Lista dei Sortilegi */
+        .spell-list-container {
+            width: 45%;
+            border-right: 1px solid var(--border-color);
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .spell-item {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background-color: #333;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .spell-item:hover {
+            background-color: #3a3a3a;
+        }
+
+        .spell-item.selected {
+            border-left: 4px solid var(--accent-color);
+            background-color: #382c44;
+        }
+
+        .spell-name {
+            font-weight: bold;
+        }
+
+        .spell-badge {
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background-color: #444;
+            color: var(--text-muted);
+        }
+
+        .spell-badge.known {
+            background-color: #2e5c2e;
+            color: #fff;
+        }
+
+        /* Colonna Destra: Dettagli e Statistiche (Future-proof) */
+        .spell-details {
+            width: 55%;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #252525;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .details-header h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+            font-size: 1.4rem;
+        }
+
+        /* Griglia delle Statistiche (Spazio riservato per il futuro) */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+            padding: 10px;
+            background: #1f1f1f;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .stat-item span {
+            color: var(--text-color);
+            font-weight: bold;
+        }
+
+        .spell-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        /* Azioni (es. Pulsante "Lancia" o "Memorizza") */
+        .spell-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: #444;
+        }
+
+        .btn-secondary:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="spellbook-dialog">
+        <!-- Header -->
+        <div class="dialog-header">
+            <h2>Grimorio dei Sortilegi</h2>
+            <span style="color: var(--text-muted); cursor: pointer;">&times; Chiudi</span>
+        </div>
+
+        <!-- Tab di navigazione -->
+        <div class="tabs">
+            <button class="tab-btn active">Tutti i Sortilegi</button>
+            <button class="tab-btn">Conosciuti dal Personaggio</button>
+        </div>
+
+        <!-- Corpo principale -->
+        <div class="dialog-body">
+            <!-- Lista Sortilegi -->
+            <div class="spell-list-container">
+                <!-- Esempio Sortilegio 1 (Conosciuto) -->
+                <div class="spell-item selected">
+                    <div>
+                        <div class="spell-name">Dardo di Fuoco</div>
+                        <small style="color: var(--text-muted);">Evocazione • Livello 1</small>
+                    </div>
+                    <span class="spell-badge known">Conosciuto</span>
+                </div>
+
+                <!-- Esempio Sortilegio 2 (Non Conosciuto) -->
+                <div class="spell-item">
+                    <div>
+                        <div class="spell-name">Scudo Astrale</div>
+                        <small style="color: var(--text-muted);">Abiurazione • Livello 2</small>
+                    </div>
+                    <span class="spell-badge">Non noto</span>
+                </div>
+
+                <!-- Esempio Sortilegio 3 (Conosciuto) -->
+                <div class="spell-item">
+                    <div>
+                        <div class="spell-name">Luce Guida</div>
+                        <small style="color: var(--text-muted);">Divinazione • Livello 1</small>
+                    </div>
+                    <span class="spell-badge known">Conosciuto</span>
+                </div>
+            </div>
+
+            <!-- Dettagli e Statistiche (Future-proof) -->
+            <div class="spell-details">
+                <div>
+                    <div class="details-header">
+                        <h3>Dardo di Fuoco</h3>
+                        <small style="color: var(--text-muted);">Scuola di Evocazione</small>
+                    </div>
+
+                    <!-- Sezione Statistiche pronte per futuri dati -->
+                    <div class="stats-grid">
+                        <div class="stat-item">Costo Mana: <span>5</span></div>
+                        <div class="stat-item">Tempo di lancio: <span>1 Azione</span></div>
+                        <div class="stat-item">Raggio d'azione: <span>18 metri</span></div>
+                        <div class="stat-item">Durata: <span>Istantanea</span></div>
+                    </div>
+
+                    <div class="spell-description">
+                        <p><strong>Descrizione:</strong> Un piccolo frammento di fuoco condensato viene scagliato contro un bersaglio designato. Infligge danni da fuoco e può incendiare oggetti infiammabili non indossati.</p>
+                    </div>
+                </div>
+
+                <!-- Azioni future -->
+                <div class="spell-actions">
+                    <button class="btn btn-secondary">Esamina</button>
+                    <button class="btn">Lancia Sortilegio</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

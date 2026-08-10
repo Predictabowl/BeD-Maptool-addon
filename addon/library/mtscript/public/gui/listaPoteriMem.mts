@@ -11,7 +11,6 @@
 [h, if(!isNumber(bHideSpellNames)): bHideSpellNames = 0]
 [h: jOptions = json.set("", "hideNames", bHideSpellNames)]
 
-[h: sAggiornaLink = strformat("<a href='%s' class='relevantTitle' title='Clicca per aggiornare'>%s</a>",macrolinkText("gui/updatePoteri@this","none",json.append("",sFrame,"clearAll")),getName(oToken))]
 [h: sSlotVelociLink = strformat("<a href='%s'><img src='%s' class='spellCastButton' title='Slot Rapidi'/> </a>",
 	macrolinkText("gui/dialogOggettiUsabili@this","none",json.append("",oToken)), "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/quick_slots.png")]
 	
@@ -32,14 +31,20 @@
 [h: jOptions = json.set(jOptions, "recupero", iRecuperoDurata)]
 [h: lPoteri =  getPoteriMem(oToken)]
 
+
 [frame5(sFrame,strformat("value=%s", oToken)):{
 <html>
 <head> 
-		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
+		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Spells.css?cachelib=false">
 		<title> Poteri Memorizzati</title> 
 </head>
 <body align="center">
-<div>[r: sAggiornaLink]</div>
+<div>
+	<a href='[r: macrolinkText("gui/updatePoteri@this","none",json.append("",sFrame,"clearAll"))]' class='relevantTitle' title='Clicca per aggiornare'>
+		[r: getName(oToken)]
+	</a>
+</div>
 
 <!-- Form Nascosto per descrizione spell -->
 <form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
@@ -47,41 +52,66 @@
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 </form>
 
-<!-- Form pulsanti azioni -->
-[r, if(!bDefault), code:{
-	<form name="risolviAzione" method="json" action="[r:macroLinkText("gui/pulsantiPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
-	<div style="margin-left:30px; display:grid; grid-template-columns: repeat(10,auto); justify-content: space-evenly;">
-		<input type='image' class='pulsanteTondo' id='button-risolvi' name='Azione' value='Azione' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/resolve_action.png' class='image' title='Risolvi azione'/>
-		<input type='image' class='pulsanteTondo' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' class='image' title='Attacco base' id='button-attacco'/>
-		[r: sLancioLink]
-		<input type="image" class='pulsanteTondo' name='DialogAbilita' value='DialogAbilita' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' class='image' title='Abilità di Classe'/>
-		[r: sAltreAzioniLink]
-		<input type="image" class='pulsanteTondo' name='SelBersagli' value='SelBersagli' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/target_select.png' class='image' title='Auto selezione bersagli'/>
-		<input type='image' class='pulsanteTondo' name='Aspettare' value='Aspettare' src='[r: "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pass_turn.png"]' class='image' title='Aspetta' id='button-aspetta'/>
-		<input type='image' class='pulsanteTondo' name='Interrompi' value='Interrompi' src='[r: getImage("Image:PulsanteStop")]' class='image' title='Interrompi azione' id='button-interrompi'/>
-		<input type="hidden" name="target" value="[r: oToken]"/>
-		<input type="hidden" name="frameName" value="[r: sFrame]"/>
-		
-	</div>
-	</form>
-}]
-	
 <!-- Spell List Split Section -->
 [h,if(!bDefault): sSplitStyle="top:95px;"; sSplitStyle="top:45px;"]
-<div class="splitSpellList" style="[r: sSplitStyle]" id="spellList_Section">
-[h: classType="evenRow"]
-<table class="scrollBarSpace" id="tabella_poteri_mem">
-<tr class="genericTable"> <td>[r:sSlotVelociLink]</td>
-[r, if(!bHideSpellNames), code:{<th> Nome </th>};{}]
-<th> Ma </th><th> PF </th> <th> PA </th><th> Te </th>
+<div class="splitSpellList" id="spellList_Section">
+
 [r, foreach(nomeLib, lPoteri, ""), CODE:{
-	[h, if(classType=="evenRow"): classType = "oddRow"; classType = "evenRow"]
-	<tr class='[r:classType]' data-spellName='[r:nomeLib]' id='[r:nomeLib]'>
-		[h, macro("gui/makeRigaPotere@this"):json.append(oToken,nomeLib, jOptions)]
-		[r: macro.return]
-	</tr>
+	[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,nomeLib)]
+	[h: oSpellData = macro.return]
+	[h: iRecupero = json.get(oSpellData, "recupero")]
+	[h, if(iRecupero > 0), code:{
+		[recuperoContainer = "<span class='recupero-container'>"]
+		[recuperoOverlay = strformat("<div class='recupero-overlay'>%{iRecupero}</div></span>")]
+	};{
+		[recuperoContainer = ""]
+		[recuperoOverlay = ""]
+	}]
+ <!-- Esempio di Card con i nuovi colori ottimizzati -->
+    <div class="spell-card">
+		[r: recuperoContainer]
+			<input type="image" class="spell-icon-btn" title="Lancia" src='[r: json.get(oSpellData, "image")]' onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="[r: nomeLib]"/>
+		[r: recuperoOverlay]
+
+		[h: sJScriptSpell = strformat('apri_dialog_descrizione("%{nomeLib}")')]
+        <div class='spell-name-badge [r: json.get(oSpellData, "tipo")]' onclick='[r: sJScriptSpell]'>
+            [r: json.get(oSpellData, "nome")]
+        </div>
+		[h: "†"]
+        <div class="spell-stats-grid">
+            <div class="stat-box">
+                <span class="stat-label">M:</span>
+				[h: manaMant = json.get(oSpellData,"ManaMant")]
+				[h, if(manaMant>0): manaMant="†"+manaMant; manaMant=""]
+				[r: strformat("<span class='stat-value manaFont'>%s%{manaMant}</span>", json.get(oSpellData, "mana"))]
+            </div>
+            <div class="stat-box">
+				[h: pfMant = json.get(oSpellData,"PFMant")]
+				[h, if(pfMant>0): pfMant="†"+pfMant; pfMant=""]
+                <span class="stat-label">PF:</span>
+                <span class="stat-value faticaFont">[r: json.get(oSpellData, "PF")][r: pfMant]</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">TE:</span>
+                <span class="stat-value tempoFont">[r: json.get(oSpellData, "tempo")]</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PA:</span>
+                <span class="stat-value azioneFont">[r: json.get(oSpellData, "PA")]</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PP:</span>
+				[h: ppMant = json.get(oSpellData,"PPMant")]
+				[h, if(ppMant>0): ppMant="†"+ppMant; ppMant=""]
+                <span class="stat-value ppFont">[r: json.get(oSpellData, "PP")][r: ppMant]</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">MM:</span>
+                <span class="stat-value mmFont">[r: json.get(oSpellData, "MM")]</span>
+            </div>
+        </div>
+    </div>
 }]
-</table>
 
 <form id="form_table_spell" name="managePoteri" method="json" action="[r:macroLinkText("gui/spellCastingHandler@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type='hidden' name='source' value='[r:oToken]'/>
@@ -105,46 +135,10 @@
 	<input type="hidden" name="target" value="[r: oToken]"/>
 </form>
 
-<div id='count_rows_poteri'> Numero Poteri: <span style="font-weight:bold">[r:json.length(lPoteri)]</span> </div>
 
 </div>
 
-<script>
-	[r:"
-
-	function toggle_visibility(sId){
-		var elem = document.getElementById(sId);
-		if(elem.style.display == 'none')
-			elem.style.display='block';
-		else
-			elem.style.display='none';
-	}
-	
-	function toggle_visibility_name(sName){
-		var cElem = document.getElementsByName(sName);
-		var i;
-		for (i = 0; i < cElem.length; i++){
-			if(cElem[i].style.display == 'none')
-				cElem[i].style.display='block';
-			else
-				cElem[i].style.display='none';
-		}
-	}
-
-	function loadParams(elem){
-		document.getElementById('spell_Macro').setAttribute('value',elem.getAttribute('data-macro'));
-		document.getElementById('spell_SpellName').setAttribute('value',elem.getAttribute('data-spellName'));
-		document.getElementById('spell_Azione').setAttribute('value','lancio');
-		document.getElementById('form_table_spell').submit();
-	}
-	
-	function apri_dialog_descrizione(sLibName){
-		document.getElementById('input_lib_spell').setAttribute('value',sLibName);
-		document.getElementById('dialogDescrizioneForm').submit();
-	}
-
-	"]
-</script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=false" defer></script>
 </body>
 </html>
 }]

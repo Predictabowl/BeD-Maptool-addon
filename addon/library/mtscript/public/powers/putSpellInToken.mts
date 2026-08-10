@@ -22,10 +22,10 @@
 [h: spellName = json.get(json.get(aSpells,indexSpell), "nome_decorativo")]
 [h, if(iLocation == 0), code:{
 	[macro("powers/addPotereALibro@this"):json.append(oToken,spellId)]
-	[broadcast(strformat("Aggiunti l'incantesimo %{spellName} in memoria"), "gm")]
+	[broadcast(strformat("Aggiunto l'incantesimo %{spellName} new libro di %s", getName(oToken)), "gm")]
 };{
 	[addPoteriMem(oToken,spellId)]
-	[broadcast(strformat("Aggiunti l'incantesimo %{spellName} in memoria"), "gm")]
+	[broadcast(strformat("Aggiunto l'incantesimo %{spellName} in memoria di %s", getName(oToken)), "gm")]
 }]
 
 

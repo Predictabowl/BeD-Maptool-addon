@@ -1,0 +1,138 @@
+<style>
+    /* Card del Potere */
+    .spell-card {
+        display: flex;
+        align-items: center;
+        background-color: var(--bg-card, #2a2a2a);
+        border-radius: 6px;
+        padding: 6px 10px;
+        border: 1px solid #444;
+        transition: all 0.2s;
+    }
+
+    /* Bottone Icona (Lancio rapido) */
+    .spell-icon-btn {
+        width: 36px;
+        height: 36px;
+        background: #333;
+        border-radius: 4px;
+        border: 1px solid #555;
+        cursor: pointer;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.1rem;
+    }
+
+    /* Nome con il colore di categoria e hover brillante */
+    .spell-name-badge {
+        flex: 1;
+        padding: 6px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        cursor: pointer;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: filter 0.2s ease, transform 0.1s ease;
+    }
+
+    .spell-name-badge:hover {
+        filter: brightness(1.25);
+        transform: translateY(-1px);
+    }
+
+    /* I tuoi colori originali per le categorie (mantenuti intatti) */
+    .OFFENSIVO { background-color: #800000; color: white; }
+    .MUTAFORMA { background-color: #CC6600; color: white; }
+    .MARCHIO { background-color: #666666; color: white; }
+    .CONTROLLO { background-color: #008080; color: white; }
+    .MALATTIA { background-color: #666600; color: white; }
+    .MALEDIZIONE { background-color: #4700B8; color: white; }
+    .SUPPORTO { background-color: #0000FF; color: white; }
+    .SERVITORE { background-color: #008000; color: white; }
+
+    /* Classi colore risorse fornite da te */
+    .manaFont { color: #0000FF; }
+    .faticaFont { color: orange; }
+    .tempoFont { color: darkgreen; }
+    .azioneFont { color: red; }
+    .mmFont { color: purple; }
+    .ppFont { color: #b30000; }
+
+    /* Griglia delle 6 Statistiche Tattiche (Compatta a 2 righe x 3 colonne) */
+    .spell-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 2px 8px;
+        margin-left: 10px;
+        font-size: 0.75rem;
+        background: rgba(0, 0, 0, 0.2);
+        padding: 4px 6px;
+        border-radius: 4px;
+        flex-shrink: 0;
+        text-align: right;
+    }
+
+    .stat-box {
+        display: flex;
+        gap: 3px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        opacity: 0.8;
+    }
+
+    .stat-value {
+        font-weight: bold;
+    }
+</style>
+
+<!-- Esempio di Card con le 6 risorse visibili -->
+<div class="spell-card">
+    <!-- 1. Icona / Pulsante di lancio -->
+    <button class="spell-icon-btn" title="Lancia Subito">🔥</button>
+    
+    <!-- 2. Nome con colore categoria -->
+    <div class="spell-name-badge OFFENSIVO">
+        Dardo di Fuoco
+    </div>
+
+    <!-- 3. Blocco delle 6 risorse (Mana, PF, TE, PA, PP, MM) -->
+    <div class="spell-stats-grid">
+        <!-- Riga 1: Mana, Fatica(PF), Tempo(TE) -->
+        <div class="stat-box">
+            <span class="stat-label manaFont">M:</span>
+            <span class="stat-value manaFont">5</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label faticaFont">PF:</span>
+            <span class="stat-value faticaFont">1</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label tempoFont">TE:</span>
+            <span class="stat-value tempoFont">1</span>
+        </div>
+
+        <!-- Riga 2: Azioni(PA), Punti Potere(PP), Punti Movimento(MM) -->
+        <div class="stat-box">
+            <span class="stat-label azioneFont">PA:</span>
+            <span class="stat-value azioneFont">2</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label ppFont">PP:</span>
+            <span class="stat-value ppFont">1</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label mmFont">MM:</span>
+            <span class="stat-value mmFont">0</span>
+        </div>
+    </div>
+</div>

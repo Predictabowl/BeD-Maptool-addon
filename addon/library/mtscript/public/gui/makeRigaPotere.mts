@@ -19,7 +19,7 @@
 [h: imgA = fetchSpellImage(nomeLib)]
 [h: strCast = strformat("<input type='image' class='spellCastButton' src='%{imgA}' onclick='loadParams(this)'")]
 [h, if(bNames): sIconTitle = "Lancia Potere"; sIconTitle = sNome]
-[h: strCast = strformat('%{strCast} data-macro="gui/iniziaSpellCastWrapper@this" data-spellName="%{nomeLib}" title="%{sIconTitle}"/>')]
+[h: strCast = strformat('%{strCast} data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="%{nomeLib}" title="%{sIconTitle}"/>')]
 [h, if(iRecupero > 0 && bRecupero > 0): strCast = strformat("<span class='recupero-container'>%{strCast}<div class='recupero-overlay'>%d</div></span>", iRecupero)]
 [h: sSpellType = fetchSpellProp(nomeLib,"tipo")]
 

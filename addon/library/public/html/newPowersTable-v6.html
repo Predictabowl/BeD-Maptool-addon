@@ -1,0 +1,360 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/GlobalCss.css?cachelib=true">
+    <style>
+        /* --- VARIABILI DI TEMA (Dark di default, con supporto Light Mode) --- */
+        :root {
+            --bg-card: #2a2a2a;
+            --border-color: #444;
+            --text-color: #ffffff;
+            --stats-bg: rgba(0, 0, 0, 0.3);
+            --stat-label-color: #aaaaaa;
+            --font-default: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
+            --font-title: 'Gabriela', 'Dumbledor 1', 'Palatino Linotype', 'Book Antiqua', serif;
+            --font-book: 'Macondo', 'Morris Roman', 'Georgia', serif;
+            --font-spell: 'New Rocker', 'Vecna', serif;
+            --font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
+        }
+
+        .light-mode {
+            --bg-card: #f0f0f0;
+            --border-color: #cccccc;
+            --text-color: #222222;
+            --stats-bg: rgba(0, 0, 0, 0.05);
+            --stat-label-color: #666666;
+        }
+
+        body {
+            font-family: var(--font-default);
+            font-size: 18px;
+            line-height: 1.5;
+            /* Ottimizza lo spazio verticale tra le righe di testo */
+        }
+
+        /* --- CONTENITORE DELLA GRIGLIA PRINCIPALE --- */
+        .spells-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 10px;
+            max-height: 550px;
+            overflow-y: auto;
+            padding: 5px;
+        }
+
+        /* --- SINGOLA CARD DEL POTERE --- */
+        .spell-card {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-card);
+            border-radius: 6px;
+            padding: 6px 10px;
+            border: 1px solid var(--border-color);
+            gap: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .spell-card:hover {
+            border-color: #666;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        /* --- BOTTONE ICONA (Aggiornato con effetto zoom e pressione) --- */
+        .spell-icon-btn {
+            width: 32px;
+            /* Leggermente più piccolo di base come richiesto */
+            height: 32px;
+            background: #333;
+            color:white;
+            border-radius: 4px;
+            border: 1px solid #555;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1rem;
+
+            /* Gestione fluida delle animazioni di scala */
+            transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+        }
+
+        /* Quando fai hover: l'icona si ingrandisce (es. scala a 1.25) */
+        .spell-icon-btn:hover {
+            background: #3a3a3a;
+            border-color: var(--accent-color, #8a2be2);
+            transform: scale(1.25);
+        }
+
+        /* Quando premi il bottone: l'icona si rimpicciolisce simulando la pressione */
+        .spell-icon-btn:active {
+            transform: scale(0.90);
+        }
+
+        /* --- BADGE DEL NOME --- */
+        .spell-name-badge {
+            flex: 1;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            font-family: var(--font-spell);
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: filter 0.2s ease, transform 0.1s ease;
+        }
+
+        .spell-name-badge:hover {
+            filter: brightness(1.25);
+            transform: translateY(-1px);
+        }
+
+        /* --- CLASSI DI CATEGORIA (Colori fissi del manuale) --- */
+        .OFFENSIVO {
+            background-color: #800000;
+            color: white;
+        }
+
+        .MUTAFORMA {
+            background-color: #CC6600;
+            color: white;
+        }
+
+        .MARCHIO {
+            background-color: #666666;
+            color: white;
+        }
+
+        .CONTROLLO {
+            background-color: #008080;
+            color: white;
+        }
+
+        .MALATTIA {
+            background-color: #666600;
+            color: white;
+        }
+
+        .MALEDIZIONE {
+            background-color: #4700B8;
+            color: white;
+        }
+
+        .SUPPORTO {
+            background-color: #0000FF;
+            color: white;
+        }
+
+        .SERVITORE {
+            background-color: #008000;
+            color: white;
+        }
+
+        /* --- COLORI DELLE RISORSE --- */
+        .manaFont {
+            color: #4d4dff;
+            font-weight: bold;
+        }
+
+        .faticaFont {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+        .tempoFont {
+            color: #32cd32;
+            font-weight: bold;
+        }
+
+        .azioneFont {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        .mmFont {
+            color: #bf00bf;
+            font-weight: bold;
+        }
+
+        .ppFont {
+            color: #ff6666;
+            font-weight: bold;
+        }
+
+        .light-mode .manaFont {
+            color: #0000FF;
+        }
+
+        .light-mode .tempoFont {
+            color: darkgreen;
+        }
+
+        .light-mode .mmFont {
+            color: purple;
+        }
+
+/* --- GRIGLIA DELLE 6 STATISTICHE (Risolta con colonne a larghezza fissa) --- */
+        .spell-stats-grid {
+            display: grid;
+            /* Usiamo 1fr per ogni colonna così tutti gli elementi rimangono allineati verticalmente */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px 4px;
+            font-size: 0.8rem;
+            background: var(--stats-bg);
+            padding: 5px 8px;
+            border-radius: 4px;
+            text-align: left;
+            flex-shrink: 0;
+            width: 180px; /* Dà una larghezza fissa complessiva al blocco stats, stabilizzandolo */
+        }
+
+        .stat-box {
+            display: flex;
+            gap: 3px;
+            align-items: baseline;
+            justify-content: flex-start;
+            width: 100%;
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--stat-label-color);
+            font-weight: bold;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+            white-space: nowrap; /* Mantiene il valore sulla stessa riga */
+        }
+    </style>
+</head>
+
+<body class="">
+    <!-- Esempio di Card con i nuovi colori ottimizzati -->
+    <div class="spell-card">
+        <button class="spell-icon-btn" title="Lancia">⚔️</button>
+
+        <div class="spell-name-badge CONTROLLO">
+            Pugno d'Acciaio
+        </div>
+
+        <div class="spell-stats-grid">
+            <div class="stat-box">
+                <span class="stat-label">M:</span>
+                <span class="stat-value manaFont">10</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PF:</span>
+                <span class="stat-value faticaFont">2</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">TE:</span>
+                <span class="stat-value tempoFont">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PA:</span>
+                <span class="stat-value azioneFont">4</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PP:</span>
+                <span class="stat-value ppFont">3</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">MM:</span>
+                <span class="stat-value mmFont">1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Esempio di Card con le 6 risorse visibili -->
+    <div class="spell-card">
+        <!-- 1. Icona / Pulsante di lancio -->
+        <button class="spell-icon-btn" title="Lancia Subito">🔥</button>
+
+        <!-- 2. Nome con colore categoria -->
+        <div class="spell-name-badge OFFENSIVO">
+            Dardo di Fuoco
+        </div>
+
+        <!-- 3. Blocco delle 6 risorse (Mana, PF, TE, PA, PP, MM) -->
+        <div class="spell-stats-grid">
+            <!-- Riga 1: Mana, Fatica(PF), Tempo(TE) -->
+            <div class="stat-box">
+                <span class="stat-label manaFont">M:</span>
+                <span class="stat-value manaFont">5</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label faticaFont">PF:</span>
+                <span class="stat-value faticaFont">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label tempoFont">TE:</span>
+                <span class="stat-value tempoFont">1</span>
+            </div>
+
+            <!-- Riga 2: Azioni(PA), Punti Potere(PP), Punti Movimento(MM) -->
+            <div class="stat-box">
+                <span class="stat-label azioneFont">PA:</span>
+                <span class="stat-value azioneFont">2</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label ppFont">PP:</span>
+                <span class="stat-value ppFont">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label mmFont">MM:</span>
+                <span class="stat-value mmFont">0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Esempio di Card con le 6 risorse visibili -->
+    <div class="spell-card">
+        <!-- 1. Icona / Pulsante di lancio -->
+        <button class="spell-icon-btn" title="Lancia Subito">🔥</button>
+
+        <!-- 2. Nome con colore categoria -->
+        <div class="spell-name-badge OFFENSIVO">
+            Dardo di Fuoco
+        </div>
+
+        <!-- 3. Blocco delle 6 risorse (Mana, PF, TE, PA, PP, MM) -->
+        <div class="spell-stats-grid">
+            <!-- Riga 1: Mana, Fatica(PF), Tempo(TE) -->
+            <div class="stat-box">
+                <span class="stat-label manaFont">M:</span>
+                <span class="stat-value manaFont">90†20</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label faticaFont">PF:</span>
+                <span class="stat-value faticaFont">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label tempoFont">TE:</span>
+                <span class="stat-value tempoFont">1</span>
+            </div>
+
+            <!-- Riga 2: Azioni(PA), Punti Potere(PP), Punti Movimento(MM) -->
+            <div class="stat-box">
+                <span class="stat-label azioneFont">PA:</span>
+                <span class="stat-value azioneFont">2</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label ppFont">PP:</span>
+                <span class="stat-value ppFont">5§2</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label mmFont">MM:</span>
+                <span class="stat-value mmFont">0</span>
+            </div>
+        </div>
+    </div>
+</body>

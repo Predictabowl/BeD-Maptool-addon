@@ -1,0 +1,150 @@
+:root {
+    --font-default: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
+    --font-title: 'Gabriela', 'Dumbledor 1', 'Palatino Linotype', 'Book Antiqua', serif;
+    --font-book: 'Macondo', 'Morris Roman', 'Georgia', serif;
+    --font-spell: 'New Rocker', 'Vecna', serif;
+    --font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
+}
+
+body {
+    font-family: var(--font-default);
+    
+    font-size: 18px;
+    line-height: 1.5;
+    /* Ottimizza lo spazio verticale tra le righe di testo */
+}
+
+h1 {
+	font-size: 160%;
+}
+
+h2 {
+	font-size: 140%;
+}
+
+h3 {
+	font-size: 120%;
+}
+
+h4 {
+	font-size: 90%;
+}
+
+strong {
+	font-size: 110%;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover {
+	color: purple;
+}
+
+a:active {
+	color: red;
+}
+
+.relevantTitle {
+	font-family: var(--font-title);
+	font-size: 34px;
+	color: maroon;
+}
+
+a.relevantTitle:hover {
+	color: red;
+}
+
+/* --- CLASSI DI CATEGORIA (Colori fissi del manuale) --- */
+.OFFENSIVO {
+    background-color: #800000;
+    color: white;
+    text-align: left;
+}
+
+.MUTAFORMA {
+    background-color: #CC6600;
+    color: white;
+    text-align: left;
+}
+
+.MARCHIO {
+    background-color: #666666;
+    color: white;
+    text-align: left;
+}
+
+.CONTROLLO {
+    background-color: #008080;
+    color: white;
+    text-align: left;
+}
+
+.MALATTIA {
+    background-color: #666600;
+    color: white;
+    text-align: left;
+}
+
+.MALEDIZIONE {
+    background-color: #4700B8;
+    color: white;
+    text-align: left;
+}
+
+.SUPPORTO {
+    background-color: #0000FF;
+    color: white;
+    text-align: left;
+}
+
+.SERVITORE {
+    background-color: #008000;
+    color: white;
+    text-align: left;
+}
+
+/* --- COLORI DELLE RISORSE --- */
+.manaFont {
+    color: #4d4dff;
+    font-weight: bold;
+}
+
+.faticaFont {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.tempoFont {
+    color: #32cd32;
+    font-weight: bold;
+}
+
+.azioneFont {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.mmFont {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.ppFont {
+    color: #bf00bf;
+    font-weight: bold;
+}
+
+.light-mode .manaFont {
+    color: #0000FF;
+}
+
+.light-mode .tempoFont {
+    color: darkgreen;
+}
+
+.light-mode .mmFont {
+    color: purple;
+}

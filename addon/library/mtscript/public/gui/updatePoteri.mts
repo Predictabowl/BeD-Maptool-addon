@@ -3,7 +3,6 @@
 [h, if(argCount()>1): sCacheAction = arg(1); sCacheAction = ""]
 [h, if(argCount()>2): jOptions = arg(2); jOptions = ""]
 
-
 [h: oToken = json.get(getFrameProperties(sFrame), "value")]
 
 [h, switch(sCacheAction), code:

@@ -1,19 +1,8 @@
-:root {
-	--font-default: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
-	--font-title: 'Gabriela',  'Dumbledor 1', 'Palatino Linotype', 'Book Antiqua', serif;
-	--font-book: 'Macondo', 'Morris Roman', 'Georgia', serif;
-	--font-spell: 'New Rocker', 'Vecna', serif;
-	--font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
-}
-
 form {
 	text-align: center;
 }
 
-body {
-	font-family: var(--font-default);
-	font-size: 18px;
-}
+
 input {
 	font-family: var(--font-default);
 	font-size: 16px;
@@ -37,15 +26,6 @@ input.tableSize {
 	font-size: 90%;
 }
 
-.relevantTitle {
-	font-family: var(--font-title);
-	font-size: 34px;
-	color: maroon;
-}
-
-a.relevantTitle:hover {
-	color: red;
-}
 
 .sectionTitle {
 	font-family: var(--font-title);
@@ -92,26 +72,6 @@ a.sectionTitle:hover {
 select {
 	margin-left: auto;
 	margin-right: auto;
-}
-
-h1 {
-	font-size: 160%;
-}
-
-h2 {
-	font-size: 140%;
-}
-
-h3 {
-	font-size: 120%;
-}
-
-h4 {
-	font-size: 90%;
-}
-
-strong {
-	font-size: 110%;
 }
 
 table.center {
@@ -266,20 +226,6 @@ a.rimuoviLink:hover {
 
 .spellCast:active {
 	opacity: 1;
-	color: red;
-}
-
-
-a {
-	text-decoration: none;
-	color: blue;
-}
-
-a:hover {
-	color: purple;
-}
-
-a:active {
 	color: red;
 }
 
@@ -556,34 +502,6 @@ th.tabHeaderLink:active {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
-}
-
-.manaFont {
-	color: #0000FF;
-}
-
-.faticaFont {
-	color: orange;
-}
-
-.tempoFont {
-	color: darkgreen;
-}
-
-.azioneFont {
-	color: red;
-}
-
-.toxicFont {
-	color: magenta;
-}
-
-.mmFont {
-	color: purple;
-}
-
-.ppFont {
-	color: #b30000;
 }
 
 

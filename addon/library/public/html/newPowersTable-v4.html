@@ -1,0 +1,212 @@
+<style>
+    /* --- VARIABILI GLOBALI DEL TEMA SCURO (da mettere nel tuo global.css) --- */
+    :root {
+        --bg-card: #2a2a2a;
+        /* Grigio scuro */
+        --text-on-dark: #ffffff;
+        /* Bianco per testo generico */
+    }
+
+    /* --- STILE DELLA CARD (Riferimento) --- */
+    .spell-card {
+        display: flex;
+        align-items: center;
+        background-color: var(--bg-card);
+        border-radius: 6px;
+        padding: 6px 10px;
+        border: 1px solid #444;
+        margin-bottom: 8px;
+        font-family: sans-serif;
+        /* Esempio */
+    }
+
+    /* --- ADATTAMENTO COLORI RISORSE PER SFONDO SCURO --- */
+    /* Nota: Manteniamo la tonalità originale ma la rendiamo molto più brillante */
+
+    /* Blu brillante (Originale era #0000FF, troppo scuro) */
+    .manaFont {
+        color: #4d4dff;
+        font-weight: bold;
+    }
+
+    /* Giallo/Arancio brillante (Originale era orange, ok ma lo carichiamo un po') */
+    .faticaFont {
+        color: #ffcc00;
+        font-weight: bold;
+    }
+
+    /* Verde lime brillante (Originale era darkgreen, invisibile su nero) */
+    .tempoFont {
+        color: #32cd32;
+        font-weight: bold;
+    }
+
+    /* Rosso brillante (Originale era red, ok) */
+    .azioneFont {
+        color: #ff4d4d;
+        font-weight: bold;
+    }
+
+    /* Viola/Magenta brillante (Originale era purple/magenta scuro) */
+    .mmFont {
+        color: #bf00bf;
+        font-weight: bold;
+    }
+
+    /* Magenta acceso */
+
+    /* Rosso scuro (Originale era #b30000, lo schiariamo leggermente per staccarlo dal rosso azione) */
+    .ppFont {
+        color: #ff6666;
+        font-weight: bold;
+    }
+
+    /* --- MINI-GRIGLIA STATISTICHE (Aggiornata per leggibilità) --- */
+    .spell-stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 2px 10px;
+        /* Leggermente più spazio tra le colonne */
+        margin-left: auto;
+        /* Spinge le statistiche a destra */
+        font-size: 0.8rem;
+        /* Leggermente più grande */
+        background: rgba(0, 0, 0, 0.3);
+        padding: 5px 8px;
+        border-radius: 4px;
+        text-align: right;
+    }
+
+    .stat-box {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        /* Etichette leggermente più scure dei valori per gerarchia */
+        color: #aaaaaa;
+    }
+
+    .stat-value {
+        /* I valori ereditano il colore brillante della classe (es. .manaFont) */
+        font-weight: bold;
+        /* Aggiungiamo un leggerissimo bagliore al testo per staccarlo dallo sfondo */
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* --- NOME CATEGORIA (Riferimento per completezza) --- */
+    .spell-name-badge {
+        flex: 1;
+        padding: 6px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        cursor: pointer;
+        color: white;
+        /* Testo sempre bianco su sfondo colorato scuro */
+        transition: filter 0.2s;
+    }
+
+    .spell-name-badge:hover {
+        filter: brightness(1.3);
+    }
+
+    /* Classi Categoria Originali (Vanno bene così come sono) */
+    .OFFENSIVO {
+        background-color: #800000;
+    }
+
+    .MUTAFORMA {
+        background-color: #CC6600;
+    }
+
+    .CONTROLLO {
+        background-color: #008080;
+    }
+
+    /* ...altre... */
+</style>
+
+<body>
+    <!-- Esempio di Card con i nuovi colori ottimizzati -->
+    <div class="spell-card">
+        <button class="spell-icon-btn" style="color:white;" title="Lancia">⚔️</button>
+
+        <div class="spell-name-badge CONTROLLO">
+            Pugno d'Acciaio
+        </div>
+
+        <div class="spell-stats-grid">
+            <div class="stat-box">
+                <span class="stat-label">M:</span>
+                <span class="stat-value manaFont">10</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PF:</span>
+                <span class="stat-value faticaFont">2</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">TE:</span>
+                <span class="stat-value tempoFont">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PA:</span>
+                <span class="stat-value azioneFont">4</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">PP:</span>
+                <span class="stat-value ppFont">3</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">MM:</span>
+                <span class="stat-value mmFont">1</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Esempio di Card con le 6 risorse visibili -->
+    <div class="spell-card">
+        <!-- 1. Icona / Pulsante di lancio -->
+        <button class="spell-icon-btn" title="Lancia Subito">🔥</button>
+
+        <!-- 2. Nome con colore categoria -->
+        <div class="spell-name-badge OFFENSIVO">
+            Dardo di Fuoco
+        </div>
+
+        <!-- 3. Blocco delle 6 risorse (Mana, PF, TE, PA, PP, MM) -->
+        <div class="spell-stats-grid">
+            <!-- Riga 1: Mana, Fatica(PF), Tempo(TE) -->
+            <div class="stat-box">
+                <span class="stat-label manaFont">M:</span>
+                <span class="stat-value manaFont">5</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label faticaFont">PF:</span>
+                <span class="stat-value faticaFont">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label tempoFont">TE:</span>
+                <span class="stat-value tempoFont">1</span>
+            </div>
+
+            <!-- Riga 2: Azioni(PA), Punti Potere(PP), Punti Movimento(MM) -->
+            <div class="stat-box">
+                <span class="stat-label azioneFont">PA:</span>
+                <span class="stat-value azioneFont">2</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label ppFont">PP:</span>
+                <span class="stat-value ppFont">1</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label mmFont">MM:</span>
+                <span class="stat-value mmFont">0</span>
+            </div>
+        </div>
+    </div>
+</body>
