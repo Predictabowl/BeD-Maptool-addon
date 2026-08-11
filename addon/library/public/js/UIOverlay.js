@@ -71,6 +71,16 @@ function pulsanteLancio(event) {
     document.getElementById('formRisolviAzione').submit();
 }
 
+function pulsanteConsumabili(event) {
+    var elem = document.getElementById('var-input');
+    if (event.button == 2) {
+        openSubmenu(event, 'consumabili');
+    } else {
+        elem.setAttribute('value', 'Consumabili');
+        document.getElementById('formRisolviAzione').submit();
+    }
+}
+
 function toggleNecrofuria() {
     document.getElementById('necrofuria-button').classList.toggle('pActiveBorder');
     var elem = document.getElementById('var-input');

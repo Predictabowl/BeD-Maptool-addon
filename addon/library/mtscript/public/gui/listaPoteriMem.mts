@@ -13,18 +13,7 @@
 
 [h: sSlotVelociLink = strformat("<a href='%s'><img src='%s' class='spellCastButton' title='Slot Rapidi'/> </a>",
 	macrolinkText("gui/dialogOggettiUsabili@this","none",json.append("",oToken)), "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/quick_slots.png")]
-	
-[h, if(!bDefault), code:{
-	[h: sAltreAzioniLink = strformat("<a href='%s'><img src='%s' class='pulsanteTondo' title='Altre Azioni'/></a>",
-		macrolinkText("gui/showPannelloAzioni@this","none",json.append("",oToken)), "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/other_actions.png")]
-	[h, if(isArmaLancioEquipped(oToken)):
-		sLancioLink = strformat("<input type='image' class='pulsanteTondo' name='AttaccaLancio' value='AttaccaLancio' src='%s' ' class='image' title='Attacco con arma da lancio' id='button-attaccoLancio'/>","lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Throw_Icon.png");
-		sLancioLink = ""]
-	
-	[h, macro("combat/isStileDistanza@this"): oToken]
-	[h, if(macro.return): sIconaAttacco = "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Ranged_Icon.png";
-		sIconaAttacco =  "lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/Melee_Icon.png" ]
-}]
+
 
 [h, macro("powers/getDurataRecupero@this"): oToken]
 [h: iRecuperoDurata = macro.return]
@@ -35,8 +24,7 @@
 [frame5(sFrame,strformat("value=%s", oToken)):{
 <html>
 <head> 
-		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
-		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Spells.css?cachelib=false">
+		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
 		<title> Poteri Memorizzati</title> 
 </head>
 <body align="center">
@@ -53,11 +41,10 @@
 </form>
 
 <!-- Spell List Split Section -->
-[h,if(!bDefault): sSplitStyle="top:95px;"; sSplitStyle="top:45px;"]
-<div class="splitSpellList" id="spellList_Section">
+<div class="splitSpellList spells-grid-container" id="spellList_Section">
 
 [r, foreach(nomeLib, lPoteri, ""), CODE:{
-	[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,nomeLib)]
+	[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,nomeLib, jOptions)]
 	[h: oSpellData = macro.return]
 	[h: iRecuperoSpell = json.get(oSpellData, "recupero")]
 	[h, if(iRecuperoSpell > 0 && iRecuperoDurata > 0), code:{
@@ -68,7 +55,7 @@
 		[recuperoOverlay = ""]
 	}]
  	<!-- Spell Card -->
-    <div class="spell-card">
+	<div class="spell-card" draggable="true" data-id="[r: nomeLib]" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)">
 		[r: recuperoContainer]
 			<input type="image" class="spell-icon-btn" title="Lancia" src='[r: json.get(oSpellData, "image")]' onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="[r: nomeLib]"/>
 		[r: recuperoOverlay]
@@ -77,7 +64,6 @@
         <div class='spell-name-badge [r: json.get(oSpellData, "tipo")]' onclick='[r: sJScriptSpell]'>
             [r: json.get(oSpellData, "nome")]
         </div>
-		[h: "†"]
         <div class="spell-stats-grid">
             <div class="stat-box">
                 <span class="stat-label">M:</span>
@@ -110,9 +96,10 @@
                 <span class="stat-value mmFont">[r: json.get(oSpellData, "MM")]</span>
             </div>
         </div>
-    </div>
+	</div>
 }]
 
+</div>
 <form id="form_table_spell" name="managePoteri" method="json" action="[r:macroLinkText("gui/spellCastingHandler@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 	<input type='hidden' name='source' value='[r:oToken]'/>
 	<input id='spell_Azione' type='hidden' name='tipoAzione' value=''/>
@@ -122,21 +109,11 @@
 	<input type='hidden' name='frame' value='[r: sFrame]'/>
 </form>
 
-<form  name="memPoteri" method="json" action="[r:macroLinkText("gui/pulsantiGestionePoteri@"+ getMacroLocation())]" style="display:flex; flex-wrap:wrap; justify-content:center; gap:5px;">
-	<input type="submit" name="Mantieni" value="Mantieni" /> &nbsp;
-	[h: oLibro = getLibroPoteri(oToken)]
-	[h, if(json.isEmpty(oLibro)), code:{
-		[sDisabled = "disabled"]
-	};{
-		[sDisabled = ""]	
-	}]
-	<input type="submit" name="LibroPot" value="Libro" [r: sDisabled]/> &nbsp;
-	<input type="submit" name="Ordina" value="Ordina" />
-	<input type="hidden" name="target" value="[r: oToken]"/>
+<form id="saveOrderForm" action="[r: macroLinkText('gui/salvaNuovoOrdineSpells@' + getMacroLocation())]" method="POST">
+	<input type="hidden" name="tokenId" id="tokenId" value="[r: oToken]">
+	<input type="hidden" name="nuovaListaPoteri" id="nuovaListaPoteri" value="">
 </form>
 
-
-</div>
 
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=false" defer></script>
 </body>

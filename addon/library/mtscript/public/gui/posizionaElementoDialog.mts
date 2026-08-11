@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: target = json.get(macro.args,"target")]
 [h: iVecchiaPos = json.get(macro.args,"vecchiaPos")]
 [h: list =  json.get(macro.args,"lista")]

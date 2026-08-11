@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oToken = arg(0)]
 
 [h, macro("combat/getStile@this"): oToken]

@@ -1,4 +1,6 @@
 [h: oToken = arg(0)]
-[h: lPoteri = arg(1)]
+[h: aPoteri = arg(1)]
 
-[h: setProperty("Poteri_Mem",lPoteri,oToken)]
+[h, if(json.type(aPoteri) != "ARRAY"): aPoteri = json.fromList(aPoteri)]
+
+[h: setProperty("Poteri_Mem",aPoteri,oToken)aPoteri = json.fromList(aPoteri)]

@@ -7,6 +7,7 @@
 [h: iMemCount = 0]
 [h: sTableBody = ""]
 [h: iIndex = 0]
+
 [h, foreach(oInc, oListaPot), code:{
 	[sJScriptSpell = strformat('apri_dialog_descrizione("%{oInc}")')]
 	[sNameInc = fetchSpellProp(oInc,"nome_decorativo")]
@@ -37,14 +38,64 @@
 [dialog5("memorizzaPoteri",strformat("temporary=1; %{lSize}; closebutton=0;")):{
 <html>	
 <head>
-	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
-	<title>Libro Poteri</title>
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
+	<title>Grimorio Incantesimi</title>
 </head>
 <body>
+	<h2>Grimorio degli Incantesimi</h2>
+
 	<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
-		<div class="vertical-grid">
-			[r: sTableBody]
-		</div>
+
+		<div class="grimoire-grid-container">
+		[r, foreach(oInc, oListaPot, ""), code:{
+			[h: sJScriptSpell = strformat('apri_dialog_descrizione("%{oInc}")')]
+			[h: sNameInc = fetchSpellProp(oInc,"nome_decorativo")]
+			[h: sSpellType = fetchSpellProp(oInc,"tipo")]
+			[h, if(json.contains(oMemList,oInc)), code:{
+				[sMem = "checked"]
+				[iMemCount = iMemCount +1]
+				[cssMemClass = "memorized"]
+			};{
+				[sMem = ""]
+				[cssMemClass = ""]
+			}]
+
+			<div class="grimoire-card [r: cssMemClass]" onclick="toggleCardCheckbox(this)">
+                <input type="checkbox" name="memorizzati" [r: sMem] class="grimoire-checkbox"
+                    onclick="event.stopPropagation(); toggleCheckboxDirect(this)" value="[r: oInc]">
+
+                <div class="spell-name-badge [r: sSpellType]">[r: sNameInc]</div>
+
+                <div class="spell-stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">M:</span>
+                        <span class="stat-value manaFont">5</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">PF:</span>
+                        <span class="stat-value faticaFont">1</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">TE:</span>
+                        <span class="stat-value tempoFont">1</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">PA:</span>
+                        <span class="stat-value azioneFont">2</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">PP:</span>
+                        <span class="stat-value ppFont">1</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">MM:</span>
+                        <span class="stat-value mmFont">0</span>
+                    </div>
+                </div>
+            </div>
+			[h: iIndex = iIndex+1]
+		}]
+
 		<input type="hidden" name="token" value="[r: oToken]"/>
 		<input type="submit" name="Conferma" value="Conferma" style="margin:5px"/>
 		<input type="submit" name="Annulla" value="Annulla" style="margin:5px"/>
@@ -59,26 +110,7 @@
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 	</form>
 
-	<script>
-		[r:"
-			function clickBox(iNum){
-				var box = document.getElementById('checkbox-'+iNum);
-				var domCount = document.getElementById('mem-num');
-				var iValue = parseInt(domCount.innerHTML);
-				if (box.checked){
-					iValue++;
-				} else {
-					iValue--;
-				}
-				domCount.innerHTML = iValue;
-			}
-
-			function apri_dialog_descrizione(sLibName){
-				document.getElementById('input_lib_spell').setAttribute('value',sLibName);
-				document.getElementById('dialogDescrizioneForm').submit();
-			}
-		"]
-	</script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/libroIncantesimi.js?cachelib=false" defer></script>
 </body>
 </html>
 }]

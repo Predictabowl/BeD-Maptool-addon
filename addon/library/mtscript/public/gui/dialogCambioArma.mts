@@ -88,33 +88,21 @@
 
 [h, if(isCombat()): sDisplayEquip = "none"; sDisplayEquip = "block"]
 
+[h, macro("combat/getStile@this"): oToken]
+[h: sStileOld = macro.return]
+
+[h, macro("combat/getStileList@this"):0]
+[h: sListaStili = macro.return]
+
 
 [dialog5(sDialog, strformat("temporary=1; width=640; height=745; closebutton=0; noframe=1;")):{
 <html>
 
 <head> 
-	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Paperdoll.css?cachelib=false">
 	<title>Equipaggiamento</title>
-	<style>[r:'
-		.tooltipBox {
-			position: absolute;
-			display:inline-block;
-			font-family: var(--font-spell);
-			font-weight:bold;
-			font-size: 0.875em;
-			position: absolute;
-			color: white;
-			background-color: black;
-			padding: 5px;
-			border-radius: 6px;
-			opacity: 0.9;
-		}
-		
-		.hiddenBox {
-			display:none;
-		}
-		']
-	</style>
+	
 </head>
 <body align="center">
 	<div class="relevantTitle"> [r: getName(oToken)] </div>
@@ -141,8 +129,17 @@
 
 	<!--SLOT RAPIDI -->
 		<div style="width:max-content; height: max-content;">
-			[macro("gui/makeStiliInputList@this"): oToken]
-			<div class="titleFont" style="margin-bottom:5px; background-color:black; color:orangered; border: 1px solid orangered;">
+			<div class='div-stile' onclick='toggle_show_list();' style='cursor:grabbing;' id='currentStyleId' data-stile='[r: sStileOld]'>
+				[r: sStileOld]
+			</div>
+			<div id='dropdown-list' onclick='toggle_show_list();' class='div-list-window' style='display:none; margin-left:auto; margin-right:auto; left:390; right:60;'>
+			[r, foreach(sStileComb, sListaStili, ""), code:{
+				[h: sLink = macroLinkText("gui/changeStileFromDialog@lib:it.aldinucci.piero.bed.maptool.ruleset","none",json.append(oToken,sStileComb))]
+				<a href='[r: sLink]'><div class='div-list-item titleFont'>[r: sStileComb]</div></a>
+			}]
+			</div>
+			
+			<div class="quickWeaponTitle">
 				Armi Rapide
 			</div>
 			<div style="background-color:#FFECE6; box-shadow: inset 0px 0px 20px 5px orangered;">
@@ -153,16 +150,12 @@
 		</div>
 		
 	<!-- DESCRIZIONE -->
-		<div id="box-descrizione-oggetto" class="itemInfo"
-				style="width:280px; height:206px; border:1px solid black;
-				padding-top: 5px; padding-bottom:5px; padding-left: 10px; padding-right: 10px; 
-				overflow-y:scroll; grid-row: 3;">
+		<div id="box-descrizione-oggetto" class="boxDescrizione">
 			<form id="linkInChatFormId" method="json" action="[r:macroLinkText("gui/linkOggettoInChat@lib:it.aldinucci.piero.bed.maptool.ruleset")]" style="margin:0px;">
 				<input type="hidden" name="itemId" value="" id="linkItemInputId">
 				<input type="hidden" name="token" value="[r: oToken]">
 			</form>
-			<div id="nomeOggetto" class="spellFont" style="font-size:120%; text-align:center; color:red; font-weight:bold; margin-bottom:5px; cursor:pointer;"
-				onclick="jsFormSubmit('linkInChatFormId')"></div>
+			<div id="nomeOggetto" class="itemName" onclick="jsFormSubmit('linkInChatFormId')"></div>
 			<div id="datiArma" style="display:none; margin:0; padding:0;">
 				<div style="border-bottom:1px solid; padding-bottom:0; margin-bottom:3px;">
 					<div style="display:inline-grid; grid-template-columns: auto auto; justify-content: space-between; width:95%; padding:0; margin:0;">
@@ -192,16 +185,16 @@
 		
 	<!-- EQUIPAGGIAMENTO-->
 		<div id="listaOggetti" style="display: [r: sDisplayEquip]; width:max-content; height: 410px; grid-column: 2; grid-row: 2/ span 2;">
-			<div class="titleFont" style="margin-bottom:5px; background-color:black; color:gold; border: 1px solid gold;">Equipaggiamento</div>
+			<div class="inventoryTitle">Equipaggiamento</div>
 			<div style="background-color:lightyellow; box-shadow: inset 0px 0px 30px 5px gold;">
 				<div class="inventory-container" data-categoria="inventario" ondrop='drop(event)' ondragover='allowDrop(event)' ondragenter='dragEnter(event)' ondragleave='dragLeave(event)' style="width:276px; height:348px;">
 					[r, macro("gui/makeHtmlEquip@this"): oToken]
 				</div>
 			</div>
-			<div class="titleFont" style="margin-bottom:5px; background-color:black; color:lightblue; border: 1px solid lightblue;">
+			<div class="ingombroTitle">
 				Ingombro: <span id="carico-corrente">[r: getIngombroTotale(oToken)]</span>/<span id="carico-max">[r:getCarico(oToken)]</span>
 			</div>
-			<div class="titleFont" style="margin-bottom:0px; background-color:black; color:orchid; border: 1px solid orchid;">
+			<div class="addArmatureTitle">
 				Addestramento Armature: [r: iAddArmatura]
 			</div>
 		</div>
@@ -231,7 +224,7 @@
 	</div>
 	<meta id="dataNode" data-dueMani="[r:b2Mani]" data-addestramento="[r: iAddArmatura]">
 	<div id="tooltipBox" class="hiddenBox">Test</div>
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/inventarioArmi.js?cachelib=true"></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/inventarioArmi.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

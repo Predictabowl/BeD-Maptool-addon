@@ -3,18 +3,8 @@ form {
 }
 
 
-input {
-	font-family: var(--font-default);
-	font-size: 16px;
-}
-
 table {
 	font-size: 18px;
-}
-
-button {
-	font-family: var(--font-default);
-	font-size: 16px;
 }
 
 input.tableSize {
@@ -568,51 +558,6 @@ th.tabHeaderLink:active {
 	color: white;
 }
 
-.paperdoll-container {
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
-	justify-content: space-between;
-
-}
-
-.paperdoll-item {
-	width: 52px;
-	height: 52px;
-	padding: 2px;
-	margin: 4px;
-	border: 1px solid white;
-	color: white;
-	font-size: 12px;
-}
-
-.paperdoll-item:hover {
-	border: 1px solid blue;
-}
-
-.drag-paperdoll-item {
-	border: 1px solid green;
-	background-color: rgba(0, 128, 0, 0.6);
-}
-
-.nodrag-paperdoll-item {
-	border: 1px solid red;
-	background-color: rgba(255, 0, 0, 0.6);
-}
-
-.inventory-container {
-	display: grid;
-	grid-template-columns: repeat(5, auto);
-	grid-column-gap: 4px;
-	grid-row-gap: 4px;
-	justify-content: start;
-	align-content: start;
-	border: 1px solid black;
-	padding: 5px;
-	overflow-y: scroll;
-}
-
 .itemInfo {
 	font-family: var(--font-default);
 	font-size: 16px;
@@ -634,43 +579,6 @@ th.tabHeaderLink:active {
 	border: 1px solid blue;
 	background-color: cyan;
 }
-
-.div-stile {
-	background-color: black;
-	color: palegreen;
-	border: 1px solid palegreen;
-}
-
-.div-stile:hover {
-	background-color: palegreen;
-	color: black;
-	border: 1px solid black;
-}
-
-.div-stile:active {
-	background-color: lightgreen;
-	color: black;
-	border: 1px solid black;
-}
-
-.div-list-window {
-	border: 1px solid black;
-	position: absolute;
-	background-color: white;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.div-list-item {
-	background-color: white;
-	color: black;
-}
-
-.div-list-item:hover {
-	background-color: black;
-	color: palegreen;
-}
-
 
 .vertical-grid {
 	/*justify-content:center;*/

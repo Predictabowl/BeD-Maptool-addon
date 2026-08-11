@@ -100,6 +100,9 @@
 					<a title='Abilità / Apri Menu' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]">
 						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' />
 					</a>
+					<a type='image' title='Consumabili / Apri Menu' onmouseup="pulsanteConsumabili(event)">
+						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/medieval-magic-theme-backpack_2661820.png' />
+					</a>
 					[r: sScegliMotivoLink]
 					[r: sNecrofuriaLink]
 					[r: sSovSpiLink]
@@ -122,8 +125,13 @@
 			<template id="submenu-poteri">
 				<a onclick="scegliEvento(event,'AbilitaClasse')">Abilità di Classe</a>
 				<a onmouseup="scegliEvento(event,'PoteriClasse')">Incantesimi e Poteri</a>
-				<a onmouseup="scegliEvento(event,'Sortilegi')">Sortilegi</a>
 				<a onmouseup="scegliEvento(event,'LibroIncantesimi')" style="display:[r:showBook];">Libro Incantesimi</a>
+				<a onmouseup="scegliEvento(event,'Sortilegi')">Sortilegi</a>
+				<a onmouseup="scegliEvento(event,'Mantenimenti')">Mantenimenti</a>
+			</template>
+			<template id="submenu-consumabili">
+				<a onmouseup="scegliEvento(event,'Consumabili')">Consumabili</a>
+				<a onmouseup="scegliEvento(event,'Equipaggiamento')">Equipaggiamento</a>
 			</template>
 			<template id="submenu-bersaglio">
 				<a onclick="scegliEvento(event,'SelBersagli')">Autoseleziona bersagli</a>
@@ -141,7 +149,7 @@
 	</form>
 	}]
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=false" defer></script>
 	</body>
 	</html>
 }]

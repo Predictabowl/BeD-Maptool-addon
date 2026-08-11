@@ -1,3 +1,5 @@
+<!-- DEPRECATED -->
+
 [h: target = json.get(macro.args,"target")]
 [h: iVecchiaPos = json.get(macro.args,"vecchiaPos")-1]
 [h: iNuovaPos = json.get(macro.args,"nuovaPos")-1]

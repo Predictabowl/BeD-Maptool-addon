@@ -131,5 +131,11 @@
 			[macro("gui/frameLibroPoteri@this"): target]
 		}]
 	};
+	case "Consumabili": {
+		[macro("gui/dialogOggettiUsabili@this"): target]
+	};
+	case "Mantenimenti": {
+		[macro("gui/dialogMantenimenti@this"): target]
+	};
 	default :{}
 ]

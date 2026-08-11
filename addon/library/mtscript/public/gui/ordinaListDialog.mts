@@ -1,3 +1,4 @@
+<-- DEPRECATED -->
 [h, if(json.type(macro.args) == "OBJECT"), code:{
 	[target = json.get(macro.args,"target")]
 	[list = json.get(macro.args,"lista")]

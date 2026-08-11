@@ -1,3 +1,4 @@
+<!-- DEPRECATED? -->
 [h: target = json.get(macro.args,"target")]
 
 [h, if(json.contains(macro.args,"Ordina")), code:{

@@ -1,0 +1,162 @@
+.tooltipBox {
+    position: absolute;
+    display: inline-block;
+    font-family: var(--font-spell);
+    font-weight: bold;
+    font-size: 0.875em;
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 6px;
+    opacity: 0.9;
+}
+
+.hiddenBox {
+    display: none;
+}
+
+.boxDescrizione {
+    font-family: var(--font-default);
+    font-size: 16px;
+    text-align: left;
+    background-color: white;
+    box-shadow: inset 0px 0px 30px 5px silver;
+    width: 280px;
+    height: 206px;
+    border: 1px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: scroll;
+    grid-row: 3;
+}
+
+.itemName {
+    font-family: var(--font-spell);
+    font-size: 120%;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.paperdoll-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: space-between;
+
+}
+
+.paperdoll-item {
+    width: 52px;
+    height: 52px;
+    padding: 2px;
+    margin: 4px;
+    border: 1px solid white;
+    color: white;
+    font-size: 12px;
+}
+
+.paperdoll-item:hover {
+    border: 1px solid blue;
+}
+
+.drag-paperdoll-item {
+    border: 1px solid green;
+    background-color: rgba(0, 128, 0, 0.6);
+}
+
+.nodrag-paperdoll-item {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.inventory-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    justify-content: start;
+    align-content: start;
+    border: 1px solid black;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+.quickWeaponTitle {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    background-color: black;
+    color: orangered;
+    border: 1px solid orangered;
+}
+
+.inventoryTitle {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    background-color: black;
+    color: gold;
+    border: 1px solid gold;
+}
+
+.ingombroTitle {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    background-color: black;
+    color: lightblue;
+    border: 1px solid lightblue;
+}
+
+.addArmatureTitle {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+    margin-bottom: 0px;
+    background-color: black;
+    color: orchid;
+    border: 1px solid orchid;
+}
+
+.div-stile {
+    font-family: var(--font-title);
+    font-size: 0.9rem;
+	background-color: black;
+	color: palegreen;
+	border: 1px solid palegreen;
+}
+
+.div-stile:hover {
+	background-color: palegreen;
+	color: black;
+	border: 1px solid black;
+}
+
+.div-stile:active {
+	background-color: lightgreen;
+	color: black;
+	border: 1px solid black;
+}
+
+.div-list-window {
+	border: 1px solid black;
+	position: absolute;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.div-list-item {
+	background-color: white;
+	color: black;
+}
+
+.div-list-item:hover {
+	background-color: black;
+	color: palegreen;
+}

@@ -57,6 +57,17 @@ a.relevantTitle:hover {
 	color: red;
 }
 
+button {
+	font-family: var(--font-default);
+	font-size: 16px;
+}
+
+input {
+	font-family: var(--font-default);
+	font-size: 16px;
+}
+
+
 /* --- CLASSI DI CATEGORIA (Colori fissi del manuale) --- */
 .OFFENSIVO {
     background-color: #800000;
