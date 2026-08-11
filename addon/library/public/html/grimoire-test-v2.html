@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --bg-card: #2a2a2a;
+            --border-color: #444;
+            --text-color: #ffffff;
+            --accent-color: #8a2be2;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: var(--text-color);
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .grimoire-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .grimoire-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        /* --- STILE PER LA BARRA DEI CONTROLLI (Conferma, Annulla, Contatore) --- */
+        .grimoire-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Spinge a sinistra i pulsanti e a destra il contatore */
+            gap: 15px;
+            padding: 5px 2px;
+        }
+
+        /* Gruppo pulsanti a sinistra */
+        .grimoire-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Stile dei pulsanti */
+        .btn {
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            padding: 6px 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-confirm:hover {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .btn-cancel:hover {
+            background: #444;
+            border-color: #777;
+        }
+
+        /* Stile del contatore a destra */
+        .grimoire-counter {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="tua_macro_salva" method="POST">
+        <!-- Griglia degli incantesimi -->
+        <div class="grimoire-grid-container">
+            <div class="grimoire-card">Incantesimo 1</div>
+            <div class="grimoire-card">Incantesimo 2</div>
+            <div class="grimoire-card">Incantesimo 3</div>
+        </div>
+
+        <!-- Sezione inferiore: il posto ideale per pulsanti e contatore -->
+        <div class="grimoire-footer">
+            <!-- Pulsanti di azione -->
+            <div class="grimoire-actions">
+                <button type="submit" class="btn btn-confirm">Conferma</button>
+                <button type="button" class="btn btn-cancel">Annulla</button>
+            </div>
+
+            <!-- Indicatore numerico -->
+            <div class="grimoire-counter">
+                Memorizzati: <span id="mem-num">3</span> / 5
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

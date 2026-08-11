@@ -19,10 +19,13 @@
 
 [h: oListaPot = getLibroPoteri(oToken)]
 [h: oMemList = getPoteriMem(oToken)]
+[h: broadcast(oArgs)]
+[h: broadcast(oListaPot)]
+[h: broadcast(oMemList)]
 
 [h, foreach(oInc, oListaPot), code:{
 	[bMemOld = json.contains(oMemList,oInc)]
-	[bMemNew = json.contains(oArgs, oInc)]
+	[bMemNew = json.get(oArgs, oInc)]
 	[if (!bMemOld && bMemNew): addPoteriMem(oToken, oInc)]
 	[if (bMemOld && !bMemNew): delPoteriMem(oToken, oInc)]	
 }]

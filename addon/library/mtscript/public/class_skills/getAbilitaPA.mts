@@ -6,4 +6,5 @@
 [h, if(isNumber(iPABase)): return(0, iPABase)]
 
 [h: sCallback = json.get(iPABase, "callback")]
-[h, macro(sCallback + "@Lib:AbilitaClasse"): json.append(oToken, sLibAbilita, "PA")]
+[h: macroName = strformat("class_skills/%{sCallback}@this")]
+[h, macro(macroName): json.append(oToken, sLibAbilita, "PA")]

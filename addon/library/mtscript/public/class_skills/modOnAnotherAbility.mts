@@ -1,4 +1,3 @@
-<!-- TODO questa cambia il costo delle abilità, ma non so se è utilizzata ancora -->
 [h: oToken = arg(0)]
 [h: sLibAbilita = arg(1)]
 [h: sTipoCosto = arg(2)]
