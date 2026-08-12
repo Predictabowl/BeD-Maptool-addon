@@ -1,11 +1,3 @@
-:root {
-	--font-default: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
-	--font-title: 'Yeseva One', 'Dumbledor 1', 'Palatino Linotype', 'Book Antiqua', serif;
-	--font-spell: 'New Rocker', 'Vecna', serif;
-	--font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
-	--font-book: 'Macondo', 'Morris Roman', 'Georgia', serif;
-}
-
 a {
   text-decoration: none;
   color: blue;

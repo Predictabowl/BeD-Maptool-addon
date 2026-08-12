@@ -1,3 +1,4 @@
+<!-- Deprecated -->
 [h: target = macro.args]
 
 [macro("gui/blockIfNotOwner@this"):target]

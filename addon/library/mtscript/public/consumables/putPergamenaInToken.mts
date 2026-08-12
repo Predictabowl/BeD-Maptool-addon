@@ -1,27 +1,24 @@
 [h: oToken = macro.args]
 
-[h: oLibrary = "Lib:Poteri"]
-[h: oAllSpells = getLibMemoria(oLibrary,"LISTEINCANTESIMI")]
+[h, macro("crud/fetchSpellSchools@this"):""]
+[h: lSchools  = listSort(json.toList(macro.return), "A")]
 
-[h: lKeys = json.fields(oAllSpells)]
-[h: lKeys = listSort(lKeys,"A")]
-
-[h: bCheck = input(strformat("sScuola|%{lKeys}|Scegli il tipo|LIST|value=string"))]
+[h: bCheck = input(strformat("sScuola|%{lSchools}|Scegli Scuola|LIST|value=string"))]
 [h: assert(bCheck,"Abortito")]
-[h: sScuola = upper(sScuola)]
 
+[macro("crud/fetchSpellsBySchool@this"): sScuola]
+[h: aSpells = macro.return]
 [h: lSpellFluff = ""]
-[h: lSpellList = json.get(oAllSpells,sScuola)]
-[h, foreach(spellName,lSpellList), code:{
-	[sFluff = fetchSpellProp(spellName,"nome_decorativo")]
+[h, foreach(spell,aSpells), code:{
+	[sFluff = json.get(spell, "nome_decorativo")]
 	[lSpellFluff = listAppend(lSpellFluff,sFluff)]
 }]
 
 
-[bCheck = input(strformat("iSpellName|%{lSpellFluff}|Pozione|LIST"),"iLiv|1| Livello")]
-[assert(bCheck,"Abortito")]	
-[spellName = json.get(lSpellList,iSpellName)]
-[oObj = json.set("","libName",spellName,"livello",iLiv)]
-[switchToken(oToken)]
-[Consumabili = json.append(Consumabili,oObj)]
+[h: bCheck = input(strformat("indexSpell|%{lSpellFluff}|Pergamena|LIST"),"iLiv|1| Livello")]
+[h: assert(bCheck,"Abortito")]	
+[h: spellId = json.get(json.get(aSpells,indexSpell), "id")]
+[h: oObj = json.set("","libName",spellId,"livello",iLiv)]
+[h: switchToken(oToken)]
+[h: Consumabili = json.append(Consumabili,oObj)]
 

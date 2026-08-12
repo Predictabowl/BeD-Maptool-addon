@@ -49,7 +49,7 @@ a:active {
 
 .relevantTitle {
 	font-family: var(--font-title);
-	font-size: 34px;
+	font-size: 30px;
 	color: maroon;
 }
 
@@ -144,7 +144,7 @@ input {
 }
 
 .ppFont {
-    color: #bf00bf;
+    color: #D100D1;
     font-weight: bold;
 }
 

@@ -84,7 +84,7 @@
         "id": "PozioneArmaturaMaggiore",
         "descrizione": "Offre un bonus di +3 LD di tipo Armatura.",
         "image": "inv_alchemy_potion_03.png",
-        "nome_decorativo": "Armatura",
+        "nome_decorativo": "Armatura Maggiore",
         "properties": {
             "area": "0",
             "cariche_base": "",

@@ -1,3 +1,4 @@
+<!-- TODO review this function -->
 [h: oToken = json.get(macro.args,0)]
 [h: sRuna = json.get(macro.args,1)]
 

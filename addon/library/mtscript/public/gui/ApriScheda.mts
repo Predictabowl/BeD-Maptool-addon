@@ -83,7 +83,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]<!-- ?cachelib=false-->
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
 	<title> Scheda </title>
 </head>
 <body class="dataCentered">

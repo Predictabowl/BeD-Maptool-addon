@@ -25,8 +25,7 @@ case "VOLONTA":{
 
 [h: roll = 1d20]
 [h: str = "1d20 (" + roll + ") + "]
-[macro("powers/getResistance@this"): json.append(target,element)]
-[h: mod = mod + macro.return]
+[h: mod = mod + getResistance(json.set("","target",target,"elemento",element))]
 [h: ts = roll + mod]
 [h: str = str + mod + " = <b>" +ts+"</b>"]
 

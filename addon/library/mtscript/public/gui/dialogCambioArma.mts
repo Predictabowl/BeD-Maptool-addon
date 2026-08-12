@@ -100,7 +100,7 @@
 
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Paperdoll.css?cachelib=false">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Paperdoll.css?cachelib=true">
 	<title>Equipaggiamento</title>
 	
 </head>

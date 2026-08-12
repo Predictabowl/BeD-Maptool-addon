@@ -107,7 +107,7 @@
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 	</form>
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=false" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

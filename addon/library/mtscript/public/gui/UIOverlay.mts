@@ -78,7 +78,7 @@
 	<html>
 	<head>
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
-		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/UIOverlay.css?cachelib=false">
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/UIOverlay.css?cachelib=true">
 	</head>
 	<body>
 	<div>
@@ -149,7 +149,7 @@
 	</form>
 	}]
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=false" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=true" defer></script>
 	</body>
 	</html>
 }]
