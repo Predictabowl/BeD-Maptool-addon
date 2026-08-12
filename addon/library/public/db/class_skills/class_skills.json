@@ -13,7 +13,7 @@
             "pa": "1",
             "pf_base": "0",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -27,12 +27,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "8",
             "pf_liv": "-2",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -46,12 +46,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "8",
             "pf_liv": "-3",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -65,12 +65,12 @@
             "durata": "Colpo Singolo",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "2",
             "pf_base": "13",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -89,7 +89,7 @@
             "pa": "0",
             "pf_base": "14",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -108,7 +108,7 @@
             "pa": "0",
             "pf_base": "0",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "EROICA"
         }
@@ -122,12 +122,12 @@
             "durata": "5",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "2",
             "pf_base": "0",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -141,12 +141,12 @@
             "durata": "3",
             "estenuante": "",
             "eventi": "On_Dodge,On_Block",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "1",
             "pf_base": "31",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -165,7 +165,7 @@
             "pa": "1",
             "pf_base": "12",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -179,12 +179,12 @@
             "durata": "Termine Round",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "8",
             "pf_liv": "-2",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -198,12 +198,12 @@
             "durata": "4",
             "estenuante": "",
             "eventi": "On_Attack",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "30",
             "pf_liv": "-5",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -217,12 +217,12 @@
             "durata": "Colpo Singolo",
             "estenuante": "",
             "eventi": "On_Opportunita",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "2",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -236,12 +236,12 @@
             "durata": "Colpo Singolo",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "2",
             "pf_base": "21",
             "pf_liv": "-3",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -260,7 +260,7 @@
             "pa": "0",
             "pf_base": "6",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -279,7 +279,7 @@
             "pa": "1",
             "pf_base": "27",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -293,7 +293,7 @@
             "durata": "5",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
+            "mana": "0",
             "mm": "0",
             "pa": "2",
             "pf_base": "0",
@@ -312,12 +312,12 @@
             "durata": "3",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "31",
             "pf_liv": "-5",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -336,7 +336,7 @@
             "pa": "1",
             "pf_base": "31",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -350,12 +350,12 @@
             "durata": "1",
             "estenuante": "4",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "3",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -369,12 +369,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "On_Move",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "14",
             "pf_liv": "-3",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -388,12 +388,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "On_Spellcast_at",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "25",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -407,12 +407,12 @@
             "durata": "0",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "2",
             "pf_base": "10",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -426,12 +426,12 @@
             "durata": "4",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "{\"callback\":\"modOnAnotherAbility\",\"params\":[\"ArpeggioArmonico\",3,-1]}",
             "pf_base": "22",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -445,12 +445,12 @@
             "durata": "5",
             "estenuante": "",
             "eventi": "On_Damaged",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "1",
             "pf_base": "30",
             "pf_liv": "-5",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -464,12 +464,12 @@
             "durata": "5",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "1",
             "pf_base": "22",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -483,12 +483,12 @@
             "durata": "4",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "25",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -502,12 +502,12 @@
             "durata": "5",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "2",
             "pf_base": "2",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -521,12 +521,12 @@
             "durata": "2",
             "estenuante": "",
             "eventi": "On_Spellcast_at",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "25",
             "pf_liv": "-5",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -540,12 +540,12 @@
             "durata": "5",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "2",
             "pf_base": "24",
             "pf_liv": "-6",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -559,12 +559,12 @@
             "durata": "Termine Round",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "20",
             "pf_liv": "-3",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -583,7 +583,7 @@
             "pa": "0",
             "pf_base": "speciale",
             "pf_liv": "-1",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -597,12 +597,12 @@
             "durata": "3",
             "estenuante": "",
             "eventi": "On_Spellcast_at, On_Attack",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "30",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -621,7 +621,7 @@
             "pa": "0",
             "pf_base": "0",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "EROICA"
         }
@@ -635,12 +635,12 @@
             "durata": "Termine Round",
             "estenuante": "",
             "eventi": "On_Attack",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "1",
             "pf_base": "0",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -654,12 +654,12 @@
             "durata": "Termine Round",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "1",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -673,12 +673,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "12",
             "pf_liv": "-3",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -692,12 +692,12 @@
             "durata": "3",
             "estenuante": "",
             "eventi": "On_Attacked,On_Damaged,On_Attack",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "11",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -711,12 +711,12 @@
             "durata": "0",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "3",
             "pf_base": "Speciale",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -735,7 +735,7 @@
             "pa": "1",
             "pf_base": "28",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -749,12 +749,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "1",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -768,12 +768,12 @@
             "durata": "3",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "1",
             "pf_base": "30",
             "pf_liv": "-5",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -787,12 +787,12 @@
             "durata": "5",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "2",
             "pf_base": "24",
             "pf_liv": "-6",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -806,12 +806,12 @@
             "durata": "4",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "{\"callback\":\"modOnAnotherAbility\",\"params\":[\"ArpeggioArmonico\",3,-1]}",
             "pf_base": "speciale",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -825,12 +825,12 @@
             "durata": "4",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "{\"callback\":\"modOnAnotherAbility\",\"params\":[\"ArpeggioArmonico\",3,-1]}",
             "pf_base": "28",
             "pf_liv": "-4",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE"
         }
@@ -844,12 +844,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "1",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -863,12 +863,12 @@
             "durata": "Termine Round",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "1",
             "pf_base": "1",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
@@ -882,12 +882,12 @@
             "durata": "1",
             "estenuante": "",
             "eventi": "",
-            "mana": "",
-            "mm": "",
+            "mana": "0",
+            "mm": "0",
             "pa": "0",
             "pf_base": "1",
             "pf_liv": "0",
-            "pp": "",
+            "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "ATTIVA"
         }
