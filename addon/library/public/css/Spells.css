@@ -40,9 +40,9 @@ span {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-auto-rows: max-content;
     gap: 2px;
-    max-height: 1000px;
+    max-height: 100%vh;
     overflow-y: auto;
-    padding: 5px;
+    padding: 3px 10px 3px 2px;
 }
 
 /* --- SINGOLA CARD DEL POTERE --- */
@@ -135,7 +135,7 @@ span {
     gap: 2px 2px;
     font-size: 0.8rem;
     background: var(--stats-bg);
-    padding: 3px 2px;
+    padding: 0px 2px;
     border-radius: 4px;
     text-align: left;
     flex-shrink: 0;
@@ -198,6 +198,7 @@ span {
     transition: opacity 0.2s ease;
 }
 
+/* DEPRECATED */
 .splitSpellList {
     /*	height: 68%;*/
     width: 100%;
@@ -302,7 +303,8 @@ span {
 
 /* Stile quando si supera il limite */
 .over-limit {
-    color: #ff4d4d; /* Rosso allarme */
+    color: #ff4d4d;
+    /* Rosso allarme */
     font-weight: 900;
     text-shadow: 0 0 4px rgba(255, 77, 77, 0.4);
 }

@@ -25,14 +25,14 @@
 <html>
 <head> 
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
-		<title> Poteri Memorizzati</title> 
+		<title>[r: getName(oToken)] - Poteri Memorizzati</title> 
 </head>
 <body align="center">
-<div>
-	<a href='[r: macrolinkText("gui/updatePoteri@this","none",json.append("",sFrame,"clearAll"))]' class='relevantTitle' title='Clicca per aggiornare'>
-		[r: getName(oToken)]
-	</a>
-</div>
+
+
+<!-- Form Nascosto per refresh della lista -->
+<form id="refreshListaPoteri" method="json" action="[r: macrolinkText("gui/updatePoteri@this","none",json.append("",sFrame,"clearAll"))]">
+</form>
 
 <!-- Form Nascosto per descrizione spell -->
 <form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
@@ -40,8 +40,8 @@
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 </form>
 
-<!-- Spell List Split Section -->
-<div class="splitSpellList spells-grid-container" id="spellList_Section">
+<!-- Spell List -->
+<div class="spells-grid-container" id="spellList_Section" onmouseup="refreshSpellList(event)">
 
 [r, foreach(nomeLib, lPoteri, ""), CODE:{
 	[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,nomeLib, jOptions)]

@@ -41,7 +41,7 @@
             "PV_Max": 4
         },
         "categoria": "anello",
-        "icona": "rings/Image:Anello"
+        "icona": "rings/anelloBase.png"
     },
     "ANELLO_+1CD-CRIT11": {
         "nome": "Sigillo della Stabilità Minore",

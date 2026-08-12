@@ -33,7 +33,7 @@
 <html>	
 <head>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
-	<title>Grimorio Incantesimi ([r: getName(oToken)])</title>
+	<title>[r: getName(oToken)] - Grimorio Incantesimi</title>
 </head>
 <body>
 	<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">

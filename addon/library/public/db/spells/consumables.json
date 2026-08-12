@@ -974,7 +974,7 @@
     "PozioneVelocita": {
         "id": "PozioneVelocita",
         "descrizione": "Il personaggio ottiene l'effetto Velocita.",
-        "image": "inv_alchemy_elixir_04.webp",
+        "image": "inv_alchemy_elixir_04.png",
         "nome_decorativo": "Velocità",
         "properties": {
             "area": "0",
@@ -1001,7 +1001,7 @@
     "PozioneVelocitaNoSoglia": {
         "id": "PozioneVelocitaNoSoglia",
         "descrizione": "Il personaggio ottiene l'effetto Velocita.",
-        "image": "inv_alchemy_elixir_04.webp",
+        "image": "inv_alchemy_elixir_04.png",
         "nome_decorativo": "Velocità",
         "properties": {
             "area": "0",
@@ -1595,7 +1595,7 @@
     "SbronzaEpica": {
         "id": "SbronzaEpica",
         "descrizione": "Il lanciatore subisce una Sbronza Epica!\nLa sbronza lo fa vomitare e gli infligge uno stato pari a Confusione3 per tutta la durata del potere.\nL'effetto del vomito è tale che tutte le creature nelle vicinanze devono superare un TS o subire Nausea2.",
-        "image": "inv_holiday_brewfestbuff_01.webp",
+        "image": "inv_holiday_brewfestbuff_01.png",
         "nome_decorativo": "Sbronza Epica",
         "properties": {
             "area": "5",

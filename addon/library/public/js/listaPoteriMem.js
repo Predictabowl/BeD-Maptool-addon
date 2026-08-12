@@ -62,68 +62,19 @@ function handleDragEnd(e) {
     draggedItem = null;
 }
 
-/*
-function handleDragStart(e) {
-    draggedItem = this;
-    e.dataTransfer.effectAllowed = 'move';
-    this.classList.add('dragging'); // Classe CSS opzionale per dare un effetto visivo (es. opacità ridotta)
-}
 
-function handleDragOver(e) {
-    e.preventDefault();
-    e.dataTransfer.dropEffect = 'move';
-
-    const container = document.querySelector('.spells-grid-container');
-    const afterElement = getDragAfterElement(container, e.clientY);
-    const currentCard = draggedItem;
-
-    if (afterElement == null) {
-        container.appendChild(currentCard);
-    } else {
-        container.insertBefore(currentCard, afterElement);
+function refreshSpellList(event) {
+    if (event.button === 2) {
+        event.preventDefault();
+        document.getElementById("refreshListaPoteri").submit();
     }
 }
 
-function handleDrop(e) {
-    e.preventDefault();
-}
 
-function handleDragEnd(e) {
-    this.classList.remove('dragging');
-    draggedItem = null;
+/*
+function refreshSpellList(event) {
+    if (event.button == 2) {
+        document.getElementById("refreshListaPoteri").submit();
+    }
+}*/
 
-    // RACCOGLIE IL NUOVO ORDINE DEGLI ID
-    const cards = document.querySelectorAll('.spell-card');
-    let newOrder = [];
-    cards.forEach(card => {
-        newOrder.push(card.getAttribute('data-id'));
-    });
-
-    // Converte l'array in una stringa delimitata da virgole (o in un JSON) da mandare al backend
-    let orderString = newOrder.join(",");
-
-    // Assegna il valore al form nascosto e invia i dati al backend MapTool
-    document.getElementById('nuovaListaPoteri').value = orderString;
-
-    // Esegue il submit automatico del form per persistere il cambiamento
-    document.getElementById('saveOrderForm').submit();
-}
-
-// Funzione d'appoggio per calcolare la posizione corretta nella griglia/lista durante il trascinamento
-function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll('.spell-card:not(.dragging)')];
-
-    return draggableElements.reduce((closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = y - box.top - box.height / 2;
-        if (offset < 0 && offset > closest.offset) {
-            return { offset: offset, element: child };
-        } else {
-            return closest;
-        }
-    }, { offset: negativeInfinity }).element;
-}
-
-// Polyfill rapido per negative infinity nel reduce
-const negativeInfinity = Number.NEGATIVE_INFINITY;
-*/
