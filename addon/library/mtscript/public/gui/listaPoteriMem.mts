@@ -44,9 +44,9 @@
 <div class="spells-grid-container" id="spellList_Section" onmouseup="refreshSpellList(event)">
 
 [r, foreach(nomeLib, lPoteri, ""), CODE:{
-	[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,nomeLib, jOptions)]
-	[h: oSpellData = macro.return]
-	[h: iRecuperoSpell = json.get(oSpellData, "recupero")]
+	[h, macro("powers/getSpellRecuperoStat@this"): nomeLib]
+	[h: iRecuperoSpell = macro.return]
+	[h: spellImg = fetchSpellImage(nomeLib)]
 	[h, if(iRecuperoSpell > 0 && iRecuperoDurata > 0), code:{
 		[recuperoContainer = "<span class='recupero-container'>"]
 		[recuperoOverlay = strformat("<div class='recupero-overlay'>%{iRecuperoDurata}</div></span>")]
@@ -57,45 +57,9 @@
  	<!-- Spell Card -->
 	<div class="spell-card" draggable="true" data-id="[r: nomeLib]" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)">
 		[r: recuperoContainer]
-			<input type="image" class="spell-icon-btn" title="Lancia" src='[r: json.get(oSpellData, "image")]' onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="[r: nomeLib]"/>
+			<input type="image" class="spell-icon-btn" title="Lancia" src='[r: spellImg]' onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="[r: nomeLib]"/>
 		[r: recuperoOverlay]
-
-		[h: sJScriptSpell = strformat('apri_dialog_descrizione("%{nomeLib}")')]
-        <div class='spell-name-badge [r: json.get(oSpellData, "tipo")]' onclick='[r: sJScriptSpell]'>
-            [r: json.get(oSpellData, "nome")]
-        </div>
-        <div class="spell-stats-grid">
-            <div class="stat-box">
-                <span class="stat-label">M:</span>
-				[h: manaMant = json.get(oSpellData,"ManaMant")]
-				[h, if(manaMant>0): manaMant="†"+manaMant; manaMant=""]
-				[r: strformat("<span class='stat-value manaFont'>%s%{manaMant}</span>", json.get(oSpellData, "mana"))]
-            </div>
-            <div class="stat-box">
-				[h: pfMant = json.get(oSpellData,"PFMant")]
-				[h, if(pfMant>0): pfMant="†"+pfMant; pfMant=""]
-                <span class="stat-label">PF:</span>
-                <span class="stat-value faticaFont">[r: json.get(oSpellData, "PF")][r: pfMant]</span>
-            </div>
-            <div class="stat-box">
-                <span class="stat-label">TE:</span>
-                <span class="stat-value tempoFont">[r: json.get(oSpellData, "tempo")]</span>
-            </div>
-            <div class="stat-box">
-                <span class="stat-label">PA:</span>
-                <span class="stat-value azioneFont">[r: json.get(oSpellData, "PA")]</span>
-            </div>
-            <div class="stat-box">
-                <span class="stat-label">PP:</span>
-				[h: ppMant = json.get(oSpellData,"PPMant")]
-				[h, if(ppMant>0): ppMant="†"+ppMant; ppMant=""]
-                <span class="stat-value ppFont">[r: json.get(oSpellData, "PP")][r: ppMant]</span>
-            </div>
-            <div class="stat-box">
-                <span class="stat-label">MM:</span>
-                <span class="stat-value mmFont">[r: json.get(oSpellData, "MM")]</span>
-            </div>
-        </div>
+		[r, macro("gui/CompileSpellStatGrid@this"): json.append(oToken, nomeLib)]
 	</div>
 }]
 

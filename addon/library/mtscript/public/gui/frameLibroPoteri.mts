@@ -6,21 +6,6 @@
 [h: oMemList = getPoteriMem(oToken)]
 [h: iMemCount = 0]
 
-[h: aIncData = "[]"]
-[h, foreach(oInc, oListaPot), code:{
-	[oIncData = "{}"]
-	[sJScriptSpell = strformat('apri_dialog_descrizione(event, "%{oInc}")')]
-	[sNameInc = fetchSpellProp(oInc,"nome_decorativo")]
-	[sSpellType = fetchSpellProp(oInc,"tipo")]
-	[if(json.contains(oMemList,oInc)), code:{
-		[iMemCount = iMemCount +1]
-		[oIncData = json.set(oIncData, "memorized", 1, "cssMemClass", "memorized")]
-	}]
-	[oIncData = json.set(oIncData, "id", oInc, "jscript", sJScriptSpell, "nome", sNameInc, "tipo", sSpellType)]
-	[aIncData = json.append(aIncData, oIncData)]
-}]
-
-
 [h: sGruppoPreferenze = "Dialog_Libro_Poteri"]
 [h: iLarg = getPreferenza("larghezza",oToken,sGruppoPreferenze)]
 [h, if(!isNumber(iLarg)): iLarg = 1000]
@@ -38,48 +23,12 @@
 <body>
 	<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<div class="grimoire-grid-container">
-		[r, foreach(oInc, aIncData, ""), code:{
-			[h: spellId = json.get(oInc, "id")]
-			[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,spellId)]
-			[h: oSpellData = macro.return]
-			<div class='grimoire-card [r: json.get(oInc, "cssMemClass")]' onclick="toggleCardCheckbox(event)">
-				<input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: json.get(oInc, "memorized")]'/>
-                <div class='spell-name-badge [r: json.get(oInc, "tipo")]' onclick='[r: json.get(oInc, "jscript")]'>
-					[r: json.get(oInc, "nome")]
-				</div>
-
-				<div class="spell-stats-grid">
-					<div class="stat-box">
-						<span class="stat-label">M:</span>
-						[h: manaMant = json.get(oSpellData,"ManaMant")]
-						[h, if(manaMant>0): manaMant="†"+manaMant; manaMant=""]
-						[r: strformat("<span class='stat-value manaFont'>%s%{manaMant}</span>", json.get(oSpellData, "mana"))]
-					</div>
-					<div class="stat-box">
-						[h: pfMant = json.get(oSpellData,"PFMant")]
-						[h, if(pfMant>0): pfMant="†"+pfMant; pfMant=""]
-						<span class="stat-label">PF:</span>
-						<span class="stat-value faticaFont">[r: json.get(oSpellData, "PF")][r: pfMant]</span>
-					</div>
-					<div class="stat-box">
-						<span class="stat-label">TE:</span>
-						<span class="stat-value tempoFont">[r: json.get(oSpellData, "tempo")]</span>
-					</div>
-					<div class="stat-box">
-						<span class="stat-label">PA:</span>
-						<span class="stat-value azioneFont">[r: json.get(oSpellData, "PA")]</span>
-					</div>
-					<div class="stat-box">
-						<span class="stat-label">PP:</span>
-						[h: ppMant = json.get(oSpellData,"PPMant")]
-						[h, if(ppMant>0): ppMant="†"+ppMant; ppMant=""]
-						<span class="stat-value ppFont">[r: json.get(oSpellData, "PP")][r: ppMant]</span>
-					</div>
-					<div class="stat-box">
-						<span class="stat-label">MM:</span>
-						<span class="stat-value mmFont">[r: json.get(oSpellData, "MM")]</span>
-					</div>
-				</div>
+		[r, foreach(spellId, oListaPot, ""), code:{
+			[h, if(json.contains(oMemList,spellId)): memorized = 1; memorized = 0]
+			[h: iMemCount = iMemCount + memorized]
+			<div class='spell-card [r, if(!memorized): "in-book"]' onclick="toggleCardCheckbox(event)">
+				<input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]'/>
+				[r, macro("gui/CompileSpellStatGrid@this"): json.append(oToken, spellId)]
             </div>
 		}]
 		</div>
@@ -107,7 +56,7 @@
 	<input type="hidden" name="token" value ="[r:oToken]"/>
 	</form>
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=false" defer></script>
 </body>
 </html>
 }]

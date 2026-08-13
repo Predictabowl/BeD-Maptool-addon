@@ -5,7 +5,7 @@ function loadParams(elem) {
     document.getElementById('form_table_spell').submit();
 }
 
-function apri_dialog_descrizione(sLibName) {
+function apri_dialog_descrizione(event, sLibName) {
     document.getElementById('input_lib_spell').setAttribute('value', sLibName);
     document.getElementById('dialogDescrizioneForm').submit();
 }

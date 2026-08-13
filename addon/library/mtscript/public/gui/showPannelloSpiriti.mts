@@ -3,52 +3,55 @@
 
 [h: switchToken(oToken)]
 
+[h: spiritoAttivo = getSpiritoAttivo(oToken)]
 [h: jSpiriti = getArraySpiriti(oToken)]
 
 [h: htmlSpiritList = ""]
 [h, macro("powers/getMaxDevozione@this"): oToken]
 [h: iMaxDevozione = macro.return]
-[h: iBarraWidth = 250]
-[h, foreach(sSpirito, jSpiriti), code:{
-	[iDevozione = getModDevozione(oToken, sSpirito)]
-	[iBarraFill = floor((iDevozione*iBarraWidth)/iMaxDevozione)]
-	[iChance = min(round((iDevozione)*100/6 ,1), 100)]
-	
-	[htmlSpiritList = strformat("%{htmlSpiritList}
-		<div>%{sSpirito}</div>
-		<div>
-			<div style='width:%{iBarraWidth}px; background-color: navy;'>
-				<div style='width:%{iBarraFill}px; background-color: cyan;'>%{iDevozione}/%{iMaxDevozione}</div>
-			</div>
-		</div>	
-		<div>%{iChance}%</div>
-	")]
-}]
 
 [dialog5(sDialog, strformat("temporary=1; width=500; height=850; closebutton=0; noframe=0;")):{
 <html>
-
 <head> 
-	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
-	<title>Spiriti</title> 
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
+	<title>[r: getName(oToken)] - Spiriti</title> 
 </head>
-<body align="center">
-	<div class="relevantTitle"> [r: getName(oToken)] </div>
-	<div style='display: grid; grid-template-columns: auto auto auto; justify-content: center; margin-top: 15px; gap: 5px;'>
-		[r: htmlSpiritList]
-	</div>
-	<div>
-		Richiamo: 1d6 + Mod. (CD 7)
-	</div>
-	<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-		[h: lSpiriti = json.toList(getArraySpiriti(oToken))]
-		[r, foreach(sSpirito, lSpiriti, ""), code:{
-			<div>
-				<h3>[r: sSpirito]</h3>
-				[h, macro("gui/spiritiPowersTable@this"): json.append(oToken, sSpirito)]
-				[r: macro.return]
-			</div>
-		}]
+<body>
+	<div class="spirits-main-container">
+	[r, foreach(sSpirito, jSpiriti, ""), code:{
+		[h: iDevozione = getModDevozione(oToken, sSpirito)]
+		[h: iBarraFill = floor((iDevozione*100)/iMaxDevozione)]
+		[h: iChance = min(round((iDevozione)*100/6 ,1), 100)]
+		[h, if(sSpirito == spiritoAttivo): sActive = "is-active"; sActive = ""]
+        <div class="spirit-panel [r: sActive]]">
+            <div class="spirit-header">
+                <div class="spirit-info">
+                    <h3 class="spirit-name">[r: sSpirito]</h3>
+
+                    <div class="spirit-stats-row">
+                        <span class="prob-badge">Richiamo: <span class="prob-value">[r: iChance]%</span></span>
+
+                        <div class="devotion-wrapper" title="Devozione: 85/100">
+                            <span class="devotion-text">Devozione</span>
+                            <div class="devotion-track">
+                                <div class="devotion-fill" style="width: [r: iBarraFill]%;"></div>
+                            </div>
+                            <span class="devotion-text">[r: iDevozione]/[r: iMaxDevozione]</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Essendo già attivo, mostriamo un indicatore invece del pulsante -->
+				[r, if(sActive != ""): "<button class='btn btn-active-spirit' disabled>Spirito Attivo</button>"]
+            </div>
+
+            <div class="spirit-body">
+                <!-- Riutilizziamo la griglia del grimorio per i poteri -->
+                <div class="grimoire-grid-container" style="max-height: none;">
+					[r, macro("gui/spiritiPowerCards@this"): json.append(oToken, sSpirito)]
+				</div>
+            </div>
+        </div>
+	}]
 	</div>
 	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<input type="hidden" name="libSpell" value ="" id="input_lib_spell" />
@@ -56,7 +59,7 @@
 	</form>
 	<script>
 	[r:"
-		function apri_dialog_descrizione(sLibName){
+		function apri_dialog_descrizione(event, sLibName){
 			document.getElementById('input_lib_spell').setAttribute('value',sLibName);
 			document.getElementById('dialogDescrizioneForm').submit();
 		}

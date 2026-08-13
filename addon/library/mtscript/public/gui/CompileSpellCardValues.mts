@@ -2,13 +2,6 @@
 [h: spellName = arg(1)]
 [h, if(argCount()>2) : jOptions = arg(2); jOptions = "{}"]
 
-[h: iRecupero = json.get(jOptions, "recupero")]
-[h, if(!isNumber(iRecupero)): iRecupero = -1]
-
-[h, macro("powers/getSpellRecuperoStat@this"): spellName]
-[h: iRecupero = macro.return]
-
-
 [h: jReturn = "{}"]
 [h: oCache = getDaCache(oToken,"SpellStats")]
 [h, if(!json.isEmpty(oCache)), code:{
@@ -24,10 +17,7 @@
 	[h: iPP = json.get(macro.return, "PP")]
 	[h: iMM = json.get(macro.return, "MM")]
 	[h: iTempo = getSpellTime(oParams)]
-	[h: sSpellType = fetchSpellProp(spellName,"tipo")]
-	[h: sNome = fetchSpellProp(spellName,"nome_decorativo")]
-	[h: imgA = fetchSpellImage(spellName)]
-	[h: jReturn = json.set("", "mana", iMana, "PF", iPF, "PA", iPA, "tempo", iTempo, "PP", iPP, "MM", iMM, "tipo", sSpellType, "nome", sNome, "image", imgA)]
+	[h: jReturn = json.set("", "mana", iMana, "PF", iPF, "PA", iPA, "tempo", iTempo, "PP", iPP, "MM", iMM)]
 
 	[macro("powers/getMantPP@this"): oParams]
 	[h: jReturn = json.set(jReturn, "PPMant", macro.return)]
@@ -42,5 +32,4 @@
 	[h: setInCache(oToken,"SpellStats", oCache)]
 }]
 
-[h: jReturn = json.set(jReturn, "recupero", iRecupero)]
 [h: return(0, jReturn)]

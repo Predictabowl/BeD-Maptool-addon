@@ -17,6 +17,7 @@
 	[sLancioLink = ""]
 }]
 
+
 [macro("class_skills/getMotiviConosciuti@this"): oToken]
 [h, if(!json.isEmpty(macro.return)), code: {
 	[h: sScegliMotivoLink = strformat("<a href='%s'><img src='%s' class='pulsanteUI' title='Seleziona Motivo'/></a>",
@@ -73,6 +74,8 @@
 
 [h: oLibro = getLibroPoteri(oToken)]
 [h, if(json.isEmpty(oLibro)): showBook = "none"; showBook = "block"]	
+[h: jSpiriti = getArraySpiriti(oToken)]
+[h, if(json.isEmpty(jSpiriti)): showSpiriti = "none"; showSpiriti = "block"]	
 
 [overlay(sOverlay,"value=[r: oToken]"): {
 	<html>
@@ -126,6 +129,7 @@
 				<a onclick="scegliEvento(event,'AbilitaClasse')">Abilità di Classe</a>
 				<a onmouseup="scegliEvento(event,'PoteriClasse')">Incantesimi e Poteri</a>
 				<a onmouseup="scegliEvento(event,'LibroIncantesimi')" style="display:[r:showBook];">Libro Incantesimi</a>
+				<a onmouseup="scegliEvento(event,'VistaSpiriti')" style="display:[r:showSpiriti];">Spiriti</a>
 				<a onmouseup="scegliEvento(event,'Sortilegi')">Sortilegi</a>
 				<a onmouseup="scegliEvento(event,'Mantenimenti')">Mantenimenti</a>
 			</template>

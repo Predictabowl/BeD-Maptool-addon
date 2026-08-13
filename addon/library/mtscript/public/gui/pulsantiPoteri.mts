@@ -137,5 +137,8 @@
 	case "Mantenimenti": {
 		[macro("gui/dialogMantenimenti@this"): target]
 	};
+	case "VistaSpiriti": {
+		[macro("gui/showPannelloSpiriti@this"): target]
+	};
 	default :{}
 ]
