@@ -24,9 +24,3 @@ function toggleCardCheckbox(event) {
     }
     counterContainer.textContent = memNum;
 }
-
-function apri_dialog_descrizione(event, sLibName) {
-    event.stopPropagation();
-    document.getElementById('input_lib_spell').setAttribute('value', sLibName);
-    document.getElementById('dialogDescrizioneForm').submit();
-}

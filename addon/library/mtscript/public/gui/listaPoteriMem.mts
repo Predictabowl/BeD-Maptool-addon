@@ -34,12 +34,6 @@
 <form id="refreshListaPoteri" method="json" action="[r: macrolinkText("gui/updatePoteri@this","none",json.append("",sFrame,"clearAll"))]">
 </form>
 
-<!-- Form Nascosto per descrizione spell -->
-<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
-	<input type="hidden" name="libSpell" value ="" id="input_lib_spell" />
-	<input type="hidden" name="token" value ="[r:oToken]"/>
-</form>
-
 <!-- Spell List -->
 <div class="spells-grid-container" id="spellList_Section" onmouseup="refreshSpellList(event)">
 
@@ -80,6 +74,7 @@
 
 
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellDescription.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

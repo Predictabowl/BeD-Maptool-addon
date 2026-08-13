@@ -1,0 +1,2286 @@
+{
+    "affascinare": {
+        "area": "1 creatura",
+        "description": [
+            "Il lancio di questo incantesimo può essere mascherato parlando e gesticolando in modo simile a quanto si farebbe con una normale conversazione.",
+            "Durante il lancio il personaggio cerca di convincere il bersaglio parlandogli, quindi l’incantesimo ha effetto solamente se i personaggi parlano la stessa lingua.",
+            "Al termine del lancio la vittima deve effettuare una prova di Tenacia con CD 18 o in alternativa pari a 11 + grado Persuasione del lanciatore.",
+            "Se la prova fallisce la vittima non è influenzata, l’incantesimo viene perduto e la vittima ne diventa immune per una settimana. Se la prova fallisce con almeno 10 punti di scarto la vittima si accorge del tentativo.",
+            "Se la prova riesce la vittima diventa affascinata dal lanciatore e inizia a considerarlo uno dei suoi più cari amici e per tutta la durata lo tratterà come tale. È da notare che le azioni che un bersaglio può intraprendere in nome dell’amicizia hanno dei limiti che variano per ogni vittima, il DM dovrebbe quindi determinare tali limiti a sua discrezione.",
+            "Al termine dell’effetto dell’incantesimo le cose ritornano alla normalità, ma la vittima non si ricorda molto di quanto accaduto e non sospetta del lanciatore.",
+            "Se questo incantesimo viene lanciato contro un PG, il DM dovrebbe effettuare i tiri di nascosto, e far agire il PG affascinato senza rivelarlo al giocatore."
+        ],
+        "duration": "16 ore",
+        "level": "11",
+        "nome_descrittivo": "Affascinare",
+        "range": "3 metri",
+        "school": "Incantamento",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "allarme": {
+        "area": "10 Raggio",
+        "description": [
+            "Crea una zona magica invisibile con normali metodi. Quando lanciato il lanciatore deve scegliere una parola d'ordine, la forma dell'area per un massimo pari all'area d'effetto dell'incantesimo, ed il tipo di allarme, se sonoro silenzioso, in questo caso solamente il lanciatore è in grado di udirlo a livello mentale.",
+            "Ogni qual volta una creatura che non conosce la parola d'ordine entra o esce da tale zona l'allarme scatta un allarme silenzioso suono avvertendo il lanciatore dell'incantesimo e svegliandolo nel caso stia dormendo.",
+            "Il lanciatore può anche scegliere la dimensione delle creature che possono far scattare l'allarme.",
+            "L'allarme non dà informazioni specifiche oltre al fatto di avvertire che qualcuno è entrato o uscito dalla zona protetta."
+        ],
+        "duration": "12 ore",
+        "level": "4",
+        "nome_descrittivo": "Allarme",
+        "range": "0",
+        "school": "Abiurazione",
+        "tags": "Mentale",
+        "time": "1 minuto"
+    },
+    "analizzareportale": {
+        "area": "1 Portale",
+        "description": [
+            "Questo incantesimo consente di avere informazioni su di un portale entro il raggio d’azione che il lanciatore sia in grado di vedere.",
+            "Il risultato può variare a seconda della potenza del portale e se è stato protetto contro la divinazione.",
+            "Alcune informazioni possono richiedere una prova di Arcanologia con difficoltà in base alla potenza del portale ed a discrezione del DM. Se il portale sarebbe stato analizzabile senza la necessità di questo sortilegio allora il successo può essere automatico oppure il DM può concedere un modificatore di circostanza di +4 sul tiro.",
+            "Può permettere di conosce dove il portale conduce se il lanciatore ha visitato tale luogo in precedenza, altrimenti può sapere la distanza e la direzione approssimativa. Se il portale conduce in un altro piano di esistenza il lanciatore può effettuare una prova per sapere in quale piano conduce, altrimenti potrà sapere comunque che conduce in un altro piano.",
+            "Permette infine di sapere eventuali requisiti necessari ad utilizzare o attivare il portale, tale informazione può richiedere una prova riuscita."
+        ],
+        "duration": "Istantaneo",
+        "level": "8",
+        "nome_descrittivo": "Analizzare Portale",
+        "range": "3 metri",
+        "school": "Divinazione",
+        "tags": "Arcano",
+        "time": "1 ora"
+    },
+    "banchettodeglieroi": {
+        "area": "Speciale",
+        "description": [
+            "Questo incantesimo crea un lussuoso banchetto comprensivo dei migliori cibi e bevande.",
+            "Un massimo di 10 persone possono partecipare al banchetto, e devono rimanere a banchettare per tutta la durata dell’incantesimo, altrimenti non ottengono alcun risultato.",
+            "Chi termina il banchetto viene curato da ogni malattia non cronica ed avvelenamento, a meno che non derivante da un effetto magico di più alto livello del banchetto. Inoltre le ferite vengono interamente curate.",
+            "Infine tutti gli avventori ottengono un bonus di 50 PVT che permangono fin quando utilizzati."
+        ],
+        "duration": "2 ore",
+        "level": "17",
+        "nome_descrittivo": "Banchetto degli Eroi",
+        "range": "3 metri",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "bancodinebbia": {
+        "area": "20 metri raggio",
+        "description": [
+            "Si viene a creare un fitto banco di nebbia che ostruisce la visuale riducendola a 3 caselle (4,5 m.).",
+            "Il banco di nebbia può essere normalmente disperso da vento forte o evaporato da un effetto di fuoco ad area, ma è immune ad effetti a bersaglio.",
+            "Tutte le creature nell’area d’effetto subiscono un modificatore di circostanza di -4 alle prove di percezione.",
+            "Creature dotate di infravisione avranno difficoltà a vedere i contorni degli oggetti e ostacoli freddi per colpa della temperatura della nebbia, tuttavia non avranno nessun problema a scorgere creature e corpi caldi anche attraverso la nebbia."
+        ],
+        "duration": "1 ora",
+        "level": "5",
+        "nome_descrittivo": "Banco di Nebbia",
+        "range": "30 metri",
+        "school": "Trasmutazione",
+        "tags": "Acqua",
+        "time": "30 secondi"
+    },
+    "bauledimensionale": {
+        "area": "1 Baule",
+        "description": [
+            "Nasconde un baule (uno vero) in una tasca dimensionale accessibile per tutta la durata dell'incantesimo.",
+            "Al termine dell'incantesimo il baule ricompare vicino al lanciatore se c'è sufficiente spazio, viene perduto altrimenti."
+        ],
+        "duration": "24 ore",
+        "level": "8",
+        "nome_descrittivo": "Baule Dimensionale",
+        "range": "Tocco",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "5 minuti"
+    },
+    "boccamagica": {
+        "area": "1 oggetto",
+        "description": [
+            "Permette di impiantare un messaggio su di un oggetto, che viene recitato quando determinate condizioni vengono verificate.",
+            "Durante il lancio l’oggetto non può essere toccato o indossato da nessuno ad eccezione del lanciatore, altrimenti l’incantesimo fallisce.",
+            "Il messaggio deve essere non più lungo di 25 parole e non può durare più di 5 minuti.",
+            "Le condizioni di attivazione sono a scelta del lanciatore ma devono essere basate interamente su eventi fisici che avvengono entro 10 metri dall’oggetto, e non possono basarsi su intenzioni, pensieri o altre avvenimenti astratti.",
+            "Il lanciatore può decidere quando far terminare l’effetto, se dopo un numero limitato di attivazioni oppure anche all’infinito, o almeno fin quando la magia non viene dissolta."
+        ],
+        "duration": "permanente",
+        "level": "4",
+        "nome_descrittivo": "Bocca Magica",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Arcano",
+        "time": "1 minuto"
+    },
+    "cadutamorbida": {
+        "area": "1 creatura",
+        "description": [
+            "Fin quando l'incantesimo è attivo il beneficiario dell'incantesimo cade lentamente, e precisamente ad un velocità per cui non subirà alcun danno dalla caduta stessa.",
+            "Generalmente non è possibile lanciare questo incantesimo su creature che stanno già cadendo se la caduta è breve.  Considerando il tempo di reazione ed il tempo di  lancio una persona avrà già percorso circa 20 metri in caduta libera prima che riceva l’effetto dell’incantesimo."
+        ],
+        "duration": "10 minuti",
+        "level": "5",
+        "nome_descrittivo": "Caduta morbida",
+        "range": "100 metri",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "1 secondo"
+    },
+    "caluraopprimente": {
+        "area": "30 metri raggio",
+        "description": [
+            "Crea una folata di caldo afoso nell’area bersaglio, dove la temperatura può raggiungere i 50°C.",
+            "Le creature nell’area d’effetto che rimangono esposte a tale temperatura per più di 10 minuti devono superare una prova Resilienza con CD 19 o perdere i sensi."
+        ],
+        "duration": "2 ore",
+        "level": "13",
+        "nome_descrittivo": "Calura Opprimente",
+        "range": "100 metri",
+        "school": "Trasmutazione",
+        "tags": "Fuoco",
+        "time": "5 minuti"
+    },
+    "camminaresulvento": {
+        "area": "Personale",
+        "description": [
+            "Permette di mutare la propria forma in una gassosa simile ad una nuvola che gli permette di galleggiare nel vento e confondersi con le nuvole.",
+            "Mentre è in questa forma il personaggio può muoversi volando, ma viene influenzato dai venti e agenti atmosferici. Se non c'è vento si muoverà con il suo normale fattore movimento, ma più probabilmente sarà in balia degli elementi. Esso può procede contro vento con movimento dimezzato, oppure sfruttare il vento per aumentare la sua velocità.",
+            "È importante essere a distanza di sicurezza dal suolo quando l'incantesimo termina, per evitare spiacevoli conseguenze dovute ad una repentina caduta dall'alto. Il personaggio è comunque sempre a conoscenza del tempo rimanente a sua disposizione."
+        ],
+        "duration": "4 ore",
+        "level": "19",
+        "nome_descrittivo": "Camminare sul vento",
+        "range": "0",
+        "school": "Trasmutazione",
+        "tags": "Aria, Soglia di Potere",
+        "time": "1 minuto"
+    },
+    "camuffamentodellaura": {
+        "area": "1 creatura",
+        "description": [
+            "Questo incantesimo non altera la forma del beneficiario e non agisce quindi sui sensi umani, non può quindi essere individuato con Smascherare Illusioni e nemmeno con Individuazione del Magico.",
+            "Quello che questo incantesimo può fare è alterare le informazioni fornite tramite incantesimi di Divinazione (come Scrutare e Sonda) fornendo false informazioni a scelta del lanciatore."
+        ],
+        "duration": "10 giorni",
+        "level": "17",
+        "nome_descrittivo": "Camuffamento dell’Aura",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Mentale",
+        "time": "10 minuti"
+    },
+    "chiaroveggenza": {
+        "area": "Personale",
+        "description": [
+            "Questo potere consente di vedere da un punto di osservazione anche molto distante, a condizione che in quel punto la visibilità lo permetta. Una volta prescelto il punto di osservazione non si può spostare.",
+            "Il personaggio sceglie una locazione che conosce entro il raggio d'azione e diventa in grado di vedere quel luogo come se si trovasse realmente là. Il raggio visivo del personaggio è invariato: muovendo la testa può scandagliare normalmente tutti i particolari presenti nell’area.",
+            "La chiaroveggenza non rimpiazza la normale vista, il personaggio continua a vedere tranquillamente ciò che ha davanti a sé: è la scena distante ad essere sovra impressa. Se chiude completamente gli occhi, il personaggio interromperà la doppia visione e vedrà soltanto la scena distante.",
+            "Questo potere non incrementa le facoltà visive del personaggio: eventuali oggetti nascosti o invisibili rimangono tali; attraverso la chiaroveggenza egli ottiene soltanto un’immagine del luogo distante; non riceve nessuna informazione sonora, olfattiva o di altro genere."
+        ],
+        "duration": "30 minuti",
+        "level": "14",
+        "nome_descrittivo": "Chiaroveggenza",
+        "range": "25 Km",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "5 minuti"
+    },
+    "chiavemagica": {
+        "area": "1 lucchetto",
+        "description": [
+            "Questo incantesimo può essere utilizzato su di un lucchetto, il prossimo tentativo di aprire tale lucchetto ottiene un bonus di circostanza di +4.",
+            "Se il lucchetto è protetto da un sortilegio di Lucchetto Magico allora entrambi gli incantesimi si annullano a vicenda."
+        ],
+        "duration": "Istantaneo",
+        "level": "5",
+        "nome_descrittivo": "Chiave Magica",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "1 minuto"
+    },
+    "circolodicontenimento": {
+        "area": "massimo 10 m. raggio",
+        "description": [
+            "Crea un cerchio in grado di mantenere imprigionato chiunque si trovi all’interno nel momento in cui viene attivato. L’attivazione può richiedere fino ad alcuni minuti, durante i quali brilla luce magica crescente, quindi non è molto pratico per essere utilizzato come trappola. Una volta attivo la luce è sommessa ma sempre chiaramente visibile, e non è possibile nasconderla a meno che non si utilizzi un metodo per negare la luce, come un globo di oscurità.",
+            "Il cerchio non impedisce l’ingresso al su interno, ma oppone resistenza e quindi è necessario insistere per entrare. Impedisce comunque di uscire con qualsiasi mezzo, magico o meno, ma non è infallibile.",
+            "Una creatura può uscire con la forza effettuando un prova di Atletica con CD pari al 1 +livello del sortilegio. È anche possibile uscire magicamente con un altro sortilegio ma solo se il livello di quest’ultimo è pari o superiore al livello del circolo."
+        ],
+        "duration": "Permanente fin quando cancellato dall’esterno",
+        "level": "1+",
+        "nome_descrittivo": "Circolo di Contenimento",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Positivo",
+        "time": "1 giorno"
+    },
+    "clonedisalvaguardia": {
+        "area": "1 creatura",
+        "description": [
+            "Crea un clone inerte della creatura toccata.",
+            "Il clone impiega 120 giorni per crescere al punto di maturità della creatura originale e per poi invecchiare in modo identico alla creatura originale.",
+            "Il clone è inerte, ma è collegato magicamente alla creatura originale, ed ovunque esso sia è in grado di effettuare un copia costante di tutte le memorie ed esperienze dell’originale.",
+            "Nel caso la creatura originale morisse il clone si attiva nell’arco di 24 ore, con tutte le memorie ed esperienze della creatura originale, effettivamente essendo una copia di esso al momento della morte.",
+            "Non più di un clone può esistere contemporaneamente, creare un nuovo clone rende inservibile un eventuale altro clone già esistente."
+        ],
+        "duration": "Permanente fin quando rimpiazzato",
+        "level": "26",
+        "nome_descrittivo": "Clone di Salvaguardia",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Positivo",
+        "time": "1 ora"
+    },
+    "collegamentomentale": {
+        "area": "1 Creatura",
+        "description": [
+            "Questo potere consente al lanciatore di comunicare senza parole con una qualsiasi creatura intelligente. La comunicazione è bidirezionale, però è differente dalla lettura del pensiero, in quanto le due creature ricevono solo i pensieri che l’altro vuole inviargli.",
+            "Una creatura non consenziente può resistere automaticamente per negare gli effetti del potere, la reazione naturale di ogni creatura è quella di impedire qualsiasi contatto con la propria mente, anche perché non può conoscere chi o perché stia cercando di entrare nella propria mente, tuttavia è possibile riconoscere questo potere come un tentativo di comunicazione più che come un effetto offensivo (è da notare che però che non si può essere sicuri che non sia una trappola)."
+        ],
+        "duration": "8 ore",
+        "level": "7",
+        "nome_descrittivo": "Collegamento Mentale",
+        "range": "Tocco",
+        "school": "Incantamento",
+        "tags": "Mentale",
+        "time": "3 minuti"
+    },
+    "collegamentosensoriale": {
+        "area": "1 Creatura",
+        "description": [
+            "Questo potere permette di connettere i propri sensi con quelli della creatura bersaglio. Al momento dell’attivazione lo psionico deve decidere quali sensi connettere e quali no, una volta deciso questi non possono essere cambiati a meno di non interrompere il potere e lanciarlo nuovamente.",
+            "Ogni minuto il lanciatore può decidere se utilizzare i propri sensi o quelli che ha deciso di collegare, in quest’ultimo caso i sensi collegati rimpiazzano i propri, se lo psionico collega ad esempio la vista allora vedrà attraverso gli occhi del bersaglio e non potrà utilizzare la propria vista per un altro minuto."
+        ],
+        "duration": "8 ore",
+        "level": "8",
+        "nome_descrittivo": "Collegamento Sensoriale",
+        "range": "Tocco",
+        "school": "Incantamento",
+        "tags": "Mente",
+        "time": "3 minuti"
+    },
+    "comprenderelinguaggi": {
+        "area": "1 creatura",
+        "description": [
+            "Fin quando l'incantesimo è attivo il beneficiario ottiene un modificatore di circostanza di +4 alle prove di Sociologia per comprendere linguaggi che non conosce."
+        ],
+        "duration": "1 ora",
+        "level": "7",
+        "nome_descrittivo": "Comprendere Linguaggi",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "comunioneconlanatura": {
+        "area": "30 Km (500m. nel sottosuolo ?)",
+        "description": [
+            "[Versione meno potente di Cresima con la Natura]",
+            "Il lanciatore diventa una cosa sola con la natura che lo circonda, ottenendo la conoscenza di tutto il territorio circostante.",
+            "La conoscenza comprende il terreno, le piante, i minerali, gli specchi d'acqua, la popolazione generali di animali (comprese persone), la presenza di creature potenti ed innaturali, ed anche lo stato della natura.",
+            "Questo incantesimo viene bloccato in tutte quelle zone in cui l'ambiente naturale è stato rimpiazzato da costruzioni artificiali."
+        ],
+        "duration": "Istantaneo",
+        "level": "23",
+        "nome_descrittivo": "Comunione con la Natura",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "10 minuti"
+    },
+    "contattarealtripiani": {
+        "area": "1 entità extraplanare",
+        "description": [
+            "Permette di contattare creature di altri piani, anche molto potenti (nel qual caso è bene fare attenzione), per ricevere informazioni e consigli.",
+            "L'incantesimo permette di ottenere risposta ad una singola domanda, e non è detto che l'entità contattata conosca la risposta o voglia rispondere.",
+            "La conversazione con l'entità si svolge come una normale conversazione, e si possono utilizzare le proprie abilità di Persuasione e Autorità (quest'ultima però difficilmente funzionerà e potrebbe far infuriare l'entità). Il DM dovrà stabilire il comportamento dell'entità contattata."
+        ],
+        "duration": "speciale",
+        "level": "18",
+        "nome_descrittivo": "Contattare altri piani",
+        "range": "0",
+        "school": "Richiamo",
+        "tags": "Mente",
+        "time": "5 minuti"
+    },
+    "controindividuazione": {
+        "area": "1 creatura",
+        "description": [
+            "La creatura protetta da questo incantesimo non può essere individuata tramite metodi sovrannaturali di alcun tipo, ad eccezione di poteri superiori."
+        ],
+        "duration": "8 ore",
+        "level": "11",
+        "nome_descrittivo": "Contro Individuazione",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Mentale",
+        "time": "2 minuti"
+    },
+    "controllareiventi": {
+        "area": "30m. raggio",
+        "description": [
+            "Permette di ottenere il controllo dell’aria nell’area d’effetto. Al momento del lancio il lanciatore deve scegliere come il vento soffierà, e tale direzione permarrà per tutta la durata dell’incantesimo nell’area d’effetto.",
+            "Il lanciatore può scegliere la direzione e l’intensità della folata, senza però poter raggiungere la forza di un uragano. Un vento molto forte potrebbe portare severe penalità al movimento delle creature.",
+            "Venti molto forti possono spostare ed atterrare le creature nell’area d’effetto. Creature di taglia media nell’area d’effetto devono superare una prova di Atletica con CD 21 per non essere atterrate, per ogni differenza di taglia si applica un modificatore cumulativo di -3 se più piccola e +3 se più grande. Creature volanti subiscono un ulteriore modificatore di circostanza di -3. Tale effetto può verificarsi solamente la prima volta che una creatura viene a contatto con il vento."
+        ],
+        "duration": "1 ora",
+        "level": "16",
+        "nome_descrittivo": "Controllare i Venti",
+        "range": "100 m.",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "4 minuti"
+    },
+    "controllarelacqua": {
+        "area": "30m. Raggio",
+        "description": [
+            "Permette di ottenere il controllo di un corpo d’acqua oppure parte di esso fino al massimo consentito dall’area d’effetto, per tutta la durata dell’incantesimo. L’effetto viene deciso al momento del lancio e non può essere cambiato successivamente.",
+            "L’acqua può essere mossa come diretto dal lanciatore, creando inondazioni, correnti, vortici, e perfino divisa per creare un corridoio senz’acqua. In ogni caso il volume dell’acqua rimane invariato, quindi è necessario considerare i limiti in base al volume d’acqua già presente al momento del lancio."
+        ],
+        "duration": "10 minuti",
+        "level": "12",
+        "nome_descrittivo": "Controllare l’Acqua",
+        "range": "5 m.",
+        "school": "Trasmutazione",
+        "tags": "Acqua",
+        "time": "4 minuti"
+    },
+    "controllarelavegetazione": {
+        "area": "30 metri raggio",
+        "description": [
+            "Questo incantesimo permette di prendere il controllo della vegetazione nell’area d’effetto per un periodo limitato di tempo.",
+            "Fin quando l’effetto perdura il lanciatore può decidere di cambiare la forma delle piante, piegarle secondo le sue esigenze, ad esempio per agire da ostacolo a chiunque si trovi nell’area d’effetto, oppure per favorire il proprio movimento nell’area. Le piante si muovono troppo lentamente per essere utilizzate come arma offensiva.",
+            "Passare dall’area può richiedere una prova di Acrobazia con CD 24 o altrimenti rimanere impigliati o anche intrappolati (a seconda del risultato) e perdere tempo.",
+            "Al termine dell’incantesimo il personaggio può decidere di far tornare le piante, se ancora in vita, alla loro forma originale, oppure di lasciarle in una determinata posizione."
+        ],
+        "duration": "30 minuti",
+        "level": "15",
+        "nome_descrittivo": "Controllare la Vegetazione",
+        "range": "40 metri",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "5 minuti"
+    },
+    "controllaretempoatmosferico": {
+        "area": "Personale",
+        "description": [
+            "Permette di modificare il tempo atmosferico in un'area limitata.",
+            "Una volta lanciato l'incantesimo il tempo atmosferico nell'area d'effetto cambia rapidamente nell'arco di pochi minuti in base ai desideri del lanciatore.",
+            "È possibile controllare il tempo solo marginalmente, ad esempio la direzione e l'intensità del vento, le nuvole e la precipitazioni. Non è possibile utilizzare questo incantesimo per effettuare precisi cambiamenti, come ad esempio far cadere il fulmine in un punto desiderato, e nemmeno scegliere di far compiere ai fenomeni atmosferici percorsi precisi, come ad esempio creare un tornado che colpisca in una direzione precisa.",
+            "Non è possibile far verificare situazioni innaturali e contraddittorie, ed ha un limite sul cambiamento, non è possibile ad esempio far nevicare d'estate quando la temperatura è molto alta.",
+            "Quando l'incantesimo termina la zona torna lentamente alla normalità."
+        ],
+        "duration": "8 ore",
+        "level": "25",
+        "nome_descrittivo": "Controllare tempo atmosferico",
+        "range": "4 Km. raggio",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "15 minuti"
+    },
+    "convocaabissale": {
+        "area": "1 demone",
+        "description": [
+            "Richiama un demone o un diavolo dall’abisso il cui livello è pari quello scelto per il sortilegio. Il livello è determinato anche dal tipo  di creatura richiamata: tirapiedi -2, Normale +0, Elite +2, Miniboss +4, Boss +6.",
+            "Affinché il sortilegio funzioni il personaggio deve imparare il richiamo specifico della creatura che intende convocare, questo è trattato come imparare il sortilegio dello stesso livello di tale determinata creatura.",
+            "Il demone richiamato non è sotto il controllo del lanciatore ed libero di agire come più lo aggrada. È comunque possibile realizzare delle misure di contenimento nel punto dove il demone dovrà comparire, come ad esempio dei cerchi magici che gli impediscano di uscire.",
+            "Se si fallisce il tiro per il lancio di questo sortilegio l’effetto del richiamo verrà invertito ed il lanciatore dovrà effettuare un tiro Resilienza con la stessa difficoltà del sortilegio, se fallisce anche questo secondo tiro verrà risucchiato nell’abisso."
+        ],
+        "duration": "Istantaneo",
+        "level": "1+",
+        "nome_descrittivo": "Convoca Abissale",
+        "range": "5m.",
+        "school": "Richiamo",
+        "tags": "Arcano, Convocazione",
+        "time": "1 giorno"
+    },
+    "corridoioplanare": {
+        "area": "30 metri",
+        "description": [
+            "Crea un portale alto vicino al lanciatore, 3 metri e largo 2, ed un altro entro l’area d’effetto in una zona di terreno visibile con abbastanza spazio libero.",
+            "Tali portali sono connessi da una distorsione spaziale, chiunque entri da un lato riemerge dall’altro. Se una creatura rimane a metà fra i due portali quando l’effetto svanisce essa verrà rispedita verso il portale da cui è entrata.",
+            "Ogni creatura che utilizzi il corridoio rimane automaticamente Stordita per 1 ora.",
+            "L’incantesimo no ha effetto se l’area è schermata da qualsiasi tipo di difesa magica o incantesimo mirato ad impedire il passaggio, perfino un sortilegio Lucchetto Magico è sufficiente ad impedirne il funzionamento."
+        ],
+        "duration": "20 secondi",
+        "level": "9",
+        "nome_descrittivo": "Corridoio Planare",
+        "range": "1 metro",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "cortinadellinvisibilita": {
+        "area": "muro lungo 20m. Alto 3m. Spesso 1cm.",
+        "description": [
+            "L’incantesimo crea un piano verticale che rende invisibili tutte le creature che si trovano da un lato rispetto a quelle che si trovano dall’altro, l’invisibilità funziona solo in una direzione ed il lanciatore sceglie quale al momento del lancio.",
+            "Il muro è intangibile e può essere attraversato da chiunque, questo però non garantisce che colui che l’attraversa si accorga della presenza del muro, dal momento che il muro rende invisibili solo le creature. Se non sono presenti creature invisibili oltre il muro la prospettiva della creatura che l’attraversa non cambia, ma altri dietro di lui noteranno come quest’ultimo sparisca all’improvviso davanti ai loro occhi.",
+            "L’incantesimo perdura fin quando il lanciatore rimane entro il raggio d’azione e mantiene la concentrazione. Mentre un personaggio è concentrato può effettuare solo semplici azioni, quali",
+            "Se una creatura dalla parte invisibile del muro inizia un’azione ostile l’incantesimo termina immediatamente."
+        ],
+        "duration": "fin quando sostenuto",
+        "level": "11",
+        "nome_descrittivo": "Cortina dell’Invisibilità",
+        "range": "40 metri",
+        "school": "Illusione",
+        "tags": "Mente, Sostenimento",
+        "time": "5 minuti"
+    },
+    "creareciboedacqua": {
+        "area": "Speciale",
+        "description": [
+            "L'incantesimo crea cibo edibile ed acqua potabile sufficienti per 6 pasti, con alte proprietà nutritive, ma non proprio saporito.",
+            "Il cibo deve essere mangiato prima dello scadere dell'incantesimo per avere il suo effetto, una volta terminato il tempo a disposizione il cibo avanzato svanisce."
+        ],
+        "duration": "4 ore",
+        "level": "14",
+        "nome_descrittivo": "Creare Cibo ed Acqua",
+        "range": "2",
+        "school": "Richiamo",
+        "tags": "Terra",
+        "time": "10 minuti"
+    },
+    "crescitavegetale": {
+        "area": "30 metri raggio",
+        "description": [
+            "Questo incantesimo fa crescere la vegetazione nell'area bersaglio.",
+            "Se è già presente della vegetazione allora questa diventa più spessa e rigogliosa, coprendo tutta l’area e rendendola difficile da traversare.",
+            "Se nell’area non sono presenti piante ne farà crescere alcune a scelta del lanciatore sparse casualmente nell’area bersaglio. Tali piante sono considerate comunque piante normali e saranno soggette a tutte le limitazioni e necessità del caso, e se la zona è inospitale potrebbero morire rapidamente. Se rimangono in vita possono però essere bersaglio di altri incantesimo che colpiscono la vegetazione."
+        ],
+        "duration": "Istantaneo",
+        "level": "7",
+        "nome_descrittivo": "Crescita Vegetale",
+        "range": "40 metri",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "1 ora"
+    },
+    "destrierofantasma": {
+        "area": "Personale",
+        "description": [
+            "Crea un cavallo quasi reale, l’aspetto può variare ed è a preferenza del lanciatore, ma in ogni caso è dotato di sella, briglia e morso.",
+            "Per tutta la durata una creatura può cavalcare il destriero, il quale può percorrere fino a 20 Km in 1 ora.",
+            "L’incantesimo termina se il destriero subisce danno o se viene congedato."
+        ],
+        "duration": "4 ore",
+        "level": "11",
+        "nome_descrittivo": "Destriero Fantasma",
+        "range": "3",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "discolevitante": {
+        "area": "1 Casella",
+        "description": [
+            "Si viene a creare un piano di energia circolare leggermente concavo che fluttua a circa 1 metro di altezza e segue il lanciatore mantenendo sempre la stessa posizione a lui relativa.",
+            "Il disco è in grado di trasportare oggetti per un peso massimo di 200 Kg, ma la sua capienza nel caso di liquidi è limitata a 5 Litri.",
+            "Il disco non risente di alcuna inerzia in relazione ai movimenti del lanciatore, ma gli oggetti che trasporta si, movimenti bruschi del lanciatore, ad esempio rotazioni su se stesso, possono lanciare gli oggetti  appoggiati sul disco a seguito della sua forza centripeta."
+        ],
+        "duration": "1 ora",
+        "level": "7",
+        "nome_descrittivo": "Disco Levitante",
+        "range": "1",
+        "school": "Incantamento",
+        "tags": "Arcano",
+        "time": "2 minuti"
+    },
+    "eruzionevulcanica": {
+        "area": "1 vulcano",
+        "description": [
+            "Questo incantesimo, quando lanciato su di un vulcano inattivo, lo riattiva, generando una violenta eruzione ed un corrispondente flusso piroclastico. Il risultato è generalmente letale per tutto ciò che si trova nelle vicinanze del vulcano, e la nube può causare gravi danni anche a notevole distanza.",
+            "L’utilizzo di questo incantesimo è considerato illegale dalla maggior parte delle legislature civilizzate."
+        ],
+        "duration": "Speciale",
+        "level": "32",
+        "nome_descrittivo": "Eruzione Vulcanica",
+        "range": "400 metri",
+        "school": "Trasmutazione",
+        "tags": "Fuoco",
+        "time": "1 giorno"
+    },
+    "fiammaeterna": {
+        "area": "1 fuoco, massimo 8 metri cubi",
+        "description": [
+            "Lanciato su un fuoco questo incantesimo impedisce che possa essere spento. A prescindere dai metodi utilizzati non sarà possibile spengere il fuoco in alcun modo fin quando la magia del sortilegio non viene dissolta o si esaurisce.",
+            "Il lanciatore può terminare l’effetto dell’incantesimo in qualsiasi momento desideri."
+        ],
+        "duration": "8 ore",
+        "level": "7",
+        "nome_descrittivo": "Fiamma Eterna",
+        "range": "0",
+        "school": "Trasmutazione",
+        "tags": "Fuoco",
+        "time": "10 minuti"
+    },
+    "folatadivento": {
+        "area": "lunghezza 20 metri, larghezza 4 m.",
+        "description": [
+            "Genera una forte folata di vento nella direzione indicata dal lanciatore. Il vento è in grado di disperdere la nebbia e spazzare via oggetti leggeri che si trovano sulla sua strada. Può inoltre spegnere fuochi non magici in condizioni, ma bisogna porre attenzione perché nel caso di fuochi generati da sostanze altamente infiammabili potrebbe non essere sufficiente e anzi peggiorare la situazione aumentando l’estensione del fuoco.",
+            "Creature di taglia media nell’area d’effetto devono superare una prova di Atletica con CD 13 per non essere atterrate, per ogni differenza di taglia si applica un modificatore cumulativo di -3 se più piccola e +3 se più grande. Creature volanti subiscono un ulteriore modificatore di circostanza di -3."
+        ],
+        "duration": "Istantaneo",
+        "level": "3",
+        "nome_descrittivo": "Folata di Vento",
+        "range": "0",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "10 secondi"
+    },
+    "fondersiconlapietra": {
+        "area": "oggetto di pietra sufficientemente grande",
+        "description": [
+            "Questo incantesimo permette al lanciatore di entrare all’interno di un oggetto di pietra abbastanza grande da poter contenere interamente il proprio corpo e tutto il suo equipaggiamento.",
+            "Una volta entrato il personaggio si fonda con la pietra e non rimane alcuna traccia della sua presenza, allo stesso tempo però, il lanciatore all’interno della pietra non può vedere cosa avviene all’esterno e subisce un modificatore di circostanza a Percezione di -4 per sentire i  rumori esterni. Il personaggio non può muoversi all’interno della pietra, ma può decidere di uscire in qualunque momento allo stesso modo in cui è entrato. Se il personaggio non esce dalla roccia prima che l’incantesimo termini esso verrà forzatamente espulso.",
+            "Danni minori alla roccia che lo contiene non danneggia il lanciatore, ma la sua distruzione, anche parziale, pone termine all’incantesimo ed il lanciatore viene espulso, subendo danno proporzionale alla percentuale di roccia frantumata.",
+            "Una volta espulso, se sopravvissuto, il personaggio si ritrova nel punto da cui è entrato ed è Atterrato."
+        ],
+        "duration": "3 ore",
+        "level": "8",
+        "nome_descrittivo": "Fondersi con la Pietra",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "10 secondi"
+    },
+    "formagassosa": {
+        "area": "1 creatura",
+        "description": [
+            "Trasforma il beneficiario in una massa di gas amorfa, in grado di passare dalle fessure più strette e di rimanere in sospensione a poca distanza dal suolo.",
+            "Mentre il personaggio è in forma gassosa non può interagire fisicamente con il mondo né è in grado di compiere alcuna azione che potrebbe fare il personaggio, quale attaccare, lanciare incantesimi, utilizzare oggetti ecc. Inoltre cade inoltre troppo lentamente per essere soggetto ad i danni da caduta. Infine è immune agli attacchi di tipo materiale, ma viene colpito normalmente da tutti gli altri attacchi.",
+            "La forma gassosa si sposta ad una velocità massima pari a 2 Km/h.",
+            "Il beneficiario può interrompere l’effetto dell’incantesimo a volontà."
+        ],
+        "duration": "5 minuti",
+        "level": "12",
+        "nome_descrittivo": "Forma Gassosa",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "15 secondi"
+    },
+    "fortezzamentale": {
+        "area": "1 creatura",
+        "description": [
+            "Questo incantesimo rende il beneficiario resistente alle influenze e compulsioni mentali magiche e sovrannaturali, derivanti da Sortilegi e abilità di specie. Come per tutti i sortilegi, non ha effetto contro poteri da combattimento.",
+            "Il beneficiario ottiene un modificatore di circostanza di +4 alle prove (solitamente Tenacia) per resistere tali effetti."
+        ],
+        "duration": "8 ore",
+        "level": "13",
+        "nome_descrittivo": "Fortezza Mentale",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Mente",
+        "time": "30 secondi"
+    },
+    "giaramagica": {
+        "area": "1 creatura",
+        "description": [
+            "Permette di immagazzinare l'anima di una creatura all'interno di un cristallo, chiamato appunto giara. L’incantesimo funziona solamente se il suo livello (livello del lanciatore o quello della pergamena) è pari o superiore al livello della creatura su cui si lancia.",
+            "Anche se questo incantesimo non ha uso come strumento offensivo (è possibile resistere automaticamente), può essere utilizzato per immagazzinare l'anima di una creatura consenziente, morente o morta da meno di 10 round.",
+            "L'anima può essere utilizzata a piacimento del possessore della giara, utilizzi più comuni sono quelli di mettere tale anima all'interno di un corpo senz'anima per dargli la vita in modo permanente, ad esempio un golem, oppure in un altro corpo ad esempio per scambiare corpo con qualcun altro.",
+            "Se l'anima viene posta all'interno di un corpo che è morto (compreso il corpo originale), l'anima muore con esso, non può quindi essere utilizzata direttamente per risorgere o rianimare un cadavere, può però essere utilizzata per ottenere un Frammento d’Anima, utile a lanciare altri incantesimi che richiedono tale componente.",
+            "Una Resurrezione lanciata con successo su un corpo morto ne recupera l'anima anche se questa è stata intrappolata da Giara Magica."
+        ],
+        "duration": "15 giorni",
+        "level": "15",
+        "nome_descrittivo": "Giara Magica",
+        "range": "5",
+        "school": "Incantamento",
+        "tags": "Negativo",
+        "time": "3 minuti"
+    },
+    "glifodiguardia": {
+        "area": "Massimo 4 Raggio",
+        "description": [
+            "Permette di creare una runa invisibile che viene impressa su di una superficie e funziona come innesco per una trappola.",
+            "Se una creatura entra nella sua area d'effetto il glifo viene attivato, producendo un effetto specifico e consumandosi nel processo.",
+            "È possibile aggiungere delle regole di attivazione a piacere del lanciatore, il livello del sortilegio determina il massimo numero di regole applicabili. Tali regole non possono contenere informazioni di metagioco, ad esempio non è possibile imporre una restrizione che dipenda dalla classe o dal livello di un personaggio. È possibile tuttavia imporre regole basate sull'allineamento delle creature se utilizzato. Il glifo non è in grado di individuare creature eteree o che comunque non sono in grado di interagire sul piano materiale.",
+            "Una volta che il glifo è stato creato diventa completamente indipendente e si innesca dopo circa 1 minuto, non è quindi possibile controllarlo in alcun modo e può attivarsi e anche nuocere al suo creatore.",
+            "Un glifo può essere individuato ed inibito temporaneamente con Manualità, la difficoltà è pari al risultato del tiro di Arcanologia effettuato durante il lancio del sortilegio, ma può essere eliminato solamente con un effetto che annulla la magia.",
+            "Una prova di Analisi con la solita difficoltà, dopo aver individuato un glifo, permette di conoscere le condizioni per cui è stato predisposto ad attivarsi.",
+            "L'effetto che si verifica quando il glifo viene attivato dipende da cosa viene connesso al glifo quando lanciato, è possibile connettere al glifo qualsiasi cosa, da un oggetto ad un incantesimo. Ad esempio se al glifo viene associata un granata questa viene lanciata contro colui che ha fatto attivare il glifo, se viene connesso ad un incantesimo di cura allora la cura viene lanciata quando il glifo si attiva con la potenza del lanciatore originale. Tutti gli oggetti con dimensione massima paragonabile a quella di un'arma possono essere utilizzati con il glifo."
+        ],
+        "duration": "30 giorni",
+        "level": "5 +3 per ogni regola aggiuntiva",
+        "nome_descrittivo": "Glifo di Guardia",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "globodoscurita": {
+        "area": "Raggio 6",
+        "description": [
+            "Funziona come Globo d’oscurità minore ma ha un raggio più esteso e un livello più elevato."
+        ],
+        "duration": "30 minuti",
+        "level": "4",
+        "nome_descrittivo": "Globo d’oscurità",
+        "range": "30 metri",
+        "school": "Illusione",
+        "tags": "Negativo",
+        "time": "15"
+    },
+    "globodoscuritamaggiore": {
+        "area": "Raggio 7,5",
+        "description": [
+            "Funziona come Globo d’oscurità minore ma ha un raggio più esteso e un livello più elevato."
+        ],
+        "duration": "30 minuti",
+        "level": "6",
+        "nome_descrittivo": "Globo d’oscurità Maggiore",
+        "range": "30 metri",
+        "school": "Illusione",
+        "tags": "Negativo",
+        "time": "18"
+    },
+    "globodoscuritaminore": {
+        "area": "Raggio 4,5",
+        "description": [
+            "Crea un globo di oscurità assoluta nell’area d’effetto, in grado di assorbire tutta la luce e rendendo quindi impossibile la visione. Una volta creato il globo non può essere spostato.",
+            "Dal momento che la luce non può attraversare l’area le creature non possono vedere attraverso il globo, nemmeno con Scurovisione o Visione Crepuscolare. Infravisione è invece in grado di funzionare normalmente anche all’interno di un globo di oscurità.",
+            "Fonti di luce normali non hanno effetto sul globo, così come effetti magici che replicano fonti di luce tradizionale. Solamente effetti che generano luce magica (Luce Magica, Sfera Luminosa) sono in grado di illuminare un’area oscurata, e solo se sono di livello superiore al globo (a parità di livello l’oscurità ha la precedenza)."
+        ],
+        "duration": "30 minuti",
+        "level": "2",
+        "nome_descrittivo": "Globo d’oscurità minore",
+        "range": "30 metri",
+        "school": "Illusione",
+        "tags": "Negativo",
+        "time": "12"
+    },
+    "identificaretrappole": {
+        "area": "20 metri",
+        "description": [
+            "Un volta lanciato questo incantesimo il lanciatore effettua una prova di Percezione con un modificatore di circostanza di +4.",
+            "Tale valore viene utilizzato come prova di individuazione per tutte le trappole presenti nell’area d’effetto. Per ogni trappola se la prova ha successo e la trappola è in linea visiva allora questa viene individuata normalmente, se non è in linea visiva non viene individuata, ma il lanciatore viene comunque a conoscenza della sua presenza all’interno dell’area d’effetto."
+        ],
+        "duration": "istantaneo",
+        "level": "11",
+        "nome_descrittivo": "Identificare Trappole",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Arcano",
+        "time": "1 minuto"
+    },
+    "identificazioneocculta": {
+        "area": "1 oggetto o creatura",
+        "description": [
+            "Permette di identificare più facilmente un oggetto magico o meccanismo toccato se non è schermato contro effetti di individuazione.",
+            "L’incantesimo offre un modificatore di circostanza di +4 alle prove di Perspicacia per comprenderne il funzionamento."
+        ],
+        "duration": "Istantaneo",
+        "level": "5",
+        "nome_descrittivo": "Identificazione Occulta",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Arcano",
+        "time": "2 minuti"
+    },
+    "illusioneminore": {
+        "area": "1 oggetto",
+        "description": [
+            "Questo incantesimo crea un illusione puramente visiva nel punto designato di un singolo oggetto o creatura conosciuto al lanciatore.",
+            "L’illusione è immobile, ma può avere piccoli e semplici movimenti per renderla più realistica, ad esempio può essere una bandiera che sventola al vento, ma creare l’illusione del movimento di una creatura è praticamente impossibile. Una qualunque illusione di una creatura che necessità di molte parti in movimento, come ad esempio un gatto, risulterà troppo rigida e quindi chiaramente identificabile come illusione, a meno che la creatura stessa non sia particolarmente statica, come ad esempio un golem di pietra."
+        ],
+        "duration": "Fin quando mantenuta",
+        "level": "3",
+        "nome_descrittivo": "Illusione Minore",
+        "range": "50 metri",
+        "school": "Illusione",
+        "tags": "Mente, Sostenimento",
+        "time": "12"
+    },
+    "illusionesilenziosa": {
+        "area": "20 Raggio",
+        "description": [
+            "Questo incantesimo crea un illusione puramente visiva nel punto designato di un singolo oggetto o creatura conosciuto al lanciatore.",
+            "Il lanciatore può muovere l’illusione all’interno dell’area di effetto, ma per conferirgli un movimento naturale ed ingannare un eventuale osservatore deve superare una prova contrapposta di Autorità contro Perspicacia degli osservatori che si vogliono ingannare."
+        ],
+        "duration": "Fin quando mantenuta",
+        "level": "6",
+        "nome_descrittivo": "Illusione Silenziosa",
+        "range": "360 metri",
+        "school": "Illusione",
+        "tags": "Mente, Sostenimento",
+        "time": "1 minuto"
+    },
+    "immagineprogrammata": {
+        "area": "Raggio 30",
+        "description": [
+            "Permette di generare una scena illusoria che coinvolge i 5 sensi e che si svolge secondo il copione scelto dal lanciatore.",
+            "L'illusione può essere toccata come se fosse un oggetto reale, e può reagire a stimoli se programmata opportunamente dal lanciatore, in modo da sembrare realistica. Tuttavia l'illusione non può simulare completamente il comportamento naturale di creature perché non è intelligente, e può solo reagire secondo quanto programmato dal lanciatore in modo automatico, il che la rende facile da smascherare sotto attenta osservazione."
+        ],
+        "duration": "7 giorni",
+        "level": "23",
+        "nome_descrittivo": "Immagine Programmata",
+        "range": "0",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "10 minuti"
+    },
+    "individuareilmagico": {
+        "area": "8 raggio, si sposta con il lanciatore",
+        "description": [
+            "Permette di sentire la presenza di magia entro l'area d'effetto.",
+            "Se il lanciatore percepisce la magia può effettuare una prova di Percezione e l'incantesimo gli permette di vedere un'aura azzurra intorno alle creature ed oggetti che contengono magia.",
+            "Il personaggio può percepire la magia anche attraverso oggetti solidi, ma per vedere l'aura deve avere contatto visivo con l'oggetto in questione.",
+            "L'aura non sarà visibile su illusioni di qualsiasi tipo. Le illusioni sono quindi in grado di proteggere oggetti dall’individuazione magica."
+        ],
+        "duration": "10 minuti",
+        "level": "1",
+        "nome_descrittivo": "Individuare il magico",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Arcano",
+        "time": "1 minuto"
+    },
+    "individuareoggetto": {
+        "area": "10 Km",
+        "description": [
+            "Permette di percepire la direzione di un oggetto che sia ben conosciuto al lanciatore, oppure in bene in vista anche tramite altri mezzi magici.",
+            "Se utilizzato per cercare oggetti in modo generici l'incantesimo punterà verso l'oggetto più vicino di quel tipo.",
+            "Se utilizzato per trovare un oggetto specifico ed unico è necessario  che, oltre ad essere conosciuto, tale oggetto sia stato toccato con mano almeno una volta.",
+            "Se la forma dell'oggetto viene cambiata l'incantesimo non è in grado di individuarlo."
+        ],
+        "duration": "30 minuti",
+        "level": "9",
+        "nome_descrittivo": "Individuare Oggetto",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "5 minuti"
+    },
+    "influenzarelementi": {
+        "area": "4 metri raggio",
+        "description": [
+            "Questo subdolo incantesimo permette al lanciatore di provocare un’emozione mentale sulle vittime presenti nell’area d’effetto, questo può essere ad esempio, fiducia, odio, simpatia e molto altro. Funziona in modo simile a Suggestionare.",
+            "Per funzionare è necessario parlare al bersaglio, quindi nel caso in cui la vittima non comprenda la lingua il potere non ha effetto.",
+            "Ogni vittima di questo potere deve effettuare una prova di Tenacia contro CD 25, in alternativa la CD può essere determinata come 11 + grado Persuasione del lanciatore. Come per Suggestionare il DM può applicare un modificatore di circostanza a seconda della plausibilità della suggestione.",
+            "Se la vittima fallisce la prova il lanciatore può influenzare la sua mente per fargli credere ciò che vuole a patto che sia plausibile. Ad esempio potrebbe convincere un gruppo di guardie a far passare lui ed i propri compagni attraverso un’area riservata, convincendole che loro sono autorizzati e non è necessario fare controlli a riguardo."
+        ],
+        "duration": "4 ore",
+        "level": "21",
+        "nome_descrittivo": "Influenzare le Menti",
+        "range": "6 metri",
+        "school": "Incantamento",
+        "tags": "Mente",
+        "time": "30 secondi"
+    },
+    "infravisionemagica": {
+        "area": "1 creatura",
+        "description": [
+            "Il beneficiario del sortilegio guadagna Infravisione come descritta nel Manuale de Giocatore."
+        ],
+        "duration": "3 ore",
+        "level": "11",
+        "nome_descrittivo": "Infravisione Magica",
+        "range": "tocco",
+        "school": "Divinazione",
+        "tags": "Positivo",
+        "time": "20"
+    },
+    "insonorizzaremagico": {
+        "area": "6 metri raggio",
+        "description": [
+            "Questo incantesimo influenza una singola stanza, o fino ad un’area massima pari all’area d’effetto. Una volta creata l’area non può essere spostata.",
+            "L’area protetta diventa insonorizzata lungo il perimetro della stanza, riducendo notevolmente il suono che transita verso l’esterno, ma le creature all’interno dell’area possono continuare a sentire i rumori esterni normalmente.",
+            "Un creatura all’esterno che provi a sentire rumori provenienti dall’interno della stanza subisce un modificatore di circostanza di -⁠10 alla prova."
+        ],
+        "duration": "12 ore",
+        "level": "2",
+        "nome_descrittivo": "Insonorizzare Magico",
+        "range": "10 metri",
+        "school": "Abiurazione",
+        "tags": "Aria",
+        "time": "10 minuti"
+    },
+    "invisibilitaeffimera": {
+        "area": "1 creatura",
+        "description": [
+            "Il Lanciatore diventa Invisibile ma tale effetto non è praticamente utilizzabile in combattimento perché termina nel momento in cui il beneficiario inizia una qualsiasi azione di combattimento (durante la fase di Dichiarazione).",
+            "L’effetto permane se il beneficiario effettua semplici azioni come ad esempio aprire una porta, a patto che non interagisca con nessun’altra creatura.",
+            "Una creatura sospettosa che cerca specificatamente creature invisibili può effettuare una prova di Percepire contrapposta contro Furtività della creatura invisibile, se riesce l’incantesimo viene annullato. È importante ricordare che la condizione di invisibilità offre sostanziali vantaggi alla furtività, e quindi è solitamente può efficace utilizzare qualche metodo per vedere l’invisibile."
+        ],
+        "duration": "10 minuti",
+        "level": "6",
+        "nome_descrittivo": "Invisibilità Effimera",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "25"
+    },
+    "invisibilitaeffimeradimassa": {
+        "area": "6 metri raggio",
+        "description": [
+            "Funziona come Invisibilità Effimera ma colpisce tutte le creature nell’area d’effetto."
+        ],
+        "duration": "10 minuti",
+        "level": "13",
+        "nome_descrittivo": "Invisibilità Effimera di Massa",
+        "range": "0",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "invisibilitaprotratta": {
+        "area": "1 creatura",
+        "description": [
+            "Il Lanciatore diventa Invisibile per tutta la durata dell’effetto.",
+            "L’effetto svanisce se il beneficiario compie un’azione ostile, durante la sua fase di dichiarazione, ma a differenza di Invisibilità Effimera può compiere azioni complesse ed interagire con altre creature senza che l’effetto venga interrotto.",
+            "Come per Invisibilità Effimera, se il beneficiario viene percepito da qualche creatura l’effetto dell’incantesimo termina."
+        ],
+        "duration": "2 ore",
+        "level": "16",
+        "nome_descrittivo": "Invisibilità Protratta",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "leggereipensieri": {
+        "area": "1 creatura",
+        "description": [
+            "Consente al lanciatore di leggere i pensieri superficiali di un’altra mente. È possibile percepire solo i pensieri correnti o quelli ancora presenti in superficie, e non è possibile accedere alla memoria della vittima o di penetrare nel suo subconscio.",
+            "I pensieri vengono letti nella forma cui sono prodotti: la maggior parte delle creature intelligenti pensano sotto forma di parole (e quindi egli deve essere in grado di comprendere la loro lingua per capirli); le creature non intelligenti pensano sotto forma di immagini.",
+            "Si deve essere in grado di poter vedere la vittima, anche se non necessariamente con i propri occhi.",
+            "Se la vittima ha il sospetto di essere sotto l’effetto del potere può effettuare una prova di Perspicacia con difficoltà 16 per accorgersi dell’intrusione. Se conosce di essere sotto l’effetto del potere può  tentare un tiro di Sopravvivenza con difficoltà 10 per terminare immediatamente l’effetto del potere."
+        ],
+        "duration": "10 minuti",
+        "level": "9",
+        "nome_descrittivo": "Leggere i Pensieri",
+        "range": "20 m.",
+        "school": "Divinazione",
+        "tags": "Mente, Sostenimento",
+        "time": "30 secondi"
+    },
+    "letturadeglioggetti": {
+        "area": "1 oggetto",
+        "description": [
+            "Il lanciatore pone una mano sull’oggetto e lancia l’incantesimo.",
+            "Al termine del lancio viene a conoscenza di un singolo evento che ha coinvolto tale oggetto accaduto non più di un mese fa. L’evento viene determinato dal DM, in base a quanti eventi sono occorsi. Se tale oggetto è stato molto utilizzato sarà difficile per il lanciatore trovare un evento specifico al primo tentativo.",
+            "Se si decide di lanciare più volte questo incantesimo sul solito oggetto è possibile ottenere più informazioni riguardanti un evento conosciuto, oppure cercare di trovare un evento diverso."
+        ],
+        "duration": "Istantanea",
+        "level": "5",
+        "nome_descrittivo": "Lettura degli Oggetti",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "1 ora"
+    },
+    "letturadeipresagi": {
+        "area": "personale",
+        "description": [
+            "Quando si lancia questo incantesimo è necessario definire uno specifico obbiettivo da raggiungere, piano che si intende seguire, oppure un evento che ci si aspetta che possa avvenire entro una settimana.",
+            "Come risultato l’incantesimo fornisce un indizio criptico che potrebbe aiutare nel decidere come modificare i propri piani a riguardo.",
+            "Solitamente l’indizio si verifica come uno strano evento che il lanciatore è in grado di notare, ad esempio potrebbe rompersi un oggetto del lanciatore ad indicare un prospetto negativo. In alcuni rari casi il lanciatore potrebbe sentire delle parole nella sua testa in forma di vaga profezia o che facciano riferimento ad eventi passati che possano mostrare un parallelo con l’evento attuale."
+        ],
+        "duration": "Istantanea",
+        "level": "10",
+        "nome_descrittivo": "Lettura dei Presagi",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Arcano",
+        "time": "1 ora"
+    },
+    "levitazione": {
+        "area": "1 Creatura",
+        "description": [
+            "Questo potere consente al beneficiario di fluttuare nell’aria, guadagnando o perdendo altitudine ad una velocità massima di 10 cm. al secondo.",
+            "Il beneficiario non può spostarsi orizzontalmente a meno che non sia in grado di toccare una superficie su cui spingersi o non utilizzi un qualche altro metodo esterno. Se non ha modo di stabilizzarsi il beneficiario è inoltre in totale balia dei venti, che lo può spostare con solo la frizione dell’aria a fare da freno.",
+            "È sempre possibile far levitare il proprio peso, tuttavia non può levitare se il peso eccede il proprio peso corporeo +10 Kg.",
+            "Quando il potere termina il personaggio cade verso il suolo secondo la gravità vigente.",
+            "Levitare in combattimento offre seri svantaggi in quanto il personaggio non può spostarsi normalmente, schivare o parare. Inoltre dato che il personaggio non ha punti di ancoraggio, subisce una penalità di +10 Mancare mentre sta levitando."
+        ],
+        "duration": "20 minuti",
+        "level": "8",
+        "nome_descrittivo": "Levitazione",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "10 secondi"
+    },
+    "lucchettomagico": {
+        "area": "1 lucchetto",
+        "description": [
+            "Questo incantesimo può essere utilizzato per chiudere magicamente un lucchetto.",
+            "Fin quando l’incantesimo perdura la CD per scassinare il lucchetto aumenta di +4. Inoltre il lucchetto non può essere aperto normalmente con la chiave originale, ma utilizzandola consente un tentativo di scassinarlo a difficoltà normale (senza applicare l’incremento di CD).",
+            "Se la serratura non può essere aperta con Manualità il sortilegio non ha alcun effetto."
+        ],
+        "duration": "24 ore",
+        "level": "5",
+        "nome_descrittivo": "Lucchetto Magico",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "1 minuto"
+    },
+    "lucedellarivelazione": {
+        "area": "6 metri Raggio",
+        "description": [
+            "Una lampo di luce colpisce tutte le creature presenti nell’area d’effetto, conferendogli un modificatore di circostanza di +1 a tutte le prove di Percezione."
+        ],
+        "duration": "10 minuti",
+        "level": "6",
+        "nome_descrittivo": "Luce della Rivelazione",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "20"
+    },
+    "lucemagica": {
+        "area": "Raggio → 4  luminoso, 8 fioco",
+        "description": [
+            "Funziona come Luce Magica Minore ma genera più luce ed ha un livello più alto."
+        ],
+        "duration": "1 ora",
+        "level": "4",
+        "nome_descrittivo": "Luce Magica",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "15"
+    },
+    "lucemagicamaggiore": {
+        "area": "Raggio → 5  luminoso, 10 fioco",
+        "description": [
+            "Funziona come Luce Magica Minore ma genera più luce ed ha un livello più alto."
+        ],
+        "duration": "1 ora",
+        "level": "6",
+        "nome_descrittivo": "Luce Magica Maggiore",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "18"
+    },
+    "lucemagicaminore": {
+        "area": "Raggio → 3  luminoso, 6 fioco",
+        "description": [
+            "Crea una fonte di luce nell’oggetto toccato, che illumina completamente la prima area d’effetto e solo con luce fioca la seconda. Se lanciato su di un oggetto trasportabile la luce si sposterà con l'oggetto fino al termine dell’incantesimo.",
+            "Questo incantesimo è in grado di illuminare un’area coperta da un effetto di oscurità di livello pari o inferiore."
+        ],
+        "duration": "1 ora",
+        "level": "2",
+        "nome_descrittivo": "Luce Magica Minore",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "12"
+    },
+    "lucemagicasuperiore": {
+        "area": "Raggio → 6  luminoso, 12 fioco",
+        "description": [
+            "Funziona come Luce Magica Minore ma genera più luce ed ha un livello più alto."
+        ],
+        "duration": "1 ora",
+        "level": "8",
+        "nome_descrittivo": "Luce Magica Superiore",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "21"
+    },
+    "magnetismo": {
+        "area": "1 bersaglio",
+        "description": [
+            "Questo incantesimo è in grado di generare un campo elettromagnetico localizzato su di un singolo bersaglio o su un’area.",
+            "Se viene utilizzato su di un oggetto ferromagnetico questo viene magnetizzato per tutta la durata del potere.",
+            "La Magnetizzazione esercita una forza massima che è poco più di quella di 50Kg (500 Newton). Gli effetti di questo potere sono intuitivi: si può far sì che l’oggetto attragga o respinga altri oggetti metallici. Il campo magnetico dell’oggetto si estende fino a 6m. di distanza.",
+            "Nel decidere il modo esatto in cui questo potere agisce sull’oggetto interessato, il DM ricordi che la cosa più pesante resta ferma, mentre quella più leggera si muove verso di essa oppure si allontana da essa. Se viene magnetizzata la spada corta brandita da un personaggio e il compagno che gli sta davanti indossa una corazza di piastre, è la spada che volerà addosso a quest’ultimo e non il contrario. Colui che indossa o impugna un oggetto a cui sono state conferite proprietà magnetiche può cercare di mantenere il controllo dell’oggetto, superando un tiro di Atletica 13.",
+            "Oggetti che hanno un peso ridotto acquistano una velocità notevole quando vengono attirati o respinti da un campo magnetico come quello provocato da questo potere",
+            "Gli altri effetti sono lasciati all’immaginazione dei giocatori e del DM."
+        ],
+        "duration": "5 ore",
+        "level": "8",
+        "nome_descrittivo": "Magnetismo",
+        "range": "10 m.",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "1 minuto"
+    },
+    "malattiapermanentex": {
+        "area": "1 bersaglio",
+        "description": [
+            "Questo sortilegio è in grado di replicare una qualsiasi malattia da combattimento, in questo caso ogni malattia è indicata con <x> e conta come incantesimo diverso. Non può replicare malattie che hanno variabili dipendenti dal LL.",
+            "La vittima può resistere con una prova di Resilienza riuscita contro CD pari a 11 + 2/3 Livello sortilegio.",
+            "Se la vittima fallisce subisce l’effetto della malattia, e tale effetto permane fin quando non viene rimosso."
+        ],
+        "duration": "permanente",
+        "level": "1+",
+        "nome_descrittivo": "Malattia Permanente <x>",
+        "range": "30 metri",
+        "school": "Incantamento",
+        "tags": "Elemento variabile",
+        "time": "10 minuti"
+    },
+    "maledizionepermanentex": {
+        "area": "1 creatura",
+        "description": [
+            "Questo sortilegio è in grado di replicare una qualsiasi maledizione da combattimento, in questo caso ogni maledizione è indicata con <x> e conta come incantesimo diverso. Non può replicare maledizioni che hanno variabili dipendenti dal LL.",
+            "La vittima può resistere con una prova di Resilienza riuscita contro CD pari a 11 + 2/3 Livello sortilegio.",
+            "Se la vittima fallisce subisce l’effetto della maledizione, e tale effetto permane fin quando non viene rimosso."
+        ],
+        "duration": "permanente",
+        "level": "1+",
+        "nome_descrittivo": "Maledizione Permanente <x>",
+        "range": "30 metri",
+        "school": "Incantamento",
+        "tags": "Elemento variabile",
+        "time": "10 minuti"
+    },
+    "manipolarelacqua": {
+        "area": "1 metro diametro (3 metri cubi)",
+        "description": [
+            "Permette di manipolare un piccola parte di una massa d’acqua, per un massimo pari all’area d’effetto.",
+            "L’acqua può essere mossa rapidamente in una direzione per  essere lanciata verso un bersaglio, ma non abbastanza forte da provocare danni, una volta uscita dall’area d’effetto se ne perde il controllo e l’incantesimo termina.",
+            "Alternativamente è possibile mantenere l’acqua nell’area designata manipolandola in modo da assumere semplici forme o, se si possiede sufficiente capacità artistica anche forme più complesse o animate, ma ciò richiede una prova di Intrattenimento con difficoltà basata sulla complessità della forma che si cerca di ottenere."
+        ],
+        "duration": "10 minuti massimo",
+        "level": "2",
+        "nome_descrittivo": "Manipolare l’Acqua",
+        "range": "10 m.",
+        "school": "Trasmutazione",
+        "tags": "Acqua",
+        "time": "10 secondi"
+    },
+    "manipolarelaterra": {
+        "area": "1 metro diametro (3 metri cubi)",
+        "description": [
+            "Il lanciatore sceglie una porzione di terra entro il raggio d’azione e contenuta all’interno dell’area d’effetto.",
+            "Esso può manipolare la terra secondo la sua volontà, spostandola per assumere una particolare posizione o formando immagini rozze, lettere comprese. Se lo desidera può scavare la terra per depositarla subito all’esterno dell’area d’effetto.",
+            "Il movimento della terra non è abbastanza rapido da infliggere danni o poter essere considerato pericoloso."
+        ],
+        "duration": "Istantaneo",
+        "level": "2",
+        "nome_descrittivo": "Manipolare la Terra",
+        "range": "10 m.",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "10 secondi"
+    },
+    "manipolarelefiamme": {
+        "area": "1 fuoco, max 3 metri cubo",
+        "description": [
+            "Lanciato su di un fuoco entro il raggio d’azione questo incantesimo può generare uno dei seguenti effetti:"
+        ],
+        "duration": "Istantaneo",
+        "level": "2",
+        "nome_descrittivo": "Manipolare le Fiamme",
+        "range": "20 m.",
+        "school": "Trasmutazione",
+        "tags": "Fuoco",
+        "time": "10 secondi"
+    },
+    "manipolaresogni": {
+        "area": "1 creatura che dorme",
+        "description": [
+            "Permette di alterare i sogni di una creatura, inserendo in essi una scena a scelta del lanciatore.",
+            "Il bersaglio deve essere ben conosciuto (anche se non necessariamente amico) affinché l'incantesimo possa funzionare, o in alternativa può essere toccato direttamente con le mani quando si lancia l'incantesimo.",
+            "I sogni manipolati non possono nuocere alla vittima in alcun modo."
+        ],
+        "duration": "6 ore massimo",
+        "level": "14",
+        "nome_descrittivo": "Manipolare Sogni",
+        "range": "250 metri",
+        "school": "Incantamento",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "manipolarevistaeudito": {
+        "area": "1 creatura",
+        "description": [
+            "Grazie a questo sortilegio il lanciatore è in grado di influenzare il senso della vista e dell’udito nella mente della creatura scelta come bersaglio, non è pertanto un’illusione efficace su chiunque lo osservi, ma solo sulla vittima.",
+            "Affinché il sortilegio abbia effetto è necessario superare un tiro Persuasione contro Perspicacia. Se la vittima non si accorge che questo potere viene utilizzato su di lui allora il DM può concedere una penalità al tiro del difensore o negarlo interamente.",
+            "Se il sortilegio ha successo il lanciatore è in grado di poter cambiare ciò che la vittima vede e sente, può ad esempio rendere se stesso ed i suoi compagni invisibili a tale creatura, oppure fargli vedere cose che non esistono. Se l’illusione è palesemente assurda, ad esempio se si fa comparire un drago dal nulla, il DM può concedere un bonus arbitrario al tiro del difensore per evitarne gli effetti.",
+            "Va notato che questo potere agisce esclusivamente sulla vista e l’udito: gli osservatori influenzati possono sempre annusare o usare il tatto per capire che qualcosa non torna, quindi anche se la vittima non ha avuto la possibilità di accorgersi dell’effetto potrà effettuare un nuovo tiro nel momento in cui inizia a sospettare qualcosa.",
+            "L’effetto di questo potere può essere annullato da effetti che permettono di smascherare le illusioni, inoltre dato che questo potere agisce sulla mente non può funzionare con creature prive di mente."
+        ],
+        "duration": "10 minuti",
+        "level": "13",
+        "nome_descrittivo": "Manipolare vista e udito",
+        "range": "25 metri",
+        "school": "Incantamento",
+        "tags": "Potenziale, Mente",
+        "time": "2 minuti"
+    },
+    "manotelecinetica": {
+        "area": "10 metri raggio",
+        "description": [
+            "Crea una forza telecinetica invisibile in grado di funzionare esattamente come una mano umana, che può volare all’interno dell’area d’effetto centrata sul lanciatore.",
+            "La mano si sposta lentamente alla velocità di 1 m/s (3,6 Km/h) e non può danneggiare creature o attaccare. Può trasportare o manipolare oggetti, ed ha una capacità di carico massimo pari a 5 Kg.",
+            "La mano non può compiere azioni troppo complesse, come disarmare trappole, perché il lanciatore non può utilizzare le proprie capacità attraverso di essa, inoltre non può compiere azioni che richiederebbero 2 mani.",
+            "Muovere la mano richiede concentrazione da parte del lanciatore, il quale non può compiere azioni alternative mentre lo fa. Se la concentrazione viene interrotta l’incantesimo non termina, ma la forza cessa di essere applicata ed eventuali oggetti trasportati cadono secondo la gravità."
+        ],
+        "duration": "10 minuti",
+        "level": "6",
+        "nome_descrittivo": "Mano Telecinetica",
+        "range": "0",
+        "school": "Richiamo",
+        "tags": "Mente",
+        "time": "30 secondi"
+    },
+    "messaggiotelepatico": {
+        "area": "20 Km. distanza",
+        "description": [
+            "Invia un messaggio telepatico composto al più da 25 parole verso una persona conosciuta. Se il bersaglio è all’interno dell’area d’effetto allora riceverà il messaggio, e potrà rispondere tramite un altro messaggio con le medesime limitazioni."
+        ],
+        "duration": "Istantaneo",
+        "level": "7",
+        "nome_descrittivo": "Messaggio Telepatico",
+        "range": "0",
+        "school": "Incantamento",
+        "tags": "Aria",
+        "time": "10 minuti"
+    },
+    "modellareillegno": {
+        "area": "un pezzo di legno, massimo 8 m3",
+        "description": [],
+        "duration": "istantaneo",
+        "level": "5",
+        "nome_descrittivo": "Modellare il Legno",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "1 minuto"
+    },
+    "modellareilterreno": {
+        "area": "20 raggio (circa 30 metri di raggio)",
+        "description": [
+            "Questo sortilegio permette di modificare in modo limitato alcuni aspetti del terreno. Non ha effetto su terreno roccioso o su costruzioni artificiali, a meno che non ci sia la possibilità di avere accetto alla nuda terra.",
+            "Si può modificare la forma della terra per un fattore pari al 50% della massa totale presente nell’area d’effetto, spostando massa da una zona all’altra per formare salite o discese e quant’altro.",
+            "La trasformazione impiega tutto il tempo di lancio a compiersi, eseguendo una metamorfosi progressiva e lineare fino a raggiungere la forma desiderata.",
+            "Tutte le creazioni ottenute con questo sortilegio sono affette dalle leggi naturali e alla forza di gravità, non è possibile creare formazioni che vadano contro le leggi della fisica."
+        ],
+        "duration": "permanente",
+        "level": "17",
+        "nome_descrittivo": "Modellare il terreno",
+        "range": "26",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "20 minuti"
+    },
+    "modellarelapietra": {
+        "area": "50 m3 (cubo di poco meno di 4m. lato)",
+        "description": [
+            "Questo incantesimo permette di modellare la pietra entro l'area d'effetto, permettendo al lanciatore di dargli qualsiasi forma desideri, ma ottenendo sempre un risultato grezzo, senza rifiniture, parti movibili e cose simili. Può ad esempio far sprofondare il terreno, creare un piccolo muro, trasformare una parete rocciosa in una scala, aprire varchi nella fortificazioni di pietra e molto altro.",
+            "La modellazione è lenta e graduale (pari al tempo di lancio), non può essere quindi utilizzata efficacemente in combattimento.",
+            "Questo incantesimo non funziona se la pietra è magica o protetta magicamente."
+        ],
+        "duration": "permanente",
+        "level": "13",
+        "nome_descrittivo": "Modellare la Pietra",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "20 minuti"
+    },
+    "movimentidaragno": {
+        "area": "1 creatura",
+        "description": [
+            "Permette al beneficiario di aderire alle superfici con mani e piedi, e di muoversi agevolmente su quasi qualsiasi superficie alla stessa velocità con cui si sposta camminando."
+        ],
+        "duration": "20 minuti",
+        "level": "6",
+        "nome_descrittivo": "Movimenti da Ragno",
+        "range": "tocco",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "10 secondi"
+    },
+    "murodiforza": {
+        "area": "90 m2",
+        "description": [
+            "Crea un piano di energia invisibile ma luminoso in una zona a scelta dal lanciatore. Tale piano può avere qualunque orientamento e qualsiasi dimensione a patto che si rispetti la sua superficie massima.",
+            "Il muro oppone una forza uguale e contraria a quella ricevuta, è invulnerabile ai danni ed è impenetrabile agli attacchi Materiali ed Energetici; fornisce quindi copertura completa in entrambe le direzioni, tuttavia essendo trasparente non impedisce la visuale e non offre alcun riparo contro attacchi Potenziali.",
+            "Il muro può essere distrutto un qualunque effetto in grado di dissolvere la magia ma solo se è di livello pari o inferiore a quello di questo sortilegio.."
+        ],
+        "duration": "1 ora",
+        "level": "19",
+        "nome_descrittivo": "Muro di Forza",
+        "range": "10 m.",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "35"
+    },
+    "murodossa": {
+        "area": "18 metri lungo, 5m. Alto, 1m. spesso",
+        "description": [
+            "Crea un muro composto di Ossa.",
+            "Il muro non ostruisce completamente la vista anche se ostacola completamente il passaggio, ci sono vari varchi che, anche se troppo piccoli per far passare una creatura media, sono sufficienti per far passare creature piccole e attacchi.",
+            "Data la presenza di tali varchi la sua percentuale di copertura non è perfetta, ed equivale ad una Copertura +65 in entrambe le direzioni.",
+            "Le ossa sono decisamente robuste, ma il muro può essere facilmente distrutto con sufficiente tempo a disposizione."
+        ],
+        "duration": "8 ore",
+        "level": "10",
+        "nome_descrittivo": "Muro d’Ossa",
+        "range": "10 m.",
+        "school": "Abiurazione",
+        "tags": "Terra",
+        "time": "1 minuto"
+    },
+    "muroillusorio": {
+        "area": "400 m2  massimo",
+        "description": [
+            "Genera una parete illusoria di qualsiasi tipo il lanciatore voglia.",
+            "Il muro appare assolutamente reale e nessuna prova visiva potrà smascherarlo, tuttavia è solo un illusione e quindi può essere attraversato da oggetti solidi."
+        ],
+        "duration": "30 giorni",
+        "level": "20",
+        "nome_descrittivo": "Muro Illusorio",
+        "range": "10 metri",
+        "school": "Illusione",
+        "tags": "Mentale",
+        "time": "20 minuti"
+    },
+    "mutaformaselvatica": {
+        "area": "Personale",
+        "description": [
+            "Il lanciatore muta la propria forma fisica in quella di un piccolo animale a scelta.",
+            "Tutto l'equipaggiamento viene trasformato con il lanciatore, il quale non può quindi utilizzare nessun oggetto e può combattere solo in mischia con le sue armi naturali, ma data la sua piccola taglia esso ottiene una penalità di -6 LA e non può lanciare incantesimi.",
+            "Mentre è in forma animale guadagna tutte le caratteristiche di tale animale, ad esempio un uccello potrà volare o un pesce stare indefinitamente sott'acqua (almeno fin quanto dura l'incantesimo)."
+        ],
+        "duration": "8 ore o fin quando annullato",
+        "level": "18",
+        "nome_descrittivo": "Mutaforma selvatica",
+        "range": "0",
+        "school": "Trasmutazione",
+        "tags": "xxx, No Critico, Soglia di Potere",
+        "time": "1 minuto"
+    },
+    "nubedicenere": {
+        "area": "8 metri raggio",
+        "description": [
+            "Richiama una nube di cenere e fumo nell’area d’effetto.",
+            "La nebbia limita la visibilità ed impone un modificatore di circostanza di -4 alle prove di percezione, inoltre non è possibile utilizzare l’olfatto all’interno dell’area.",
+            "Tutte le creature volanti che non possono levitare sul posto all’interno della nube devono superare una prova di Acrobazia con CD 15 o cadere al suolo.",
+            "La temperatura nell’area si alza a livelli pericolosi, le creature nell’area che non sono protette dalle alte temperature devono superare una prova di Resilienza a CD 15 o debilitate per 1 minuto.",
+            "La cenere può incendiare materiali facilmente infiammabili, come sterpaglia secca o carta, ma difficilmente sarà in grado di generare un incendio degno di nota a meno che non ci sia molto combustibile nell’area."
+        ],
+        "duration": "10 minuti",
+        "level": "7",
+        "nome_descrittivo": "Nube di Cenere",
+        "range": "30 metri",
+        "school": "Trasmutazione",
+        "tags": "Fuoco",
+        "time": "1 minuto"
+    },
+    "paretedipietra": {
+        "area": "90 m2, Spesso 1m.",
+        "description": [
+            "Questo incantesimo crea un muro di pietra nell'area bersaglio.",
+            "Le dimensioni del muro sono a piacere rispettando la massima superficie e spessore. È sempre dritto (è un parallelepipedo) e non può essere modellato in alcuno modo a meno di non utilizzare un altro potere.",
+            "Il muro offre una Copertura opaca in base alle sue dimensioni rispetto alla superficie che è in grado di coprire (vedi la tabella delle coperture).",
+            "Il muro è molto resistente ma può comunque essere distrutto con sufficiente forza o strumenti adatti a frantumare la pietra. Viene totalmente rimosso da un effetto che annulla la magia."
+        ],
+        "duration": "2 ore",
+        "level": "18",
+        "nome_descrittivo": "Parete di Pietra",
+        "range": "10 m.",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "20 Secondi"
+    },
+    "parlareconimorti": {
+        "area": "1 Cadavere",
+        "description": [
+            "Permette ad  un cadavere di una creatura intelligente di comunicare vocalmente.",
+            "Il cadavere parlerà come avrebbe fatto da vivo, utilizzando la sua bocca e corde vocali, questo vuol dire che i danni che ha riportato non gli permettono di emettere suoni l’incantesimo non sarà molto utile, per lo più considerando il fatto che il cadavere non può muoversi o gesticolare, ma solo parlare.",
+            "Anche se il cadavere è in grado di parlare più è danneggiato e più debole è il collegamento con la sua memoria e peggiori sono le sue capacità cognitive, il che può rendere comunque incomprensibile quello che dice.  Ne consegue inoltre che più tempo è passato dalla sua morte e più sarà difficile che il cadavere riesca a parlare.",
+            "Questo incantesimo permette semplicemente di parlare con il cadavere per il tempo a disposizione, ma non impone su di esso alcun obbligo. Il cadavere non è obbligato a dire la verità e quindi i PG dovranno essere convincenti se vogliono ottenere le informazioni che cercano, tenendo presente che intimidazioni, minacce e tortura non sono si alcuna utilità contro un cadavere.",
+            "Dopo che un cadavere è stato recipiente di questo incantesimo, ne diventa immune per una settimana, a prescindere da chi abbia lanciato l’incantesimo su di esso."
+        ],
+        "duration": "10 minuti",
+        "level": "12",
+        "nome_descrittivo": "Parlare con i Morti",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Negativo",
+        "time": "10 minuti"
+    },
+    "passapareti": {
+        "area": "tunnel 2 metri diametro",
+        "description": [
+            "Crea un passaggio attraverso un qualsiasi materiale solido non magico del diametro di 2 metri e profondo al massimo 6 metri.",
+            "L’apertura permane per breve tempo e può essere percorsa da qualunque creatura di dimensioni adeguate. La presenza del buco non intacca l’integrità strutturale della parete.",
+            "Chiunque si trovi all’interno del passaggio quando si chiude deve effettuare una prova di Acrobazia con CD 18 per riuscire a raggiungere l’uscita più vicina incolume, altrimenti subisce danno pari al 50% dei propri punti vita massimi e viene espulso comunque sul lato più vicino."
+        ],
+        "duration": "1 minuto",
+        "level": "12",
+        "nome_descrittivo": "Passa-pareti",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "10 minuti"
+    },
+    "percepireostilita": {
+        "area": "Raggio 12",
+        "description": [
+            "Il beneficiario è in grado di percepire intenti ostili diretti contro di lui da creature senzienti entro l’area d’effetto, anche attraverso barriere solide come muri, ma non attraverso effetti che bloccano la magia o effetti di individuazione magica. Non è detto che l’ostilità percepita si manifesti direttamente in azioni offensive, questo vuol dire ad esempio che il sortilegio può anche essere utilizzato anche durante conversazioni per percepire eventuali predisposizioni ostili ma non necessariamente immediatamente pericolose.",
+            "L’incantesimo è in grado di fornire il numero di entità ostili ma non fornisce l’origine dell’ostilità ed ovviamente non ha effetto contro minacce che non sono in grado di provare emozioni, come ad esempio trappole oppure creature inanimate come golem (ha però effetto su non morti).",
+            "È importante notare che nessuna creatura è ostile a prescindere, se ad esempio un nemico non è consapevole della presenza del beneficiario allora non può essere ostile verso di lui."
+        ],
+        "duration": "3 ore",
+        "level": "11",
+        "nome_descrittivo": "Percepire Ostilità",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "3 minuti"
+    },
+    "permanenza": {
+        "area": "1 Sortilegio",
+        "description": [
+            "Questo sortilegio viene lanciato su di un altro sortilegio già attivo ed è in grado di estenderne la durata in modo indefinito.",
+            "Non è possibile rendere permanenti rituali che agiscono direttamente su creature.",
+            "Da notare come il lungo tempo di lancio del sortilegio richiede può rendere problematico il suo utilizzo, dato che il sortilegio da rendere permanente deve essere attivo al momento del lancio di Permanenza.",
+            "Permanenza può essere terminata da un effetto in grado di dissolvere le magie, tuttavia è necessario lanciare tale effetto direttamente sul suo punto d’origine il quale deve essere individuato tramite uno studio accurato dell’incantamento e richiede una prova riuscita di Arcanologia con CD 31."
+        ],
+        "duration": "permanente",
+        "level": "32",
+        "nome_descrittivo": "Permanenza",
+        "range": "2",
+        "school": "Incantamento",
+        "tags": "Arcano, Soglia di Potere",
+        "time": "1 giorno"
+    },
+    "piegarelamente": {
+        "area": "1 creatura",
+        "description": [
+            "Questo incantesimo è la versione più potente di Influenzare la Mente, funziona in modo simile ma la CD è 31."
+        ],
+        "duration": "12 ore",
+        "level": "30",
+        "nome_descrittivo": "Piegare la Mente",
+        "range": "5 metri",
+        "school": "Incantamento",
+        "tags": "Mente",
+        "time": "30 secondi"
+    },
+    "pirotecnica": {
+        "area": "1 fuoco → 10 m. raggio",
+        "description": [
+            "Trasforma un fuoco in uno spettacolo pirotecnico.",
+            "Dal fuoco bersaglio vengono lanciate piccole sfere fiammeggianti che poi esplodono alte in aria in una serie di fuochi d’artificio che coprono un’area fino a 10 metri di raggio.",
+            "Creature che guardano il fuoco direttamente possono rimanere accecate per 1 minuto se falliscono un tiro Resilienza con CD 13."
+        ],
+        "duration": "1 minuto",
+        "level": "5",
+        "nome_descrittivo": "Pirotecnica",
+        "range": "30 metri",
+        "school": "Trasmutazione",
+        "tags": "Fuoco",
+        "time": "10 secondi"
+    },
+    "portaingannevole": {
+        "area": "Personale",
+        "description": [
+            "Questo incantesimo altera l’apparenza di una porta toccata, in modo da farla apparire sempre aperta o chiusa, a prescindere dal suo stato attuale.",
+            "Lo stato della porta viene deciso al momento del lancio, ma il lanciatore può cambiare lo stato dell’illusione da uno all’altro stato per tutta la durata dell’incantesimo. Qualsiasi creatura che osservi mentre lo stato della porta cambia potrebbe accorgersi che si tratta di un’illusione, in questo caso il lanciatore deve effettuare una prova di Persuasione contrapposta a Perspicacia degli osservatori che vuole ingannare.",
+            "Naturalmente una creatura che prova a toccare la porta può immediatamente accorgersi che si tratta solamente di un’illusione.",
+            "Questo incantesimo ha effetto anche su finestre, cancelli e qualsiasi altra parte architettonica che abbia similare funzione e possa apparire aperta o chiusa."
+        ],
+        "duration": "2 ore",
+        "level": "2",
+        "nome_descrittivo": "Porta Ingannevole",
+        "range": "Tocco",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "prestidigitazioneminore": {
+        "area": "speciale",
+        "description": [
+            "Permette al lanciatore di eseguire piccole illusioni e giochi di prestigio.",
+            "Può ad esempio cambiare l’aspetto dei propri occhi, o fare in modo che la propria voce echeggi.",
+            "Può generare piccole illusioni che però non possono creare immagini dal nulla e devono avere senso rispetto all’ambiente circostante, non può ad esempio creare un fuoco illusorio, ma può far apparire un fuoco esistente come più grande senza però modificarne la luminosità.",
+            "Permette di proiettare suoni entro il raggio d’azione, ma non possono essere articolati ed il suono dura per un mero istante."
+        ],
+        "duration": "al massimo 1 minuto",
+        "level": "1",
+        "nome_descrittivo": "Prestidigitazione Minore",
+        "range": "5 metri",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "10"
+    },
+    "proibizione": {
+        "area": "Raggio 30",
+        "description": [
+            "Previene qualsiasi movimento magico, teletrasporti compresi, nell'area d'effetto, l’area viene anche interdetta a passaggi dimensionali, creature eteree, incorporee e comunque semi-planari verranno espulse fuori dall’area di proibizione.",
+            "L'aura di proibizione è facilmente individuabile con una prova di Arcanologia a difficoltà 15."
+        ],
+        "duration": "30 round",
+        "level": "17",
+        "nome_descrittivo": "Proibizione",
+        "range": "0",
+        "school": "Abiurazione",
+        "tags": "Negativo",
+        "time": "1 minuto"
+    },
+    "protezionedallemalattie": {
+        "area": "1 Bersaglio",
+        "description": [
+            "Quando attivo offre un bonus di resistenza contro tutte le malattie per tutta la durata.",
+            "Il bonus è pari a +1 ogni incremento."
+        ],
+        "duration": "4 ore",
+        "level": "5 per ogni incremento",
+        "nome_descrittivo": "Protezione dalle Malattie",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Fuoco",
+        "time": "5 minuti"
+    },
+    "protezionedallemalattierapida": {
+        "area": "Personale",
+        "description": [
+            "Quando attivo offre un bonus di resistenza contro tutte le malattie per tutta la durata.",
+            "Il bonus è pari a +1 ogni incremento ."
+        ],
+        "duration": "10 minuti",
+        "level": "5 per ogni incremento",
+        "nome_descrittivo": "Protezione dalle Malattie Rapida",
+        "range": "0",
+        "school": "Abiurazione",
+        "tags": "Fuoco",
+        "time": "25"
+    },
+    "protezionedallemaledizioni": {
+        "area": "1 Bersaglio",
+        "description": [
+            "Quando attivo offre un bonus di resistenza contro tutte le maledizioni per tutta la durata.",
+            "Il bonus è pari a +1 ogni incremento."
+        ],
+        "duration": "4 ore",
+        "level": "5 per ogni incremento",
+        "nome_descrittivo": "Protezione dalle Maledizioni",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Positivo",
+        "time": "5 minuti"
+    },
+    "protezionedallemaledizionirapida": {
+        "area": "Personale",
+        "description": [
+            "Quando attivo offre un bonus di resistenza contro tutte le maledizioni per tutta la durata.",
+            "Il bonus è pari a +1 ogni incremento."
+        ],
+        "duration": "10 minuti",
+        "level": "5 per ogni incremento",
+        "nome_descrittivo": "Protezione dalle Maledizioni Rapida",
+        "range": "0",
+        "school": "Abiurazione",
+        "tags": "Positivo",
+        "time": "25"
+    },
+    "protezionedelconfine": {
+        "area": "1 cinta muraria di un piccolo castello",
+        "description": [
+            "Questo incantesimo può essere lanciato su di un’area recintata da mura in modo tale che il perimetro diventi impossibile da oltrepassare con mezzi magici e sovrannaturali.",
+            "Non è possibile entrare nell’area protetta né è possibile avere informazioni di alcun genere del suo interno tramite mezzi sovrannaturali.",
+            "Incantesimi di teletrasporto e chiaroveggenza falliranno automaticamente e passare attraverso mura protette tramite incorporeità non è possibile.",
+            "È da notare come la protezione si manifesti solamente contro effetti che cercano di travalicare il confine dall’esterno, una creatura già all’interno non ha alcuna restrizione.",
+            "Questo sortilegio non offre alcuna protezione aggiuntiva alle mura le quali verranno danneggiate normalmente da attacchi magici e sovrannaturali.",
+            "Non è possibile combinare più lanci di questo sortilegio per coprire edifici e fortificazioni più grandi, se l’edificio è troppo grande il sortilegio non ha effetto."
+        ],
+        "duration": "40 giorni",
+        "level": "19",
+        "nome_descrittivo": "Protezione del confine",
+        "range": "0",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "30 minuti"
+    },
+    "protezionedelconfineestesa": {
+        "area": "1 cinta muraria di un grande castello",
+        "description": [
+            "Questo incantesimo può essere lanciato su di un’area recintata da mura in modo tale che il perimetro diventi impossibile da oltrepassare con mezzi magici e sovrannaturali.",
+            "Non è possibile entrare nell’area protetta né è possibile avere informazioni di alcun genere del suo interno tramite mezzi sovrannaturali.",
+            "Incantesimi di teletrasporto e chiaroveggenza falliranno automaticamente e passare attraverso mura protette tramite incorporeità non è possibile.",
+            "È da notare come la protezione si manifesti solamente contro effetti che cercano di travalicare il confine dall’esterno, una creatura già all’interno non ha alcuna restrizione.",
+            "Questo sortilegio non offre alcuna protezione aggiuntiva alle mura le quali verranno danneggiate normalmente da attacchi magici e sovrannaturali.",
+            "Non è possibile combinare più lanci di questo sortilegio per coprire edifici e fortificazioni più grandi, se l’edificio è troppo grande il sortilegio non ha effetto."
+        ],
+        "duration": "40 giorni",
+        "level": "25",
+        "nome_descrittivo": "Protezione del confine Estesa",
+        "range": "0",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "30 minuti"
+    },
+    "respiraresottacqua": {
+        "area": "Raggio 1",
+        "description": [
+            "Permette ai beneficiari di poter respirare sia in aria che in acqua."
+        ],
+        "duration": "1 ora",
+        "level": "7",
+        "nome_descrittivo": "Respirare Sott'acqua",
+        "range": "5 metri",
+        "school": "Trasmutazione",
+        "tags": "Acqua",
+        "time": "1 minuto"
+    },
+    "resurrezioneopzionale": {
+        "area": "1 cadavere",
+        "description": [
+            "Nota Bene: Questo incantesimo è opzionale e non è previsto il suo utilizzo nelle regole base, la sua inclusione deve essere a discrezione del DM, possibilmente in accordo con i giocatori.",
+            "Resurrezione permette di riportare in vita una creatura morta. L’anima della creatura che deve essere riportata in vita deve essere consenziente altrimenti l’incantesimo non avrà effetto, inoltre non deve essere morta da più di un mese, dopo tale tempo l’anima non è più raggiungibile.",
+            "Un corpo resuscitato sarà nelle  stesse condizioni in cui era al momento della morte, parti mancanti non vengono rigenerate dall’incantesimo, eventuali veleni o altro ancora presenti sul corpo non vengono curati (anche se possono essersi dispersi con il tempo). La creatura torna in vita con 1 punto vita per ogni livello che possiede e perde il 10% dei suoi PX totali che possono risultare in una perdita di livello.",
+            "Non annulla le penalità inflitte alla creatura al momento della morte, riporta solamente in vita tale creatura.",
+            "Il lanciatore dell'incantesimo può pagare il 10% dei suoi PX totali (con eventuale perdita di livello) al posto delle componenti materiali.",
+            "Nota: Questo è e deve essere l'unico modo per riportare in vita un personaggio. A discrezione dei giocatori è sufficiente rimuovere questo incantesimo dal gioco per rendere le avventure più emozionanti e rischiose.",
+            "Nota 2: Il costo in monete d'oro è praticamente proibitivo per ogni avventuriero a parte quelli di alto livello, il DM può quindi concedere resurrezioni in cambio di favori eccezionali."
+        ],
+        "duration": "Istantaneo",
+        "level": "33",
+        "nome_descrittivo": "Resurrezione [Opzionale]",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Positivo",
+        "time": "10 minuti"
+    },
+    "rianimareimorti": {
+        "area": "1 cadavere",
+        "description": [
+            "Rianima un cadavere e lo trasforma in un non morto, il non morto così creato è libero da costrizioni e non obbedisce al suo creatore.",
+            "Se questo incantesimo viene lanciato senza altro supporto il non morto creato sarà un semplice zombie, scheletro, o in casi molto rari, un Revenant.",
+            "Il Livello Indicativo del non morto rianimato è pari al minimo fra il livello del sortilegio ed il livello che il cadavere aveva quando è morto.",
+            "Più spesso questo incantesimo viene utilizzato in congiunzione ad altre componenti, procedure ed incantesimi, per ottenere non morti di categoria più potente e cercare di mantenerne il controllo."
+        ],
+        "duration": "Permanente",
+        "level": "1+",
+        "nome_descrittivo": "Rianimare i morti",
+        "range": "Tocco",
+        "school": "Richiamo",
+        "tags": "Negativo",
+        "time": "10 minuti"
+    },
+    "rimpicciolireoggetto": {
+        "area": "1 oggetto con dimensione massima 10 m3",
+        "description": [
+            "Permette di rimpicciolire un oggetto non magico ad in una scala a piacere con un minimo di 1:20, riducendo anche la sua massa proporzionalmente, ad esempio un oggetto rimpicciolito ad 1/20 ha un peso proporzionale di 1/8000 (dove va a finire la massa? magia!).",
+            "Quando si lancia questo sortilegio è necessario pronunciare una parola di comando,  l’oggetto rimpicciolito tornerà alla normalità se il lanciatore pronuncia tale parola oppure se la durata dell’incantesimo arriva al termine.",
+            "Il rimpicciolimento e l’ingrandimento sono graduali, ognuno dei quali impiega un tempo totale pari al tempo di lancio del sortilegio."
+        ],
+        "duration": "Giorni 1 x LL",
+        "level": "11",
+        "nome_descrittivo": "Rimpicciolire Oggetto",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Arcano",
+        "time": "4 minuti"
+    },
+    "rinforzarestruttura": {
+        "area": "fino a 8 m3",
+        "description": [
+            "Rinforza la struttura di un qualunque materiale rendendolo più resistente del doppio.",
+            "Più propriamente questo vuol dire che un oggetto rinforzato può resistere il doppio dei danni di un oggetto equivalente non rinforzato.",
+            "Nel caso sia richiesto un tiro per determinare se tale oggetto si rompe allora la probabilità di rottura viene dimezzata (-50%).",
+            "Es. se viene stabilito che con 1d20 un oggetto si rompe con un tiro di 13 o meno, dopo averlo rinforzato si romperà con un tiro di 7 o meno."
+        ],
+        "duration": "48 ore",
+        "level": "9",
+        "nome_descrittivo": "Rinforzare Struttura",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Terra, No Critico",
+        "time": "1 minuto"
+    },
+    "risveglio": {
+        "area": "1 pianta o o animale non intelligente",
+        "description": [
+            "Il bersaglio guadagna intelligenza pari a 4 ed è in grado di comprendere la lingua madre del lanciatore, se il bersaglio ha modo di emettere suoni sarà in grado anche di parlare tale lingua, altrimenti il lanciatore, e solo lui, sarà in grado comunque di comprenderla attraverso altri suoni e vibrazioni.",
+            "Se il bersaglio è una pianta diventerà inoltre in grado di muovere i propri rami, anche se non potrà comunque deambulare.",
+            "Il bersaglio risvegliato non sarà necessariamente amichevole al lanciatore, generalmente la sua predisposizione sarà neutrale a meno che il lanciatore non abbia compiuto, o compia, azioni che possono alterare tale predisposizione, sia in bene che in male."
+        ],
+        "duration": "30 giorni",
+        "level": "16",
+        "nome_descrittivo": "Risveglio",
+        "range": "Tocco",
+        "school": "Incantamento",
+        "tags": "Terra",
+        "time": "8 ore"
+    },
+    "ritornoacasa": {
+        "area": "personale",
+        "description": [
+            "Questo particolare incantesimo permette di teletrasportarsi in un punto deciso preventivamente.",
+            "Il lanciatore deve creare un cerchio di richiamo sulla locazione, un processo che richiede circa 1 giorno e funziona solamente se la zona su cui viene iscritto viene considerata la sua residenza principale. Non è possibile iscrivere  il cerchio di richiamo in un altro luogo a meno che il lanciatore non ne entri possesso della sua proprietà."
+        ],
+        "duration": "Istantaneo",
+        "level": "17",
+        "nome_descrittivo": "Ritorno a casa",
+        "range": "0",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "1 minuto"
+    },
+    "rivelarelebugie": {
+        "area": "Personale",
+        "description": [
+            "Mentre l’incantesimo è attivo permette di individuare più facilmente le bugie dei propri interlocutori.",
+            "Mentre l’incantesimo è attivo il personaggio ottiene un bonus di circostanza di +4 alle prove di  Perspicacia mirate ad individuare le bugie."
+        ],
+        "duration": "20 minuti",
+        "level": "11",
+        "nome_descrittivo": "Rivelare le bugie",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "saltopsicocinetico": {
+        "area": "personale",
+        "description": [
+            "Permette al lanciatore di effettuare un balzo fino a 9m di lunghezza senza toccare il suolo in una direzione di sua scelta.",
+            "Non può essere utilizzato per saltare più alto di quanto il personaggio sia naturalmente in grado di fare, inoltre avendo il salto una traiettoria parabolica, il punto più alto si trova in mezzo, quindi se vuole saltare verso l’alto può coprire una distanza massima di 4,5 metri."
+        ],
+        "duration": "istantaneo",
+        "level": "3",
+        "nome_descrittivo": "Salto Psicocinetico",
+        "range": "0",
+        "school": "Incantamento",
+        "tags": "Mente",
+        "time": "10"
+    },
+    "santuarioprivato": {
+        "area": "cubo lato  25 m.",
+        "description": [
+            "Questo sortilegio copre un’area con una massa nebbiosa oscura, che dall’esterno non può essere penetrata da alcun tipo di vista, magica o meno.",
+            "Coloro che si trovano all’interno possono vedere all’esterno normalmente, inoltre ogni suono prodotto all’interno non si propaga all’esterno.",
+            "Il sortilegio non previene a creature o oggetti di oltrepassare la barriera, tuttavia una volta all’interno eventuali collegamenti sensoriali con esso vengono temporaneamente interrotti."
+        ],
+        "duration": "36 ore",
+        "level": "14",
+        "nome_descrittivo": "Santuario Privato",
+        "range": "5",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "scavarefossa": {
+        "area": "Fossa profonda 1,5 m. Larga 1,5 m. Lunga 6m.",
+        "description": [
+            "Questo incantesimo è lanciabile solamente su terra morbida, quale sabbia, terriccio, argilla, ghiaia ecc. Non ha effetto sulla pietra e pavimentazione artificiale.",
+            "Crea una fossa sul terreno posizionata come indicato dal lanciatore al momento del lancio.  La fossa deve essere creata su spazio aperto e non può essere creata sotto a costruzioni e fondamenta, può però essere creata sotto a superfici liquide e barricate piantante sul terreno e senza fondamenta.",
+            "La terra si sposta lentamente e l’effetto non può essere utilizzato a scopo offensivo diretto."
+        ],
+        "duration": "Istantaneo",
+        "level": "6",
+        "nome_descrittivo": "Scavare Fossa",
+        "range": "5 metri",
+        "school": "Trasmutazione",
+        "tags": "Terra",
+        "time": "1 minuto"
+    },
+    "schermoillusorio": {
+        "area": "50 m2 massimo",
+        "description": [
+            "Genera un’illusione su un’area d’effetto che può far apparire qualsiasi cosa a scelta del lanciatore. Tale illusione non ha effetto sulla normale vista delle creature ed appare solamente quando l’area viene osservata tramite mezzi magici quali Chiaroveggenza."
+        ],
+        "duration": "30 giorni",
+        "level": "12",
+        "nome_descrittivo": "Schermo Illusorio",
+        "range": "0",
+        "school": "Illusione",
+        "tags": "Mente",
+        "time": "15 minuti"
+    },
+    "scrutare": {
+        "area": "Personale",
+        "description": [
+            "Funziona in modo simile a Chiaroveggenza ma permette di spiare un soggetto ben conosciuto.",
+            "Il soggetto percepisce la sensazione di essere spiato ma non sa da chi, in ogni caso esso può tentare un prova di Furtività contro Arcanologia del lanciatore, se riesce in tale prova allora l'incantesimo non funziona su di lui e continuerà a non funzionare per almeno una settimana."
+        ],
+        "duration": "15 minuti",
+        "level": "18",
+        "nome_descrittivo": "Scrutare",
+        "range": "20 Km",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "10 minuti"
+    },
+    "scurovisionemagica": {
+        "area": "1 creatura",
+        "description": [
+            "Il beneficiario del sortilegio guadagna Scurovisione come descritta nel Manuale de Giocatore."
+        ],
+        "duration": "3 ore",
+        "level": "11",
+        "nome_descrittivo": "Scurovisione Magica",
+        "range": "tocco",
+        "school": "Divinazione",
+        "tags": "Positivo",
+        "time": "20"
+    },
+    "sferaluminosa": {
+        "area": "Raggio → 4  luminoso, 8 fioco",
+        "description": [
+            "Funziona come Sfera Luminosa Minore ma genera più luce ed ha un livello più alto."
+        ],
+        "duration": "30 minuti",
+        "level": "4",
+        "nome_descrittivo": "Sfera Luminosa",
+        "range": "30 metri",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "15"
+    },
+    "sferaluminosamaggiore": {
+        "area": "Raggio → 5  luminoso, 10 fioco",
+        "description": [
+            "Funziona come Sfera Luminosa Minore ma genera più luce ed ha un livello più alto."
+        ],
+        "duration": "30 minuti",
+        "level": "6",
+        "nome_descrittivo": "Sfera Luminosa Maggiore",
+        "range": "30 metri",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "18"
+    },
+    "sferaluminosaminore": {
+        "area": "Raggio → 3  luminoso, 6 fioco",
+        "description": [
+            "Crea una sfera luminosa in un punto all’interno del raggio d’azione, che illumina che illumina pienamente la prima area d’effetto, e solo fiocamente la seconda area.",
+            "La sfera può essere può essere spostata a volontà fin quando l’effetto dura.",
+            "Questo incantesimo è in grado di illuminare un’area coperta da un effetto di oscurità di livello pari o inferiore."
+        ],
+        "duration": "30 minuti",
+        "level": "2",
+        "nome_descrittivo": "Sfera Luminosa Minore",
+        "range": "30 metri",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "12"
+    },
+    "sferaluminosasuperiore": {
+        "area": "Raggio → 6  luminoso, 12 fioco",
+        "description": [
+            "Funziona come Sfera Luminosa Minore ma genera più luce ed ha un livello più alto."
+        ],
+        "duration": "30 minuti",
+        "level": "8",
+        "nome_descrittivo": "Sfera Luminosa Superiore",
+        "range": "30 metri",
+        "school": "Illusione",
+        "tags": "Positivo",
+        "time": "21"
+    },
+    "sigillareportale": {
+        "area": "1 portale",
+        "description": [
+            "Questo incantesimo è in grado di sigillare un portale di comunicazione magico in modo che non possa essere utilizzato. Il portale non verrà distrutto ma diventerà invisibile, intangibile e non potrà essere utilizzato.",
+            "Il portale può esser  visto grazie ad un normale effetto in grado di vedere l’invisibile.",
+            "Il portale può essere riaperto dissolvendo l’incantesimo che lo sigilla o lanciando nuovamente questo stesso sortilegio su di esso."
+        ],
+        "duration": "permanente",
+        "level": "8",
+        "nome_descrittivo": "Sigillare Portale",
+        "range": "Tocco",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "silenzio": {
+        "area": "1 creatura consenziente",
+        "description": [
+            "Questo incantesimo incanta una creatura consenziente, prevenendo che possa emettere alcun suono, volontario o accidentale. Il beneficiario non può eseguire alcuna azione dipendente da suoni, come lanciare incantesimi a componente vocale, attivare oggetti con parole d’ordine, ecc.",
+            "Allo stesso tempo nessuna creatura è in grado di utilizzare il proprio udito per percepire il beneficiario."
+        ],
+        "duration": "10 minuti",
+        "level": "5",
+        "nome_descrittivo": "Silenzio",
+        "range": "tocco",
+        "school": "Abiurazione",
+        "tags": "Aria",
+        "time": "1 minuto"
+    },
+    "silenzioadarea": {
+        "area": "3 metri raggio",
+        "description": [
+            "Funziona come Silenzio ma l’effetto si estende anche all’area intorno al beneficiario. Tutte le creature presenti nell’area d’effetto si considerano influenzate dall’incantesimo fin quando rimangono al suo interno.",
+            "A differenza della versione a bersaglio questo incantesimo può anche essere lanciato su di un oggetto."
+        ],
+        "duration": "10 minuti",
+        "level": "11",
+        "nome_descrittivo": "Silenzio ad Area",
+        "range": "tocco",
+        "school": "Abiurazione",
+        "tags": "Aria",
+        "time": "1 minuto"
+    },
+    "simulacro": {
+        "area": "1 creatura illusoria",
+        "description": [
+            "Crea una copia illusoria di una creatura, tale copia è tangibile ed agisce su tutti i sensi, inoltre è sotto il totale controllo del lanciatore.",
+            "In condizioni normali l’illusione è perfetta e semplicemente osservandola non rivela alcuna traccia di non essere reale, tuttavia se qualcuno ha motivo di credere che sia un’illusione può tentare una prova di Sopravvivenza contro Autorità del lanciatore per accorgesi che si tratta di un’illusione, ma questo non farà sparire l’illusione stessa e quindi potrebbe essere non essere sufficiente a smascherare l’illusione per tutti gli astanti."
+        ],
+        "duration": "48 ore",
+        "level": "26",
+        "nome_descrittivo": "Simulacro",
+        "range": "3",
+        "school": "Illusione",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "smascherareillusioni": {
+        "area": "1 creatura",
+        "description": [
+            "Questo incantesimo dona al beneficiario l'abilità di vedere attraverso le illusioni che coinvolgono i 5 sensi.",
+            "Questo incantesimo non è in grado di mostrare oggetti o porte segrete nascosti con metodi convenzionali."
+        ],
+        "duration": "15 minuti",
+        "level": "19",
+        "nome_descrittivo": "Smascherare Illusioni",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "5 minuti"
+    },
+    "sondamentale": {
+        "area": "1 creatura",
+        "description": [
+            "Questo potere permette di penetrare in profondità nel subconscio della creatura.",
+            "La vittima può tentare una prova di Sopravvivenza con CD 29, se la vittima fallisce il lanciatore accede a tutte le nozioni di cui la vittima è a conoscenza, sia quelle ancora fresche nella memoria, sia quelle più nascoste. L’informazione ottenuta è veritiera (o almeno la vittima crede che essa sia vera).",
+            "Il personaggio può trovare risposta ad una domanda ogni 10 secondi. Domande e risposte complesse possono richiedere più tempo per essere formulate.",
+            "Se la vittima riesce nel tiro diventa immune all'incantesimo per 1 settimana."
+        ],
+        "duration": "40 secondi",
+        "level": "28",
+        "nome_descrittivo": "Sonda Mentale",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Mentale",
+        "time": "15 minuti"
+    },
+    "stratodifango": {
+        "area": "5 metri raggio",
+        "description": [
+            "Crea una zona fangosa sul terreno dell’area d’effetto profonda circa 40 cm. Il fango intralcia il movimento e quindi l’area è considerata un terreno difficile."
+        ],
+        "duration": "2 ore",
+        "level": "2",
+        "nome_descrittivo": "Strato di Fango",
+        "range": "20 metri",
+        "school": "Richiamo",
+        "tags": "Terra",
+        "time": "1 minuto"
+    },
+    "suggestionare": {
+        "area": "1 creatura",
+        "description": [
+            "Il lancio dell’incantesimo contempla la necessità di parlare al bersaglio con parole suadenti, il quale dovrà essere capace di comprenderlo.",
+            "Il lanciatore può affidarsi completamente all’incantesimo oppure cercare di persuadere la vittima in modo più personale, il modo utilizzato determina la CD della prova di Tenacia che la vittima deve superare per resistere alla suggestione.",
+            "La CD è pari a 17, in alternativa può essere determinata come 11 + grado Persuasione del lanciatore.",
+            "La suggestione non può essere autolesionista per la vittima, altrimenti fallisce automaticamente. La CD può avere un modificatore di circostanza da -3 a +3 a seconda di quanto plausibile e ben articolata è la suggestione che si vuole impiantare, dove una suggestione logica e minimale otterrebbe il bonus massimo ed una implausibile riceverebbe la massima penalità, a discrezione del DM.",
+            "Se la prova fallisce con 10 o più punti di scarto la vittima si accorge del tentativo di suggestione.",
+            "Al termine dell’incantesimo la suggestione sparisce e la vittima si ricorda gli avvenimenti accaduti, ma per lei non rappresentano eventi fuori dalla normalità e  non è in grado di associarne la ragione al lanciatore. A seconda della suggestione utilizzata questo potrebbe però portare comunque la vittima ad agire di conseguenza, a discrezione del DM."
+        ],
+        "duration": "1 ora",
+        "level": "10",
+        "nome_descrittivo": "Suggestionare",
+        "range": "3 metri",
+        "school": "Incantamento",
+        "tags": "Arcano",
+        "time": "30 secondi"
+    },
+    "suonofantasma": {
+        "area": "4 raggio",
+        "description": [
+            "Genera un illusione auditiva a scelta del lanciatore, la quale può anche essere programmata ad attivarsi in condizioni specifiche o a comando fin quando l'incantesimo permane.",
+            "Il volume del suono generato è scelto dal lanciatore, ma in ogni caso non può nuocere a creature in quanto illusione, se il volume è troppo alto per essere tollerato l'illusione si spezza."
+        ],
+        "duration": "3 ore",
+        "level": "7",
+        "nome_descrittivo": "Suono Fantasma",
+        "range": "20",
+        "school": "Illusione",
+        "tags": "Aria",
+        "time": "10 minuti"
+    },
+    "tascaplanare": {
+        "area": "cubo 9m. lato",
+        "description": [
+            "Crea una porta d’ombra su di una superficie solida visibile entro il raggio d’azione. La porta è abbastanza grande da far passare una creatura grande, anche se la troverà un po’ stretta.",
+            "La porta conduce ad un semipiano che ha le sembianze di una stanza vuota cubica di 9m. di lato, il lanciatore può fare sì che appaia come se fosse fatta di legno o pietra.",
+            "Chiunque può entrare o uscire dalla porta fin quando questa è aperta, ma quando l’incantesimo termina la porta svanisce e chiunque fosse al suo interno rimane intrappolato.",
+            "Ogni qual volta l’incantesimo viene lanciato, il lanciatore può scegliere se aprire una porta ce accede ad una tasca planare da lui creata precedentemente oppure crearne una nuova."
+        ],
+        "duration": "1 ora",
+        "level": "26",
+        "nome_descrittivo": "Tasca Planare",
+        "range": "8 m.",
+        "school": "Richiamo",
+        "tags": "Negativo",
+        "time": "5 minuti"
+    },
+    "teletrasporto": {
+        "area": "Illimitata",
+        "description": [
+            "Questo particolare incantesimo permette di teletrasportarsi in qualunque luogo familiare istantaneamente, a patto che non sia protetto magicamente.",
+            "Il potere può teletrasportare solamente gli oggetti che il lanciatore è in grado di trasportare in mano, e non può portare altre creature oltre al lanciatore stesso. Il Viaggio è istantaneo e conduce sempre il personaggio in un punto preciso. Sia alla partenza che all’arrivo si udirà un rumore sordo, generato dall’utilizzo di questo potere.",
+            "Il lanciatore può teletrasportarsi solamente in un luogo che ha ben chiaro in memoria, a tal fine è necessario che visiti tale luogo e passi del tempo a studiare l'ambiente circostante, a quel punto può memorizzare il luogo e teletrasportarsi utilizzando l'incantesimo.",
+            "Il personaggio può mantenere in memoria un numero di luoghi massimo pari al proprio modificatore Conoscenza, se vuole sostituire un luogo memorizzato con uno nuovo è costretto a recarsi in tale luogo per studiarlo.",
+            "Eventuali limitazioni al movimento del personaggio pregiudicano il buon funzionamento del potere."
+        ],
+        "duration": "Istantaneo",
+        "level": "24",
+        "nome_descrittivo": "Teletrasporto",
+        "range": "0",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "teletrasportodimassa": {
+        "area": "Illimitata",
+        "description": [
+            "Versione Estesa del Teletrasporto, che permette di portare con se tutto ciò che si trova entro il Raggio d’azione.",
+            "Se una creatura non è in grado di acconsentire (ad esempio se addormentata, svenuta, o sotto controllo mentale) questa non può essere teletrasportata. Utilizza le stesse regole del teletrasporto."
+        ],
+        "duration": "Istantaneo",
+        "level": "29",
+        "nome_descrittivo": "Teletrasporto di Massa",
+        "range": "3 caselle intorno al lanciatore",
+        "school": "Richiamo",
+        "tags": "Arcano, Soglia di Potere",
+        "time": "20 minuti"
+    },
+    "teletrasportolocalizzato": {
+        "area": "Illimitata",
+        "description": [
+            "Funziona come l'incantesimo Teletrasporto, ma la destinazione è fissata a priori e può condurre solamente in tale luogo.",
+            "La destinazione viene stabilita quando l'incantesimo messo su pergamena, il creatore deve conoscere tale luogo.",
+            "Il vantaggio rispetto al normale Teletrasporto consiste nel potere teletrasportarsi anche in un luogo completamente sconosciuto, semplicemente acquistando la pergamena del teletrasporto localizzato.",
+            "Questo incantesimo non può essere recitato senza pergamena, ed il creature della pergamena deve conoscere bene il luogo di destinazione."
+        ],
+        "duration": "Istantaneo",
+        "level": "23",
+        "nome_descrittivo": "Teletrasporto Localizzato",
+        "range": "0",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "10 minuti"
+    },
+    "teletrasportominore": {
+        "area": "50 metri",
+        "description": [
+            "Questo particolare incantesimo permette di teletrasportarsi in un punto libero entro l’area d’effetto e che sia in vista."
+        ],
+        "duration": "Istantaneo",
+        "level": "9",
+        "nome_descrittivo": "Teletrasporto minore",
+        "range": "personale",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "2 minuti"
+    },
+    "teletrasportominoredimassa": {
+        "area": "50 metri",
+        "description": [
+            "Funziona come Teletrasporto Minore ma è in grado di trasportare tutte le creature entro il raggio d’azione che sono consenzienti."
+        ],
+        "duration": "Istantaneo",
+        "level": "17",
+        "nome_descrittivo": "Teletrasporto minore di Massa",
+        "range": "3 caselle intorno al lanciatore",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "3 minuti"
+    },
+    "terrenoillusorio": {
+        "area": "400 m2",
+        "description": [
+            "Funziona in modo simile a Muro Illusorio, ma viene generata un illusione bidimensionale sul terreno per farlo apparire in modo diverso, può anche essere utilizzato per nascondere baratri o trappole."
+        ],
+        "duration": "30 giorni",
+        "level": "21",
+        "nome_descrittivo": "Terreno Illusorio",
+        "range": "10 metri",
+        "school": "Illusione",
+        "tags": "mentale",
+        "time": "20 minuti"
+    },
+    "tollerareglielementi": {
+        "area": "1 creatura",
+        "description": [
+            "Fin quando l’incantesimo perdura, il suo beneficiario è in grado di sopportare molto più agevolmente le alte e le basse temperature, permettendogli di provare al massimo solo un lieve fastidio per temperature da -30 °C a +50 °C.",
+            "Questo incantesimo non incrementa la resistenza ai danni elementali in alcun modo."
+        ],
+        "duration": "12 ore",
+        "level": "4",
+        "nome_descrittivo": "Tollerare gli Elementi",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Fuoco",
+        "time": "15 minuti"
+    },
+    "tollerareglielementidimassa": {
+        "area": "6 Raggio",
+        "description": [
+            "Funziona come Tollerare gli Elementi, ma influenza tutte le creature nell’area d’effetto al momento del lancio."
+        ],
+        "duration": "12 ore",
+        "level": "12",
+        "nome_descrittivo": "Tollerare gli Elementi di Massa",
+        "range": "0",
+        "school": "Abiurazione",
+        "tags": "Fuoco",
+        "time": "15 minuti"
+    },
+    "trappolamagica": {
+        "area": "contenitore, porta o superficie al massimo 25m2",
+        "description": [
+            "Questo incantesimo preparare una superficie in modo da poter accettare un altro incantesimo o sortilegio che deve essere lanciato all’interno dell’area entro 5 ore dal lancio di Trappola Magica.",
+            "Una volta ultimati i preparativi l’area si trasforma in una trappola che si innesca quando qualcuno entra nell’area, scatenando il secondo incantesimo con epicentro la prima creatura che fa scattare la trappola. Se lanciato su un qualcosa di apribile, come un forziere o una porta, il metodo di attivazione può essere impostato per attivarsi quando viene aperto. Dopo l’attivazione l’incantesimo svanisce.",
+            "Opzionalmente il lanciatore può creare un focus magico connesso alla trappola che permette di sopprimerla quando tale focus entra nell’area, in modo da consentire il passaggio senza farla scattare. Se lanciato su un qualcosa di apribile tramite una chiave, la chiave stessa può essere incantata come focus, in modo che possa essere utilizzata per aprire l’oggetto senza far scattare la trappola.",
+            "La trappola si considera come una normale trappola ed utilizza le regole standard (tramite Manualità) per determinare i suoi normali valori di individuazione e disinnesco. Il lanciatore può avvalersi dell’aiuto di un altro personaggio esperto nel piazzare trappole per lasciare a lui il compito di sistemare l’innesco, in questo modo sarà possibile utilizzare il grado di Manualità dell’aiutante al posto di quello del lanciatore."
+        ],
+        "duration": "permanente",
+        "level": "5",
+        "nome_descrittivo": "Trappola Magica",
+        "range": "tocco",
+        "school": "Abiurazione",
+        "tags": "Arcano",
+        "time": "1 ora"
+    },
+    "trasformareacqua": {
+        "area": "500 metri di raggio, fino a 100 litri liquidi",
+        "description": [
+            "Permette di transitare lo stato dell’acqua presente nell’area d’effetto per condensarla nel suo stato liquido, farla evaporare o congelarla, o anche transitare in stati di sospensione come nebbia o rugiada.Non è possibile creare acqua dal nulla",
+            "Questo incantesimo è in grado di convertire l’acqua presente nell’atmosfera e nell’ambiente circostante, ma influenza solo in minima parte le creature viventi, non può sottrarre o aggiungere acqua in modo che risulti dannoso.",
+            "Può trasformare forme di acqua temporanea, ma non può estenderne o ridurne la durata. Ad esempio se utilizzato per trasformare nebbia creata magicamente in acqua, allo scadere dell’effetto che ha creato la nebbia l’acqua svanirà a sua volta, anche se questa viene ingerita."
+        ],
+        "duration": "Istantaneo",
+        "level": "5",
+        "nome_descrittivo": "Trasformare Acqua",
+        "range": "6 m.",
+        "school": "Trasmutazione",
+        "tags": "Acqua",
+        "time": "3 minuti"
+    },
+    "trasmutarefangoeroccia": {
+        "area": "50 m3",
+        "description": [
+            "Permette, a scelta a momento del lancio, di trasformare roccia in fango o viceversa.",
+            "La trasformazione richiede tutto il tempo di lancio, quindi normalmente ogni creatura presente in zona avrà tutto il tempo per spostarsi ed evitare di rimanere intrappolata.",
+            "L’incantesimo non ha effetto su roccia o fango protetti tramite mezzi magici.",
+            "Il risultato dell’incantesimo (roccia o fango) non è magico, e di conseguenza si comporta secondo le normali leggi della natura."
+        ],
+        "duration": "istantaneo",
+        "level": "14",
+        "nome_descrittivo": "Trasmutare Fango e Roccia",
+        "range": "20 m.",
+        "school": "Trasmutazione",
+        "tags": "Acqua",
+        "time": "5 minuti"
+    },
+    "trasportotelecinetico": {
+        "area": "1 oggetto fino a 400Kg.",
+        "description": [
+            "Lanciato su di un oggetto esercita un lavoro in grado di spostare un oggetto di massa fino a 400 Kg, capace inoltre di sollevarlo al massimo fino a 6m. di altezza e mantenerlo sospeso a mezz’aria.",
+            "L’oggetto viene spostato alla velocità massima di 0,5 m/s, il che vuol dire che può essere spostato fino a 30 metri in orizzontale, ma non può uscire oltre il raggio d’azione altrimenti l’effetto termina all’istante.",
+            "È praticamente impossibile spostare una creatura che non vuole essere trasportata, dato che dimenarsi anche leggermente è sufficiente a liberarsi dall’effetto."
+        ],
+        "duration": "1 minuto",
+        "level": "14",
+        "nome_descrittivo": "Trasporto Telecinetico",
+        "range": "40 metri",
+        "school": "Richiamo",
+        "tags": "Mente",
+        "time": "10 minuti"
+    },
+    "travestimentoillusorio": {
+        "area": "personale",
+        "description": [
+            "Permette di nascondere le fattezze del bersaglio sotto un'illusione per farlo apparire in modo diverso, ma con la stessa forma corporea e di altezza e peso similare. È concessa una certa varianza ma deve rientrare nei limiti sia della specie originale che di quella illusoria scelta.",
+            "L’illusione modifica l’apparenza dei vestiti, e può far anche apparire un’armatura come un normale vestito. Gli oggetti tenuti in mano non possono essere mascherati con questa illusione, analogamente l’aspetto originale di ogni oggetto rimosso dalla propria persona diventa immediatamente visibile.",
+            "Per quanto questa illusione sia in grado di un'impressione varietà diversa di travestimenti, non è in grado di replicare esattamente le fattezze di un'altra creatura per farla passare come sosia."
+        ],
+        "duration": "1 ora / 4 ore / 12 ore",
+        "level": "4 / 8 / 12",
+        "nome_descrittivo": "Travestimento Illusorio",
+        "range": "0",
+        "school": "Illusione",
+        "tags": "Mentale",
+        "time": "1 minuto"
+    },
+    "trovarelavia": {
+        "area": "1 creatura",
+        "description": [
+            "Il beneficiario del sortilegio è in grado di trovare la via più corta e pratica verso una destinazione scelta al momento del lancio.",
+            "La destinazione deve essere famosa oppure ben conosciuta dal lanciatore altrimenti il sortilegio non ha effetto. Questo incantesimo non può essere utilizzato per trovare una persona o un oggetto, ma solamente una locazione.",
+            "L’incantesimo funziona dando un senso di direzione al beneficiario che si manifesta al momento del bisogno, ma il beneficiario non è in grado di conoscere la strada in anticipo."
+        ],
+        "duration": "8 ore",
+        "level": "13",
+        "nome_descrittivo": "Trovare la via",
+        "range": "tocco",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "trovarelavialocalizzata": {
+        "area": "1 creatura",
+        "description": [
+            "Funziona come trovare la via con la differenza che la destinazione viene fissata dal creatore della pergamena sortilegio.",
+            "Questo permette poi al beneficiario di trovare la via verso la destinazione prefissata."
+        ],
+        "duration": "8 ore",
+        "level": "12",
+        "nome_descrittivo": "Trovare la via Localizzata",
+        "range": "tocco",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "1 minuto"
+    },
+    "vederelinvisibile": {
+        "area": "personale",
+        "description": [
+            "Permette all’incantatore di vedere creature ed oggetti invisibili."
+        ],
+        "duration": "20 minuti",
+        "level": "10",
+        "nome_descrittivo": "Vedere L’invisibile",
+        "range": "0",
+        "school": "Divinazione",
+        "tags": "mente",
+        "time": "25"
+    },
+    "vedereoltreipiani": {
+        "area": "1 creatura",
+        "description": [
+            "Questo potere estende la vista del beneficiario fino alle regioni del Confine Etereo, o a scelta, sul Confine Astrale, con un raggio visivo di 36m. Si è in grado di individuare creature, oggetti e mostri su questi piani di esistenza.",
+            "Questo potere non sostituisce la normale vista e si è in grado di vedere sia sul piano materiale che sul piano secondario scelto contemporaneamente. Normalmente creature che vivono sul piano Astrale non sono in grado di interagire con il primo materiale, per questa ragione questo potere viene normalmente utilizzato per il piano Etereo.",
+            "Oltre alle creature extraplanari, questo potere consente di vedere anche personaggi e oggetti soggetti ad effetti di distorsione o intermittenza collegati con il piano scelto. Esso rivela i viaggiatori dimensionali e le porte dimensionali appaiono legate da un legame luminoso. Questo potere è molto utile per combattere contro mostri eterei o intermittenti, come i fantasmi o i ragni planari."
+        ],
+        "duration": "4 ore",
+        "level": "16",
+        "nome_descrittivo": "Vedere oltre i piani",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Mente",
+        "time": "20"
+    },
+    "ventosussurrante": {
+        "area": "Raggio 3",
+        "description": [
+            "Il lanciatore invia un messaggio attraverso il verso verso una destinazione designata al momento del lancio. La destinazione deve essere familiare al lanciatore e deve sapere come raggiungerla.",
+            "Il messaggio deve essere una frase di al più 25 parole, tale messaggio viene trasportato tramite il vento con una velocità a scelta del lanciatore fino ad un massimo di 100 Km/h. Una volta raggiunta la destinazione il messaggio viene consegnato ed udito da tutti i presenti nell’area d’effetto (per circa 1 round), dopodiché l’incantesimo termina.",
+            "Questo incantesimo non può essere utilizzato per lanciare effetti sovrannaturali direttamente, ma potrebbe attivare oggetti presenti nell’area d’effetto se questi sono programmati per rispondere alla voce del lanciatore o ad una determinata parola chiave."
+        ],
+        "duration": "8 ore massimo",
+        "level": "13",
+        "nome_descrittivo": "Vento Sussurrante",
+        "range": "150 Km",
+        "school": "Richiamo",
+        "tags": "Aria",
+        "time": "10 minuti"
+    },
+    "viaggiatoreetereo": {
+        "area": "personale",
+        "description": [
+            "Permette di teletrasportarsi nel piano etereo o in una qualsiasi regione del confine etereo, si cessa di esistere nel primo materiale per poter viaggiare nel piano etereo, ma solo in forma eterea (la forma materiale è temporaneamente perduta).",
+            "Si può essere colpiti solamente da attacchi che influenzano creature eteree oppure da altre creature eteree. Parallelamente il viaggiatore può solo attaccare creature eteree e possiede le stesse statistiche che aveva nel primo materiale.",
+            "Non è possibile teletrasportarsi direttamente nei piani interni (il piano etereo fa da collegamento dal primo materiale ai piani interni), ma ci si può arrivare semplicemente attraversando il confine etereo.",
+            "Non appena lascia il piano etereo, il personaggio riacquista la sua forma materiale e il potere termina. In alternativa quando il potere termina il suo corpo si materializza nuovamente nello stesso luogo in cui si trovava in precedenza. In ogni caso però non si è in grado di ritornare sul piano materiale fin quando l'incantesimo perdura nemmeno se lo si volesse.",
+            "Questo potere può essere utilizzato per attraversare ostacoli insormontabili nel piano materiale, ma non è un potere normalmente utilizzato a tale scopo perché non si è in grado di vedere cosa avviene nel piano materiale a meno che non utilizzi mezzi speciali come il potere Vedere oltre i piani.",
+            "È da notare che, come esistono ostacoli sul piano materiale, ne esistono anche sul piano etereo, di conseguenza potrebbe accadere che in forma eterea non si abbia la possibilità di andare in determinati luoghi che sul piano materiale appaiono perfettamente accessibili. Inoltre anche se si è eterei non si è in grado di volare, di conseguenza è necessario seguire la conformazione del piano etereo.",
+            "Per sapere se si può accedere in un area attraverso il piano etereo si può effettuare un tiro di fortuna, normalmente con difficoltà 10, ma che può essere modificata a discrezione del DM a seconda della situazione e del luogo."
+        ],
+        "duration": "1 ora",
+        "level": "23",
+        "nome_descrittivo": "Viaggiatore Etereo",
+        "range": "0",
+        "school": "Richiamo",
+        "tags": "Arcano",
+        "time": "5 minuti"
+    },
+    "vistaanimale": {
+        "area": "1 animale",
+        "description": [
+            "Grazie a questo incantesimo è possibile vedere attraverso gli occhi di un animale bersaglio dell’incantesimo. Il personaggio continuerà a vedere sia quello che vedono i suoi occhi che quello che vedono quelli dell’animale su cui è stato lanciato l’incantesimo, chiudendo i propri occhi vedrà solamente attraverso gli occhi dell’animale. L’effetto dell’incantesimo non termina anche se l’animale esce dal raggio d’azione, il personaggio può comunque far terminare l’incantesimo a piacimento. L’effetto può essere dissolto da terzi sia agendo sull’animale che agendo sul personaggio che l’ha creato."
+        ],
+        "duration": "2 ore",
+        "level": "8",
+        "nome_descrittivo": "Vista Animale",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Aria",
+        "time": "1 minuto"
+    },
+    "vistadeimomentifinali": {
+        "area": "1 cadavere",
+        "description": [
+            "Il lanciatore tocca un cadavere morto da non più di un mese e lancia il sortilegio.",
+            "L’incantesimo permette al lanciatore di vedere gli ultimi istanti di vita, pari alla durata dell’incantesimo, del cadavere, come visti dalla sua stessa prospettiva."
+        ],
+        "duration": "30 secondi",
+        "level": "4",
+        "nome_descrittivo": "Vista dei Momenti Finali",
+        "range": "Tocco",
+        "school": "Divinazione",
+        "tags": "Negativo",
+        "time": "10 minuti"
+    },
+    "volare": {
+        "area": "1 Creatura",
+        "description": [
+            "Questo incantesimo permette all’incantatore di volare in qualsiasi direzione con il proprio fattore movimento. Il personaggio può anche decidere di rimanere fermo a mezz'aria, tuttavia tale azione è comunque considerata un movimento.",
+            "Quando l’incantesimo termina o viene interrotto l’incantatore cade secondo le normali leggi della gravità."
+        ],
+        "duration": "10 minuti",
+        "level": "11",
+        "nome_descrittivo": "Volare",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "10 secondi"
+    },
+    "volaredimassa": {
+        "area": "Raggio 6",
+        "description": [
+            "Funziona come il sortilegio Volare ma influenza tutte le creature nell’area d’effetto."
+        ],
+        "duration": "10 minuti",
+        "level": "24",
+        "nome_descrittivo": "Volare di Massa",
+        "range": "0",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "1 minuto"
+    },
+    "volareprotratto": {
+        "area": "1 Creatura",
+        "description": [
+            "Funziona come il sortilegio Volare ma ha tempo di lancio e durata maggiore."
+        ],
+        "duration": "1 ora",
+        "level": "19",
+        "nome_descrittivo": "Volare Protratto",
+        "range": "Tocco",
+        "school": "Trasmutazione",
+        "tags": "Aria",
+        "time": "1 minuto"
+    },
+    "zonadirilevazione": {
+        "area": "15 metri Raggio",
+        "description": [
+            "Incanta un’area in modo che tutte le creature che transitino al suo interno subiscano un modificatore di circostanza di -5 alle prove di Furtività."
+        ],
+        "duration": "24 ore",
+        "level": "8",
+        "nome_descrittivo": "Zona di Rilevazione",
+        "range": "Tocco",
+        "school": "Abiurazione",
+        "tags": "Positivo",
+        "time": "1 ora"
+    }
+}

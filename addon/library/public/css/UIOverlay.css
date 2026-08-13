@@ -48,3 +48,24 @@
 .submenu a:hover {
     background: rgba(255,255,255,0.15);
 }
+
+.pulsanteUI {
+    cursor: pointer;
+	padding: 2px;
+	height: 36px;
+	width: 36px;
+    transition: width 0.15s ease, height 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, padding 0.15s ease;
+}
+
+.pulsanteUI:hover {
+    padding: 0px;
+	height: 50px;
+	width: 50px;
+}
+
+.pulsanteUI:active {
+	padding: 8px;
+	height: 34px;
+	width: 34px;
+}
+

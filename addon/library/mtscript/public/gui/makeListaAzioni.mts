@@ -1,6 +1,6 @@
 [h: oToken = arg(0)]
 
-<!-- DA FARE -->
+<!-- TODO - DEPRECATED? -->
 [h: sReturn = strformat("
 	<div class='overlay-list-trigger'>
 	<a onclick='toggle_show_list();' href='#'><img src='%s' class='pulsanteTondo' title='Altre Azioni'/>

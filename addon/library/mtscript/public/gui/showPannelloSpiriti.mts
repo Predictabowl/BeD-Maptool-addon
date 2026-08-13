@@ -10,7 +10,7 @@
 [h, macro("powers/getMaxDevozione@this"): oToken]
 [h: iMaxDevozione = macro.return]
 
-[dialog5(sDialog, strformat("temporary=1; width=500; height=850; closebutton=0; noframe=0;")):{
+[dialog5(sDialog, strformat("temporary=1; width=700; height=800; closebutton=0; noframe=0;")):{
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
@@ -53,18 +53,8 @@
         </div>
 	}]
 	</div>
-	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
-		<input type="hidden" name="libSpell" value ="" id="input_lib_spell" />
-		<input type="hidden" name="token" value ="[r:oToken]"/>
-	</form>
-	<script>
-	[r:"
-		function apri_dialog_descrizione(event, sLibName){
-			document.getElementById('input_lib_spell').setAttribute('value',sLibName);
-			document.getElementById('dialogDescrizioneForm').submit();
-		}
-	"]
-	</script>
+	
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellDescription.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

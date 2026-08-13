@@ -4,7 +4,7 @@
 [h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,spellId)]
 [h: oSpellData = macro.return]
 
-[h: sJScriptSpell = strformat('apri_dialog_descrizione(event, "%{spellId}")')]
+[h: sJScriptSpell = strformat('apri_dialog_descrizione(event, "%{oToken}", "%{spellId}")')]
 [h: sNameInc = fetchSpellProp( spellId,"nome_decorativo")]
 [h: sSpellType = fetchSpellProp( spellId,"tipo")]
 <div class='spell-name-badge [r: sSpellType]' onclick='[r: sJScriptSpell]'>

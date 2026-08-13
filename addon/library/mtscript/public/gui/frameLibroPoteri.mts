@@ -50,13 +50,8 @@
 	<div style="text-align:center">
 	</div>
 
-	<!-- Form Nascosto per descrizione spell -->
-	<form id="dialogDescrizioneForm" method="json" action="[r:macroLinkText("gui/dialogDescrizioneSpell@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
-	<input type="hidden" name="libSpell" value ="" id="input_lib_spell" />
-	<input type="hidden" name="token" value ="[r:oToken]"/>
-	</form>
-
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=false" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellDescription.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

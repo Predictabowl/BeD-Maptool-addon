@@ -117,26 +117,6 @@ table.spellData {
 }
 
 
-.pulsanteUI {
-	padding: 2px;
-	height: 36px;
-	width: 36px;
-}
-
-.pulsanteUI:hover {
-	padding: 0px;
-	height: 50px;
-	width: 50px;
-	cursor: pointer;
-}
-
-.pulsanteUI:active {
-	padding: 8px;
-	height: 34px;
-	width: 34px;
-	cursor: pointer;
-}
-
 .pulsanteGrande {
 	margin: 0px;
 	height: 56px;

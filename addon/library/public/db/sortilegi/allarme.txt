@@ -1,3 +1,0 @@
-Crea una zona magica invisibile con normali metodi. Quando lanciato il lanciatore deve scegliere una parola d'ordine, la forma dell'area per un massimo pari all'area d'effetto dell'incantesimo, ed il tipo di allarme, se sonoro silenzioso, in questo caso solamente il lanciatore è in grado di udirlo a livello mentale.
-Ogni qual volta una creatura che non conosce la parola d'ordine entra o esce da tale zona l'allarme scatta un allarme silenzioso suono avvertendo il lanciatore dell'incantesimo e svegliandolo nel caso stia dormendo.
-Il lanciatore può anche scegliere la dimensione delle creature che possono far scattare l'allarme. 

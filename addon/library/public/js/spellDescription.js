@@ -1,7 +1,5 @@
-/*TODO da implementare al posto di tutte le altre copie
- anche l'input andrebbe fattorizzato
-*/
-function apri_dialog_descrizione(event, sLibName) {
-    document.getElementById('input_lib_spell').setAttribute('value', sLibName);
-    document.getElementById('dialogDescrizioneForm').submit();
+async function apri_dialog_descrizione(event, token, spellId) {
+    event.stopPropagation();
+    const bodyStr = JSON.stringify({ token: token, libSpell: spellId });
+    fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/dialogDescrizioneSpell', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
 }

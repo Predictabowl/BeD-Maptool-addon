@@ -51,3 +51,15 @@ PreghieraIStintodiSopravvivenza
 Add id inside json
 ("\w+"):\{([^\{\}]+\{[^\{\}]+\}\})
 $1:{"id":$1,$2
+
+
+Per I sortilegi
+Campi: 
+([^:\n]+):([^\n]+)\n
+"$1": "$2",
+
+Nomi:
+^(.+)\n(?="Livello")
+"$1": {
+
+descrizione:
