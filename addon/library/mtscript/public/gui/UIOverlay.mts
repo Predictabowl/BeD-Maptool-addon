@@ -81,7 +81,7 @@
 	<html>
 	<head>
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
-		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/UIOverlay.css?cachelib=false">
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/UIOverlay.css?cachelib=true">
 	</head>
 	<body>
 	<div>
