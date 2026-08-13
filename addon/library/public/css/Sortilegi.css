@@ -4,12 +4,12 @@
 
 :root {
     /* --- VARIABILI TEMA SCURO (DEFAULT) --- */
-    --bg-color: #1c1815;       
-    --sidebar-bg: #151210;     
-    --text-color: #dcd0c0;     
-    --text-muted: #9c8e7e;     
-    --accent-color: #c29b61;   
-    --border-color: #3d332a;   
+    --bg-color: #1c1815;
+    --sidebar-bg: #151210;
+    --text-color: #dcd0c0;
+    --text-muted: #9c8e7e;
+    --accent-color: #c29b61;
+    --border-color: #3d332a;
     --item-hover: rgba(194, 155, 97, 0.1);
     --item-active: rgba(194, 155, 97, 0.2);
     --stats-bg: rgba(194, 155, 97, 0.05);
@@ -18,12 +18,12 @@
 
 /* --- VARIABILI TEMA CHIARO --- */
 .grimoire-container.light-mode {
-    --bg-color: #f4efe6;       
-    --sidebar-bg: rgba(255, 255, 255, 0.2);     
-    --text-color: #2c241a;     
-    --text-muted: #666666;     
-    --accent-color: #5d4037;   
-    --border-color: #bfaea2;   
+    --bg-color: #f4efe6;
+    --sidebar-bg: rgba(255, 255, 255, 0.2);
+    --text-color: #2c241a;
+    --text-muted: #666666;
+    --accent-color: #5d4037;
+    --border-color: #bfaea2;
     --item-hover: rgba(93, 64, 55, 0.1);
     --item-active: rgba(93, 64, 55, 0.2);
     --stats-bg: rgba(93, 64, 55, 0.05);
@@ -38,7 +38,7 @@
     border: 2px solid var(--accent-color);
     border-radius: 4px;
     display: flex;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     color: var(--text-color);
 }
@@ -79,9 +79,9 @@
     margin-bottom: -2px;
 }
 
-.search-area { 
-    padding: 12px 15px; 
-    border-bottom: 1px solid var(--border-color); 
+.search-area {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .search-area input {
@@ -100,9 +100,9 @@
     border-color: var(--accent-color);
 }
 
-.spell-list { 
-    overflow-y: auto; 
-    flex: 1; 
+.spell-list {
+    overflow-y: auto;
+    flex: 1;
     min-height: 0;
     padding-right: 8px;
 }
@@ -116,13 +116,13 @@
     align-items: center;
 }
 
-.spell-item:hover { 
-    background: var(--item-hover); 
+.spell-item:hover {
+    background: var(--item-hover);
 }
 
-.spell-item.active { 
-    background: var(--item-active); 
-    font-weight: bold; 
+.spell-item.active {
+    background: var(--item-active);
+    font-weight: bold;
 }
 
 .spell-info small {
@@ -143,13 +143,14 @@
     flex: 1;
     padding: 40px;
     overflow-y: auto;
+    position: relative;
 }
 
-.details-pane h1 { 
-    font-family: var(--font-title); 
-    color: var(--accent-color); 
-    border-bottom: 2px solid var(--accent-color); 
-    padding-bottom: 10px; 
+.details-pane h1 {
+    font-family: var(--font-title);
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
     margin-top: 0;
 }
 
@@ -176,19 +177,19 @@
     font-size: 1.05rem;
 }
 
-.description p { 
-    line-height: 1.6; 
-    font-size: 1.1rem; 
+.description p {
+    line-height: 1.6;
+    font-size: 1.1rem;
     margin-bottom: 15px;
     text-align: justify;
 }
 
-.badge { 
-    font-size: 0.7rem; 
-    text-transform: uppercase; 
-    border: 1px solid var(--accent-color); 
-    padding: 2px 6px; 
-    border-radius: 3px; 
+.badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    border: 1px solid var(--accent-color);
+    padding: 2px 6px;
+    border-radius: 3px;
     color: var(--accent-color);
 }
 
@@ -212,17 +213,24 @@
 
 /* --- PULSANTE TOGGLE TEMA --- */
 .theme-toggle-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+
     background: none;
-    border: none;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
     font-size: 1.1rem;
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 6px 10px;
     color: var(--accent-color);
-    transition: transform 0.2s ease, background 0.2s ease;
-    border-left: 1px solid var(--border-color);
+    background-color: var(--stats-bg);
+    transition: all 0.2s ease;
+    z-index: 10;
 }
 
 .theme-toggle-btn:hover {
     background: var(--item-hover);
-    transform: scale(1.1);
+    border-color: var(--accent-color);
+    transform: scale(1.05);
 }

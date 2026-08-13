@@ -55,6 +55,7 @@
         <!-- Colonna Destra: Dettagli -->
         [h: sortilegio = json.get(allSortilegi, 0)]
         <div class="details-pane">
+            <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema (Chiaro/Scuro)" onclick="toggleTheme('[r: tokenId]')">🌓</button>
             <h1 id="name-value">[r: json.get(sortilegio, "nome_descrittivo")]</h1>
             
             

@@ -1,0 +1,118 @@
+<head>
+    <style>
+        :root {
+            --bg-card: #2a2a2a;
+            --border-color: #444;
+            --text-color: #ffffff;
+            --stats-bg: rgba(0, 0, 0, 0.3);
+            --stat-label-color: #aaaaaa;
+            --accent-color: #c08a3e;
+        }
+
+        /* ==========================================
+   DIALOGO / KEYWORD POPUP - CSS DEDICATO
+   ========================================== */
+
+        /* Reset di base per la finestra senza cornice di MapTool */
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+        }
+
+        /* Container principale del dialogo (Default Dark Mode) */
+        .keyword-dialog-container {
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            padding: 18px 22px;
+
+            /* Colori Dark specifici per staccare ed evitare che si mimetizzino */
+            background-color: #15110e;
+            border: 2px solid #d4af37;
+            border-radius: 6px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(212, 175, 55, 0.15);
+
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            pointer-events: auto;
+            color: #e6dcce;
+            font-family: 'EB Garamond', serif;
+        }
+
+        /* Header del dialogo */
+        .keyword-dialog-header {
+            border-bottom: 1px solid #4a3d31;
+            padding-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .keyword-dialog-title {
+            font-family: var(--font-title), 'Gabriela', serif;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        .keyword-dialog-acronym {
+            font-size: 0.85rem;
+            color: #a39482;
+            font-style: italic;
+        }
+
+        /* Corpo del testo */
+        .keyword-dialog-body p {
+            margin: 0;
+            font-size: 1.05rem;
+            color: #e6dcce;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        /* --- VERSIONE LIGHT MODE (attivabile tramite classe sul container) --- */
+        .keyword-dialog-container.light-mode {
+            background-color: #f7f3ed;
+            border: 2px solid #5a4231;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25), 0 0 10px rgba(90, 66, 49, 0.1);
+            color: #2c241a;
+        }
+
+        .keyword-dialog-container.light-mode .keyword-dialog-header {
+            border-bottom: 1px solid #d4c5b9;
+        }
+
+        .keyword-dialog-container.light-mode .keyword-dialog-title {
+            color: #5a4231;
+        }
+
+        .keyword-dialog-container.light-mode .keyword-dialog-acronym {
+            color: #7a6b5d;
+        }
+
+        .keyword-dialog-container.light-mode .keyword-dialog-body p {
+            color: #2c241a;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="keyword-dialog-container light-mode" onmouseleave="closePopup()">
+        <div class="keyword-dialog-header">
+            <span class="keyword-dialog-title">LP</span>
+            <span class="keyword-dialog-acronym">Livello Potenza</span>
+        </div>
+        <div class="keyword-dialog-body">
+            <p>Rappresenta la potenza accumulata dal personaggio.</p>
+        </div>
+    </div>
+</body>

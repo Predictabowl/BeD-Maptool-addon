@@ -71,3 +71,11 @@ function filterByName(nameInitials) {
         }
     });
 }
+
+async function toggleTheme(token){
+    const container = document.querySelector(".grimoire-container");
+    container.classList.toggle("light-mode");
+    const isLight = container.classList.contains("light-mode");
+    const bodyStr = JSON.stringify({ tokenId: token, isLight: isLight });
+    fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/sortilegi/saveSortilegiLightMode', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
+}

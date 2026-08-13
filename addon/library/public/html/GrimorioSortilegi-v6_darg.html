@@ -145,6 +145,7 @@
             flex: 1;
             padding: 40px;
             overflow-y: auto;
+            position: relative;
         }
 
         h1 {
@@ -216,19 +217,25 @@
 
         /* --- PULSANTE TOGGLE TEMA --- */
         .theme-toggle-btn {
+            position: absolute;
+            top: 30px;
+            right: 40px;
             background: none;
-            border: none;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
             font-size: 1.1rem;
             cursor: pointer;
-            padding: 8px 12px;
+            padding: 6px 10px;
             color: var(--accent-color);
-            transition: transform 0.2s ease, background 0.2s ease;
-            border-left: 1px solid var(--border-color);
+            background-color: var(--stats-bg);
+            transition: all 0.2s ease;
+            z-index: 10;
         }
 
         .theme-toggle-btn:hover {
             background: var(--item-hover);
-            transform: scale(1.1);
+            border-color: var(--accent-color);
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -243,7 +250,6 @@
                 <button class="filter-tab active">Tutti</button>
                 <button class="filter-tab">Conosciuti</button>
             </div>
-            <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema (Chiaro/Scuro)">🌓</button>
             <div class="search-area">
                 <input type="text" placeholder="Cerca sortilegio..." value="">
             </div>
@@ -274,10 +280,8 @@
 
         <!-- Colonna Destra: Dettagli -->
         <div class="details-pane">
-            <div class="details-header" style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; margin-bottom: 25px;">
-                <h1 style="margin: 0; border-bottom: none; padding-bottom: 0;">Affascinare</h1>
-                <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema (Chiaro/Scuro)">🌓</button>
-            </div>
+            <button id="theme-toggle" class="theme-toggle-btn" title="Cambia tema (Chiaro/Scuro)">🌓</button>
+            <h1>Affascinare</h1>
 
             <div class="stats-table">
                 <div class="stat-label">Scuola</div>
