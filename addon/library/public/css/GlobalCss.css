@@ -67,6 +67,12 @@ input {
 	font-size: 16px;
 }
 
+form {
+    margin: 0;
+    padding: 0;
+}
+
+
 
 /* --- CLASSI DI CATEGORIA (Colori fissi del manuale) --- */
 .OFFENSIVO {

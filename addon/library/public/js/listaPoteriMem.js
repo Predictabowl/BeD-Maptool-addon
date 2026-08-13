@@ -42,7 +42,7 @@ function handleDrop(e) {
         const updatedCards = container.querySelectorAll('.spell-card');
         let newOrder = [];
         updatedCards.forEach(card => {
-            newOrder.push(card.getAttribute('data-id'));
+            newOrder.push(card.dataset.id);
         });
 
         document.getElementById('nuovaListaPoteri').value = newOrder.join(",");
@@ -58,18 +58,14 @@ function handleDragEnd(e) {
 }
 
 
-function refreshSpellList(event) {
+async function refreshSpellList(event, frame) {
     if (event.button === 2) {
         event.preventDefault();
-        document.getElementById("refreshListaPoteri").submit();
+        const bodyStr = JSON.stringify([frame, "clearAll"]);
+        fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/updatePoteri', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
+        /*document.getElementById("refreshListaPoteri").submit();*/
     }
 }
 
 
-/*
-function refreshSpellList(event) {
-    if (event.button == 2) {
-        document.getElementById("refreshListaPoteri").submit();
-    }
-}*/
 

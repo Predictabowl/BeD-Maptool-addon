@@ -27,15 +27,11 @@
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
 		<title>[r: getName(oToken)] - Poteri Memorizzati</title> 
 </head>
-<body align="center">
+<body>
 
-
-<!-- Form Nascosto per refresh della lista -->
-<form id="refreshListaPoteri" method="json" action="[r: macrolinkText("gui/updatePoteri@this","none",json.append("",sFrame,"clearAll"))]">
-</form>
 
 <!-- Spell List -->
-<div class="spells-grid-container" id="spellList_Section" onmouseup="refreshSpellList(event)">
+<div class="spells-grid-container" id="spellList_Section" onmouseup="refreshSpellList(event, '[r: sFrame]')">
 
 [r, foreach(nomeLib, lPoteri, ""), CODE:{
 	[h, macro("powers/getSpellRecuperoStat@this"): nomeLib]
@@ -73,7 +69,7 @@
 </form>
 
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=false" defer></script>
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellDescription.js?cachelib=true" defer></script>
 </body>
 </html>
