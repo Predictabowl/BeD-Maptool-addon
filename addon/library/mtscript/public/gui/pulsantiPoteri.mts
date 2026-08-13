@@ -140,5 +140,8 @@
 	case "VistaSpiriti": {
 		[macro("gui/showPannelloSpiriti@this"): target]
 	};
+	case "Sortilegi": {
+		[macro("gui/GrimorioSortilegi@this"): target]
+	};
 	default :{}
 ]

@@ -1,205 +1,228 @@
- :root {
-     --bg-color: #1a1a1a;
-     --panel-bg: #2a2a2a;
-     --accent-color: #8a2be2;
-     /* Colore magico/viola */
-     --accent-hover: #9932cc;
-     --text-color: #f0f0f0;
-     --text-muted: #aaa;
-     --border-color: #444;
- }
+/* ==========================================
+   GRIMORIO DEI SORTILEGI - CSS DEDICATO
+   ========================================== */
 
- body {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     background-color: var(--bg-color);
-     color: var(--text-color);
-     margin: 0;
-     padding: 20px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     height: 100vh;
- }
+:root {
+    /* --- VARIABILI TEMA SCURO (DEFAULT) --- */
+    --bg-color: #1c1815;       
+    --sidebar-bg: #151210;     
+    --text-color: #dcd0c0;     
+    --text-muted: #9c8e7e;     
+    --accent-color: #c29b61;   
+    --border-color: #3d332a;   
+    --item-hover: rgba(194, 155, 97, 0.1);
+    --item-active: rgba(194, 155, 97, 0.2);
+    --stats-bg: rgba(194, 155, 97, 0.05);
+    --input-bg: #25201c;
+}
 
- /* Finestra Principale / Dialog */
- .spellbook-dialog {
-     background-color: var(--panel-bg);
-     border: 2px solid var(--accent-color);
-     border-radius: 8px;
-     width: 900px;
-     height: 600px;
-     display: flex;
-     flex-direction: column;
-     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-     overflow: hidden;
- }
+/* --- VARIABILI TEMA CHIARO --- */
+.grimoire-container.light-mode {
+    --bg-color: #f4efe6;       
+    --sidebar-bg: rgba(255, 255, 255, 0.2);     
+    --text-color: #2c241a;     
+    --text-muted: #666666;     
+    --accent-color: #5d4037;   
+    --border-color: #bfaea2;   
+    --item-hover: rgba(93, 64, 55, 0.1);
+    --item-active: rgba(93, 64, 55, 0.2);
+    --stats-bg: rgba(93, 64, 55, 0.05);
+    --input-bg: #ffffff;
+}
 
- /* Header del Dialog */
- .dialog-header {
-     padding: 15px 20px;
-     background-color: #222;
-     border-bottom: 1px solid var(--border-color);
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
+/* --- STRUTTURAZIONE PRINCIPALE --- */
+.grimoire-container {
+    width: 970px;
+    height: 750px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    display: flex;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    overflow: hidden;
+    color: var(--text-color);
+}
 
- .dialog-header h2 {
-     margin: 0;
-     font-size: 1.5rem;
-     color: var(--accent-color);
- }
+/* --- SIDEBAR & LISTA --- */
+.sidebar {
+    width: 340px;
+    border-right: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    background: var(--sidebar-bg);
+}
 
- /* Tabs di Navigazione (Tutti / Conosciuti) */
- .tabs {
-     display: flex;
-     background-color: #222;
-     padding: 0 20px;
-     border-bottom: 1px solid var(--border-color);
- }
+.filter-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--border-color);
+    background: rgba(0, 0, 0, 0.1);
+}
 
- .tab-btn {
-     background: none;
-     border: none;
-     color: var(--text-muted);
-     padding: 10px 20px;
-     cursor: pointer;
-     font-size: 1rem;
-     border-bottom: 3px solid transparent;
-     transition: all 0.3s ease;
- }
+.filter-tab {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    text-align: center;
+    transition: all 0.2s;
+}
 
- .tab-btn.active {
-     color: var(--text-color);
-     border-bottom-color: var(--accent-color);
-     font-weight: bold;
- }
+.filter-tab.active {
+    color: var(--accent-color);
+    font-weight: bold;
+    background: var(--bg-color);
+    border-bottom: 2px solid var(--accent-color);
+    margin-bottom: -2px;
+}
 
- /* Contenitore Principale (Lista + Dettaglio) */
- .dialog-body {
-     display: flex;
-     flex: 1;
-     overflow: hidden;
- }
+.search-area { 
+    padding: 12px 15px; 
+    border-bottom: 1px solid var(--border-color); 
+}
 
- /* Colonna Sinistra: Lista dei Sortilegi */
- .spell-list-container {
-     width: 45%;
-     border-right: 1px solid var(--border-color);
-     overflow-y: auto;
-     padding: 10px;
- }
+.search-area input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    background: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
 
- .spell-item {
-     padding: 12px 15px;
-     margin-bottom: 8px;
-     background-color: #333;
-     border-radius: 6px;
-     cursor: pointer;
-     transition: background 0.2s;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
+.search-area input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
 
- .spell-item:hover {
-     background-color: #3a3a3a;
- }
+.spell-list { 
+    overflow-y: auto; 
+    flex: 1; 
+    min-height: 0;
+    padding-right: 8px;
+}
 
- .spell-item.selected {
-     border-left: 4px solid var(--accent-color);
-     background-color: #382c44;
- }
+.spell-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
- .spell-name {
-     font-weight: bold;
- }
+.spell-item:hover { 
+    background: var(--item-hover); 
+}
 
- .spell-badge {
-     font-size: 0.75rem;
-     padding: 2px 6px;
-     border-radius: 4px;
-     background-color: #444;
-     color: var(--text-muted);
- }
+.spell-item.active { 
+    background: var(--item-active); 
+    font-weight: bold; 
+}
 
- .spell-badge.known {
-     background-color: #2e5c2e;
-     color: #fff;
- }
+.spell-info small {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 2px;
+}
 
- /* Colonna Destra: Dettagli e Statistiche (Future-proof) */
- .spell-details {
-     width: 55%;
-     padding: 20px;
-     overflow-y: auto;
-     background-color: #252525;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
- }
+.spell-meta-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
- .details-header h3 {
-     margin-top: 0;
-     color: var(--accent-color);
-     font-size: 1.4rem;
- }
+/* --- PANNELLO DETTAGLI --- */
+.details-pane {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
 
- /* Griglia delle Statistiche (Spazio riservato per il futuro) */
- .stats-grid {
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     gap: 10px;
-     margin: 15px 0;
-     padding: 10px;
-     background: #1f1f1f;
-     border-radius: 6px;
-     border: 1px solid var(--border-color);
- }
+.details-pane h1 { 
+    font-family: var(--font-title); 
+    color: var(--accent-color); 
+    border-bottom: 2px solid var(--accent-color); 
+    padding-bottom: 10px; 
+    margin-top: 0;
+}
 
- .stat-item {
-     font-size: 0.9rem;
-     color: var(--text-muted);
- }
+.stats-table {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 20px;
+    background: var(--stats-bg);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    border-left: 3px solid var(--accent-color);
+}
 
- .stat-item span {
-     color: var(--text-color);
-     font-weight: bold;
- }
+.stat-label {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-family: var(--font-title);
+    font-size: 0.95rem;
+}
 
- .spell-description {
-     font-size: 0.95rem;
-     line-height: 1.5;
-     color: #ddd;
-     margin-bottom: 20px;
- }
+.stat-value {
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
 
- /* Azioni (es. Pulsante "Lancia" o "Memorizza") */
- .spell-actions {
-     display: flex;
-     justify-content: flex-end;
-     gap: 10px;
- }
+.description p { 
+    line-height: 1.6; 
+    font-size: 1.1rem; 
+    margin-bottom: 15px;
+    text-align: justify;
+}
 
- .btn {
-     background-color: var(--accent-color);
-     color: white;
-     border: none;
-     padding: 8px 16px;
-     border-radius: 4px;
-     cursor: pointer;
-     font-weight: bold;
-     transition: background 0.2s;
- }
+.badge { 
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    border: 1px solid var(--accent-color); 
+    padding: 2px 6px; 
+    border-radius: 3px; 
+    color: var(--accent-color);
+}
 
- .btn:hover {
-     background-color: var(--accent-hover);
- }
+/* --- STATUS DOTS (CONOSCIUTI / NON CONOSCIUTI) --- */
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
 
- .btn-secondary {
-     background-color: #444;
- }
+.status-dot.known {
+    background-color: var(--accent-color);
+    box-shadow: 0 0 4px var(--accent-color);
+}
 
- .btn-secondary:hover {
-     background-color: #555;
- }
+.status-dot.unknown {
+    background-color: transparent;
+    border: 1px solid var(--text-muted);
+}
+
+/* --- PULSANTE TOGGLE TEMA --- */
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    color: var(--accent-color);
+    transition: transform 0.2s ease, background 0.2s ease;
+    border-left: 1px solid var(--border-color);
+}
+
+.theme-toggle-btn:hover {
+    background: var(--item-hover);
+    transform: scale(1.1);
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Gabriela&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4efe6;
+            /* Carta antica */
+            --text-color: #2c241a;
+            --accent-color: #5d4037;
+            /* Marrone sobrio */
+            --border-color: #bfaea2;
+        }
+
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #d1ccc0;
+            color: var(--text-color);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grimoire-container {
+            width: 950px;
+            height: 680px;
+            background-color: var(--bg-color);
+            border: 2px solid var(--accent-color);
+            border-radius: 4px;
+            display: flex;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Sidebar Lista */
+        .sidebar {
+            width: 340px;
+            border-right: 2px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Tab di Filtro (Tutti / Conosciuti) */
+        .filter-tabs {
+            display: flex;
+            border-bottom: 2px solid var(--border-color);
+            background: rgba(93, 64, 55, 0.05);
+        }
+
+        .filter-tab {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: none;
+            font-family: 'Gabriela', serif;
+            font-size: 0.95rem;
+            cursor: pointer;
+            color: #666;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .filter-tab.active {
+            color: var(--accent-color);
+            font-weight: bold;
+            background: var(--bg-color);
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: -2px;
+        }
+
+        .search-area {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-area input {
+            width: 100%;
+            padding: 8px;
+            font-family: 'EB Garamond', serif;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            background: #fff;
+            box-sizing: border-box;
+            border-radius: 3px;
+        }
+
+        .spell-list {
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .spell-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .spell-item:hover {
+            background: rgba(93, 64, 55, 0.1);
+        }
+
+        .spell-item.active {
+            background: rgba(93, 64, 55, 0.2);
+            font-weight: bold;
+        }
+
+        .spell-info small {
+            display: block;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        /* Contenuto Dettaglio */
+        .details-pane {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-family: 'Gabriela', serif;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Tabella Statistiche Strutturata */
+        .stats-table {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 8px 20px;
+            background: rgba(93, 64, 55, 0.05);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .stat-label {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-family: 'Gabriela', serif;
+            font-size: 0.95rem;
+        }
+
+        .stat-value {
+            color: #333;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.05rem;
+        }
+
+        .description p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            border: 1px solid var(--accent-color);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: var(--accent-color);
+        }
+
+        .spell-meta-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Stile per il pallino di stato a destra */
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .status-dot.known {
+            background-color: var(--accent-color);
+            /* Pieno/Attivo se conosciuto */
+            box-shadow: 0 0 4px rgba(93, 64, 55, 0.4);
+        }
+
+        .status-dot.unknown {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            /* Vuoto/Discreto se non conosciuto */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grimoire-container">
+        <!-- Colonna Sinistra -->
+        <div class="sidebar">
+            <!-- Tab di Filtro Esplicite -->
+            <div class="filter-tabs">
+                <button class="filter-tab active">Tutti</button>
+                <button class="filter-tab">Conosciuti</button>
+            </div>
+
+            <div class="search-area">
+                <input type="text" placeholder="Cerca sortilegio..." value="">
+            </div>
+
+            <div class="spell-item active">
+                <div class="spell-info">
+                    <span>Affascinare</span>
+                    <small>Incantamento</small>
+                </div>
+                <div class="spell-meta-right">
+                    <span class="badge">Lv 11</span>
+                    <span class="status-dot known" title="Conosciuto"></span>
+                </div>
+            </div>
+
+            <!-- Sortilegio NON CONOSCIUTO -->
+            <div class="spell-item">
+                <div class="spell-info" style="opacity: 0.6;">
+                    <span>Allarme</span>
+                    <small>Abiurazione</small>
+                </div>
+                <div class="spell-meta-right">
+                    <span class="badge">Lv 4</span>
+                    <span class="status-dot unknown" title="Non conosciuto"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colonna Destra: Dettagli -->
+        <div class="details-pane">
+            <h1>Affascinare</h1>
+
+            <div class="stats-table">
+                <div class="stat-label">Scuola</div>
+                <div class="stat-value">Incantamento</div>
+
+                <div class="stat-label">Livello</div>
+                <div class="stat-value">11</div>
+
+                <div class="stat-label">Tempo di lancio</div>
+                <div class="stat-value">1 minuto</div>
+
+                <div class="stat-label">Raggio d'azione</div>
+                <div class="stat-value">3 metri</div>
+
+                <div class="stat-label">Durata</div>
+                <div class="stat-value">16 ore</div>
+
+                <div class="stat-label">Area</div>
+                <div class="stat-value">1 creatura</div>
+            </div>
+
+            <div class="description">
+                <p>Il lancio di questo incantesimo può essere mascherato parlando e gesticolando in modo simile a quanto
+                    si farebbe con una normale conversazione.</p>
+                <p>Durante il lancio il personaggio cerca di convincere il bersaglio parlandogli, quindi l’incantesimo
+                    ha effetto solamente se i personaggi parlano la stessa lingua.</p>
+                <p>Al termine del lancio la vittima deve effettuare una prova di Tenacia con CD 18 o in alternativa pari
+                    a 11 + grado Persuasione del lanciatore.</p>
+                <p>Se la prova fallisce la vittima non è influenzata, l’incantesimo viene perduto e la vittima ne
+                    diventa immune per una settimana. Se la prova fallisce con almeno 10 punti di scarto la vittima si
+                    accorge del tentativo.</p>
+                <p>Se la prova riesce la vittima diventa affascinata dal lanciatore e inizia a considerarlo uno dei suoi
+                    più cari amici e per tutta la durata lo tratterà come tale.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

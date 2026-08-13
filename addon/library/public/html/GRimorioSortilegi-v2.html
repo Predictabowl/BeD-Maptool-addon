@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root { --accent: #8a2be2; --bg: #1a1a1a; --text: #f0f0f0; }
+        body { background: var(--bg); color: var(--text); font-family: sans-serif; display: flex; height: 100vh; margin: 0; }
+        
+        /* Layout */
+        .sidebar { width: 350px; border-right: 1px solid #444; display: flex; flex-direction: column; }
+        .content { flex: 1; padding: 20px; overflow-y: auto; }
+        
+        /* Lista */
+        .search-box { padding: 10px; }
+        .spell-list { overflow-y: auto; flex: 1; }
+        .spell-item { padding: 10px; cursor: pointer; border-bottom: 1px solid #333; }
+        .spell-item.active { background: #382c44; border-left: 4px solid var(--accent); }
+        
+        /* Badge */
+        .badge { font-size: 0.7rem; padding: 2px 6px; background: #444; border-radius: 4px; margin-left: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Cerca sortilegio..." style="width: 90%">
+        <label><input type="checkbox" id="showKnown"> Solo conosciuti</label>
+    </div>
+    <div class="spell-list" id="spellList"></div>
+</div>
+
+<div class="content" id="details">
+    <h2>Seleziona un sortilegio</h2>
+</div>
+
+<script>
+    // Questo sarebbe il tuo sortilegi_array.json caricato
+    const allSpells = [
+        { id: "affascinare", nome_descrittivo: "Affascinare", level: 11, school: "Incantamento", description: ["...testo..."] },
+        { id: "allarme", nome_descrittivo: "Allarme", level: 4, school: "Abiurazione", description: ["...testo..."] }
+    ];
+    const knownIds = ["affascinare"]; // Lista ID conosciuti dal PG
+
+    const listEl = document.getElementById('spellList');
+    const detailsEl = document.getElementById('details');
+
+    function renderList() {
+        const query = document.getElementById('search').value.toLowerCase();
+        const onlyKnown = document.getElementById('showKnown').checked;
+
+        listEl.innerHTML = '';
+        allSpells.filter(s => 
+            s.nome_descrittivo.toLowerCase().includes(query) && 
+            (!onlyKnown || knownIds.includes(s.id))
+        ).forEach(spell => {
+            const div = document.createElement('div');
+            div.className = 'spell-item';
+            div.innerHTML = `${spell.nome_descrittivo} ${knownIds.includes(spell.id) ? '<span class="badge">Conosciuto</span>' : ''}`;
+            div.onclick = () => showDetails(spell);
+            listEl.appendChild(div);
+        });
+    }
+
+    function showDetails(s) {
+        detailsEl.innerHTML = `
+            <h1>${s.nome_descrittivo}</h1>
+            <p><strong>Scuola:</strong> ${s.school} | <strong>Livello:</strong> ${s.level}</p>
+            <div>${s.description.map(p => `<p>${p}</p>`).join('')}</div>
+        `;
+    }
+
+    document.getElementById('search').oninput = renderList;
+    document.getElementById('showKnown').onchange = renderList;
+    renderList();
+</script>
+</body>
+</html>
