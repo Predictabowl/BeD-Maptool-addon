@@ -10,7 +10,7 @@
 [h, macro("powers/getMaxDevozione@this"): oToken]
 [h: iMaxDevozione = macro.return]
 
-[dialog5(sDialog, strformat("temporary=1; width=700; height=800; closebutton=0; noframe=0;")):{
+[dialog5(sDialog, strformat("temporary=0; width=900; height=720; closebutton=0; noframe=0;")):{
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <!-- Essendo già attivo, mostriamo un indicatore invece del pulsante -->
-				[r, if(sActive != ""): "<button class='btn btn-active-spirit' disabled>Spirito Attivo</button>"]
+				[r, if(sActive != ""): "<button class='btn btn-active-spirit' disabled>Attivo</button>"]
             </div>
 
             <div class="spirit-body">
