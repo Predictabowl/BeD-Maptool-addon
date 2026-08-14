@@ -21,7 +21,7 @@
 	<title>[r: getName(oToken)] - Grimorio Incantesimi</title>
 </head>
 <body>
-	<form id="form-memorizza" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
+	<form id="form-memorizza" class="grimoire-dialog" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<div class="grimoire-grid-container">
 		[r, foreach(spellId, oListaPot, ""), code:{
 			[h, if(json.contains(oMemList,spellId)): memorized = 1; memorized = 0]
