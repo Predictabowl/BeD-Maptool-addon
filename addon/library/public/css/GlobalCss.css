@@ -4,67 +4,81 @@
     --font-book: 'Macondo', 'Morris Roman', 'Georgia', serif;
     --font-spell: 'New Rocker', 'Vecna', serif;
     --font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
+
+    --mana-color: #4d4dff;
+    --fatica-color: #ffd700;
+    --tempo-color: #32cd32;
+    --azione-color: #ff4d4d;
+    --mm-color: #ff6600;
+    --pp-color: #D100D1;
+
+    --mana-color-inverse: #0000FF;
+    --tempo-color-inverse: darkgreen;
+    --mm-color-inverse: #994d00;
+    --fatica-color-inverse: #cc9900;
+    --azione-color-inverse: #cc0000;
+    --pp-color-inverse: #990099;
 }
 
 body {
     font-family: var(--font-default);
-    
+
     font-size: 18px;
     line-height: 1.5;
     /* Ottimizza lo spazio verticale tra le righe di testo */
 }
 
 h1 {
-	font-size: 160%;
+    font-size: 160%;
 }
 
 h2 {
-	font-size: 140%;
+    font-size: 140%;
 }
 
 h3 {
-	font-size: 120%;
+    font-size: 120%;
 }
 
 h4 {
-	font-size: 90%;
+    font-size: 90%;
 }
 
 strong {
-	font-size: 110%;
+    font-size: 110%;
 }
 
 a {
-	text-decoration: none;
-	color: blue;
+    text-decoration: none;
+    color: blue;
 }
 
 a:hover {
-	color: purple;
+    color: purple;
 }
 
 a:active {
-	color: red;
+    color: red;
 }
 
 .relevantTitle {
-	font-family: var(--font-title);
-	font-size: 30px;
-	color: maroon;
+    font-family: var(--font-title);
+    font-size: 30px;
+    color: maroon;
 }
 
 a.relevantTitle:hover {
-	color: red;
+    color: red;
 }
 
 button {
-	font-family: var(--font-default);
-	font-size: 16px;
+    font-family: var(--font-default);
+    font-size: 16px;
 }
 
 input {
-	font-family: var(--font-default);
-	font-size: 16px;
+    font-family: var(--font-default);
+    font-size: 16px;
 }
 
 form {
@@ -124,56 +138,57 @@ form {
 }
 
 /* --- COLORI DELLE RISORSE --- */
+
 .manaFont {
-    color: #4d4dff;
+    color: var(--mana-color);
     font-weight: bold;
 }
 
 .faticaFont {
-    color: #ffd700;
+    color: var(--fatica-color);
     font-weight: bold;
 }
 
 .tempoFont {
-    color: #32cd32;
+    color: var(--tempo-color);
     font-weight: bold;
 }
 
 .azioneFont {
-    color: #ff4d4d;
+    color: var(--azione-color);
     font-weight: bold;
 }
 
 .mmFont {
-    color: #ff6600;
+    color: var(--mm-color);
     font-weight: bold;
 }
 
 .ppFont {
-    color: #D100D1;
+    color: var(--pp-color);
     font-weight: bold;
 }
 
 .light-mode .manaFont {
-    color: #0000FF;
+    color: var(--mana-color-inverse);
 }
 
 .light-mode .tempoFont {
-    color: darkgreen;
+    color: var(--tempo-color-inverse);
 }
 
 .light-mode .mmFont {
-    color: #994d00;  /* Fixed: darker orange, not purple */
+    color: var(--mm-color-inverse);
 }
 
 .light-mode .faticaFont {
-    color: #cc9900;
+    color: var(--fatica-color-inverse);
 }
 
 .light-mode .azioneFont {
-    color: #cc0000;
+    color: var(--azione-color-inverse);
 }
 
 .light-mode .ppFont {
-    color: #990099;
+    color: var(--pp-color-inverse);
 }

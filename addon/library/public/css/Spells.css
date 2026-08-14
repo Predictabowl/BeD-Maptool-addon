@@ -1,10 +1,13 @@
 :root {
-    --bg-color: #16181d;
-    --bg-card: #262a33;
-    --border-color: #3a3f4a;
-    --text-color: #ffffff;
+
+    --bg-color: #ece6d8;
+    --bg-card: #2a2a2a;
+    --bg-card-inverse: #f2ede2;
+    --border-color: #35322c;
+    --text-color: #222222;
     --stats-bg: rgba(0, 0, 0, 0.3);
     --stat-label-color: #aaaaaa;
+    --stat-label-color-inverse: #222222;
     --accent-color: #c08a3e;
 }
 
@@ -25,17 +28,33 @@ body {
 
 
 .light-mode {
-    /* --bg-color: #e8e8e8;
-    --bg-card: #f0f0f0;
-    --border-color: #cccccc; */
 
-    --bg-color: #eceef1;      /* soft cool-gray background */
-    --bg-card: #ffffff;       /* full white cards, clear "elevated" feel */
-    --border-color: #d6d9de;  /* visible but soft */
+    --bg-card: #f2ede2;
 
-    --text-color: #222222;
+    --bg-card-inverse: #1c1a17;
+    /* full white cards, clear "elevated" feel */
+    /*--border-color: #d6d9de;*/
+    --border-color: #d8cfba;
+    /* visible but soft */
+
+    /*--text-color: #222222;*/
     --stats-bg: rgba(0, 0, 0, 0.05);
-    --stat-label-color: #666666;
+    --stat-label-color: #222222;
+    --stat-label-color-inverse: #aaaaaa;
+
+    --mana-color: #0000FF;
+    --tempo-color: darkgreen;
+    --mm-color: #994d00;
+    --fatica-color: #cc9900;
+    --azione-color: #cc0000;
+    --pp-color: #990099;
+
+    --mana-color-inverse: #4d4dff;
+    --fatica-color-inverse: #ffd700;
+    --tempo-color-inverse: #32cd32;
+    --azione-color-inverse: #ff4d4d;
+    --mm-color-inverse: #ff6600;
+    --pp-color-inverse: #D100D1;
 }
 
 div {
@@ -233,38 +252,43 @@ span {
     border-radius: 6px;
     border: 1px solid var(--border-color);
     flex: 1;
-    min-height: 0; 
+    min-height: 0;
 }
 
 /* --- CARD DEL LIBRO --- */
 
 
 .spell-card.in-book {
-    background-color: #322d36;
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(192, 138, 62, 0.20),
-        rgba(192, 138, 62, 0.20) 8px,
-        transparent 8px,
-        transparent 16px
-    );
-    color: var(--text-color);
-    border-color: var(--border-color);
-    filter: grayscale(0.7);
+    /*filter: grayscale(0.4);*/
+    background-color: var(--bg-card-inverse);
 }
 
-.light-mode .spell-card.in-book {
-    background-color: #e2e2e2;
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(192, 138, 62, 0.16),
-        rgba(192, 138, 62, 0.16) 8px,
-        transparent 8px,
-        transparent 16px
-    );
-    color: var(--text-color);
-    border-color: var(--border-color);
-    filter: grayscale(0.7);
+.spell-card.in-book .manaFont {
+    color: var(--mana-color-inverse);
+}
+
+.spell-card.in-book .tempoFont {
+    color: var(--tempo-color-inverse);
+}
+
+.spell-card.in-book .mmFont {
+    color: var(--mm-color-inverse);
+}
+
+.spell-card.in-book .faticaFont {
+    color: var(--fatica-color-inverse);
+}
+
+.spell-card.in-book .azioneFont {
+    color: var(--azione-color-inverse);
+}
+
+.spell-card.in-book .ppFont {
+    color: var(--pp-color-inverse);
+}
+
+.spell-card.in-book .stat-label {
+    color: var(--stat-label-color-inverse);
 }
 
 /* --- STILE PER LA BARRA DEI CONTROLLI (Conferma, Annulla, Contatore) --- */
@@ -333,7 +357,7 @@ span {
 }
 
 .spirit-panel {
-    /*background-color: var(--bg-card);*/
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
@@ -378,6 +402,7 @@ span {
     padding: 10px;
     overflow: auto;
     max-height: 220px;
+    
 }
 
 /* --- STATISTICHE SPIRITO (Devozione e Probabilità) --- */
