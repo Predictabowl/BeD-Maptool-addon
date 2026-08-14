@@ -1,7 +1,6 @@
 {
     "AnalizzareNemico": {
         "descrizione": "Quando attivata su di una creatura come bersaglio, permette di scoprire una caratteristica a scelta dello stesso, fra le quali: 1 fra le resistenze, 1 fra i TS, LA, LD, Crit, Pcrit, Schivare, Parare, Elusione e altre caratteristiche minori o derivate a discrezione del Master.\nIl successo non è automatico, e richiede di effettuare una prova\n<div style=\"text-align:center\">1d20 + LPG + 2x Livello Abilità</div>e raggiungere una CD pari a<div style=\"text-align:center\">12 + Livello del bersaglio.</div>",
-        "id": "AnalizzareNemico",
         "image": "ability_hunter_mastermarksman.png",
         "nome_decorativo": "Analizzare il Nemico",
         "properties": {
@@ -21,7 +20,6 @@
     },
     "AssoloVirtuoso": {
         "descrizione": "Mentre l’abilità è attiva il personaggio ottiene, esclusivamente su se stesso, la replica di dell’effetto di un Motivo Sonata che conosce. Tale effetto si cumula normalmente con altri motivi di qualsiasi tipo.",
-        "id": "AssoloVirtuoso",
         "image": "inspire_competence_icon_pathfinder_kingmaker_wiki_guide_80px.png",
         "nome_decorativo": "Assolo Virtuoso",
         "properties": {
@@ -41,7 +39,6 @@
     },
     "AttaccoPerforante": {
         "descrizione": "Mentre questa abilità è attiva il personaggio ottiene un bonus di +5 Penetrazione.",
-        "id": "AttaccoPerforante",
         "image": "ability_skyreach_piercing_rush.png",
         "nome_decorativo": "Attacco Perforante",
         "properties": {
@@ -61,7 +58,6 @@
     },
     "AzionesullaDifensiva": {
         "descrizione": "Mentre l’abilità è attiva la prossima azione ottiene il modificatore Difendersi.",
-        "id": "AzionesullaDifensiva",
         "image": "ability_warrior_shieldwall.png",
         "nome_decorativo": "Azione sulla Difensiva",
         "properties": {
@@ -81,7 +77,6 @@
     },
     "CambiareBersaglio": {
         "descrizione": "Mentre l’abilità è attiva è possibile cambiare il bersaglio durante qualsiasi fase dell’azione.",
-        "id": "CambiareBersaglio",
         "image": "ability_hunter_snipershot.png",
         "nome_decorativo": "Cambiare Bersaglio",
         "properties": {
@@ -101,7 +96,6 @@
     },
     "CavalcaTempesta": {
         "descrizione": "Mentre l’abilità è attiva il primo incantesimo lanciato dal personaggio si sprigiona un’esplosione di energia che colpisce tutti i nemici entro raggio 8 dal lanciatore, ed infligge danni con lo stesso LL e lo stesso elemento dell’incantesimo lanciato. L’ esplosione può generare un effetto critico, basato sull’arma con cui l’incantesimo originario viene lanciato.\nGrado 1: Infligge 1d8 danni per LP\nGrado 2: Infligge 1d11 danni per LP",
-        "id": "CavalcaTempesta",
         "image": "spell_nature_purge.jpg.png",
         "nome_decorativo": "Cavalcatempesta",
         "properties": {
@@ -121,7 +115,6 @@
     },
     "ColpireAlleSpalle": {
         "descrizione": "Mentre l'abilità è attiva gli Attacchi alle Spalle ottengono un bonus di +%s LA.",
-        "id": "ColpireAlleSpalle",
         "image": "scoundrel_backlash-icon.png",
         "nome_decorativo": "Colpire alle Spalle",
         "properties": {
@@ -141,7 +134,6 @@
     },
     "Contrattacco": {
         "descrizione": "Mentre questa abilità è attiva, ogni volta che il personaggio Para o Schiva l’attacco di un avversario, allora il prossimo attacco inflitto entro il termine del round, se ha come bersaglio tale avversario, diventa un Attacco di opportunità.\nSolo l’ultima parata o schivata effettuata conta ai fini di questa abilità.",
-        "id": "Contrattacco",
         "image": "ability_warrior_challange.png",
         "nome_decorativo": "Contrattacco",
         "properties": {
@@ -161,7 +153,6 @@
     },
     "ControlloArea": {
         "descrizione": "Mentre l’abilità è attiva i poteri eviteranno di influenzare tutti gli alleati che si trovano all’interno della sua area d’effetto.",
-        "id": "ControlloArea",
         "image": "spell_hunter_focusingshot.png",
         "nome_decorativo": "Controllo dell'area",
         "properties": {
@@ -181,7 +172,6 @@
     },
     "Disimpegno": {
         "descrizione": "Quando attivata il personaggio guadagna +1 MM.\nMentre attiva il personaggio non provoca attacchi di opportunità quando effettua un’azione di movimento.",
-        "id": "Disimpegno",
         "image": "ability_rogue_cheatdeath.png",
         "nome_decorativo": "Disimpegno",
         "properties": {
@@ -201,7 +191,6 @@
     },
     "EnergiaDistruttiva": {
         "descrizione": "Mentre questa abilità è attiva gli incantesimi di tipo Offensivo di stregoneria applicano la loro abilità Energia Distruttiva, ma lo sforzo richiesto infligge una penalità di +3 Mancare su tutti gli Attacchi e +2 PF al costo dei poteri Offensivi.\nControllare Energia Distruttiva contemporaneamente ad un servitore è ancora più difficile, in tal caso subisce un’ulteriore penalità di +17 Mancare con i propri Attacchi (per un totale di +20).",
-        "id": "EnergiaDistruttiva",
         "image": "ability_warlock_moltencore.png",
         "nome_decorativo": "Energia Distruttiva",
         "properties": {
@@ -221,7 +210,6 @@
     },
     "Esecuzione": {
         "descrizione": "Mentre l'abilità è attiva gli Attacchi di opportunità ottengono un bonus di +%s LA.",
-        "id": "Esecuzione",
         "image": "inv_sword_48.png",
         "nome_decorativo": "Esecuzione",
         "properties": {
@@ -241,7 +229,6 @@
     },
     "Espansione": {
         "descrizione": "Mentre questa abilità è attiva permette di estendere un qualsiasi Potere Spiritico a bersaglio singolo, non personale, trasformandolo in un potere ad area con raggio 3, ma lo sciamano subisce una penalità di -⁠30 VA al lancio dei poteri, +100% sui costi mana, -2 al Controllo Azione e +5 Mancare.\nL’abilità ha effetto solamente se attivata prima della fase di dichiarazione del lancio dell’incantesimo.",
-        "id": "Espansione",
         "image": "ability_argus_soulburst.png",
         "nome_decorativo": "Espansione",
         "properties": {
@@ -261,7 +248,6 @@
     },
     "FerociaFerina": {
         "descrizione": "Mentre l’abilità è attiva il personaggio ottiene un bonus al LA pari a +1 per Livello dell’abilità mentre è sotto l’effetto di un incantesimo Mutaforma, allo stesso tempo però infligge anche una penalità di -1 LMM alle sfere Atmosfera, Geosfera, Natura.",
-        "id": "FerociaFerina",
         "image": "achievement_emeraldnightmare_ursoc.png",
         "nome_decorativo": "Ferocia Ferina",
         "properties": {
@@ -281,7 +267,6 @@
     },
     "FiorituraPrematura": {
         "descrizione": "Grazie a questa capacità il personaggio è in grado di velocizzare drasticamente l'effetto dei propri incantesimi di guarigione. \nMentre l'abilità è attiva gli incantesimi di Supporto che curano punti vita lanciati hanno effetto istantaneo invece di applicare una cura sul tempo. Grazie a questa abilità il personaggio può lanciare un incantesimo di cura su una creatura anche se questa già beneficia di tale incantesimo, perché l'effetto diventa istantaneo.",
-        "id": "FiorituraPrematura",
         "image": "ability_evoker_emeraldblossom.png",
         "nome_decorativo": "Fioritura Prematura",
         "properties": {
@@ -301,7 +286,6 @@
     },
     "Fratturare": {
         "descrizione": "Quando un attacco colpisce con questa abilità attiva ottiene un bonus +%s LA.",
-        "id": "Fratturare",
         "image": "ability_deathknight_brittlebones.png",
         "nome_decorativo": "Fratturare",
         "properties": {
@@ -321,7 +305,6 @@
     },
     "FuriaSciamanica": {
         "descrizione": "Sovraccarico Spiritico\nMentre l'abilità è attiva lo sciamano ottiene un bonus di +12 (+24) MDI.",
-        "id": "FuriaSciamanica",
         "image": "spell_nature_shamanrage.png",
         "nome_decorativo": "Furia Sciamanica",
         "properties": {
@@ -341,7 +324,6 @@
     },
     "FuroreElementale": {
         "descrizione": "Mentre questa abilità è attiva il personaggio ottiene un bonus di +10 MDI e +1 CD con incantesimi Offensivi.",
-        "id": "FuroreElementale",
         "image": "spell_nature_elementalprecision_1.png",
         "nome_decorativo": "Furore Elementale",
         "properties": {
@@ -361,7 +343,6 @@
     },
     "Inarrestabile": {
         "descrizione": "<div>Estenuante %s</di><div>Mentre l’abilità è attiva il personaggio esso ottiene un bonus di %+d MDR.</div>",
-        "id": "Inarrestabile",
         "image": "ability_deathwing_assualtaspects.png",
         "nome_decorativo": "Inarrestabile",
         "properties": {
@@ -381,7 +362,6 @@
     },
     "Incalzare": {
         "descrizione": "Mentre questa abilità è attiva il personaggio ottiene un bonus di +5 VA, inoltre ogni volta che termina un’azione di movimento adiacente ad un avversario che non lo era precedentemente, allora tale avversario subisce una penalità di -2 MM e -3 Iniziativa.\nTale effetto si ripete per ogni avversario adiacente e per ogni volta che le condizioni vengono verificate.",
-        "id": "Incalzare",
         "image": "059634d13dfac0acdd85273bfd4c5086.png",
         "nome_decorativo": "Incalzare Incessante",
         "properties": {
@@ -401,7 +381,6 @@
     },
     "InfusioneAbissale": {
         "descrizione": "Mentre l’abilità è attiva le Malattie e le Maledizioni lanciate dal personaggio hanno un bonus di +1 LE e CD, ma hanno una penalità di durata di -4 round.",
-        "id": "InfusioneAbissale",
         "image": "spell_warlock_demonsoul.png",
         "nome_decorativo": "Infusione Abissale",
         "properties": {
@@ -421,7 +400,6 @@
     },
     "IntrappolareAnima": {
         "descrizione": "Frammento d’Anima\nQuesta abilità permette di guadagnare %s framment%s di anima da una creatura morta da non più di 10 minuti e tenerla imbrigliata nel proprio Necronomicon.\nNon è possibile intrappolare l’anima da un cadavere dal quale l’anima è già stata rimossa, di conseguenza questa abilità non può essere utilizzata più di una volta per ogni cadavere.",
-        "id": "IntrappolareAnima",
         "image": "spell_shadow_haunting.png",
         "nome_decorativo": "Intrappolare l'anima",
         "properties": {
@@ -441,7 +419,6 @@
     },
     "IspirazioneBardica": {
         "descrizione": "Attiva un Motivo di Sonata.\nIl motivo attivato ha un bonus di potenza di +100%.\nAl momento dell’attivazione il personaggio sceglie una creatura in linea visiva, o se stesso, come bersaglio. Mentre l’abilità è attiva il Motivo scelto si applica sul bersaglio prescelto.",
-        "id": "IspirazioneBardica",
         "image": "inspire_courage_icon_pathfinder_kingmaker_wiki_guide_80px.png",
         "nome_decorativo": "Ispirazione Bardica",
         "properties": {
@@ -461,7 +438,6 @@
     },
     "LegameSpettrale": {
         "descrizione": "<par style=\"font-style:italic;\">Un filo d’ombra si tende tra il necromante e la sua creatura, pulsando come una vena d’oscurità viva. Ogni colpo destinato al padrone scorre lungo quel legame invisibile, riversandosi nell’essenza del servitore.</par>\n\n<par>Per attivare l’abilità è necessario sacrificare un Frammento d’Anima.\nMentre l’abilità è attiva tutti i danni diretti ai PV subiti dal personaggio vengono invece subiti direttamente dal proprio servitore, ignorandone le resistenze. Il legame non può trasferire sul servitore più danni di quanti PV abbia.</par>",
-        "id": "LegameSpettrale",
         "image": "357e15affa3e73b048fe38894add9375.png",
         "nome_decorativo": "Legame Spettrale",
         "properties": {
@@ -481,7 +457,6 @@
     },
     "LegameSpettrale(Old)": {
         "descrizione": "Un alone spettrale avvolge le mani della creatura prescelta come obbiettivo, che può essere solamente un Servitore del personaggio oppure una creatura consenziente.\nMentre questa abilità è attiva, ogni incantesimo con raggio 5 o inferiore lanciato dal necromante ha come origine la creatura prescelta, in questo modo l’incantatore può rimanere a distanza di sicurezza ed utilizzare incantesimi a corto raggio.\nSe un incantesimo agisce sul lanciatore, allora il bersaglio del legame spettrale sarà automaticamente il recipiente dell’effetto.\nTutti gli incantesimi lanciati tramite Legame Spettrale hanno una penalità sul costo PP di +10%.\nLa creatura non può essere più lontana di 20 caselle dal necromante, altrimenti l'abilità non funziona.\nGli incantesimi si azionano in modo indipendente dalla creatura a cui vengono legati.",
-        "id": "LegameSpettrale(Old)",
         "image": "357e15affa3e73b048fe38894add9375.png",
         "nome_decorativo": "Legame Spettrale",
         "properties": {
@@ -501,7 +476,6 @@
     },
     "MaestroEvocatore": {
         "descrizione": "Mentre questa abilità è attiva il personaggio ottiene dei bonus con i propri incantesimi di tipo Servitore, pari a +10 VA ed uno sconto sul costo di lancio e mantenimento di -2 PP.\nSe attivata mentre un servitore è già attivo fa recuperare +2 PP.\nAl momento della disattivazione il personaggio perde -2 PA.",
-        "id": "MaestroEvocatore",
         "image": "ability_warlock_improveddemonictactics.png",
         "nome_decorativo": "Maestro Evocatore",
         "properties": {
@@ -521,7 +495,6 @@
     },
     "ManoSpettrale": {
         "descrizione": "Attivare questa abilità consuma un Frammento d’Anima.\nIl personaggio può proiettare un mano spettrale tramite la quale lanciare i propri incantesimi per estenderne il raggio d’azione.\nFin quando l’abilità è attiva tutti gli incantesimi lanciati dal personaggio che hanno un raggio d’azione pari a 5 o inferiore ottengono un incremento del loro raggio d’azione di +%s.\nGli incantesimi a raggio Tocco vengono estesi, ma questo non ne cambia le proprietà e caratteristiche.\nNon ha effetto con incantesimi a raggio 0.",
-        "id": "ManoSpettrale",
         "image": "291eddcb855bffeb5f937f6821a3af8a.png",
         "nome_decorativo": "Mano Spettrale",
         "properties": {
@@ -541,7 +514,6 @@
     },
     "Necropotenza": {
         "descrizione": "Attivare questa abilità consuma un Frammento d’Anima.\nMentre l’abilità è attiva tutti gli incantesimi Malattia e Maledizione diventano più potenti ottenendo un bonus di +1 LE e CD, ma ne incrementa anche tutti i costi di lancio di +50%.",
-        "id": "Necropotenza",
         "image": "ability_warlock_cremation.png",
         "nome_decorativo": "Necropotenza",
         "properties": {
@@ -561,7 +533,6 @@
     },
     "NessunaPieta": {
         "descrizione": "Al momento dell’attivazione il personaggio sceglie un bersaglio.\nFin quando l’abilità è attiva, quando il bersaglio prescelto subisce un Attacco (da chiunque escluso il personaggio stesso) allora è possibile infliggere un Attacco di opportunità contro di lui. Tale opportunità non si cumula con quella offerta da altre altre abilità.\nQuesto effetto può verificarsi solamente una volta per round.",
-        "id": "NessunaPieta",
         "image": "scoundrel_knee_breaker-icon.png",
         "nome_decorativo": "Nessuna Pietà",
         "properties": {
@@ -581,7 +552,6 @@
     },
     "PattoDiSangue": {
         "descrizione": "Il personaggio sacrifica il suo sangue al proprio patrono extraplanare per ottenere in cambio energia magica.\nQuesta abilità può essere attivata solamente in combattimento.\nQuando l’abilità viene attivata il personaggio recupera 90 punti mana, ma subisce un danno pari al 20% dei propri PV massimi.\nI danni vanno direttamente a colpire i PV del personaggio e non possono essere assorbiti, ridotti o rediretti con i consueti metodi. Questa abilità può uccidere lo stregone.",
-        "id": "PattoDiSangue",
         "image": "scoundrel_adrenaline-icon.png",
         "nome_decorativo": "Patto di Sangue",
         "properties": {
@@ -601,7 +571,6 @@
     },
     "Perseveranza": {
         "descrizione": "Quando attivata il personaggio guadagna +1 PA.\nOgni qual volta che viene attivata, il costo di attivazione incrementa cumulativamente di +1 PF fino al termine del round.",
-        "id": "Perseveranza",
         "image": "spell_nature_focusedmind.png",
         "nome_decorativo": "Perseveranza",
         "properties": {
@@ -621,7 +590,6 @@
     },
     "PotenzaEmpia": {
         "descrizione": "Necrofuria\nMentre l’abilità è attiva il personaggio ottiene un bonus di +2 (+3) LA, inoltre se i suoi punti vita attuali sono al 50% o meno del massimo, ottiene anche un bonus di +6 (+9) Crit e PCrit.",
-        "id": "PotenzaEmpia",
         "image": "spell_shadow_shadowpower.png",
         "nome_decorativo": "Potenza Empia",
         "properties": {
@@ -641,7 +609,6 @@
     },
     "PotenzaPrimordiale": {
         "descrizione": "Quando attivata lo spirito attivo può effettuare un tiro per incrementare il proprio Mod. Devozione.\nAl momento dell’attivazione il personaggio ottiene un bonus a scelta fra MDI, MCG oppure MCR, tale bonus viene ritenuto fin quando l’abilità è attiva.\nLa quantità del bonus dipende dal livello dell’abilità:\nLiv 1: +86\nLiv 2: +102\nLiv 3: +118",
-        "id": "PotenzaPrimordiale",
         "image": "Infusione-Viol02.png",
         "nome_decorativo": "Potenza Primordiale",
         "properties": {
@@ -661,7 +628,6 @@
     },
     "PrecisioneLetale": {
         "descrizione": "Il primo colpo portato dopo che l'abilità è stata attivata, e mentre è ancora attiva, infligge danno bonus pari a +1d6 per livello dell’abilità. Tale danno è considerato danno dell’arma.",
-        "id": "PrecisioneLetale",
         "image": "scoundrel-14-20.png",
         "nome_decorativo": "Precisione Letale",
         "properties": {
@@ -681,7 +647,6 @@
     },
     "Prontezza": {
         "descrizione": "Fin quando l'abilità è attiva il personaggio ottiene un bonus di +%s VA.",
-        "id": "Prontezza",
         "image": "petbattle_speed.png",
         "nome_decorativo": "Prontezza",
         "properties": {
@@ -701,7 +666,6 @@
     },
     "RapiditadiLancio": {
         "descrizione": "Mentre l’abilità è attiva il personaggio ottiene un bonus di +25 VA quando lancia un incantesimo.<br> Deve essere attivata prima di iniziare a recitare un incantesimo.",
-        "id": "RapiditadiLancio",
         "image": "ability_hunter_readiness.png",
         "nome_decorativo": "Rapidità di lancio",
         "properties": {
@@ -721,7 +685,6 @@
     },
     "Rappresaglia": {
         "descrizione": "Mentre questa abilità è attiva, ogni qual volta il personaggio subisce danno da un attacco allora guadagna un bonus di +3 MDI per livello dell’abilità sul prossimo attacco se inflitto contro l’attaccante.\nTale effetto non è cumulabile e si considera solamente l’ultimo attaccante che ha inflitto danno, l’effetto svanisce al primo attacco inflitto o quando l’abilità viene disattivata.",
-        "id": "Rappresaglia",
         "image": "ability_warrior_revenge.png",
         "nome_decorativo": "Rappresaglia",
         "properties": {
@@ -741,7 +704,6 @@
     },
     "RichiamoSpiritico": {
         "descrizione": "Il personaggio può richiamare al proprio fianco uno dei propri spiriti, rendendolo Attivo e congedando automaticamente un eventuale spirito già attivo.<br> La probabilità di riuscita è quella base richiesta per l’attivazione di uno spirito (vedi Spiriti).<br> Lo spirito richiamato rimarrà attivo fin quando non viene congedato.",
-        "id": "RichiamoSpiritico",
         "image": "ability_ardenweald_druid.png",
         "nome_decorativo": "Richiamo Spiritico",
         "properties": {
@@ -761,7 +723,6 @@
     },
     "RicostituenteNaturale": {
         "descrizione": "Mentre questa abilità è attiva il personaggio ottiene un bonus di +10 MCG.",
-        "id": "RicostituenteNaturale",
         "image": "ability_druid_replenish.png",
         "nome_decorativo": "Ricostituente Naturale",
         "properties": {
@@ -781,7 +742,6 @@
     },
     "RiflessiFulminei": {
         "descrizione": "Mentre l’abilità è attiva il personaggio ottiene un bonus di +1 TS Riflessi per livello dell’abilità.",
-        "id": "RiflessiFulminei",
         "image": "ability_rogue_imrovedrecuperate.png",
         "nome_decorativo": "Riflessi Fulminei",
         "properties": {
@@ -801,7 +761,6 @@
     },
     "RitualeOscuro": {
         "descrizione": "Attivare questa abilità consuma un Frammento d’Anima.\nMentre l’abilità è attiva il personaggio ottiene un bonus di +25 MCG.",
-        "id": "RitualeOscuro",
         "image": "spell_shadow_shadesofdarkness.png",
         "nome_decorativo": "Rituale Oscuro",
         "properties": {
@@ -821,7 +780,6 @@
     },
     "SchivareProdigioso": {
         "descrizione": "Mentre l’abilità è attiva il personaggio ottiene un bonus di +25 Schivare.",
-        "id": "SchivareProdigioso",
         "image": "spell_nature_invisibilty.png",
         "nome_decorativo": "Schivare Prodigioso",
         "properties": {
@@ -841,7 +799,6 @@
     },
     "SonataBardica": {
         "descrizione": "Attiva un Motivo di Sonata.\nMentre l’abilità è attiva il Motivo scelto si applica sul bardo e su tutti gli alleati nell’area d’effetto, ma il bardo subisce una penalità di -1 PA massimi ed attuali fin quando l’abilità è attiva.",
-        "id": "SonataBardica",
         "image": "bard_talent_pathfinder_wotr_wiki_guide_64x.png",
         "nome_decorativo": "Sonata Bardica",
         "properties": {
@@ -861,7 +818,6 @@
     },
     "SonataLibera": {
         "descrizione": "Attiva un Motivo Sonata esattamente come Sonata Bardica, ma non infligge penalità .",
-        "id": "SonataLibera",
         "image": "inv_misc_trinket_goldenharp.png",
         "nome_decorativo": "Sonata Libera",
         "properties": {
@@ -881,7 +837,6 @@
     },
     "TempraPossente": {
         "descrizione": "Mentre l’abilità è attiva il personaggio ottiene un bonus di +1 TS Tempra per livello dell’abilità.",
-        "id": "TempraPossente",
         "image": "spell_deathknight_iceboundfortitude.png",
         "nome_decorativo": "Tempra Possente",
         "properties": {
@@ -901,7 +856,6 @@
     },
     "TotemSciamanico": {
         "descrizione": "Quando l’abilità viene attivata il personaggio crea un totem sul terreno entro un raggio d’azione di 3.<br> Il totem è un Servitore a tutti gli effetti (vedi “Compendio dei Poteri”), tuttavia si tratta di un oggetto inanimato che rimane immobile sul luogo prescelto per 12 round. Per quanto il totem non sia utile in combattimento di per se, può essere utilizzato con tutti quei poteri che richiedono la presenza di un spirito materializzato.<br> Il totem può essere distrutto normalmente, a tal fine tutte le sue statistiche difensive sono pari a quelle del personaggio stesso, con eccezione dei PV che sono pari al 50%. Essendo un oggetto inanimato però non può parare o schivare gli attacchi, e possiede le normali immunità agli effetti di tali oggetti.<br> Il totem non può essere spostato, ma è possibile lanciare un nuovo totem per sostituirlo. Ogni potere presente su di un totem scompare quando il totem svanisce.",
-        "id": "TotemSciamanico",
         "image": "1f27fedeaa4b3edd611b8a42e2d85c9c.jpeg",
         "nome_decorativo": "Totem Sciamanico",
         "properties": {
@@ -921,7 +875,6 @@
     },
     "VolontaFerrea": {
         "descrizione": "Mentre l’abilità è attiva il personaggio ottiene un bonus di +1 TS Volontà per livello dell’abilità.",
-        "id": "VolontaFerrea",
         "image": "spell_holy_devineaegis.png",
         "nome_decorativo": "Volontà Ferrea",
         "properties": {
