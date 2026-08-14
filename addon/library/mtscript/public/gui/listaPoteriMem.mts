@@ -29,7 +29,6 @@
 </head>
 <body class="light-mode">
 
-
 <!-- Spell List -->
 <div class="spells-grid-container" id="spellList_Section" onmouseup="refreshSpellList(event, '[r: sFrame]')">
 

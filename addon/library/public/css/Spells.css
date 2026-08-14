@@ -1,11 +1,11 @@
 :root {
-    --bg-card: #2a2a2a;
-    --border-color: #444;
+    --bg-color: #16181d;
+    --bg-card: #262a33;
+    --border-color: #3a3f4a;
     --text-color: #ffffff;
     --stats-bg: rgba(0, 0, 0, 0.3);
     --stat-label-color: #aaaaaa;
     --accent-color: #c08a3e;
-    --bg-color: #1a1a1a;
 }
 
 body {
@@ -25,12 +25,17 @@ body {
 
 
 .light-mode {
+    /* --bg-color: #e8e8e8;
     --bg-card: #f0f0f0;
-    --border-color: #cccccc;
+    --border-color: #cccccc; */
+
+    --bg-color: #eceef1;      /* soft cool-gray background */
+    --bg-card: #ffffff;       /* full white cards, clear "elevated" feel */
+    --border-color: #d6d9de;  /* visible but soft */
+
     --text-color: #222222;
     --stats-bg: rgba(0, 0, 0, 0.05);
     --stat-label-color: #666666;
-    --bg-color: #e8e8e8;
 }
 
 div {
@@ -233,28 +238,33 @@ span {
 
 /* --- CARD DEL LIBRO --- */
 
-/* Dark mode (default) - in-book should be LIGHT */
+
 .spell-card.in-book {
-    background-color: #f0f0f0;
-    color: #222222;
-    border-color: #cccccc;
+    background-color: #322d36;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(192, 138, 62, 0.20),
+        rgba(192, 138, 62, 0.20) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    color: var(--text-color);
+    border-color: var(--border-color);
+    filter: grayscale(0.7);
 }
 
-.spell-card.in-book:hover {
-    border-color: #999;
-    background-color: #d9d9d9;
-}
-
-/* Light mode - in-book should be DARK (reverse) */
 .light-mode .spell-card.in-book {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    border-color: #444;
-}
-
-.light-mode .spell-card.in-book:hover {
-    border-color: #666;
-    background-color: #3a3a3a;
+    background-color: #e2e2e2;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(192, 138, 62, 0.16),
+        rgba(192, 138, 62, 0.16) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    color: var(--text-color);
+    border-color: var(--border-color);
+    filter: grayscale(0.7);
 }
 
 /* --- STILE PER LA BARRA DEI CONTROLLI (Conferma, Annulla, Contatore) --- */
@@ -300,7 +310,6 @@ span {
 .grimoire-counter {
     font-size: 0.95rem;
     font-weight: bold;
-    color: #000000;
 }
 
 /* Stile quando si supera il limite */
