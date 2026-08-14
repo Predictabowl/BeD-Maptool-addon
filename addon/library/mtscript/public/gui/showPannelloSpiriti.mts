@@ -46,7 +46,7 @@
 
             <div class="spirit-body">
                 <!-- Riutilizziamo la griglia del grimorio per i poteri -->
-                <div class="grimoire-grid-container" style="max-height: none;">
+                <div class="grimoire-grid-container">
 					[r, macro("gui/spiritiPowerCards@this"): json.append(oToken, sSpirito)]
 				</div>
             </div>

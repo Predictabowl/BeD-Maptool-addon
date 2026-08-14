@@ -11,7 +11,7 @@
 [h: bLightMode = getPreferenza("light_mode",tokenId,sGruppoPreferenze)]
 
 
-[dialog5("GrimorioSortilegi","temporary=1; width=1000; height=800; closebutton=0;"):{
+[dialog5("GrimorioSortilegi","temporary=1; width=1010; height=815; closebutton=0; noframe=0"):{
 <html>	
 <head>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SortilegiCssLink.html")]

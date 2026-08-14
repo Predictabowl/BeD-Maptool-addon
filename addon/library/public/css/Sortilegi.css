@@ -16,6 +16,20 @@
     --input-bg: #25201c;
 }
 
+body {
+    /*font-size: 16px;
+    background-color: #1a1a1a;*/
+    /*color: var(--text-color);*/
+    /*padding: 20px;*/
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    overflow: hidden;
+/*    display: flex;
+    flex-direction: column;*/
+}
+
+
 /* --- VARIABILI TEMA CHIARO --- */
 .grimoire-container.light-mode {
     --bg-color: #f4efe6;
@@ -41,6 +55,7 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     color: var(--text-color);
+    margin: 10px;
 }
 
 /* --- SIDEBAR & LISTA --- */

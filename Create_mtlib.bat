@@ -50,4 +50,4 @@ move /y "%TEMP_ZIP%" "%FINAL_FILE%" >nul
 echo.
 echo SUCCESS! Created: "%FINAL_FILE%"
 echo.
-timeout /t 3 >nul
+timeout /t 2 >nul

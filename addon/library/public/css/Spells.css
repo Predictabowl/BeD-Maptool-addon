@@ -312,15 +312,17 @@ span {
     padding-left: 5px;
     padding-right: 15px;
     overflow-y: auto;
+    height: 100%;
 }
 
 .spirit-panel {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    overflow: hidden;
+    overflow: auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: border-color 0.2s ease;
+    min-height: 300px;
 }
 
 /* Spirito Attivo - Bordo dorato/bronzo ed effetto glow */
