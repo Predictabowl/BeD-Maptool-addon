@@ -163,5 +163,17 @@ form {
 }
 
 .light-mode .mmFont {
-    color: purple;
+    color: #994d00;  /* Fixed: darker orange, not purple */
+}
+
+.light-mode .faticaFont {
+    color: #cc9900;
+}
+
+.light-mode .azioneFont {
+    color: #cc0000;
+}
+
+.light-mode .ppFont {
+    color: #990099;
 }

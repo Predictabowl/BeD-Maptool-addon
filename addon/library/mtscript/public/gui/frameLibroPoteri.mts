@@ -20,7 +20,7 @@
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
 	<title>[r: getName(oToken)] - Grimorio Incantesimi</title>
 </head>
-<body>
+<body class="light-mode">
 	<form id="form-memorizza" class="grimoire-dialog" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<div class="grimoire-grid-container">
 		[r, foreach(spellId, oListaPot, ""), code:{

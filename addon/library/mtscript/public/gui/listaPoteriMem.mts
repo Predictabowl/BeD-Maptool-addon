@@ -27,7 +27,7 @@
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
 		<title>[r: getName(oToken)] - Poteri Memorizzati</title> 
 </head>
-<body>
+<body class="light-mode">
 
 
 <!-- Spell List -->

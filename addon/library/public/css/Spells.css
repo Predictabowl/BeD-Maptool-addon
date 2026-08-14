@@ -5,12 +5,14 @@
     --stats-bg: rgba(0, 0, 0, 0.3);
     --stat-label-color: #aaaaaa;
     --accent-color: #c08a3e;
+    --bg-color: #1a1a1a;
 }
 
 body {
     font-family: var(--font-default);
-    /*font-size: 16px;
-    background-color: #1a1a1a;*/
+    /*font-size: 16px;*/
+    background-color: #c4c4c4;
+    background-color: var(--bg-color);
     color: var(--text-color);
     /*padding: 20px;*/
     padding: 0px;
@@ -28,6 +30,7 @@ body {
     --text-color: #222222;
     --stats-bg: rgba(0, 0, 0, 0.05);
     --stat-label-color: #666666;
+    --bg-color: #e8e8e8;
 }
 
 div {
@@ -230,23 +233,28 @@ span {
 
 /* --- CARD DEL LIBRO --- */
 
+/* Dark mode (default) - in-book should be LIGHT */
 .spell-card.in-book {
-    background-color: #e0e0e0;
-    /* Sfondo chiaro */
+    background-color: #f0f0f0;
     color: #222222;
-    /* Testo scuro */
-    border-color: var(--border-color);
+    border-color: #cccccc;
 }
 
 .spell-card.in-book:hover {
-    border-color: #444;
-    background-color: #cccccc;
+    border-color: #999;
+    background-color: #d9d9d9;
 }
 
-/* Le statistiche dentro la card chiara del grimorio richiedono uno sfondo scuro per leggibilità */
+/* Light mode - in-book should be DARK (reverse) */
+.light-mode .spell-card.in-book {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #444;
+}
 
-.spell-card.in-book :is(.stat-label, .stat-value) {
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.9), 1px 1px 1px rgba(0, 0, 0, 0.8);
+.light-mode .spell-card.in-book:hover {
+    border-color: #666;
+    background-color: #3a3a3a;
 }
 
 /* --- STILE PER LA BARRA DEI CONTROLLI (Conferma, Annulla, Contatore) --- */
@@ -316,7 +324,7 @@ span {
 }
 
 .spirit-panel {
-    background-color: var(--bg-card);
+    /*background-color: var(--bg-card);*/
     border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
