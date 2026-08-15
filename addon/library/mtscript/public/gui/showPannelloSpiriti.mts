@@ -10,13 +10,15 @@
 [h, macro("powers/getMaxDevozione@this"): oToken]
 [h: iMaxDevozione = macro.return]
 
+[h: bLightMode = getPreferenza("light_mode",oToken,sDialog)]
+
 [dialog5(sDialog, strformat("temporary=0; width=900; height=720; closebutton=0; noframe=0;")):{
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
 	<title>[r: getName(oToken)] - Spiriti</title> 
 </head>
-<body>
+<body class="[r, if(bLightMode == 1): 'light-mode']">
 	<div class="spirits-main-container">
 	[r, foreach(sSpirito, jSpiriti, ""), code:{
 		[h: iDevozione = getModDevozione(oToken, sSpirito)]
@@ -54,7 +56,11 @@
 	}]
 	</div>
 	
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellDescription.js?cachelib=true" defer></script>
+    <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sDialog]')">
+        🌓
+    </button>
+
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

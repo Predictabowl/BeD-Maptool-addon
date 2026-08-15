@@ -87,7 +87,7 @@
         </div>
     </div>
 
-    <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/GrimorioSortilegi.js?cachelib=false" defer></script>
+    <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/GrimorioSortilegi.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

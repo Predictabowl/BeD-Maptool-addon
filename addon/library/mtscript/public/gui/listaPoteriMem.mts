@@ -20,6 +20,8 @@
 [h: jOptions = json.set(jOptions, "recupero", iRecuperoDurata)]
 [h: lPoteri =  getPoteriMem(oToken)]
 
+[h: sGruppoPreferenze = "Frame_Poteri"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sGruppoPreferenze)]
 
 [frame5(sFrame,strformat("value=%s", oToken)):{
 <html>
@@ -27,7 +29,7 @@
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
 		<title>[r: getName(oToken)] - Poteri Memorizzati</title> 
 </head>
-<body class="">
+<body class="[r, if(bLightMode == 1): 'light-mode']">
 
 <!-- Spell List -->
 <div class="spells-grid-container" id="spellList_Section" onmouseup="refreshSpellList(event, '[r: sFrame]')">
@@ -67,9 +69,12 @@
 	<input type="hidden" name="nuovaListaPoteri" id="nuovaListaPoteri" value="">
 </form>
 
+<button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sGruppoPreferenze]')">
+    🌓
+</button>
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=false" defer></script>
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellDescription.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

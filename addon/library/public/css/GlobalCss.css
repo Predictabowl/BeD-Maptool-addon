@@ -18,6 +18,23 @@
     --fatica-color-inverse: #cc9900;
     --azione-color-inverse: #cc0000;
     --pp-color-inverse: #990099;
+
+}
+
+.light-mode {
+    --mana-color: #0000FF;
+    --tempo-color: darkgreen;
+    --mm-color: #994d00;
+    --fatica-color: #cc9900;
+    --azione-color: #cc0000;
+    --pp-color: #990099;
+
+    --mana-color-inverse: #4d4dff;
+    --fatica-color-inverse: #ffd700;
+    --tempo-color-inverse: #32cd32;
+    --azione-color-inverse: #ff4d4d;
+    --mm-color-inverse: #ff6600;
+    --pp-color-inverse: #D100D1;
 }
 
 body {
@@ -167,28 +184,4 @@ form {
 .ppFont {
     color: var(--pp-color);
     font-weight: bold;
-}
-
-.light-mode .manaFont {
-    color: var(--mana-color-inverse);
-}
-
-.light-mode .tempoFont {
-    color: var(--tempo-color-inverse);
-}
-
-.light-mode .mmFont {
-    color: var(--mm-color-inverse);
-}
-
-.light-mode .faticaFont {
-    color: var(--fatica-color-inverse);
-}
-
-.light-mode .azioneFont {
-    color: var(--azione-color-inverse);
-}
-
-.light-mode .ppFont {
-    color: var(--pp-color-inverse);
 }

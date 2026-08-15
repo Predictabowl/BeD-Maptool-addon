@@ -14,13 +14,16 @@
 [h: lSize = setStrProp("","width",iLarg)]
 [h: lSize = setStrProp(lSize,"height",iAltezza)]
 
+[h: sGruppoPreferenze = "Dialog_Grimorio_Poteri"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sGruppoPreferenze)]
+
 [dialog5("memorizzaPoteri",strformat("temporary=1; %{lSize}; closebutton=0;")):{
 <html>	
 <head>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
 	<title>[r: getName(oToken)] - Grimorio Incantesimi</title>
 </head>
-<body>
+<body class="[r, if(bLightMode == 1): 'light-mode']">
 	<form id="form-memorizza" class="grimoire-dialog" method="json" action="[r:macroLinkText("gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<div class="grimoire-grid-container">
 		[r, foreach(spellId, oListaPot, ""), code:{
@@ -48,8 +51,13 @@
 		<input type="hidden" name="token" value="[r: oToken]"/>
 	</form>
 
+	<button class="theme-switch-btn" style="right:25px;" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sGruppoPreferenze]')">
+		🌓
+	</button>
+
+
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=true" defer></script>
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellDescription.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
 }]
