@@ -4,8 +4,4 @@
 [h, macro("mechanics/getSummonTableByLevel@this"): json.append(sToken, iLiv, "summon-poteri-table")]
 [h: aPoteri = macro.return]
 [h, if(json.isEmpty(aPoteri)): return(0, "")]
-[h: aSpellNames = ""]
-[h, foreach(aPotere, aPoteri), code:{
-	[aSpellNames = json.append(aSpellNames, json.get(aPotere, "spellName"))]
-}]
-[h: setPoteriMem(sToken, aSpellNames)]
+[h: setPoteriMem(sToken, aPoteri)]

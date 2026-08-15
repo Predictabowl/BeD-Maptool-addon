@@ -3,12 +3,10 @@
 [h: sTable = arg(2)]
 
 [h: aPoteri = "[]"]
-[macro("mechanics/getSummonMemTable@this"): json.append(sToken, sTable)]
-[h, foreach(oPotere, macro.return), code:{
-	[oPotLiv = json.get(oPotere, "livello")]
-	[if(json.type(oPotLiv) == "ARRAY"): iPotLiv = json.get(oPotLiv, 0); iPotLiv = ""]
-	[if(!isNumber(iPotLiv)): iPotLiv = 0]
-	[if(iPotLiv <= iLiv): aPoteri = json.append(aPoteri, oPotere)]
+[h, macro("mechanics/getSummonMemTable@this"): json.append(sToken, sTable)]
+[h: aTable = json.path.read(macro.return, strformat("[?(@.livello <= %{iLiv})]"))]
+[h, foreach(oPotere, aTable), code:{
+	[aPoteri = json.merge(aPoteri, json.get(oPotere, "spells"))]
 }]
 
 [h: macro.return = aPoteri]
