@@ -264,7 +264,10 @@
         "sDescr": "-9 PA, -3 VA"
     },
     "stordita": {
-        "sDescr": "-3 PA, -1 VA"
+        "link": "stordimento"
+    },
+    "stordito": {
+        "link": "stordimento"
     },
     "terrore": {
         "sDescr": "<p>Chi è sotto terrore può solo rannicchiarsi al suolo e gemere.</p><p>Incapacitato, -8 TS Volontà.</p>"
