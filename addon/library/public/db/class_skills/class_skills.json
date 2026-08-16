@@ -500,7 +500,7 @@
         }
     },
     "MaestroEvocatore": {
-        "descrizione": "Mentre questa abilità è attiva il personaggio ottiene dei bonus con i propri incantesimi di tipo Servitore, pari a +10 VA ed uno sconto sul costo di lancio e mantenimento di -2 PP.\nSe attivata mentre un servitore è già attivo fa recuperare +2 PP.\nAl momento della disattivazione il personaggio perde -2 PA.",
+        "descrizione": "Mentre questa abilità è attiva il personaggio ottiene dei bonus con i propri incantesimi di tipo Servitore, pari a +15 VA ed uno sconto sul costo di lancio e mantenimento di -2 PP.\nSe attivata mentre un servitore è già attivo fa recuperare +2 PP.\nAl momento della disattivazione il personaggio perde -2 PA.",
         "id": "MaestroEvocatore",
         "image": "ability_warlock_improveddemonictactics.png",
         "nome_decorativo": "Maestro Evocatore",

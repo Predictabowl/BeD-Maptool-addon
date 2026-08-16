@@ -5,7 +5,7 @@
 [h: iPP = 2]
 
 [h: addSpellMod(source,"SERVITORE","PP", -iPP)]
-[h: addSpellMod(source,"SERVITORE","VA", 10)]
+[h: addSpellMod(source,"SERVITORE","VA", 15)]
 
 [switchToken(source)]
 [h: oServitore = getServitore(source)]
