@@ -13,7 +13,7 @@
 [h, if(!TSResult), code:{
 	[h: iMolt = 3]
 	[h: nomeDec = "Marchio: "+fetchSpellProp(spellName,"nome_decorativo")]
-	[h: param = json.set("","target",target,"source",owner,"durata",1,"nome",nomeDec,"effetto","Lentezza","moltiplicatore",iMolt)]
+	[h: param = json.set("","target",target,"source",owner,"durata",1,"nome",nomeDec,"effetto","Spossatezza","moltiplicatore",iMolt)]
 	[macro("powers/getParamStatoBase@lib:it.aldinucci.piero.bed.maptool.ruleset"): param]
 
 	[macro("core/ApplyEffect@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set(macro.return,"verbose",0)]

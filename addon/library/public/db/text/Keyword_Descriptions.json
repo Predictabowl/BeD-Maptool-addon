@@ -254,6 +254,9 @@
     "spossatezza": {
         "sDescr": "-2 TS Tempra, -1 LA, -1 LL, -1 CD"
     },
+    "spossatezza3": {
+        "sDescr": "-6 TS Tempra, -3 LA, -3 LL, -3 CD"
+    },
     "stordimento": {
         "sDescr": "-3 PA, -1 VA"
     },
