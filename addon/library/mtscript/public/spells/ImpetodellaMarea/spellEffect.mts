@@ -1,7 +1,7 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
 
-[h: spellName = "ImpetodellaMarea"]
+[h: spellName = "ImpetoDellaMarea"]
 [h: name = fetchSpellProp(spellName,"nome_decorativo")]
 [h: iBonus = 3]
 

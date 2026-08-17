@@ -9,7 +9,7 @@
 [h: numCariche = json.get(oParametri,"cariche")]
 [h: bCritRes = json.get(oParametri,"critRes")]
 
-[h: spellName = "PozzodelleAnime"]
+[h: spellName = "PozzoDelleAnime"]
 [h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 [h: sCuraLL = 4]
 

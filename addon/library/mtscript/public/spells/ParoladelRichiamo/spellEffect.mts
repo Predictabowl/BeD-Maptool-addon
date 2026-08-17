@@ -3,7 +3,7 @@
 
 
 [h: switchToken(source)]
-[h: spellName = "ParoladelRichiamo"]
+[h: spellName = "ParolaDelRichiamo"]
 
 [macro("utility/isHostile@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append(source,target)]
 [bHostile = macro.return]

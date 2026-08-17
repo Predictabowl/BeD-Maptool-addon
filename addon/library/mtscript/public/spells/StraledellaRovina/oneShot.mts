@@ -5,7 +5,7 @@
 [h: sTipo = upper(fetchSpellProp(spellName,"tipo"))]
 [h: tipoList = "MALEDIZIONE"]
 [h, if(listContains(tipoList,sTipo)), code:{
-	[h: thisSpell = "StraledellaRovina"]
+	[h: thisSpell = "StraleDellaRovina"]
 	[h: nomeDec = fetchSpellProp(thisSpell,"nome_decorativo")]
 	[rimuoviEffetto(source,nomeDec)]
 }]

@@ -1,7 +1,7 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
 
-[h: spellName = "EvocazionedelFuoco"]
+[h: spellName = "EvocazioneDelFuoco"]
 
 [macro("mechanics/getTipoElementaleEvocazione@lib:it.aldinucci.piero.bed.maptool.ruleset"): source]
 [h: sTipoD = macro.return]
@@ -11,7 +11,7 @@
 	[h: sNome = "Efreet"]
 	[h: sSizeD = "Medium"]
 };{
-	[h: sSpawner = "SpawnerSalamandradelFuoco"]
+	[h: sSpawner = "SpawnerSalamandraDelFuoco"]
 	[h: sNome = "Salamandra del Fuoco"]
 	[h: sSizeD = "Large"]
 }]

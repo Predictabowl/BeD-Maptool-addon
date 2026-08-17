@@ -1,21 +1,21 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
 
-[macro("powers/getScuola@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","token",source,"spell","MantellodellaResistenza")]
+[macro("powers/getScuola@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","token",source,"spell","MantelloDellaResistenza")]
 [h: strScuola = macro.return]
 
 [h: param = json.set("","source",source,"scuola",strScuola)]
 [macro("powers/getLMM@lib:it.aldinucci.piero.bed.maptool.ruleset"):param]
 [h: iLMM = macro.return]
-[h: name = fetchSpellProp("MantellodellaResistenza","nome_decorativo")]
-[macro("powers/getDurata@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"spellName","MantellodellaResistenza")]
+[h: name = fetchSpellProp("MantelloDellaResistenza","nome_decorativo")]
+[macro("powers/getDurata@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"spellName","MantelloDellaResistenza")]
 [h: iDurata = macro.return]
 
 [r, if(iLMM >= 0), code:{
 	[h: bonus = iLMM]
 
 	[h: args = json.set("","source",source,"target",source)]
-	[h: args = json.set(args,"spellName","MantellodellaResistenza")]
+	[h: args = json.set(args,"spellName","MantelloDellaResistenza")]
 	[macro("powers/getAutoLL@lib:it.aldinucci.piero.bed.maptool.ruleset"):args]
 	[h: iLL = macro.return]
 

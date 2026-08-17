@@ -3,7 +3,7 @@
 
 
 [h, if(bRemove == 1), code:{
-	[spellName = "StraledellaRovina"]
+	[spellName = "StraleDellaRovina"]
 	[macro("events/eventUninstaller@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,"On_Spellcast",spellName)]
 	[addSpellMod(source,"MALEDIZIONE","VA",-50)]
 	[addSpellMod(source,"MALEDIZIONE","PP",-0,0.5)]

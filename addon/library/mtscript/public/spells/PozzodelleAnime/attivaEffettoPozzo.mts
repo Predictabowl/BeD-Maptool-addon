@@ -3,7 +3,7 @@
 
 
 [h: oParametri = json.set("","pozzo",oPozzo)]
-[h: spellName = "PozzodelleAnime"]
+[h: spellName = "PozzoDelleAnime"]
 [h: nomeDec = getName(oPozzo)]
 [h: time = 7]
 
@@ -21,7 +21,7 @@
 	
 	[setMessaggio(source,"iniziaAzioneMsg",strformat("%s Inizia ad attivare %s.",getName(source),nomeDec))]
 
-	[h: param = json.set("","target",source,"source",source,"macro",buildSpellMacroName("PozzodelleAnime","effettoCura"),"macroParam",oParametri,"tipo","Interazione","opp",0,"time",time,"action","Attiva "+nomeDec)]
+	[h: param = json.set("","target",source,"source",source,"macro",buildSpellMacroName("PozzoDelleAnime","effettoCura"),"macroParam",oParametri,"tipo","Interazione","opp",0,"time",time,"action","Attiva "+nomeDec)]
 	[macro("mobs/IniziaAzione@lib:it.aldinucci.piero.bed.maptool.ruleset"):param]
 };{
 	[h: sMsg= strformat("%s &egrave lontano per attivare %s",getName(source),nomeDec)]

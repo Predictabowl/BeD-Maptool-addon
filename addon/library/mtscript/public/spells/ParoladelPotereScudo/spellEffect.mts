@@ -3,7 +3,7 @@
 
 [h: switchToken(source)]
 
-[h: spellName = "ParoladelPotereScudo"]
+[h: spellName = "ParolaDelPotereScudo"]
 [h: elemento = fetchSpellProp(spellName,"elemento")]
 
 [macro("powers/getAutoLL@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.set("","source",source,"spellName",spellName)]
@@ -13,7 +13,7 @@
 <!-- effetto per rimozione dell'incantesimo al termine della durata -->
 
 [h: nomeEff = fetchSpellProp(spellName,"nome_decorativo")]
-[h: temp = json.set("","macroName",buildSpellMacroName("ParoladelPotereScudo","specialEffect"),"tipo","macroCall")]
+[h: temp = json.set("","macroName",buildSpellMacroName("ParolaDelPotereScudo","specialEffect"),"tipo","macroCall")]
 [h: altro = json.append("",temp)]
 [h: param = json.set("","target",target,"effetto",nomeEff,"tipo","Magia","params",altro,"verbose",0)]
 

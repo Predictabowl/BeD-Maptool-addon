@@ -3,7 +3,7 @@
 [h: oOrigine = json.get(macro.args,"origine")]
 
 
-[h: spellName = "ToccodelVampiro"]
+[h: spellName = "ToccoDelVampiro"]
 [h: sFluff = fetchSpellProp(spellName,"nome_decorativo")]
 
 [h, if(getState("Sanguinamento",target)): sDanno = "1d8"; sDanno = "1d4"]

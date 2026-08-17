@@ -1,13 +1,13 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
 
-[h: spellName = "PozzodelleAnime"]
+[h: spellName = "PozzoDelleAnime"]
 [h: fluffName = fetchSpellProp(spellName,"nome_decorativo")]
 [h: spellType = fetchSpellProp(spellName,"tipo")]
 
 [h: sSpawner = "Lib:Pozzo-Anime"]
 [h: sNome = "Pozzo delle Anime"]
-[h: sMacroAtt = buildSpellMacroName("PozzodelleAnime","attivaEffettoPozzo")]
+[h: sMacroAtt = buildSpellMacroName("PozzoDelleAnime","attivaEffettoPozzo")]
 [h: numCariche = 5]
 
 [macro("combat/getUltimoCritico@lib:it.aldinucci.piero.bed.maptool.ruleset"):source]
@@ -34,7 +34,7 @@
 
 [h: param = json.set("","target",source,"effetto",fluffName,"subito",1,"tipo",spellType,"mutex",spellType)]
 [h: macroParam = json.set("","creaturaName",oSpawned)]
-[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("PozzodelleAnime","effectRemove"),"parametri",macroParam)]
+[h: temp = json.set("","tipo","macroCall","macroName",buildSpellMacroName("PozzoDelleAnime","effectRemove"),"parametri",macroParam)]
 [h: altro = json.append("",temp)]
 [h: oEffetto = json.set(param,"params",altro,"verbose",0)]
 [macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto)]

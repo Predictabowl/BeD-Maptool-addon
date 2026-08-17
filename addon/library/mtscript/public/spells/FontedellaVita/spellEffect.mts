@@ -2,7 +2,7 @@
 [h: target = json.get(macro.args,"target")]
 
 [h: switchToken(source)]
-[h: spellName = "FontedellaVita"]
+[h: spellName = "FonteDellaVita"]
 [h: elemento = fetchSpellProp(spellName,"elemento")]
 [h: fluffName = fetchSpellProp(spellName,"nome_decorativo")]
 
