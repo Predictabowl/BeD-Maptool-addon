@@ -2,6 +2,8 @@
 
 [h: spellName = "SbronzaEpica"]
 
+[h: return(0,"")]
+
 [macro("powers/getParamStatoBase@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"effetto","Confusione","moltiplicatore",3)]
 [h: oEffetto = json.remove(macro.return, "durata")]
 

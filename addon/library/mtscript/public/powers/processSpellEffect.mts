@@ -57,7 +57,7 @@
 		[macro("events/runEvents@this"):json.set("","event","On_Hitted","source",id,"target",source,"eventParam",oEventParam)]
 	}]
 	[if(bHittable == 1), code:{
-		[macro(sSpellMacro): json.set("","source",source,"target",id,"origine",sOrigine,"isOpport",bOpp,"extraParam",extraParam,"targetList",target)]
+		[macro(sSpellMacro): json.set("","source",source,"target",id,"origine",sOrigine,"isOpport",bOpp,"extraParam",extraParam,"targetList",target, "spellId", spellName)]
 		[discoverResistenzaBersaglio(spellName,source,id)]
 	}]
 

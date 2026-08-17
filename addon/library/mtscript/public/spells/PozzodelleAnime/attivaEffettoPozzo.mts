@@ -3,7 +3,6 @@
 
 
 [h: oParametri = json.set("","pozzo",oPozzo)]
-[h: spellName = "PozzoDelleAnime"]
 [h: nomeDec = getName(oPozzo)]
 [h: time = 7]
 

@@ -1,7 +1,7 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
 
-[h: spellName = "BenedizioneAnimadiFuoco"]
+[h: spellName = "BenedizioneAnimaDiFuoco"]
 
 [h: temp = json.set("","key","Mod_Danno_Out","value",0.05,"tipo","onceMod","moltiplicabile",0)]
 [h: altro = json.append("",temp)]

@@ -1,7 +1,6 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
-
-[h: spellName = "EvocazioneDelFuoco"]
+[h: spellName = json.get(macro.args,"spellId")]
 
 [macro("mechanics/getTipoElementaleEvocazione@lib:it.aldinucci.piero.bed.maptool.ruleset"): source]
 [h: sTipoD = macro.return]

@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h, if(json.type(macro.args) == "OBJECT"), code:{
 	[h: source = json.get(macro.args,"source")]
 	[h: spellName = json.get(macro.args,"spellName")]

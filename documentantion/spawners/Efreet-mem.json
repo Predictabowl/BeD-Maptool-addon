@@ -1,0 +1,224 @@
+{
+    "generatori-capacita": {
+        "Acrobazia": {
+            "max": 12,
+            "min": 3
+        },
+        "Arcanologia": {
+            "max": 16,
+            "min": 5
+        },
+        "Atletica": {
+            "max": 11,
+            "min": 5
+        },
+        "Autorita": {
+            "max": 2,
+            "min": 2
+        },
+        "Erudizione": {
+            "max": 15,
+            "min": 4
+        },
+        "Fitness": {
+            "max": 8,
+            "min": 2
+        },
+        "Furtivita": {
+            "max": -2,
+            "min": -2
+        },
+        "Lotta": {
+            "max": 16,
+            "min": 4
+        },
+        "Intrattenimento": {
+            "max": 4,
+            "min": 0
+        },
+        "Manualita": {
+            "max": 5,
+            "min": 0
+        },
+        "Medicina": {
+            "max": -2,
+            "min": -2
+        },
+        "Percezione": {
+            "max": 13,
+            "min": 2
+        },
+        "Perspicacia": {
+            "max": 12,
+            "min": 2
+        },
+        "Persuasione": {
+            "max": 5,
+            "min": 0
+        },
+        "Resilienza": {
+            "max": 12,
+            "min": 1
+        },
+        "Sociologia": {
+            "max": 3,
+            "min": 0
+        },
+        "Sopravvivenza": {
+            "max": 5,
+            "min": 1
+        },
+        "Tenacia": {
+            "max": 12,
+            "min": 3
+        }
+    },
+    "RESISTENZE_BASE": {
+        "Res_Acqua": -3,
+        "Res_Arcano": 0,
+        "Res_Aria": 0,
+        "Res_Fisico": 0,
+        "Res_Fuoco": 6,
+        "Res_Mentale": 1,
+        "Res_Negativo": 0,
+        "Res_Positivo": 0,
+        "Res_Terra": 0
+    },
+    "summon-poteri-table": [
+        {
+            "livello": 1,
+            "spells": [
+                "Blitz",
+                "Ustionare",
+                "ManiBrucianti",
+                "ToccoDiCombustione"
+            ]
+        },
+        {
+            "livello": 3,
+            "spells": [
+                "ArmaIncendiaria"
+            ]
+        },
+        {
+            "livello": 4,
+            "spells": [
+                "AssaltoTurbinante"
+            ]
+        },
+        {
+            "livello": 6,
+            "spells": [
+                "ColtreDiCenere"
+            ]
+        },
+        {
+            "livello": 7,
+            "spells": [
+                "AlzarsiRapido"
+            ]
+        },
+        {
+            "livello": 9,
+            "spells": [
+                "LanciaTermica"
+            ]
+        },
+        {
+            "livello": 10,
+            "spells": [
+                "AttaccoDisabilitante"
+            ]
+        },
+        {
+            "livello": 11,
+            "spells": [
+                "AnimaDiFuoco"
+            ]
+        },
+        {
+            "livello": 13,
+            "spells": [
+                "PallaDiFuoco"
+            ]
+        },
+        {
+            "livello": 14,
+            "spells": [
+                "ContusioneLieve"
+            ]
+        },
+        {
+            "livello": 15,
+            "spells": [
+                "IndebolireLaMateria"
+            ]
+        },
+        {
+            "livello": 17,
+            "spells": [
+                "ViolenzaCieca"
+            ]
+        },
+        {
+            "livello": 18,
+            "spells": [
+                "FuocoFatuo"
+            ]
+        },
+        {
+            "livello": 19,
+            "spells": [
+                "FrustaPirocinetica"
+            ]
+        },
+        {
+            "livello": 20,
+            "spells": [
+                "SpazzataFalciante"
+            ]
+        },
+        {
+            "livello": 21,
+            "spells": [
+                "PanicoRovente"
+            ]
+        },
+        {
+            "livello": 23,
+            "spells": [
+                "NubeIncendiaria"
+            ]
+        },
+        {
+            "livello": 24,
+            "spells": [
+                "SpezzaOssa"
+            ]
+        },
+        {
+            "livello": 26,
+            "spells": [
+                "SentinellaFiammeggiante"
+            ]
+        },
+        {
+            "livello": 27,
+            "spells": [
+                "AggressioneViolenta"
+            ]
+        },
+        {
+            "livello": 29,
+            "spells": [
+                "RapiditaMentale"
+            ]
+        },
+        {
+            "livello": 30,
+            "spells": [
+                "ScaricaDiAdrenalina"
+            ]
+        }
+    ]
+}

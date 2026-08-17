@@ -1,10 +1,19 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
+[h: spellName = json.get(macro.args,"spellId")]
 
-[h: spellName = "SbronzaEpica"]
 
-[macro("powers/getParamStatoBase@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"effetto","Nausea","moltiplicatore",2)]
-[h: oEffetto = json.remove(macro.return, "durata")]
+[h: temp = json.set("","key","Crit","value",15,"tipo","onceMod","moltiplicabile",0)]
+[h: altro = json.append("",temp)]
+[h: temp = json.set("","key","PCrit","value",15,"tipo","onceMod","moltiplicabile",0)]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Schivare","value",15,"tipo","onceMod","moltiplicabile",0)]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Mod_Danno_Out","value",0.15,"tipo","onceMod","moltiplicabile",0)]
+[h: altro = json.append(altro,temp)]
+[h: temp = json.set("","key","Mancare","value",25,"tipo","onceMod","moltiplicabile",0)]
+[h: altro = json.append(altro,temp)]
 
-[h: oSpellEffectParam = json.set("","source",source,"target", target,"spellName",spellName,"effetto",oEffetto)]
-[macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): oSpellEffectParam]
+[h: oEffetto = json.set("","params",altro, "stato", "Pozione")]
+
+[macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto)]

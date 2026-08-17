@@ -63,3 +63,12 @@ Nomi:
 "$1": {
 
 descrizione:
+
+
+CamelCase Chiavi abilità
+("[A-Z]\w+)d(i|el|ella|ell|ello|elle|egli)([A-Z]\w+")
+$1D$2$3
+
+eventualmente anche
+("[A-Z]\w+)s(ul|ulla|ullo)([A-Z]\w+")
+$1S$2$3

@@ -29,7 +29,7 @@
 		[r, foreach(spellId, oListaPot, ""), code:{
 			[h, if(json.contains(oMemList,spellId)): memorized = 1; memorized = 0]
 			[h: iMemCount = iMemCount + memorized]
-			<div class='spell-card [r, if(!memorized): "in-book"]' onclick="toggleCardCheckbox(event)">
+			<div class='spell-card [r, if(!memorized): "in-book"; ""]' onclick="toggleCardCheckbox(event)">
 				<input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]'/>
 				[r, macro("gui/CompileSpellStatGrid@this"): json.append(oToken, spellId)]
             </div>

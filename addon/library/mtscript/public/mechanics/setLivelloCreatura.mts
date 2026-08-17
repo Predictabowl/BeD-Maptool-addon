@@ -15,3 +15,4 @@
 }]
 
 [macro("mechanics/generaResistenze@this"): json.set(jRes,"spawner",oToken,"livello",iLiv)]
+[macro("mechanics/generaCapacita@this"): json.set("","spawner",oToken,"livello",iLiv)]
