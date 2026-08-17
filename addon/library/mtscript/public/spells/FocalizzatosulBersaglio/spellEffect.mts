@@ -3,7 +3,7 @@
 
 
 [h: switchToken(source)]
-[h: spellName = "FocalizzatosulBersaglio"]
+[h: spellName = "FocalizzatoSulBersaglio"]
 
 [h: name = fetchSpellProp(spellName,"nome_decorativo")]
 [macro("powers/getDurata@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"spellName",spellName)]
