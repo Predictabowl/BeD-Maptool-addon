@@ -2,7 +2,7 @@
 [h: id = json.get(macro.args,"target")]
 
 [h: switchToken(source)]
-[h: spellName = "PalladiFuoco"]
+[h: spellName = "PallaDiFuoco"]
 [h: elemento = fetchSpellProp(spellName,"elemento")]
 
 [h: args = json.set("","source",source,"target",id)]

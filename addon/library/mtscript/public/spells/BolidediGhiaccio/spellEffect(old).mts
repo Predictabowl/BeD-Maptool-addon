@@ -1,6 +1,6 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
-[h: spellName = "BolidediGhiaccio"]
+[h: spellName = "BolideDiGhiaccio"]
 
 [h: elemento = getSpellElement(source,spellName)]
 

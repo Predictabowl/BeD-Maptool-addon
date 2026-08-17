@@ -4,7 +4,7 @@
 [h: sMsg = ""]
 
 [h, if(remove != 1), code:{
-	[h: spellName = "ColtrediCenere"]
+	[h: spellName = "ColtreDiCenere"]
 	[h: nomeDec = fetchSpellProp(spellName,"nome_decorativo")]
 	
 	[h: im = fetchSpellImage(spellName)]
@@ -14,7 +14,7 @@
 	[h: oTargets = macro.return]
 
 	[h, foreach(target,oTargets), code:{
-		[macro(buildSpellMacroName("ColtrediCenere","simpleDmgBersaglio")): json.append(source,target,spellName)]
+		[macro(buildSpellMacroName("ColtreDiCenere","simpleDmgBersaglio")): json.append(source,target,spellName)]
 		[sMsg = strformat("%{sMsg}%{macro.return}")]
 	}]	
 }]

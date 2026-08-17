@@ -1,7 +1,7 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
 
-[h: spellName = "ColtrediCenere"]
+[h: spellName = "ColtreDiCenere"]
 
 [macro("powers/getParamStatoBase@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set("","source",source,"target",target,"effetto","Cecita")]
 [h: oEffetto = macro.return]
