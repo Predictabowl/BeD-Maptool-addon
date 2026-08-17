@@ -27,7 +27,7 @@
 [h: iPVT = macro.return]
 [macro("core/modPVT@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(target,iPVT,spellName)]
 
-[h: addPoteriMem(source,"Lib:ColpodiFuocoElementalismo")]
+[h: addPoteriMem(source,"ColpoDiFuocoElementalismo")]
 [h: addSpellMod(source, buildSpellMacroName("FormaLavica","costModChecker"), "PP", 0, 0.4)]
 
 <!-- Inizio generazione Aura -->

@@ -8,7 +8,7 @@
 
 [h, if(json.type(iDurata) == "ARRAY"), code:{
 	[h: sMacro = json.get(iDurata,0)]
-	[macro(sMacro+"@Lib:AbilitaClasse"): json.append(source, sLibAbilita, "durata")]
+	[macro("class_skills/macros/" + sMacro +"@this"): json.append(source, sLibAbilita, "durata")]
 	[return(0, macro.return)]
 }]
 

@@ -11,7 +11,7 @@
 [h: iMaxSkill = 1]
 [h: bSameSkill = 0]
 
-[macro("class_skills/getAbilitaClasse@this"): json.append(source,"Lib:NessunaPieta")]
+[macro("class_skills/getAbilitaClasse@this"): json.append(source,"NessunaPieta")]
 [h: noMercy = macro.return]
 
 [macro("class_skills/getBloccoAbilita@this"):json.append(source,sLibAbilita)]

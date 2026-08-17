@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: source = json.get(macro.args,"source")]
 [h: id = json.get(macro.args,"target")]
 
