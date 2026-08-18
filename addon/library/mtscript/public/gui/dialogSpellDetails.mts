@@ -30,7 +30,7 @@
 
 [h: bLightMode = getPreferenza("light_mode",oToken, sDialog)]
 
-[dialog5(sDialog,"width= 600; height=650; temporary=0; closebutton=0"):{
+[dialog5(sDialog,"width= 650; height=700; temporary=0; closebutton=0"):{
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellDetailsCssLink.html")]
@@ -154,12 +154,12 @@
             </div>
 
             <!-- Descrizione -->
-            <div class="flavor">
 			[h: aFlavour = fetchSpellProp(spellName,"flavour")]
+			<div class='[r, if(json.isEmpty(aFlavour)): "flavor-empty"; "flavor"]'>
 			[r, foreach(sDescr, aFlavour, ""), code:{
 				<p>[r: sDescr]</p>
 			}]
-            </div>
+			</div>
             <div class="mechanical">
 			[r, if(bSoglia): strformat("<p style='font-style: italic; margin-bottom: 5px;'>Soglia di Potere: %{iSogliaRate}%</p>")]
 			[h: aDescrizione = fetchSpellProp(spellName,"descrizione")]
