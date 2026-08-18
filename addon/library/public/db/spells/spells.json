@@ -4235,7 +4235,7 @@
     },
     "FiammaDellaMalebolgia": {
         "id": "FiammaDellaMalebolgia",
-        "flavour": ["<div style=\"font-style:italic; text-align:center\">Lo stregone sussurra un nome proibito, e la terra si apre in crepe incandescenti. Da esse divampano fiamme d’un rosso innaturale, intrise di urla lontane e odio antico. L’aria si fa cenere, la luce si contorce — e chi osa attraversarle porta con sé il marchio ardente dell’Inferno.</div>"],
+        "flavour": ["Lo stregone sussurra un nome proibito, e la terra si apre in crepe incandescenti. Da esse divampano fiamme d’un rosso innaturale, intrise di urla lontane e odio antico. L’aria si fa cenere, la luce si contorce — e chi osa attraversarle porta con sé il marchio ardente dell’Inferno."],
         "descrizione": ["<div style=\"font-style:italic; text-align:center\">Lo stregone sussurra un nome proibito, e la terra si apre in crepe incandescenti. Da esse divampano fiamme d’un rosso innaturale, intrise di urla lontane e odio antico. L’aria si fa cenere, la luce si contorce — e chi osa attraversarle porta con sé il marchio ardente dell’Inferno.</div><p>Nell’area d’effetto dell’incantesimo viene richiamata una zona immobile di fiamme infernali. Tutte le creature che transitano nell’area subiscono un effetto Incendio per 1 round che infligge  1d3 danni per LP al termine del round, per un massimo di una volta per round.</p>"],
         "image": "ability_mage_flamecannon.png",
         "nome_decorativo": "Fiamma della Malebolgia",

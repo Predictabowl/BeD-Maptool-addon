@@ -28,17 +28,19 @@
 [h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,spellName)]
 [h: oSpellData = macro.return]
 
+[h: bLightMode = getPreferenza("light_mode",oToken, sDialog)]
+
 [dialog5(sDialog,"width= 600; height=650; temporary=0; closebutton=0"):{
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellDetailsCssLink.html")]
 	<title> [r: getName(oToken)] - Descrizione Potere</title>
 </head>
-<body>
+<body class="[r, if(bLightMode == 1): 'light-mode']">
 
    <dialog id="spell-detail-dialog" class="spell-dialog" open>
 
-        <button class="theme-switch-btn" type="button" onclick="document.body.classList.toggle('light-mode')"
+        <button class="theme-switch-btn" type="button" onclick="toggleTheme('[r: oToken]', '[r: sDialog]')"
             aria-label="Cambia tema" title="Cambia tema">&#9789;</button>
 
         <!-- Intestazione: sigillo (colorato in base al Tipo), titolo, chip Tipo + Tratti -->
@@ -153,7 +155,10 @@
 
             <!-- Descrizione -->
             <div class="flavor">
-                <p>Il sangue bolle, il tempo rallenta.</p>
+			[h: aFlavour = fetchSpellProp(spellName,"flavour")]
+			[r, foreach(sDescr, aFlavour, ""), code:{
+				<p>[r: sDescr]</p>
+			}]
             </div>
             <div class="mechanical">
 			[r, if(bSoglia): strformat("<p style='font-style: italic; margin-bottom: 5px;'>Soglia di Potere: %{iSogliaRate}%</p>")]
@@ -168,6 +173,7 @@
 
     </dialog>
 
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=false" defer></script>
 </body>
 </html>
 }]
