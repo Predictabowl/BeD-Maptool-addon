@@ -1,7 +1,7 @@
 {
     "BocciaAcquaSanta": {
         "id": "BocciaAcquaSanta",
-        "descrizione": "Ha effetto solamente contro Non Morti e Demoni, infliggendogli 1d6 danni per LL.",
+        "descrizione": ["Ha effetto solamente contro Non Morti e Demoni, infliggendogli 1d6 danni per LL."],
         "image": "inv_potion_75.png",
         "nome_decorativo": "Boccia Acqua Santa",
         "properties": {
@@ -28,7 +28,7 @@
     },
     "FialaAcquaSanta": {
         "id": "FialaAcquaSanta",
-        "descrizione": "Ha effetto solamente contro Non Morti e Demoni, infliggendogli 1d6 danni per LL.",
+        "descrizione": ["Ha effetto solamente contro Non Morti e Demoni, infliggendogli 1d6 danni per LL."],
         "image": "trade_alchemy_dpotion_a11.png",
         "nome_decorativo": "Fiala Acqua Santa",
         "properties": {
@@ -55,7 +55,7 @@
     },
     "PozioneArmatura": {
         "id": "PozioneArmatura",
-        "descrizione": "Offre un bonus di +2 LD di tipo Armatura.",
+        "descrizione": ["Offre un bonus di +2 LD di tipo Armatura."],
         "image": "inv_alchemy_potion_06.png",
         "nome_decorativo": "Armatura",
         "properties": {
@@ -82,7 +82,7 @@
     },
     "PozioneArmaturaMaggiore": {
         "id": "PozioneArmaturaMaggiore",
-        "descrizione": "Offre un bonus di +3 LD di tipo Armatura.",
+        "descrizione": ["Offre un bonus di +3 LD di tipo Armatura."],
         "image": "inv_alchemy_potion_03.png",
         "nome_decorativo": "Armatura Maggiore",
         "properties": {
@@ -109,7 +109,7 @@
     },
     "PozioneCuraMalattia": {
         "id": "PozioneCuraMalattia",
-        "descrizione": "Questa pozione permette di rimuovere un effetto Malattia con +7 PR.",
+        "descrizione": ["Questa pozione permette di rimuovere un effetto Malattia con +7 PR."],
         "image": "inv_potion_164.png",
         "nome_decorativo": "Cura Malattia",
         "properties": {
@@ -136,7 +136,7 @@
     },
     "PozioneCuraVitaEstrema": {
         "id": "PozioneCuraVitaEstrema",
-        "descrizione": "Cura 1d12+4 punti vita per LL.",
+        "descrizione": ["Cura 1d12+4 punti vita per LL."],
         "image": "inv_potion_167.png",
         "nome_decorativo": "Vita estrema",
         "properties": {
@@ -163,7 +163,7 @@
     },
     "PozioneCuraVitaMaggiore": {
         "id": "PozioneCuraVitaMaggiore",
-        "descrizione": "Cura 1d8+2 punti vita per LL.",
+        "descrizione": ["Cura 1d8+2 punti vita per LL."],
         "image": "inv_potion_52.png",
         "nome_decorativo": "Vita maggiore",
         "properties": {
@@ -190,7 +190,7 @@
     },
     "PozioneCuraVitaMinore": {
         "id": "PozioneCuraVitaMinore",
-        "descrizione": "Cura 1d4 punti vita per LL.",
+        "descrizione": ["Cura 1d4 punti vita per LL."],
         "image": "inv_potion_49.png",
         "nome_decorativo": "Vita minore",
         "properties": {
@@ -217,7 +217,7 @@
     },
     "PozioneCuraVitaModerata": {
         "id": "PozioneCuraVitaModerata",
-        "descrizione": "Cura 1d6+1 punti vita per LL.",
+        "descrizione": ["Cura 1d6+1 punti vita per LL."],
         "image": "inv_potion_50.png",
         "nome_decorativo": "Vita moderata",
         "properties": {
@@ -244,7 +244,7 @@
     },
     "PozioneCuraVitaSuperiore": {
         "id": "PozioneCuraVitaSuperiore",
-        "descrizione": "Cura 1d10+3 punti vita per LL.",
+        "descrizione": ["Cura 1d10+3 punti vita per LL."],
         "image": "inv_potion_131.png",
         "nome_decorativo": "Vita superiore",
         "properties": {
@@ -271,7 +271,7 @@
     },
     "PozioneDeflagranteAcqua": {
         "id": "PozioneDeflagranteAcqua",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_blue.png",
         "nome_decorativo": "Pozione Deflagrante (Gelo)",
         "properties": {
@@ -298,7 +298,7 @@
     },
     "PozioneDeflagranteArcano": {
         "id": "PozioneDeflagranteArcano",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_violet.png",
         "nome_decorativo": "Pozione Deflagrante (Arcano)",
         "properties": {
@@ -325,7 +325,7 @@
     },
     "PozioneDeflagranteAria": {
         "id": "PozioneDeflagranteAria",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_yellow.png",
         "nome_decorativo": "Pozione Deflagrante (Fulmine)",
         "properties": {
@@ -352,7 +352,7 @@
     },
     "PozioneDeflagranteFuoco": {
         "id": "PozioneDeflagranteFuoco",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_orange.png",
         "nome_decorativo": "Pozione Deflagrante (Fuoco)",
         "properties": {
@@ -379,7 +379,7 @@
     },
     "PozioneDeflagranteMentale": {
         "id": "PozioneDeflagranteMentale",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_red(custom).png",
         "nome_decorativo": "Pozione Deflagrante (Mentale)",
         "properties": {
@@ -406,7 +406,7 @@
     },
     "PozioneDeflagranteNegativo": {
         "id": "PozioneDeflagranteNegativo",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_black.png",
         "nome_decorativo": "Pozione Deflagrante (Negativo)",
         "properties": {
@@ -433,7 +433,7 @@
     },
     "PozioneDeflagrantePositivo": {
         "id": "PozioneDeflagrantePositivo",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_white.png",
         "nome_decorativo": "Pozione Deflagrante (Positivo)",
         "properties": {
@@ -460,7 +460,7 @@
     },
     "PozioneDeflagranteTerra": {
         "id": "PozioneDeflagranteTerra",
-        "descrizione": "Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati.",
+        "descrizione": ["Genera un'esplosione nel punto d'impatto che colpisce tutte le creature nell'area d'effetto.\nLe creature colpite subiscono 1d8 danni per LP.\nUna prova riuscita di controllo permette di evitare di colpire gli alleati."],
         "image": "inv_10_alchemy_bottle_shape1_green.png",
         "nome_decorativo": "Pozione Deflagrante (Acido)",
         "properties": {
@@ -487,7 +487,7 @@
     },
     "PozioneFuocoLiquido": {
         "id": "PozioneFuocoLiquido",
-        "descrizione": "Il bersaglio subisce 1d2 danni per LP al termine di ogni round di durata.",
+        "descrizione": ["Il bersaglio subisce 1d2 danni per LP al termine di ogni round di durata."],
         "image": "inv_potion_33(1).png",
         "nome_decorativo": "Fuoco liquido",
         "properties": {
@@ -514,7 +514,7 @@
     },
     "PozioneInvisibilita": {
         "id": "PozioneInvisibilita",
-        "descrizione": "Per tutta la durata il personaggio diventa Invisibile.",
+        "descrizione": ["Per tutta la durata il personaggio diventa Invisibile."],
         "image": "inv_potion_46.png",
         "nome_decorativo": "Invisibilità",
         "properties": {
@@ -541,7 +541,7 @@
     },
     "PozioneManaEstrema": {
         "id": "PozioneManaEstrema",
-        "descrizione": "Ripristina 225 Punti Mana.",
+        "descrizione": ["Ripristina 225 Punti Mana."],
         "image": "inv_potion_168.png",
         "nome_decorativo": "Mana estrema",
         "properties": {
@@ -568,7 +568,7 @@
     },
     "PozioneManaMaggiore": {
         "id": "PozioneManaMaggiore",
-        "descrizione": "Ripristina 135 Punti Mana.",
+        "descrizione": ["Ripristina 135 Punti Mana."],
         "image": "inv_potion_73.png",
         "nome_decorativo": "Mana maggiore",
         "properties": {
@@ -595,7 +595,7 @@
     },
     "PozioneManaMinore": {
         "id": "PozioneManaMinore",
-        "descrizione": "Ripristina 45 Punti Mana.",
+        "descrizione": ["Ripristina 45 Punti Mana."],
         "image": "inv_potion_70.png",
         "nome_decorativo": "Mana minore",
         "properties": {
@@ -622,7 +622,7 @@
     },
     "PozioneManaModerata": {
         "id": "PozioneManaModerata",
-        "descrizione": "Ripristina 90 Punti Mana.",
+        "descrizione": ["Ripristina 90 Punti Mana."],
         "image": "inv_potion_71.png",
         "nome_decorativo": "Mana moderata",
         "properties": {
@@ -649,7 +649,7 @@
     },
     "PozioneManaSuperiore": {
         "id": "PozioneManaSuperiore",
-        "descrizione": "Ripristina 180 Punti Mana.",
+        "descrizione": ["Ripristina 180 Punti Mana."],
         "image": "inv_potion_137.png",
         "nome_decorativo": "Mana superiore",
         "properties": {
@@ -676,7 +676,7 @@
     },
     "PozioneMenteFocalizzata": {
         "id": "PozioneMenteFocalizzata",
-        "descrizione": "Per tutta la durata fornisce un bonus di +3 PA.",
+        "descrizione": ["Per tutta la durata fornisce un bonus di +3 PA."],
         "image": "inv_potion_108.png",
         "nome_decorativo": "Mente Focalizzata",
         "properties": {
@@ -703,7 +703,7 @@
     },
     "PozionePotenzaGrezza": {
         "id": "PozionePotenzaGrezza",
-        "descrizione": "Offre un bonus di +10 MDI.",
+        "descrizione": ["Offre un bonus di +10 MDI."],
         "image": "inv_potion_116.png",
         "nome_decorativo": "Potenza Grezza",
         "properties": {
@@ -730,7 +730,7 @@
     },
     "PozioneResistenzaAcqua": {
         "id": "PozioneResistenzaAcqua",
-        "descrizione": "Autmenta la resistenza del personaggio di +4 per tutta la durata.",
+        "descrizione": ["Autmenta la resistenza del personaggio di +4 per tutta la durata."],
         "image": "inv_potion_126.png",
         "nome_decorativo": "Resistenza all'Acqua",
         "properties": {
@@ -757,7 +757,7 @@
     },
     "PozioneResistenzaFuoco": {
         "id": "PozioneResistenzaFuoco",
-        "descrizione": "Autmenta la resistenza del personaggio di +4 per tutta la durata.",
+        "descrizione": ["Autmenta la resistenza del personaggio di +4 per tutta la durata."],
         "image": "inv_potion_124.png",
         "nome_decorativo": "Resistenza al Fuoco",
         "properties": {
@@ -784,7 +784,7 @@
     },
     "PozioneResistenzaMalattie": {
         "id": "PozioneResistenzaMalattie",
-        "descrizione": "Autmenta la resistenza del personaggio di +4 per tutta la durata.",
+        "descrizione": ["Autmenta la resistenza del personaggio di +4 per tutta la durata."],
         "image": "inv_potion_123.png",
         "nome_decorativo": "Resistenza alle Malattie",
         "properties": {
@@ -811,7 +811,7 @@
     },
     "PozioneResistenzaMaledizioni": {
         "id": "PozioneResistenzaMaledizioni",
-        "descrizione": "Autmenta la resistenza del personaggio di +4 per tutta la durata.",
+        "descrizione": ["Autmenta la resistenza del personaggio di +4 per tutta la durata."],
         "image": "inv_potion_122.png",
         "nome_decorativo": "Resistenza alle Maledizioni",
         "properties": {
@@ -838,7 +838,7 @@
     },
     "PozioneResistenzaSanguinamento": {
         "id": "PozioneResistenzaSanguinamento",
-        "descrizione": "Autmenta la resistenza del personaggio di +4 per tutta la durata.",
+        "descrizione": ["Autmenta la resistenza del personaggio di +4 per tutta la durata."],
         "image": "inv_potion_120.png",
         "nome_decorativo": "Resistenza al Sanguinamento",
         "properties": {
@@ -865,7 +865,7 @@
     },
     "PozioneResistenzaVeleno": {
         "id": "PozioneResistenzaVeleno",
-        "descrizione": "Autmenta la resistenza del personaggio di +4 per tutta la durata.",
+        "descrizione": ["Autmenta la resistenza del personaggio di +4 per tutta la durata."],
         "image": "inv_potion_127.png",
         "nome_decorativo": "Resistenza al Veleno",
         "properties": {
@@ -892,7 +892,7 @@
     },
     "PozioneRigeneraVita": {
         "id": "PozioneRigeneraVita",
-        "descrizione": "Cura 1 punto vita per LL ogni round.",
+        "descrizione": ["Cura 1 punto vita per LL ogni round."],
         "image": "inv_potion_54.png",
         "nome_decorativo": "Rigenera Vita",
         "properties": {
@@ -919,7 +919,7 @@
     },
     "PozioneRimuoviCondizione": {
         "id": "PozioneRimuoviCondizione",
-        "descrizione": "Effettua un Rimuovi Effetto su di una condizione nociva casuale tra quelle che affliggono il beneficiario con +7 PR.\nNon ha effetto su condizioni causate da altre afflizioni, come veleni, malattie, maledizioni ecc.",
+        "descrizione": ["Effettua un Rimuovi Effetto su di una condizione nociva casuale tra quelle che affliggono il beneficiario con +7 PR.\nNon ha effetto su condizioni causate da altre afflizioni, come veleni, malattie, maledizioni ecc."],
         "image": "inv_potion_161.png",
         "nome_decorativo": "Rimuovi Condizione",
         "properties": {
@@ -946,7 +946,7 @@
     },
     "PozioneScuroVisione": {
         "id": "PozioneScuroVisione",
-        "descrizione": "Garantisce \"Scurovisione\" per 4 ore.",
+        "descrizione": ["Garantisce \"Scurovisione\" per 4 ore."],
         "image": "inv_alchemy_potion_empty.png",
         "nome_decorativo": "Scurovisione",
         "properties": {
@@ -973,7 +973,7 @@
     },
     "PozioneVelocita": {
         "id": "PozioneVelocita",
-        "descrizione": "Il personaggio ottiene l'effetto Velocita.",
+        "descrizione": ["Il personaggio ottiene l'effetto Velocita."],
         "image": "inv_alchemy_elixir_04.png",
         "nome_decorativo": "Velocità",
         "properties": {
@@ -1000,7 +1000,7 @@
     },
     "PozioneVelocitaNoSoglia": {
         "id": "PozioneVelocitaNoSoglia",
-        "descrizione": "Il personaggio ottiene l'effetto Velocita.",
+        "descrizione": ["Il personaggio ottiene l'effetto Velocita."],
         "image": "inv_alchemy_elixir_04.png",
         "nome_decorativo": "Velocità",
         "properties": {
@@ -1027,7 +1027,7 @@
     },
     "RunaAttaccoAcqua": {
         "id": "RunaAttaccoAcqua",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d5 per LP.\nIl bersaglio deve superare un TS o venire Congelato per tutta la durata.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d5 per LP.\nIl bersaglio deve superare un TS o venire Congelato per tutta la durata."],
         "image": "spell_ice_rune.png",
         "nome_decorativo": "Runa Gelo",
         "properties": {
@@ -1054,7 +1054,7 @@
     },
     "RunaAttaccoAcquaMaggiore": {
         "id": "RunaAttaccoAcquaMaggiore",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d7 per LP. Il bersaglio deve superare un TS o venire Congelato per tutta la durata.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d7 per LP. Il bersaglio deve superare un TS o venire Congelato per tutta la durata."],
         "image": "spell_ice_rune.png",
         "nome_decorativo": "Runa Gelo maggiore",
         "properties": {
@@ -1081,7 +1081,7 @@
     },
     "RunaAttaccoArcano": {
         "id": "RunaAttaccoArcano",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d6+1 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d6+1 per LP."],
         "image": "spell_arcane_rune.png",
         "nome_decorativo": "Runa Arcana",
         "properties": {
@@ -1108,7 +1108,7 @@
     },
     "RunaAttaccoArcanoMaggiore": {
         "id": "RunaAttaccoArcanoMaggiore",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d8+1 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d8+1 per LP."],
         "image": "spell_arcane_rune.png",
         "nome_decorativo": "Runa Arcana maggiore",
         "properties": {
@@ -1135,7 +1135,7 @@
     },
     "RunaAttaccoAria": {
         "id": "RunaAttaccoAria",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d10-1 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d10-1 per LP."],
         "image": "Custom_lightning_01.png",
         "nome_decorativo": "Runa Fulmine",
         "properties": {
@@ -1162,7 +1162,7 @@
     },
     "RunaAttaccoAriaMaggiore": {
         "id": "RunaAttaccoAriaMaggiore",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d12-1 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d12-1 per LP."],
         "image": "Custom_lightning_01.png",
         "nome_decorativo": "Runa Fulmine maggiore",
         "properties": {
@@ -1189,7 +1189,7 @@
     },
     "RunaAttaccoFuoco": {
         "id": "RunaAttaccoFuoco",
-        "descrizione": "Scatena un colpo di fuoco che infligge danno pari a 1d6 per LP.\nIl bersaglio deve superare un TS o subire un effetto incendio che infligge 1d2 danni per LP al termine del round.",
+        "descrizione": ["Scatena un colpo di fuoco che infligge danno pari a 1d6 per LP.\nIl bersaglio deve superare un TS o subire un effetto incendio che infligge 1d2 danni per LP al termine del round."],
         "image": "Custom_fire_01.png",
         "nome_decorativo": "Runa Fuoco",
         "properties": {
@@ -1216,7 +1216,7 @@
     },
     "RunaAttaccoFuocoMaggiore": {
         "id": "RunaAttaccoFuocoMaggiore",
-        "descrizione": "Scatena un colpo di fuoco che infligge danno pari a 1d8 per LP.\nIl bersaglio deve superare un TS o subire un effetto incendio che infligge 1d2 danni per LP al termine del round.",
+        "descrizione": ["Scatena un colpo di fuoco che infligge danno pari a 1d8 per LP.\nIl bersaglio deve superare un TS o subire un effetto incendio che infligge 1d2 danni per LP al termine del round."],
         "image": "Custom_fire_01.png",
         "nome_decorativo": "Runa Fuoco maggiore",
         "properties": {
@@ -1243,7 +1243,7 @@
     },
     "RunaAttaccoMente": {
         "id": "RunaAttaccoMente",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d5 per LP.\nIl bersaglio deve superare un TS o diventare Stordito per tutta la durata.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d5 per LP.\nIl bersaglio deve superare un TS o diventare Stordito per tutta la durata."],
         "image": "Custom_positive_01.png",
         "nome_decorativo": "Runa Mente",
         "properties": {
@@ -1270,7 +1270,7 @@
     },
     "RunaAttaccoMenteMaggiore": {
         "id": "RunaAttaccoMenteMaggiore",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d7 per LP.\nIl bersaglio deve superare un TS o diventare Stordito per tutta la durata.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d7 per LP.\nIl bersaglio deve superare un TS o diventare Stordito per tutta la durata."],
         "image": "Custom_positive_01.png",
         "nome_decorativo": "Runa Mente maggiore",
         "properties": {
@@ -1297,7 +1297,7 @@
     },
     "RunaAttaccoNegativo": {
         "id": "RunaAttaccoNegativo",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d8 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d8 per LP."],
         "image": "spell_shadow_rune.png",
         "nome_decorativo": "Runa Negativa",
         "properties": {
@@ -1324,7 +1324,7 @@
     },
     "RunaAttaccoNegativoMaggiore": {
         "id": "RunaAttaccoNegativoMaggiore",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d10 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d10 per LP."],
         "image": "spell_shadow_rune.png",
         "nome_decorativo": "Runa Negativa maggiore",
         "properties": {
@@ -1351,7 +1351,7 @@
     },
     "RunaAttaccoPositiva": {
         "id": "RunaAttaccoPositiva",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d5 per LP.\nIl bersaglio deve superare un TS o subire Cecità per tutta la durata.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d5 per LP.\nIl bersaglio deve superare un TS o subire Cecità per tutta la durata."],
         "image": "boss_odunrunes_yellow.png",
         "nome_decorativo": "Runa Positiva",
         "properties": {
@@ -1378,7 +1378,7 @@
     },
     "RunaAttaccoPositivaMaggiore": {
         "id": "RunaAttaccoPositivaMaggiore",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno pari a 1d7 per LP. Il bersaglio deve superare un TS o subire Cecità per tutta la durata.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno pari a 1d7 per LP. Il bersaglio deve superare un TS o subire Cecità per tutta la durata."],
         "image": "boss_odunrunes_yellow.png",
         "nome_decorativo": "Runa Positiva maggiore",
         "properties": {
@@ -1405,7 +1405,7 @@
     },
     "RunaAttaccoTerra": {
         "id": "RunaAttaccoTerra",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno ogni round pari a 1d4 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno ogni round pari a 1d4 per LP."],
         "image": "Custom_acid_01.png",
         "nome_decorativo": "Runa Acida",
         "properties": {
@@ -1432,7 +1432,7 @@
     },
     "RunaAttaccoTerraMaggiore": {
         "id": "RunaAttaccoTerraMaggiore",
-        "descrizione": "Scatena un colpo a bersaglio che infligge danno ogni round pari a 1d3 per LP.",
+        "descrizione": ["Scatena un colpo a bersaglio che infligge danno ogni round pari a 1d3 per LP."],
         "image": "Custom_acid_01.png",
         "nome_decorativo": "Runa Acida maggiore",
         "properties": {
@@ -1459,7 +1459,7 @@
     },
     "RunaCuraMalattia": {
         "id": "RunaCuraMalattia",
-        "descrizione": "Effettua un Rimuovi Effetto su di una Malattia.",
+        "descrizione": ["Effettua un Rimuovi Effetto su di una Malattia."],
         "image": "boss_odunrunes_orange.jpg",
         "nome_decorativo": "Runa Cura Malattia",
         "properties": {
@@ -1486,7 +1486,7 @@
     },
     "RunaCuraMaledizione": {
         "id": "RunaCuraMaledizione",
-        "descrizione": "Effettua un Rimuovi Effetto su di una Maledizione.",
+        "descrizione": ["Effettua un Rimuovi Effetto su di una Maledizione."],
         "image": "boss_odunrunes_purple.jpg",
         "nome_decorativo": "Runa Cura Maledizione",
         "properties": {
@@ -1513,7 +1513,7 @@
     },
     "RunaCuraVita": {
         "id": "RunaCuraVita",
-        "descrizione": "Cura 1d6+1 punti vita per LL.",
+        "descrizione": ["Cura 1d6+1 punti vita per LL."],
         "image": "spell_holy_rune-b.png",
         "nome_decorativo": "Runa Cura Vita",
         "properties": {
@@ -1540,7 +1540,7 @@
     },
     "RunaCuraVitaMaggiore": {
         "id": "RunaCuraVitaMaggiore",
-        "descrizione": "Cura 1d8+2 punti vita per LL.",
+        "descrizione": ["Cura 1d8+2 punti vita per LL."],
         "image": "spell_holy_rune.png",
         "nome_decorativo": "Runa Cura Vita maggiore",
         "properties": {
@@ -1567,7 +1567,7 @@
     },
     "RunaCuraVitaMinore": {
         "id": "RunaCuraVitaMinore",
-        "descrizione": "Cura 1d5 punti vita per LL.",
+        "descrizione": ["Cura 1d5 punti vita per LL."],
         "image": "spell_holy_rune-c.png",
         "nome_decorativo": "Runa Cura Vita minore",
         "properties": {
@@ -1594,7 +1594,7 @@
     },
     "SbronzaEpica": {
         "id": "SbronzaEpica",
-        "descrizione": "Il lanciatore subisce una Sbronza Epica!\nLa sbronza rende il personaggio più rapido ed imprevedible, ma anche confuso.\nPer tutta la durata il personaggio ottiene +15 MDI, Crit, PCrit e Schivare, ma anche +25 Mancare.",
+        "descrizione": ["Il lanciatore subisce una Sbronza Epica!\nLa sbronza rende il personaggio più rapido ed imprevedible, ma anche confuso.\nPer tutta la durata il personaggio ottiene +15 MDI, Crit, PCrit e Schivare, ma anche +25 Mancare."],
         "image": "inv_holiday_brewfestbuff_01.png",
         "nome_decorativo": "Sbronza Epica",
         "properties": {

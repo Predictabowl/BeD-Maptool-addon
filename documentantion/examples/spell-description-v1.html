@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dettagli Incantesimo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&display=swap"
+        rel="stylesheet">
+    <!-- In un contesto reale, qui importeresti il tuo Spells.css -->
+    <!-- Risale di due cartelle (../..) e poi entra nel percorso indicato -->
+    <link rel="stylesheet" href="../../addon/library/public/css/Spells.css">
+    <!-- Stessa logica per il file GlobalCss.css (immaginando sia nella stessa cartella) -->
+    <link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+    <style>
+        /* Qui metti gli stili che abbiamo definito per il dialog */
+        .spell-dialog {
+            background-color: var(--bg-card);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+
+            /* MODIFICA: Si adatta allo spazio, con un minimo di respiro */
+            width: 85%;
+            /* Occupa gran parte della larghezza disponibile */
+            max-width: 800px;
+            /* Non diventa ridicolmente largo su schermi enormi */
+            max-height: 90vh;
+            /* Non esce dallo schermo in altezza */
+
+            margin: 5vh auto;
+            /* Centratura verticale automatica */
+            display: flex;
+            /* Utile per gestire il contenuto interno */
+            flex-direction: column;
+            overflow: hidden;
+            /* Mantiene il controllo se il contenuto è lungo */
+        }
+
+        .dialog-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .spell-icon-large {
+            width: 64px;
+            height: 64px;
+            border-radius: 6px;
+        }
+
+        .spell-title {
+            font-family: var(--font-spell);
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            font-weight: normal;
+            margin: 0;
+        }
+
+        .spell-specs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .stats-row {
+            display: grid;
+            /* Cambiamo repeat(3, 1fr) in minmax per gestire meglio le risoluzioni */
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 8px;
+            font-size: 0.8rem;
+        }
+
+        .stats-row>div {
+            background: var(--stats-bg);
+            padding: 5px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stats-row>div>span:first-child {
+            font-size: 0.6rem;
+            font-variant: small-caps;
+            color: var(--stat-label-color);
+        }
+
+        .stats-row>div>span:nth-child(2) {
+            font-weight: bold;
+        }
+
+        .spell-description {
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .flavor {
+            font-style: italic;
+            color: var(--text-color);
+            /* Leggermente più leggibile del grigio chiaro */
+            text-align: center;
+            margin: 25px 0;
+            padding: 15px 20px;
+
+            /* Effetto "Fancy" */
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+            border-top: 1px solid var(--accent-color);
+            border-bottom: 1px solid var(--accent-color);
+
+            /* Ombretta sottile per dare profondità */
+            box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+
+            /* Opzionale: un po' di spaziatura tra le righe per eleganza */
+            line-height: 1.6;
+        }
+
+    </style>
+</head>
+
+<body class="light-mode">
+
+    <dialog id="spell-detail-dialog" class="spell-dialog" open>
+        <div class="dialog-header">
+            <img src="..\..\addon\library\public\icons\spells\rogue_burstofspeed.png" alt="Icona"
+                class="spell-icon-large">
+            <h2 class="spell-title">Accelerazione</h2>
+        </div>
+
+        <div class="spell-specs-grid">
+            <!-- Blocco Core -->
+            <div class="stats-row">
+                <div><span>Mana</span><span>27</span></div>
+                <div><span>PF</span><span>0</span></div>
+                <div><span>Tempo</span><span>15</span></div>
+                <div><span>PP</span><span>7</span></div>
+                <div><span>PA</span><span>0</span></div>
+                <div><span>MM</span><span>0</span></div>
+            </div>
+
+            <!-- Blocco Dettagli -->
+            <div class="stats-row">
+                <div><span>Scuola</span><span>Psicometabolismo</span></div>
+                <div><span>Tipo</span><span>Supporto</span></div>
+                <div><span>Elemento</span><span>Fuoco</span></div>
+                <div><span>Durata</span><span>5</span></div>
+                <div><span>Raggio</span><span>0</span></div>
+                <div><span>Area</span><span>0</span></div>
+                <div><span>TS</span><span>No</span></div>
+                <div><span>Componenti</span><span>S</span></div>
+                <div><span>Recup</span><span>-</span></div>
+                <div><span>Opportunità</span><span>No</span></div>
+                <div><span>Medium</span><span>Energetico</span></div>
+                <div><span>Tratti</span><span>Controllato, Veleno</span></div>
+            </div>
+        </div>
+
+        <div class="spell-description">
+            <div class="flavor">
+                <p>Il sangue bolle, il tempo rallenta.</p>
+            </div>
+            <div class="mechanical">
+                <p>Ottieni un effetto di <b>Velocità</b> finché il potere è attivo...</p>
+            </div>
+        </div>
+    </dialog>
+
+</body>
+
+</html>

@@ -19,9 +19,6 @@
 
 [h: oListaPot = getLibroPoteri(oToken)]
 [h: oMemList = getPoteriMem(oToken)]
-[h: broadcast(oArgs)]
-[h: broadcast(oListaPot)]
-[h: broadcast(oMemList)]
 
 [h, foreach(oInc, oListaPot), code:{
 	[bMemOld = json.contains(oMemList,oInc)]

@@ -1,0 +1,261 @@
+/* ==========================================================
+   SpellDetail.css
+   Stili del dialog di dettaglio incantesimo (layout "sigillo +
+   compendio"). Riusa solo variabili/classi già definite in
+   GlobalCss.css e Spells.css (font, colori risorsa, classi di
+   categoria OFFENSIVO/SUPPORTO/..., .theme-switch-btn, ecc.),
+   da importare insieme a questo file nelle pagine/dialog che
+   mostrano il dettaglio di un incantesimo.
+   ========================================================== */
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.spell-dialog {
+    position: relative;
+    background-color: var(--bg-card);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 28px 32px 24px;
+    width: 85%;
+    max-width: 760px;
+    max-height: 92vh;
+    margin: 4vh auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* --- Intestazione: sigillo + titolo + chip --- */
+.dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 18px;
+    margin-bottom: 16px;
+}
+
+.seal-ring {
+    flex-shrink: 0;
+    width: 74px;
+    height: 74px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--stats-bg);
+    box-shadow: 0 0 0 2px var(--border-color), 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.seal-ring img {
+    width: 64px;
+    height: 64px;
+    display: block;
+    /* le icone sono png 64x64 già rifinite: niente radius/crop, solo la cornice neutra attorno */
+}
+
+.header-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.spell-title {
+    font-family: var(--font-spell);
+    font-size: 2rem;
+    font-weight: normal;
+    color: var(--accent-color);
+    margin: 0 0 8px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.1;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.chip {
+    font-family: var(--font-title);
+    font-size: 0.7rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 999px;
+}
+
+.chip.type-chip {
+    /* il colore/sfondo arriva dalla classe di categoria applicata insieme (es. SUPPORTO) */
+    font-weight: bold;
+}
+
+.chip.trait-chip {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+/* --- Divisore ornamentale --- */
+.ornate-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--accent-color);
+    margin: 4px 0 18px 0;
+    flex-shrink: 0;
+}
+
+.ornate-divider::before,
+.ornate-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+.ornate-divider span {
+    font-size: 0.9rem;
+}
+
+/* --- Fascia risorse (Mana, PF, Tempo, PP, PA, MM) --- */
+.resource-ribbon {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    background: var(--stats-bg);
+    border-radius: 6px;
+    padding: 10px 4px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
+.resource-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    border-right: 1px solid var(--border-color);
+}
+
+.resource-item:last-child {
+    border-right: none;
+}
+
+.resource-item .stat-label {
+    font-family: var(--font-title);
+    font-size: 0.6rem;
+}
+
+.resource-item .stat-value {
+    font-size: 1.15rem;
+}
+
+/* --- Corpo scrollabile: dettagli + descrizione --- */
+.spell-body {
+    overflow-y: auto;
+    padding-right: 8px;
+    min-height: 0;
+    flex: 1 1 auto;
+}
+
+.section-eyebrow {
+    font-family: var(--font-title);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-color);
+    margin: 0 0 8px 0;
+}
+
+/* --- Dettagli in stile "indice di compendio" (dot-leader) --- */
+.compendium-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 24px;
+    margin-bottom: 22px;
+}
+
+.compendium-row {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 0.85rem;
+    overflow: hidden;
+}
+
+.compendium-row .label {
+    font-family: var(--font-title);
+    color: var(--stat-label-color);
+    white-space: nowrap;
+}
+
+.compendium-row .leader {
+    flex: 1;
+    border-bottom: 1px dotted var(--border-color);
+    height: 0;
+    transform: translateY(-4px);
+}
+
+.compendium-row .value {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* --- Descrizione --- */
+.flavor {
+    position: relative;
+    font-family: var(--font-book);
+    font-size: 1.05rem;
+    text-align: center;
+    color: var(--text-color);
+    margin: 6px 0 22px 0;
+    padding: 14px 30px;
+    line-height: 1.6;
+    border-top: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+}
+
+.flavor::before {
+    content: "\201C";
+    position: absolute;
+    left: 4px;
+    top: -6px;
+    font-size: 2.4rem;
+    color: var(--accent-color);
+    font-family: Georgia, serif;
+    opacity: 0.6;
+}
+
+.flavor:empty {
+    display: none;
+}
+
+.mechanical {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Toggle tema (riusa .theme-switch-btn di Spells.css) --- */
+.theme-switch-btn {
+    font-size: 18px;
+}
+
+@media (max-width: 560px) {
+    .resource-ribbon {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .resource-item:nth-child(3) {
+        border-right: none;
+    }
+
+    .compendium-list {
+        grid-template-columns: 1fr;
+    }
+}

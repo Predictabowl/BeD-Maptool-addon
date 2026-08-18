@@ -26,12 +26,8 @@
 [h, macro("powers/generaOpportunita@this"): json.append(oToken,spellName)]
 [h, if(macro.return): sOpp = "Sì"; sOpp = "No"]
 
-[h: aDescrizione = fetchSpellProp(spellName,"descrizione")]
-[h: aText = "[]"]
-[h, foreach(sDescr, aDescrizione), code:{
-	[h, macro("utility/textProcessHTML@this"): sDescr]
-	[h: aText = json.append(aText, macro.return)]
-}]
+[h, macro("utility/textProcessHTML@this"): fetchSpellProp(spellName,"descrizione")]
+[h: sText = macro.return]
 
 [h: iRecupero = fetchSpellProp(spellName,"recupero")]
 [h, if(!isNumber(iRecupero)): iRecupero = 0]
@@ -86,12 +82,8 @@
 </div>
 [h: sTags = fetchSpellProp(spellName,"tags")]
 <div class="descrizione" style="max-height: 20rem;">
-	[r, if(bSoglia): strformat("<div style='font-style: italic; margin-bottom: 5px;'>Soglia di Potere: %{iSogliaRate}%</div>")]
-	[r, foreach(sText, aText, ""), code: {
-	<p>
-		[r: sText]
-	</p>
-	}]
+	[h, if(bSoglia): sText = strformat("<div style='font-style: italic; margin-bottom: 5px;'>Soglia di Potere: %{iSogliaRate}%</div>%{sText}")]
+	[r: sText]
 </div>
 
 </body>
