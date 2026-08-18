@@ -20,10 +20,11 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 28px 32px 24px;
-    width: 85%;
+    width: auto;
+    /* margin: 4vh auto; */
+    margin: 0px;
     max-width: 760px;
     max-height: 92vh;
-    margin: 4vh auto;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -119,6 +120,11 @@ body {
 
 .ornate-divider span {
     font-size: 0.9rem;
+}
+
+.section-eyebrow + .ornate-divider {
+    margin-top: -4px;
+    margin-bottom: 14px;
 }
 
 /* --- Fascia risorse (Mana, PF, Tempo, PP, PA, MM) --- */

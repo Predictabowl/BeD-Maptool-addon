@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oToken = json.get(macro.args,"token")]
 [h: spellName = json.get(macro.args,"libSpell")]
 [h: oOggetto = json.get(macro.args,"consumabile")]

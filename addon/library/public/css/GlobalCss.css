@@ -19,6 +19,11 @@
     --azione-color-inverse: #cc0000;
     --pp-color-inverse: #990099;
 
+    --link-color: #6ea8fe;
+    --link-hover-color: #c299fc;
+    --link-active-color: #ff6b6b;
+
+
 }
 
 .light-mode {
@@ -35,6 +40,10 @@
     --azione-color-inverse: #ff4d4d;
     --mm-color-inverse: #ff6600;
     --pp-color-inverse: #D100D1;
+
+    --link-color: blue;
+    --link-hover-color: purple;
+    --link-active-color: red;
 }
 
 body {
@@ -72,15 +81,15 @@ strong {
 
 a {
     text-decoration: none;
-    color: blue;
+    color: var(--link-color);
 }
 
 a:hover {
-    color: purple;
+    color: var(--link-hover-color);
 }
 
 a:active {
-    color: red;
+    color: var(--link-active-color);
 }
 
 .relevantTitle {

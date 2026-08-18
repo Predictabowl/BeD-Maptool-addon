@@ -74,7 +74,7 @@
 </button>
 
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=true" defer></script>
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=false" defer></script>
 </body>
 </html>
 }]
