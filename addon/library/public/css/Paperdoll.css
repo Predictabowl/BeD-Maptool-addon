@@ -89,7 +89,7 @@
 
 .quickWeaponTitle {
     font-family: var(--font-title);
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 3px;
     background-color: black;
     color: orangered;
@@ -98,7 +98,7 @@
 
 .inventoryTitle {
     font-family: var(--font-title);
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 3px;
     background-color: black;
     color: gold;
@@ -107,7 +107,7 @@
 
 .ingombroTitle {
     font-family: var(--font-title);
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 3px;
     background-color: black;
     color: lightblue;
@@ -116,7 +116,7 @@
 
 .addArmatureTitle {
     font-family: var(--font-title);
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0px;
     background-color: black;
     color: orchid;
@@ -125,7 +125,7 @@
 
 .div-stile {
     font-family: var(--font-title);
-    font-size: 0.9rem;
+    font-size: 1rem;
 	background-color: black;
 	color: palegreen;
 	border: 1px solid palegreen;

@@ -27,7 +27,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AcquaDellaVita": {
@@ -58,7 +58,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AculeiVelenosi": {
@@ -153,7 +153,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AffondoPerforante": {
@@ -281,7 +281,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AmplificazioneCritica": {
@@ -343,7 +343,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AnimareScheletro": {
@@ -375,7 +375,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AnimaSacrificale": {
@@ -384,7 +384,7 @@
             "Sacrifica un frammento d'anima per sprigionarne l'energia vitale ed incanalarla su di una creatura, in modo da curare le sue ferite.",
             "Il bersaglio recupera 8 PV per LL."
         ],
-        "image": "40732628f1edc8ac5da5c431e168df59.png",
+        "image": "spell_holy_sealofsacrifice.png",
         "nome_decorativo": "Anima Sacrificale",
         "properties": {
             "area": "0",
@@ -407,7 +407,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AnsiaIrrefrenabile": {
@@ -727,7 +727,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ArmaturaSpiritica": {
@@ -767,7 +767,7 @@
             "Questo incantesimo scambia istantaneamente la posizione dello stregone con uno dei suoi Servitori.",
             "Questo incantesimo funziona anche se il Servitore non è in grado di muoversi."
         ],
-        "image": "bda1dee4a0c3648bd964f8360487d8f0.png",
+        "image": "spell_nature_massteleport.png",
         "nome_decorativo": "Arrocco Dimensionale",
         "properties": {
             "area": "0",
@@ -790,7 +790,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ArtigliDilanianti": {
@@ -822,7 +822,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ArtigliSanguinari": {
@@ -853,7 +853,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ArtigliVelenosi": {
@@ -917,7 +917,7 @@
             "tipo": "Mutaforma",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AssaltoEroico": {
@@ -948,7 +948,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AssaltoPsionico": {
@@ -1011,7 +1011,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AssideramentoMagico": {
@@ -1074,7 +1074,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AssorbireImpatto": {
@@ -1167,7 +1167,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "AttaccoRotante": {
@@ -1356,7 +1356,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Bandire": {
@@ -1452,7 +1452,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "BarrieraDiLame": {
@@ -1704,7 +1704,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "BloccaCreatura": {
@@ -1767,7 +1767,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "BuferaDiFolgori": {
@@ -1959,7 +1959,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CataclismaElementale": {
@@ -1992,7 +1992,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "CERCHIO,DANNOSO,SERVITOREORIGIN",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Celerita": {
@@ -2023,7 +2023,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CerchioDiCura": {
@@ -2054,7 +2054,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CodaViverna": {
@@ -2116,7 +2116,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ColpoAla": {
@@ -2178,7 +2178,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ColpoDiFuocoElementalismo": {
@@ -2209,7 +2209,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ColpoDiGrazia": {
@@ -2240,7 +2240,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ColpoDiScudo": {
@@ -2271,7 +2271,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ColpoLetale": {
@@ -2302,7 +2302,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ColpoMortale": {
@@ -2333,7 +2333,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ColpoStordente": {
@@ -2460,7 +2460,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Conflagrazione": {
@@ -2588,7 +2588,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ConvocazioneFuoco": {
@@ -2619,7 +2619,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ConvocazioneSilfide": {
@@ -2651,7 +2651,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ConvocazioneTerra": {
@@ -2684,7 +2684,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CreareBallista": {
@@ -2748,7 +2748,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CreareFuoco": {
@@ -2779,7 +2779,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Criocinesi": {
@@ -2873,7 +2873,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CuraFeriteGravi": {
@@ -2904,7 +2904,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CuraFeriteLeggere": {
@@ -2935,7 +2935,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "CuraMalattia": {
@@ -2966,7 +2966,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DardiIncantati": {
@@ -2999,7 +2999,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DardoFulmineMostro": {
@@ -3559,7 +3559,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DetonazioneOscura": {
@@ -3592,7 +3592,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DetonazioneViolenta": {
@@ -3656,7 +3656,7 @@
             "tipo": "Marchio",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DifesaAFortezza": {
@@ -3687,7 +3687,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DisgregazionePsichica": {
@@ -3755,7 +3755,7 @@
             "tipo": "Controllo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DissolviMagiaSuperiore": {
@@ -3786,7 +3786,7 @@
             "tipo": "Controllo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DistruggereIlMale": {
@@ -3817,7 +3817,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "DitoDellaMorte": {
@@ -3850,7 +3850,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EclisseDiTenebra": {
@@ -3944,7 +3944,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EmanazioneTerra": {
@@ -4039,7 +4039,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EruzioneVitale": {
@@ -4071,7 +4071,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "UTILE",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EruzioneVulcanica": {
@@ -4103,7 +4103,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Esiliare": {
@@ -4236,7 +4236,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EstrazioneRapida": {
@@ -4268,7 +4268,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EvocazioneDelFuoco": {
@@ -4301,7 +4301,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EvocazioneDellAcqua": {
@@ -4334,7 +4334,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EvocazioneDellaTerra": {
@@ -4367,7 +4367,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "EvocazioneDifensore": {
@@ -4398,7 +4398,7 @@
             "tipo": "SERVITORE",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FatoFunesto": {
@@ -4587,7 +4587,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Fetore": {
@@ -4715,7 +4715,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FocalizzatoSulBersaglio": {
@@ -4746,7 +4746,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FolgoreAbissale": {
@@ -4779,7 +4779,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FontanaDiSangue": {
@@ -4842,7 +4842,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FormaCorporea": {
@@ -4880,7 +4880,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FormaLavica": {
@@ -4985,7 +4985,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ForzaEmpia": {
@@ -5048,7 +5048,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FrecciaCeleste": {
@@ -5237,7 +5237,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FulmineMagico": {
@@ -5337,7 +5337,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "FusioneDaCombattimento": {
@@ -5432,7 +5432,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "GlifoDelDisorientamento": {
@@ -5526,7 +5526,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "GuarigioneAccelerata": {
@@ -5557,7 +5557,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "GuscioProtettivoMinore": {
@@ -5620,7 +5620,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Idrolama": {
@@ -5715,7 +5715,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ImpattoIntorpidente": {
@@ -5873,7 +5873,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Incitare": {
@@ -5904,7 +5904,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "UTILE",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "IndebolireLaMateria": {
@@ -5969,7 +5969,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "InfonderePotenza": {
@@ -6065,7 +6065,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "InfusioneRigenerativaMinore": {
@@ -6096,7 +6096,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "InfusioneRigenerativaSuperiore": {
@@ -6127,7 +6127,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Inghiottire": {
@@ -6318,7 +6318,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "LamaPsionica": {
@@ -6603,7 +6603,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "LuceRigenerante": {
@@ -6634,7 +6634,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Maestria": {
@@ -7512,7 +7512,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "CONO",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ManovraEvasiva": {
@@ -7543,7 +7543,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ManovraIntralciante": {
@@ -7605,7 +7605,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "MantoDiNegazione": {
@@ -7732,7 +7732,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "MetabolismoRapido": {
@@ -7763,7 +7763,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Meteora": {
@@ -7826,7 +7826,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "MorsaVirulenta": {
@@ -7889,7 +7889,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "MorsoAppestato01": {
@@ -8109,7 +8109,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "LINEA",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "MuroDiGhiaccio": {
@@ -8175,7 +8175,7 @@
             "tipo": "Controllo",
             "tipo_aoe": "LINEA",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "MuroDOssa": {
@@ -8208,7 +8208,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "LINEA",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "MutaformaFerina": {
@@ -8248,7 +8248,7 @@
             "tipo": "Mutaforma",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "NovaGlaciale": {
@@ -8598,7 +8598,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ParolaDelRichiamo": {
@@ -8629,7 +8629,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PattoconOltretomba": {
@@ -8662,7 +8662,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PiagaStrisciante": {
@@ -8726,7 +8726,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "DANNOSO",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PioggiaDiColpi": {
@@ -8757,7 +8757,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PioggiaDiFuoco": {
@@ -8790,7 +8790,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "DANNOSO",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PioggiaDiLapilli": {
@@ -8922,7 +8922,7 @@
             "tipo": "Servitore",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraAnimaAnimale": {
@@ -8954,7 +8954,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraAttacco": {
@@ -8985,7 +8985,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraBastione": {
@@ -9016,7 +9016,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraDifesa": {
@@ -9047,7 +9047,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "CERCHIO,ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraFerocia": {
@@ -9078,7 +9078,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraFortitudine": {
@@ -9111,7 +9111,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "CERCHIO,ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraInfusione": {
@@ -9142,7 +9142,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "CERCHIO,ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PreghieraIstintoDiSopravvivenza": {
@@ -9173,7 +9173,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "CERCHIO,ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "PrepararsiAllImpatto": {
@@ -9520,7 +9520,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RabbiaDirompente": {
@@ -9551,7 +9551,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RabbiaIncontenibile": {
@@ -9582,7 +9582,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RafficaDiPietre": {
@@ -9646,7 +9646,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RaggioDisgregante": {
@@ -9782,7 +9782,6 @@
             "Una formula sussurrata come una preghiera finale. Inefficace contro i vivi, ma quando avvolge i non morti spezza il vincolo che li trattiene al mondo, imponendo loro il silenzio e il riposo che avevano osato sfidare."
         ],
         "descrizione": [
-            "Una formula sussurrata come una preghiera finale. Inefficace contro i vivi, ma quando avvolge i non morti spezza il vincolo che li trattiene al mondo, imponendo loro il silenzio e il riposo che avevano osato sfidare.",
             "Se colpisce un Non Morto infligge 1d7 danni per LL (ignora la resistenza del bersaglio)."
         ],
         "image": "spell_holy_excorcism_02.png",
@@ -9808,7 +9807,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Ricrescita": {
@@ -9840,7 +9839,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RigeneraVita": {
@@ -9872,7 +9871,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RigenerazioneAnimale": {
@@ -9934,7 +9933,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RiparazioneCellulare": {
@@ -9965,7 +9964,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RipristinaVitaMaggiore": {
@@ -9996,7 +9995,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RipristinaVitaMinore": {
@@ -10027,7 +10026,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RipristinaVitaSuperiore": {
@@ -10058,7 +10057,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Risanamento": {
@@ -10089,7 +10088,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RisanamentoAccelerato": {
@@ -10120,7 +10119,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "RisucchiaVita": {
@@ -10215,7 +10214,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "CERCHIO, SERVITOREORIGIN, EXCLUDESERVITORE",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SacrificioEsplosivo": {
@@ -10249,7 +10248,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "CERCHIO,DANNOSO,SERVITOREORIGIN",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Salvezza": {
@@ -10312,7 +10311,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SangueInfernale": {
@@ -10751,7 +10750,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "CERCHIO",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ScissioneAstrale": {
@@ -10816,7 +10815,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SferaLuminosa": {
@@ -10847,7 +10846,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Sfidare": {
@@ -10914,7 +10913,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SoffioAcido": {
@@ -10976,7 +10975,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "CONO",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SoffioDragoRosso2": {
@@ -11007,7 +11006,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "FRONTALE",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SoffioDragoVerde": {
@@ -11038,7 +11037,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "FRONTALE",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SoffioGelidoMinore": {
@@ -11100,7 +11099,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "CERCHIO,UTILE",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "Spaventare": {
@@ -11324,7 +11323,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SporeVitali": {
@@ -11356,7 +11355,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "CERCHIO,ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SpruzzoVelenoso": {
@@ -11484,7 +11483,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "SuoloCorrotto": {
@@ -11547,7 +11546,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "ALLEATI",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "TempestaAcida": {
@@ -11579,7 +11578,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "TempestaDiFuoco": {
@@ -11611,7 +11610,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "TempestaDiGhiaccio": {
@@ -11864,7 +11863,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ToccoDiCaloreMinore": {
@@ -11895,7 +11894,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ToccoDiCombustione": {
@@ -11926,7 +11925,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ToccoDiCuraCritico": {
@@ -11957,7 +11956,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ToccoDiCuraGrave": {
@@ -11988,7 +11987,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ToccoDiCuraLeggero": {
@@ -12019,7 +12018,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ToccoDiGuarigione": {
@@ -12050,7 +12049,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "ToccoElementaleMinoreArcano": {
@@ -12238,7 +12237,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "TossinaCorrosiva": {
@@ -12271,7 +12270,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "TranceCombattivo": {
@@ -12465,7 +12464,7 @@
             "tipo": "Offensivo",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "VelenoNauseante": {
@@ -12527,7 +12526,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "VelocitaMassa": {
@@ -12558,7 +12557,7 @@
             "tipo": "Supporto",
             "tipo_aoe": "",
             "tipo_bersaglio": "",
-            "ts": "no"
+            "ts": "No"
         }
     },
     "VelocitaUltreterrena": {

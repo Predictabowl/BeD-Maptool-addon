@@ -656,7 +656,7 @@
         "potenziamento": 0,
         "specialInstallers": {
             "udneadBane": {
-                "installerMacro": "installerUndeadBane@Lib:EquipEffect",
+                "installerMacro": "items/installerUndeadBane@lib:it.aldinucci.piero.bed.maptool.ruleset",
                 "parametriGlobali": {
                     "MDI": 0.1
                 }

@@ -1,4 +1,4 @@
-<!-- usare getSpellHeal@Lib:Poteri per calcolare le cure e se si vuole attivare gli eventi -->
+<!-- usare powers/getSpellHeal@this per calcolare le cure e se si vuole attivare gli eventi -->
 [h: paramTipo = json.type(macro.args)]
 [h, if(paramTipo == "ARRAY"), code:{
 	[h: id = arg(0)]

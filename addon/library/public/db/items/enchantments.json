@@ -1,10 +1,10 @@
 {
     "armaElementale-0": {
-        "installerMacro": "installerArmaElementale@Lib:EquipEffect",
+        "installerMacro": "items/installerArmaElementale@lib:it.aldinucci.piero.bed.maptool.ruleset",
         "parametriGlobali": ""
     },
     "scaricaArtefattoLancio": {
-        "installerMacro": "installerPotereAggiuntivo@Lib:EquipEffect",
+        "installerMacro": "items/installerPotereAggiuntivo@lib:it.aldinucci.piero.bed.maptool.ruleset",
         "parametriGlobali": "Lib:ScaricaArtefattoLancio"
     }
 }
