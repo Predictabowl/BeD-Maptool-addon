@@ -17,6 +17,7 @@ Lib:OggettiInterattivi -> interactive
 
 
 # Next in line to be mapped
+Lib:PropMostri -> monsters
 
 # Not Mapped yet 
 Lib:Sounds

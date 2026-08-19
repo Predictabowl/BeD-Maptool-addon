@@ -13,7 +13,6 @@
 	}]
 }]
 
-
 [h: iRange = fetchSpellProp(spellName,"raggio")]
 
 [h, if(!isNumber(iRange)), code:{

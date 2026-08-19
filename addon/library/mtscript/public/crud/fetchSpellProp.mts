@@ -1,6 +1,7 @@
 [h: spellId = arg(0)]
 [h: key = lower(arg(1))]
 
+
 [h: spellData = fetchSpellData(spellId, key)]
 [h, if(json.isEmpty(spellData)): spellData = fetchConsumableData(spellId, key)]
 
