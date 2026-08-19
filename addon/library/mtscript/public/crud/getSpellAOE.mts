@@ -21,6 +21,9 @@
 	[iAOE = macro.return]
 }]
 
+[h: sType = fetchSpellProp(spellName,"property_type")]
+[h, if(sType != "SPELL"): return(0, iAOE)]
+
 [h, if(source != "" && bBaseValue != 1), code:{
 	[h: iMod = 0]
 	[h: jData = getSpellStartData(source,spellName)]

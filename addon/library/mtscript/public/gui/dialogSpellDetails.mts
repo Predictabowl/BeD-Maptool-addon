@@ -155,6 +155,7 @@
 
             <!-- Descrizione -->
 			[h: aFlavour = fetchSpellProp(spellName,"flavour")]
+            [h, if(aFlavour == "null"): aFlavour = ""]
 			<div class='[r, if(json.isEmpty(aFlavour)): "flavor-empty"; "flavor"]'>
 			[r, foreach(sDescr, aFlavour, ""), code:{
 				<p>[r: sDescr]</p>
@@ -173,7 +174,7 @@
 
     </dialog>
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=false" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

@@ -9,9 +9,11 @@
 	[bConsumabile = 1]
 	[macro("consumables/getSogliaPotereRate@this"): json.append(oToken,oOggetto)]
 	[iSogliaRate = macro.return]
+	[iRecupero = 0]
 };{
 	[h: bConsumabile = 0]
-	[h: bSoglia = 0]	
+	[h: bSoglia = 0]
+	[h: iRecupero = fetchSpellProp(spellName,"recupero")]
 }]
 
 [h: sDialog = "DescrizioneIncantesimo"]
@@ -34,7 +36,6 @@
 	[h: aText = json.append(aText, macro.return)]
 }]
 
-[h: iRecupero = fetchSpellProp(spellName,"recupero")]
 [h, if(!isNumber(iRecupero)): iRecupero = 0]
 [h: sArea = strformat("%d %s",getSpellAoE(oToken,spellName),getAoEShape(spellName,oToken))]
 
@@ -72,7 +73,8 @@
 [r: sImage]
 <div class="spellTitle">[r: sFluffName]</div>
 <div class="spellData">
-	<div>Scuola: <span>[r: getScuola(oToken,spellName)]</span></div>
+	[h: sPropType = fetchSpellProp(spellName,"property_type")]
+	<div>Scuola: <span>[r, if(sPropType == "SPELL"): getScuola(oToken,spellName); "-"]</span></div>
 	<div>Tipo: <span>[r: fetchSpellProp(spellName,"tipo")]</span></div>
 	<div>Elemento: <span>[r: fetchSpellProp(spellName,"elemento")]</span></div>
 	<div>Durata: <span>[r: getSpellDurata(oToken,spellName)]</span></div>

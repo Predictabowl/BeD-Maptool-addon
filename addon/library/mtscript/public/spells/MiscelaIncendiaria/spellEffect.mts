@@ -2,8 +2,8 @@
 [h: target = json.get(macro.args,"target")]
 [h: oUseParam = json.get(macro.args,"useParam")]
 
-[h: spellName = "PozioneFuocoLiquido"]
+[h: spellName = json.get(macro.args,"spellId")]
 
-[h: jDotArg = json.set("","source",source,"target",target,"libName",spellName,"danno","1d2","stato","Incendio","inizioRound",0,"useParam",oUseParam)]
+[h: jDotArg = json.set("","source",source,"target",target,"libName",spellName,"danno","1","stato","Incendio","inizioRound",0,"useParam",oUseParam)]
 
 [macro("consumables/itemDotTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): jDotArg]

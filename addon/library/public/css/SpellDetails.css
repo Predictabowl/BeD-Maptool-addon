@@ -225,7 +225,7 @@ body {
 .flavor {
     position: relative;
     font-family: var(--font-book);
-    font-size: 1.05rem;
+    font-size: 1rem;
     text-align: center;
     color: var(--text-color);
     margin: 6px 0 22px 0;

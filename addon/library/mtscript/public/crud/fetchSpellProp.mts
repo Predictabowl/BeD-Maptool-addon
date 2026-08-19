@@ -1,15 +1,12 @@
 [h: spellId = arg(0)]
 [h: key = lower(arg(1))]
 
+[h: aExternal = json.append("nome_decorativo", "descrizione", "flavour", "property_type")]
+[h, if(json.contains(aExternal, key)): path = strformat("%{spellId}.%{key}");  path = strformat("%{spellId}.properties.%{key}")]
 
-[h: spellData = fetchSpellData(spellId, key)]
-[h, if(json.isEmpty(spellData)): spellData = fetchConsumableData(spellId, key)]
+[h: jData = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/spells/spells.json")]
+[h: value = json.path.read(jData, path, "SUPPRESS_EXCEPTIONS")]
+[h, if(value != "null"): return(0, value)]
 
-[h: aExternal = json.append("nome_decorativo", "descrizione", "flavour")]
-[h, if(json.contains(aExternal, key)), code:{
-    [value = json.get(spellData, key)]
-    [return(0, value)]
-}]
-
-[h: props = json.get(spellData, "properties")]
-[h: macro.return = json.get(props, key)]
+[h: jData = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/spells/consumables.json")]
+[h: macro.return = json.path.read(jData, path, "SUPPRESS_EXCEPTIONS")]	

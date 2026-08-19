@@ -4,11 +4,6 @@
 [h, if(argCount()>3): bFlag= arg(3); bFlag = 1] <!-- Determina se usare i modificatori di stat -->
 
 [h: Pazione= fetchSpellProp(libName,"PA")]
-[h: sScuola = upper(getScuola(source,libName))]
-
-[h, if(sScuola == "RUNA"): bFlag = 0]
-[h: sTag = fetchSpellProp(libName,"tags")]
-[h, if(listContains(sTag,"OGGETTO")): bFlag = 0]
 
 [h, if(!isNumber(Pazione)), code:{
 	[h: basePA = listGet(Pazione,0)]
@@ -23,6 +18,9 @@
 
 [h, if(Pazione == 0 || Pazione == ""): return(0,0)]
 
+
+[h: sType = fetchSpellProp(libName,"property_type")]
+[h, if(sType != "SPELL"): bFlag = 0]
 [h, if(bFlag) ,code:{
 
 	[macro("powers/getSpellMod@this"): json.append(source,libName,"PA")]

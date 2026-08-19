@@ -11,10 +11,11 @@
 }]
 
 [h: iDurata = fetchSpellProp(libName,"durata")]
-[h: sScuola = upper(getScuola(source,libName))]
-[h, if(sScuola == "RUNA"): bFlag = 0; bFlag = 1]
 
-[h, if(iDurata != -1 && bFlag == 1), code:{
+[h: sType = fetchSpellProp(libName,"property_type")]
+[h, if(sType != "SPELL"): return(0, iDurata)]
+
+[h, if(iDurata != -1), code:{
 
 	[macro("powers/getSpellMod@this"): json.append(source,libName,"durata")]
 	[h: iMod = json.get(macro.return,"mod")]

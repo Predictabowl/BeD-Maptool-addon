@@ -210,7 +210,6 @@
 [h: defineFunction("livCarVal","utility/livCaratteristicaValue@this")]
 [h: defineFunction("livDVal","utility/livDistributedValue@this")]
 [h: defineFunction("livSVal","utility/livScalingValue@this")]
-[h: defineFunction("chooseAndPlayClip","chooseAndPlayClip@Lib:Sounds")]
 [h: defineFunction("modAttAggCorrenti","crud/modAttacchiAggiuntiviCorrenti@this")]
 [h: defineFunction("modCaricheRuna","consumables/modCaricheRuna@this")]
 [h: defineFunction("modCF","crud/modCF@this")]
