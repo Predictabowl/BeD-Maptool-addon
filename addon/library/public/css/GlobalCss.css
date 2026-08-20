@@ -23,7 +23,12 @@
     --link-hover-color: #c299fc;
     --link-active-color: #ff6b6b;
 
-
+    --bg-color: #1c1815;
+    --bg-card: #2a241f;
+    --bg-card-inverse: #b8af9f;
+    --border-color: #35322c;
+    --text-color: #dcd0c0;
+    --accent-color: #d49a40;
 }
 
 .light-mode {
@@ -44,6 +49,13 @@
     --link-color: blue;
     --link-hover-color: purple;
     --link-active-color: red;
+
+    --bg-color: #d8cebc;
+    --bg-card: #f7f3ed;
+    --bg-card-inverse: #3b3530;
+    --border-color: #d8cfba;
+    --text-color: #222222;
+    --accent-color: #b37b2d;
 }
 
 body {

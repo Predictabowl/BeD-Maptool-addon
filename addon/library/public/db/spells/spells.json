@@ -1,6 +1,5 @@
 {
   "Accelerazione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere permette di bruciare calorie con maggiore efficacia accelerando il metabolismo dello psionico, che vede aumentata la propria velocità fin quando il potere è attivo. Fin quando il potere è attivo il personaggio ottiene un effetto di Velocita."
     ],
@@ -28,10 +27,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AcquaDellaVita": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo evoca dell’acqua miracolosa in grado di curare le ferite del bersaglio. Il bersaglio recupera 1 punto vita per LL per ogni round di durata."
     ],
@@ -59,10 +58,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AculeiVelenosi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea una raffica di spine che colpiscono tutte le creature davanti al lanciatore. Chi si trova nell’area d’effetto deve superare un TS o essere avvelenata.",
       "L'attacco può essere Parato o Schivato con le normali regole per gli attacchi Materiali, una parata effettuata con successo riduce il danno del veleno come farebbe per un normale attacco.",
@@ -92,10 +91,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AculeoUrticante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia un aculeo che inocula veleno nella vittima, questa deve superare un TS o rimanere avvelenata. Il veleno infligge 1d4 danni per LP ed una penalità di +4 Mancare e -1 TS e CD fin quando permane."
     ],
@@ -123,10 +122,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AffondoGuizzante": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -154,10 +153,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AffondoPerforante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge il danno di un attacco e se il bersaglio fallisce il TS subisce Fragile."
     ],
@@ -185,10 +184,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Agguato": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco che infligge il danno normale dell’arma, inoltre cerca di colpire il bersaglio alla sprovvista, se il bersaglio fallisce il TS subisce danno aggiuntivo pari a  2d8 +1d8 ogni 3 LPG.",
       "Può essere utilizzato solamente con con stile “Arma e mano libera” e “2 Armi”."
@@ -217,10 +216,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AlbaDelRevenant": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo trasforma temporaneamente un bersaglio donandogli la resistenza fisica di un Revenant, questo gli permette di sopportare una quantità tanto maggiore di danni quanto esso è vicino alla morte.",
       "All’atto pratico il beneficiario guadagna 12 PVT per LL, tale valore viene modificato proporzionalmente alla percentuale di PV mancanti rispetto al suo massimo. Ad esempio se un personaggio ha 60 PV su un massimo di 100, allora l’effetto è solamente del 40%.",
@@ -250,10 +249,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AlzarsiRapido": {
-    "property_type": "SPELL",
     "descrizione": [
       "Permette al personaggio di alzarsi rapidamente da un Atterramento.",
       "Utilizzare questa tecnica è un’azione alternativa al normale alzarsi."
@@ -282,10 +281,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AmplificazioneCritica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Tutte le azioni ostili contro la vittima ottengono un bonus di +18 Crit e PCrit."
     ],
@@ -313,10 +312,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AnimareMummia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Anima una Mummia (60%) di Livello Indicativo pari al LL."
     ],
@@ -344,10 +343,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AnimareScheletro": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un servitore Scheletro (20%) di livello indicativo pari al LL che combatte per il suo creatore. ",
       "Al momento della sua creazione possiede sempre equipaggiamento a caso estremamente rovinato, mirato al combattimento in mischia."
@@ -376,10 +375,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AnimaSacrificale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Sacrifica un frammento d'anima per sprigionarne l'energia vitale ed incanalarla su di una creatura, in modo da curare le sue ferite.",
       "Il bersaglio recupera 8 PV per LL."
@@ -408,10 +407,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AnsiaIrrefrenabile": {
-    "property_type": "SPELL",
     "descrizione": [
       "Fin quando la rimaledizione permane la vittima subisce un effetto Panico."
     ],
@@ -439,10 +438,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ApparizioneSpiritica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera un'apparizione dello spirito in grado di spaventare il bersaglio.",
       "Se la vittima fallisce il TS subisce un effetto Paura per tutta la durata del potere."
@@ -471,10 +470,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaElementaleFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -502,10 +501,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaElementaleGelo": {
-    "property_type": "SPELL",
     "descrizione": [
       "L’incantatore è in grado di incantare le armi impugnate da una creatura entro il raggio d'azione con un effetto elementale. Tutti gli attacchi della creatura infliggono danno elementale aggiuntivo pari a 1 per LP.",
       "Dopo 8 colpi andati a segno l’incantesimo termina a prescindere dalla durata. I colpi schivati si considerato non andati a segno, mentre i colpi parati sono considerati a segno, anche se infliggono metà danno.",
@@ -535,10 +534,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaIncendiaria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario è in grado di incantare tutte le armi che impugna, le quali vengono avvolte da minacciose fiamme.",
       "Quando il beneficiario infligge un attacco con l’arma contro un obbiettivo c’è  un probabilità di applicare un effetto Incendio della durata di 2 round che infligge 1 danno per LP all’inizio di ogni round.",
@@ -569,10 +568,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaTelecinetica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio utilizza i propri poteri psicocinetici per manovrare la propria arma, il che gli permette di colpire con più potenza e perfino di farla volare per colpire bersagli distanti.",
       "L’attacco infligge il danno dell’arma  +1d4 per LP."
@@ -601,10 +600,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaturaDiMagma": {
-    "property_type": "SPELL",
     "descrizione": [
       "L'armatura di magma è in grado di migliorare sia le difese che le capacità offensive del lanciatore.",
       "Fin quando l'armatura è attiva il personaggio ottiene un bonus di +1 con tutti i TS e +10 Crit e PCrit."
@@ -633,10 +632,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaturaEpidermica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Grazie a questo potere lo psionico tramuta la propria pelle in un’armatura, il cambiamento è facilmente distinguibile in quanto delle scaglie ricoprono direttamente la sua pelle.",
       "Le scaglie non intralciano i movimenti ed offrono un bonus di +4 LD."
@@ -665,10 +664,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaturaMagica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo particolare incantesimo è in grado di sviluppare un’armatura invisibile attorno all’esperto di magia.  L’armatura aumenta il LD di +4."
     ],
@@ -696,10 +695,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaturaOssa": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea un esoscheletro d’ossa attorno al necromante, in grado di assorbire danni da qualsiasi tipo di fonte. Il necromante potrà essere colpito normalmente, ma i danni vengono assorbiti dall’armatura fino a quando questa non viene distrutta. L’armatura fornisce 5 per LL PVT.",
       "Fin quando l’armatura regge il necromante non può perdere la concentrazione in seguito a danni."
@@ -728,10 +727,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArmaturaSpiritica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Aumenta il LD di +3."
     ],
@@ -759,10 +758,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArroccoDimensionale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo scambia istantaneamente la posizione dello stregone con uno dei suoi Servitori.",
       "Questo incantesimo funziona anche se il Servitore non è in grado di muoversi."
@@ -791,10 +790,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArtigliDilanianti": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco in mischia che infligge il danno dell’arma ed un ulteriore danno bonus pari a +1d3 per LP.",
       "Se Il personaggio è sotto l'effetto di un incantesimo di tipo Mutaforma il danno bonus diventa +1d4 per LP."
@@ -823,10 +822,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArtigliSanguinari": {
-    "property_type": "SPELL",
     "descrizione": [
       "Applica un effetto Sanguinamento sulla vittima, che al termine di ogni round gli infligge 1d2 danni per LP."
     ],
@@ -854,10 +853,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ArtigliVelenosi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge Danno dell'arma, inoltre la vittima deve superare due TS, se fallisce viene avvelenata e subisce 1 danno per LP al termine di ogni round."
     ],
@@ -885,10 +884,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AspettoAnimaleRettile": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il lanciatore sceglie un animale e guadagna uni dei seguenti bonus a scelta:",
       "    • +5 MCG",
@@ -918,10 +917,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AssaltoEroico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa tecnica infligge un attacco normale sul bersaglio ed offre al lanciatore un bonus di +5 LA, tale bonus permane per tutta la durata anche per gli attacchi successivi."
     ],
@@ -949,10 +948,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AssaltoPsionico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Per mezzo di questo potere uno psionico può proiettare un attacco mentale che disorienta il bersaglio.  La vittima deve effettuare un TS, se lo sbaglia subisce un effetto Stordimento2 fino al termine del potere."
     ],
@@ -980,10 +979,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AssaltoTurbinante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge un attacco dell’arma con +1d17-1 danni bonus.",
       "Tale danno bonus inoltre viene applicato a tutti gli attacchi per tutta la durata."
@@ -1012,10 +1011,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AssideramentoMagico": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -1043,10 +1042,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AssorbimentoElementale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera un accumulo di energia elementale intorno ad una delle proprie creature, la quale la assorbe istantaneamente per recuperare punti vita.",
       "La quantità di punti vita curati è pari a 1d5 x LL."
@@ -1075,10 +1074,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AssorbireImpatto": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario ottiene un bonus di +3 PVT per LL."
     ],
@@ -1106,10 +1105,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AttaccoDiPanico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo particolare incantesimo provoca un effetto di Panico nella vittima designata."
     ],
@@ -1137,10 +1136,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AttaccoPoderoso": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge un attacco estremamente potente che ha un bonus di +3 LA ed un ulteriore +1 per LP."
     ],
@@ -1168,10 +1167,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AttaccoRotante": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -1199,10 +1198,10 @@
       "tipo_aoe": "Cerchio",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AttaccoVelenoso": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge l'attacco dell'arma e può iniettare veleno nella vittima se quest fallisce il TS.",
       "Chi viene avvelenato subisce 1d2 danni per LP al termine di ogni round."
@@ -1231,10 +1230,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AttaccoVenefico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco con la propria arma intrisa di veleno, che infligge danno dell’arma, inoltre se la vittima fallisce il TS viene avvelenata, subendo 1 danno per LP al termine di ogni round."
     ],
@@ -1262,10 +1261,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AttenuazioneCinetica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un campo magnetico che ostacola i movimenti del bersaglio. Se la vittima fallisce il TS subisce un effetto Lentezza."
     ],
@@ -1293,10 +1292,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AuraSacrilega": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera un’aura centrata sul bersaglio che si sposta con esso, tutte le creature ostili all’interno dell’aura subiscono una penalità di -3 alle Resistenza contro Malattie e Maledizioni.",
       "Se il bersaglio è ostile, questo ha diritto ad un TS per evitarne l’effetto."
@@ -1325,10 +1324,10 @@
       "tipo_aoe": "NEMICI",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "AuraVampirica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea un’aura di energia oscura che permette agli alleati di risucchiare la vita dai propri nemici. ",
       "Quando un beneficiario provoca danno esso recupera il 12% dei danni che ha inflitto. Inoltre se la vittima del danno ha un effetto di Sanguinamento il recupero vita incrementa a 18%."
@@ -1357,10 +1356,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Bandire": {
-    "property_type": "SPELL",
     "descrizione": [
       "Per mezzo di questo potere lo psionico può teletrasportare una creatura, contro la sua volontà, rinchiudendola in una dimensione conservante e facendola restare lì fino al termine del potere.",
       "Una dimensione conservante è un spazio infra-dimensionale privo di configurazione caratterizzato da un ambiente non ostile, che può essere caldo o freddo, buio o luminoso, ma non al punto da arrecare danno a chi vi si trova. Mentre si trova nella dimensione conservante la creatura è completamente isolata ma può continuare ad agire normalmente, ad esempio lanciando poteri  su se stessa o utilizzando oggetti che porta con se.",
@@ -1391,10 +1390,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Barricata": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio guadagna Copertura +18."
     ],
@@ -1422,10 +1421,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BarrieraAntimagia": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -1453,10 +1452,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BarrieraDiLame": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea un’immobile barriera di lame vorticanti che offrono Copertura 35 in entrambi i sensi, ed attaccano chiunque cerchi di attraversarla o transiti al suo interno.",
       "Tutti coloro che sono all’interno dell’area al termine di ogni round, od in qualsiasi momento si trovano a transitare all’interno di essa, vengono attaccati e subiscono 1d4  danni per LP. Gli attacchi della barriera sono considerati di tipo Materiale. ",
@@ -1486,10 +1485,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BarrieraPolare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo lancia un Marchio di Protezione sul bersaglio. Chi infrange il marchio deve superare un TS o subire un effetto Congelamentox3, se riesce nel TS comunque subisce un effetto Congelamento . Gli effetti durano 1 round.",
       "Tale effetto può verificarsi una volta a round per ogni bersaglio."
@@ -1518,10 +1517,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BarrieraVegetale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo fa crescere ed anima la vegetazione in modo da fornire protezione a se stesso e ad i propri alleati.",
       "Tutti gli alleati nell’area d’effetto al momento del lancio ottengono una Copertura 10."
@@ -1550,10 +1549,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BenedizioneAliDelVento": {
-    "property_type": "SPELL",
     "descrizione": [
       "Offre un bonus di +4 Copertura e +14 VA."
     ],
@@ -1581,10 +1580,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BenedizioneAnimaDiFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario guadagna un bonus di +5 MDI e +6 Crit e Pcrit per tutta la durata del potere."
     ],
@@ -1612,10 +1611,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BenedizioneAnimaDiTerra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario ottiene un bonus di -11 MDR per tutta la durata del potere."
     ],
@@ -1643,10 +1642,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BenedizioneForzaDellaMontagna": {
-    "property_type": "SPELL",
     "descrizione": [
       "Offre un bonus di +1 LA ed LL."
     ],
@@ -1674,10 +1673,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Blitz": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio guadagna Velocita."
     ],
@@ -1705,10 +1704,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BloccaCreatura": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo frena il tempo individuale di un singolo bersaglio, se questo fallisce il TS subirà un effetto di Lentezza x2 per tutta la durata dell'incantesimo."
     ],
@@ -1736,10 +1735,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BolideDiGhiaccio": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia un blocco di ghiaccio solido contro un bersaglio.",
       "Il bolide colpisce il bersaglio infliggendogli 1d7, oppure 1d9 se il bersaglio è Congelato, per LP."
@@ -1768,10 +1767,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "BuferaDiFolgori": {
-    "property_type": "SPELL",
     "descrizione": [
       "I fulmini colpiscono tutte le creature nell’area d’effetto infliggendo  1d9-1 danni per LP.",
       "Energia Distruttiva: Le vittime vengono fulminate, incrementano il danno a 1d11-1 per LP."
@@ -1800,10 +1799,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CalcioDestabilizzante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se il bersaglio fallisce il TS subisce Vacillante."
     ],
@@ -1831,10 +1830,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Carapace": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere consente allo psionico di mutare il proprio corpo, creando un esoscheletro di chitina. Il processo provoca un sensazione spiacevole: lo strato superficiale della cute diventa durissimo, come il corpo di un insetto con un enorme carapace, con l’effetto che per ferire il lanciatore è necessario prima distruggere il carapace.",
       "Fin quando il carapace esiste il personaggio guadagna +10 PVT per LL."
@@ -1863,10 +1862,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CaricaElettrostatica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Con questo potere lo psionico è in grado di generare un campo elettrico che accumula carica e la rilascia sul bersaglio.",
       "Per tutta la durata del potere il bersaglio subisce 1d5-1 danni per LP al termine di ogni round."
@@ -1895,10 +1894,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CaricaInarrestabile": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se il bersaglio fallisce il TS subisce Atterrato."
     ],
@@ -1926,10 +1925,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CaricaTravolgente": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo permette di scagliarsi ad alta velocità verso un bersaglio, in modo simile ad una normale carica.",
       "Una volta lanciato l'incantesimo il personaggio si lancia verso il bersaglio a grande velocità colpendo il bersaglio a patto che sia entro il raggio d'azione. Il costo del movimento è compreso nell'incantesimo, tuttavia l'incantesimo non funziona se il bersaglio si trova in una zona non raggiungibile correndo normalmente.",
@@ -1960,10 +1959,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CataclismaElementale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Lo stregone attinge all’essenza elementale del proprio servitore, condensandola in un massa di energia che, raggiunto il punto critico, genera un esplosione con il servitore come epicentro.",
       "Per attivare questo incantesimo lo stregone attinge direttamente alla mana del proprio servitore, il quale consuma 40 punti mana come componente Focus. Se il servitore non possiede tale mana, l’incantesimo non può essere attivato.",
@@ -1993,10 +1992,10 @@
       "tipo_aoe": "CERCHIO,DANNOSO,SERVITOREORIGIN",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Celerita": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -2024,10 +2023,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CerchioDiCura": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da tutte le creature nell’area d’effetto, ripristinando 4 punti vita per LL."
     ],
@@ -2055,10 +2054,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CodaViverna": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -2086,10 +2085,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpiPesanti": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -2117,10 +2116,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoAla": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -2148,10 +2147,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoDiFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un dardo infuocato che vola in linea retta e colpisce un bersaglio visibile se non incontra ostacoli lungo il suo cammino, provocando 1d8 danni da fuoco per LP."
     ],
@@ -2179,10 +2178,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoDiFuocoElementalismo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia una flusso di lava che colpisce il bersaglio provocando 1d8 danni da fuoco per LP."
     ],
@@ -2210,10 +2209,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoDiGrazia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Effettua un attacco in mischia che infligge il danno dell’arma, inoltre se è un Attacco Furtivo allora infligge danno aggiuntivo pari a +1d10 per LP."
     ],
@@ -2241,10 +2240,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoDiScudo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio effettua un attacco con il proprio scudo, infliggendo 1d4 danni per LP al bersaglio e guadagnando +1 Attacco Basilare."
     ],
@@ -2272,10 +2271,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoLetale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge un attacco estremamente potente che offre un bonus di +1 LA per LP."
     ],
@@ -2303,10 +2302,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoMortale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un violento attacco che ferisce gravemente la vittima, che infligge il danno dell’arma ed un effetto Sanguinamento, che provoca 1d2 danni per LP ogni round."
     ],
@@ -2334,10 +2333,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColpoStordente": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -2365,10 +2364,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ColtreDiCenere": {
-    "property_type": "SPELL",
     "descrizione": [
       "L’area attorno al lanciatore si riempie di ceneri incandescenti, chiunque si trovi nell’area d’effetto al momento del lancio deve effettuare due TS.",
       "Chi fallisce il primo TS subisce un effetto Incendio che infligge 1d4 danni da fuoco per LP al termine di ogni round.",
@@ -2398,10 +2397,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CommozioneCelebrale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge 1 danno per LP al termine di ogni round, inoltre se la vittima fallisce il TS diventa Stordito per tutta la durata.",
       "Energia Distruttiva: +1 round di durata."
@@ -2430,10 +2429,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CondottoEnergetico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo influisce sul proprio servitore attivo se entro il raggio d’azione, rendendo le cure da lui generate più potenti. Per tutta la durata il servitore ottiene un bonus di +20 MCG."
     ],
@@ -2461,10 +2460,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Conflagrazione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge 1d7 danni per LP sul bersaglio, inoltre se il bersaglio è sotto un effetto di Incendio allora subisce danno aggiuntivo pari a +1 per LP.",
       "Energia Distruttiva: Il danno base aumenta a 1d10 per LP."
@@ -2493,10 +2492,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ConoDiFreddo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene a creare un’area a forma di cono che risucchia il calore e causa 1d4 danni per LP da gelo a tutti i presenti all’interno dell’area. È necessario effettuare un TS o subire un effetto Congelamento."
     ],
@@ -2524,10 +2523,10 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ConsistenzaGranitica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Aumenta temporaneamente il TS Tempra del beneficiario di +4."
     ],
@@ -2555,10 +2554,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ConvocazioneAcqua": {
-    "property_type": "SPELL",
     "descrizione": [
       "Convoca un piccolo elementale dell'acqua di Livello indicativo pari al LL dell'incantesimo.",
       "Normalmente assume l'aspetto di un folletto, ma in realtà è solamente una massa d'acqua in grado prendere svariate forme.",
@@ -2589,10 +2588,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ConvocazioneFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Convoca un Magmin (30 %) di livello indicativo pari al LL."
     ],
@@ -2620,10 +2619,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ConvocazioneSilfide": {
-    "property_type": "SPELL",
     "descrizione": [
       "Convoca un piccolo spirito elementale dell'aria (30%) di Livello indicativo pari al LL dell'incantesimo.",
       "Normalmente assume le sembianze di un piccole elfo alato ed è in grado di volare. Una silfide è discretamente intelligente ed è in grado di parlare."
@@ -2652,10 +2651,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ConvocazioneTerra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Convoca un Sandling di Livello indicativo pari al LL dell'incantesimo.",
       "Non sono normalmente aggressivi e possono rimanere inerti per lungo tempo, a meno che non vengano provocati o non debbano difendere il loro territorio.",
@@ -2685,10 +2684,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CreareBallista": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un ballista formata da ossa su di un piedistallo girevole che infligge un singolo attacco entro il raggio d’azione per poi svanire altrettanto velocemente.",
       "Il dardo della ballista colpisce infliggendo 8d10, ha un LA  pari al LL con moltiplicatore pari a 5."
@@ -2717,10 +2716,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CreareFiamme": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo genera delle fiamme nel punto d'impatto prescelto. Le fiamme generate dall'incantesimo bruciano normalmente, obbedendo alle normali leggi fisiche del bersaglio che ha preso fuoco, senza limiti di tempo.",
       "Se questo incantesimo viene utilizzato su di una creatura questa subisce un effetto Incendio che infligge 1 danno per LP al termine di ogni round."
@@ -2749,10 +2748,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CreareFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Al momento del lancio il druido decide un bersaglio, che può essere una creatura, e tale bersaglio verrà avvolto dalle fiamme subendo un effetto Incendio che infligge 1 danno per LP ogni round."
     ],
@@ -2780,10 +2779,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Criocinesi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere è in grado di arrestare bruscamente il movimento atomico disperdendo così il calore ad una velocità impressionante, l’effetto del potere è puntiforme, ma l’abbassamento di temperatura è uniforme, permettendo, ad esempio, di congelare l’acqua in un raggio pari a 10cm. Per LP. Gli oggetti possono diventare gelidi, incrinarsi, sgretolarsi, spaccarsi o esplodere per il repentino abbassamento della temperatura..",
       "Utilizzato contro un nemico questo potere infligge 1d4 danni da gelo per LP, le molecole della vittima vengono rallentate a tal punto da congelare il bersaglio. È necessario effettuare un TS o subire un effetto Congelamento."
@@ -2812,10 +2811,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CuoreDiPietra": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima deve effettuare un TS, se fallisce subisce Pietrificazione per tutta la durata."
     ],
@@ -2843,10 +2842,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CuraFeriteCritiche": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 7 punti vita per LL."
     ],
@@ -2874,10 +2873,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CuraFeriteGravi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 5 punti vita per LL."
     ],
@@ -2905,10 +2904,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CuraFeriteLeggere": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 2 punti vita per LL."
     ],
@@ -2936,10 +2935,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "CuraMalattia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo può rimuovere un effetto Malattia con +7 PR."
     ],
@@ -2967,10 +2966,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardiIncantati": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene a creare una moltitudine di dardi magici luminosi di colore verde-azzurro che vanno a colpire un singolo bersaglio a scelta dell’incantatore. ",
       "Quando un dardo colpisce un bersaglio provoca 1d4+1 danni da magia pura ed è possibile creare tanti dardi quanto è il proprio LP. La resistenza magica può prevenire l’effetto di un dardo per ogni punto resistenza. ",
@@ -3000,10 +2999,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoFulmineMostro": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco magico che infligge 1d4 danni per LP."
     ],
@@ -3031,10 +3030,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoFulmineMostro2": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3062,10 +3061,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoFulmineMostro3": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3093,10 +3092,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoFulmineMostro4": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3124,10 +3123,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoFuocoMostro": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco magico che infligge 1d4 danni per LP."
     ],
@@ -3155,10 +3154,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoGelido": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un dardo gelido che vola in linea retta e colpisce un bersaglio visibile se non incontra ostacoli lungo il suo cammino, provocando 1d4 danni da gelo per LP. È necessario effettuare un TS Riflessi o subire un effetto Congelamento."
     ],
@@ -3186,10 +3185,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoGelidoMostro": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco magico che infligge 1d4 danni per LP."
     ],
@@ -3217,10 +3216,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoGelidoMostro2": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3248,10 +3247,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoGelidoMostro3": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3279,10 +3278,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoGelidoMostro4": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3310,10 +3309,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoNegativoMostro": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3341,10 +3340,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoNegativoMostro2": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3372,10 +3371,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoNegativoMostro3": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3403,10 +3402,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoNegativoMostro4": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3434,10 +3433,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoTerraMostro": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco magico che infligge 1d4 danni per LP."
     ],
@@ -3465,10 +3464,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DardoVelenoso": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia un dardo di veleno puro, se il bersaglio fallisce il TS subisce 1d4 danni per LP ed un effetto Nausea."
     ],
@@ -3496,10 +3495,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Decomposizione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un miasma verdastro si espande nell’aria, corrodendo carne, metallo e speranza. Le vittime intrappolate nella nube sentono la propria struttura disfarsi lentamente, come se un esercito di vermi invisibili scavasse tra le loro fibre. Il processo è inarrestabile e persistente, e per chi già porta il veleno nel sangue la putrefazione divora con furia ancora maggiore.",
       "Ogni vittima subisce 1 danno per LP ogni round di durata.",
@@ -3529,10 +3528,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Deflettere": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio si focalizza nel bloccare gli attacchi fisici ed ottiene un bonus di +23 Parare."
     ],
@@ -3560,10 +3559,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DetonazioneOscura": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo colpisce l’obbiettivo infliggendogli 1d4 danni per LP.",
       "Se il bersaglio ha su di sé una Maledizione questa viene fatta detonare, infliggendo ulteriori 1d4 danni per LP (per un totale di 2d4 per LP) e la maledizione viene rimossa.",
@@ -3593,10 +3592,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DetonazioneViolenta": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene a creare un’esplosione d’aria compressa attorno al proprio servitore evocato, che genera una violenta onda d’urto.",
       "Tutte le creature presenti nell'area d'effetto devono superare un TS o subite Atterrato."
@@ -3625,10 +3624,10 @@
       "tipo_aoe": "CERCHIO,SERVITOREORIGIN,DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Difendere": {
-    "property_type": "SPELL",
     "descrizione": [
       "Permette di applicare un Marchio di Protezione su un personaggio adiacente riducendone i danni subiti.",
       "Quando il marchio viene infranto il beneficiario guadagna un bonus di MDR -45 fino al termine del round, ma solamente fin quando è adiacente al personaggio che lo protegge."
@@ -3657,10 +3656,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DifesaAFortezza": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio ottiene un bonus di -16 MDR."
     ],
@@ -3688,10 +3687,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DisgregazionePsichica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Tutti i nemici colpiti dall'impatto iniziale subiscono danno ogni round pari a 1 x LP fino al termine dell'incantesimo."
     ],
@@ -3719,10 +3718,10 @@
       "tipo_aoe": "CERCHIO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DissolviMagia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Quando lancia quest’incantesimo, l’esperto di magia ottiene un Rimuovi effetto con penalità di -5 sul tiro su un potere bersaglio. È efficace contro poteri di tipo Controllo, Mutaforma, Offensivo, Supporto e può anche eliminare condizioni da essi inflitti. È inefficace contro Servitori, Maledizioni, Malattie, Marchi e Veleni.",
       "",
@@ -3756,10 +3755,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DissolviMagiaSuperiore": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3787,10 +3786,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DistruggereIlMale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge 1d6 danni per LP contro il bersaglio, ed ottiene un bonus al danno di +3 per LP se è un Aberrazione, Demone o Non-Morto."
     ],
@@ -3818,10 +3817,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "DitoDellaMorte": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il tocco di un dito su di un avversario è sufficiente ad infliggergli 1d6 danni per LP. ",
       "Se la vittima è Malata o Maledetta il danno incrementa a 1d8 per LP.",
@@ -3851,10 +3850,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EclisseDiTenebra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera una zona di oscurità nell’area d’effetto, la zone interessata diventa buia per una frazione e si sente un acuto rumore stridulo. Tutti coloro che si trovano nell’area subiscono 1d4 danni da energia negativa per LP, inoltre le vittime al termine di ogni round, compreso quello di lancio, subiscono 1 danno per LP."
     ],
@@ -3882,10 +3881,10 @@
       "tipo_aoe": "CERCHIO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EgidaDivina": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -3913,10 +3912,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Elettrocuzione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera una scarica elettrica che si aggancia alla vittima e continuaa fulminarla, infliggendogli 1d3 - 1 danni per LP ogni round.",
       "Energia Distruttiva: +2 durata."
@@ -3945,10 +3944,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EmanazioneTerra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge un Marchio di Sfida a tutti i nemici presenti nell'area. ",
       "Chi infrange il marchio deve superare un TS o subire un effetto Spossatezza3 fino al termine del round."
@@ -3977,10 +3976,10 @@
       "tipo_aoe": "NEMICI",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EmissioneLuminosa": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -4008,10 +4007,10 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EmorragiaInterna": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo provoca il Sanguinamento della vittima infliggendo 1 danno per LP ogni round di durata.",
       "Non è cumulabile due volte su un solito obbiettivo, se viene lanciato in tale modo viene solamente reimpostata la sua durata."
@@ -4040,10 +4039,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EruzioneVitale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo fa fuoriuscire la linfa vitale della vittima, danneggiandola e allo stesso tempo curando chi gli sta intorno.",
       "La vittima di questo incantesimo subisce un danno continuato ogni round pari a 1d2 danno per LP, inoltre tutte le creature intorno alla vittima nell'area d'effetto ottengono un effetto rigenerazione che gli fa recuperare 1 PV per LP ogni round."
@@ -4072,10 +4071,10 @@
       "tipo_aoe": "UTILE",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EruzioneVulcanica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo provoca l’eruzione dal terreno di un getto di roccia fusa che può raggiungere i 10 m di altezza.",
       "La vittima subisce 1d10 danni da fuoco per LP."
@@ -4104,10 +4103,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Esiliare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo può imprigionare una creatura in un semipiano sigillato, rinchiudendola al suo interno fino al termine della durata se questa fallisce il TS.",
       "Mentre si trova nel semipiano la creatura è completamente isolata ma può continuare ad agire normalmente, ad esempio lanciando poteri  su se stessa o utilizzando oggetti che porta con se.",
@@ -4138,10 +4137,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EsplosioneDiFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "“Una soluzione Esplosiva per il volo”",
       "È sufficiente la concentrazione ed il semplice gesto di aprire il palmo della mano stretta a pugno verso il bersaglio per potere scatenare un’Esplosione di Fuoco.",
@@ -4172,10 +4171,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EsplosioneDiPietre": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera un’esplosione che scaglia violentemente delle piccole in grado di provocare danno e disabilitare i bersagli.",
       "Chi viene colpito subisce 1d4 danni da terra per LP e se sbaglia il TS diventa Stordito in seguito alle pietre che lo colpiscono ripetutamente."
@@ -4204,10 +4203,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EsplosioneVirale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo colpisce l’obbiettivo infliggendogli 1d4 danni per LP.",
       "Se il bersaglio ha su di sé una Malattia questa viene fatta detonare, infliggendo ulteriori 1d4 danni per LP (per un totale di 2d4 per LP) e la malattia viene rimossa.",
@@ -4237,10 +4236,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EstrazioneRapida": {
-    "property_type": "SPELL",
     "descrizione": [
       "Quando utilizzata il personaggio esegue l'azione di estrarre un'arma dal fodero.",
       "Da notare che per le regole generali del lancio dei poteri l’uso di questo potere per scambiare le armi non genera attacchi di opportunità."
@@ -4269,10 +4268,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EvocazioneDelFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Evoca un una creatura elementale di Livello Indicativo pari al LL dell'incantesimo. Il tipo di creatura evocata dipende se il lanciatore è allineato con Bestie o Geni:",
       "     • Genio Elementale: Efreet",
@@ -4302,10 +4301,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EvocazioneDellAcqua": {
-    "property_type": "SPELL",
     "descrizione": [
       "Evoca un una creatura elementale di Livello Indicativo pari al LL dell'incantesimo. Il tipo di creatura evocata dipende se il lanciatore è allineato con Bestie o Geni:",
       "     • Genio Elementale: Marid",
@@ -4335,10 +4334,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EvocazioneDellaTerra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Evoca un una creatura elementale di Livello Indicativo pari al LL dell'incantesimo. Il tipo di creatura evocata dipende se il lanciatore è allineato con Bestie o Geni:",
       "    • Genio Elementale: Shaitan",
@@ -4368,10 +4367,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "EvocazioneDifensore": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -4399,10 +4398,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FatoFunesto": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima subisce una penalità di -20 MCR."
     ],
@@ -4430,10 +4429,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FebbreDelDiavolo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa malattia colpisce il sistema immunitario della vittima, il corpo reagirà alzando la temperatura corporea a dismisura nel tentativo di debellare il virus. Fin quando la malattia persiste la vittima subisce -20 MCR."
     ],
@@ -4461,10 +4460,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FebbreDelirante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa malattia genera una febbre altissima sul bersaglio rendendolo delirante.",
       "Fin quando la malattia permane la vittima si considera Stordita."
@@ -4493,10 +4492,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FebbreGhoul": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge Nausea."
     ],
@@ -4524,10 +4523,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FendenteSanguinario": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge danno di un attacco, inoltre infligge un effetto Sanguinamento pari a (2 +1/3 LPG).",
       "Al termine di ogni round il personaggio ha diritto ad un TS, se fallisce subisce il danno, altrimenti l’effetto di sanguinamento termina.",
@@ -4557,10 +4556,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FerociaSanguinaria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge danno di un normale attacco, inoltre se la vittima è sotto Sanguinamento infligge danno aggiuntivo pari a 1d6 per LP."
     ],
@@ -4588,10 +4587,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Fetore": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -4619,10 +4618,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FiammaDellaMalebolgia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Nell’area d’effetto dell’incantesimo viene richiamata una zona immobile di fiamme infernali. Tutte le creature che transitano nell’area subiscono un effetto Incendio per 1 round che infligge  1d3 danni per LP al termine del round, per un massimo di una volta per round."
     ],
@@ -4653,10 +4652,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FlussoSanguigno": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo cura la vittima di 1d6 PV per LL. ",
       "Se entro il raggio d’azione dell’incantesimo è presente un avversario in Sanguinamento l’effetto viene incrementato a 1d6+3 per LL."
@@ -4685,10 +4684,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FlussoVitale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Permette di curare le ferite di un bersaglio il quale recupera 1 punto vita ogni LL per round."
     ],
@@ -4716,10 +4715,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FocalizzatoSulBersaglio": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -4747,10 +4746,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FolgoreAbissale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera una scarica magica di colore viola scuro che colpisce l'obbiettivo per 1d9-1 danni per LP da elettricità.",
       "Condizionale: Se la vittima è afflitta da Maledizione il danno incrementa a 1d11-1 per LP",
@@ -4780,10 +4779,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FontanaDiSangue": {
-    "property_type": "SPELL",
     "descrizione": [
       "Tutte le creature nell’area d’effetto devono superare un TS o subire un effetto di Sanguinamento che infligge 1d2 danni per LP ogniround.",
       "Questo incantesimo non ha effetto sul lanciatore."
@@ -4812,10 +4811,10 @@
       "tipo_aoe": "EXCLUDESELF",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FonteDellaVita": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -4843,10 +4842,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FormaCorporea": {
-    "property_type": "SPELL",
     "descrizione": [
       "Grazie a questo potere lo spirito assume forma corporea per interagire con il piano materiale.",
       "Uno spirito materializzato può continuare ad utilizzare tutti i suoi poteri, tuttavia diventa suscettibile agli attacchi e questo può metterlo a rischio, specialmente considerando il fatto che la sua forma corporea non è in grado di attaccare.",
@@ -4881,10 +4880,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FormaLavica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il lanciatore si trasforma in un elementale di magma.",
       "Mentre è in tale forma guadagna:",
@@ -4919,10 +4918,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FormaSpirituale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Lo spirito e lo sciamano effettuano la fusione incontrandosi a metà fra il mondo materiale e quello degli spiriti, in questa nuova forma lo sciamano diventa parzialmente immateriale.",
       "In questa forma lo sciamano è traslucido ma può comunque essere attaccato normalmente. Le creature sul piano materiale sono in grado di vederlo, ma ai loro occhi apparirà simile ad un fantasma.",
@@ -4955,10 +4954,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FormazioneDifensiva": {
-    "property_type": "SPELL",
     "descrizione": [
       "Tutti gli alleati entro l’area d’effetto ottengono un bonus di +6 Copertura."
     ],
@@ -4986,10 +4985,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ForzaEmpia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infonde potenza ad una creatura Servitore del personaggio, la quale ottiene un bonus al LA pari a +1 per LMM per per tutta la durata dell'incantesimo."
     ],
@@ -5017,10 +5016,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FoschiaCadaverica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea una foschia cinerea nell’area d’effetto che avvolge le creature e le rende più difficili da colpire.",
       "Tutti alleati ottengono un bonus di +20 Elusione fin quando rimangono all’interno della foschia."
@@ -5049,10 +5048,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FrecciaCeleste": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene a creare una freccia di energia sopra la mano del lanciatore, il quale può scagliarla contro un bersaglio nel raggio d’azione che sia a lui visibile. Il lancio è compreso nella componente somatica dell’incantesimo.  La freccia dardo vola in linea retta verso l’obbiettivo, ma può essere fermata da eventuali ostacoli solidi durante il tragitto, danneggiando l’ostacolo al posto del bersaglio originale. Il bersaglio colpito subisce 1d4+2 danni per LP."
     ],
@@ -5080,10 +5079,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FreddoProfondo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potente incantesimo è in grado di raffreddare un bersaglio così repentinamente che quest’ultimo dovrà effettuare un TS, se fallisce subisce Congelamento3."
     ],
@@ -5111,10 +5110,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FrenesiaAnimale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario ottiene un bonus di +10 VA, +10 MCR e +1 PA, per tutta la durata."
     ],
@@ -5142,10 +5141,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FulmineACatena": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scatena un potente fulmine da una mano dell’esperto di magia che colpisce un bersaglio a scelta per poi rimbalzare sul bersaglio più vicino entro l’area d’effetto. Il procedimento poi si ripete, senza però mai colpire lo stesso bersaglio più di una volta, e fino ad un massimo di 10 creature diverse.",
       "Chi viene colpito subisce 1d14-1 danni per LP da fulmine."
@@ -5174,10 +5173,10 @@
       "tipo_aoe": "CATENA, 10",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FulmineDirompente": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia un violento fulmine che possiede una grande capacità distruttiva, colpendo il bersaglio prescelto per un danno pari a 1d14-1 per LP."
     ],
@@ -5205,10 +5204,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FulmineGlobulare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia un fulmine globulare contro l'obbiettivo infliggendo 1d6-1 danni per LP da elettricità. ",
       "Se colpisce l'obbiettivo alle spalle infligge invece 1d8-1 danni per LP. Tale effetto non si verifica se l'obbiettivo è immune ai colpi alle spalle.",
@@ -5238,10 +5237,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FulmineMagico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Dalla mano del lanciatore si viene a creare un fulmine che colpisce in linea retta verso il bersaglio designato dal lanciatore, continuando oltre di esso e colpendo qualsiasi cosa incontri durante il tragitto fino ad esaurire l’area d’effetto o fin quando non colpisce un ostacolo sufficientemente grande da bloccarlo.",
       "Chi viene colpito subisce 1d11-1 danni da elettricità per LP.",
@@ -5271,10 +5270,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FuocoFatuo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se la vittima fallisce il TS questo incantesimo la avvolge con innocue fiamme azzurre o viola. Anche se tali fiamme non sono in grado di provocare alcun danno fisico rendono il bersaglio molto facile da individuare.",
       "Una vittima avvolta dalle fiamme subisce una penalità di -5 Furtività e -15 Elusione.",
@@ -5304,10 +5303,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FuriaElementale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Per tutta la durata dell’incantesimo, sia il lanciatore che il servitore ottengono un bonus di +12 MDI, Crit e PCrit."
     ],
@@ -5338,10 +5337,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "FusioneDaCombattimento": {
-    "property_type": "SPELL",
     "descrizione": [
       "Lo spirito infonde la propria essenza nello sciamano rendendolo più potente.",
       "Fin quando attivo offre un bonus di +1 LA per LMM ma subisce una penalità di +10 Mancare."
@@ -5370,10 +5369,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "GettoAcqueo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Dalle mani unite a ventaglio con i palmi diretti verso il nemico scaturisce un getto d’acqua che infligge 1d8 danni per LP al bersaglio prescelto."
     ],
@@ -5401,10 +5400,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Geyser": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea un potente getto d’acqua che scaturisce dal terreno e si alza verticalmente a grande pressione sotto al bersaglio, infliggendogli danno fisico ed elementale.",
       "La creatura bersaglio subisce 1d4 danni per LP Acqua, ed 1d4 danni per LP Fisico."
@@ -5433,10 +5432,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "GlifoDelDisorientamento": {
-    "property_type": "SPELL",
     "descrizione": [
       "Le creature che transitano all'interno dell'area coperta dal glifo devono superare il TS o subire Confusione della durata di 1 round. Questo effetto può verificarsi solamente una volta per round, a prescindere dal risultato del tiro salvezza."
     ],
@@ -5464,10 +5463,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "GloboCongelante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il mago deve tenere nel proprio pugno la sfera di cristallo e concentrare le proprie energie, la sfera di cristallo inizierà a brillare di un colore azzurro e bianco dal suo interno a quel punto il mago è in grado di creare una globo gelido all’interno del raggio d’azione dell’incantesimo. Una volta creato, tale globo produrrà un’area di gelo intorno ad esso, e tutte le creature presenti nell’area d’effetto devono effettuare un TS.",
       "Chi riesce nel TS subisce solamente 1d4 danni per LP, chi invece fallisce subisce 1d10 danni per LP ed un effetto Congelamento."
@@ -5496,10 +5495,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Guarigione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 10 punti vita per LL."
     ],
@@ -5527,10 +5526,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "GuarigioneAccelerata": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -5558,10 +5557,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "GuscioProtettivoMinore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Grazie a questo potere uno spirito è in grado di manifestare attorno al corpo del bersaglio un guscio protettivo in grado di prevenire i danni subiti. Ogni danno verrà assorbito dal guscio fino a quando questo non si sgretola completamente. ",
       "Il guscio fornisce 3 PVT per LL prima di sgretolarsi, e fino a quando non è distrutto lo sciamano non può essere deconcentrato da effetti che provocano danno, dal momento che questi vengono tutti assorbiti prima lo possano raggiungere."
@@ -5590,10 +5589,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "IcoreDiabolica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il sangue dello stregone viene infuso dell’energia degli inferi, rinvigorendolo e facendogli recuperare 1d6+2 PV per LL."
     ],
@@ -5621,10 +5620,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Idrolama": {
-    "property_type": "SPELL",
     "descrizione": [
       "Grazie a questo incantesimo il lanciatore crea dal palmo aperto verso l’altro della propria mano una vorticante fontana d’acqua che a velocità impressionante di trasforma in un getto d’acqua ad alta pressione che vola dritto verso il bersaglio provocando seri danni. Chiunque viene colpito da quest’incantesimo subisce 1d10 danni per LP."
     ],
@@ -5652,10 +5651,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Imboscata": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio utilizza la sua astuzia e destrezza, cercando di uscire dal campo visivo dell’avversario ed utilizzando ogni trucco a sua disposizione per distrarlo per poi prenderlo alla sprovvista.",
       "Se il bersaglio fallisce il TS allora cade vittima dell’imboscata, il primo attacco del personaggio, effettuato prima che l’effetto svanisca, diventa un Attacco Furtivo."
@@ -5684,10 +5683,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Immolare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Provoca 1d4 danni da fuoco per LP al momento del lancio ed applica un effetto Incendio che infligge 1 danno per LP al termine di ogni round per tutta la durata dell’incantesimo.",
       "Energia Distruttiva: +2 r durata."
@@ -5716,10 +5715,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ImpattoIntorpidente": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se il bersaglio fallisce il TS subisce Torpore."
     ],
@@ -5747,10 +5746,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ImpetoDellaMarea": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario di questo incantesimo ottiene un bonus di +3 a tutti i TS per tutta la durata."
     ],
@@ -5778,10 +5777,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "IncantaArma": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo Incantesimo incanta l’arma primaria del bersaglio,  questo gli permette di infliggliggere, oltre al danno normale, +1d6 danni per ogni colpo andato a segno con tale arma."
     ],
@@ -5809,10 +5808,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "IncendioIndomabile": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il bersaglio selezionato dal lanciatore prende fuoco, generando un’esplosione di fiamme che poi si propagano ad una creatura vicina entro il raggio dell’area d’effetto della catena. Il procedimento poi si ripete, senza però mai colpire la stessa creatura più di una volta, e fino a colpire un massimo di 10 creature diverse.",
       "Chi viene colpito subisce un effetto Incendio che infligge 1 danno per LP ogni round.",
@@ -5842,10 +5841,10 @@
       "tipo_aoe": "CATENA, 10",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Incenerire": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo colpisce con un calore molto intenso in grado di incenerire l’obbiettivo, che subisce 1d12 danni da fuoco per LP.",
       "Una creatura uccisa da questo incantesimo viene ridotta ad un cumulo di cenere e non può essere soggetta a nessun incantesimo che funzioni con i cadaveri. Prima di poter resuscitare un bersaglio incenerito è necessario un incantesimo Rigenerare lanciato sulle ceneri. "
@@ -5874,10 +5873,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Incitare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Tutti gli alleati nell'area d'effetto ottengono un bonus di +1 a tutti i TS."
     ],
@@ -5905,10 +5904,10 @@
       "tipo_aoe": "UTILE",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "IndebolireLaMateria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere consente di indebolire la materia e renderla più fragile. In casi estremi, a discrezione del DM, può causare la rottura di un oggetto.",
       "Se utilizzato contro una creatura questa ha diritto ad un TS, se fallisce subisce un effetto di Fragile2 per tutta la durata del potere."
@@ -5937,10 +5936,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Inferno": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo avvolge un punto selezionato fra le fiamme infernali, queste poi si propagano in ogni direzione incendiando tutte le creature presenti nell’area d’effetto.",
       "Le vittime subiscono 1d3 danni per LP ogni round.",
@@ -5970,10 +5969,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InfonderePotenza": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il bersaglio guadagna un bonus di +4 LA."
     ],
@@ -6001,10 +6000,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InfusioneCritica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il bersaglio ottiene un bonus a scelta del lanciatore fra:",
       "    • +10 Crit ",
@@ -6035,10 +6034,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InfusioneRigenerativaMaggiore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario recupera 1 PV per LL ogni round."
     ],
@@ -6066,10 +6065,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InfusioneRigenerativaMinore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario recupera 1 PV per LL ogni round."
     ],
@@ -6097,10 +6096,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InfusioneRigenerativaSuperiore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il beneficiario recupera 2 PV per LL ogni round."
     ],
@@ -6128,10 +6127,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Inghiottire": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -6159,10 +6158,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Inondazione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene a creare un’onda d’acqua che travolge l’area d’effetto e tutte le creature presenti al suo interno. Chiunque venga colpito dall’onda subisce 1d6 danni da acqua per LP.",
       "È necessario effettuare un TS o subire un effetto di Atterramento."
@@ -6191,10 +6190,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InsinuazioneIdentita": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere permette di insinuare un’altra identità nella mente della vittima causando possibili conflitti mentali interiori e disorientandola. ",
       "Se la vittima fallisce un il TS allora subirà Confusione per tutta la durata dell’effetto."
@@ -6223,10 +6222,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Invisibilita": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo permette all’esperto di rendersi completamente Invisibile (Mimetizzatox3) a qualsiasi tipo di vista (infravisione, scurovisione ecc.). Questo incantesimo non è altro che un illusione che nasconde l’esperto di magia alla vista, senza però influenzare gli altri sensi come l’udito e l’olfatto.",
       "Se una creatura ha ragione di credere che ci sia una presenza invisibile in zona, se ad esempio ne percepisce il suono con Perspicacia oppure se la vede diventare invisibile sotto i suoi occhi, può comunque tentare di attaccarla.",
@@ -6256,10 +6255,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InvisibilitaParziale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Mentre il potere è attivo il lanciatore guadagna un effetto di Mimetizzato2."
     ],
@@ -6287,10 +6286,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "InvocareIlFulmine": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo può essere lanciato solamente all’aperto per chiamare un fulmine dal cielo e colpire un obbiettivo qualsiasi in vista nel raggio d’azione.",
       "Chi viene colpito dal fulmine subisce 1d12-1 danni da elettricità per LP."
@@ -6319,10 +6318,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LamaPsionica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio infligge un attacco con una manifestazione tangibile della propria energia psichica, che assume la forma di una spada.",
       "Chi viene colpito subisce 1d8 danni per LP."
@@ -6351,10 +6350,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LampoScintillante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un’esplosione di luce di fronte al lanciatore, le creature colpite subiscono 1d4 danni da energia positiva per LP e devono superare un TS o subire un effetto Cecità fino al termine dell’incantesimo."
     ],
@@ -6382,10 +6381,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LanciaAstrale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una lancia di energia astrale parte dal lanciatore e trafigge tutti i bersagli davanti a lui, infliggendo 1d6 danni per LP, e costringedoli ad effettuare un TS, chi fallisce subisce  Debilitazione."
     ],
@@ -6413,10 +6412,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LanciaCadaverica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un osso appuntito avvolto da energia vitale che si scaglia contro la vittima prescelta.",
       "La lancia infligge danno fisico pari a 1d9 per LP."
@@ -6445,10 +6444,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LanciaDemoniaca": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea un lancia purpurea di energia demoniaca che vola rapidamente verso l'obbiettivo infliggendo 1d7 danni per LP.",
       "Condizionale: Se la lancia colpisce un obbiettivo afflitto da Malattia, allora quest’ultimo deve superare un TS o subire una penalità di -18 MCR per tutta la durata.",
@@ -6478,10 +6477,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LanciaTermica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un raggio di energia incandescente che colpisce il bersaglio prestabilito, la lancia viaggia in linea retta ed una copertura completa (come un muro tra il bersaglio ed il mago) è in grado di fermarla. Qualsiasi ostacolo che riesce a fermare la lancia ne subirà gli effetti al posto dell’obbiettivo. Come punto di partenza alternativo la lancia può avere un qualsiasi fuoco all’interno del raggio d’azione, tuttavia la distanza totale del bersaglio dal mago non può superare quella del raggio d’azione.",
       " La lancia provoca 1d8 danni da fuoco per LP, ma se il bersaglio è preda di un effetto Incendio allora il danno incrementa a 1d10 per LP."
@@ -6510,10 +6509,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LancioInfrangente": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco con l’arma da lancio equipaggiata, l’avversario deve superare un TS o subire Fragile."
     ],
@@ -6541,10 +6540,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LentezzaMagica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo influenza una creatura entro il raggio d’azione, se tale creatura non riesce in un TS tempra allora viene influenzata dall’incantesimo e si muove più lentamente del normale.",
       "Questo incantesimo infligge un effetto di Lentezzax2."
@@ -6573,10 +6572,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LinfaDellaTerra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il Druido richiama la linfa vitale della terra e della natura per risanare le proprie ferite e quelle di tutti gli alleati intorno a se. L’incantesimo colpisce solo gli alleati presenti nell’area al momento del lancio, e ne ripristina 1 PV per LL ogni round."
     ],
@@ -6604,10 +6603,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "LuceRigenerante": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -6635,10 +6634,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Maestria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo infonde il lanciatore dell’incantesimo con grande perizia di combattimento, derivata dalla sua maestria sulla sfera Attacco.",
       "L’effetto pratico dell’incantesimo consiste nell’aumentare il LA di una quantità pari a +1 per ogni LMM."
@@ -6667,10 +6666,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaglioSpirituale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un maglio spiritico con il quale il lanciatore può attaccare il bersaglio ignorandone l’armatura.",
       "Il maglio infligge danni fisici pari a 1d7 per LP. "
@@ -6699,10 +6698,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaglioStordente": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -6730,10 +6729,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaAbbraccioDellaMorte": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima cade preda di un effetto Torpore per tutta la durata della malattia."
     ],
@@ -6761,10 +6760,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaAtrofia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa malattia indebolisce il bersaglio a tal punto che tutti suoi attacchi fisici e magici infliggono minor danno. ",
       "Per tutta la durata della malattia la vittima subisce un effetto di Debolezza."
@@ -6793,10 +6792,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaDifterite": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa malattia rende fragile il bersaglio ed estremamente soggetto a danni di tipo fisico, indebolisce l’organismo e le ossa ed il sistema nervoso diventa ipersensibile.",
       "La vittima diventa Fragile  fin quando la malattia persiste."
@@ -6825,10 +6824,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaEmorragia": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -6856,10 +6855,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaGlaucoma": {
-    "property_type": "SPELL",
     "descrizione": [
       "Finché la malattia perdura la vittima si considera affetta da Cecità."
     ],
@@ -6887,10 +6886,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaLabirintite": {
-    "property_type": "SPELL",
     "descrizione": [
       "Fin quando la malattia è attiva la vittima all’inizio di ogni round ha il 50% di essere Atterrata.",
       ""
@@ -6919,10 +6918,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaMalaria": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima subisce una penalità di -20 MCR."
     ],
@@ -6950,10 +6949,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaNecrosi": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima malata subisce una penalità di -1 PA e +8 Mancare."
     ],
@@ -6981,10 +6980,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaNeuroshock": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa malattia colpisce il sistema nervoso della vittima, tutti gli impulsi elettrici del cervello vengono amplificati a dismisura e si protraggono attraverso tutto il sistema nervoso.",
       "Fin quando la malattia è attiva la vittima è sotto un effetto Confusione."
@@ -7013,10 +7012,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaPesteBubbonica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa malattia debilita le capacità di concentrazione ed il vigore del bersaglio, fino a quando la malattia non viene rimossa il bersaglio è sotto un effetto di Spossatezza. "
     ],
@@ -7044,10 +7043,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaPsicosi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo infligge una malattia che colpisce la mente dell’obbiettivo rendendolo psicotico.",
       "Ogni round la vittima ha il 26% di probabilità di cadere in preda alla psicosi e perdere 10 PA per quel round."
@@ -7076,10 +7075,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaSpiriticaAria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa malattia colpisce il sistema nervoso della vittima, tutti gli impulsi elettrici del cervello vengono amplificati a dismisura e si protraggono attraverso tutto il sistema nervoso. Fin quando la malattia è attiva la vittima è sotto un effetto Confusione."
     ],
@@ -7107,10 +7106,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MalattiaVertigini": {
-    "property_type": "SPELL",
     "descrizione": [
       "Fin quando la malattia è attiva la vittima si considera Vacillante."
     ],
@@ -7138,10 +7137,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneAbbraccioGelido": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima è preda di Congelamento."
     ],
@@ -7169,10 +7168,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneAmplificazione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa maledizione amplifica le condizioni negative della vittima. ",
       "Quando la vittima subisce una condizione negativa mentre la maledizione è attiva la condizione aumenta di +1 LE. Ad esempio un effetto Stordito2 diventa Stordito3."
@@ -7201,10 +7200,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneApatia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa maledizione rende il soggetto demotivato in modo innaturale.",
       "Fin quando la maledizione persiste la vittima subisce una penalità di -18 Schivare e -27 Parare."
@@ -7233,10 +7232,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneContrappasso": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa maledizione avvolge di un alone la vittima e la connette al mondo dei morti. Ogni qual volta la vittima cerca di infierire su un bersaglio morente, essa  stessa sente il richiamo della morte. La maledizione entra in funzione quando la vittima effettua un attacco o esegua un’azione ostile contro un avversario che abbia meno del 50% dei propri punti vita, quando ciò accade la vittima subisce una penalità a Mancare di +24 per LE contro tale bersaglio."
     ],
@@ -7264,10 +7263,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneDegenerazione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Riduce le capacità della vittima di guarire gli altri e se stesso. La vittima subisce una penalità di -20 MCG."
     ],
@@ -7295,10 +7294,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneDisgregazione": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima di questa maledizione subisce una penalità di -1 LD e -1 a tutte le Resistenze."
     ],
@@ -7326,10 +7325,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneIncompentenza": {
-    "property_type": "SPELL",
     "descrizione": [
       "Fin quando questa maledizione è attiva la vittima subisce una penalità di +3 Mancare e -2 PA."
     ],
@@ -7357,10 +7356,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneIndolenza": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa maledizione rende il bersaglio estremamente pigro.",
       "La vittima subisce una penalità di -35 VA."
@@ -7389,10 +7388,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneInettitudine": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima di questa maledizione subisce +13 Mancare."
     ],
@@ -7420,10 +7419,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneSovraccaricoSensoriale": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima subisce un effetto Confusione per tutta la durata della maledizione."
     ],
@@ -7451,10 +7450,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MaledizioneSpiraleDepressiva": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima subisce una penalità di -20 MCG."
     ],
@@ -7482,10 +7481,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ManiBrucianti": {
-    "property_type": "SPELL",
     "descrizione": [
       "Aprendo le mani a ventaglio in una direzione e unendo i pollici delle stesse, si viene a creare un vampata di fuoco. Chiunque si trovi nell’area d’effetto dell’incantesimo subisce 1d6 danni da fuoco per LP."
     ],
@@ -7513,10 +7512,10 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ManovraEvasiva": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio esegue manovre per ridurre il suo profilo, come ad esempio capriole a terra, rendendosi più difficile da colpire, ed ottenendo un bonus di +15 Schivare."
     ],
@@ -7544,10 +7543,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ManovraIntralciante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se il bersaglio fallisce il TS subisce Lentezza."
     ],
@@ -7575,10 +7574,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MantelloDellaResistenza": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -7606,10 +7605,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MantoDiNegazione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea una barriera intorno al bersaglio che offre +15 Copertura."
     ],
@@ -7637,10 +7636,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MarcescenzaPestilenziale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un’ondata di vapori stagnanti si leva dal terreno, come se la terra stessa stesse imputridendo. Le esalazioni avvolgono le vittime, insinuandosi nei polmoni e nella mente, provocando conati, vertigini e un senso opprimente di debolezza. Chi porta già il veleno nel sangue viene travolto da una nausea devastante, come se l’interno del suo corpo stesse marcendo più in fretta dell’aria che respira.",
       "Tutte le vittime nell’area d’effetto devono superare un TS o subire Nausea.",
@@ -7670,10 +7669,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MarchioCompulsione": {
-    "property_type": "SPELL",
     "descrizione": [
       "L'incantatore infligge un Marchio di Sfida sul bersaglio.",
       "Quando il marchio viene infranto la vittima deve effettuare un TS, se fallisce subisce Stordimento3 fino al termine del round, se riesce subisce comunque Stordimento. Tale effetto non si può verificare più di una volta a round."
@@ -7702,10 +7701,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MartelloDegliDei": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -7733,10 +7732,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MetabolismoRapido": {
-    "property_type": "SPELL",
     "descrizione": [
       "Per tutta la durata dell’incantesimo la creatura influenzata recupera 1d3-1 PV per LL ogni round."
     ],
@@ -7764,10 +7763,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Meteora": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene a creare un grande meteora che compare vicino all’incantatore e poi vola a colpire l’obbiettivo, evitando eventuali ostacoli che non coprano completamente l’obbiettivo, che comunque deve essere in vista all’incantatore. All’impatto con il bersaglio la meteora provoca 1d10 danni per LP da terra e l’obbiettivo deve effettuare un TS per evitare diventare Vacillante."
     ],
@@ -7795,10 +7794,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MiasmaAssassino": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio crea una reazione nell'area d’effetto che fa andare in putrefazione tutto quello presente a velocità vertiginosa. L'odore orribile creato dalla putrefazione è percepibile anche a notevole distanza dall'area d'effetto. ",
       "L'effetto genera un miasma velenoso nell’area d’effetto, tutte le creature presenti vengono automaticamente Avvelenate e subiscono 1d2 danni per LP per tutta la durata dell’incantesimo."
@@ -7827,10 +7826,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsaVirulenta": {
-    "property_type": "SPELL",
     "descrizione": [
       "Colpisce il bersaglio con un attacco che disfa la struttura stessa della materia facendola marcire a grande velocità. Chi viene colpito subisce 2 danni per LP per ogni round per tutta la durata.",
       "Se il bersaglio è afflitto da una Malattia l'incantesimo dura +1 round aggiuntivo."
@@ -7859,10 +7858,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsoAcido": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco che infligge il danno dell'arma +1d4 danni per LP al termine di ogni round."
     ],
@@ -7890,10 +7889,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsoAppestato01": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco che può ammalare la vittima rendendola permanentemente sotto un effetto di Nausea."
     ],
@@ -7921,10 +7920,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsoDelCobra": {
-    "property_type": "SPELL",
     "descrizione": [
       "L’utilizzatore sferra colpo preciso ad un punto di pressione o ad una giuntura vitale del bersaglio, quest’ultimo deve superare un TS o subire Tramortito per tutta la durata."
     ],
@@ -7952,10 +7951,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsoDelSerpente": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una tecnica debilitante che indebolisce la vittima, le sue membra si fanno pesanti, i sensi ottusi. Se il veleno già scorre nelle sue vene, il morso invisibile del serpente si risveglia, amplificando il tormento e prosciugando ogni residuo di forza. ",
       "Se la vittima fallisce il TS subisce Debolezza per tutta la durata. Se la vittima è avvelenata l’effetto diventa Debolezza2."
@@ -7984,10 +7983,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsoLacerante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge danno dell'arma ed inoltre il bersaglio deve superare un TS, se fallisce subisce un effetto Sanguinamento che infligge 1 danno per LP ogni round."
     ],
@@ -8015,10 +8014,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsoVampiro": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -8046,10 +8045,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MorsoViverna": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -8077,10 +8076,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MuroDiFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una volta lanciato l’incantesimo, l’area interessata viene avvolta da alte fiamme che danneggiano chiunque si trovi si trovi all’interno ed offre Copertura 50 in entrambi i sensi.",
       "Ogni volta che una creatura transita all’interno del muro o se termina il round al suo interno, subisce 1d4 danni per LP. Il muro non infligge danno immediatamente se creato sotto i piedi di una creatura, ma questa subirà danno nel momento in cui si sposta o se termina il round. Il muro di fuoco non incendia o danneggia cose o creature che si trovano all’esterno della sua area d’effetto.",
@@ -8110,10 +8109,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MuroDiGhiaccio": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo erige un solido muro di ghiaccio (80% resistenza), spesso una casella ed alto 3, mentre la lunghezza è pari alla sua area d’effetto in caselle, e può assumere la forma desiderata al momento del lancio.",
       "Il muro è completamento solido, fornendo copertura totale (100), ma senza ostruire la visuale. Inoltre emana un’aura gelida, tanto che tutte le creature che transitano entro una casella di distanza dal muro devono superare un TS o subire Congelamento per 1 round.",
@@ -8143,10 +8142,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MuroDiPietra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo erige un solido muro di pietra, spesso una casella ed alto 3, mentre la lunghezza è pari alla sua area d’effetto in caselle, e può assumere la forma desiderata al momento del lancio.",
       "Il muro è completamento solido, fornendo copertura totale (100) ed ostruendo la visuale.",
@@ -8176,10 +8175,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MuroDOssa": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo erige un muro formato da ossa, spesso una casella ed alto 3, mentre la lunghezza è pari alla sua area d’effetto in caselle, e può assumere la forma desiderata al momento del lancio.",
       "Il muro non è completamento solido, esistono varie fessure fra le ossa oltre le quali si può normalmente vedere ed offrono copertura 75 bidirezionale, ma in ogni caso sono troppo piccole per essere attraversate, e quindi l’unica opzione è girarci intorno o demolirlo.",
@@ -8209,10 +8208,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "MutaformaFerina": {
-    "property_type": "SPELL",
     "descrizione": [
       "Quando questo incantesimo viene appreso la prima volta il personaggio deve scegliere un animale terrestre adeguato al combattimento, come ad esempio un grande felino, un lupo gigante o un orso. Una volta scelto l'animale non può essere cambiato.",
       "Quando l'incantesimo viene lanciato il personaggio acquista la forma dell'animale prescelto, tutto il suo equipaggiamento viene trasformato nella sua nuova forma e non potrà quindi accedere ad alcun oggetto da lui posseduto. Per tale ragione l’incantesimo fallisce se si sta utilizzando lo stile a distanza.",
@@ -8249,10 +8248,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "NovaGlaciale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Attorno al mago si crea un’esplosione gelida che congela al suolo tutte le creature presenti nell’area d’effetto che falliscono il TS.",
       "Le creature influenzate subiscono un effetto di Congelamento2 per tutta la durata."
@@ -8281,10 +8280,10 @@
       "tipo_aoe": "Cerchio",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "NubeIncendiaria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera una densa nube di gas incandescenti nell'area d'effetto, che esplodono incendiando tutte le creature presenti nell’area d’effetto al momento del lancio.",
       "Tutte le vittime subiscono un effetto Incendio che infligge 1 danno per LP ogni round."
@@ -8313,10 +8312,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "NubeMortale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Dal suolo si alza una fitta e densa nebbia velenosa che ricopre tutta l’area d’effetto e permane per tutta la durata.",
       "Tutte le creature che transitano nell’area d’effetto devono superare un TS o essere Avvelenate per 3 round. Al termine di ogni round le creature avvelenate subiscono 1d3 danni per LP.",
@@ -8346,10 +8345,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "NubeTossica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il lanciatore protende rapidamente la mano in avanti, generando un esalazione di gas velenoso che avvolge tutte le creature davanti a lui per poi disperdersi rapidamente.",
       "Le vittime che vengono colpite subiscono danno continuato pari a  1 per LP ogni round, inoltre devono superare un TS o venire avvelenate e subire una penalità di +5 Mancare."
@@ -8378,10 +8377,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "OndaCinetica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Con questo potere lo psionico crea nell'area d'effetto un potente onda d'urto che imprime un potente impulso cinetico a terra su tutte le creature presenti.",
       "Ogni bersaglio che sbaglia il TS diventa Atterrato."
@@ -8410,10 +8409,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "OndaMentale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge un attacco ad area di tipo mentale, per tale ragione il suo volume non è costante, e non si deforma in spazi angusti, barriere o altri ostacoli sono in normalmente in grado di fermarne l’effetto comunque. Le vittime dell’incantesimo subiscono 1d6 danni per LP da mente, inoltre devono riuscire in un TS o rimanere Storditi per la durata dell’effetto."
     ],
@@ -8441,10 +8440,10 @@
       "tipo_aoe": "CERCHIO",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "OndaRepulsiva": {
-    "property_type": "SPELL",
     "descrizione": [
       "Normalmente generato dallo spirito sotto forma di azione, ad esempio battendo i piedi sul terreno se la stazza dello spirito è sufficientemente grossa. Attorno allo spirito di crea una zona di compressione e decompressione d'aria, le creature nell'area d'effetto che sbagliano il TS vengono spostate indietro di 1 casella e subiscono Atterrato. ",
       "Lo spostamento non può provocare attacchi di opportunità."
@@ -8473,10 +8472,10 @@
       "tipo_aoe": "Cerchio,SERVITOREORIGIN,DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "OscuritaDivorante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Le creature nell'area d'effetto subiscono 1d4 danni per LP e devono superare un TS o subire un effetto Vulnerabilità."
     ],
@@ -8504,13 +8503,16 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PallaDiFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
-      "Crea una vampata di fiamme di raggio 6m che esercitano pochissima pressione e non sono quindi in grado di spostare o distruggere oggetti, di conseguenza la sfera di fuoco che si viene a creare tende a prendere la forma dell’ambiente circostante espandendosi oltre i suoi confini, dove possibile, se non c’è sufficiente spazio per farla detonare in tutte le direzioni (ad esempio in un corridoio, anche se solo un pazzoide o un essere immune al fuoco utilizzerebbe una palla di fuoco in un corridoio).",
-      " Chi viene colpito subisce 1d6 danni per LP, ed un effetto Incendio se sbaglia il TS. L’incendio infligge 1 danno per LP al termine di ogni round per 2 round."
+      "Con una scia luminosa, una sfera di fuoco parte dalle mani del lanciatore verso il bersaglio prescelto, esplodendo in una vampata di fiamme all’impatto.",
+      "Tutte le creature nell’area d’effetto subiscono 1d6 danni per LP e, chi fallisce il TS, un effetto Incendio che infligge 1 danno per LP al termine di ogni round per 2 round."
+    ],
+    "flavour": [
+      "La prima palla di fuoco non si scorda mai..."
     ],
     "id": "PallaDiFuoco",
     "image": "spell_fire_fireball02.png",
@@ -8536,10 +8538,10 @@
       "tipo_aoe": "CERCHIO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PanicoRovente": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il bersaglio di questo incantesimo subisce un effetto Panico2 per tutta la durata dell'incantesimo se fallisce il proprio TS.",
       "Se la vittima è sotto un effetto di Incendio la durata dell’incantesimo aumenta di +1 round."
@@ -8568,10 +8570,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ParolaDelPotereScudo": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -8599,10 +8601,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ParolaDelRichiamo": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -8630,10 +8632,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PattoconOltretomba": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una creatura influenzata da questo incantesimo contrae un patto con il mondo dei morti, tale patto consiste nel prevenire i danni subiti dal corpo al costo dell'energia vitale.",
       "Ogni volta che il beneficiario subisce danno consuma automaticamente 1 PF ed ottiene PVT pari a 2 per LL fino a fine round, tale effetto avviene prima del danno.",
@@ -8663,10 +8665,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PiagaStrisciante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera uno sciame di insetti striscianti nella zona bersaglio che attaccano chiunque si trovi al suo interno. ",
       "Tutti coloro che si trovano nell'area d'effetto vengono aggrediti e subiscono danno pari a 1d2 per LP ogni round. Gli insetti si attaccano alle vittime e quindi continuano ad infliggere danno per tutta la durata dell’incantesimo."
@@ -8695,10 +8697,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PioggiaAcida": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea una violenta pioggia di globi acidi corrosivi che, cadendo dal cielo (o dal soffitto se al chiuso), bersagliano incessantemente l’area selezionata per tutta la durata.",
       "Tutte le creature che transitano nell’area d’effetto subiscono 1d5 danni per LP, per il massimo di una volta per round."
@@ -8727,10 +8729,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PioggiaDiColpi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge danno di un normale attacco, inoltre il personaggio guadagna +1 Attacco Basilare da utilizzare entro la fine del round."
     ],
@@ -8758,10 +8760,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PioggiaDiFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Richiama una pioggia di fuoco infernale, che permane nell’area bersaglio per tutta la durata dell’incantesimo.",
       "Tutte le creature che transitano dall’area di effetto subiscono 1d3 danni per LP.",
@@ -8791,10 +8793,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PioggiaDiLapilli": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera una pioggia di lapilli che colpisce tutti i bersagli nell'area d'effetto. I lapilli sono troppo piccoli per infliggere danni, ma sono in grado di incendiare tutto quello che colpiscono.",
       "Tutte le creature presenti nell’area d’effetto al momento del lancio subiscono un Incendio che infligge 1 danno per LP al termine di ogni round."
@@ -8823,10 +8825,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PioggiaDiPietre": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una moltitudine di piccoli massi piovono dal cielo nell’area prescelta per tutta la durata dell’incantesimo, colpendo violentemente le sfortunate vittime che si trovano al loro interno.",
       "Ogni creatura che transita nell’area d’effetto subisce 1d3 danni per LP e deve effettuare un TS o divenire Vacillante per 1 round. Entrambi gli effetti possono verificarsi solamente una volta per round.",
@@ -8856,10 +8858,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Pirocinesi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere è in grado di accelerare a dismisura la velocità di rotazione degli atomi nella materia, e viene utilizzato soprattutto come potere offensivo. L’effetto di questo potere è puntiforme, ma il calore si espande uniformemente sul materiale su cui viene utilizzato come accadrebbe con un fuoco naturale.",
       "Utilizzato contro un nemico questo potere accelera bruscamente il movimento delle molecole della vittima, avvolgendo la creatura fra le fiamme. Utilizzato su una superficie od un oggetto può avere svariati effetti, come far prendere fuoco alla carta, carbonizzare il legno, riscaldare il metallo e così via",
@@ -8889,10 +8891,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PozzoDelleAnime": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene a creare un costrutto di energia positiva, il pozzo delle anime dell’incantesimo, che galleggia nell’aria nella posizione scelta dal lanciatore. Ogni creatura che tocca il pozzo delle anime può assorbirne l’energia e ripristinare i propri punti vita fino al massimo di energia a disposizione nel pozzo. L’atto di utilizzare il pozzo non provoca attacchi di opportunità ha tempo di lancio 7 e costa 3 PA. Creature ostili al lanciatore non possono utilizzare il pozzo.",
       "Ogni volta che il pozzo viene utilizzato il beneficiario recupera 4 punti vita per LL. Il pozzo ha 5 cariche, ed ogni cura ne spende una, quando le cariche finiscono il pozzo svanisce.",
@@ -8923,10 +8925,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraAnimaAnimale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere funziona solamente se lanciato su un proprio Servitore, normalmente uno spirito materializzato sul piano materiale.",
       "Tutti gli alleati dello sciamano nel raggio della preghiera ottengono un bonus di +8 Crit, +8 PCrit  e +10 VA."
@@ -8955,10 +8957,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraAttacco": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -8986,10 +8988,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraBastione": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -9017,10 +9019,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraDifesa": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -9048,10 +9050,10 @@
       "tipo_aoe": "CERCHIO,ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraFerocia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un'area intorno al lanciatore e che si sposta con esso, tutti gli alleati presenti nella zona ne ottengono i benefici. Tutti i beneficiari guadagnano +11 Crit e PCrit."
     ],
@@ -9079,10 +9081,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraFortitudine": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il sacerdote intesse una preghiera che controlla il flusso magico, aumentando la capacità di resistere di tutte le creature protette. ",
       "Crea un'area che offre supporto agli alleati che si trovano al suo interno e che si sposta con il lanciatore.",
@@ -9112,10 +9114,10 @@
       "tipo_aoe": "CERCHIO,ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraInfusione": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -9143,10 +9145,10 @@
       "tipo_aoe": "CERCHIO,ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PreghieraIstintoDiSopravvivenza": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -9174,10 +9176,10 @@
       "tipo_aoe": "CERCHIO,ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PrepararsiAllImpatto": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio guadagna 3 PVT per LL fino al termine della durata o fin quando consumati."
     ],
@@ -9205,10 +9207,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PresenzaTerrificante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il sacerdote alza al cielo il proprio simbolo sacro e pronuncia la parola del potere della propria divinità, scatenando un’imponente aura che provoca un effetto Terrore a tutte le creature presenti nell’area d’effetto che sbagliano un TS volontà per tutta la durata dell’incantesimo."
     ],
@@ -9236,10 +9238,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PressioneDegliAbissi": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo aumenta momentaneamente la pressione dell’aria o dell’acqua nell’area d’effetto.",
       "Le creature all’interno dell’area d’effetto che sbagliano il TS subiscono immediatamente un effetto di Lentezza2 per tutta la durata dell'incantesimo."
@@ -9268,10 +9270,10 @@
       "tipo_aoe": "Cerchio",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ProiezioneCriocinetica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un proiezione in grado di assorbire energia cinetica, infliggendo danni da freddo al bersaglio pari a 1d7+1 per LP. "
     ],
@@ -9299,10 +9301,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ProiezioneCriogenica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se il bersaglio fallisce il TS subisce Congelamento2 per tutta la durata."
     ],
@@ -9330,10 +9332,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ProiezioneIconica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un attacco che aggredisce la proiezione mentale sul piano astrale del bersaglio, infliggendo 1d6 danni per LP, la vittima deve inoltre superare un TS o diventare Stordita per 2 round.",
       ""
@@ -9362,10 +9364,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ProiezionePirocinetica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera una frusta composta di fiamme dalle mani del lanciatore che infligge al bersaglio 1d8 danni per LP e, se fallisce il TS, un effetto Incendio che infligge 1 danno per LP al termine di ogni round."
     ],
@@ -9393,10 +9395,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ProsciugareVitalita": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo disperde l’energia vitale della vittima.",
       "Se la vittima fallisce il TS allora subisce danno al termine di ogni round pari a 1 per LP, inoltre per tutta la durata subisce un effetto di Spossatezza.",
@@ -9426,10 +9428,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PugnaleGelido": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un lama formata di ghiaccio, con la quale il lanciatore effettua un attacco in mischia contro il bersaglio, infliggendogli 1d4 danni per LP.",
       "Se il bersaglio è Congelato infligge invece 2d4 danni per LP."
@@ -9458,10 +9460,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PugnoDiPietra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge 1d7 danni per LP."
     ],
@@ -9489,10 +9491,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "PugnoStritolante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un enorme pugno di pietra sopra l’obbiettivo che lo colpisce violentemente schiacciandolo contro il terreno.",
       "L’attacco infligge 1d6 danni per LP, se il bersaglio è Atterrato infligge invece 1d9+1 danni per LP."
@@ -9521,10 +9523,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RabbiaDirompente": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio ottiene +20 PCrit."
     ],
@@ -9552,10 +9554,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RabbiaIncontenibile": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio ottiene +20 Crit."
     ],
@@ -9583,10 +9585,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RafficaDiPietre": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una volta lanciato l’incantesimo delle rocce fluttuanti appaiono intorno all’incantatore, per poi andare a colpire il bersalgio prescelto, il quale subisce 1d8 danni da per LP."
     ],
@@ -9614,10 +9616,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RafficaLetale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio si lancia in una serie di colpi diretti verso i punti vitali delle vittime, infliggendogli danno aggiuntivo.",
       "Effettua un attacco che infligge danno dell’arma, inoltre per tutta la durata tutti gli attacchi in mischia infliggono 4d3 danni aggiuntivi.",
@@ -9647,10 +9649,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RaggioDisgregante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia un raggio che colpisce tutte le creature in linea retta infliggendo 1d5 danni per LP, inoltre ogni vittima deve effettuare un TS, se fallisce subisce Fragile.",
       "Energia Distruttiva: Incrementa il danno a 1d8 per LP."
@@ -9679,10 +9681,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RaggioIncendiario": {
-    "property_type": "SPELL",
     "descrizione": [
       "Dal dito teso in avanti del lanciatore scaturisce un raggio incandescente che colpisce tutte le creature in linea retta nell’area d’effetto.",
       "Tutti bersagli colpiti subiscono 1d5 danni per LP , inoltre devono superare un TS o subire un effetto Incendio che infligge 1 danno per LP al termine di ogni round.",
@@ -9712,10 +9714,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RaggioSolare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Dirige un raggio di energia contro un avversario provocando 1d8 danni da energia positiva per LP."
     ],
@@ -9743,10 +9745,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RagnatelaAppiccicosa": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se il bersaglio fallisce il TS subisce Lentezza2 per tutta la durata."
     ],
@@ -9774,41 +9776,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
-  },
-  "ReteDiRagnatela": {
-    "property_type": "SPELL",
-    "descrizione": [
-      "Colpisce tutti bersagli nell’area, chi fallisce subisce Lentezza2."
-    ],
-    "id": "ReteDiRagnatela",
-    "image": "spell_nature_web.png",
-    "nome_decorativo": "Rete di Ragnatela",
-    "properties": {
-      "area": "4",
-      "componenti": "S",
-      "durata": "3",
-      "elemento": "Terra",
-      "mana": "0",
-      "mm": "0",
-      "opportunita": 0,
-      "pa": "0",
-      "pf": "27",
-      "pp": "10",
-      "proiettile": "Energetico",
-      "raggio": "16",
-      "recupero": "0",
-      "scuola": "PotereNaturale",
-      "tags": "",
-      "tempo": "23",
-      "tipo": "Controllo",
-      "tipo_aoe": "",
-      "tipo_bersaglio": "",
-      "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RequiescatInPace": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se colpisce un Non Morto infligge 1d7 danni per LL (ignora la resistenza del bersaglio)."
     ],
@@ -9839,10 +9810,41 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
+  },
+  "ReteDiRagnatela": {
+    "descrizione": [
+      "Colpisce tutti bersagli nell’area, chi fallisce subisce Lentezza2."
+    ],
+    "id": "ReteDiRagnatela",
+    "image": "spell_nature_web.png",
+    "nome_decorativo": "Rete di Ragnatela",
+    "properties": {
+      "area": "4",
+      "componenti": "S",
+      "durata": "3",
+      "elemento": "Terra",
+      "mana": "0",
+      "mm": "0",
+      "opportunita": 0,
+      "pa": "0",
+      "pf": "27",
+      "pp": "10",
+      "proiettile": "Energetico",
+      "raggio": "16",
+      "recupero": "0",
+      "scuola": "PotereNaturale",
+      "tags": "",
+      "tempo": "23",
+      "tipo": "Controllo",
+      "tipo_aoe": "",
+      "tipo_bersaglio": "",
+      "ts": "Riflessi"
+    },
+    "property_type": "SPELL"
   },
   "Ricrescita": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo curativo permette la ricrescita dei tessuti danneggiati.",
       "Chi beneficia di questo incantesimo recupera 3 punti vita per LL alla fine di ogni round per tutta la sua durata."
@@ -9871,10 +9873,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RigeneraVita": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere permette allo psionico di creare nuova vita nel corpo del bersaglio prescelto.",
       "Ogni round il bersaglio recupera 2 PV per LL."
@@ -9903,10 +9905,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RigenerazioneAnimale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il lanciatore recupera 1 PV x LL ogni round."
     ],
@@ -9934,10 +9936,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RimuoviVeleno": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo genera un Rimuovi Effetto su un qualsiasi veleno bersaglio."
     ],
@@ -9965,10 +9967,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RiparazioneCellulare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere consente allo psionico di curare le ferite subite, facendo recuperare 1 punto vita per LL per ogni round di durata del potere."
     ],
@@ -9996,10 +9998,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RipristinaVitaMaggiore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere permette di ripristinare punti vita perduti, per una quantità pari 6 punti vita per LL."
     ],
@@ -10027,10 +10029,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RipristinaVitaMinore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere permette di ripristinare punti vita perduti, per una quantità pari 3 punti vita per LL. "
     ],
@@ -10058,10 +10060,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RipristinaVitaSuperiore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere permette di ripristinare punti vita perduti, per una quantità pari 9 punti vita per LL."
     ],
@@ -10089,10 +10091,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Risanamento": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo curativo risana velocemente il bersaglio dalle ferite subite. Chi beneficia di questo incantesimo recupera 1 punto vita per LL alla fine di ogni round per tutta la sua durata."
     ],
@@ -10120,10 +10122,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RisanamentoAccelerato": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -10151,10 +10153,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RisucchiaVita": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -10182,10 +10184,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "RisucchioSangue": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -10213,10 +10215,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SacrificioDiSangue": {
-    "property_type": "SPELL",
     "descrizione": [
       "Lo stregone assorbe la forza vitale del proprio servitore, che deve essere un’evocazione o convocazione attiva sotto il suo controllo, e la usa come sacrificio per generare un effetto che cura le ferite.",
       "Il servitore subisce 1d7 danni per LL, tali danni non vengono influenzati da alcun fattore di modifica del danno e non possono generare critico. ",
@@ -10246,10 +10248,10 @@
       "tipo_aoe": "CERCHIO, SERVITOREORIGIN, EXCLUDESERVITORE",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SacrificioEsplosivo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Grazie a questo incantesimo lo stregone genera un esplosione con il proprio Servitore come epicentro.",
       "Il servitore subisce 1d6 danni per LL, tali danni non vengono influenzati da alcun fattore di modifica del danno e non possono generare critico. ",
@@ -10280,10 +10282,10 @@
       "tipo_aoe": "CERCHIO,DANNOSO,SERVITOREORIGIN",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Salvezza": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -10311,10 +10313,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SangueDiTroll": {
-    "property_type": "SPELL",
     "descrizione": [
       "Fornisce al beneficiario le capacità rigenerative di un troll.",
       "Fin quando l'incantesimo è attivo il personaggio recupera 1 Punto Vita per LL ogni round, a meno che non sia vittima di un effetto Incendio."
@@ -10343,10 +10345,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SangueInfernale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Fino a quando dura l’effetto di questo incantesimo, lo stregone rigenera i punti vita al ritmo di 1 x LL ogni round."
     ],
@@ -10374,10 +10376,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SbarramentoDiGhiaccio": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo scaglia spuntoni di ghiaccio acuminati nell’area di fronte al lanciatore, in grado di lacerare i tessuti e conficcarsi nella carne.",
       "Chi viene colpito subisce 1d6 danni per LP e se sbaglia il TS subisce un effetto di Dolore."
@@ -10406,10 +10408,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScacciareIlMale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo sprigiona energia divina con lo scopo intimorire Non morti e Demoni. L'incantesimo funziona solamente sulle razze suddette,  ed è innocuo su altri tipi di creature.",
       "Se la vittima fallisce il TS essa subisce un effetto equivalente a Orrore, che però non è considerato tale per quanto riguarda le immunità agli effetti."
@@ -10438,10 +10440,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScaricaArtefattoLancio": {
-    "property_type": "SPELL",
     "descrizione": [
       "Permette di concentrare la propria mana sull’arma da lancio per scagliare un attacco che infligge 1d4 danni fisici per LP."
     ],
@@ -10469,10 +10471,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScaricaElementaleMaggioreAria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Funziona come Scarica Elementale Minore, ma infligge 1d6 danni per LP."
     ],
@@ -10500,10 +10502,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScaricaElementaleMaggioreFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Funziona come Scarica Elementale Minore, ma infligge 1d6 danni per LP."
     ],
@@ -10531,10 +10533,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScaricaElementaleMaggioreGelo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Funziona come Scarica Elementale Minore, ma infligge 1d6 danni per LP."
     ],
@@ -10562,10 +10564,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScaricaElementaleMaggioreTerra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Funziona come Scarica Elementale Minore, ma infligge 1d6 danni per LP."
     ],
@@ -10593,10 +10595,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScaricaElementaleSuperioreAria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Funziona come Scarica Elementale Minore, ma infligge 1d9 danni per LP."
     ],
@@ -10624,10 +10626,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScaricaElementaleSuperioreFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Funziona come Scarica Elementale Minore, ma infligge 1d9 danni per LP."
     ],
@@ -10655,10 +10657,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Schiantare": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -10686,10 +10688,10 @@
       "tipo_aoe": "Cono",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SchockSismico": {
-    "property_type": "SPELL",
     "descrizione": [
       "L’esperto di magia crea un campo magico nella zona prescelta, per un istante la terra trema e tutte le creature presenti subiscono 1d4 danni per LP, inoltre devono superare un TS o essere Atterrato."
     ],
@@ -10717,10 +10719,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SciameDiLocuste": {
-    "property_type": "SPELL",
     "descrizione": [
       "Evoca uno sciame di locuste che volano dal lanciatore travolgendo tutti i bersagli davanti a lui. Le creature colpite sono attaccate dalle locuste per tutta la durata dell’incantesimo.",
       "Lo sciame infligge danno fisico al termine di ogni round pari a 1d2 per LP."
@@ -10749,14 +10751,17 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SciameDiMeteore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una serie di sfere fiammeggianti precipitano dal cielo nell’area d’effetto, una volta raggiunto il suolo deflagrano in un’esplosione di fiamme in grado di carbonizzare tutte le creature presenti.",
       "Tutti coloro che si trovano nell’area designata come bersaglio subiscono 2d6 danni da fuoco per LP.",
       "Questo incantesimo funziona anche al chiuso."
+    ],
+    "flavour": [
+      "Un sibilo sordo squarcia il cielo e la volta celeste fiorisce di un cataclisma ardente. Non vi è caos nella pioggia di fuoco, ma la fredda e implacabile precisione di una mente che ha calcolato ogni singolo granello di cenere."
     ],
     "id": "SciameDiMeteore",
     "image": "pyrokinetic-18-1.png",
@@ -10782,10 +10787,10 @@
       "tipo_aoe": "CERCHIO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScissioneAstrale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo effettua una parziale trasposizione a livello cellulare, cioè trasferisce le cellule della vittima separatamente sul piano astrale. Tutti i bersagli nell’area d’effetto al momento del lancio vengono colpiti dall’incantesimo.",
       "Ogni vittima subisce 1d2 danni per LP ogni round, ma un TS riuscito riduce la durata dell’effetto di -1 round.",
@@ -10815,10 +10820,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ScudoCristallino": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un scudo fluttuante che orbita attorno al beneficiario, questo offre una piccola copertura ed è in grado di parare i colpi rivolti verso il beneficiario.",
       "Fin quando lo scudo è attivo il beneficiario guadagna +9 Parare e +5 Copertura."
@@ -10847,10 +10852,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SferaLuminosa": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -10878,10 +10883,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Sfidare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa abilità permette di ingaggiare una creatura in combattimento e applicare su di lei un Marchio di Sfida.",
       "Il personaggio fa pressione psicologica sulla vittima, spingendola alla sfida e a commettere errori. Lo scopo è quindi quello di apparire come un pericolo da tenere in debita considerazione, in modo che l'avversario abbia difficoltà a concentrarsi su bersagli diversi.",
@@ -10912,10 +10917,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SincroniaPerfetta": {
-    "property_type": "SPELL",
     "descrizione": [
       "Per un bardo, tutto deve essere armonioso e sincronizzato, compreso il combattimento corpo a corpo. Adattandosi al ritmo dell’avversario esso è in grado di colpirlo mentre questo si scopre, una tattica che diventa ancora più efficace quando accompagnato da un alleato, in quando è in grado di sincronizzare i propri attacchi con ques’ultimo.",
       "Infligge il danno dell’arma con un bonus di +2 LA, tale bonus permane per tutta la durata del potere. Se il lanciatore, al momento dell’attacco, è adiacente ad un alleato (entro 1 casella) allora entrambi ottengono un ulteriore bonus di +2 LA (per un totale di +4 a se stesso e +2 per l’alleato) per tutta la durata del potere.",
@@ -10945,10 +10950,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SoffioAcido": {
-    "property_type": "SPELL",
     "descrizione": [
       "Permette di emette uno spruzzo acido che investe tutte le creature nell’area d’effetto, le vittime vengono ricoperte e subiscono 1d4 danni per LP ogni round."
     ],
@@ -10976,10 +10981,10 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SoffioDragoRosso": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il soffio infligge 2d8 danni per LP."
     ],
@@ -11007,10 +11012,10 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SoffioDragoRosso2": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il soffio infligge 2d8 danni per LP."
     ],
@@ -11038,10 +11043,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SoffioDragoVerde": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il soffio del drago verde colpisce tutte le creature nell'area avvelenandole. Ogni vittima subisce 1d6 danni per LP per round."
     ],
@@ -11069,10 +11074,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SoffioGelidoMinore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un cono gelido che infligge 1d8 danni per LP e può congelare la vittima."
     ],
@@ -11100,10 +11105,10 @@
       "tipo_aoe": "CONO, DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SoffioVelenosoMostro": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un spruzzo di veleno frontale che investe tutte le creature nell’area d’effetto, le vittime subiscono 1 danno per LP al termine di ogni round."
     ],
@@ -11131,10 +11136,10 @@
       "tipo_aoe": "FRONTALE",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SorgenteCurativa": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -11162,10 +11167,10 @@
       "tipo_aoe": "CERCHIO,UTILE",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Spaventare": {
-    "property_type": "SPELL",
     "descrizione": [
       "La creatura bersaglio subisce un effetto di Paura per tutta la durata dell'incantesimo."
     ],
@@ -11193,10 +11198,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Volonta"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpazzataCoda": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -11224,10 +11229,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpecchioDimensionale": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere crea un piano scintillante verticale che distoce lo spazio, per quanto il piano non struisca la vista, fornisce Copertura 80 in entrambe le direzioni.",
       "Se una creatura tenta oltrepassare la parete dimensionale allora deve effettuare un TS, se fallisce si ritroverà nel punto esatto da dove ha iniziato la sua azione di movimento, come se non si fosse spostato, ma consumando comunque tutte le risorse del movimento che aveva compiuto.",
@@ -11257,10 +11262,10 @@
       "tipo_aoe": "LINEA",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpinaNarcotica": {
-    "property_type": "SPELL",
     "descrizione": [
       "Lancia un spina velenosa contro il bersaglio, il quale deve superare un TS o rimanere avvelenato.",
       "Una vittima avvelenata subisce 1 danno per LP al termine di ogni round ed una effetto Torpore."
@@ -11289,10 +11294,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpineSpiriticheMaggioriFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere crea un campo spiritico a forma di spine intorno al bersaglio.",
       "Quando il beneficiario subisce un Attacco l'attaccante viene ferito dalle spine se è entro 2 caselle dal beneficiario.",
@@ -11322,10 +11327,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpineSpiriticheMaggioriTerra": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere crea un campo spiritico a forma di spine intorno al bersaglio.",
       "Quando il beneficiario subisce un Attacco l'attaccante viene ferito dalle spine se è entro 2 caselle dal beneficiario.",
@@ -11355,10 +11360,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpiritoVendicativo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Richiama uno spirito dal mondo dei morti per tormentare un bersaglio, il quale subisce 1d10 danni per LP."
     ],
@@ -11386,10 +11391,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SporeVitali": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un fungo che rilascia spore nell’area, tutti gli alleati investiti dalle spore recuperano 1d2 punti vita per LL ogni round ed ottengono un bonus di +12 MCR.",
       "Funziona solamente con organismi viventi ed organici (inefficace su costrutti e non morti)."
@@ -11418,10 +11423,10 @@
       "tipo_aoe": "CERCHIO,ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpruzzoVelenoso": {
-    "property_type": "SPELL",
     "descrizione": [
       "Scaglia un getto velenoso contro la vittima la quale, se fallisce il TS viene avvelenata e subisce 1 danno per LP per ogni round di durata del veleno."
     ],
@@ -11449,10 +11454,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SpuntoniDiRoccia": {
-    "property_type": "SPELL",
     "descrizione": [
       "Crea un onda di rocce aguzze e taglienti che scaturiscono dal terreno di fronte al lanciatore e si muove verso i bersagli coprendo un’area conica.",
       "Tutte le creature colpite subiscono 1d4 danni da terra per LP e chi sbaglia il TS subisce un effetto di Sanguinamento che infligge 1 danno per LP al termine di ogni round."
@@ -11481,10 +11486,10 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "StraleDellaMiseria": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge 1d5 danni per LP. ",
       "Condizionale: se la vittima è Maledetta  deve effettuare un TS o subire un effetto Fragile per tutta la durata.",
@@ -11514,10 +11519,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "StraleDellaRovina": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un incantesimo che genera un proiettile di energia scuro che piove dall’alto sul malcapitato. Questo infligge 1d8 danni al bersaglio per LP da energia negativa.",
       "Se la vittima è Maledetta il danno aumenta di +2 per LP, altrimenti la prossima Maledizione lanciata dal Necromante entro la fine del round ha una riduzione di -50% sul costo Mana e PP ed un bonus di +50 VA."
@@ -11546,10 +11551,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "SuoloCorrotto": {
-    "property_type": "SPELL",
     "descrizione": [
       "Genera una zona di corruzione ai piedi del lanciatore, un cerchio di energia  sepolcrale in grado di danneggiare i suoi nemici.",
       "Tutti nemici subiscono 1d2 danni per LP ogni round in cui sostano o transitano all’interno dell’area corrotta."
@@ -11578,10 +11583,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Svanire": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il personaggio diventa Invisibile."
     ],
@@ -11609,10 +11614,10 @@
       "tipo_aoe": "ALLEATI",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TempestaAcida": {
-    "property_type": "SPELL",
     "descrizione": [
       "Si viene creare una raffica sferzante di acido corrosivo ed appiccicoso, che travolge l’area bersaglio per un fugace istante.",
       "Ogni creatura presente nell’area d’effetto al momento del lancio viene investita e ricoperta dall’acido, che gli si appiccica addosso e gli infligge 1d4 danni per LP al termine di ogni round per tutta la durata."
@@ -11641,10 +11646,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TempestaDiFuoco": {
-    "property_type": "SPELL",
     "descrizione": [
       "Una violenta raffica di fiamme colpisce l’area d’effetto e permane per tutta la durata dell’incantesimo.",
       "Tutti coloro che transitano  nell’area d’effetto subiscono danni pari a 1d3, oppure 1d5 se in stato di Incendio, per LP."
@@ -11673,10 +11678,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TempestaDiGhiaccio": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo crea una violenta e prolungata grandinata nell’area di effetto prescelta, che permane per tutta  tutta la durata dell’incantesimo.",
       "Le creature che transitano nell’area d’effetto subiscono 1d3 danni per LP, per un massimo di una volta per round. Se la vittima è sotto effetto di Congelamento il danno è incrementato a 1d4 per LP."
@@ -11705,10 +11710,10 @@
       "tipo_aoe": "DANNOSO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TentacoliParalizzanti": {
-    "property_type": "SPELL",
     "descrizione": [
       "RISOLUTO"
     ],
@@ -11736,10 +11741,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TentacoloVermeiena": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge 1d3 danni per LP e il nemico deve superare un TS o subire Stordito2."
     ],
@@ -11767,10 +11772,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Terremoto": {
-    "property_type": "SPELL",
     "descrizione": [
       "La terra scuote violentemente e trema, tutte le creature nell’area d’effetto al momento del lancio subiscono 1d5 danni per LP, ed inoltre devono superare un TS riflessi o diventare Atterrato.",
       "Eventuali strutture o creature ancorate al terreno non possono essere atterrate, ma subiscono danni doppi dal terremoto."
@@ -11799,10 +11804,10 @@
       "tipo_aoe": "CERCHIO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TestataAriete": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se il bersaglio fallisce il TS subisce Atterrato e viene sbalzato indietro di 4 caselle."
     ],
@@ -11830,10 +11835,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TiriMaestrali": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa tecnica infligge un attacco normale sul bersaglio ed offre al lanciatore un bonus di +5 LA, tale bonus permane per tutta la durata anche per gli attacchi successivi."
     ],
@@ -11861,10 +11866,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDegliAntichi": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima viene sfiorata dal tocco degli antichi dei, corrotte e mavagie versione della loro passata esistenza.",
       "Una volta toccati non è possibile salvarsi dall’effetto di Paura che trasmette, tuttavia la vittima può evitare di essere toccata superando un TS."
@@ -11893,10 +11898,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDelVampiro": {
-    "property_type": "SPELL",
     "descrizione": [
       "Il tocco del vampiro incanta la mano o l’arma dell’esperto di magia, la quale può essere così utilizzata per effettuare un attacco di contatto contro un avversario. L’avversario può evitare il tocco del vampiro schivandolo, nel qual caso l’incantesimo va a vuoto.",
       "Se si riesce a colpire un obbiettivo allora quest’ultimo subisce 1d4 danni da energia negativa per LP, inoltre i danni inflitti vengono trasformati in PV del lanciatore.",
@@ -11926,10 +11931,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDiCaloreMinore": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere permette di ripristinare punti vita perduti, per una quantità pari 1 punto vita per LL ogni round."
     ],
@@ -11957,10 +11962,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDiCombustione": {
-    "property_type": "SPELL",
     "descrizione": [
       "La vittima colpita subisce un effetto Incendio che infligge 1d4 danni per LP al termine di ogni round."
     ],
@@ -11988,10 +11993,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDiCuraCritico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 7 punti vita per LL."
     ],
@@ -12019,10 +12024,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDiCuraGrave": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 5 punti vita per LL."
     ],
@@ -12050,10 +12055,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDiCuraLeggero": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 2 punti vita per LL."
     ],
@@ -12081,10 +12086,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoDiGuarigione": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado curare le ferite riportate da un personaggio e di ripristinare 10 punti vita per LL."
     ],
@@ -12112,10 +12117,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoElementaleMinoreArcano": {
-    "property_type": "SPELL",
     "descrizione": [
       "Lo spirito infonde la propria energia elementale nello sciamano, il quale può scaricarla tramite tocco contro un bersaglio.",
       " Infligge 1d4 danni per LP."
@@ -12144,10 +12149,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoElementaleMinorePositivo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Lo spirito infonde la propria energia elementale nello sciamano, il quale può scaricarla tramite tocco contro un bersaglio.",
       " Infligge 1d4 danni per LP."
@@ -12176,10 +12181,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoProsciugante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Infligge Danno dell'arma, inoltre la vittima deve superare due TS, per Debolezza ed Annebbiato."
     ],
@@ -12207,10 +12212,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoSolare": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -12238,10 +12243,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "ToccoStordimento2": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere consente di indebolire la materia e renderla più fragile. In casi estremi, a discrezione del DM, può causare la rottura di un oggetto. Se utilizzato contro una creatura questa ha diritto ad un TS, se fallisce subisce un effetto di Stordimento2 per tutta la durata del potere."
     ],
@@ -12269,10 +12274,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TorrenteDistruttivo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Versione più potente di Dardi Incantati, che infligge 1d6+1 danni per LP. "
     ],
@@ -12300,10 +12305,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TossinaCorrosiva": {
-    "property_type": "SPELL",
     "descrizione": [
       "Un incantesimo che trasforma i minerali presenti nel corpo della vittima corrodendola dall’interno, questo potere ha effetto su qualunque creatura corporea.",
       "La vittima subisce 1 danno per LP ogni round di durata.",
@@ -12333,10 +12338,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TranceCombattivo": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere consente allo psionico di avere una comprensione insolitamente profonda dei propri nemici e delle loro tecniche di combattimento. ",
       "Fin quando il potere è attivo il lanciatore ottiene un bonus di +1 LA per LMM, ma infligge anche una penalità di +3 Mancare."
@@ -12365,10 +12370,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TrasferimentoVitale": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -12396,10 +12401,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "null"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TrasformazioneBerserker": {
-    "property_type": "SPELL",
     "descrizione": [
       "Trasforma il lanciatore in un temibile e furioso combattente, con i seguenti Modificatori:",
       "    • +1 LA ed un ulteriore +1 LA per LMM",
@@ -12432,10 +12437,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TrasformazionedaCombattimento": {
-    "property_type": "SPELL",
     "descrizione": [
       "Aumenta le capacità combattive del lanciatore, il quale guadagna un bonus +1 LA ed un ulteriore +1 LA per LMM."
     ],
@@ -12463,10 +12468,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "TremoreLocalizzato": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo è in grado di fare tremare il terreno direttamente sotto la vittima prescelta, senza che gli effetti di tale scossa si propaghino oltre la casella che occupa.",
       "Il bersaglio deve superare un TS o essere Atterrato."
@@ -12495,10 +12500,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Ustionare": {
-    "property_type": "SPELL",
     "descrizione": [
       "Aumenta vertiginosamente la temperatura attorno alla creatura bersaglio provocandogli gravi ustioni. Non genera nessun proiettile visibile ma utilizza comunque le normali meccaniche dei proiettili cinetici.",
       " Provoca 1d4 danni da fuoco per LP, se il bersaglio è sotto un effetto di Incendio il danno aumenta a 1d6 per LP."
@@ -12527,10 +12532,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "VelenoNauseante": {
-    "property_type": "SPELL",
     "descrizione": [
       "Se la vittima fallisce il TS viene  avvelenata, per tutta la durata del veleno subisce un effetto Nausea2."
     ],
@@ -12558,10 +12563,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
-    }
+    },
+    "property_type": "SPELL"
   },
   "Velocita": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo incantesimo influenza una creatura entro il raggio d’azione, la creatura influenzata riesce a muoversi più velocemente del normale. Chi beneficia di questo incantesimo ottiene l’effetto omonimo di Velocita. Se il lanciatore lancia questo incantesimo su se stesso allora recupera 2 PA al momento del lancio."
     ],
@@ -12589,10 +12594,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "VelocitaMassa": {
-    "property_type": "SPELL",
     "descrizione": [
       ""
     ],
@@ -12620,10 +12625,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "VelocitaUltreterrena": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questa fusione offre al lanciatore un effetto di Velocita2 per tutta la durata."
     ],
@@ -12651,10 +12656,10 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "No"
-    }
+    },
+    "property_type": "SPELL"
   },
   "VorticePirocinetico": {
-    "property_type": "SPELL",
     "descrizione": [
       "Questo potere è in grado genera un gigantesco cono di fiamme vorticanti in fronte al lanciatore. ",
       "Ogni creatura che si trova nell’area d’effetto subisce 1d8 danni per LP inoltre deve superare un TS o subire un effetto Incendio che infligge 1 danno per LP al termine di ogni round."
@@ -12683,6 +12688,7 @@
       "tipo_aoe": "CONO",
       "tipo_bersaglio": "",
       "ts": "Riflessi"
-    }
+    },
+    "property_type": "SPELL"
   }
 }
