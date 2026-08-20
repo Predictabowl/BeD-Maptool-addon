@@ -111,4 +111,17 @@
             "ToccoCuraFeriteLeggere-9"
         ]
     }
+    ,
+    "anello-minore-chaos-0": {
+        "nome": "Anello Minore del Chaos",
+        "attributi": {
+            "PCrit": 1
+        },
+        "categoria": "Anello",
+        "icona": "rings/inv_ring_bastion_02_pinkgold.png",
+        "descrizione": "Un anello instriso con l’energia del Chaos.",
+        "RuneInstallate": [
+            "FavoreInstabile_9_1"
+        ]
+    }
 }

@@ -18,5 +18,3 @@
 [h: oEffetto = json.set(param,"params",altro,"verbose",0)]
 
 [macro("powers/effectSpellTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"spellName",spellName,"effetto",oEffetto)]
-
-[macro("powers/generaSpellMsg@lib:it.aldinucci.piero.bed.maptool.ruleset"):json.append("",source,target)]

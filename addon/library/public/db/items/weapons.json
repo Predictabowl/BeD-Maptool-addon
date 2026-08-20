@@ -46,6 +46,35 @@
         ],
         "descrizione": "Un&#39arma dal passato avvolto nel mistero. Le origini della Scure di Timon sono del tutto sconosciute, ma la sua potenza è innegabile. Sulla possente lama d&#39acciaio sono incise due antiche rune del fulmine. Non appena viene impugnata, l&#39ascia si risveglia: la lama emette una tenue luce azzurrina e piccole scariche elettriche iniziano a sfrigolare lungo il filo, pronte a colpire."
     },
+    "striscia_evasiva_+1": {
+        "attributi": {
+            "Schivare": 2
+        },
+        "attributiArma": {
+            "LA": 1,
+            "LL": 1,
+            "CD": 1,
+            "Crit": 8,
+            "PCrit": 13,
+            "Penetrazione": 1,
+            "Tempo di Attacco": 18
+        },
+        "carArma": "Agile",
+        "danno1H": "3d6+2",
+        "danno2H": 0,
+        "icona": "axes/inv_sword_draenei_01.png",
+        "ingombro": 4,
+        "nome": "Striscia Evasiva +1",
+        "numAttacchi": 0,
+        "portata": 1,
+        "potenziamento": 1,
+        "tipoArma": "Spada",
+        "tipoDanno": "P",
+        "RuneInstallate": [
+            "ManovraEvasiva_9_1"
+        ],
+        "descrizione": "Un&#39arma elegante e bilanciata, perfetta per la difesa."
+    },
     "ARCO CORTO-0": {
         "attributi": {
             "Num_Attacchi": 1

@@ -71,6 +71,19 @@
         "categoria": "armatura",
         "icona": "armors/inv_chest_chain.png"
     },
+    "cotta_maglia_+1": {
+        "nome": "Cotta di Maglia +1",
+        "attributi": {
+            "LD": 11,
+            "Tutte_Res": 1,
+            "Schivare": -4
+        },
+        "ingombro": 9,
+        "potenziamento": 0,
+        "addArmatura": 4,
+        "categoria": "armatura",
+        "icona": "armors/inv_chest_chain_04.png"
+    },
     "IMBOTTITA-1": {
         "nome": "Imbottita",
         "attributi": {

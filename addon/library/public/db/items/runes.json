@@ -1,79 +1,93 @@
 {
     "AttaccoFulmine-1-11": {
+        "cariche": 1,
         "libName": "RunaAttaccoAria",
         "livello": 11,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
+        "maxCariche": 1,
+        "tipo": "RUNA"
     },
     "AttaccoFulmine-2-11": {
+        "cariche": 1,
         "libName": "RunaAttaccoAriaMaggiore",
         "livello": 11,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
+        "maxCariche": 1,
+        "tipo": "RUNA"
     },
     "AttaccoTerra-1": {
+        "cariche": 1,
         "libName": "RunaAttaccoTerra",
         "livello": 8,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
-    },
-    "CuraFeriteGravi-10": {
-        "libName": "CuraFeriteGravi",
-        "livello": 10,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
+        "maxCariche": 1,
+        "tipo": "RUNA"
     },
     "Barricata-1": {
+        "cariche": 1,
         "libName": "Barricata",
         "livello": 8,
-        "tipo": "RUNA",
+        "maxCariche": 1,
+        "tipo": "RUNA"
+    },
+    "CuraFeriteGravi-10": {
         "cariche": 1,
-        "maxCariche": 1
+        "libName": "CuraFeriteGravi",
+        "livello": 10,
+        "maxCariche": 1,
+        "tipo": "RUNA"
+    },
+    "ManovraEvasiva_9_1": {
+        "cariche": 1,
+        "libName": "ManovraEvasiva",
+        "livello": 9,
+        "maxCariche": 1,
+        "tipo": "RUNA"
+    },
+    "FavoreInstabile_9_1": {
+        "cariche": 1,
+        "libName": "FavoreInstabile",
+        "livello": 9,
+        "maxCariche": 1,
+        "tipo": "RUNA"
     },
     "FendenteSanguinario-9": {
+        "cariche": 1,
         "libName": "FendenteSanguinario",
         "livello": 9,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
-    },
-    "SbronzaEpica-10": {
-        "libName": "SbronzaEpica",
-        "livello": 10,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
-    },
-    "SoffioDragoVerde-15": {
-        "libName": "SoffioDragoVerde",
-        "livello": 15,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
-    },
-    "PreghieraSoffioDragoVerde-15": {
-        "libName": "SoffioDragoVerde",
-        "livello": 15,
-        "tipo": "RUNA",
-        "cariche": 1,
-        "maxCariche": 1
+        "maxCariche": 1,
+        "tipo": "RUNA"
     },
     "IncantaArma-2": {
+        "cariche": 2,
         "libName": "IncantaArma",
         "livello": 10,
-        "tipo": "RUNA",
-        "cariche": 2,
-        "maxCariche": 2
+        "maxCariche": 2,
+        "tipo": "RUNA"
+    },
+    "PreghieraSoffioDragoVerde-15": {
+        "cariche": 1,
+        "libName": "SoffioDragoVerde",
+        "livello": 15,
+        "maxCariche": 1,
+        "tipo": "RUNA"
+    },
+    "SbronzaEpica-10": {
+        "cariche": 1,
+        "libName": "SbronzaEpica",
+        "livello": 10,
+        "maxCariche": 1,
+        "tipo": "RUNA"
+    },
+    "SoffioDragoVerde-15": {
+        "cariche": 1,
+        "libName": "SoffioDragoVerde",
+        "livello": 15,
+        "maxCariche": 1,
+        "tipo": "RUNA"
     },
     "ToccoCuraFeriteLeggere-9": {
+        "cariche": 2,
         "libName": "ToccodiCuraLeggero",
         "livello": 9,
-        "tipo": "RUNA",
-        "cariche": 2,
-        "maxCariche": 2
+        "maxCariche": 2,
+        "tipo": "RUNA"
     }
 }

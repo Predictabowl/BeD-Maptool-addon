@@ -871,7 +871,7 @@
       "mana": "0",
       "mm": "0",
       "opportunita": 0,
-      "pa": "0",
+      "pa": "arma",
       "pf": "10",
       "pp": "1, arma",
       "proiettile": "Materiale",
@@ -4429,6 +4429,37 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "ts": "Tempra"
+    },
+    "property_type": "SPELL"
+  },
+  "FavoreInstabile": {
+    "descrizione": [
+      "Fin quando l’incantesimo è attivo il beneficiario guadagna 1d4 PA massimi ed attuali, decisi al momento del lancio."
+    ],
+    "id": "FavoreInstabile",
+    "image": "inv_fabric_felcloth_ebon.png",
+    "nome_decorativo": "Favore Instabile",
+    "properties": {
+      "area": "0",
+      "componenti": "V,S",
+      "durata": "4",
+      "elemento": "Arcano",
+      "mana": "32,VarX",
+      "mm": "0",
+      "opportunita": 1,
+      "pa": "0",
+      "pf": "0",
+      "pp": "5",
+      "proiettile": "Energetico",
+      "raggio": "16",
+      "recupero": "",
+      "scuola": "Chaos",
+      "tags": "",
+      "tempo": "14",
+      "tipo": "Supporto",
+      "tipo_aoe": "",
+      "tipo_bersaglio": "",
+      "ts": "No"
     },
     "property_type": "SPELL"
   },
