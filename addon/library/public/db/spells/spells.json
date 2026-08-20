@@ -7520,7 +7520,7 @@
       "Aprendo le mani a ventaglio in una direzione e unendo i pollici delle stesse, si viene a creare un vampata di fuoco. Chiunque si trovi nell’area d’effetto dell’incantesimo subisce 1d6 danni da fuoco per LP."
     ],
     "id": "ManiBrucianti",
-    "image": "7da26cd08f752e8f50d34025c74c325f.png",
+    "image": "spell_fire_soulburn.png",
     "nome_decorativo": "Mani Brucianti",
     "properties": {
       "area": "6",
