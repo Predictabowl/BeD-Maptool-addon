@@ -830,12 +830,12 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "9",
+      "tempo": "8",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "15",
+      "tossicita": "15,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -859,12 +859,12 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "9",
+      "tempo": "8",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "15",
+      "tossicita": "15,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -879,7 +879,7 @@
     "properties": {
       "area": "0",
       "cariche_base": "",
-      "durata": "0",
+      "durata": "10",
       "elemento": "Positivo",
       "mm": "4",
       "opportunita": 0,
@@ -888,12 +888,12 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "9",
+      "tempo": "8",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "15",
+      "tossicita": "15,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -908,7 +908,7 @@
     "properties": {
       "area": "0",
       "cariche_base": "",
-      "durata": "0",
+      "durata": "10",
       "elemento": "Negativo",
       "mm": "4",
       "opportunita": 0,
@@ -917,12 +917,12 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "9",
+      "tempo": "8",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "15",
+      "tossicita": "15,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -937,7 +937,7 @@
     "properties": {
       "area": "0",
       "cariche_base": "",
-      "durata": "0",
+      "durata": "10",
       "elemento": "Terra",
       "mm": "4",
       "opportunita": 0,
@@ -946,12 +946,12 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "9",
+      "tempo": "8",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "15",
+      "tossicita": "15,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -966,7 +966,7 @@
     "properties": {
       "area": "0",
       "cariche_base": "",
-      "durata": "0",
+      "durata": "10",
       "elemento": "Fuoco",
       "mm": "4",
       "opportunita": 0,
@@ -975,7 +975,7 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "9",
+      "tempo": "8",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
