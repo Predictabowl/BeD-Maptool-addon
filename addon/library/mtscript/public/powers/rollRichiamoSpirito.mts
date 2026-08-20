@@ -1,13 +1,13 @@
 [h: oToken = json.get(macro.args,0)]
 [h: sSpirito = json.get(macro.args,1)] 
 
-[macro("powers/getModRichiamoSpirito@this"): json.append(oToken,sSpirito)]
+[macro("powers/getRichiamoSpiritoPercent@this"): json.append(oToken,sSpirito)]
 [h: iModDev = macro.return]
-[h: iRoll = 1d6]
-[h: iCD = 7]
+[h: iRoll = 1d100]
+[h: iCD = 101]
 [h: iStatMod = popStatModifier(oToken,"modRichiamo")]
 [h: iTot = iRoll + iModDev]
-[h: sMsg = strformat("Tiro richiamo spirito: <span title='%{iRoll}'>1d6</span> <span title='Mod. Devozione'>%+d </span>", iModDev)]
+[h: sMsg = strformat("Tiro richiamo spirito: <span title='%{iRoll}'>1d100</span> <span title='Mod. Devozione'>%+d </span>", iModDev)]
 [h, if(iStatMod != 0 ): sMsg = strformat("%{sMsg} <span title='Altri Mod.'>%+d</span>", iStatMod)]
 [h: sMsg = strformat("%{sMsg} = %{iTot} (CD: %{iCD})")]
 

@@ -23,7 +23,8 @@
 	[r, foreach(sSpirito, jSpiriti, ""), code:{
 		[h: iDevozione = getModDevozione(oToken, sSpirito)]
 		[h: iBarraFill = floor((iDevozione*100)/iMaxDevozione)]
-		[h: iChance = min(round((iDevozione)*100/6 ,1), 100)]
+        [h, macro("powers/getRichiamoSpiritoPercent@this"): json.append(oToken,sSpirito)]
+		[h: iChance = macro.return]
 		[h, if(sSpirito == spiritoAttivo): sActive = "is-active"; sActive = ""]
         <div class="spirit-panel [r: sActive]]">
             <div class="spirit-header">

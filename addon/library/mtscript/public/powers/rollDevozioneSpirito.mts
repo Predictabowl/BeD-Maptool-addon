@@ -1,3 +1,4 @@
+<!-- TODO controlla se è utilizzata o no -->
 [h, if(json.type(macro.args) == "ARRAY"), code:{
 	[h: oToken = json.get(macro.args,0)]
 	[sSpirito = json.get(macro.args,1)]
