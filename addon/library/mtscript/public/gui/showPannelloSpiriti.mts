@@ -26,7 +26,7 @@
         [h, macro("powers/getRichiamoSpiritoPercent@this"): json.append(oToken,sSpirito)]
 		[h: iChance = macro.return]
 		[h, if(sSpirito == spiritoAttivo): sActive = "is-active"; sActive = ""]
-        <div class="spirit-panel [r: sActive]]">
+        <div class="spirit-panel [r: sActive]">
             <div class="spirit-header">
                 <div class="spirit-info">
                     <h3 class="spirit-name">[r: sSpirito]</h3>

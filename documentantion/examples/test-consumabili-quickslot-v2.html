@@ -1,0 +1,341 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Consumabili - Quickslot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&family=Macondo&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/Spells.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/Consumables.css">
+</head>
+
+<body class="light-mode">
+
+    <div class="quickslot-frame">
+
+        <!-- ============================================= -->
+        <!-- HEADER GLOBALE: slot usati / max + azioni      -->
+        <!-- ============================================= -->
+        <div class="global-header">
+            <div class="slots-counter" id="slotsCounter">
+                Slot: <span id="slotsUsed">4</span>/<span id="slotsMax">6</span>
+            </div>
+            <div class="header-actions">
+                <button class="btn" id="toggleInvBtn" onclick="toggleInventory()">Apri Inventario ▼</button>
+                <!-- <button class="btn" onclick="apriInventarioSeparato()">Inventario (finestra separata)</button> -->
+            </div>
+            <div>
+                <button class="header-theme-btn" id="themeToggle" title="Cambia Tema"
+                    onclick="toggleTheme('[r: oToken]', '[r: sGruppoPreferenze]')">
+                    🌓
+                </button>
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- SEZIONI QUICKSLOT: Pozioni / Pergamene / Rune  -->
+        <!-- ============================================= -->
+        <div class="quickslot-sections">
+            <div class="spirits-main-container">
+
+                <!-- POZIONI -->
+                <div class="spirit-panel">
+                    <div class="spirit-header">
+                        <div class="spirit-info">
+                            <h3 class="spirit-name">Pozioni</h3>
+                            <div class="spirit-stats-row">
+                                <div class="devotion-wrapper">
+                                    <span class="devotion-text">Tossicità</span>
+                                    <div class="toxic-track">
+                                        <div class="toxic-fill" style="width: 75%;"></div>
+                                    </div>
+                                    <span class="devotion-text">103/137</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spirit-body">
+                        <div class="grimoire-grid-container" id="pozioniGrid" style="max-height: none;">
+
+                            <div class="spell-card" data-type="pozione">
+                                <input type="image" class="spell-icon-btn" title="Usa"
+                                    src="../../addon/library/public/icons/spells/inv_potion_131.png"
+                                    onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this"
+                                    data-spellname="" />
+                                <div class="spell-name-badge SUPPORTO" onclick="">Pozione Cura Vita</div>
+                                <div class="potion-stats-grid">
+                                    <div class="stat-box"><span class="stat-label">T:</span><span
+                                            class="stat-value toxicFont">19</span></div>
+                                    <div class="stat-box"><span class="stat-label">TE:</span><span
+                                            class="stat-value tempoFont">12</span></div>
+                                    <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                            class="stat-value genericStatFont">9</span></div>
+                                    <div class="stat-box"><span class="stat-label">MM:</span><span
+                                            class="stat-value mmFont">5</span></div>
+                                </div>
+                                <button class="slot-toggle-btn unequip-btn" title="Rimuovi dalle Quickslot"
+                                    onclick="unequipItem(this)">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round">
+                                        <line x1="4" y1="12" x2="20" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="spell-card" data-type="pozione">
+                                <input type="image" class="spell-icon-btn" title="Usa"
+                                    src="../../addon/library/public/icons/spells/inv_potion_131.png"
+                                    onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this"
+                                    data-spellname="" />
+                                <div class="spell-name-badge SUPPORTO" onclick="">Pozione Antidoto</div>
+                                <div class="potion-stats-grid">
+                                    <div class="stat-box"><span class="stat-label">T:</span><span
+                                            class="stat-value toxicFont">6</span></div>
+                                    <div class="stat-box"><span class="stat-label">TE:</span><span
+                                            class="stat-value tempoFont">1</span></div>
+                                    <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                            class="stat-value genericStatFont">4</span></div>
+                                    <div class="stat-box"><span class="stat-label">MM:</span><span
+                                            class="stat-value mmFont">0</span></div>
+                                </div>
+                                <button class="slot-toggle-btn unequip-btn" title="Rimuovi dalle Quickslot"
+                                    onclick="unequipItem(this)">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round">
+                                        <line x1="4" y1="12" x2="20" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERGAMENE -->
+                <div class="spirit-panel is-active">
+                    <div class="spirit-header">
+                        <div class="spirit-info">
+                            <h3 class="spirit-name">Pergamene</h3>
+                        </div>
+                    </div>
+                    <div class="spirit-body">
+                        <div class="grimoire-grid-container" id="pergameneGrid" style="max-height: none;">
+
+                            <div class="spell-card" data-type="pergamena">
+                                <input type="image" class="spell-icon-btn" title="Lancia"
+                                    src="../../addon/library/public/icons/spells/spell_fire_fireball02.png"
+                                    onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this"
+                                    data-spellname="" />
+                                <div class="spell-name-badge OFFENSIVO">Palla di Fuoco</div>
+                                <div class="spell-stats-grid">
+                                    <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                            class="stat-value genericStatFont">1</span></div>
+                                    <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                            class="stat-value genericStatFont">10</span></div>
+                                    <div class="stat-box"><span class="stat-label">TE:</span><span
+                                            class="stat-value tempoFont">26</span></div>
+                                    <div class="stat-box"><span class="stat-label">PA:</span><span
+                                            class="stat-value azioneFont">2</span></div>
+                                    <div class="stat-box"><span class="stat-label">PP:</span><span
+                                            class="stat-value ppFont">12</span></div>
+                                    <div class="stat-box"><span class="stat-label">MM:</span><span
+                                            class="stat-value mmFont">0</span></div>
+                                </div>
+                                <button class="slot-toggle-btn unequip-btn" title="Rimuovi dalle Quickslot"
+                                    onclick="unequipItem(this)">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round">
+                                        <line x1="4" y1="12" x2="20" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="spell-card" data-type="pergamena">
+                                <input type="image" class="spell-icon-btn" title="Lancia"
+                                    src="../../addon/library/public/icons/spells/spell_holy_flashheal.png"
+                                    onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this"
+                                    data-spellname="" />
+                                <div class="spell-name-badge SUPPORTO">Tocco di Calore</div>
+                                <div class="spell-stats-grid">
+                                    <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                            class="stat-value genericStatFont">1</span></div>
+                                    <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                            class="stat-value genericStatFont">9</span></div>
+                                    <div class="stat-box"><span class="stat-label">TE:</span><span
+                                            class="stat-value tempoFont">1</span></div>
+                                    <div class="stat-box"><span class="stat-label">PA:</span><span
+                                            class="stat-value azioneFont">2</span></div>
+                                    <div class="stat-box"><span class="stat-label">PP:</span><span
+                                            class="stat-value ppFont">1</span></div>
+                                    <div class="stat-box"><span class="stat-label">MM:</span><span
+                                            class="stat-value mmFont">0</span></div>
+                                </div>
+                                <button class="slot-toggle-btn unequip-btn" title="Rimuovi dalle Quickslot"
+                                    onclick="unequipItem(this)">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round">
+                                        <line x1="4" y1="12" x2="20" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RUNE (non occupano slot) -->
+                <div class="spirit-panel">
+                    <div class="spirit-header">
+                        <div class="spirit-info">
+                            <h3 class="spirit-name">Rune <span class="no-slot-tag">(nessuno slot)</span></h3>
+                        </div>
+                    </div>
+                    <div class="spirit-body">
+                        <div class="grimoire-grid-container" id="runeGrid" style="max-height: none;">
+
+                            <div class="spell-card" data-type="runa">
+                                <input type="image" class="spell-icon-btn" title="Attiva"
+                                    src="../../addon/library/public/icons/spells/ability_mage_icewall.png"
+                                    onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this"
+                                    data-spellname="" />
+                                <div class="spell-name-badge CONTROLLO">Muro di Ghiaccio</div>
+                                <div class="spell-stats-grid">
+                                    <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                            class="stat-value genericStatFont">2/2</span></div>
+                                    <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                            class="stat-value genericStatFont">8</span></div>
+                                    <div class="stat-box"><span class="stat-label">TE:</span><span
+                                            class="stat-value tempoFont">1</span></div>
+                                    <div class="stat-box"><span class="stat-label">PA:</span><span
+                                            class="stat-value azioneFont">1</span></div>
+                                    <div class="stat-box"><span class="stat-label">PP:</span><span
+                                            class="stat-value ppFont">0</span></div>
+                                    <div class="stat-box"><span class="stat-label">MM:</span><span
+                                            class="stat-value mmFont">1</span></div>
+                                </div>
+                                <button class="slot-toggle-btn unequip-btn" title="Rimuovi dalle Quickslot"
+                                    onclick="unequipItem(this)">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                        stroke-width="3" stroke-linecap="round">
+                                        <line x1="4" y1="12" x2="20" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ============================================= -->
+        <!-- CASSETTO INVENTARIO (chiuso di default)        -->
+        <!-- ============================================= -->
+        <div class="inventory-drawer" id="inventoryDrawer">
+            <div class="spirit-header">
+                <div class="spirit-info">
+                    <h3 class="spirit-name">Inventario Completo</h3>
+                </div>
+            </div>
+            <div class="spirit-body">
+                <div class="grimoire-grid-container" id="inventoryGrid" style="max-height: none;">
+
+                    <div class="spell-card" data-type="pozione">
+                        <input type="image" class="spell-icon-btn" title="Usa"
+                            src="../../addon/library/public/icons/spells/inv_potion_131.png" onclick='loadParams(this)'
+                            data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="" />
+                        <div class="spell-name-badge SUPPORTO" onclick="">Fiala di Veleno</div>
+                        <div class="potion-stats-grid">
+                            <div class="stat-box"><span class="stat-label">T:</span><span
+                                    class="stat-value toxicFont">30</span></div>
+                            <div class="stat-box"><span class="stat-label">TE:</span><span
+                                    class="stat-value tempoFont">4</span></div>
+                            <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                    class="stat-value genericStatFont">6</span></div>
+                            <div class="stat-box"><span class="stat-label">MM:</span><span
+                                    class="stat-value mmFont">0</span></div>
+                        </div>
+                        <button class="slot-toggle-btn equip-btn" title="Equipaggia in Quickslot"
+                            onclick="equipItem(this)">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round">
+                                <line x1="12" y1="4" x2="12" y2="20" />
+                                <line x1="4" y1="12" x2="20" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="spell-card" data-type="pergamena">
+                        <input type="image" class="spell-icon-btn" title="Lancia"
+                            src="../../addon/library/public/icons/spells/spell_holy_flashheal.png"
+                            onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="" />
+                        <div class="spell-name-badge SUPPORTO">Scudo Magico</div>
+                        <div class="spell-stats-grid">
+                            <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                    class="stat-value genericStatFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                    class="stat-value genericStatFont">7</span></div>
+                            <div class="stat-box"><span class="stat-label">TE:</span><span
+                                    class="stat-value tempoFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">PA:</span><span
+                                    class="stat-value azioneFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">PP:</span><span
+                                    class="stat-value ppFont">6</span></div>
+                            <div class="stat-box"><span class="stat-label">MM:</span><span
+                                    class="stat-value mmFont">0</span></div>
+                        </div>
+                        <button class="slot-toggle-btn equip-btn" title="Equipaggia in Quickslot"
+                            onclick="equipItem(this)">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round">
+                                <line x1="12" y1="4" x2="12" y2="20" />
+                                <line x1="4" y1="12" x2="20" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="spell-card" data-type="runa">
+                        <input type="image" class="spell-icon-btn" title="Attiva"
+                            src="../../addon/library/public/icons/spells/ability_mage_icewall.png"
+                            onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="" />
+                        <div class="spell-name-badge CONTROLLO">Runa del Silenzio</div>
+                        <div class="spell-stats-grid">
+                            <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                    class="stat-value genericStatFont">1/1</span></div>
+                            <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                    class="stat-value genericStatFont">5</span></div>
+                            <div class="stat-box"><span class="stat-label">TE:</span><span
+                                    class="stat-value tempoFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">PA:</span><span
+                                    class="stat-value azioneFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">PP:</span><span
+                                    class="stat-value ppFont">0</span></div>
+                            <div class="stat-box"><span class="stat-label">MM:</span><span
+                                    class="stat-value mmFont">1</span></div>
+                        </div>
+                        <button class="slot-toggle-btn equip-btn" title="Equipaggia in Quickslot"
+                            onclick="equipItem(this)">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round">
+                                <line x1="12" y1="4" x2="12" y2="20" />
+                                <line x1="4" y1="12" x2="20" y2="12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../addon/library/public/js/Consumables.js" defer></script>
+    <!--
+    <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/Consumables.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
+    -->
+
+</body>

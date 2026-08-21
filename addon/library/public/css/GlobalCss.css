@@ -9,15 +9,19 @@
     --fatica-color: #ffd700;
     --tempo-color: #32cd32;
     --azione-color: #ff4d4d;
+    /* --mm-color: #ff6600; */
     --mm-color: #ff6600;
-    --pp-color: #D100D1;
+    /* --mm-color: #b1df0c; */
+    --pp-color: #DE00BF;
+    --toxic-color: #B34AFF;
+    --generic-stat-color: #d8dde3;
 
     --mana-color-inverse: #0000FF;
     --tempo-color-inverse: darkgreen;
     --mm-color-inverse: #994d00;
     --fatica-color-inverse: #cc9900;
     --azione-color-inverse: #cc0000;
-    --pp-color-inverse: #990099;
+    --pp-color-inverse: #A600BF;
 
     --link-color: #6ea8fe;
     --link-hover-color: #c299fc;
@@ -37,14 +41,16 @@
     --mm-color: #994d00;
     --fatica-color: #cc9900;
     --azione-color: #cc0000;
-    --pp-color: #990099;
+    --pp-color: #A600BF;
+    --toxic-color: #5A1FAD;
+    --generic-stat-color: #5a6066;
 
     --mana-color-inverse: #4d4dff;
     --fatica-color-inverse: #ffd700;
     --tempo-color-inverse: #32cd32;
     --azione-color-inverse: #ff4d4d;
     --mm-color-inverse: #ff6600;
-    --pp-color-inverse: #D100D1;
+    --pp-color-inverse: #DE00BF;
 
     --link-color: blue;
     --link-hover-color: purple;
@@ -208,3 +214,10 @@ form {
     color: var(--pp-color);
     font-weight: bold;
 }
+
+.genericStatFont {
+    color: var(--generic-stat-color);
+    font-weight: bold;
+}
+
+

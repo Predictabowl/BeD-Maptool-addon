@@ -1,3 +1,4 @@
+<!-- DEPRECATED will be replaced, but as of now is still used -->
 [h: target = json.get(macro.args,0)]
 
 [h, if(getOverride(target,"InventarioBloccato")), code:{

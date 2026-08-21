@@ -1,0 +1,209 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Dettagli Incantesimo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&family=Macondo&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/Spells.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/SpellDetails.css">
+    <style>
+        .toxicFont {
+            color: var(--toxic-color);
+            font-weight: bold;
+        }
+
+        .toxic-fill {
+            height: 100%;
+            /* Un gradiente blu/azzurro "spirituale". Puoi cambiarlo se preferisci */
+            background: linear-gradient(90deg, color-mix(in srgb, var(--toxic-color) 60%, white), var(--toxic-color));
+        }
+
+        .toxic-track {
+            width: 120px;
+            height: 10px;
+            background-color: rgb(0, 0, 0, 0.1);
+            border: 1px solid #444;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .potion-stats-grid {
+            display: grid;
+            /* Usiamo 1fr per ogni colonna così tutti gli elementi rimangono allineati verticalmente */
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2px 2px;
+            font-size: 0.8rem;
+            background: var(--stats-bg);
+            padding: 0px 2px;
+            border-radius: 4px;
+            text-align: left;
+            flex-shrink: 0;
+            width: 100px;
+            /* Dà una larghezza fissa complessiva al blocco stats, stabilizzandolo */
+        }
+    </style>
+</head>
+
+<body class="">
+
+    <div class="spirits-main-container">
+
+        <div class="spirit-panel">
+            <div class="spirit-header">
+                <div class="spirit-info">
+                    <h3 class="spirit-name">Pozioni</h3>
+
+                    <div class="spirit-stats-row">
+                        <div class="devotion-wrapper">
+                            <span class="devotion-text">Tossicità</span>
+                            <div class="toxic-track">
+                                <div class="toxic-fill" style="width: 75%;"></div>
+                            </div>
+                            <span class="devotion-text">103/137</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="spirit-body">
+                <!-- Riutilizziamo la griglia del grimorio per i poteri -->
+                <div class="grimoire-grid-container">
+                    <div class="spell-card" draggable="true" data-id="" ondragstart="handleDragStart(event)"
+                        ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)">
+                        <input type="image" class="spell-icon-btn" title="Lancia"
+                            src="../../addon/library/public/icons/spells/inv_potion_131.png" onclick='loadParams(this)'
+                            data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="" />
+                        <div class='spell-name-badge SUPPORTO' onclick=''>
+                            Pozione Cura Vita
+                        </div>
+                        <div class="potion-stats-grid">
+                            <div class="stat-box">
+                                <span class="stat-label">T:</span>
+                                <span class="stat-value toxicFont">19</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">TE:</span>
+                                <span class="stat-value tempoFont">12</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">Liv:</span>
+                                <span class="stat-value genericStatFont">9</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-label">MM:</span>
+                                <span class="stat-value mmFont">5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PERGAMENE                                  -->
+        <!-- ========================================== -->
+        <div class="spirit-panel is-active">
+            <div class="spirit-header">
+                <div class="spirit-info">
+                    <h3 class="spirit-name">Pegamene</h3>
+                </div>
+
+            </div>
+
+            <div class="spirit-body">
+                <!-- Riutilizziamo la griglia del grimorio per i poteri -->
+                <div class="grimoire-grid-container" style="max-height: none;">
+
+                    <!-- Card Potere 1 -->
+                    <div class="spell-card">
+                        <input type="image" class="spell-icon-btn" title="Lancia"
+                            src="../../addon/library/public/icons/spells/spell_fire_fireball02.png" onclick='loadParams(this)'
+                            data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="" />
+                        <div class="spell-name-badge OFFENSIVO">Palla di Fuoco</div>
+                        <div class="spell-stats-grid">
+                            <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                    class="stat-value genericStatFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                    class="stat-value genericStatFont">10</span></div>
+                            <div class="stat-box"><span class="stat-label">TE:</span><span
+                                    class="stat-value tempoFont">26</span></div>
+                            <div class="stat-box"><span class="stat-label">PA:</span><span
+                                    class="stat-value azioneFont">2</span></div>
+                            <div class="stat-box"><span class="stat-label">PP:</span><span
+                                    class="stat-value ppFont">12</span></div>
+                            <div class="stat-box"><span class="stat-label">MM:</span><span
+                                    class="stat-value mmFont">0</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Potere 2 -->
+                    <div class="spell-card">
+                        <input type="image" class="spell-icon-btn" title="Lancia"
+                            src="../../addon/library/public/icons/spells/spell_holy_flashheal.png" onclick='loadParams(this)'
+                            data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="" />
+                        <div class="spell-name-badge SUPPORTO">Tocco di Calore</div>
+                        <div class="spell-stats-grid">
+                            <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                    class="stat-value genericStatFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                    class="stat-value genericStatFont">9</span></div>
+                            <div class="stat-box"><span class="stat-label">TE:</span><span
+                                    class="stat-value tempoFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">PA:</span><span
+                                    class="stat-value azioneFont">2</span></div>
+                            <div class="stat-box"><span class="stat-label">PP:</span><span
+                                    class="stat-value ppFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">MM:</span><span
+                                    class="stat-value mmFont">0</span></div>
+                        </div>
+                    </div>
+                    <!-- Altre card... -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- SPIRITO 2 (INATTIVO)                       -->
+        <!-- ========================================== -->
+        <div class="spirit-panel">
+            <div class="spirit-header">
+                <div class="spirit-info">
+                    <h3 class="spirit-name">Rune</h3>
+                </div>
+            </div>
+
+            <div class="spirit-body">
+                <!-- Griglia dei poteri di Shiva -->
+                <div class="grimoire-grid-container" style="max-height: none;">
+
+                    <div class="spell-card">
+                        <input type="image" class="spell-icon-btn" title="Lancia"
+                            src="../../addon/library/public/icons/spells/ability_mage_icewall.png" onclick='loadParams(this)'
+                            data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="" />
+                        <div class="spell-name-badge CONTROLLO">Muro di Ghiaccio</div>
+                        <div class="spell-stats-grid">
+                            <div class="stat-box"><span class="stat-label">Usi:</span><span
+                                    class="stat-value genericStatFont">2/2</span></div>
+                            <div class="stat-box"><span class="stat-label">Liv:</span><span
+                                    class="stat-value genericStatFont">8</span></div>
+                            <div class="stat-box"><span class="stat-label">TE:</span><span
+                                    class="stat-value tempoFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">PA:</span><span
+                                    class="stat-value azioneFont">1</span></div>
+                            <div class="stat-box"><span class="stat-label">PP:</span><span
+                                    class="stat-value ppFont">0</span></div>
+                            <div class="stat-box"><span class="stat-label">MM:</span><span
+                                    class="stat-value mmFont">1</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>

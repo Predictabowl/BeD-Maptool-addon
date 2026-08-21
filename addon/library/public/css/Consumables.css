@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 20px;
+    overflow: auto;
+    display: block;
+    height: auto;
+}
+
+.toxicFont {
+    color: var(--toxic-color);
+    font-weight: bold;
+}
+
+.toxic-fill {
+    height: 100%;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--toxic-color) 60%, white), var(--toxic-color));
+}
+
+.toxic-track {
+    width: 120px;
+    height: 10px;
+    background-color: rgb(0, 0, 0, 0.1);
+    border: 1px solid #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.potion-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px 2px;
+    font-size: 0.8rem;
+    background: var(--stats-bg);
+    padding: 0px 2px;
+    border-radius: 4px;
+    text-align: left;
+    flex-shrink: 0;
+    width: 100px;
+}
+
+/* --- Frame principale, tiene tutto in colonna e forza l'altezza al 100% del dialog --- */
+.quickslot-frame {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+/* --- Header globale: contatore slot + azioni inventario, sempre visibile in alto --- */
+.global-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 15px;
+    /*padding: 8px 40px 8px 15px; */
+    gap: 20px;
+    background: var(--stats-bg);
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+.slots-counter {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- Area centrale scrollabile con le 3 sezioni --- */
+.quickslot-sections {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+/* --- Cassetto inventario: nascosto di default, si apre sotto le sezioni --- */
+.inventory-drawer {
+    flex-shrink: 0;
+    max-height: 260px;
+    display: none;
+    /* flex quando aperto, via JS */
+    flex-direction: column;
+    border-top: 2px solid var(--accent-color);
+    background: var(--bg-card);
+}
+
+.inventory-drawer .spirit-body {
+    overflow-y: auto;
+    max-height: 210px;
+}
+
+/* --- Bottone tondo per equip/unequip sulla card --- */
+.slot-toggle-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #555;
+    background: #333;
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.slot-toggle-btn:hover {
+    transform: scale(1.15);
+    border-color: var(--accent-color);
+}
+
+.slot-toggle-btn.equip-btn {
+    color: #32cd32;
+}
+
+.slot-toggle-btn.unequip-btn {
+    color: #ff4d4d;
+}
+
+.slot-toggle-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.no-slot-tag {
+    font-size: 0.65rem;
+    color: var(--stat-label-color, #aaaaaa);
+    font-style: italic;
+    margin-left: 4px;
+}
+
+.unequip-btn {
+    display: none;
+}
+
+.quickslot-frame.inventory-open .unequip-btn {
+    display: flex;
+}
+
+/* Stile dedicato ai bottoni di tema che vivono dentro le azioni dell'header */
+.header-theme-btn {
+    background: var(--bg-card, #2a2a2a);
+    border: 1px solid var(--border-color, #444);
+    color: var(--text-color, #fff);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.header-theme-btn:hover {
+    background: var(--accent-color, #4a90e2);
+    color: #fff;
+    border-color: var(--accent-color, #4a90e2);
+}
