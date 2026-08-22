@@ -3,749 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <style>
-        :root {
-            /*
-            --bg-color: #16181d;
-            --bg-card: #262a33;
-            */
-
-            --bg-color: #ece6d8;
-            /*--bg-card: #1c1a17;*/
-            --bg-card: #2a2a2a;
-            --bg-card-inverse: #f2ede2;
-            --border-color: #35322c;
-            /*--text-color: #ede6d8;*/
-            --text-color: #222222;
-
-            /*
-            --bg-card: #2a2a2a;
-            --bg-color: #1a1a1a;
-            --border-color: #3a3f4a;
-            --text-color: #ffffff;
-*/
-            --stats-bg: rgba(0, 0, 0, 0.3);
-            --stat-label-color: #aaaaaa;
-            --stat-label-color-inverse: #222222;
-            --accent-color: #c08a3e;
-            --font-default: 'EB Garamond', 'Palatino Linotype', 'Book Antiqua', serif;
-            --font-title: 'Gabriela', 'Dumbledor 1', 'Palatino Linotype', 'Book Antiqua', serif;
-            --font-book: 'Macondo', 'Morris Roman', 'Georgia', serif;
-            --font-spell: 'New Rocker', 'Vecna', serif;
-            --font-handwritten: 'Homemade Apple', 'Segoe Script', cursive;
-
-            --mana-color: #4d4dff;
-            --fatica-color: #ffd700;
-            --tempo-color: #32cd32;
-            --azione-color: #ff4d4d;
-            --mm-color: #ff6600;
-            --pp-color: #D100D1;
-
-            --mana-color-inverse: #0000FF;
-            --tempo-color-inverse: darkgreen;
-            --mm-color-inverse: #994d00;
-            --fatica-color-inverse: #cc9900;
-            --azione-color-inverse: #cc0000;
-            --pp-color-inverse: #990099;
-        }
-
-
-        body {
-            font-family: var(--font-default);
-            /*font-size: 16px;
-            background-color: #c4c4c4;*/
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            /*padding: 20px;*/
-            padding: 0px;
-            margin: 0px;
-            height: 100%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-
-        .light-mode {
-            /* --bg-color: #e8e8e8;
-            --bg-card: #f0f0f0;
-            --border-color: #cccccc; */
-
-            /*
-            --bg-color: #eceef1;
-            */
-            /* soft cool-gray background */
-            /*--bg-card: #ffffff;*/
-            --bg-card: #f2ede2;
-            --bg-card-inverse: #1c1a17;
-            /* full white cards, clear "elevated" feel */
-            /*--border-color: #d6d9de;*/
-            --border-color: #d8cfba
-            /* visible but soft */
-
-            /*--text-color: #222222;*/
-            --stats-bg: rgba(0, 0, 0, 0.05);
-            --stat-label-color: #222222;
-            --stat-label-color-inverse: #aaaaaa;
-
-            --mana-color: #0000FF;
-            --tempo-color: darkgreen;
-            --mm-color: #994d00;
-            --fatica-color: #cc9900;
-            --azione-color: #cc0000;
-            --pp-color: #990099;
-
-            --mana-color-inverse: #4d4dff;
-            --fatica-color-inverse: #ffd700;
-            --tempo-color-inverse: #32cd32;
-            --azione-color-inverse: #ff4d4d;
-            --mm-color-inverse: #ff6600;
-            --pp-color-inverse: #D100D1;
-        }
-
-        body {
-            font-family: var(--font-default);
-
-            font-size: 18px;
-            line-height: 1.5;
-            /* Ottimizza lo spazio verticale tra le righe di testo */
-        }
-
-        h1 {
-            font-size: 160%;
-        }
-
-        h2 {
-            font-size: 140%;
-        }
-
-        h3 {
-            font-size: 120%;
-        }
-
-        h4 {
-            font-size: 90%;
-        }
-
-        strong {
-            font-size: 110%;
-        }
-
-        a {
-            text-decoration: none;
-            color: blue;
-        }
-
-        a:hover {
-            color: purple;
-        }
-
-        a:active {
-            color: red;
-        }
-
-        .relevantTitle {
-            font-family: var(--font-title);
-            font-size: 30px;
-            color: maroon;
-        }
-
-        a.relevantTitle:hover {
-            color: red;
-        }
-
-        button {
-            font-family: var(--font-default);
-            font-size: 16px;
-        }
-
-        input {
-            font-family: var(--font-default);
-            font-size: 16px;
-        }
-
-        form {
-            margin: 0;
-            padding: 0;
-        }
-
-
-
-        /* --- CLASSI DI CATEGORIA (Colori fissi del manuale) --- */
-        .OFFENSIVO {
-            background-color: #800000;
-            color: white;
-            text-align: left;
-        }
-
-        .MUTAFORMA {
-            background-color: #CC6600;
-            color: white;
-            text-align: left;
-        }
-
-        .MARCHIO {
-            background-color: #666666;
-            color: white;
-            text-align: left;
-        }
-
-        .CONTROLLO {
-            background-color: #008080;
-            color: white;
-            text-align: left;
-        }
-
-        .MALATTIA {
-            background-color: #666600;
-            color: white;
-            text-align: left;
-        }
-
-        .MALEDIZIONE {
-            background-color: #4700B8;
-            color: white;
-            text-align: left;
-        }
-
-        .SUPPORTO {
-            background-color: #0000FF;
-            color: white;
-            text-align: left;
-        }
-
-        .SERVITORE {
-            background-color: #008000;
-            color: white;
-            text-align: left;
-        }
-
-        /* --- COLORI DELLE RISORSE --- */
-        .manaFont {
-            color: var(--mana-color);
-            font-weight: bold;
-        }
-
-        .faticaFont {
-            color: var(--fatica-color);
-            font-weight: bold;
-        }
-
-        .tempoFont {
-            color: var(--tempo-color);
-            font-weight: bold;
-        }
-
-        .azioneFont {
-            color: var(--azione-color);
-            font-weight: bold;
-        }
-
-        .mmFont {
-            color: var(--mm-color);
-            font-weight: bold;
-        }
-
-        .ppFont {
-            color: var(--pp-color);
-            font-weight: bold;
-        }
-
-        .light-mode .manaFont {
-            color: var(--mana-color-inverse);
-        }
-
-        .light-mode .tempoFont {
-            color: var(--tempo-color-inverse);
-        }
-
-        .light-mode .mmFont {
-            color: var(--mm-color-inverse);
-        }
-
-        .light-mode .faticaFont {
-            color: var(--fatica-color-inverse);
-        }
-
-        .light-mode .azioneFont {
-            color: var(--azione-color-inverse);
-        }
-
-        .light-mode .ppFont {
-            color: var(--pp-color-inverse);
-        }
-
-
-        div {
-            padding: 0px;
-            margin: 0px;
-        }
-
-        span {
-            padding: 0px;
-            margin: 0px;
-        }
-
-        /* --- CONTENITORE DELLA GRIGLIA PRINCIPALE --- */
-        .spells-grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            grid-auto-rows: max-content;
-            gap: 2px;
-            overflow-y: auto;
-            padding: 3px 15px 3px 2px;
-        }
-
-        /* --- SINGOLA CARD DEL POTERE --- */
-        .spell-card {
-            display: flex;
-            align-items: center;
-            background-color: var(--bg-card);
-            color: var(--text-color);
-            border-radius: 6px;
-            padding: 3px 10px;
-            border: 1px solid var(--border-color);
-            gap: 6px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-            /*
-            background-image: radial-gradient(ellipse at center,
-                    rgba(0, 0, 0, 0.5) 0%,
-                    transparent 65%,
-                    rgba(192, 138, 62, 0.35) 100%);
-                    */
-        }
-
-        /* Effetto visivo sulla card mentre viene trascinata */
-        .spell-card.dragging {
-            opacity: 0.4;
-            border: 2px dashed var(--accent-color, #8a2be2);
-        }
-
-        /* Cambia il cursore sulla card per indicare che è afferrabile */
-
-        .spell-card:active {
-            cursor: grabbing;
-        }
-
-        .spell-card:hover {
-            border-color: #666;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-        }
-
-        /* --- BOTTONE ICONA (Aggiornato con effetto zoom e pressione) --- */
-        .spell-icon-btn {
-            width: 32px;
-            /* Leggermente più piccolo di base come richiesto */
-            height: 32px;
-            background: #333;
-            border-radius: 4px;
-            border: 1px solid #555;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            font-size: 1rem;
-
-            /* Gestione fluida delle animazioni di scala */
-            transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
-        }
-
-        /* Quando fai hover: l'icona si ingrandisce (es. scala a 1.25) */
-        .spell-icon-btn:hover {
-            background: #3a3a3a;
-            border-color: var(--accent-color, #8a2be2);
-            transform: scale(1.25);
-        }
-
-        /* Quando premi il bottone: l'icona si rimpicciolisce simulando la pressione */
-        .spell-icon-btn:active {
-            transform: scale(0.90);
-        }
-
-        /* --- BADGE DEL NOME --- */
-        .spell-name-badge {
-            flex: 1;
-            padding: 6px 10px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 1rem;
-            font-family: var(--font-spell);
-            cursor: pointer;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transition: background-color 0.2s ease, transform 0.1s ease;
-        }
-
-        .spell-name-badge:hover {
-            transform: translateY(-1px);
-            background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-        }
-
-
-        /* --- GRIGLIA DELLE 6 STATISTICHE --- */
-        .spell-stats-grid {
-            display: grid;
-            /* Usiamo 1fr per ogni colonna così tutti gli elementi rimangono allineati verticalmente */
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px 2px;
-            font-size: 0.8rem;
-            background: var(--stats-bg);
-            padding: 0px 2px;
-            border-radius: 4px;
-            text-align: left;
-            flex-shrink: 0;
-            width: 160px;
-            /* Dà una larghezza fissa complessiva al blocco stats, stabilizzandolo */
-        }
-
-        .stat-box {
-            display: flex;
-            gap: 3px;
-            align-items: baseline;
-            justify-content: flex-start;
-            width: 100%;
-        }
-
-        .stat-label {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            color: var(--stat-label-color);
-            /*font-weight: bold;*/
-        }
-
-        .stat-value {
-            font-weight: bold;
-            text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-            white-space: nowrap;
-            /* Mantiene il valore sulla stessa riga */
-        }
-
-        .recupero-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .recupero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-
-            /* Background with 50% opacity (rgba) */
-            background-color: rgba(0, 123, 255, 0.5);
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-
-            /* Center the number inside the overlay */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            /* Match the input's border radius if it has one */
-            border-radius: 4px;
-
-            /* CRITICAL: Allows clicks to pass through to the input underneath */
-            pointer-events: none;
-
-            /* Optional: Smooth transition if you want to hide it on focus */
-            transition: opacity 0.2s ease;
-        }
-
-        /* --- GRIGLIA DEL GRIMORIO (Per righe) --- */
-
-        .grimoire-dialog {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            padding: 10px;
-            /*gap: 15px;*/
-        }
-
-        .grimoire-grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 5px;
-            overflow-y: auto;
-            padding: 5px;
-            padding-right: 15px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            flex: 1;
-            min-height: 0;
-        }
-
-        /* --- CARD DEL LIBRO --- */
-
-
-        .spell-card.in-book {
-            /*    
-            background-image: repeating-linear-gradient(45deg,
-                    rgba(126, 125, 124, 0.2),
-                    rgba(129, 129, 128, 0.2) 8px,
-                    transparent 8px,
-                    transparent 16px);
-            background-image: repeating-linear-gradient(45deg,
-                    rgba(192, 138, 62, 0.20),
-                    rgba(192, 138, 62, 0.20) 8px,
-                    transparent 8px,
-                    transparent 16px);
-            background-image: none;
-            background-image: radial-gradient(ellipse at center,
-            rgba(0, 0, 0, 0.5) 0%,
-            transparent 65%,
-            rgba(92, 92, 92, 0.35) 100%);
-            */
-            filter: grayscale(0.4);
-            background-color: var(--bg-card-inverse);
-        }
-
-        .spell-card.in-book .manaFont {
-            color: var(--mana-color-inverse);
-        }
-
-        .spell-card.in-book .tempoFont {
-            color: var(--tempo-color-inverse);
-        }
-
-        .spell-card.in-book .mmFont {
-            color: var(--mm-color-inverse);
-        }
-
-        .spell-card.in-book .faticaFont {
-            color: var(--fatica-color-inverse);
-        }
-
-        .spell-card.in-book .azioneFont {
-            color: var(--azione-color-inverse);
-        }
-
-        .spell-card.in-book .ppFont {
-            color: var(--pp-color-inverse);
-        }
-
-        .spell-card.in-book .stat-label {
-            color: var(--stat-label-color-inverse);
-        }
-
-        /*
-        .spell-card.in-book::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(45deg,
-                    rgba(192, 138, 62, 0.18),
-                    rgba(192, 138, 62, 0.18) 8px,
-                    transparent 8px,
-                    transparent 16px);
-            pointer-events: none;
-        z-index: 1;
-        }
-        */
-        /*
-        .light-mode .spell-card.in-book {
-            background-image: repeating-linear-gradient(45deg,
-                    rgba(192, 138, 62, 0.16),
-                    rgba(192, 138, 62, 0.16) 8px,
-                    transparent 8px,
-                    transparent 16px);
-            filter: grayscale(0.5) brightness(0.85);
-            opacity: 0.75;
-        }
-            */
-
-        /* --- STILE PER LA BARRA DEI CONTROLLI (Conferma, Annulla, Contatore) --- */
-        .grimoire-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            /* Spinge a sinistra i pulsanti e a destra il contatore */
-            gap: 15px;
-            padding: 5px 2px;
-            min-height: 60px;
-            flex-shrink: 0;
-        }
-
-        /* Gruppo pulsanti a sinistra */
-        .grimoire-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        /* Stile dei pulsanti */
-        .btn {
-            background: #333;
-            color: white;
-            border: 1px solid #555;
-            padding: 6px 14px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .btn-confirm:hover {
-            background: var(--accent-color);
-            border-color: var(--accent-color);
-        }
-
-        .btn-cancel:hover {
-            background: #444;
-            border-color: #777;
-        }
-
-        /* Stile del contatore a destra */
-        .grimoire-counter {
-            font-size: 0.95rem;
-            font-weight: bold;
-        }
-
-        /* Stile quando si supera il limite */
-        .over-limit {
-            color: #ff4d4d;
-            /* Rosso allarme */
-            font-weight: 900;
-            text-shadow: 0 0 4px rgba(255, 77, 77, 0.4);
-        }
-
-
-        /* --- PANNELLI DEGLI SPIRITI --- */
-        .spirits-main-container {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            padding-left: 5px;
-            padding-right: 15px;
-            overflow-y: auto;
-            height: 100%;
-        }
-
-        .spirit-panel {
-            /*background-color: var(--bg-card);*/
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: border-color 0.2s ease;
-            min-height: 320px;
-        }
-
-        /* Spirito Attivo - Bordo dorato/bronzo ed effetto glow */
-        .spirit-panel.is-active {
-            border: 2px solid var(--accent-color);
-            box-shadow: 0 0 12px rgba(192, 138, 62, 0.4);
-            /* Glow basato sul tuo accent-color */
-        }
-
-        /* Intestazione dello Spirito */
-        .spirit-header {
-            background-color: rgba(0, 0, 0, 0.4);
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .spirit-info {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .spirit-name {
-            margin: 0;
-            font-family: var(--font-title);
-            font-size: 1.4rem;
-            color: var(--accent-color);
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-        }
-
-        /* Contenitore interno per i poteri (margini interni) */
-        .spirit-body {
-            padding: 10px;
-            overflow: auto;
-            max-height: 220px;
-        }
-
-        /* --- STATISTICHE SPIRITO (Devozione e Probabilità) --- */
-        .spirit-stats-row {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 0.85rem;
-        }
-
-        /* Badge Probabilità */
-        .prob-badge {
-            background: #222;
-            padding: 3px 8px;
-            border-radius: 4px;
-            border: 1px solid #555;
-            color: #e0e0e0;
-            font-weight: bold;
-        }
-
-        .prob-value {
-            color: #32cd32;
-            /* Verde per la % di successo */
-        }
-
-        /* Barra Devozione */
-        .devotion-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .devotion-track {
-            width: 120px;
-            height: 10px;
-            background-color: #111;
-            border: 1px solid #444;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .devotion-fill {
-            height: 100%;
-            /* Un gradiente blu/azzurro "spirituale". Puoi cambiarlo se preferisci */
-            background: linear-gradient(90deg, #4682b4, #5bc0de);
-        }
-
-        .devotion-text {
-            font-weight: bold;
-            color: #aaa;
-        }
-
-        /* Bottone di richiamo modificato per lo stato attivo */
-        .btn-active-spirit {
-            background: transparent;
-            color: var(--accent-color);
-            border: 1px solid var(--accent-color);
-            cursor: default;
-        }
-
-        .btn-active-spirit:hover {
-            background: transparent;
-            border-color: var(--accent-color);
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&family=Macondo&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/Spells.css">
 </head>
 
 <body class="light-mode">
-    <form id="form-memorizza" class="grimoire-dialog" method="json"
-        action="gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset">
+    <form id="form-memorizza" class="grimoire-dialog" method="json" action="gui/formMemPoteri@lib:it.aldinucci.piero.bed.maptool.ruleset">
         <div class="grimoire-grid-container">
             <!-- SPELL CARDS -->
             <div class='spell-card in-book' onclick="toggleCardCheckbox(event)">
-                <input id="memorizzati-input" type="hidden" value='[r: memorized]' />
+                <input id="memorizzati-input1" type="hidden" value="[r: memorized]">
 
-                <div class='spell-name-badge OFFENSIVO' onclick=''>
+                <div class="spell-name-badge OFFENSIVO">
                     Palla di Guano
                 </div>
                 <div class="spell-stats-grid">
@@ -777,15 +51,15 @@
             </div>
 
             <div class='spell-card in-book' onclick="toggleCardCheckbox(event)">
-                <input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]' />
+                <input id="memorizzati-input2" type="hidden" name="[r: spellId]" value="[r: memorized]">
 
-                <div class='spell-name-badge OFFENSIVO' onclick=''>
+                <div class="spell-name-badge OFFENSIVO">
                     Palla di Guano
                 </div>
                 <div class="spell-stats-grid">
                     <div class="stat-box">
                         <span class="stat-label">M:</span>
-                        <span class='stat-value manaFont'>15</span>
+                        <span class="stat-value manaFont">15</span>
                     </div>
                     <div class="stat-box">
                         <span class="stat-label">PF:</span>
@@ -810,16 +84,16 @@
                 </div>
             </div>
 
-            <div class='spell-card in-book' onclick="toggleCardCheckbox(event)">
-                <input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]' />
+            <div class="spell-card in-book" onclick="toggleCardCheckbox(event)">
+                <input id="memorizzati-input3" type="hidden" value="[r: memorized]">
 
-                <div class='spell-name-badge OFFENSIVO' onclick=''>
+                <div class="spell-name-badge OFFENSIVO">
                     Palla di Guano
                 </div>
                 <div class="spell-stats-grid">
                     <div class="stat-box">
                         <span class="stat-label">M:</span>
-                        <span class='stat-value manaFont'>15</span>
+                        <span class="stat-value manaFont">15</span>
                     </div>
                     <div class="stat-box">
                         <span class="stat-label">PF:</span>
@@ -844,16 +118,16 @@
                 </div>
             </div>
 
-            <div class='spell-card' onclick="toggleCardCheckbox(event)">
-                <input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]' />
+            <div class="spell-card" onclick="toggleCardCheckbox(event)">
+                <input id="memorizzati-input4" type="hidden">
 
-                <div class='spell-name-badge SUPPORTO' onclick=''>
+                <div class="spell-name-badge SUPPORTO">
                     Palla di Guano
                 </div>
                 <div class="spell-stats-grid">
                     <div class="stat-box">
                         <span class="stat-label">M:</span>
-                        <span class='stat-value manaFont'>15</span>
+                        <span class="stat-value manaFont">15</span>
                     </div>
                     <div class="stat-box">
                         <span class="stat-label">PF:</span>
@@ -878,16 +152,16 @@
                 </div>
             </div>
 
-            <div class='spell-card in-book' onclick="toggleCardCheckbox(event)">
-                <input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]' />
+            <div class="spell-card in-book" onclick="toggleCardCheckbox(event)">
+                <input id="memorizzati-input5" type="hidden">
 
-                <div class='spell-name-badge SUPPORTO' onclick=''>
+                <div class="spell-name-badge SUPPORTO">
                     Palla di Guano
                 </div>
                 <div class="spell-stats-grid">
                     <div class="stat-box">
                         <span class="stat-label">M:</span>
-                        <span class='stat-value manaFont'>15</span>
+                        <span class="stat-value manaFont">15</span>
                     </div>
                     <div class="stat-box">
                         <span class="stat-label">PF:</span>
@@ -912,16 +186,16 @@
                 </div>
             </div>
 
-            <div class='spell-card ' onclick="toggleCardCheckbox(event)">
-                <input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]' />
+            <div class="spell-card" onclick="toggleCardCheckbox(event)">
+                <input id="memorizzati-input6" type="hidden">
 
-                <div class='spell-name-badge OFFENSIVO' onclick=''>
+                <div class="spell-name-badge OFFENSIVO">
                     Palla di Guano
                 </div>
                 <div class="spell-stats-grid">
                     <div class="stat-box">
                         <span class="stat-label">M:</span>
-                        <span class='stat-value manaFont'>15</span>
+                        <span class="stat-value manaFont">15</span>
                     </div>
                     <div class="stat-box">
                         <span class="stat-label">PF:</span>
@@ -946,8 +220,8 @@
                 </div>
             </div>
 
-            <div class='spell-card in-book' onclick="toggleCardCheckbox(event)">
-                <input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]' />
+            <div class="spell-card in-book" onclick="toggleCardCheckbox(event)">
+                <input id="memorizzati-input7" type="hidden" name="[r: spellId]" value='[r: memorized]' />
 
                 <div class='spell-name-badge OFFENSIVO' onclick=''>
                     Palla di Guano
@@ -983,8 +257,8 @@
 
         <div class="grimoire-footer">
             <div class="grimoire-actions">
-                <input type="submit" name="Conferma" value="Conferma" class="btn btn-confirm" />
-                <input type="submit" name="Annulla" value="Annulla" class="btn btn-cancel" />
+                <input type="submit" name="Conferma" value="Conferma" class="btn btn-confirm">
+                <input type="submit" name="Annulla" value="Annulla" class="btn btn-cancel">
             </div>
 
             <div class="grimoire-counter">
@@ -993,7 +267,7 @@
             </div>
         </div>
 
-        <input type="hidden" name="token" value="[r: oToken]" />
+        <input type="hidden" name="token" value="[r: oToken]">
     </form>
 
     <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=true" defer></script>

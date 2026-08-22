@@ -18,17 +18,15 @@
 }
 
 body {
-    font-family: var(--font-default);
     /*font-size: 16px;*/
     background-color: #c4c4c4;
     background-color: var(--bg-color);
     color: var(--text-color);
     padding: 0px;
     margin: 0px;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    overflow: auto;
+    /* display: flex; */
+    /* flex-direction: column; */
 }
 
 
@@ -119,6 +117,26 @@ span {
     border-color: var(--spell-action-color, #8a2be2);
 }
 
+.spell-icon-btn:disabled,
+.spell-icon-btn[disabled] {
+    filter: grayscale(1);
+    opacity: 0.6; /* Un leggero calo di opacità aiuta, ma il grigio fa il grosso */
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.spell-icon-btn:disabled:hover,
+.spell-icon-btn:disabled:active,
+.spell-icon-btn[disabled]:hover,
+.spell-icon-btn[disabled]:active {
+    filter: grayscale(1);
+    transform: none !important;
+    background: #333; /* Mantiene il suo sfondo originale senza accendersi */
+    border-color: #555;
+    box-shadow: none !important;
+}
+
 /* --- BADGE DEL NOME --- */
 .spell-name-badge {
     flex: 1;
@@ -131,6 +149,7 @@ span {
     overflow: hidden;
     text-overflow: ellipsis;
     transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
 }
 
 .spell-name-badge:hover {
@@ -335,12 +354,11 @@ span {
 
 /* --- PANNELLI DEGLI SPIRITI --- */
 .spirits-main-container {
-    display: flex;
+    display: block;
     flex-direction: column;
     gap: 15px;
     padding: 5px 15px 5px 5px;
     overflow-y: auto;
-    height: 100%;
 }
 
 .spirit-panel {
@@ -350,7 +368,9 @@ span {
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: border-color 0.2s ease;
-    min-height: 320px;
+    /* min-height: 320px; */
+    min-height: 0;
+    margin-bottom: 10px;
 }
 
 /* Spirito Attivo - Bordo dorato/bronzo ed effetto glow */
@@ -388,7 +408,7 @@ span {
 .spirit-body {
     padding: 10px;
     overflow: auto;
-    max-height: 220px;
+    max-height: 230px;
     
 }
 

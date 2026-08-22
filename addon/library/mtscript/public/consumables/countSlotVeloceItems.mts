@@ -1,7 +1,10 @@
 [h: oToken = arg(0)]
 
-[h: switchToken(oToken)]
-[h: oGroup = getDaMemoria(oToken,"SlotVeloci")]
-[h, if(json.type(oGroup) != "ARRAY"): oGroup = "[]"]
+[h, macro("consumables/getInventarioConsumabili@this"): oToken]
+[h: aConsumabili = macro.return]
+[h: count = 0]
+[h, foreach(oCons, aConsumabili), code:{
+    [if(json.get(oCons, "equipped") == 1): count = count +1]
+}]
 
-[h: macro.return = json.length(oGroup)]
+[h: macro.return = count]

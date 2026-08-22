@@ -1,13 +1,17 @@
 [h: oToken = json.get(macro.args,"token")]
-[h: spellName = json.get(macro.args,"libSpell")]
+[h: slotId = json.get(macro.args,"slotId")]
+
+
+[h: oScroll = getFromSlotVeloce(oToken, slotId)]
+[h: spellName = json.get(oScroll, "libName")]
+[h: iLivello = json.get(oScroll, "livello")]
+
+[h, macro("consumables/getTipoConsumabile@this"): json.append(spellName, 1)]
+[h: sTipoConsumable = macro.return]
 
 [h: sDialog = "DescrizioneIncantesimo"]
-
 [h, macro("gui/getVisibleSpellTraits@this"): spellName]
 [h: lTratti = macro.return]
-[h, macro("gui/delSpellStatFromCache@this"):json.append(oToken,spellName)]
-[h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,spellName)]
-[h: oSpellData = macro.return]
 
 [h: bLightMode = getPreferenza("light_mode",oToken, sDialog)]
 
@@ -15,7 +19,7 @@
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellDetailsCssLink.html")]
-	<title> [r: getName(oToken)] - Descrizione Potere</title>
+	<title> [r: getName(oToken)] - Descrizione Pergamena</title>
 </head>
 <body class="[r, if(bLightMode == 1): 'light-mode']">
 
@@ -44,34 +48,31 @@
         <!-- Fascia risorse -->
         <div class="resource-ribbon">
             <div class="resource-item">
-				[h: manaMant = json.get(oSpellData,"ManaMant")]
-        		[h, if(manaMant>0): manaMant="†"+manaMant; manaMant=""]
-                <span class="stat-label">Mana</span>
-                <span class="stat-value manaFont">[r: json.get(oSpellData, "mana")][r: manaMant]</span>
+                <span class="stat-label">LL</span>
+                [h, macro("consumables/getLLOggetto@this"): iLivello]
+                <span class="stat-value genericStatFont">[r: macro.return]</span>
             </div>
             <div class="resource-item">
-				[h: pfMant = json.get(oSpellData,"PFMant")]
-        		[h, if(pfMant>0): pfMant="†"+pfMant; pfMant=""]
-                <span class="stat-label">PF</span>
-                <span class="stat-value faticaFont">[r: json.get(oSpellData, "PF")][r: pfMant]</span>
+                <span class="stat-label">CD</span>
+                [h, macro("consumables/getCDOggetto@this"): iLivello]
+                <span class="stat-value genericStatFont">[r: macro.return]</span>
             </div>
             <div class="resource-item">
                 <span class="stat-label">Tempo</span>
-                <span class="stat-value tempoFont">[r: json.get(oSpellData, "tempo")]</span>
+                [h: spellParams = json.set("","source",oToken,"spellName",spellName,"critRes",0)] 
+                <span class="stat-value tempoFont">[r: getSpellTime(spellParams)]</span>
             </div>
             <div class="resource-item">
                 <span class="stat-label">PA</span>
-                <span class="stat-value azioneFont">[r: json.get(oSpellData, "PA")]</span>
+                <span class="stat-value azioneFont">[r: getSpellPAzione(oToken, spellName, 0)]</span>
             </div>
             <div class="resource-item">
-				[h: ppMant = json.get(oSpellData,"PPMant")]
-        		[h, if(ppMant>0): ppMant="†"+ppMant; ppMant=""]
                 <span class="stat-label">PP</span>
-                <span class="stat-value ppFont">[r: json.get(oSpellData, "PP")][r: ppMant]</span>
+                <span class="stat-value ppFont">[r: getSpellPP(oToken, spellName, 0)]</span>
             </div>
             <div class="resource-item">
                 <span class="stat-label">MM</span>
-                <span class="stat-value mmFont">[r: json.get(oSpellData, "MM")]</span>
+                <span class="stat-value mmFont">[r: getSpellMM(oToken, spellName, 0)]</span>
             </div>
         </div>
 
@@ -82,10 +83,12 @@
 
             <!-- Dettagli in stile indice/compendio -->
             <div class="compendium-list">
-                <div class="compendium-row">
-                    <span class="label">Scuola</span><span class="leader"></span>
-                    <span class="value">[r: getScuola(oToken,spellName)]</span>
-                </div>
+                [r, if(sTipoConsumable != "POZIONE"), code:{
+                    <div class="compendium-row">
+                        <span class="label">Scuola</span><span class="leader"></span>
+                        <span class="value">[r: getScuola(oToken,spellName)]</span>
+                    </div>
+                }]
                 <div class="compendium-row">
                     <span class="label">Tipo</span><span class="leader"></span>
                     <span class="value">[r: sTipo]</span>
@@ -110,15 +113,17 @@
                     <span class="label">TS</span><span class="leader"></span>
                     <span class="value">[r: fetchSpellProp(spellName,"TS")]</span>
                 </div>
-                <div class="compendium-row">
-                    <span class="label">Componenti</span><span class="leader"></span>
-                    <span class="value">[r: fetchSpellProp(spellName,"componenti")]</span>
-                </div>
+                [r, if(sTipoConsumable != "POZIONE"), code:{
+                    <div class="compendium-row">
+                        <span class="label">Componenti</span><span class="leader"></span>
+                        <span class="value">[r: fetchSpellProp(spellName,"componenti")]</span>
+                    </div>
                 <div class="compendium-row">
                     <span class="label">Recupero</span><span class="leader"></span>
 					[h: iRecupero = fetchSpellProp(spellName,"recupero")]
                     <span class="value">[r, if(isNumber(iRecupero)): iRecupero; 0]</span>
                 </div>
+                }]
                 <div class="compendium-row">
                     <span class="label">Opportunità</span><span class="leader"></span>
 					[h, macro("powers/generaOpportunita@this"): json.append(oToken,spellName)]
@@ -128,10 +133,12 @@
                     <span class="label">Medium</span><span class="leader"></span>
                     <span class="value">[r: fetchSpellProp(spellName,"proiettile")]</span>
                 </div>
-                <div class="compendium-row">
-                    <span class="label">Tratti</span><span class="leader"></span>
-                    <span class="value">[r: lTratti]</span>
-                </div>
+                [r, if(sTipoConsumable != "POZIONE"), code:{
+                    <div class="compendium-row">
+                        <span class="label">Tratti</span><span class="leader"></span>
+                        <span class="value">[r: lTratti]</span>
+                    </div>
+                }]
             </div>
 
             <!-- Descrizione -->

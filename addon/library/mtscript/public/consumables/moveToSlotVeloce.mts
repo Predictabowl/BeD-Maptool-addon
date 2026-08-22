@@ -2,6 +2,7 @@
 [h: iOggetto = arg(1)]
 
 [h: switchToken(oToken)]
-[h: oOggetto = json.get(Consumabili,iOggetto)]
-[h: Consumabili = json.remove(Consumabili,iOggetto)]
-[h: addToSlotVeloce(oToken,oOggetto)]
+[h: oOggetto = json.get(Consumabili, iOggetto)]
+[h: oOggetto = json.set(oOggetto, "equipped", 1)]
+[h: Consumabili = json.set(Consumabili, iOggetto, oOggetto)]
+[h, macro("mobs/applyIngombroPenalties@this"): oToken]

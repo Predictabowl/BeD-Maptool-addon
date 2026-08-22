@@ -26,20 +26,29 @@
 
 
 
-[h, macro("consumables/getSlotVeloci@this"): oToken]
+[h, macro("consumables/getInventarioConsumabili@this"): oToken]
 [h: aSlotVeloci = macro.return]
 [h: aPozioni = "[]"]
-[h: aScrolls = "[]"]
+[h: aPergamene = "[]"]
+[h: aZaino = "[]"]
+[h: index = 0]
 [h, foreach(oItem, aSlotVeloci), code:{
 	[macro("consumables/getTipoConsumabile@this"): json.append(json.get(oItem, "libName"), 1)]
-	[if(macro.return == "POZIONE"): aPozioni = json.append(aPozioni, oItem); aScrolls = json.append(aScrolls, oItem)]
+	[oItem = json.set(oItem, "index", index)]
+	[bEquipped = json.get(oItem, "equipped")]
+	[if(bEquipped != 1), code: {
+		[aZaino = json.append(aZaino, oItem)]
+	};{
+		[if(macro.return == "POZIONE"): aPozioni = json.append(aPozioni, oItem); aPergamene = json.append(aPergamene, oItem)]
+	}]
+	[index = index +1]
 }]
 
 [h: iTox = getTossicoLiv(oToken)]
 
 
 [h: pSize = strformat("width=%{iLarg}; height=%{iAltezza}")]
-[frame5(sDialog,strformat("temporary=0; size=%{pSize}; closebutton=0")):{
+[dialog5(sDialog,strformat("temporary=0; size=%{pSize}; closebutton=0")):{
 	<html>
 	
 
@@ -49,12 +58,14 @@
     <link rel="stylesheet" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Consumables.css?cachelib=false">
 </head>
 
-<body class="light-mode">
+<body class="light-mode" data-tokenid = "[r: oToken]">
 
     <div class="quickslot-frame">
         <div class="global-header">
             <div class="slots-counter" id="slotsCounter">
-                Slot: <span id="slotsUsed">4</span>/<span id="slotsMax">6</span>
+				[h, macro("mobs/getNumSlotVeloci@this"): oToken]
+				[h: iMaxSlots = macro.return]
+                Slot: <span id="slotsUsed">[r: countSlotVeloceItems(oToken)]</span>/<span id="slotsMax">[r: iMaxSlots]</span>
             </div>
             <div class="header-actions">
                 <button class="btn" id="toggleInvBtn" onclick="toggleInventory()">Apri Inventario ▼</button>
@@ -69,6 +80,7 @@
 
 		<div class="quickslot-sections">
             <div class="spirits-main-container">
+				<!-- POZIONI -->
 	            <div class="spirit-panel">
 	                <div class="spirit-header">
 	                    <div class="spirit-info">
@@ -87,55 +99,48 @@
 	                    </div>
 	                </div>
 	                <div class="spirit-body">
-                        <div class="grimoire-grid-container" id="pozioniGrid" style="max-height: none;">
+                        <div class="grimoire-grid-container" id="pozioniGrid">
 						[r, foreach(oPozione, aPozioni, ""), code:{
-							<div class="spell-card" data-type="pozione">
-								[h: spellId = json.get(oPozione, "libName")]
-                                <input type="image" class="spell-icon-btn" title="Usa"
-                                    src="[r: fetchSpellImage(spellId)]"
-                                    onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this"
-                                    data-spellname="[r: spellId]" />
-                                <div class="spell-name-badge [r: fetchConsumableProp(spellId, 'tipo')]" onclick="">[r: fetchConsumableProp(spellId, 'nome_decorativo')]</div>
-                                <div class="potion-stats-grid">
-                                    <div class="stat-box">
-										<span class="stat-label">Tox:</span>
-										<span class="stat-value toxicFont">[r: getTossicoOggetto(oPozione, oToken)]</span>
-									</div>
-                                    <div class="stat-box">
-										<span class="stat-label">TE:</span>
-										<span class="stat-value tempoFont">
-											[h, macro("consumables/getItemTime@this"): json.append(oToken, spellId)]
-											[r: macro.return]
-										</span>
-									</div>
-                                    <div class="stat-box"><span class="stat-label">Liv:</span>
-										[h, macro("consumables/getLivelloOggetto@this"): json.append(oPozione, oToken)]
-										<spanclass="stat-value genericStatFont">[r: macro.return]
-										</span>
-									</div>
-                                    <div class="stat-box">
-										<span class="stat-label">MM:</span>
-										<span class="stat-value mmFont">
-											[h, macro("consumables/getMMOggetto@this"): json.append(oToken, spellId, "POZIONE")]
-											[r: macro.return]
-										</span>
-									</div>
-                                </div>
-                                <button class="slot-toggle-btn unequip-btn" title="Rimuovi dalle Quickslot"
-                                    onclick="unequipItem(this)">
-                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
-                                        stroke-width="3" stroke-linecap="round">
-                                        <line x1="4" y1="12" x2="20" y2="12" />
-                                    </svg>
-                                </button>
-                            </div>
+							[r, macro("gui/CompilePotionSpellCard@this"): json.append(oToken, oPozione, 1)]
 						}]
+                        </div>
+                    </div>
+	            </div>
+
+				<!-- PERGAMENE -->
+	            <div class="spirit-panel">
+	                <div class="spirit-header">
+	                    <div class="spirit-info">
+	                        <h3 class="spirit-name">Pergamene</h3>
+	                    </div>
+	                </div>
+	                <div class="spirit-body">
+                        <div class="grimoire-grid-container" id="pergameneGrid">
+						[r, foreach(oPergamena, aPergamene, ""), code:{
+							[r, macro("gui/CompileScrollSpellCard@this"): json.append(oToken, oPergamena, 1)]
+						}]
+                        </div>
+                    </div>
+	            </div>
+
+				<!-- RUNE -->
+	            <div class="spirit-panel">
+	                <div class="spirit-header">
+	                    <div class="spirit-info">
+	                        <h3 class="spirit-name">Rune</h3>
+	                    </div>
+	                </div>
+	                <div class="spirit-body">
+                        <div class="grimoire-grid-container" id="runeGrid">
+							[h: aRuneAttive = getRuneAttive(oToken)]
+							[r, foreach(oRuna, aRuneAttive, ""), code:{
+								[r, macro("gui/CompileRuneSpellCard@this"): json.append(oToken, oRuna)]
+							}]
                         </div>
                     </div>
 	            </div>
             </div>
         </div>
-
 
         <div class="inventory-drawer" id="inventoryDrawer">
             <div class="spirit-header">
@@ -145,9 +150,9 @@
             </div>
             <div class="spirit-body">
                 <div class="grimoire-grid-container" id="inventoryGrid" style="max-height: none;">
-
-                 
-
+					[r, foreach(oConsumabile, aZaino, ""), code:{
+						[r, macro("gui/CompileConsumableSpellCard@this"): json.append(oToken, oConsumabile, 0)]
+					}]
                 </div>
             </div>
         </div>

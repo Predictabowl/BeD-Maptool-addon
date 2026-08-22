@@ -30,7 +30,7 @@
 			[h, if(json.contains(oMemList,spellId)): memorized = 1; memorized = 0]
 			[h: iMemCount = iMemCount + memorized]
 			<div class='spell-card [r, if(!memorized): "in-book"; ""]' onclick="toggleCardCheckbox(event)">
-				<input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]'/>
+				<input id="memorizzati-input" type="hidden" name="[r: spellId]" value='[r: memorized]'>
 				[r, macro("gui/CompileSpellStatGrid@this"): json.append(oToken, spellId)]
             </div>
 		}]
@@ -38,8 +38,8 @@
 
 		<div class="grimoire-footer">
             <div class="grimoire-actions">
-				<input type="submit" name="Conferma" value="Conferma" class="btn btn-confirm"/>
-				<input type="submit" name="Annulla" value="Annulla" class="btn btn-cancel"/>
+				<input type="submit" name="Conferma" value="Conferma" class="btn btn-confirm">
+				<input type="submit" name="Annulla" value="Annulla" class="btn btn-cancel">
             </div>
 
             <div class="grimoire-counter">
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-		<input type="hidden" name="token" value="[r: oToken]"/>
+		<input type="hidden" name="token" value="[r: oToken]">
 	</form>
 
 	<button class="theme-switch-btn" style="right:25px;" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sGruppoPreferenze]')">

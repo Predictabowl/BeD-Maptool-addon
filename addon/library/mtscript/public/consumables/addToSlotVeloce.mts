@@ -7,3 +7,4 @@
 [h: oGroup = json.append(oGroup,oOggetto)]
 [h: setInMemoria(oToken,"SlotVeloci",oGroup)]
 [h, macro("mobs/applyIngombroPenalties@this"): oToken]
+[h: macro.return = json.length(oGroup) - 1]

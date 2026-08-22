@@ -18,7 +18,7 @@
 [h: bCheck = input(strformat("indexSpell|%{lSpellFluff}|Pergamena|LIST"),"iLiv|1| Livello")]
 [h: assert(bCheck,"Abortito")]	
 [h: spellId = json.get(json.get(aSpells,indexSpell), "id")]
-[h: oObj = json.set("","libName",spellId,"livello",iLiv)]
+[h: oObj = json.set("","libName",spellId,"livello",iLiv, "equipped", 0)]
 [h: switchToken(oToken)]
 [h: Consumabili = json.append(Consumabili,oObj)]
 

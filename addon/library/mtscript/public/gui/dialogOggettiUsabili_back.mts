@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: target = arg(0)]
 
 [h: sDialog = "OggettiConsumabili"]

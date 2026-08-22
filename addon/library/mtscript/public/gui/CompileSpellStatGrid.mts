@@ -7,9 +7,9 @@
 [h: sJScriptSpell = strformat('apri_dialog_descrizione(event, "%{oToken}", "%{spellId}")')]
 [h: sNameInc = fetchSpellProp( spellId,"nome_decorativo")]
 [h: sSpellType = fetchSpellProp( spellId,"tipo")]
-<div class='spell-name-badge [r: sSpellType]' onclick='[r: sJScriptSpell]'>
+<button type="button" class='spell-name-badge [r: sSpellType]' onclick='[r: sJScriptSpell]'>
     [r: sNameInc]
-</div>
+</button>
 <div class="spell-stats-grid">
     <div class="stat-box">
         <span class="stat-label">M:</span>

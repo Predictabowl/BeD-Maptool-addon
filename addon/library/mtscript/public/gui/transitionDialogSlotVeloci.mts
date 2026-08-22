@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oToken = json.get(macro.args,"source")]
 
 [h, if(json.contains(macro.args,"toSlots")), code:{
