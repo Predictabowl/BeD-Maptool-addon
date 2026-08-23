@@ -3,6 +3,10 @@ const ICON_PLUS = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" s
 const ICON_MINUS = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="4" y1="12" x2="20" y2="12"/></svg>';
 
 function loadParams(elem) {
+    if(!isInventoryClosed()) {
+        alert("Non puoi lanciare consumabili mentre hai lo zaino aperto.");
+        return;
+    }
     document.getElementById('spell_SpellName').setAttribute('value', elem.getAttribute('data-spellName'));
     document.getElementById('item_nomeArma').setAttribute('value', elem.getAttribute('data-nomeArma'));
     document.getElementById('item_slotVeloce').setAttribute('value', elem.getAttribute('data-slotVeloce'));
@@ -25,28 +29,27 @@ function recalcSlots() {
     document.getElementById('slotsCounter').classList.toggle('over-limit', used > slotMax);
 }
 
+function isInventoryClosed() {
+    const drawer = document.getElementById('inventoryDrawer');
+    return getComputedStyle(drawer).display === 'none';
+}
+
 function toggleInventory() {
     const drawer = document.getElementById('inventoryDrawer');
     const btn = document.getElementById('toggleInvBtn');
     const frame = document.querySelector('.quickslot-frame');
-    const isClosed = getComputedStyle(drawer).display === 'none';
+    const isClosed = isInventoryClosed();
     drawer.style.display = isClosed ? 'flex' : 'none';
     frame.classList.toggle('inventory-open', isClosed);
-    btn.textContent = isClosed ? 'Chiudi Inventario ▲' : 'Apri Inventario ▼';
-}
-
-function apriInventarioSeparato() {
-    // NOTA: qui va collegato il meccanismo di trigger macro già usato altrove nel
-    // ruleset (lo stesso che gestisce 'loadParams' / data-macro sulle spell-icon-btn),
-    // che non è incluso in questo file di esempio. Esempio indicativo:
-    //
-    //   MapTool.chatBroadcast("[macro('apriInventarioDialog@Lib:it.aldinucci.piero.bed.maptool.ruleset'): '']");
-    //
-    // o l'equivalente già in uso per invocare macro da JS in questo progetto.
-    console.log('TODO: collegare apertura dialog inventario separato via macro MapTool');
+    btn.textContent = isClosed ? 'Chiudi Zaino ▲' : 'Apri Zaino ▼';
 }
 
 async function equipItem(button) {
+    const bCombat = await isCombat();
+    if(bCombat) {
+        alert("Non è possibile modificare Slot Rapidi in combattimento.");
+        return;
+    }
     const card = button.closest('.spell-card');
     const type = card.dataset.type;
     const index = card.dataset.index;
@@ -72,6 +75,11 @@ async function equipItem(button) {
 }
 
 async function unequipItem(button) {
+    const bCombat = await isCombat();
+    if(bCombat) {
+        alert("Non è possibile modificare Slot Rapidi in combattimento.");
+        return;
+    }
     const card = button.closest('.spell-card');
     const index = card.dataset.index;
     const bodyStr = JSON.stringify([getTokenId(), index]);
@@ -93,6 +101,13 @@ function getTokenId(){
 async function apriDialogDescrizioneConsumable(event, slotId) {
     event.stopPropagation();
     const bodyStr = JSON.stringify({ token: getTokenId(), slotId: slotId});
+    fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/dialogConsumableDetails', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
+}
+
+async function apriDialogDescrizioneRuna(event, elem) {
+    event.stopPropagation();
+    const item = elem.dataset.item;
+    const bodyStr = JSON.stringify({ token: getTokenId(), item: item});
     fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/dialogConsumableDetails', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
 }
 

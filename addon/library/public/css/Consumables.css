@@ -6,11 +6,6 @@ body {
     height: auto;
 }
 
-.toxicFont {
-    color: var(--toxic-color);
-    font-weight: bold;
-}
-
 .toxic-fill {
     height: 100%;
     background: linear-gradient(90deg, color-mix(in srgb, var(--toxic-color) 60%, white), var(--toxic-color));

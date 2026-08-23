@@ -1,0 +1,57 @@
+.skill-name-badge {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-spell);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    border: none;
+}
+
+.skill-name-badge:hover {
+    transform: translateY(-1px);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
+    border: 1px solid;
+}
+
+
+.abilitaOn {
+	font-weight: bold;
+	color: red;
+	background-color: red;
+}
+
+.abilitaAutocast {
+	border: 2px dashed black;
+}
+
+.AbAttiva {
+	background-color: #FFFF66;
+	text-align: center;
+    color: black;
+	padding: 1px;
+}
+
+.AbEroica {
+	background-color: #ff3333;
+	text-align: center;
+    color: black;
+}
+
+.AbPeculiare {
+	background-color: #6CD05C;
+	text-align: center;
+	padding: 1px;
+    color: black;
+}
+
+.AbPassiva {
+	background-color: #99CCFF;
+	text-align: center;
+	font-weight: bold;
+    color: black;
+}

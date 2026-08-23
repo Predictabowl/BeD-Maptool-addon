@@ -7,7 +7,7 @@
 <div class="spell-card" data-type="pozione" data-index = "[r: index]">
 [h: spellId = json.get(oPozione, "libName")]
 <input type="image" class="spell-icon-btn" title="Usa" src="[r: fetchSpellImage(spellId)]" 
-    onclick='loadParams(this)' data-spellname="[r: spellId]" data-slotVeloce="[r: index]"/>
+    onclick='loadParams(this)' data-spellname="[r: spellId]" data-slotVeloce="[r: index]">
 [h: sJScriptSpell = strformat('apriDialogDescrizioneConsumable(event, "%{index}")')]
 <button type="button" class='spell-name-badge [r: fetchConsumableProp(spellId, 'tipo')]' onclick='[r: sJScriptSpell]'>
     [r: fetchConsumableProp(spellId, 'nome_decorativo')]

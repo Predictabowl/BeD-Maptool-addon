@@ -67,11 +67,6 @@
 body {
     font-family: var(--font-default);
     font-size: 18px;
-    height: 100%;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 h1 {
@@ -217,6 +212,11 @@ form {
 
 .ppFont {
     color: var(--pp-color);
+    font-weight: bold;
+}
+
+.toxicFont {
+    color: var(--toxic-color);
     font-weight: bold;
 }
 

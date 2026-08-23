@@ -14,8 +14,8 @@
 [h: lSize = setStrProp("","width",iLarg)]
 [h: lSize = setStrProp(lSize,"height",iAltezza)]
 
-[h: sGruppoPreferenze = "Dialog_Grimorio_Poteri"]
-[h: bLightMode = getPreferenza("light_mode",oToken,sGruppoPreferenze)]
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
 [dialog5("memorizzaPoteri",strformat("temporary=1; %{lSize}; closebutton=0;")):{
 <html>	
@@ -38,7 +38,7 @@
 
 		<div class="grimoire-footer">
             <div class="grimoire-actions">
-				<input type="submit" name="Conferma" value="Conferma" class="btn btn-confirm">
+				<input type="submit" name="Conferma" value="Conferma" class="btn btn-confirm" [r, if(isCombat()): "disabled"]>
 				<input type="submit" name="Annulla" value="Annulla" class="btn btn-cancel">
             </div>
 
@@ -51,7 +51,7 @@
 		<input type="hidden" name="token" value="[r: oToken]">
 	</form>
 
-	<button class="theme-switch-btn" style="right:25px;" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sGruppoPreferenze]')">
+	<button class="theme-switch-btn" style="right:25px;" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')">
 		🌓
 	</button>
 

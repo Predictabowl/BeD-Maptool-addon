@@ -117,28 +117,6 @@ table.spellData {
 }
 
 
-.pulsanteGrande {
-	margin: 0px;
-	height: 56px;
-	width: 56px;
-}
-
-.pulsanteGrande:hover {
-	color: rgb(0, 0, 0, 0.5);
-	opacity: 1.0;
-	filter: drop-shadow(8px 8px 10px gray);
-	filter: saturate(200%);
-	filter: contrast(140%);
-	filter: brightness(120%);
-	cursor: pointer;
-}
-
-.pulsanteGrande:active {
-	padding: 7px;
-	height: 45px;
-	width: 45px;
-	cursor: pointer;
-}
 
 a[title].tooltip:hover {
 	transition-delay: 0.2s;

@@ -17,6 +17,10 @@
     --spell-card-hover-inverse: #5e4848;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     /*font-size: 16px;*/
     background-color: #c4c4c4;
@@ -245,7 +249,7 @@ span {
 
 .grimoire-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 5px;
     overflow-y: auto;
     padding: 5px;
@@ -325,6 +329,26 @@ span {
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.btn:disabled,
+.btn[disabled] {
+    filter: grayscale(1);
+    opacity: 0.6; /* Un leggero calo di opacità aiuta, ma il grigio fa il grosso */
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btn:disabled:hover,
+.btn:disabled:active,
+.btn[disabled]:hover,
+.btn[disabled]:active {
+    filter: grayscale(1);
+    transform: none !important;
+    background: #333; /* Mantiene il suo sfondo originale senza accendersi */
+    border-color: #555;
+    box-shadow: none !important;
 }
 
 .btn-confirm:hover {

@@ -10,7 +10,8 @@
 [h, macro("powers/getMaxDevozione@this"): oToken]
 [h: iMaxDevozione = macro.return]
 
-[h: bLightMode = getPreferenza("light_mode",oToken,sDialog)]
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
 [dialog5(sDialog, strformat("temporary=0; width=900; height=720; closebutton=0; noframe=0;")):{
 <html>
@@ -57,7 +58,7 @@
 	}]
 	</div>
 	
-    <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sDialog]')">
+    <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')">
         🌓
     </button>
 

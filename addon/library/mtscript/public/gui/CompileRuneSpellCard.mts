@@ -12,8 +12,13 @@
     <input type="image" class="spell-icon-btn" title="Usa"
         src="[r: fetchSpellImage(spellId)]"
         onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this"
-        data-spellname="[r: spellId]" [r, if(iCariche < 1): "disabled"]/>
-    <div class="spell-name-badge [r: fetchConsumableProp(spellId, 'tipo')]" onclick="">[r: fetchConsumableProp(spellId, 'nome_decorativo')]</div>
+        data-spellname="[r: spellId]" data-nomeArma="[r: itemId]" data-slotRuna="[r: iRuna]"
+        [r, if(iCariche < 1): "disabled"]>
+    [h: sJScriptSpell = strformat('apriDialogDescrizioneRuna(event, this)')]
+    <button type="button" class='spell-name-badge [r: fetchConsumableProp(spellId, 'tipo')]' onclick='[r: sJScriptSpell]'
+        data-item='[r: oOggetto]'>
+        [r: fetchConsumableProp(spellId, 'nome_decorativo')]
+    </button>
     <div class="spell-stats-grid">
         <div class="stat-box">
             <span class="stat-label">Usi:</span>

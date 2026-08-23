@@ -46,6 +46,8 @@
 
 [h: iTox = getTossicoLiv(oToken)]
 
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
 [h: pSize = strformat("width=%{iLarg}; height=%{iAltezza}")]
 [dialog5(sDialog,strformat("temporary=0; size=%{pSize}; closebutton=0")):{
@@ -58,7 +60,7 @@
     <link rel="stylesheet" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Consumables.css?cachelib=false">
 </head>
 
-<body class="light-mode" data-tokenid = "[r: oToken]">
+<body class="[r, if(bLightMode == 1): 'light-mode']" data-tokenid = "[r: oToken]">
 
     <div class="quickslot-frame">
         <div class="global-header">
@@ -68,11 +70,11 @@
                 Slot: <span id="slotsUsed">[r: countSlotVeloceItems(oToken)]</span>/<span id="slotsMax">[r: iMaxSlots]</span>
             </div>
             <div class="header-actions">
-                <button class="btn" id="toggleInvBtn" onclick="toggleInventory()">Apri Inventario ▼</button>
+                <button class="btn" id="toggleInvBtn" onclick="toggleInventory()">Apri Zaino ▼</button>
             </div>
             <div>
                 <button class="header-theme-btn" id="themeToggle" title="Cambia Tema"
-                    onclick="toggleTheme('[r: oToken]', '[r: sGruppoPreferenze]')">
+                    onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')">
                     🌓
                 </button>
             </div>
@@ -145,7 +147,7 @@
         <div class="inventory-drawer" id="inventoryDrawer">
             <div class="spirit-header">
                 <div class="spirit-info">
-                    <h3 class="spirit-name">Inventario Completo</h3>
+                    <h3 class="spirit-name">Zaino</h3>
                 </div>
             </div>
             <div class="spirit-body">

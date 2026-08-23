@@ -9,7 +9,8 @@
 [h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,spellName)]
 [h: oSpellData = macro.return]
 
-[h: bLightMode = getPreferenza("light_mode",oToken, sDialog)]
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
 [dialog5(sDialog,"width= 650; height=700; temporary=0; closebutton=0"):{
 <html>
@@ -21,7 +22,7 @@
 
    <dialog id="spell-detail-dialog" class="spell-dialog" open>
 
-        <button class="theme-switch-btn" type="button" onclick="toggleTheme('[r: oToken]', '[r: sDialog]')"
+        <button class="theme-switch-btn" type="button" onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')"
             aria-label="Cambia tema" title="Cambia tema">&#9789;</button>
 
         <!-- Intestazione: sigillo (colorato in base al Tipo), titolo, chip Tipo + Tratti -->

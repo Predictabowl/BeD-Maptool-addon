@@ -1,10 +1,10 @@
 [h: oToken = json.get(macro.args,"token")]
 [h: slotId = json.get(macro.args,"slotId")]
+[h: oItem = json.get(macro.args,"item")]
 
-
-[h: oScroll = getFromSlotVeloce(oToken, slotId)]
-[h: spellName = json.get(oScroll, "libName")]
-[h: iLivello = json.get(oScroll, "livello")]
+[h, if(oItem == ""): oItem = getFromSlotVeloce(oToken, slotId)]
+[h: spellName = json.get(oItem, "libName")]
+[h: iLivello = json.get(oItem, "livello")]
 
 [h, macro("consumables/getTipoConsumabile@this"): json.append(spellName, 1)]
 [h: sTipoConsumable = macro.return]
@@ -13,7 +13,11 @@
 [h, macro("gui/getVisibleSpellTraits@this"): spellName]
 [h: lTratti = macro.return]
 
-[h: bLightMode = getPreferenza("light_mode",oToken, sDialog)]
+[h, macro("consumables/getUseItemPrice@this"): json.append(oToken, spellName, sTipoConsumable)]
+[h: oConsumablePrices = macro.return]
+
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
 [dialog5(sDialog,"width= 650; height=700; temporary=0; closebutton=0"):{
 <html>
@@ -25,7 +29,7 @@
 
    <dialog id="spell-detail-dialog" class="spell-dialog" open>
 
-        <button class="theme-switch-btn" type="button" onclick="toggleTheme('[r: oToken]', '[r: sDialog]')"
+        <button class="theme-switch-btn" type="button" onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')"
             aria-label="Cambia tema" title="Cambia tema">&#9789;</button>
 
         <!-- Intestazione: sigillo (colorato in base al Tipo), titolo, chip Tipo + Tratti -->
@@ -47,32 +51,39 @@
 
         <!-- Fascia risorse -->
         <div class="resource-ribbon">
+            [r, if(sTipoConsumable != "POZIONE"), code:{
+                <div class="resource-item">
+                    <span class="stat-label">CD</span>
+                    [h, macro("consumables/getCDOggetto@this"): iLivello]
+                    <span class="stat-value genericStatFont">[r: macro.return]</span>
+                </div>
+            };{
+                <div class="resource-item">
+                    <span class="stat-label">Tossicità</span>
+                    <span class="stat-value toxicFont">[r: getTossicoOggetto(oItem, oToken)]</span>
+                </div>
+            }]
             <div class="resource-item">
                 <span class="stat-label">LL</span>
                 [h, macro("consumables/getLLOggetto@this"): iLivello]
                 <span class="stat-value genericStatFont">[r: macro.return]</span>
             </div>
             <div class="resource-item">
-                <span class="stat-label">CD</span>
-                [h, macro("consumables/getCDOggetto@this"): iLivello]
-                <span class="stat-value genericStatFont">[r: macro.return]</span>
-            </div>
-            <div class="resource-item">
                 <span class="stat-label">Tempo</span>
-                [h: spellParams = json.set("","source",oToken,"spellName",spellName,"critRes",0)] 
-                <span class="stat-value tempoFont">[r: getSpellTime(spellParams)]</span>
+                [h, macro("consumables/getItemTime@this"): json.append(oToken, spellName)]
+                <span class="stat-value tempoFont">[r: macro.return]</span>
             </div>
             <div class="resource-item">
                 <span class="stat-label">PA</span>
-                <span class="stat-value azioneFont">[r: getSpellPAzione(oToken, spellName, 0)]</span>
+                <span class="stat-value azioneFont">[r: json.get(oConsumablePrices, "PA")]</span>
             </div>
             <div class="resource-item">
                 <span class="stat-label">PP</span>
-                <span class="stat-value ppFont">[r: getSpellPP(oToken, spellName, 0)]</span>
+                <span class="stat-value ppFont">[r: json.get(oConsumablePrices, "PP")]</span>
             </div>
             <div class="resource-item">
                 <span class="stat-label">MM</span>
-                <span class="stat-value mmFont">[r: getSpellMM(oToken, spellName, 0)]</span>
+                <span class="stat-value mmFont">[r: json.get(oConsumablePrices, "MM")]</span>
             </div>
         </div>
 

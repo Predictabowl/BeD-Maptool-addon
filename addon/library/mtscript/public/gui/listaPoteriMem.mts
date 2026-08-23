@@ -20,8 +20,8 @@
 [h: jOptions = json.set(jOptions, "recupero", iRecuperoDurata)]
 [h: lPoteri =  getPoteriMem(oToken)]
 
-[h: sGruppoPreferenze = "Frame_Poteri"]
-[h: bLightMode = getPreferenza("light_mode",oToken,sGruppoPreferenze)]
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
 [frame5(sFrame,strformat("value=%s", oToken)):{
 <html>
@@ -69,7 +69,7 @@
 	<input type="hidden" name="nuovaListaPoteri" id="nuovaListaPoteri" value="">
 </form>
 
-<button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sGruppoPreferenze]')">
+<button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')">
     🌓
 </button>
 
