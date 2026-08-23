@@ -33,6 +33,23 @@
     --border-color: #35322c;
     --text-color: #dcd0c0;
     --accent-color: #d49a40;
+
+
+    --bg-offensivo: #800000;
+    /* --bg-mutaforma: #CC6600; */
+    --bg-mutaforma: #a04600;
+    /* --bg-marchio: #666666; */
+    background-color: #555555;
+    /* --bg-controllo: #008080; */
+    --bg-controllo: #006666;
+    /* --bg-malattia: #666600; */
+    --bg-malattia: #525200;
+    /* --bg-maledizione: #4700B8; */
+    --bg-maledizione: #4600a0;
+    /* --bg-supporto: #0000FF; */
+    --bg-supporto: #0000BF;
+    /* --bg-servitore: #008000; */
+    --bg-servitore: #007000;
 }
 
 .light-mode {
@@ -136,49 +153,49 @@ form {
 
 /* --- CLASSI DI CATEGORIA (Colori fissi del manuale) --- */
 .OFFENSIVO {
-    background-color: #800000;
+    background-color: var(--bg-offensivo);
     color: white;
     text-align: left;
 }
 
 .MUTAFORMA {
-    background-color: #CC6600;
+    background-color: var(--bg-mutaforma);
     color: white;
     text-align: left;
 }
 
 .MARCHIO {
-    background-color: #666666;
+    background-color: var(--bg-marchio);
     color: white;
     text-align: left;
 }
 
 .CONTROLLO {
-    background-color: #008080;
+    background-color: var(--bg-controllo);    
     color: white;
     text-align: left;
 }
 
 .MALATTIA {
-    background-color: #666600;
+    background-color: var(--bg-malattia);    
     color: white;
     text-align: left;
 }
 
 .MALEDIZIONE {
-    background-color: #4700B8;
+    background-color: var(--bg-maledizione);
     color: white;
     text-align: left;
 }
 
 .SUPPORTO {
-    background-color: #0000FF;
+    background-color: var(--bg-supporto);    
     color: white;
     text-align: left;
 }
 
 .SERVITORE {
-    background-color: #008000;
+    background-color: var(--bg-servitore);
     color: white;
     text-align: left;
 }

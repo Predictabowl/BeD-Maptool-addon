@@ -1,6 +1,6 @@
-async function apriDescrizioneSkill(event, tokenId, skillId) {
+async function apriDescrizioneSkill(event, skillId) {
     event.stopPropagation();
-    const bodyStr = JSON.stringify({ token: tokenId, libAbilita: skillId });
+    const bodyStr = JSON.stringify({ token: getTokenId(), libAbilita: skillId });
     fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/dialogDescrizioneAbilita', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
 }
 
@@ -16,13 +16,18 @@ function pulsanteAttivaAbilita(event, skillId) {
 }
 
 async function toggleAttivaAbilita(event, skillId){
+    const clickedButton = event.target;
     const bodyStr = JSON.stringify([ getTokenId(), skillId]);
     const response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/toggleAbilitaInUso', { method: 'POST', body: bodyStr });
     const data = await response.json();
     if(data.interrupt == 1) {
+        clickedButton.disabled = true;
+        setTimeout(() => {
+            clickedButton.disabled = false;
+        }, 2000);
         return;
     }
-    const card = event.target.closest(".spell-card");
+    const card = clickedButton.closest(".spell-card");
     if(data.isActive == 1) {
         card.classList.add("abilitaOn");
     } else {

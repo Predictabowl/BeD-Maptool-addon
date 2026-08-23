@@ -1,3 +1,4 @@
+<!-- DEPRECATED - is still needed -->
 [h: oToken = json.get(macro.args,"token")]
 [h: sLibAbilita = json.get(macro.args,"libAbilita")]
 

@@ -1,5 +1,5 @@
-[h: source = json.get(macro.args,0)]
-[h: sLibAbilita = json.get(macro.args,1)]
+[h: source = arg(0)]
+[h: sLibAbilita = arg(1)]
 
 [macro("class_skills/getAbilitaClasseTutte@this"): source]
 [h, if(!json.contains(macro.return, sLibAbilita)): return(0,0)]
@@ -9,9 +9,8 @@
 [h: bFlag = 1]
 
 [h: iMaxSkill = 1]
-[h: bSameSkill = 0]
 
-[macro("class_skills/getAbilitaClasse@this"): json.append(source,"NessunaPieta")]
+[macro("class_skills/getAbilitaClasse@this"): json.append(source,"Versatilita")]
 [h: noMercy = macro.return]
 
 [macro("class_skills/getBloccoAbilita@this"):json.append(source,sLibAbilita)]

@@ -13,7 +13,7 @@
 [h: bInterrupt = 1]
 [h: isActive = 0]
 
-[macro("class_skills/isAbilitaAttivabile@this"):sAbilitaTag]
+[h, macro("class_skills/isAbilitaAttivabile@this"):sAbilitaTag]
 [h: bFlag= macro.return]
 [h, if(bFlag), code:{
 	[macro("class_skills/canPayAbilityActivation@this"): sAbilitaTag]

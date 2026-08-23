@@ -8,14 +8,14 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease, filter 0.2s ease;
     border: none;
 }
 
 .skill-name-badge:hover {
     transform: translateY(-1px);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15));
-    border: 1px solid;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)); */
+    filter: saturate(1.5) contrast(1.5);
 }
 
 
@@ -31,7 +31,7 @@
 }
 
 .AbAttiva {
-	background-color: #FFFF66;
+	background-color: #ffffa0;
 	text-align: center;
     color: black;
 }
@@ -43,7 +43,7 @@
 }
 
 .AbPeculiare {
-	background-color: #6CD05C;
+	background-color: #90dc84;
 	text-align: center;
     color: black;
 }

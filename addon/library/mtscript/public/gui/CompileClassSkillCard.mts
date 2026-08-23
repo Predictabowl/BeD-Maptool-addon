@@ -51,12 +51,12 @@ default:{
 [h, macro("class_skills/getAbilitaMM@this"): jParams]
 [h: iMM = macro.return]
 
-[h: sJScriptSpell = strformat('apriDescrizioneSkill(event, "%{oToken}", "%{skillId}")')]
+[h: sJScriptSpell = strformat('apriDescrizioneSkill(event, "%{skillId}")')]
 
 <div class="spell-card [r: sActive]">
-    [h: jSCall = strformat('pulsanteAttivaAbilita(event,"%{skillId}")')]
-    <input type="image" class="spell-icon-btn" title="Usa" src="[r: fetchClassSkillImage(skillId)]" onmouseup='[r: jsCall]'>
-    <button type="button" class='spell-name-badge [r: classType]' onclick='[r: sJScriptSpell]'>
+    [h: jSCall = strformat("pulsanteAttivaAbilita(event,'%{skillId}')")]
+    <input type="image" class="spell-icon-btn" title="Usa" src="[r: fetchClassSkillImage(skillId)]" onmouseup="[r: jsCall]">
+    <button type="button" class='skill-name-badge [r: classType]' onclick='[r: sJScriptSpell]'>
         [r: sNome]
     </button>
     <div class="spell-stats-grid">
