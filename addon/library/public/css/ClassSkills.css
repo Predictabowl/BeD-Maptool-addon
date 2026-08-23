@@ -20,9 +20,10 @@
 
 
 .abilitaOn {
-	font-weight: bold;
-	color: red;
-	background-color: red;
+    /* border-width: 2px; */
+    border-color: var(--accent-color, #8a2be2);
+    box-shadow: 0 3px 12px color-mix(in srgb, var(--accent-color) 40%, transparent);
+    background: radial-gradient(ellipse, var(--bg-card), var(--accent-color));
 }
 
 .abilitaAutocast {
@@ -33,7 +34,6 @@
 	background-color: #FFFF66;
 	text-align: center;
     color: black;
-	padding: 1px;
 }
 
 .AbEroica {
@@ -45,7 +45,6 @@
 .AbPeculiare {
 	background-color: #6CD05C;
 	text-align: center;
-	padding: 1px;
     color: black;
 }
 

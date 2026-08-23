@@ -82,7 +82,7 @@
     "CambiareBersaglio": {
         "descrizione": "Mentre l’abilità è attiva è possibile cambiare il bersaglio durante qualsiasi fase dell’azione.",
         "id": "CambiareBersaglio",
-        "image": "ability_hunter_snipershot.png",
+        "image": "ability_hisek_aim.png",
         "nome_decorativo": "Cambiare Bersaglio",
         "properties": {
             "cleaner": "1",

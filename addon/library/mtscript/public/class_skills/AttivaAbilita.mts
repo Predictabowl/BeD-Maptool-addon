@@ -11,6 +11,7 @@
 [h: sAbilitaTag = json.append(source,sLibAbilita)]
 
 [h: bInterrupt = 1]
+[h: isActive = 0]
 
 [macro("class_skills/isAbilitaAttivabile@this"):sAbilitaTag]
 [h: bFlag= macro.return]
@@ -36,6 +37,7 @@
 	[broadcast("Abilit&agrave non attivabile in questo momento.",getPlayerName())]
 }]
 
+
 [if(!bInterrupt), code:{ 
 	[jCosts = json.get(aResult,1)]
 	[payAction(jCosts)]
@@ -45,8 +47,10 @@
 	[h: iDur = macro.return]
 	[h, if(iDur == 0), code:{
 		[macro("class_skills/DisattivaAbilita@this"): sAbilitaTag]
+	}; {
+		[isActive = 1]
 	}]
 }]
 
 
-[h: macro.return = bInterrupt]
+[h: macro.return = json.set("", "interrupt", bInterrupt, "isActive", isActive)]

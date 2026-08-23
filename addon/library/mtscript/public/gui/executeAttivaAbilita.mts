@@ -23,4 +23,4 @@
 
 [macro("gui/dialogAbilitaClasse@this"): oToken]
 [macro("gui/updateUIOverlay@this"): oToken]
-[h: macro.return = ""]
+[h: return(0, "")]
