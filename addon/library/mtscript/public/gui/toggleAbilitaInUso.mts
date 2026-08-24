@@ -12,6 +12,10 @@
 };{
 	[macro("class_skills/AttivaAbilita@this"): oParam]
 	[jResponse = macro.return]
+	[macro("class_skills/getTipoAbilita@this"): skillId]
+	[if(macro.return == "EROICA"), code:{
+		[macro("gui/updateHeroPoints@this"): oToken]
+	}]
 }]
 	
 [h, macro("gui/updateUIOverlay@this"): oToken]

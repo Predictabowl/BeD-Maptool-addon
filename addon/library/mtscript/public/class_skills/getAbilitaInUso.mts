@@ -1,10 +1,5 @@
-[h, if(json.type(macro.args) == "ARRAY"), code:{
-	[h: source = json.get(macro.args,0)]
-	[h: lTipo = json.get(macro.args,1)]
-};{
-	[h: source = macro.args]
-	[h: lTipo = ""]
-}]
+[h: source = arg(0)]
+[h, if(argCount() > 1): lTipo = arg(1); lTipo = ""]
 
 [h: sTag = "abilitaClasseInUso"]
 [h: oAbilita = getDaMemoria(source,sTag)]
@@ -18,4 +13,5 @@
 	[if (listContains(lTipo,sTipo)): lReturn = listAppend(lReturn,item)]
 }]
 
-[h: macro.return = lReturn]
+[r: lReturn]
+[h: return(0,lReturn)]

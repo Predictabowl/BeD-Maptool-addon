@@ -1,14 +1,9 @@
-[h: source = arg(0)]
+[h: frameName = "PannelloAbilita"]
+[h: frameProp = getFrameProperties(frameName)]
+[h, if(json.isEmpty(frameProp)): return(0,"")]
+[h: tokenId = json.get(frameProp,"value")]
 
-[h: sDialog = "DialogAbilita"]
-
-[h, if(isDialogVisible(sDialog)), code:{
-	[if(source == ""), code:{
-		[sProp = getDialogProperties(sDialog)]
-		[source = json.get(sProp,"value")]
-	}]
-	[macro("gui/isAllowed@this"): source]
-	[if(macro.return), code:{
-		[macro("gui/dialogAbilitaClasse@this"): source]
-	}]
-}]
+[h: heroPoints = getPuntiEroe(tokenId)]
+[h, macro("class_skills/getAbilitaInUso@this"): tokenId]
+[h: aSkillInUso = macro.return]
+[h: runJsFunction(frameName, "frame", "refreshAllValues", "null", json.append("", aSkillInUso, heroPoints))]

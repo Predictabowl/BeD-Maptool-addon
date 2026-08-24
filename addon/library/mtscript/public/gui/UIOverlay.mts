@@ -100,7 +100,7 @@
 					</a>
 					<input type='image' class='pulsanteUI' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' title='Attacco base' id='button-attacco'/>
 					[r: sLancioLink]
-					<a title='Abilità / Apri Menu' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]">
+					<a title='Abilità / Apri Menu' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]" id="button-class-skill">
 						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' />
 					</a>
 					<a type='image' title='Consumabili / Apri Menu' onmouseup="pulsanteConsumabili(event)">
@@ -153,7 +153,7 @@
 	</form>
 	}]
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=false" defer></script>
 	</body>
 	</html>
 }]

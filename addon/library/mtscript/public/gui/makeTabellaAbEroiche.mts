@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: target = macro.args]
 
 [macro("class_skills/getAbilitaEroiche@this"): target]

@@ -53,7 +53,7 @@ default:{
 
 [h: sJScriptSpell = strformat('apriDescrizioneSkill(event, "%{skillId}")')]
 
-<div class="spell-card [r: sActive]">
+<div class="spell-card [r: sActive]" id="[r: skillId]">
     [h: jSCall = strformat("pulsanteAttivaAbilita(event,'%{skillId}')")]
     <input type="image" class="spell-icon-btn" title="Usa" src="[r: fetchClassSkillImage(skillId)]" onmouseup="[r: jsCall]">
     <button type="button" class='skill-name-badge [r: classType]' onclick='[r: sJScriptSpell]'>

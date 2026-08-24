@@ -1,3 +1,4 @@
+<!-- DEPRECATRED ? -->
 [macro("gui/blockIfNotOwner@this"):source]
 
 [h: source = macro.args]

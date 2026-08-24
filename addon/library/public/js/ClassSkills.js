@@ -6,7 +6,7 @@ async function apriDescrizioneSkill(event, skillId) {
 
 function pulsanteAttivaAbilita(event, skillId) {
     if (event.button == 2) {
-        var elem = document.getElementById('var-input');
+        const elem = document.getElementById('var-input');
         elem.setAttribute('value', 'Autocast');
         document.getElementById('idAbilitaAttivata').setAttribute('value', skillId);
         document.getElementById('formAttivaAbilita').submit();
@@ -27,14 +27,42 @@ async function toggleAttivaAbilita(event, skillId){
         }, 2000);
         return;
     }
-    const card = clickedButton.closest(".spell-card");
-    if(data.isActive == 1) {
+    setSkillActiveStatus(skillId, data.isActive);
+}
+
+function getTokenId(){
+    return document.body.dataset.tokenid;
+}
+
+function updateHeroicBar(heroicPoints){
+    document.getElementById("heroic-points").textContent = heroicPoints + "/1000";
+    document.getElementById("heroic-fill").style.width = (heroicPoints/10) + '%';
+    const track = document.getElementById("heroic-track");
+    if(heroicPoints >= 1000) {
+        track.classList.add("heroic-full");
+    } else {
+        track.classList.remove("heroic-full");
+    }
+}
+
+function setSkillActiveStatus(skillId, status){
+    const card = document.getElementById(skillId);
+    if(status == 1) {
         card.classList.add("abilitaOn");
     } else {
         card.classList.remove("abilitaOn");
     }
 }
 
-function getTokenId(){
-    return document.body.dataset.tokenid;
+function refreshAllValues(activeSkillIds, heroicPoints){ 
+    const cards = document.querySelectorAll('.spell-card');
+    const ids = Array.from(cards).map(el => el.id).filter(id => id !== "");
+    const activeIds = new Set(activeSkillIds.split(',').map(item => item.trim()));
+
+    ids.forEach(skillId => {
+        const isActive = activeIds.has(skillId);
+        const status = isActive ? 1 : 0;
+        setSkillActiveStatus(skillId, status);
+    });
+    updateHeroicBar(heroicPoints);
 }

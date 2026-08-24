@@ -135,3 +135,21 @@ function scegliEvento(event, selection) {
     document.getElementById('formRisolviAzione').submit();
     document.getElementById('floatingSubmenu').style.display = 'none';
 }
+
+function updateClassSkillNotification(peculiar, active){
+    const skillButton = document.getElementById("button-class-skill");
+    if(peculiar == 1) {
+        if(active == 1) {
+            skillButton.classList.remove("pPeculiareSkill", "pAttivaSkill");
+            skillButton.classList.add("pBothSkills");
+        } else {
+            skillButton.classList.remove("pBothSkills", "pAttivaSkill");
+            skillButton.classList.add("pPeculiareSkill");
+        }
+    } else if(active == 1) {
+        skillButton.classList.remove("pPeculiareSkill", "pBothSkills");
+        skillButton.classList.add("pAttivaSkill");
+    } else {
+        skillButton.classList.remove("pBothSkills", "pAttivaSkill", "pPeculiareSkill");
+    }
+}
