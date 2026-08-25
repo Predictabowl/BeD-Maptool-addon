@@ -29,8 +29,10 @@
             [r, foreach(skillId, aAbilita, ""), code:{
                 [h, macro("class_skills/isAbilitaInUso@this"): json.append(tokenId, skillId)]
                 <div class="spell-card [r, if(macro.return): 'abilitaOn']" id="[r: skillId]">
+                    [h: iHeroPoints = getPuntiEroe(tokenId)]
                     <input type="image" class="spell-icon-btn" title="Usa" src="[r: fetchClassSkillImage(skillId)]" 
-                        onmouseup="pulsanteAttivaAbilita(event,'[r: skillId]')">
+                        onmouseup="pulsanteAttivaAbilita(event,'[r: skillId]')" data-button-type="heroic-skill"
+                        [r, if(iHeroPoints < 1000): "disabled"]>
                     <button type="button" class='skill-name-badge AbEroica' onclick="apriDescrizioneSkill(event, '[r: skillId]')">
                         [r: fetchClassSkillProp(skillId,"nome_decorativo")]
                     </button>

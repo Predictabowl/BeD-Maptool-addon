@@ -2,27 +2,36 @@
 
 [macro("utility/stampaAcronimo@this"): sKey]
 [h: sAcro = json.get(macro.return, "acronimo")]
-[macro("utility/textProcessHTML@this"): json.get(macro.return, "descrizione")]
+[h: sDescr = json.get(macro.return, "descrizione")]
+[macro("utility/textProcessHTML@this"): sDescr]
 [h: sInfo = macro.return]
+
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[macro("gui/getOverlayData@this"): "token"]
+[h: tokenId = macro.return]
+[h: bLightMode = getPreferenza("light_mode",tokenId,sThemePreferenze)]
 
 [h: sDialog = "infoDialog"]
 [h: height = 250]
-[dialog5(sDialog,strformat("noframe=1; closeButton=0; temporary=1; width=550; height=%{height};")):{
-<html onmouseleave="closeForm()">
+[dialog5(sDialog,strformat("noframe=1; closeButton=0; temporary=1; width=320; height=%{height};")):{
+<html>
 <head>
-	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/CharSheetCssLink.html")]
-	<title> Test Title </title>
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/InfoBox.css?cachelib=true">
+	<title>Placeholder</title>
 </head>
-<body style="overflow:hidden">
-	<div style="border: 5px ridge paleGreen; padding: 5px; margin: 0; height: [r: (height - 38)]px; overflow: scroll; background-color: honeyDew;">
-		<div style="text-align: center;">
-			<span style="color:maroon; font-weight: bold">[r:sKey]</span>
-			[r, if(sAcro != ""): ": "+sAcro]
+<body onmouseleave="closeForm()" class="[r, if(bLightMode == 1): 'light-mode']">
+	<dialog id="explanationPopup" class="explanation-popup">
+		<div class="popup-header">
+			<h3 class="popup-title">[r:sKey]</h3>
+			[r, if(sAcro != ""), code:{
+				<span class="popup-acronym">[r: sAcro]</span>
+			}]
 		</div>
-		<div style="margin-top: 10px">
+		<p class="popup-description">
 			[r: sInfo]
-		</div>
-	</div>
+		</p>
+	</dialog>
 	<form method="json" id="close-form" action="[r: macroLinkText('gui/closeWindow@this')]">
 		<input type="hidden" name="name" value="[r: sDialog]">
 	</form>

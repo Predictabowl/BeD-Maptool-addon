@@ -23,32 +23,31 @@
 [h:sMsg = strformat("<span style='color:green' title='1d20 (%{iRoll}) + %{iMod} &rarr %d &ge; %{iCD}'>Successo</span>", iRoll + iMod)]
 [h, switch(sStat), code:
 	case "Res. Acqua":{
-		[discoverResistenzaBersaglio("Acqua", source, target)]
+		[discoverResistenzaBersaglio("Acqua", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Aria":{
-		[discoverResistenzaBersaglio("Aria", source, target)]
+		[discoverResistenzaBersaglio("Aria", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Fuoco":{
-		[discoverResistenzaBersaglio("Fuoco", source, target)]
-		[h: sMsg = "Mario"]
+		[discoverResistenzaBersaglio("Fuoco", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Terra":{
-		[discoverResistenzaBersaglio("Terra", source, target)]
+		[discoverResistenzaBersaglio("Terra", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Arcana":{
-		[discoverResistenzaBersaglio("Arcano", source, target)]
+		[discoverResistenzaBersaglio("Arcano", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Mente":{
-		[discoverResistenzaBersaglio("Mentale", source, target)]
+		[discoverResistenzaBersaglio("Mentale", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Negativa":{
-		[discoverResistenzaBersaglio("Negativo", source, target)]
+		[discoverResistenzaBersaglio("Negativo", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Positiva":{
-		[discoverResistenzaBersaglio("Positivo", source, target)]
+		[discoverResistenzaBersaglio("Positivo", source, target, json.set("", "isElement", 1))]
 	};
 	case "Res. Fisica":{
-		[discoverResistenzaBersaglio("Fisico", source, target)]
+		[discoverResistenzaBersaglio("Fisico", source, target, json.set("", "isElement", 1))]
 	};
 	case "LD Taglio":{
 		[macro("combat/discoverTargetLDSheet@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(target, "T")]

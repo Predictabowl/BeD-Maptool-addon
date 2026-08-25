@@ -38,7 +38,7 @@
 }]
 
 
-[if(!bInterrupt), code:{ 
+[h, if(!bInterrupt), code:{ 
 	[jCosts = json.get(aResult,1)]
 	[payAction(jCosts)]
 	[macro("class_skills/checkAndAddEstenuante@this"): json.append(source, sLibAbilita)]
@@ -49,6 +49,7 @@
 		[macro("class_skills/DisattivaAbilita@this"): sAbilitaTag]
 	}; {
 		[isActive = 1]
+		[h: execFunction("guiUpdateClassSkillStatus", json.append(source, sLibAbilita, 1))]
 	}]
 }]
 

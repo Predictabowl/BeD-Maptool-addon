@@ -1,4 +1,5 @@
 [h: tokenId = arg(0)]
+[h: heroPoints = arg(1)]
 
 [h: frameName = "PannelloAbilita"]
 [h: frameProp = getFrameProperties(frameName)]
@@ -6,5 +7,4 @@
 [h: tokenFrame = json.get(frameProp,"value")]
 [h, if(tokenFrame != tokenId): return(0,"")]
 
-[h: heroPoints = getPuntiEroe(tokenId)]
 [r: runJsFunction(frameName, "frame", "updateHeroicBar", "null", json.append("", heroPoints))]

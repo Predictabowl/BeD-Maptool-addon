@@ -21,4 +21,3 @@
 		[macro("class_skills/DisattivaAbilita@this"): json.append(source,item,1)]
 	}]
 }]
-[macro("gui/updateDialogAbilita@this"): source]

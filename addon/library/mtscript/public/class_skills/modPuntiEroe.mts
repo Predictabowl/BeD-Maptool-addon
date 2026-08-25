@@ -7,3 +7,4 @@
 [h, if (iPE < 0): iPE = 0]
 [h, if(iPE > 1000): iPE = 1000]
 [h: setInMemoria(oToken,"PUNTI_EROE", iPE)]
+[h: execFunction("guiUpdateHeroPoints", json.append("", oToken, iPE))]

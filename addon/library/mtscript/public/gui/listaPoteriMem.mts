@@ -23,7 +23,7 @@
 [h: sThemePreferenze = "Spell_Dialogs_Theme"]
 [h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
-[frame5(sFrame,strformat("value=%s", oToken)):{
+[frame5(sFrame,strformat("scrollreset=0; value=%s;", oToken)):{
 <html>
 <head> 
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]

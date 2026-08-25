@@ -25,9 +25,9 @@ async function toggleAttivaAbilita(event, skillId){
         setTimeout(() => {
             clickedButton.disabled = false;
         }, 2000);
-        return;
+        // return;
     }
-    setSkillActiveStatus(skillId, data.isActive);
+    // setSkillActiveStatus(skillId, data.isActive);
 }
 
 function getTokenId(){
@@ -37,11 +37,18 @@ function getTokenId(){
 function updateHeroicBar(heroicPoints){
     document.getElementById("heroic-points").textContent = heroicPoints + "/1000";
     document.getElementById("heroic-fill").style.width = (heroicPoints/10) + '%';
+    const buttons = document.querySelectorAll('[data-button-type="heroic-skill"]');
     const track = document.getElementById("heroic-track");
     if(heroicPoints >= 1000) {
         track.classList.add("heroic-full");
+        buttons.forEach(b => {
+            b.disabled=false;
+        });
     } else {
         track.classList.remove("heroic-full");
+        buttons.forEach(b => {
+            b.disabled=true;
+        });
     }
 }
 
