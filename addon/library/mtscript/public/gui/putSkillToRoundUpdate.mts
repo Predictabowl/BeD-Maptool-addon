@@ -1,0 +1,12 @@
+[h: tokenId = arg(0)]
+[h: skillId = arg(1)]
+[h: newResources = arg(2)]
+
+[h: sProp = "skills_resource_round_update"]
+[h: sLib = getMacroLocation()]
+[h: jSkills = getLibProperty(sProp, sLib)]
+[h, if(json.isEmpty(jSkills)): jSkills = "{}"]
+[h: aResources = json.get(jSkills, skillId)]
+[h: aResources = json.unique(json.merge(aResources, newResources))]
+[h: jSkills = json.set(jSkills, skillId, aResources)]
+[h: setLibProperty(sProp, jSkills, sLib)]

@@ -9,5 +9,8 @@
 [h: iValue = iValue + iCooldown]
 [h: oData = json.set(oData, sNomeAb, iValue)]
 [h: setInMemoria(oToken, "estenuante-cooldown", oData)]
+[h: execFunction("guiUpdateClassSkillResource", json.append(oToken, sNomeAb, "PF"), 0, "all")]
+[h, macro("gui/putSkillToRoundUpdate@this"): json.append(oToken, sNomeAb, "PF")]
 
-[h: eventInstaller(oToken, "On_Round_End", "estenuante-cooldown", "class_skills/estenuanteEndRoundUpdater@" + getMacroLocation())]
+[h:broadcast(getMacroLocation())]
+[h: eventInstaller(oToken, "On_Round_End", "estenuante-cooldown", "class_skills/estenuanteEndRoundUpdater@lib:" + getMacroLocation())]

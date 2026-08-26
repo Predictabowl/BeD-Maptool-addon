@@ -16,7 +16,7 @@
 [h, if(isNumber(ini)==0): ini = -1]
 
 [r, if(inRange == 1), code:{
-	[macro("combat/getArmaDaUsare@"+getMacroLocation()):source]
+	[macro("combat/getArmaDaUsare@this"):source]
 	[h: arma = macro.return]
 
 	[r, if (action == "Attacco" || ini < 0), code:{

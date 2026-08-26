@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <!-- Essendo già attivo, mostriamo un indicatore invece del pulsante -->
-				[r, if(sActive != ""): "<button class='btn btn-active-spirit' disabled>Attivo</button>"]
+				[r, if(sActive != ""): "<span class='btn btn-active-spirit'>Attivo</span>"]
             </div>
 
             <div class="spirit-body">

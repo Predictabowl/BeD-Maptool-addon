@@ -44,11 +44,11 @@
     <div class="spell-stats-grid">
         <div class="stat-box">
             <span class="stat-label">M:</span>
-            <span class='stat-value manaFont'>[r: iMana]</span>
+            <span class='stat-value manaFont' data-resource-type="mana">[r: iMana]</span>
         </div>
         <div class="stat-box">
             <span class="stat-label">PF:</span>
-            <span class="stat-value faticaFont">[r: iPF]</span>
+            <span class="stat-value faticaFont" data-resource-type="PF">[r: iPF]</span>
         </div>
         <div class="stat-box">
             <span class="stat-label">Liv:</span>
@@ -56,15 +56,15 @@
         </div>
         <div class="stat-box">
             <span class="stat-label">PA:</span>
-            <span class="stat-value azioneFont">[r: iPA]</span>
+            <span class="stat-value azioneFont" data-resource-type="PA">[r: iPA]</span>
         </div>
         <div class="stat-box">
             <span class="stat-label">PP:</span>
-            <span class="stat-value ppFont">[r: iPP]</span>
+            <span class="stat-value ppFont" data-resource-type="PP">[r: iPP]</span>
         </div>
         <div class="stat-box">
             <span class="stat-label">MM:</span>
-            <span class="stat-value mmFont">[r: iMM]</span>
+            <span class="stat-value mmFont" data-resource-type="MM">[r: iMM]</span>
         </div>
     </div>
 </div>

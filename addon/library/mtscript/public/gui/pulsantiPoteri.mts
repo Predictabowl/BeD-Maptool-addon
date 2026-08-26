@@ -97,11 +97,11 @@
 		}]
 	};
 	case "AbilitaClasse":{
-		[if(isDialogVisible("DialogAbilita")), code:{
-			[oProperties = getDialogProperties("DialogAbilita")]
+		[if(isFrameVisible("PannelloAbilita")), code:{
+			[oProperties = getFrameProperties("PannelloAbilita")]
 			[setPreferenza("larghezza",json.get(oProperties,"width"),target,"Dialog_Abilita_Classe")]
 			[setPreferenza("altezza",json.get(oProperties,"height"),target,"Dialog_Abilita_Classe")]
-			[closeDialog("DialogAbilita")]
+			[closeFrame("PannelloAbilita")]
 		};{	
 			[macro("gui/dialogAbilitaClasse@this"): target]
 		}]

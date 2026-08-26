@@ -5,5 +5,5 @@
 	[h: oParam = json.append(oServitore,"Servitore"+getName(source))]
 	[macro("gui/ApriScheda@this"):oParam]
 	[macro("gui/listaPoteriMem@this"):oParam]
-	[closeDialog("DialogAbilita")]
+	[closeFrame("PannelloAbilita")]
 }]

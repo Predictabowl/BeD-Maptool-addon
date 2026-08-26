@@ -10,7 +10,7 @@
 	};{
 		[macro("class_skills/delEstenuante@this"): oEstParam]
 	}]
-	
+	[h, macro("gui/putSkillToRoundUpdate@this"): json.append(oToken, sNomeAb, "PF")]
 }]
 
 [h: oUpdatedData = getDaMemoria(oToken,"estenuante-cooldown")]

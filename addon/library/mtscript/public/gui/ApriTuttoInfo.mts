@@ -9,5 +9,7 @@
 	[closeOverlay("UIOverlay")]
 	[macro("gui/UIOverlay@this"): target]
 	[macro("gui/listaPoteriMem@this"):oParam]
-	[closeDialog("DialogAbilita")]
+	[if(isFrameVisible("PannelloAbilita")), code:{
+		[macro("gui/dialogAbilitaClasse@this"): target]
+	}]
 }]

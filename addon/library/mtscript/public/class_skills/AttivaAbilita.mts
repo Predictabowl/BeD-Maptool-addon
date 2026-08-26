@@ -49,7 +49,7 @@
 		[macro("class_skills/DisattivaAbilita@this"): sAbilitaTag]
 	}; {
 		[isActive = 1]
-		[h: execFunction("guiUpdateClassSkillStatus", json.append(source, sLibAbilita, 1))]
+		[h: execFunction("guiUpdateClassSkillStatus", json.append(source, sLibAbilita, 1), 0, "all")]
 	}]
 }]
 

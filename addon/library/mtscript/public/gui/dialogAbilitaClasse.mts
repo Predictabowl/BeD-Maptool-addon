@@ -1,5 +1,3 @@
-<!-- TODO this is a work in progress -->
-
 [h: oToken = arg(0)]
 [h: sDialog = "PannelloAbilita"]
 

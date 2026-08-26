@@ -73,3 +73,11 @@ function refreshAllValues(activeSkillIds, heroicPoints){
     });
     updateHeroicBar(heroicPoints);
 }
+
+function setResourceValue(skillId, resource, value){
+    const parent = document.getElementById(skillId);
+    if (!parent) return;
+
+    const targetChildren = parent.querySelectorAll(`[data-resource-type="${resource}"]`);
+    targetChildren.forEach(child => child.textContent = value);
+}

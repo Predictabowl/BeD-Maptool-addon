@@ -22,6 +22,6 @@
 
 [h, macro("class_skills/cleanerAbilita@this"):oAbilitaParam]
 [h, macro("class_skills/delAbilitaInUso@this"):oAbilitaParam]
-[h: execFunction("guiUpdateClassSkillStatus", json.append(source, sAbilita, 0))]
+[h: execFunction("guiUpdateClassSkillStatus", json.append(source, sAbilita, 0), 0, "all")]
 
 [h: macro.return = bSuccess]

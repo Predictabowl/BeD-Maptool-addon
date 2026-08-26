@@ -8,7 +8,8 @@
 [h: iAttivazioni = iAttivazioni +1]
 [h: setInMemoriaRound(source,sNomeAb,iAttivazioni)]
 
-[macro("gui/updateDialogAbilita@lib:it.aldinucci.piero.bed.maptool.ruleset"): source]
+[h, macro("gui/putSkillToRoundUpdate@this"): json.append(source, sNomeAb, "PF")]
 
 [h: appendMessaggio(source,"strAbilitaAttivata","+1 PA guadagnati")]
-[h: macro.return = 0]
+[h: execFunction("guiUpdateClassSkillResource", json.append(source, sNomeAb, "PF"), 0, "all")]
+[h: return(0,0)]

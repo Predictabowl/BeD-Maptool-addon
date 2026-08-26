@@ -263,6 +263,7 @@
 [h: defineFunction("setTossicoLiv","mechanics/setTossicoLiv@this")]
 [h: defineFunction("updateDannoPuntiEroe","class_skills/updateDannoPuntiEroe@this")]
 [h: defineFunction("updateSchedaPoteri","gui/updatePoteri@this")]
+[h: defineFunction("guiUpdateClassSkillResource","gui/updateClassSkillResource@this")]
 [h: defineFunction("guiUpdateClassSkillStatus","gui/updateClassSkillStatus@this")]
 [h: defineFunction("guiUpdateHeroPoints","gui/updateHeroPoints@this")]
 [h: defineFunction("updateUIOverlay","gui/updateUIOverlay@this")]

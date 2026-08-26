@@ -43,6 +43,7 @@
 	[macro("events/runEvents@this"): json.set("","source", sMapVar,"target", target, "event","On_Round_Start_Map")]
 	[sMsg = popMessaggio(sMapVar,"msgEventOn_Round_Start_Map")]
 	[h, if(macro.return != ""): broadcast(macro.return)]
+	[macro("gui/updateTokenScheda@this"): target]
 }]
 
 [macro("events/runDelaySafeMacros@this"): 0]

@@ -69,7 +69,7 @@
         "sDescr": "Meccanica propria degli incantesimi di tipo Offensivo di Stregoneria, che permette a tali incantesimi di essere più efficaci. Attivabile solo grazie ad abilità specifiche di classe."
     },
     "estenuante": {
-        "sAcro": "Extenuante x",
+        "sAcro": "Estenuante x",
         "sDescr": "<p>Quando attivata, un'abilità estenuante entra in fase di estenuazione per x round, cumulabile per ogni attivazione.</p><p>Attivare l'abilità ha un costo aggiuntivo di +6 PF per ogni round rimanente di estenuazione.</p><p>Solo i round di combattimento contano ai fini del recupero.</p>"
     },
     "fallimento critico": {
