@@ -50,12 +50,11 @@
         </div>
 
         <!-- Fascia risorse -->
-        <div class="resource-ribbon">
+        <div class="resource-ribbon-5">
             [r, if(sTipoConsumable != "POZIONE"), code:{
                 <div class="resource-item">
-                    <span class="stat-label">CD</span>
-                    [h, macro("consumables/getCDOggetto@this"): iLivello]
-                    <span class="stat-value genericStatFont">[r: macro.return]</span>
+                    <span class="stat-label">Livello</span>
+                    <span class="stat-value genericStatFont">[r: iLivello]</span>
                 </div>
             };{
                 <div class="resource-item">
@@ -63,11 +62,6 @@
                     <span class="stat-value toxicFont">[r: getTossicoOggetto(oItem, oToken)]</span>
                 </div>
             }]
-            <div class="resource-item">
-                <span class="stat-label">LL</span>
-                [h, macro("consumables/getLLOggetto@this"): iLivello]
-                <span class="stat-value genericStatFont">[r: macro.return]</span>
-            </div>
             <div class="resource-item">
                 <span class="stat-label">Tempo</span>
                 [h, macro("consumables/getItemTime@this"): json.append(oToken, spellName)]
@@ -99,11 +93,12 @@
                         <span class="label">Scuola</span><span class="leader"></span>
                         <span class="value">[r: getScuola(oToken,spellName)]</span>
                     </div>
+                };{
+                    <div class="compendium-row">
+                        <span class="label">Livello</span><span class="leader"></span>
+                        <span class="value">[r: iLivello]</span>
+                    </div>
                 }]
-                <div class="compendium-row">
-                    <span class="label">Tipo</span><span class="leader"></span>
-                    <span class="value">[r: sTipo]</span>
-                </div>
                 <div class="compendium-row">
                     <span class="label">Elemento</span><span class="leader"></span>
                     <span class="value">[r: fetchSpellProp(spellName,"elemento")]</span>
@@ -144,12 +139,16 @@
                     <span class="label">Medium</span><span class="leader"></span>
                     <span class="value">[r: fetchSpellProp(spellName,"proiettile")]</span>
                 </div>
-                [r, if(sTipoConsumable != "POZIONE"), code:{
-                    <div class="compendium-row">
-                        <span class="label">Tratti</span><span class="leader"></span>
-                        <span class="value">[r: lTratti]</span>
-                    </div>
-                }]
+                <div class="compendium-row">
+                    <span class="label">LL</span><span class="leader"></span>
+					[h, macro("consumables/getLLOggetto@this"): iLivello]
+                    <span class="value">[r: macro.return]</span>
+                </div>
+                <div class="compendium-row">
+                    <span class="label">CD</span><span class="leader"></span>
+                    [h, macro("consumables/getCDOggetto@this"): iLivello]
+                    <span class="value">[r: macro.return]</span>
+                </div>
             </div>
 
             <!-- Descrizione -->
@@ -163,7 +162,7 @@
             <div class="mechanical">
 			[h: aDescrizione = fetchSpellProp(spellName,"descrizione")]
 			[r, foreach(sDescr, aDescrizione, ""), code:{
-				[h, macro("utility/textProcessHTML@this"): sDescr]
+				[h, macro("utility/textProcessHTML2@this"): sDescr]
                 <p>[r: macro.return]</p>
 			}]
             </div>
@@ -172,6 +171,7 @@
 
     </dialog>
 
+    [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/InfoBox.html")]
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>

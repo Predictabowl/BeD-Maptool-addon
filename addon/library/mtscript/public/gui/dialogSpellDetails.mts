@@ -36,7 +36,8 @@
 					[h: sTipo = fetchSpellProp(spellName,"tipo")]
                     <span class="chip type-chip [r: upper(sTipo)]">[r: sTipo]</span>
 					[r, foreach(sTratto, lTratti, ""), code:{
-                    	<span class="chip trait-chip">[r: sTratto]</span>
+                        [h, macro("utility/textProcessHTML2@this"): sTratto]
+                    	<span class="chip trait-chip">[r: macro.return]</span>
 					} ]
                 </div>
             </div>
@@ -88,10 +89,6 @@
                     <span class="value">[r: getScuola(oToken,spellName)]</span>
                 </div>
                 <div class="compendium-row">
-                    <span class="label">Tipo</span><span class="leader"></span>
-                    <span class="value">[r: sTipo]</span>
-                </div>
-                <div class="compendium-row">
                     <span class="label">Elemento</span><span class="leader"></span>
                     <span class="value">[r: fetchSpellProp(spellName,"elemento")]</span>
                 </div>
@@ -130,9 +127,15 @@
                     <span class="value">[r: fetchSpellProp(spellName,"proiettile")]</span>
                 </div>
                 <div class="compendium-row">
-                    <span class="label">Tratti</span><span class="leader"></span>
-                    <span class="value">[r: lTratti]</span>
+                    <span class="label">LL</span><span class="leader"></span>
+                    [h: spellArgs = json.set("","source", oToken, "spellName",spellName,"critRes",0)]
+	                [h, macro("powers/getAutoLL@this"):spellArgs]
+                    <span class="value">[r: macro.return]</span>
                 </div>
+                <div class="compendium-row">
+                    <span class="label">CD</span><span class="leader"></span>
+                    <span class="value">[r: getSpellCD(spellArgs)]</span>
+                </div>                
             </div>
 
             <!-- Descrizione -->
@@ -146,7 +149,7 @@
             <div class="mechanical">
 			[h: aDescrizione = fetchSpellProp(spellName,"descrizione")]
 			[r, foreach(sDescr, aDescrizione, ""), code:{
-				[h, macro("utility/textProcessHTML@this"): sDescr]
+				[h, macro("utility/textProcessHTML2@this"): sDescr]
                 <p>[r: macro.return]</p>
 			}]
             </div>
@@ -155,10 +158,10 @@
 
     </dialog>
 
+    [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/InfoBox.html")]
+
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
 }]
 
-<!-- TODO questo non servirà? I consumabili avranno un dialog separato -->
-[macro("consumables/setForceItemCastOverride@this"): json.append(oToken,0)]

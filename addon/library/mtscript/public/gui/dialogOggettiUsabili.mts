@@ -70,7 +70,7 @@
                 Slot: <span id="slotsUsed">[r: countSlotVeloceItems(oToken)]</span>/<span id="slotsMax">[r: iMaxSlots]</span>
             </div>
             <div class="header-actions">
-                <button class="btn" id="toggleInvBtn" onclick="toggleInventory()">Apri Zaino ▼</button>
+                <button class="btn" id="toggleInvBtn" onclick="toggleInventory()">Apri Inventario ▼</button>
             </div>
             <div>
                 <button class="header-theme-btn" id="themeToggle" title="Cambia Tema"
@@ -147,7 +147,7 @@
         <div class="inventory-drawer" id="inventoryDrawer">
             <div class="spirit-header">
                 <div class="spirit-info">
-                    <h3 class="spirit-name">Zaino</h3>
+                    <h3 class="spirit-name">Inventario</h3>
                 </div>
             </div>
             <div class="spirit-body">

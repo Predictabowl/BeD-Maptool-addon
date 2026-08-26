@@ -1,94 +1,82 @@
-/* Ensure the iframe/standalone page background doesn't block the view */
-html, body {
-    background: transparent;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-/* --- HTML POPUP DIALOG STYLING --- */
+/* --- INLINE SHARED POPUP DIALOG --- */
 dialog.explanation-popup {
-    /* Position it to cover the exact dimensions of the parent frame/container */
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     
-    /* Remove all default dialog margins, padding, and offset */
+    width: 280px;
     margin: 0;
-    padding: 12px 16px;
+    padding: 10px 14px;
     box-sizing: border-box;
-    
-    /* Disable resizing or moving */
-    resize: none;
-    
-    /* Ensure it sits above other content in this frame */
     z-index: 99999;
     
-    /* Theme styling */
+    /* Theme integration */
     background-color: var(--bg-card);
     color: var(--text-color);
-    border: 2px solid var(--border-color);
-    box-shadow: none; /* No shadow needed if it takes the whole frame */
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     
     font-family: var(--font-default);
-    font-size: 15px;
+    font-size: 13px;
     line-height: 1.4;
+    resize: none;
     
-    /* Display control (managed via JS) */
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
-/* Remove default backdrop tint since it fills the frame */
+dialog.explanation-popup[open] {
+    display: flex;
+}
+
 dialog.explanation-popup::backdrop {
     background: transparent;
 }
 
-/* Header Content: Abbreviation/Acronym + Full Meaning */
+.explanation-popup *:focus {
+    outline: none !important;
+}
+
+/* Header Content */
 .popup-header {
     display: flex;
     align-items: baseline;
-    gap: 8px;
-    margin-bottom: 6px;
+    gap: 6px;
+    margin-bottom: 4px;
     border-bottom: 1px solid var(--border-color);
-    padding-bottom: 4px;
+    padding-bottom: 3px;
 }
 
 .popup-title {
     font-family: var(--font-title);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--accent-color);
     margin: 0;
 }
 
 .popup-acronym {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     font-weight: bold;
     color: var(--stat-label-color);
     background: var(--stats-bg);
-    padding: 1px 5px;
-    border-radius: 3px;
+    padding: 1px 4px;
+    border-radius: 2px;
 }
 
-/* Popup Description */
+/* Description */
 .popup-description {
     margin: 0;
-    font-size: 0.95rem;
     color: var(--text-color);
-    overflow-y: auto; /* Handles text if it exceeds a few lines */
 }
 
-/* Clickable internal words */
-.popup-description a, 
-.popup-link {
+/* Trigger Link Style */
+.info-trigger {
     color: var(--link-color);
     cursor: pointer;
     text-decoration: none;
 }
 
-.popup-description a:hover, 
-.popup-link:hover {
+.info-trigger:hover {
     color: var(--link-hover-color);
 }

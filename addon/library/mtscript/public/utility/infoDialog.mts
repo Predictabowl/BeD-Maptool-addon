@@ -17,7 +17,7 @@
 <html>
 <head>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/InfoBox.css?cachelib=true">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/InfoBox_old.css?cachelib=true">
 	<title>Placeholder</title>
 </head>
 <body onmouseleave="closeForm()" class="[r, if(bLightMode == 1): 'light-mode']">

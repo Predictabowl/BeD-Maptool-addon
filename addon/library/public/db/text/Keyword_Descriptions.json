@@ -82,7 +82,7 @@
         "sDescr": "+38 MDR"
     },
     "frammento d’anima": {
-        "sDescr": "<p>I Frammenti d’anima sono una risorsa esclusiva richiesta per l’attivazione di alcuni specifici incantesimi di scuole Sacrileghe ed abilità di classe.</p><p>I frammenti oltre il primo sono instabili e vengono rilasciati dopo 15 round, non è quindi possibile avere più di un frammento fuori dal combattimento.</p>"
+        "sDescr": "<p>I Frammenti d’anima sono una risorsa esclusiva richiesta per l’attivazione di alcuni specifici incantesimi di scuole Sacrileghe ed abilità di classe.</p><p>I frammenti oltre la propria capacità di accumulo sono instabili e vengono rilasciati rapidamente fuori dal combattimento.</p>"
     },
     "frm": {
         "sAcro": "Fattore Rigenerazione Mana",

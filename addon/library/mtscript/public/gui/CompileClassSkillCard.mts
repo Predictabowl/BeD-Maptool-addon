@@ -4,37 +4,19 @@
 [h: oAbParam = macro.args]
 
 [h: sTipo = upper(fetchClassSkillProp(skillId,"tipo"))]
+[h, macro("gui/getSkillTypeClass@this"): sTipo]
+[h: classType = macro.return]
 [h: sNome = fetchClassSkillProp(skillId,"nome_decorativo")]
 [h, macro("class_skills/isAbilitaInUso@this"): oAbParam]
 [h: bInUso = macro.return]
 [h, macro("class_skills/getAutocastAbilita@this"): oAbParam]
 [h: bAutocast = macro.return]
 
-
 [h: sImage = fetchClassSkillImage(skillId)]
 [h: sFluff = strformat("<img src='%{sImage}' class='spellCastButton' title='Attiva/Disattiva Abilità'/>")]
 [h: jSCall = strformat('pulsanteAttivaAbilita(event,"%s")',skillId)]
 [h: sMacroL = strformat("<a href='#' onmouseup='%s' class='spellCast'>%{sFluff}</a>", jScall)]
 
-[h, switch(sTipo), code:
-case "ATTIVA":{
-	[classType = "AbAttiva"]
-};
-case "EROICA":{
-	[classType = "AbEroica"]
-};
-case "PECULIARE":{
-	[classType = "AbPeculiare"]
-};
-case "PASSIVA":{
-	[classType = "AbPassiva"]
-	[sMacroL = ""]
-	[bInUso = 0]
-	[sMacroDis = ""]
-};
-default:{
-	[classType = ""]
-}]
 
 [h, if(bInUso): sAttiva = "abilitaOn"; sAttiva=""]
 [h, if(bAutocast): sAutocast = "abilitaAutocast"; sAutocast = ""]

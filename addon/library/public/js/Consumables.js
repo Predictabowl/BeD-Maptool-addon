@@ -4,7 +4,7 @@ const ICON_MINUS = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" 
 
 function loadParams(elem) {
     if(!isInventoryClosed()) {
-        alert("Non puoi lanciare consumabili mentre hai lo zaino aperto.");
+        alert("Non puoi lanciare consumabili mentre hai l'inventario aperto.");
         return;
     }
     document.getElementById('spell_SpellName').setAttribute('value', elem.getAttribute('data-spellName'));
@@ -41,7 +41,7 @@ function toggleInventory() {
     const isClosed = isInventoryClosed();
     drawer.style.display = isClosed ? 'flex' : 'none';
     frame.classList.toggle('inventory-open', isClosed);
-    btn.textContent = isClosed ? 'Chiudi Zaino ▲' : 'Apri Zaino ▼';
+    btn.textContent = isClosed ? 'Chiudi Inventario ▲' : 'Apri Inventario ▼';
 }
 
 async function equipItem(button) {

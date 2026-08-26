@@ -143,6 +143,17 @@ body {
     flex-shrink: 0;
 }
 
+.resource-ribbon-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    background: var(--stats-bg);
+    border-radius: 6px;
+    padding: 10px 4px;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+}
+
 .resource-item {
     display: flex;
     flex-direction: column;
