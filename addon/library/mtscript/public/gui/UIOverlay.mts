@@ -81,7 +81,7 @@
 	<html>
 	<head>
 		[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
-		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/UIOverlay.css?cachelib=false">
+		<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/UIOverlay.css?cachelib=true">
 	</head>
 	<body>
 	<div>
@@ -146,14 +146,14 @@
 	</div>
 
 	[r, if(sSwapToken != ""), code:{
-	<form id="formRisolviAzione" method="json" action="[r:macroLinkText("gui/executeSwapTokenOverlay@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
+	<form id="formSWapToken" method="json" action="[r:macroLinkText("gui/executeSwapTokenOverlay@lib:it.aldinucci.piero.bed.maptool.ruleset")]">
 		<div style="position:absolute; bottom:0px; left:2px; display:flex; justify-content:start; margin:0px; padding:0px;">
 			<input type='image' class='pServitore' name='SwapToken' value='[r: sSwapToken]' src='[r: getTokenImage("",sSwapToken)]' title='Scambia' id='button-swap-token'/>
 		</div>
 	</form>
 	}]
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=false" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=true" defer></script>
 	</body>
 	</html>
 }]

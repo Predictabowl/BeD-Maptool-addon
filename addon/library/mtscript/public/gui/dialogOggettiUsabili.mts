@@ -57,7 +57,7 @@
 <head>
     <title>Consumabili - Quickslot</title>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
-    <link rel="stylesheet" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Consumables.css?cachelib=false">
+    <link rel="stylesheet" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Consumables.css?cachelib=true">
 </head>
 
 <body class="[r, if(bLightMode == 1): 'light-mode']" data-tokenid = "[r: oToken]">
@@ -168,8 +168,8 @@
 	<input id='item_slotVeloce' type='hidden' name='slotVeloce' value=''/>
 	</form>
 
-    <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/Consumables.js?cachelib=false" defer></script>
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=false" defer></script>
+    <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/Consumables.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 
 </body>
 

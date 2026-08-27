@@ -35,7 +35,7 @@
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellDetailsCssLink.html")]
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/ClassSkills.css?cachelib=false">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/ClassSkills.css?cachelib=true">
 	<title> [r: getName(oToken)] - Descrizione Potere</title>
 </head>
 <body class="[r, if(bLightMode == 1): 'light-mode']">

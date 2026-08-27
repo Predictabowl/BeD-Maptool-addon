@@ -1,65 +1,15 @@
-<!-- TODO remove unused stuff -->
 [h: target = json.get(macro.args,"target")]
 [h: sFrame = json.get(macro.args,"frameName")]
 [h: sButton = json.get(macro.args,"buttonPressed")]
 
 [macro("gui/blockIfNotOwner@this"):target]
 
-[h, if(json.contains(macro.args,"Azione")), code:{
-	[macro("mobs/RisolviAzione@this"): target]
-	[return(0,"")]
-}]
-[h, if(json.contains(macro.args,"SelBersagli")), code:{
-	[macro("powers/TargetingSelect@this"): target]
-	[return(0,"")]
-}]
-
-[h, if(json.contains(macro.args,"Interrompi") == 1), code:{
-	[macro("mobs/InterrompiAzione@this"):target]
-	[macro("utility/sortIniziativa@this"):0]
-	[return(0,"")]	
-}]
-
-[h, if(json.contains(macro.args,"DialogAbilita")), code:{
-	[macro("gui/dialogAbilitaClasse@this"): target]		
-	[return(0,"")]
-}]
-
-[h, if(json.contains(macro.args,"FrameScheda")), code:{
-	
-	[h, if(isFrameVisible("Scheda")), code:{
-		[closeFrame("Scheda")]
-	};{
-		[macro("gui/ApriScheda@this"):json.append(target,"Scheda")]
-	}]
-	[return(0,"")]
-}]
-
-
-[h, if(json.contains(macro.args,"Attacca") == 1), code:{
-	[macro("combat/iniziaAttacco@this"):json.set("","source",target)]
-	[return(0,"")]	
-}]
 
 [h, if(json.contains(macro.args,"Aspettare") == 1), code:{
 	[macro("mobs/setAttesa@this"): target]
 	[return(0,"")]	
 }]
 
-
-[h, if(json.contains(macro.args,"SlotRapidi") == 1), code:{
-	[h, if(getOverride(target,"InventarioBloccato")), code:{
-		[broadcast("Non è possibile accedere all'inventario in questo momento",getPlayerName())]
-		[return(0,0)]
-	}]
-	[macro("gui/dialogOggettiUsabili@this"):target]
-	[return(0,"")]	
-}]
-
-[h, if(json.contains(macro.args,"Aggiorna")), code:{
-	[macro("gui/updatePoteri@this"): json.append(target,sFrame)]
-	[return(0,"")]	
-}]
 
 [h, if(json.contains(macro.args,"CiclaVista")), code:{
 	[macro("mobs/ciclaVisteToken@this"): target]

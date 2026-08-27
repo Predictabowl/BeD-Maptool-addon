@@ -19,7 +19,7 @@
 <html>
 <head>
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellsCssLink.html")]
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/ClassSkills.css?cachelib=false">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/ClassSkills.css?cachelib=true">
 	<title>[r: getName(oToken)] - Abilità di Classe</title> 
 </head>
 <body class="[r, if(bLightMode == 1): 'light-mode']" data-tokenid="[r: oToken]">
@@ -44,7 +44,7 @@
 	</div>
 	[r, macro("gui/buildHeroicSkillsPanel@this"): oToken]
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/ClassSkills.js?cachelib=false" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/ClassSkills.js?cachelib=true" defer></script>
 </body>
 </html>
 }]
