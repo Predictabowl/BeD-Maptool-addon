@@ -10,7 +10,7 @@
 		[macro("gui/delPoteriOffensiviCache@this"): oToken]
 	};
 	case "clearAll":{
-		[delDaCache(oToken,"SpellStats")]		
+		[macro("gui/clearSpellStatsFromCache@this"): oToken]
 	};
 	default:{}
 ]

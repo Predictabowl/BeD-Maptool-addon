@@ -5,6 +5,7 @@
 [h, macro("gui/getFrameToken@this"): frameName]
 [h, if(tokenId != macro.return): return(0, "")]
 
+[macro("gui/clearSpellStatsFromCache@this"): tokenId]
 [h, switch(resource), code:
     case "VA": {
         [macro("powers/getMemSpellTimes@this"): tokenId]
