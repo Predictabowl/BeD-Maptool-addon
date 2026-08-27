@@ -20,7 +20,7 @@
 
 
 [h: iLarg = getPreferenza("larghezza",oToken,sGruppoPreferenze)]
-[h, if(!isNumber(iLarg)): iLarg = 650]
+[h, if(!isNumber(iLarg)): iLarg = 800]
 [h: iAltezza = getPreferenza("altezza",oToken,sGruppoPreferenze)]
 [h, if(!isNumber(iAltezza)): iAltezza = 700]
 

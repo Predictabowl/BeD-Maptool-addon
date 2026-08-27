@@ -31,10 +31,10 @@
 [h: result = 0]
 [h, for(i,0,iLP), code:{
 	[fRolled = eval(string(dmgLP))]
-	[sRolledDice = strformat("%{sRolledDice}%{fRolled}, ")]
+	[sRolledDice = listAppend(sRolledDice, fRolled)]
 	[result = result + fRolled]
 }]
-[appendMessaggio(target,"spellRolledDice",sRolledDice)]
+[h: appendMessaggio(target,"spellRolledDice",sRolledDice)]
 
 
 [h: dmgBase = eval(string(dmgBase))]
