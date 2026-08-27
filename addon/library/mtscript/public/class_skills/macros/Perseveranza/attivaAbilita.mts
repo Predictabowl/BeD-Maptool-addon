@@ -1,4 +1,4 @@
-[h: source = macro.args]
+[h: source = arg(0)]
 
 [h: switchToken(source)]
 [h: PA = PA +1]

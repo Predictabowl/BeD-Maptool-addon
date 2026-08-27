@@ -3,4 +3,5 @@
 
 [h, if(json.type(aPoteri) != "ARRAY"): aPoteri = json.fromList(aPoteri)]
 
-[h: setProperty("Poteri_Mem",aPoteri,oToken)aPoteri = json.fromList(aPoteri)]
+[h: aPoteri = json.unique(aPoteri)]
+[h: setProperty("Poteri_Mem",aPoteri,oToken)]

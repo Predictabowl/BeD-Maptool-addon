@@ -14,7 +14,7 @@ let draggedItem = null;
 function handleDragStart(e) {
     draggedItem = e.target.closest('.spell-card');
     e.dataTransfer.effectAllowed = 'copy';
-    e.dataTransfer.setData('text/plain', draggedItem.getAttribute('data-id'));
+    e.dataTransfer.setData('text/plain', draggedItem.id);
     draggedItem.classList.add('dragging');
 }
 
@@ -42,7 +42,7 @@ function handleDrop(e) {
         const updatedCards = container.querySelectorAll('.spell-card');
         let newOrder = [];
         updatedCards.forEach(card => {
-            newOrder.push(card.dataset.id);
+            newOrder.push(card.id);
         });
 
         document.getElementById('nuovaListaPoteri').value = newOrder.join(",");
@@ -67,5 +67,19 @@ async function refreshSpellList(event, frame) {
     }
 }
 
+function refreshSpellsResource(resource, updatesArray) {
+    const updates = typeof updatesArray === 'string' ? JSON.parse(updatesArray) : updatesArray;
+    for (const item of updates) {
+        const spellContainer = document.getElementById(item.spellId);
+        
+        if (spellContainer) {
+            const resourceEl = spellContainer.querySelector(`[data-resource-type="${resource}"]`);
+            
+            if (resourceEl) {
+                resourceEl.textContent = item[resource];
+            }
+        }
+    }
+}
 
 

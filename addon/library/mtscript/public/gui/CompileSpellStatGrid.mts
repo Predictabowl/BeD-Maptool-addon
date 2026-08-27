@@ -25,7 +25,7 @@
     </div>
     <div class="stat-box">
         <span class="stat-label">TE:</span>
-        <span class="stat-value tempoFont">[r: json.get(oSpellData, "tempo")]</span>
+        <span class="stat-value tempoFont" data-resource-type="tempo">[r: json.get(oSpellData, "tempo")]</span>
     </div>
     <div class="stat-box">
         <span class="stat-label">PA:</span>
@@ -35,7 +35,7 @@
         <span class="stat-label">PP:</span>
         [h: ppMant = json.get(oSpellData,"PPMant")]
         [h, if(ppMant>0): ppMant="†"+ppMant; ppMant=""]
-        <span class="stat-value ppFont">[r: json.get(oSpellData, "PP")][r: ppMant]</span>
+        <span class="stat-value ppFont" data-resource-type="PP">[r: json.get(oSpellData, "PP")][r: ppMant]</span>
     </div>
     <div class="stat-box">
         <span class="stat-label">MM:</span>

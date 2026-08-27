@@ -20,7 +20,7 @@
 		[iMod = iMod + json.get(itemM,"flatMod")]
 		[dMod = dMod + json.get(itemM,"percMod")]
 	}]
-	[if (matches(key,"spells/.*")), code:{
+	[if (matches(key,"[^@]+@[^@]+")), code:{
 		[macro(key): json.append(source,spellName,modType)]
 		[iMod = iMod + json.get(itemM,"flatMod")*macro.return]
 		[dMod = dMod + json.get(itemM,"percMod")*macro.return]

@@ -3,9 +3,8 @@
 [h: resource = arg(2)]
 
 [h: frameName = "PannelloAbilita"]
-[h: frameProp = getFrameProperties(frameName)]
-[h, if(json.isEmpty(frameProp)): return(0,"")]
-[h: tokenId = json.get(frameProp,"value")]
+[h, macro("gui/getFrameToken@this"): frameName]
+[h, if(tokenId != macro.return): return(0, "")]
 
 [h, switch(resource), code:
     case "PF": {

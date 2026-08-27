@@ -10,5 +10,8 @@
 [switchToken(source)]
 [h: oServitore = getServitore(source)]
 [h, if(oServitore != ""): PP = PP +iPP] 
+[h: execFunction("guiUpdateSpellsResource", json.append(source, "VA"), 0, "all")]
+[h: execFunction("guiUpdateSpellsResource", json.append(source, "PP"), 0, "all")]
+[h: delDaCache(source,"SpellStats")]
 
 [h:macro.return = 0]

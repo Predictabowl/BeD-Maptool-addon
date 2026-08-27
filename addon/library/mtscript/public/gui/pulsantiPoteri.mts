@@ -1,3 +1,4 @@
+<!-- TODO remove unused stuff -->
 [h: target = json.get(macro.args,"target")]
 [h: sFrame = json.get(macro.args,"frameName")]
 [h: sButton = json.get(macro.args,"buttonPressed")]

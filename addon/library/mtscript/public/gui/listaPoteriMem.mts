@@ -46,7 +46,7 @@
 		[recuperoOverlay = ""]
 	}]
  	<!-- Spell Card -->
-	<div class="spell-card" draggable="true" data-id="[r: nomeLib]" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)">
+	<div class="spell-card" draggable="true" id="[r: nomeLib]" ondragstart="handleDragStart(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)" ondragend="handleDragEnd(event)">
 		[r: recuperoContainer]
 			<input type="image" class="spell-icon-btn" title="Lancia" src='[r: spellImg]' onclick='loadParams(this)' data-macro="gui/iniziaSpellCastWrapper@this" data-spellname="[r: nomeLib]"/>
 		[r: recuperoOverlay]
@@ -73,8 +73,8 @@
     🌓
 </button>
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=true" defer></script>
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/listaPoteriMem.js?cachelib=false" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=false" defer></script>
 </body>
 </html>
 }]

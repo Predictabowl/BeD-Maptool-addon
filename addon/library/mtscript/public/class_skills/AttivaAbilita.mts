@@ -21,7 +21,6 @@
 	[h: bFlag = json.get(aResult,0)]
 
 	[h, if(bFlag), code:{
-		[if(isAbilitaEroica(sLibAbilita)): modPuntiEroe(source,-1000)]
 		[macro(buildClassSkillMacroName(sLibAbilita,"attivaAbilita")):source]
 		[bInterrupt = macro.return]
 		[h: returnStr = popMessaggio(source,"strAbilitaAttivata")]
@@ -41,6 +40,7 @@
 [h, if(!bInterrupt), code:{ 
 	[jCosts = json.get(aResult,1)]
 	[payAction(jCosts)]
+	[if(isAbilitaEroica(sLibAbilita)): modPuntiEroe(source,-1000)]
 	[macro("class_skills/checkAndAddEstenuante@this"): json.append(source, sLibAbilita)]
 	[macro("class_skills/setAbilitaInUso@this"): sAbilitaTag]
 	[macro("class_skills/getDurataAbilita@this"): sAbilitaTag]
