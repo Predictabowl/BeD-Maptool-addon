@@ -1,5 +1,5 @@
 [h: oToken = arg(0)]
-[h, if(findToken(oToken) == ""): oToken = currentToken()]
+[h, if(oToken == ""): oToken = currentToken()]
 [h: sCar1 = arg(1)]
 [h: sCar2 = arg(2)]
 [h, if(argCount() > 3): sCar3 = arg(3); sCar3 = ""]

@@ -5,7 +5,6 @@
 	[oToken = sToken]
 	[oMemoria = getLibProperty("Json_mem",sToken)]
 };{
-	[oToken = findToken(sToken)]
 	[oMemoria = getProperty("Json_mem",oToken)]
 }]
 

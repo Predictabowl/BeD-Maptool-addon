@@ -7,7 +7,6 @@
 	[sStat = json.get(macro.args,1)]
 }]
 
-[h: oToken = findToken(oToken)]
 [h, if(oToken == ""): return(0,0)]
 
 [h: switchToken(oToken)]

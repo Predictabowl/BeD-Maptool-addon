@@ -7,10 +7,10 @@
 	[h: source = json.get(macro.args,"source")]
 	[h: spellName = json.get(macro.args,"spellName")]
 	[h: bOpp = json.get(macro.args,"opportunita")]
-	[if(!isNumber(bOpp)): bOpp = 0]
+	[if(bOpp == ""): bOpp = 0]
 }]
 
-[macro("powers/getRawSpellTime@this"): json.append(source, spellName, bOpp)]
+[h, macro("powers/getRawSpellTime@this"): json.append(source, spellName, bOpp)]
 [h: time = macro.return]
 
 [h, if(time != 0) , code:{
@@ -27,5 +27,4 @@
 [h: time = time+iMod]
 [h: time = calcActionTime(time,source,dPerc)]
 
-
-[h: macro.return = time]
+[h: return(0, time)]

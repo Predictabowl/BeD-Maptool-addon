@@ -5,7 +5,6 @@
 	[oToken = sToken]
 	[oMemoria = getLibProperty("Cache",sToken)]
 };{
-	[oToken = findToken(sToken)]
 	[oMemoria = getProperty("Cache",oToken)]
 }]
 
