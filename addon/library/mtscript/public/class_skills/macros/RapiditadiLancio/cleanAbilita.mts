@@ -3,6 +3,6 @@
 [h: sNomeAb = "RapiditaLancio"]
 
 [h: addSpellMod(source,"AllSpells","VA",-25)]
-[h: execFunction("guiUpdateSpellsResource", json.append(source, "VA"), 0, "all")]
+[h, macro("gui/updateSpellsResource@this"): json.append(source, "VA")]
 
 [h:macro.return = ""]

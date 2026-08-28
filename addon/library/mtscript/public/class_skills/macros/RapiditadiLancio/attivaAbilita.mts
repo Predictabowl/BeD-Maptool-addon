@@ -5,6 +5,6 @@
 [h: iBonus = 25]
 
 [h: addSpellMod(source,"AllSpells","VA",iBonus)]
-[h: execFunction("guiUpdateSpellsResource", json.append(source, "VA"), 0, "all")]
+[h, macro("gui/updateSpellsResource@this"): json.append(source, "VA")]
 
 [h: macro.return = 0]

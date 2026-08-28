@@ -10,7 +10,7 @@
     case "VA": {
         [macro("powers/getMemSpellTimes@this"): tokenId]
         [h: jsParams = json.append("", "tempo", macro.return)]
-        [h: runJsFunction(frameName, "frame", "refreshSpellsResource", "null", jsParams)]
+        [h: execFunction("runFrameJsIfNeeded", json.append(tokenId, frameName, "refreshSpellsResource", jsParams), 0, "all")]
     };
     case "PP": {
         [aValues = "[]"]
@@ -23,7 +23,7 @@
             [aValues = json.append(aValues, json.set("", "spellId", spellId, "PP", sValue))]
         }]
         [h: jsParams = json.append("", "PP", aValues)]
-        [h: runJsFunction(frameName, "frame", "refreshSpellsResource", "null", jsParams)]
+        [h: execFunction("runFrameJsIfNeeded", json.append(tokenId, frameName, "refreshSpellsResource", jsParams), 0, "all")]
     }
 ]
 
