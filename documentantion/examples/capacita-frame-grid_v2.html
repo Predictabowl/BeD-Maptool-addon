@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Capacità</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&family=Macondo&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+
+<style>
+    /* ============================================
+       CAPACITA FRAME - dedicated CSS
+       Relies on variables/fonts from GlobalCss.css
+       ============================================ */
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 12px;
+        width: 560px;
+    }
+
+    .capacita-frame {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* --- Header --- */
+    .capacita-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .capacita-header h2 {
+        font-family: var(--font-title);
+        color: var(--accent-color);
+        margin: 0;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    /* Visibility toggle (Segreto / Pubblico) */
+    .visibility-toggle {
+        display: flex;
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        overflow: hidden;
+        font-size: 11px;
+    }
+
+    .visibility-toggle button {
+        border: none;
+        background: transparent;
+        color: var(--text-color);
+        padding: 3px 10px;
+        cursor: pointer;
+        font-family: var(--font-default);
+        opacity: 0.55;
+        transition: background-color 0.15s, opacity 0.15s;
+    }
+
+    .visibility-toggle button.active {
+        background-color: var(--accent-color);
+        color: var(--bg-color);
+        opacity: 1;
+        font-weight: 600;
+    }
+
+    /* --- Circumstance modifier bar --- */
+    .circostanza-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--border-color);
+        background-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .circostanza-bar label {
+        font-size: 13px;
+        opacity: 0.85;
+        white-space: nowrap;
+    }
+
+    .circostanza-bar input {
+        width: 52px;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+        border-radius: 4px;
+        padding: 2px 6px;
+        text-align: center;
+    }
+
+    .circostanza-bar .hint {
+        margin-left: auto;
+        font-size: 11px;
+        opacity: 0.5;
+        font-style: italic;
+    }
+
+    /* --- Skill grid (2 columns) --- */
+    .skill-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Every row gets a bottom border; only add the divider between
+       columns on the left-hand one, and drop the bottom border on
+       whichever row lands last in each column. */
+    .skill-row {
+        display: flex;
+        align-items: center;
+        padding: 6px 10px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .skill-row:nth-child(odd) {
+        border-right: 1px solid var(--border-color);
+    }
+
+    /* last row of an even-length list: both columns need the border removed */
+    .skill-row:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+
+    .skill-row:hover {
+        background-color: rgba(212, 154, 64, 0.08);
+    }
+
+    .skill-name {
+        flex: 1;
+        font-size: 15px;
+    }
+
+    .skill-mod {
+        width: 34px;
+        text-align: center;
+        font-weight: bold;
+        color: var(--generic-stat-color);
+        font-size: 14px;
+    }
+
+    .skill-mod.positive {
+        color: var(--tempo-color);
+    }
+
+    .skill-mod.negative {
+        color: var(--azione-color);
+    }
+
+    .roll-btn {
+        margin-left: 8px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1px solid var(--accent-color);
+        background-color: transparent;
+        color: var(--accent-color);
+        font-family: var(--font-title);
+        font-size: 13px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.15s, color 0.15s, transform 0.1s;
+    }
+
+    .roll-btn:hover {
+        background-color: var(--accent-color);
+        color: var(--bg-color);
+    }
+
+    .roll-btn:active {
+        transform: scale(0.92);
+    }
+
+    /* --- Last roll footer --- */
+    .last-roll {
+        padding: 8px 12px;
+        border-top: 1px solid var(--border-color);
+        background-color: rgba(0, 0, 0, 0.18);
+        font-size: 13px;
+        min-height: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .last-roll .label {
+        opacity: 0.55;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .last-roll .result {
+        font-family: var(--font-title);
+        font-size: 16px;
+        color: var(--accent-color);
+    }
+
+    .last-roll .result.empty {
+        opacity: 0.3;
+        font-family: var(--font-default);
+        font-size: 12px;
+    }
+</style>
+</head>
+<body>
+
+<div class="capacita-frame">
+
+    <div class="capacita-header">
+        <h2>Capacità</h2>
+        <div class="visibility-toggle">
+            <button id="btn-secret" class="active" onclick="setVisibility('secret')">Segreto</button>
+            <button id="btn-public" onclick="setVisibility('public')">Pubblico</button>
+        </div>
+    </div>
+
+    <div class="circostanza-bar">
+        <label for="circostanza">Mod. Circostanza</label>
+        <input type="number" id="circostanza" value="0">
+        <span class="hint">si applica al prossimo tiro</span>
+    </div>
+
+    <div class="skill-list" id="skill-list">
+        <!-- rows injected by JS from SKILLS array below -->
+    </div>
+
+    <div class="last-roll">
+        <span class="label">Ultimo tiro</span>
+        <span class="result empty" id="last-roll-result">—</span>
+    </div>
+
+</div>
+
+<script>
+    // Skill name -> modifier value (placeholder values, wire these to real char data)
+    const SKILLS = {
+        "Acrobazia": 2,
+        "Arcanologia": 0,
+        "Atletica": 3,
+        "Autorità": -1,
+        "Erudizione": 1,
+        "Fitness": 2,
+        "Furtività": 4,
+        "Intrattenimento": 0,
+        "Lotta": 1,
+        "Manualità": 0,
+        "Medicina": -1,
+        "Percezione": 3,
+        "Perspicacia": 1,
+        "Persuasione": 0,
+        "Resilienza": 2,
+        "Sociologia": -1,
+        "Sopravvivenza": 1,
+        "Tenacia": 2
+    };
+
+    let visibility = "secret"; // "secret" | "public"
+
+    function setVisibility(mode) {
+        visibility = mode;
+        document.getElementById("btn-secret").classList.toggle("active", mode === "secret");
+        document.getElementById("btn-public").classList.toggle("active", mode === "public");
+    }
+
+    function modClass(v) {
+        if (v > 0) return "positive";
+        if (v < 0) return "negative";
+        return "";
+    }
+
+    function buildSkillList() {
+        const list = document.getElementById("skill-list");
+        list.innerHTML = "";
+        Object.entries(SKILLS).forEach(([name, mod]) => {
+            const row = document.createElement("div");
+            row.className = "skill-row";
+            row.innerHTML = `
+                <span class="skill-name">${name}</span>
+                <span class="skill-mod ${modClass(mod)}">${mod >= 0 ? "+" : ""}${mod}</span>
+                <button class="roll-btn" title="Tira ${name}" onclick="rollSkill('${name}', ${mod})">🎲</button>
+            `;
+            list.appendChild(row);
+        });
+    }
+
+    function rollSkill(name, mod) {
+        const circostanza = parseInt(document.getElementById("circostanza").value, 10) || 0;
+
+        const d20 = Math.floor(Math.random() * 20) + 1;
+        const total = d20 + mod + circostanza;
+
+        const resultEl = document.getElementById("last-roll-result");
+        resultEl.classList.remove("empty");
+        resultEl.textContent = `${name}: ${d20} + ${mod}${circostanza !== 0 ? (circostanza > 0 ? " +" : " ") + circostanza : ""} = ${total} (${visibility === "secret" ? "Segreto" : "Pubblico"})`;
+
+        // Circumstance modifier is consumed after one roll, per spec
+        document.getElementById("circostanza").value = 0;
+    }
+
+    buildSkillList();
+</script>
+
+</body>
+</html>

@@ -9,6 +9,9 @@
 [h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,spellName)]
 [h: oSpellData = macro.return]
 
+[h, macro("combat/isStile2A@this"): oToken]
+[h: bIs2A = macro.return || isArmaLancioEquipped(oToken)]
+
 [h: sThemePreferenze = "Spell_Dialogs_Theme"]
 [h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
@@ -128,13 +131,24 @@
                 </div>
                 <div class="compendium-row">
                     <span class="label">LL</span><span class="leader"></span>
-                    [h: spellArgs = json.set("","source", oToken, "spellName",spellName,"critRes",0)]
+                    [h: spellArgs = json.set("","source", oToken, "spellName",spellName,"critRes",0, "arma", 1)]
 	                [h, macro("powers/getAutoLL@this"):spellArgs]
-                    <span class="value">[r: macro.return]</span>
+                    <span class="value">
+                        <span title="Arma Primaria">[r: macro.return]</span>
+                        [r, if(bIs2A), code: {
+                            [h, macro("powers/getAutoLL@this"): json.set(spellArgs,"arma", 2)]
+                            <span title="Arma Secondaria">[r: macro.return]</span>
+                        }]
+                    </span>
                 </div>
                 <div class="compendium-row">
                     <span class="label">CD</span><span class="leader"></span>
-                    <span class="value">[r: getSpellCD(spellArgs)]</span>
+                    <span class="value">
+                        <span title="Arma Primaria">[r: getSpellCD(spellArgs)]</span>
+                        [r, if(bIs2A), code: {
+                            <span title="Arma Secondaria">[r: getSpellCD(json.set(spellArgs,"arma", 2))]</span>
+                        }]
+                    </span>
                 </div>                
             </div>
 
