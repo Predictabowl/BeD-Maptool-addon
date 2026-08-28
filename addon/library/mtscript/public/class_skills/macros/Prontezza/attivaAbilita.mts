@@ -4,6 +4,7 @@
 [h, macro(buildClassSkillMacroName("Prontezza","calcBonus")): source]
 [h: iBonus = macro.return]
 [h: VA = VA +iBonus]
+[h, macro("gui/clearSpellStatsFromCache@this"): source]
 [h: execFunction("guiUpdateSpellsResource", json.append(source, "VA"), 0, "all")]
 
 [h: appendMessaggio(source,"strAbilitaAttivata",strformat("+%d VA", iBonus))]

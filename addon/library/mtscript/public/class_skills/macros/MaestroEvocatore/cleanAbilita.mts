@@ -7,6 +7,7 @@
 
 [h: switchToken(source)]
 [h: PA = PA - iPP]
+[h, macro("gui/clearSpellStatsFromCache@this"): source]
 [h: execFunction("guiUpdateSpellsResource", json.append(source, "VA"), 0, "all")]
 [h: execFunction("guiUpdateSpellsResource", json.append(source, "PP"), 0, "all")]
 
