@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 12px;
+    width: 320px;
+}
+
+.capacita-frame {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* --- Header --- */
+.capacita-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.capacita-header h2 {
+    font-family: var(--font-title);
+    color: var(--accent-color);
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* Visibility toggle (Segreto / Pubblico) */
+.visibility-toggle {
+    display: flex;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    font-size: 11px;
+}
+
+.visibility-toggle button {
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    padding: 3px 10px;
+    cursor: pointer;
+    font-family: var(--font-default);
+    opacity: 0.55;
+    transition: background-color 0.15s, opacity 0.15s;
+}
+
+.visibility-toggle button.active {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* --- Circumstance modifier bar --- */
+.circostanza-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.circostanza-bar label {
+    font-size: 13px;
+    opacity: 0.85;
+    white-space: nowrap;
+}
+
+.circostanza-bar input {
+    width: 52px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 4px;
+    padding: 2px 6px;
+    text-align: center;
+}
+
+.circostanza-bar .hint {
+    margin-left: auto;
+    font-size: 11px;
+    opacity: 0.5;
+    font-style: italic;
+}
+
+/* --- Skill list --- */
+.skill-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.skill-row:last-child {
+    border-bottom: none;
+}
+
+.skill-row:hover {
+    background-color: rgba(212, 154, 64, 0.08);
+}
+
+.skill-name {
+    flex: 1;
+    font-size: 15px;
+}
+
+.skill-mod {
+    width: 34px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--generic-stat-color);
+    font-size: 14px;
+}
+
+.skill-mod.positive {
+    color: var(--tempo-color);
+}
+
+.skill-mod.negative {
+    color: var(--azione-color);
+}
+
+.roll-btn {
+    margin-left: 8px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--accent-color);
+    background-color: transparent;
+    color: var(--accent-color);
+    font-family: var(--font-title);
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s, color 0.15s, transform 0.1s;
+}
+
+.roll-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+.roll-btn:active {
+    transform: scale(0.92);
+}
+
+/* --- Last roll footer --- */
+.last-roll {
+    padding: 8px 12px;
+    border-top: 1px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.18);
+    font-size: 13px;
+    min-height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last-roll .label {
+    opacity: 0.55;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.last-roll .result {
+    font-family: var(--font-title);
+    font-size: 16px;
+    color: var(--accent-color);
+}
+
+.last-roll .result.empty {
+    opacity: 0.3;
+    font-family: var(--font-default);
+    font-size: 12px;
+}

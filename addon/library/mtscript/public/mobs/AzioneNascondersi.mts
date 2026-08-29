@@ -8,7 +8,7 @@
 [h, if(!macro.return): return(0,1)]
 
 [macro("mobs/rollCapacita@this"): json.append(source,"Furtivita")]
-[h: iHide = macro.return]
+[h: iHide = json.get(macro.return, "total")]
 
 [h: msgOutput = ""]
 
@@ -22,7 +22,7 @@
 		[if(json.isEmpty(jSight)): iMod = 0]
 		[pushStatModifier(oToken, "Percezione", iMod)]
 		[macro("mobs/rollCapacita@this"): json.append(oToken, "Percezione")]
-		[h: iLook = macro.return]
+		[h: iLook = json.get(macro.return, "total")]
 		[if(iLook >= iHide): appendMessaggio(source,"endOfActionMsg",strformat("%s fallisce il suo tentativo di nascondersi.",getName(source)))]
 		[if(iLook >= iHide): return (0,0)]
 	}]

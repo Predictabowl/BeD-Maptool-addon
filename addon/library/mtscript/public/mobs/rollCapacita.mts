@@ -17,32 +17,29 @@
 [h: iCap = getProperty(sCap,source)]
 
 [h: iRoll = roll(1,20)]
-[macro("core/popStatModifier@this"): json.append(source,sCap)]
+[h, macro("core/popStatModifier@this"): json.append(source,sCap)]
 [h: iMod = macro.return]
 
 [h: iReturn = iRoll + iCap + iMod]
-[h: listD = getProperty("Capacita",source)]
-[if(bStoreRoll), code:{
-	[h: ListD = setStrProp(ListD,sCap,iReturn)]
-	[h: setProperty("Capacita",ListD,source)]
-}]
+[h: jReturn = json.set("", "total", iReturn, "roll", iRoll, "skill", iCap, "mods", iMod, "secret", bSecretRoll)]
+[h, if(bStoreRoll): Capacita = json.set(Capacita, sCap, jReturn)]
 
 [h: bSecFlag = 0]
 [h, if(bVerbose != 0), code:{
+	[h: sMods = strformat("<span title='Grado Capacità'>%+d</span>", iCap)]
+	[if(iMod != 0): sMods = strformat("%{sMods}<span title='Modificatore di Circostanza'>%+d</span>",iMod)]
 	[if(bSecretRoll == 1), code:{
-		[sMsgResult = strformat("<b>%s</b> (tiro segreto <i>%{sCap}</i>): 1d20 (%{iRoll}) %+d", getName(source),iCap,iCap)]
-		[if(iMod != 0): sMsgResult = strformat("%{sMsgResult} <span title='Modificatore di Circostanza'>%+d</span>",iMod)]
-		[sMsgResult = strformat("%{sMsgResult} &rarr; %{iReturn}")]
-		[broadcast(sMsgResult,"GM")]
+		[sMsgResult = strformat("<b>%s</b> (tiro segreto <i>%{sCap}</i>): 1d20%{sMods} &rarr; ", getName(source))]
+		[sMsgResult = strformat("%{sMsgResult} %{iRoll}%{sMods} = %{iReturn}")]
+		[broadcast(sMsgResult,"gm")]
 		[sPlayer = getPlayerName()]
 		[if(!isGM(sPlayer)): broadcast(strformat("<b>%s</b> (tiro segreto <i>%{sCap}</i>)", getName(source),iCap),sPlayer)]
 	};{
-		[sMsgResult = strformat("<b>%s</b> (<i>%{sCap}</i>): 1d20 (%{iRoll}) %+d", getName(source),iCap,iCap)]
-		[if(iMod != 0): sMsgResult = strformat("%{sMsgResult} <span title='Modificatore di Circostanza'>%+d</span>",iMod)]
-		[sMsgResult = strformat("%{sMsgResult} &rarr; %{iReturn}")]
+		[sMsgResult = strformat("<b>%s</b> (<i>%{sCap}</i>): 1d20%{sMods} &rarr; ", getName(source))]
+		[sMsgResult = strformat("%{sMsgResult} %{iRoll}%{sMods} = %{iReturn}")]
 		[broadcast(sMsgResult,"gm-self")]		
 	}]
 }]
 
-
-[h: macro.return = iReturn]
+[h: macro.return = jReturn]
+[r: macro.return]

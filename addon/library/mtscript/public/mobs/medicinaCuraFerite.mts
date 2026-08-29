@@ -32,7 +32,7 @@
 [h, if(!bCheck): return(0,"")]
 
 [h, macro("mobs/rollCapacita@this"): json.append(source, "Medicina")]
-[h: iResult = macro.return]
+[h: iResult = json.get(macro.return, "total")]
 [h: iCDScelta = iXScelta +5]
 [h: iScarto = iResult - iCDScelta]
 

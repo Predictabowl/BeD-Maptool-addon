@@ -2,8 +2,8 @@
 [h: sCap = json.get(macro.args,1)]
 
 [h: switchToken(source)]
-[h: result = getStrProp(Capacita,sCap)]
-[h, if(result == ""), code:{
+[h: result = json.get(Capacita,sCap)]
+[h, if(json.isEmpty(result)), code:{
 	[macro("mobs/rollCapacita@this"): macro.args]
 	[result = macro.return]
 }]

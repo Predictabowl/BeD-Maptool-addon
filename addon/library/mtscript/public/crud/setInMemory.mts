@@ -2,15 +2,10 @@
 [h: sLabel = arg(1)]
 [h: oObject = arg(2)]
 
-[h, if(startsWith(sToken,"Lib:")), code:{
-	[oToken = sToken]
-	[oMemoria = getLibProperty("Json_mem",sToken)]
-};{
-	[oToken = findToken(sToken)]
-	[oMemoria = getProperty("Json_mem",oToken)]
-}]
+[h: oToken = findToken(sToken)]
+[h: assert(oToken != "","Token non trovato "+getMacroName())]
 
-[assert(oToken != "","Token non trovato "+getMacroName())]
+[h: oMemoria = getProperty("Json_mem",oToken)]
 
 [h, if(json.type(oMemoria) != "OBJECT"): oMemoria = "{}"]
 [h: oMemoria = json.set(oMemoria,sLabel,oObject)]

@@ -5,9 +5,9 @@
 
 
 [macro("mobs/getLastRollCapacita@this"): json.append(source,sSCap)]
-[h: iSCap = macro.return]
+[h: iSCap = json.get(macro.return, "total")]
 [macro("mobs/getLastRollCapacita@this"): json.append(target,sTCap)]
-[h: iTCap = macro.return]
+[h: iTCap = json.get(macro.return, "total")]
 
 [h, if(iSCap > iTCap): return = 1; return = 0]
 

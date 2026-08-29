@@ -18,5 +18,5 @@
 [h: PF = PF - iPF]
 [h: PA = PA - iPA]
 [h: PP = PP - iPP]
-
 <!-- No need to calculate PA based on PP, PP will go on negative and will be payed on next power -->
+[h, macro("utility/updateBars@this"):target]
