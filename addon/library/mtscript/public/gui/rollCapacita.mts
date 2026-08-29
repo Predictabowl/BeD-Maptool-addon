@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: target=json.get(macro.args,"target")]
 [h: sCap = json.get(macro.args,"capacita")]
 [h: iMod = json.get(macro.args,"modCircostanza")]

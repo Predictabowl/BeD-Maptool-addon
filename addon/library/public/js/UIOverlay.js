@@ -28,11 +28,11 @@ function pulsanteRosso(event) {
 function pulsanteToken(event) {
     var elem = document.getElementById('var-input');
     if (event.button == 2) {
-        elem.setAttribute('value', 'Equipaggiamento');
+        openSubmenu(event, 'personaggio');
     } else {
         elem.setAttribute('value', 'FrameScheda');
+        document.getElementById('formRisolviAzione').submit();
     }
-    document.getElementById('formRisolviAzione').submit();
 }
 
 function pulsanteBersaglio(event) {

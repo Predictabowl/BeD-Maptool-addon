@@ -94,5 +94,8 @@
 	case "Sortilegi": {
 		[macro("gui/GrimorioSortilegi@this"): target]
 	};
+	case "Capacita": {
+		[macro("gui/PannelloCapacita@this"): target]
+	};
 	default :{}
 ]

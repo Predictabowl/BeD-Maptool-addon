@@ -2,6 +2,7 @@
 	[source = json.get(macro.args,"source")]
 	[sCap = json.get(macro.args,"capacita")]
 	[bVerbose = json.get(macro.args,"verbose")]
+	[iCircostanza = json.get(macro.args,"circostanza")]
 	[bStoreRoll = json.get(macro.args,"storeRoll")]
 	[bSecretRoll = json.get(macro.args,"segreto")]
 	[if(bStoreRoll == ""): bStoreRoll = 1]
@@ -11,14 +12,17 @@
 	[if(json.length(macro.args)>2): bSecretRoll = json.get(macro.args,2); bSecretRoll = 0]
 	[bVerbose = 1]
 	[bStoreRoll = 1]
+	[iCircostanza = 0]
 }]
+
+[h, if(!isNumber(iCircostanza)): iCircostanza = 0]
 
 [h: switchToken(source)]
 [h: iCap = getProperty(sCap,source)]
 
 [h: iRoll = roll(1,20)]
 [h, macro("core/popStatModifier@this"): json.append(source,sCap)]
-[h: iMod = macro.return]
+[h: iMod = macro.return + iCircostanza]
 
 [h: iReturn = iRoll + iCap + iMod]
 [h: jReturn = json.set("", "total", iReturn, "roll", iRoll, "skill", iCap, "mods", iMod, "secret", bSecretRoll)]

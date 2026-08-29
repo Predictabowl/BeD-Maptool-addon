@@ -91,26 +91,26 @@
 				<div style="heigth:100%; width:min-content; display:grid; gap:0px; grid-template-columns: repeat(15,auto); justify-content: center; align-content: end; align-items:center; background-color:rgba(0,0,0,0.2); border-radius:28px;">
 				
 					<div style="margin:0px; padding-right: 5px;">
-						<a style="color:inherit;" onmouseup="pulsanteToken(event)" title='Apri Scheda / Equipaggiamento'>
+						<a style="color:inherit; display: block;" onmouseup="pulsanteToken(event)" title='Apri Scheda / Apri Menù'>
 							<img src="[r: getTokenImage()]" class="pulsanteGrande" style="box-shadow: 0px 0px 8px; border-radius:28px;" />
 						</a>
 					</div>
-					<a onmouseup="pulsanteRosso(event)" title='Risolvi / Apri Menu'>
+					<a onmouseup="pulsanteRosso(event)" title='Risolvi / Apri Menù'>
 						<img class='pulsanteUI'  src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/resolve_action.png' />
 					</a>
 					<input type='image' class='pulsanteUI' name='Attacca' value='Attacca' src='[r: sIconaAttacco]' title='Attacco base' id='button-attacco'/>
 					[r: sLancioLink]
-					<a title='Abilità / Apri Menu' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]" id="button-class-skill">
+					<a title='Abilità / Apri Menù' onmouseup="pulsantePoteri(event)" class="[r: sAbilitaClass]" id="button-class-skill">
 						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/class_skills.png' />
 					</a>
-					<a type='image' title='Consumabili / Apri Menu' onmouseup="pulsanteConsumabili(event)">
+					<a type='image' title='Consumabili / Apri Menù' onmouseup="pulsanteConsumabili(event)">
 						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/medieval-magic-theme-backpack_2661820.png' />
 					</a>
 					[r: sScegliMotivoLink]
 					[r: sNecrofuriaLink]
 					[r: sSovSpiLink]
 					[r: sAltreAzioniLink]
-					<a title='Selezione / Spawn / Apri Menu' onmouseup="pulsanteBersaglio(event)">
+					<a title='Selezione / Spawn / Apri Menù' onmouseup="pulsanteBersaglio(event)">
 						<img class='pulsanteUI' src='lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/target_select.png' />
 					</a>
 					[r: sCiclaVista]
@@ -121,6 +121,10 @@
 				</div>
 			</div>
 			<div id="floatingSubmenu" class="submenu"  onmouseleave="scheduleSubmenuClose()" onmouseenter="cancelSubmenuClose()"></div>
+			<template id="submenu-personaggio">
+				<a onmouseup="scegliEvento(event,'FrameScheda')">Scheda</a>
+				<a onmouseup="scegliEvento(event,'Capacita')">Capacità Generali</a>
+			</template>
 			<template id="submenu-azione">
 				<a onmouseup="scegliEvento(event,'Azione')">Risolvi</a>
 				<a onmouseup="scegliEvento(event,'Interrompi')">Annulla</a>
@@ -153,7 +157,7 @@
 	</form>
 	}]
 
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/UIOverlay.js?cachelib=false" defer></script>
 	</body>
 	</html>
 }]

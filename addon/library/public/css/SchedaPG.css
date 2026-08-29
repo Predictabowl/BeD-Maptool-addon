@@ -1,0 +1,438 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 12px;
+    width: 420px;
+}
+
+.sheet {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ===================== HEADER ===================== */
+.sheet-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(180deg, rgba(212, 154, 64, 0.10), transparent 70%);
+}
+
+.portrait {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-color);
+    flex-shrink: 0;
+    background-color: var(--bg-color);
+}
+
+.header-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-name {
+    font-family: var(--font-title);
+    color: var(--accent-color);
+    font-size: 21px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.style-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 3px;
+}
+
+.style-row .lbl {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+#styleSelect {
+    font-family: var(--font-default);
+    font-size: 12px;
+    background: transparent;
+    color: var(--accent-color);
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1px 2px;
+    cursor: pointer;
+    max-width: 190px;
+}
+
+#styleSelect:focus {
+    outline: none;
+    border-bottom-color: var(--accent-color);
+}
+
+#styleSelect option {
+    background-color: var(--bg-card);
+    color: var(--text-color);
+}
+
+/* ===================== TABS ===================== */
+.tab-bar {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.tab-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    font-family: var(--font-default);
+    font-size: 12px;
+    padding: 8px 2px;
+    cursor: pointer;
+    opacity: 0.55;
+    border-bottom: 2px solid transparent;
+    transition: opacity 0.15s, border-color 0.15s;
+}
+
+.tab-btn.active {
+    opacity: 1;
+    border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.tab-btn:hover {
+    opacity: 0.85;
+}
+
+.tab-panel {
+    display: none;
+    padding: 10px 12px;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* ===================== SHARED: stat rows/grids ===================== */
+.section-title {
+    font-family: var(--font-title);
+    font-size: 13px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 10px 0 4px 0;
+    opacity: 0.85;
+}
+
+.section-title:first-child {
+    margin-top: 0;
+}
+
+.subsection-title {
+    font-size: 11px;
+    opacity: 0.55;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 8px 0 4px 0;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 8px;
+}
+
+.stat-grid.cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.stat-cell {
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 4px 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.stat-cell .k {
+    font-size: 10px;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.stat-cell .k img {
+    width: 11px;
+    height: 11px;
+}
+
+.stat-cell .v {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}
+
+.stat-cell .v small {
+    font-size: 10px;
+    font-weight: normal;
+    opacity: 0.65;
+}
+
+/* ===================== WEAPONS TAB ===================== */
+.weapon-toggle {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.weapon-toggle button {
+    flex: 1;
+    border: 1px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.15);
+    color: var(--text-color);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0.6;
+    position: relative;
+}
+
+.next-badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    font-size: 8px;
+    line-height: 15px;
+    text-align: center;
+    box-shadow: 0 0 0 2px var(--bg-card);
+    animation: nextPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes nextPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.18);
+        opacity: 0.8;
+    }
+}
+
+.weapon-toggle button.active {
+    opacity: 1;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.weapon-name {
+    font-family: var(--font-title);
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 6px;
+}
+
+.damage-line {
+    font-size: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.damage-line img {
+    width: 15px;
+    height: 15px;
+    margin-left: 4px;
+}
+
+/* ===================== DEFENSES / RESISTENZE ===================== */
+.resist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.resist-cell {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 3px 6px;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.resist-cell .v {
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}
+
+/* ===================== GENERAL / OUT OF COMBAT ===================== */
+.kv-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 2px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.kv-row .v {
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}
+
+.resource-fill {
+    color: var(--mana-color);
+}
+
+/* ===================== POTERI TABLE ===================== */
+.poteri-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.poteri-table th,
+.poteri-table td {
+    border: 1px solid var(--border-color);
+    padding: 4px 5px;
+    text-align: center;
+}
+
+.poteri-table thead th {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: var(--accent-color);
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.poteri-table td.school-name {
+    text-align: left;
+    font-weight: 600;
+}
+
+.poteri-table td {
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}
+
+.hint {
+    font-size: 11px;
+    opacity: 0.55;
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+/* ===================== CARATTERISTICHE (quiet, low priority) ===================== */
+/* One grid for the whole tab so every value - main or sub - lands in the
+       same right-aligned column instead of floating in its own box. */
+.core-list {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 10px;
+    row-gap: 3px;
+    align-items: baseline;
+}
+
+.core-main-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-color);
+    padding-top: 6px;
+}
+
+.core-main-value {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--generic-stat-color);
+    text-align: right;
+    padding-top: 6px;
+}
+
+.core-sub-label {
+    font-size: 11px;
+    opacity: 0.6;
+    padding-left: 16px;
+}
+
+.core-sub-value {
+    font-size: 11px;
+    font-weight: 600;
+    opacity: 0.8;
+    text-align: right;
+    color: var(--generic-stat-color);
+}
+
+.core-divider {
+    grid-column: 1 / -1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 3px 0;
+}
+
+.core-columns {
+    display: flex;
+    gap: 16px;
+}
+
+.core-columns .core-list {
+    flex: 1;
+    min-width: 0;
+}
+
+.derived-row {
+    margin-top: 14px;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.derived-row .k {
+    font-family: var(--font-title);
+    font-size: 12px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    opacity: 0.85;
+}
+
+.derived-row .v {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scheda Combattimento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=New+Rocker&family=Macondo&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 12px;
+            width: 420px;
+        }
+
+        .sheet {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* ===================== HEADER ===================== */
+        .sheet-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(180deg, rgba(212, 154, 64, 0.10), transparent 70%);
+        }
+
+        .portrait {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+            flex-shrink: 0;
+            background-color: var(--bg-color);
+        }
+
+        .header-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .player-name {
+            font-family: var(--font-title);
+            color: var(--accent-color);
+            font-size: 21px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .style-row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 3px;
+        }
+
+        .style-row .lbl {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        #styleSelect {
+            font-family: var(--font-default);
+            font-size: 12px;
+            background: transparent;
+            color: var(--accent-color);
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1px 2px;
+            cursor: pointer;
+            max-width: 190px;
+        }
+
+        #styleSelect:focus {
+            outline: none;
+            border-bottom-color: var(--accent-color);
+        }
+
+        #styleSelect option {
+            background-color: var(--bg-card);
+            color: var(--text-color);
+        }
+
+        /* ===================== TABS ===================== */
+        .tab-bar {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .tab-btn {
+            flex: 1;
+            border: none;
+            background: transparent;
+            color: var(--text-color);
+            font-family: var(--font-default);
+            font-size: 12px;
+            padding: 8px 2px;
+            cursor: pointer;
+            opacity: 0.55;
+            border-bottom: 2px solid transparent;
+            transition: opacity 0.15s, border-color 0.15s;
+        }
+
+        .tab-btn.active {
+            opacity: 1;
+            border-bottom-color: var(--accent-color);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .tab-btn:hover {
+            opacity: 0.85;
+        }
+
+        .tab-panel {
+            display: none;
+            padding: 10px 12px;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* ===================== SHARED: stat rows/grids ===================== */
+        .section-title {
+            font-family: var(--font-title);
+            font-size: 13px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 10px 0 4px 0;
+            opacity: 0.85;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .subsection-title {
+            font-size: 11px;
+            opacity: 0.55;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            margin: 8px 0 4px 0;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px 8px;
+        }
+
+        .stat-grid.cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .stat-cell {
+            background-color: rgba(0, 0, 0, 0.15);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 4px 7px;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .stat-cell .k {
+            font-size: 10px;
+            opacity: 0.6;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .stat-cell .k img {
+            width: 11px;
+            height: 11px;
+        }
+
+        .stat-cell .v {
+            font-size: 15px;
+            font-weight: bold;
+            color: var(--generic-stat-color);
+        }
+
+        .stat-cell .v small {
+            font-size: 10px;
+            font-weight: normal;
+            opacity: 0.65;
+        }
+
+        /* ===================== WEAPONS TAB ===================== */
+        .weapon-toggle {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .weapon-toggle button {
+            flex: 1;
+            border: 1px solid var(--border-color);
+            background-color: rgba(0, 0, 0, 0.15);
+            color: var(--text-color);
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            opacity: 0.6;
+            position: relative;
+        }
+
+        .next-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            color: var(--bg-color);
+            font-size: 8px;
+            line-height: 15px;
+            text-align: center;
+            box-shadow: 0 0 0 2px var(--bg-card);
+            animation: nextPulse 1.6s ease-in-out infinite;
+        }
+
+        @keyframes nextPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.18);
+                opacity: 0.8;
+            }
+        }
+
+        .weapon-toggle button.active {
+            opacity: 1;
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        .weapon-name {
+            font-family: var(--font-title);
+            font-size: 16px;
+            color: var(--text-color);
+            margin-bottom: 6px;
+        }
+
+        .damage-line {
+            font-size: 15px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .damage-line img {
+            width: 15px;
+            height: 15px;
+            margin-left: 4px;
+        }
+
+        /* ===================== DEFENSES / RESISTENZE ===================== */
+        .resist-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+        }
+
+        .resist-cell {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            padding: 3px 6px;
+            background-color: rgba(0, 0, 0, 0.12);
+            border-radius: 4px;
+        }
+
+        .resist-cell .v {
+            font-weight: bold;
+            color: var(--generic-stat-color);
+        }
+
+        /* ===================== GENERAL / OUT OF COMBAT ===================== */
+        .kv-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 2px;
+            font-size: 13px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .kv-row .v {
+            font-weight: bold;
+            color: var(--generic-stat-color);
+        }
+
+        .resource-fill {
+            color: var(--mana-color);
+        }
+
+        /* ===================== POTERI TABLE ===================== */
+        .poteri-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+
+        .poteri-table th,
+        .poteri-table td {
+            border: 1px solid var(--border-color);
+            padding: 4px 5px;
+            text-align: center;
+        }
+
+        .poteri-table thead th {
+            background-color: rgba(0, 0, 0, 0.15);
+            color: var(--accent-color);
+            font-family: var(--font-title);
+            font-weight: 600;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .poteri-table td.school-name {
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .poteri-table td {
+            font-weight: bold;
+            color: var(--generic-stat-color);
+        }
+
+        .hint {
+            font-size: 11px;
+            opacity: 0.55;
+            margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        /* ===================== CARATTERISTICHE (quiet, low priority) ===================== */
+        /* One grid for the whole tab so every value - main or sub - lands in the
+       same right-aligned column instead of floating in its own box. */
+        .core-list {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            column-gap: 10px;
+            row-gap: 3px;
+            align-items: baseline;
+        }
+
+        .core-main-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-color);
+            padding-top: 6px;
+        }
+
+        .core-main-value {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--generic-stat-color);
+            text-align: right;
+            padding-top: 6px;
+        }
+
+        .core-sub-label {
+            font-size: 11px;
+            opacity: 0.6;
+            padding-left: 16px;
+        }
+
+        .core-sub-value {
+            font-size: 11px;
+            font-weight: 600;
+            opacity: 0.8;
+            text-align: right;
+            color: var(--generic-stat-color);
+        }
+
+        .core-divider {
+            grid-column: 1 / -1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.06);
+            margin: 3px 0;
+        }
+
+        .core-columns {
+            display: flex;
+            gap: 16px;
+        }
+
+        .core-columns .core-list {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .derived-row {
+            margin-top: 14px;
+            padding: 8px 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .derived-row .k {
+            font-family: var(--font-title);
+            font-size: 12px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            opacity: 0.85;
+        }
+
+        .derived-row .v {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--generic-stat-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sheet">
+
+        <!-- ===================== HEADER ===================== -->
+        <div class="sheet-header">
+            <img class="portrait" src="https://placehold.co/128x128/2a241f/d49a40?text=PC" alt="Ritratto">
+            <div class="header-info">
+                <div class="player-name">Aldric Nightbourne</div>
+                <div class="style-row">
+                    <span class="lbl">Stile:</span>
+                    <select id="styleSelect" onchange="setStyle(this.value)">
+                        <option value="scudo">Arma e Scudo</option>
+                        <option value="duemani">Arma a 2 Mani</option>
+                        <option value="distanza">Arma a Distanza</option>
+                        <option value="dueArmi">Due Armi</option>
+                        <option value="manoLibera">Arma e Mano Libera</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== TABS ===================== -->
+        <div class="tab-bar">
+            <button class="tab-btn active" data-tab="armi" onclick="showTab('armi')">Armi</button>
+            <button class="tab-btn" data-tab="magia" onclick="showTab('magia')">Poteri</button>
+            <button class="tab-btn" data-tab="difese" onclick="showTab('difese')">Difese</button>
+            <button class="tab-btn" data-tab="generale" onclick="showTab('generale')">Generale</button>
+            <button class="tab-btn" data-tab="base" onclick="showTab('base')">Base</button>
+        </div>
+
+        <!-- ===================== TAB: ARMI ===================== -->
+        <div class="tab-panel active" id="tab-armi">
+            <div class="weapon-toggle" id="armiToggle"></div>
+            <div id="armiPanel"></div>
+
+            <div class="section-title">Offensivo (Generale)</div>
+            <div class="stat-grid cols-2">
+                <div class="stat-cell"><span class="k">VA</span><span class="v">6 <small>(94%)</small></span></div>
+                <div class="stat-cell"><span class="k">Mancare</span><span class="v">8%</span></div>
+            </div>
+        </div>
+
+        <!-- ===================== TAB: POTERI ===================== -->
+        <div class="tab-panel" id="tab-magia">
+            <div class="section-title">Scuole</div>
+            <table class="poteri-table" id="poteriTable"></table>
+            <div class="hint">LL e CD sono derivati (LMM + bonus generale + bonus arma) e già riportati nella
+                descrizione di ogni incantesimo/potere/tecnica &mdash; qui solo per riferimento rapido.</div>
+        </div>
+
+        <!-- ===================== TAB: DIFESE ===================== -->
+        <div class="tab-panel" id="tab-difese">
+            <div class="section-title">LD (Livello Difesa)</div>
+            <div class="stat-grid cols-3">
+                <div class="stat-cell"><span class="k"><img src="../../addon/library/public/icons/gui/slash_icon.png"
+                            alt="Taglio"> LD</span><span class="v">15</span></div>
+                <div class="stat-cell"><span class="k"><img src="../../addon/library/public/icons/gui/crush_icon.png"
+                            alt="Botta"> LD</span><span class="v">11</span></div>
+                <div class="stat-cell"><span class="k"><img src="../../addon/library/public/icons/gui/pierce_icon.png"
+                            alt="Punta"> LD</span><span class="v">13</span></div>
+            </div>
+
+            <div class="subsection-title">Mitigazione</div>
+            <div class="stat-grid cols-3">
+                <div class="stat-cell"><span class="k">Schivare</span><span class="v">14 <small>(32%)</small></span>
+                </div>
+                <div class="stat-cell"><span class="k">Parare</span><span class="v">18 <small>(38%)</small></span></div>
+                <div class="stat-cell"><span class="k">Elusione</span><span class="v">6 <small>(15%)</small></span>
+                </div>
+            </div>
+
+            <div class="section-title">Tiri Salvezza</div>
+            <div class="stat-grid">
+                <div class="stat-cell"><span class="k">Riflessi</span><span class="v">+4</span></div>
+                <div class="stat-cell"><span class="k">Tempra</span><span class="v">+6</span></div>
+                <div class="stat-cell"><span class="k">Volontà</span><span class="v">+2</span></div>
+            </div>
+
+            <div class="section-title">Resistenze</div>
+            <div class="resist-grid">
+                <div class="resist-cell"><span>Acqua</span><span class="v">10</span></div>
+                <div class="resist-cell"><span>Aria</span><span class="v">0</span></div>
+                <div class="resist-cell"><span>Fuoco</span><span class="v">-15</span></div>
+                <div class="resist-cell"><span>Terra</span><span class="v">5</span></div>
+                <div class="resist-cell"><span>Arcano</span><span class="v">20</span></div>
+                <div class="resist-cell"><span>Mentale</span><span class="v">0</span></div>
+                <div class="resist-cell"><span>Negativo</span><span class="v">-5</span></div>
+                <div class="resist-cell"><span>Positivo</span><span class="v">5</span></div>
+                <div class="resist-cell"><span>Fisico</span><span class="v">8</span></div>
+            </div>
+        </div>
+
+        <!-- ===================== TAB: GENERALE ===================== -->
+        <div class="tab-panel" id="tab-generale">
+            <div class="section-title">Generale</div>
+            <div class="kv-row"><span>Iniziativa</span><span class="v">1d24+29</span></div>
+            <div class="kv-row"><span>Tempo Movimento</span><span class="v">3</span></div>
+            <div class="kv-row"><span>Concentrazione</span><span class="v">18</span></div>
+            <div class="kv-row"><span>Perturbazione</span><span class="v">1d100+6</span></div>
+
+            <div class="section-title">Modificatori</div>
+            <div class="stat-grid cols-2">
+                <div class="stat-cell"><span class="k">MDI</span><span class="v">+10%</span></div>
+                <div class="stat-cell"><span class="k">MDR</span><span class="v">-5%</span></div>
+                <div class="stat-cell"><span class="k">MCG</span><span class="v">0%</span></div>
+                <div class="stat-cell"><span class="k">MCR</span><span class="v">0%</span></div>
+            </div>
+
+            <div class="section-title">Riposo Breve</div>
+            <div class="kv-row"><span>Mana</span><span class="v resource-fill">+12</span></div>
+            <div class="kv-row"><span>PF</span><span class="v">+8</span></div>
+            <div class="kv-row"><span>Rimanenti oggi</span><span class="v">2</span></div>
+
+            <div class="section-title">Riposo Lungo</div>
+            <div class="kv-row"><span>PV</span><span class="v">+20</span></div>
+        </div>
+
+        <!-- ===================== TAB: BASE (CARATTERISTICHE) ===================== -->
+        <div class="tab-panel" id="tab-base">
+            <div class="subsection-title" style="margin-top:0;">Caratteristiche &mdash; solo riferimento</div>
+
+            <div class="core-columns">
+                <div class="core-list">
+                    <div class="core-main-label">Forza</div>
+                    <div class="core-main-value">8</div>
+                    <div class="core-sub-label">Muscoli</div>
+                    <div class="core-sub-value">9</div>
+                    <div class="core-sub-label">Vigore</div>
+                    <div class="core-sub-value">7</div>
+                    <div class="core-divider"></div>
+
+                    <div class="core-main-label">Destrezza</div>
+                    <div class="core-main-value">10</div>
+                    <div class="core-sub-label">Precisione</div>
+                    <div class="core-sub-value">11</div>
+                    <div class="core-sub-label">Equilibrio</div>
+                    <div class="core-sub-value">9</div>
+                    <div class="core-divider"></div>
+
+                    <div class="core-main-label">Costituzione</div>
+                    <div class="core-main-value">9</div>
+                    <div class="core-sub-label">Salute</div>
+                    <div class="core-sub-value">9</div>
+                    <div class="core-sub-label">Resistenza</div>
+                    <div class="core-sub-value">9</div>
+                </div>
+
+                <div class="core-list">
+                    <div class="core-main-label">Intelligenza</div>
+                    <div class="core-main-value">6</div>
+                    <div class="core-sub-label">Ragione</div>
+                    <div class="core-sub-value">6</div>
+                    <div class="core-sub-label">Conoscenza</div>
+                    <div class="core-sub-value">6</div>
+                    <div class="core-divider"></div>
+
+                    <div class="core-main-label">Saggezza</div>
+                    <div class="core-main-value">7</div>
+                    <div class="core-sub-label">Volontà</div>
+                    <div class="core-sub-value">8</div>
+                    <div class="core-sub-label">Intuizione</div>
+                    <div class="core-sub-value">6</div>
+                    <div class="core-divider"></div>
+
+                    <div class="core-main-label">Carisma</div>
+                    <div class="core-main-value">5</div>
+                    <div class="core-sub-label">Presenza</div>
+                    <div class="core-sub-value">5</div>
+                    <div class="core-sub-label">Risolutezza</div>
+                    <div class="core-sub-value">5</div>
+                </div>
+            </div>
+
+            <div class="derived-row">
+                <span class="k">Car. Mana</span>
+                <span class="v">Intelligenza (6)</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        /* =========================================================
+           DATA
+           Weapon-dependent stats live here so the Stile switch can
+           demonstrate how the number of weapon slots (and what goes
+           in them) changes with the equip style. LL/CD numbers are
+           illustrative only, not computed from a real formula.
+           ========================================================= */
+        const SCHOOLS = [
+            { name: 'Elementale', lmm: 7 },
+            { name: 'Arcano', lmm: 3 }
+        ];
+
+        const ICONS = {
+            T: { src: '../../addon/library/public/icons/gui/slash_icon.png', alt: 'Taglio' },
+            B: { src: '../../addon/library/public/icons/gui/crush_icon.png', alt: 'Botta' },
+            P: { src: '../../addon/library/public/icons/gui/pierce_icon.png', alt: 'Punta' }
+        };
+
+        const STYLES = {
+            scudo: {
+                label: 'Arma e Scudo',
+                weapons: [
+                    {
+                        id: 1, kind: 'weapon', name: 'Spada Lunga', dmg: '4d6+1', types: ['T', 'P'],
+                        LA: 14, pen: 3, crit: 18, pcrit: 150, laSpalle: 10, tempoAtt: 4, portata: 1, paAtt: 2, carA: 'Bilanciata',
+                        powers: { Elementale: { ll: 15, cd: 22 }, Arcano: { ll: 9, cd: 14 } }
+                    },
+                    { id: 2, kind: 'shield', name: 'Scudo Borchiato', ldBonus: 8, parareBonus: 12 }
+                ]
+            },
+            duemani: {
+                label: 'Arma a 2 Mani',
+                weapons: [
+                    {
+                        id: 1, kind: 'weapon', name: 'Alabarda', dmg: '2d10+4', types: ['T', 'B'],
+                        LA: 16, pen: 5, crit: 12, pcrit: 140, laSpalle: 8, tempoAtt: 6, portata: 2, paAtt: 3, carA: 'Massiccia',
+                        powers: { Elementale: { ll: 13, cd: 19 }, Arcano: { ll: 7, cd: 11 } }
+                    }
+                ]
+            },
+            distanza: {
+                label: 'Arma a Distanza',
+                weapons: [
+                    {
+                        id: 1, kind: 'weapon', name: 'Arco Lungo', dmg: '2d8', types: ['P'],
+                        LA: 11, pen: 2, crit: 15, pcrit: 130, laSpalle: 6, tempoAtt: 3, portata: 18, paAtt: 2, carA: 'Agile',
+                        powers: { Elementale: { ll: 10, cd: 16 }, Arcano: { ll: 5, cd: 9 } }
+                    }
+                ]
+            },
+            dueArmi: {
+                label: 'Due Armi',
+                weapons: [
+                    {
+                        id: 1, kind: 'weapon', name: 'Ascia da Mano', dmg: '1d8+2', types: ['T'],
+                        LA: 13, pen: 2, crit: 16, pcrit: 140, laSpalle: 9, tempoAtt: 3, portata: 1, paAtt: 2, carA: 'Massiccia',
+                        powers: { Elementale: { ll: 12, cd: 18 }, Arcano: { ll: 6, cd: 10 } }
+                    },
+                    {
+                        id: 2, kind: 'weapon', name: 'Pugnale', dmg: '1d4+1', types: ['P'],
+                        LA: 10, pen: 1, crit: 22, pcrit: 160, laSpalle: 7, tempoAtt: 2, portata: 1, paAtt: 1, carA: 'Agile',
+                        powers: { Elementale: { ll: 11, cd: 17 }, Arcano: { ll: 5, cd: 9 } }
+                    }
+                ]
+            },
+            manoLibera: {
+                label: 'Arma e Mano Libera',
+                weapons: [
+                    {
+                        id: 1, kind: 'weapon', name: 'Spada Corta', dmg: '1d8+3', types: ['T', 'P'],
+                        LA: 13, pen: 3, crit: 17, pcrit: 150, laSpalle: 9, tempoAtt: 3, portata: 1, paAtt: 2, carA: 'Bilanciata',
+                        powers: { Elementale: { ll: 14, cd: 20 }, Arcano: { ll: 8, cd: 13 } }
+                    },
+                    {
+                        id: 2, kind: 'weapon', name: 'Pugnale da Lancio', dmg: '1d4', types: ['P'],
+                        LA: 9, pen: 1, crit: 20, pcrit: 140, laSpalle: 6, tempoAtt: 2, portata: 6, paAtt: 1, carA: 'Agile',
+                        powers: { Elementale: { ll: 10, cd: 15 }, Arcano: { ll: 4, cd: 8 } }
+                    }
+                ]
+            }
+        };
+
+        const state = { style: 'scudo', activeWeapon: 1, nextAttackWeapon: 1 };
+
+        function dmgIcons(types) {
+            return types.map(t => `<img src="${ICONS[t].src}" alt="${ICONS[t].alt}">`).join('');
+        }
+
+        function weaponPanelHTML(w) {
+            if (w.kind === 'shield') {
+                return `
+                <div class="weapon-name">${w.name}</div>
+                <div class="k" style="font-size:12px; opacity:0.6; margin-bottom:8px;">Nessun bonus offensivo &mdash; solo bonus passivi</div>
+                <div class="stat-grid cols-2">
+                    <div class="stat-cell"><span class="k">LD Bonus</span><span class="v">+${w.ldBonus}%</span></div>
+                    <div class="stat-cell"><span class="k">Parare Bonus</span><span class="v">+${w.parareBonus}%</span></div>
+                </div>`;
+            }
+            return `
+            <div class="weapon-name">${w.name}</div>
+            <div class="damage-line"><span>${w.dmg}</span>${dmgIcons(w.types)}</div>
+            <div class="stat-grid">
+                <div class="stat-cell"><span class="k">LA</span><span class="v">${w.LA}</span></div>
+                <div class="stat-cell"><span class="k">Penetraz.</span><span class="v">${w.pen}</span></div>
+                <div class="stat-cell"><span class="k">Critico</span><span class="v">${w.crit}%</span></div>
+                <div class="stat-cell"><span class="k">P.Critico</span><span class="v">${w.pcrit}%</span></div>
+                <div class="stat-cell"><span class="k">LA Spalle</span><span class="v">${w.laSpalle}</span></div>
+                <div class="stat-cell"><span class="k">Tempo Att.</span><span class="v">${w.tempoAtt}</span></div>
+                <div class="stat-cell"><span class="k">Portata</span><span class="v">${w.portata}</span></div>
+                <div class="stat-cell"><span class="k">PA Attacco</span><span class="v">${w.paAtt}</span></div>
+                <div class="stat-cell"><span class="k">Car. Arma</span><span class="v" style="font-size:13px;">${w.carA}</span></div>
+            </div>`;
+        }
+
+        function renderArmi() {
+            const weapons = STYLES[state.style].weapons;
+            const toggleEl = document.getElementById('armiToggle');
+            const panelEl = document.getElementById('armiPanel');
+
+            if (weapons.length > 1) {
+                toggleEl.style.display = 'flex';
+                toggleEl.innerHTML = weapons.map(w =>
+                    `<button class="${w.id === state.activeWeapon ? 'active' : ''}" onclick="setActiveWeapon(${w.id})">${w.name}${w.id === state.nextAttackWeapon ? '<span class="next-badge" title="Prossimo attacco">&#9654;</span>' : ''}</button>`
+                ).join('');
+            } else {
+                toggleEl.style.display = 'none';
+                toggleEl.innerHTML = '';
+                state.activeWeapon = weapons[0].id;
+            }
+
+            const active = weapons.find(w => w.id === state.activeWeapon) || weapons[0];
+            panelEl.innerHTML = weaponPanelHTML(active);
+        }
+
+        function renderPoteri() {
+            // Shows every equipped weapon side by side (no toggle) since with two
+            // weapons equipped, you need both LL/CD values visible at once.
+            const weapons = STYLES[state.style].weapons.filter(w => w.kind === 'weapon');
+
+            const headerRow1 = `<tr>
+                <th rowspan="2">Scuola</th>
+                <th rowspan="2">LMM</th>
+                ${weapons.map(w => `<th colspan="2">${w.name}</th>`).join('')}
+            </tr>`;
+            const headerRow2 = `<tr>${weapons.map(() => '<th>LL</th><th>CD</th>').join('')}</tr>`;
+
+            const bodyRows = SCHOOLS.map(s => {
+                const cells = weapons.map(w => {
+                    const p = w.powers[s.name];
+                    return `<td>${p.ll}</td><td>${p.cd}</td>`;
+                }).join('');
+                return `<tr><td class="school-name">${s.name}</td><td>${s.lmm}</td>${cells}</tr>`;
+            }).join('');
+
+            document.getElementById('poteriTable').innerHTML = `<thead>${headerRow1}${headerRow2}</thead><tbody>${bodyRows}</tbody>`;
+        }
+
+        function setActiveWeapon(id) { state.activeWeapon = id; renderArmi(); }
+
+        /* Called from the MapTool backend when the alternating-attack queue
+           advances. Switches to the Armi tab, focuses that weapon's panel,
+           and marks it with the pulsing badge - independent of activeWeapon,
+           so a manual peek at the other weapon's stats won't move the marker. */
+        function setNextAttackWeapon(weaponId) {
+            state.nextAttackWeapon = weaponId;
+            state.activeWeapon = weaponId;
+            showTab('armi');
+            renderArmi();
+        }
+
+        function setStyle(styleKey) {
+            state.style = styleKey;
+            state.activeWeapon = STYLES[styleKey].weapons[0].id;
+            renderArmi();
+            renderPoteri();
+        }
+
+        function showTab(name) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
+        }
+
+        document.getElementById('styleSelect').value = state.style;
+        renderArmi();
+        renderPoteri();
+    </script>
+
+</body>
+
+</html>

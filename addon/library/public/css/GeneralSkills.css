@@ -6,8 +6,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
-    padding: 12px;
-    width: 320px;
+    padding: 8px;
 }
 
 .capacita-frame {
@@ -103,7 +102,7 @@ body {
 .skill-row {
     display: flex;
     align-items: center;
-    padding: 6px 12px;
+    padding: 5px 10px;
     border-bottom: 1px solid var(--border-color);
 }
 
