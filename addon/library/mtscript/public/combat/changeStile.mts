@@ -1,3 +1,4 @@
+<!-- DEPRECATED - but still used until replaced by applyChangeStile -->
 [h: oToken = arg(0)]
 [h: sNewStile = arg(1)]
 

@@ -1,0 +1,56 @@
+{
+    "AS": {
+        "id": "AS",
+        "name": "Arma e scudo",
+        "multiplier": 1.5,
+        "hand1Types" : ["1hand"],
+        "hand2Types" : [],
+        "shield": 1
+    },
+    "1A": {
+        "id": "1A",
+        "name": "Arma e mano libera",
+        "multiplier": 1.5,
+        "properties": {
+            "PA_Max": 1
+        },
+        "hand1Types" : ["1hand"],
+        "hand2Types" : ["throw"]
+    },
+    "2A": {
+        "id": "2A",
+        "name": "Due Armi",
+        "multiplier": 1.5,
+        "properties": {
+            "Num_Attacchi_Opp": 1
+        },
+        "hand1Types" : ["1hand"],
+        "hand2Types" : ["1hand"]
+    },
+    "2M": {
+        "id": "2M",
+        "name": "Arma a due mani",
+        "multiplier": 2,
+        "ranged": 0,
+        "hand1Types" : ["2hand", "1hand"],
+        "hand2Types" : []
+    },
+    "AD": {
+        "id": "AD",
+        "name": "Arma a distanza",
+        "multiplier": 1.5,
+        "ranged": 1,
+        "properties": {
+            "Num_Attacchi_Opp": -1
+        },
+        "events": [
+            {
+                "id": "PenalitaStileDistanza",
+                "type": "On_Attack",
+                "macro": "events/PenalitaAttaccoDistanza@lib:it.aldinucci.piero.bed.maptool.ruleset"
+            }
+        ],
+        "hand1Types" : ["ranged"],
+        "hand2Types" : []
+    }
+}

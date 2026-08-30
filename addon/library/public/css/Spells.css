@@ -1,7 +1,5 @@
 :root {
-    --stats-bg: rgba(0, 0, 0, 0.3);
     --stats-bg-inverse: rgba(0, 0, 0, 0.06);
-    --stat-label-color: #aaaaaa;
     --stat-label-color-inverse: #222222;
 
     /* --spell-card-hover: #5b3e6d; */
@@ -10,9 +8,7 @@
 }
 
 .light-mode {
-    --stats-bg: rgba(255, 255, 255, 0.4);
     --stats-bg-inverse: rgba(255, 255, 255, 0.06);
-    --stat-label-color: #222222;
     --stat-label-color-inverse: #b5aba0;
     --spell-card-hover-inverse: #5e4848;
 }

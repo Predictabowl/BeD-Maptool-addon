@@ -10,6 +10,11 @@
 	[return(0,"")]	
 }]
 
+[h, if(json.contains(macro.args,"Attacca") == 1), code:{
+	[macro("combat/iniziaAttacco@this"):json.set("","source",target)]
+	[return(0,"")]	
+}]
+
 
 [h, if(json.contains(macro.args,"CiclaVista")), code:{
 	[macro("mobs/ciclaVisteToken@this"): target]

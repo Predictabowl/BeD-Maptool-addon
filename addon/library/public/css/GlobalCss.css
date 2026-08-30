@@ -33,6 +33,8 @@
     --border-color: #35322c;
     --text-color: #dcd0c0;
     --accent-color: #d49a40;
+    --stats-bg: rgba(0, 0, 0, 0.3);
+    --stat-label-color: #aaaaaa;
 
 
     --bg-offensivo: #800000;
@@ -79,6 +81,8 @@
     --border-color: #d8cfba;
     --text-color: #222222;
     --accent-color: #b37b2d;
+    --stats-bg: rgba(255, 255, 255, 0.4);
+    --stat-label-color: #222222;
 }
 
 body {

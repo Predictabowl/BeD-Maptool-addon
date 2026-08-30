@@ -19,4 +19,4 @@
 	[if(getSpellStartData(source,"lancio") == 1): return(0,2)]
 }]
 
-[h: macro.return = 1]
+[h: return(0, 1)]

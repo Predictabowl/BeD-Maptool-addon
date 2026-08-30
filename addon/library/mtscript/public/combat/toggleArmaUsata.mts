@@ -5,3 +5,5 @@
 [h, if(!isNumber(iArmaUsata)): iArmaUsata = 1]
 [h: iArmaUsata = math.mod(iArmaUsata+1,2)]
 [h: Lista_Dati = setStrProp(Lista_Dati,"UltimaArmaUsata",iArmaUsata)]
+
+[h: execFunction("guiUpdateSchedaArmaAttiva",json.append("", oToken),0,"all")]

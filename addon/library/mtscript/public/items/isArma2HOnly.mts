@@ -1,3 +1,4 @@
+<!-- TODO - to update with the json -->
 [h: oArma = arg(0)]
 
 [h, macro("items/isArmaDistanza@this"): oArma]

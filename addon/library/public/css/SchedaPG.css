@@ -23,6 +23,7 @@ body {
     align-items: center;
     gap: 12px;
     padding: 12px;
+    margin: 0px;
     border-bottom: 1px solid var(--border-color);
     background: linear-gradient(180deg, rgba(212, 154, 64, 0.10), transparent 70%);
 }
@@ -76,21 +77,11 @@ body {
     max-width: 190px;
 }
 
-#styleSelect:focus {
-    outline: none;
-    border-bottom-color: var(--accent-color);
-}
-
-#styleSelect option {
-    background-color: var(--bg-card);
-    color: var(--text-color);
-}
-
 /* ===================== TABS ===================== */
 .tab-bar {
     display: flex;
     border-bottom: 1px solid var(--border-color);
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--stats-bg);
 }
 
 .tab-btn {
@@ -161,8 +152,9 @@ body {
 }
 
 .stat-cell {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--stats-bg);
     border: 1px solid var(--border-color);
+    color: var(--stat-label-color);
     border-radius: 5px;
     padding: 4px 7px;
     display: flex;
@@ -192,7 +184,7 @@ body {
 }
 
 .stat-cell .v small {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: normal;
     opacity: 0.65;
 }
@@ -207,7 +199,7 @@ body {
 .weapon-toggle button {
     flex: 1;
     border: 1px solid var(--border-color);
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--stats-bg);
     color: var(--text-color);
     border-radius: 5px;
     padding: 5px;
@@ -286,7 +278,7 @@ body {
     justify-content: space-between;
     font-size: 12px;
     padding: 3px 6px;
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: var(--stats-bg);
     border-radius: 4px;
 }
 
@@ -328,7 +320,7 @@ body {
 }
 
 .poteri-table thead th {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--stats-bg);
     color: var(--accent-color);
     font-family: var(--font-title);
     font-weight: 600;
@@ -416,7 +408,7 @@ body {
     padding: 8px 10px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: var(--stats-bg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -426,7 +418,7 @@ body {
     font-family: var(--font-title);
     font-size: 12px;
     color: var(--accent-color);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 0.4px;
     opacity: 0.85;
 }

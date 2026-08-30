@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: source = arg(0)]
 
 [h: switchToken(source)]

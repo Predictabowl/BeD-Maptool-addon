@@ -1,26 +1,25 @@
-[h: target = json.get(macro.args,0)]
-[h: sStile = upper(json.get(macro.args,1))]
-[h: switchToken(target)]
+[h: tokenId = arg(0)]
+[h: sStile = upper(arg(1))]
+[h: switchToken(tokenId)]
 
-[h: moltA = 1.5]
 [h, switch(sStile), code:
 case "ARMA E MANO LIBERA":{
-	[return = "1A"]
+	[stileId = "1A"]
 };
 case "DUE ARMI":{
-	[return ="2A"]
+	[stileId ="2A"]
 };
 case "ARMA A DUE MANI":{
-	[return = "2M"]
+	[stileId = "2M"]
 };
 case "ARMA A DISTANZA":{
-	[return = "AD"]	
+	[stileId = "AD"]	
 };
 case "ARMA E SCUDO":{
-	[return = "AS"]
+	[stileId = "AS"]
 };
 default:{
-	[return = sStile]
+	[stileId = sStile]
 }]
 
-[h: setProperty("Stile",return,target)]
+[h: setProperty("Stile",stileId,tokenId)]

@@ -1,4 +1,4 @@
-[h: target = macro.args]
+[h: target = arg(0)]
 [h: sStile = getProperty("Stile",target)]
 [h, switch(sStile), code:
 case "1A":{
