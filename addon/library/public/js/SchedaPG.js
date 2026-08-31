@@ -19,9 +19,10 @@ function weaponPanelHTML(w) {
         return `
                 <div class="weapon-name">${w.name}</div>
                 <div class="k" style="font-size:12px; opacity:0.6; margin-bottom:8px;">Nessun bonus offensivo &mdash; solo bonus passivi</div>
-                <div class="stat-grid cols-2">
-                    <div class="stat-cell"><span class="k">LD Bonus</span><span class="v">${NUM_FORMATTER.format(w.ldBonus)}</span></div>
-                    <div class="stat-cell"><span class="k">Parare Bonus</span><span class="v">${NUM_FORMATTER.format(w.parareBonus)}%</span></div>
+                <div class="stat-grid">
+                    <div class="stat-cell"><span class="k">LD</span><span class="v">${NUM_FORMATTER.format(w.ldBonus)}</span></div>
+                    <div class="stat-cell"><span class="k">Parare</span><span class="v">${NUM_FORMATTER.format(w.parareBonus)}</span></div>
+                    <div class="stat-cell"><span class="k">Schivare</span><span class="v">${NUM_FORMATTER.format(w.schivareBonus)}</span></div>
                 </div>`;
     }
     return `
@@ -29,13 +30,13 @@ function weaponPanelHTML(w) {
             <div class="damage-line"><span>${w.dmg}</span>${dmgIcons(w.dmgTypes)}</div>
             <div class="stat-grid">
                 <div class="stat-cell"><span class="k">LA</span><span class="v">${w.LA}</span></div>
-                <div class="stat-cell"><span class="k">Penetraz.</span><span class="v">${w.pen}</span></div>
+                <div class="stat-cell"><span class="k">PA Attacco</span><span class="v">${w.paAtt}</span></div>
+                <div class="stat-cell"><span class="k">Tempo Att.</span><span class="v">${w.tempoAtt}</span></div>
                 <div class="stat-cell"><span class="k">Critico</span><span class="v">${w.crit} <small>(${w.critProb}%)</small></span></div>
                 <div class="stat-cell"><span class="k">P.Critico</span><span class="v">${w.pcrit}%</span></div>
-                <div class="stat-cell"><span class="k">LA Spalle</span><span class="v">${NUM_FORMATTER.format(w.laSpalle)}</span></div>
-                <div class="stat-cell"><span class="k">Tempo Att.</span><span class="v">${w.tempoAtt}</span></div>
                 <div class="stat-cell"><span class="k">Portata</span><span class="v">${w.portata}</span></div>
-                <div class="stat-cell"><span class="k">PA Attacco</span><span class="v">${w.paAtt}</span></div>
+                <div class="stat-cell"><span class="k">LA Spalle</span><span class="v">${NUM_FORMATTER.format(w.laSpalle)}</span></div>
+                <div class="stat-cell"><span class="k">Penetrazione</span><span class="v">${w.pen}</span></div>
                 <div class="stat-cell"><span class="k">Car. Arma</span><span class="v" style="font-size:13px;">${w.carA}</span></div>
             </div>`;
 }
@@ -105,7 +106,7 @@ async function buildArmi() {
     bodyStr = JSON.stringify([tokenId]);
     response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/combat/getArmaDaUsare', { method: 'POST', body: bodyStr });
     const weaponId = await response.text();
-    setNextAttackWeapon(parseInt(weaponId));
+    setNextAttackWeapon(Number.parseInt(weaponId));
     buildPoteri();
 }
 
@@ -142,4 +143,10 @@ function showTab(name) {
 }
 
 document.getElementById('styleSelect').value = state.style;
-buildArmi();
+
+
+function buildSheet() {
+    buildArmi();
+}
+
+buildSheet();

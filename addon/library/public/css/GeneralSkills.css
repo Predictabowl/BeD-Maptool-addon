@@ -1,3 +1,8 @@
+:root{
+    --dice-fill-color: var(--azione-color);
+    --dice-stroke-color: black;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -23,6 +28,7 @@ body {
     justify-content: space-between;
     padding: 8px 12px;
     border-bottom: 1px solid var(--border-color);
+    margin: 0px;
 }
 
 .capacita-header h2 {
@@ -67,7 +73,9 @@ body {
     gap: 8px;
     padding: 8px 12px;
     border-bottom: 1px solid var(--border-color);
-    background-color: rgba(0, 0, 0, 0.12);
+    background-color: var(--stats-bg);
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .circostanza-bar label {
@@ -102,8 +110,9 @@ body {
 .skill-row {
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 7px 10px;
     border-bottom: 1px solid var(--border-color);
+    margin: 0px;
 }
 
 .skill-row:last-child {
@@ -137,6 +146,7 @@ body {
 
 .roll-btn {
     margin-left: 8px;
+    padding: 0px;
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -161,11 +171,26 @@ body {
     transform: scale(0.92);
 }
 
+.roll-btn svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    fill: var(--dice-fill-color);
+    stroke: var(--dice-stroke-color);
+}
+
+.roll-btn svg .facet-1 { fill: color-mix(in srgb, var(--dice-fill-color) 85%, black); }
+.roll-btn svg .facet-2 { fill: color-mix(in srgb, var(--dice-fill-color) 70%, black); }
+.roll-btn svg .facet-3 { fill: color-mix(in srgb, var(--dice-fill-color) 60%, black); }
+.roll-btn svg .facet-4 { fill: color-mix(in srgb, var(--dice-fill-color) 50%, black); }
+
 /* --- Last roll footer --- */
 .last-roll {
     padding: 8px 12px;
     border-top: 1px solid var(--border-color);
-    background-color: rgba(0, 0, 0, 0.18);
+    background-color: var(--stats-bg);
     font-size: 13px;
     min-height: 18px;
     display: flex;

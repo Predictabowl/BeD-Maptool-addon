@@ -30,11 +30,7 @@
 		[macro("utility/sortIniziativa@this"):0]
 	};
 	case "FrameScheda":{
-		[if(isFrameVisible("Scheda")), code:{
-			[closeFrame("Scheda")]
-		};{
-			[macro("gui/ApriScheda@this"):json.append(target,"Scheda")]
-		}]
+		[macro("gui/SchedaPersonaggio@this"):json.append(target,"Scheda")]
 	};
 	case "CentraToken":{
 		[macro("utility/findAndCenterToken@this"): target]

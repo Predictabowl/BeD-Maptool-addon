@@ -41,7 +41,25 @@
 					<div class="skill-row" id="[r: capId]">
 						<span class="skill-name">[r: sCapName]</span>
 						<span class="skill-mod [r: sModClass]">[r: strformat("%+d", iCapValue)]</span>
-						<button class="roll-btn" title="Tira [r: sCapName]" onclick="rollSkill('[r: capId]')">🎲</button>
+						<a class="roll-btn" title="Tira [r: sCapName]" onclick="rollSkill('[r: capId]')">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">
+								<!-- top: 2 -->
+								<polygon points="50,6 9,29 50,32" class="facet-2" />
+								<polygon points="50,6 50,32 91,29" class="facet-1" />
+
+								<!-- middle: 5 -->
+								<polygon points="9,29 30,64 50,32" class="facet-1" />
+								<polygon points="50,32 30,64 70,64" />
+								<polygon points="50,32 70,64 91,29" class="facet-1" />
+								<polygon points="9,29 9,71 30,64" class="facet-2" />
+								<polygon points="91,29 70,64 91,71" class="facet-3" />
+
+								<!-- bottom: 3 -->
+								<polygon points="9,71 30,64 50,94" class="facet-4" />
+								<polygon points="30,64 70,64 50,94" class="facet-2" />
+								<polygon points="70,64 91,71 50,94" class="facet-3" />
+							</svg>
+						</a>
 					</div>
 				}]
 			</div>

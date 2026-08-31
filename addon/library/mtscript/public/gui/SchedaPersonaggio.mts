@@ -212,7 +212,7 @@
 
         <!-- ===================== TAB: BASE (CARATTERISTICHE) ===================== -->
         <div class="tab-panel" id="tab-base">
-            <div class="subsection-title" style="margin-top:0;">Caratteristiche &mdash; solo riferimento</div>
+            <div class="subsection-title" style="margin-top:0;">Caratteristiche Primarie</div>
 
             <div class="core-columns">
                 <div class="core-list">
@@ -255,7 +255,12 @@
         </div>
 
     </div>
+
+    <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: tokenId]', '[r: sThemePreferenze]')">
+        🌓
+    </button>
     <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/SchedaPG.js?cachelib=false" defer></script>
+    <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
 }]
