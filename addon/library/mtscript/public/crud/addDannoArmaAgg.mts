@@ -9,3 +9,4 @@
 [h: oData = json.set("","danno",sDanno,"filtro",sFilter)]
 [h: oDanniAgg = json.set(oDanniAgg,sKey,oData)]
 [h: setInMemoria(oToken, sTag,oDanniAgg)]
+[h: execFunction("guiUpdateSchedaDannoArmi", json.append("", oToken), 0, "all")]

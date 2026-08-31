@@ -29,4 +29,4 @@
 }]
 
 
-[h: macro.return = sDannoArma]
+[h: return(0, sDannoArma)]

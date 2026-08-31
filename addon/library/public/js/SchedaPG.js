@@ -7,6 +7,7 @@ const ICONS = {
 let weapons = [];
 let powers = [];
 const NUM_FORMATTER = new Intl.NumberFormat('it-IT', { signDisplay: 'always' });
+const TOKEN_ID = document.body.dataset.tokenid;
 
 const state = { activeWeapon: 1, nextAttackWeapon: 1 };
 
@@ -142,7 +143,14 @@ function showTab(name) {
     document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'tab-' + name));
 }
 
-document.getElementById('styleSelect').value = state.style;
+async function updateDannoArmi(){
+    const updatePromises = weapons.map(async (weapon, index) => {
+        const response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/crud/getDannoArma', { method: 'POST', body: JSON.stringify([TOKEN_ID, index+1]) });
+        weapon.dmg = await response.text();
+    });
+    await Promise.all(updatePromises);
+    renderArmi();
+}
 
 
 function buildSheet() {

@@ -175,6 +175,7 @@
 [h: defineFunction("guiUpdateClassSkillStatus","gui/updateClassSkillStatus@this")]
 [h: defineFunction("guiUpdateHeroPoints","gui/updateHeroPoints@this")]
 [h: defineFunction("guiUpdateSchedaArmaAttiva","gui/updateSchedaArmaAttiva@this")]
+[h: defineFunction("guiUpdateSchedaDannoArmi","gui/updateSchedaDannoArmi@this")]
 [h: defineFunction("guiUpdateSpellsResource","gui/updateSpellsResource@this")]
 [h: defineFunction("hasSpellTag","crud/hasSpellTag@this")]
 [h: defineFunction("iniziaMov","movement/iniziaMov@this")]

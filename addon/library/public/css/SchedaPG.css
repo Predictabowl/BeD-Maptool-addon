@@ -1,3 +1,11 @@
+:root{
+    --divider-color: rgba(255, 255, 255, 0.1);
+}
+
+.light-mode {
+    --divider-color: rgba(0, 0, 0, 0.1);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -300,7 +308,7 @@ body {
     justify-content: space-between;
     padding: 4px 2px;
     font-size: 13px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--divider-color);
 }
 
 .kv-row .v {
@@ -397,7 +405,7 @@ body {
 .core-divider {
     grid-column: 1 / -1;
     height: 1px;
-    background: rgba(255, 255, 255, 0.06);
+    background: var(--divider-color);
     margin: 3px 0;
 }
 
