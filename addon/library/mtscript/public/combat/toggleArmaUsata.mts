@@ -3,7 +3,14 @@
 
 [h: iArmaUsata = getStrProp(Lista_Dati,"UltimaArmaUsata")]
 [h, if(!isNumber(iArmaUsata)): iArmaUsata = 1]
-[h: iArmaUsata = math.mod(iArmaUsata+1,2)]
-[h: Lista_Dati = setStrProp(Lista_Dati,"UltimaArmaUsata",iArmaUsata)]
 
-[h: execFunction("guiUpdateSchedaArmaAttiva",json.append("", oToken),0,"all")]
+[h: sStile = getProperty("Stile", oToken)]
+[h, if(sStile=="2A"), code:{
+	[iArmaDaUsare = math.mod(iArmaUsata,2)+1]
+};{
+    [iArmaDaUsare = 1]
+}]
+
+[h: Lista_Dati = setStrProp(Lista_Dati,"UltimaArmaUsata",iArmaDaUsare)]
+
+[h, if(iArmaDaUsare != iArmaUsata): execFunction("guiUpdateSchedaArmaAttiva",json.append("", oToken),0,"all")]

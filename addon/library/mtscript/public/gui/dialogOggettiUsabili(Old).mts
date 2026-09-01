@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: target = json.get(macro.args,0)]
 [h: sDialog = "OggettiConsumabili"]
 

@@ -21,7 +21,7 @@
 			<div class="capacita-header">
 				<h2>Capacità</h2>
 				<div class="visibility-toggle">
-					<button id="btn-secret" class="active" onclick="toggleVisibility()">Segreto</button>
+					<button id="btn-secret" onclick="toggleVisibility()">Segreto</button>
 					
 				</div>
 			</div>

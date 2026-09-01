@@ -26,7 +26,7 @@
                 <div class="player-name">[r: getName(tokenId)]</div>
                 <div class="style-row">
                     <span class="lbl">Stile:</span>
-                    <span id="styleSelect" onchange="setStyle(this.value)">
+                    <span id="styleSelect" onchange="setStyle(this.value)" data-stileid="[r: Stile]">
                         [r: json.get(oStile, "name")]
                     <span>
                 </div>

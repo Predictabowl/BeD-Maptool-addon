@@ -1,4 +1,4 @@
-let isSecret = 1; // "secret" | "public"
+let isSecret = document.getElementById("btn-secret").classList.contains("active") ? 1 : 0; // "secret" | "public"
 
 function toggleVisibility() {
     const secretBtn = document.getElementById("btn-secret");
