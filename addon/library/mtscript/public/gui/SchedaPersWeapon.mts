@@ -17,7 +17,7 @@
 [h, macro("combat/getCostoPA@this"):json.set("","source",tokenId,"arma", iArma)]
 [h: jsArma = json.set(jsArma, "paAtt", macro.return, "laSpalle", getLASpalle(tokenId, iArma), "tempoAtt", getAttackTime(tokenId,0,iArma))]
 
-[h: sCaA = getCarA(tokenId, "")]
+[h: sCaA = getCarA(tokenId, getArma(tokenId, iArma))]
 [h, if(sCaA == "CaP"): sCaA = "Mana"]
 [h: jsArma = json.set(jsArma, "carA", sCaA)]
 
