@@ -12471,11 +12471,11 @@
     },
     "property_type": "SPELL"
   },
-  "TrasformazionedaCombattimento": {
+  "TrasformazioneDaCombattimento": {
     "descrizione": [
       "Aumenta le capacità combattive del lanciatore, il quale guadagna un bonus +1 LA ed un ulteriore +1 LA per LMM."
     ],
-    "id": "TrasformazionedaCombattimento",
+    "id": "TrasformazioneDaCombattimento",
     "image": "631d0380c3901443f75159242c76814f.png",
     "nome_decorativo": "Prodezza Marziale",
     "properties": {
