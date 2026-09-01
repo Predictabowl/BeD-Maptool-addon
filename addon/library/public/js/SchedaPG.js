@@ -121,6 +121,7 @@ async function buildPoteri() {
 }
 
 async function setActiveWeapon(id) {
+    // this one set the active weapon as the to use when casting powers
     // if (state.stile === "1A") {
     //     setNextAttackWeapon(id);
     //     const bodyStr = JSON.stringify([TOKEN_ID, id-1]);
