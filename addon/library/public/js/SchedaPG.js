@@ -8,6 +8,10 @@ let weapons = [];
 let powers = [];
 const NUM_FORMATTER = new Intl.NumberFormat('it-IT', { signDisplay: 'always' });
 const TOKEN_ID = document.body.dataset.tokenid;
+const TRIANGLE_RIGHT = `
+    <svg viewBox="0 0 24 24" width="8" height="8" fill="currentColor">
+        <path d="M8 5v14l11-7z"/>
+    </svg>`;
 
 const state = { activeWeapon: 1, nextAttackWeapon: 1, stile: "AS" };
 
@@ -52,7 +56,8 @@ function renderArmi() {
     if (weapons.length > 1) {
         toggleEl.style.display = 'flex';
         toggleEl.innerHTML = weapons.map(w =>
-            `<button class="${w.id === state.activeWeapon ? 'active' : ''}" onclick="setActiveWeapon(${w.id})">${w.name}${w.id === state.nextAttackWeapon ? '<span class="next-badge" title="Prossimo attacco">&#9654;</span>' : ''}</button>`
+            `<button class="${w.id === state.activeWeapon ? 'active' : ''}" onclick="setActiveWeapon(${w.id})">${w.name}${w.id === state.nextAttackWeapon ? '<span class="next-badge" title="Prossimo attacco">'+ TRIANGLE_RIGHT+'</span>' : ''}</button>`
+            // &#9654;
         ).join('');
     } else {
         toggleEl.style.display = 'none';
@@ -69,9 +74,9 @@ function renderPoteri() {
     const headerRow1 = `<tr>
         <th rowspan="2">Scuola</th>
         <th rowspan="2">LMM</th>
-        ${trueWeapons.map(w => `<th colspan="2">${w.name}</th>`).join('')}
+        ${trueWeapons.map(w => `<th colspan="2">${w.name}`).join('')}
         </tr>`;
-    const headerRow2 = `<tr>${trueWeapons.map(() => '<th>LL</th><th>CD</th>').join('')}</tr>`;
+    const headerRow2 = `<tr>${trueWeapons.map(() => '<th>LL</th><th>CD</th></th>').join('')}</tr>`;
 
     const isWeap2 = trueWeapons.length > 1;
     const bodyRows = powers.map(s => {

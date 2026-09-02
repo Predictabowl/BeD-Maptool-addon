@@ -13,6 +13,13 @@
         "maxCariche": 1,
         "tipo": "RUNA"
     },
+    "ArmaFulminante-11": {
+        "cariche": 1,
+        "libName": "ArmaFulminante",
+        "livello": 11,
+        "maxCariche": 1,
+        "tipo": "RUNA"
+    },
     "AttaccoTerra-1": {
         "cariche": 1,
         "libName": "RunaAttaccoTerra",

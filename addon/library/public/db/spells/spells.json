@@ -537,6 +537,39 @@
     },
     "property_type": "SPELL"
   },
+  "ArmaFulminante": {
+    "descrizione": [
+      "Incanta tutte le armi impugnate dal personaggio, che vengono avvolte da scariche elettriche ben visibili.",
+      "Quando il beneficiario infligge un attacco con l’arma c’è la possibilità che il colpo rilasci una scarica fulminante sul bersaglio, infliggendogli 1d5-1 danni per LP.",
+      "La probabilità che la scarica si verifiche è pari al 33%, che però incrementa al 44% se il personaggio sta utilizzando lo stile Arma a 2 mani."
+    ],
+    "id": "ArmaFulminante",
+    "image": "inv_offhand_1h_artifactdoomhammer_d_02.png",
+    "nome_decorativo": "Arma Fulminante",
+    "properties": {
+      "area": "0",
+      "componenti": "V,S",
+      "durata": "5",
+      "elemento": "Aria",
+      "mana": "60",
+      "mm": "0",
+      "opportunita": 0,
+      "pa": "0",
+      "pf": "0",
+      "pp": "6",
+      "proiettile": "Energetico",
+      "raggio": "0",
+      "recupero": "2",
+      "scuola": "Aria",
+      "tags": "SCUOLEARCANE,AGGRESSIONE",
+      "tempo": "16",
+      "tipo": "Supporto",
+      "tipo_aoe": "",
+      "tipo_bersaglio": "",
+      "ts": "No"
+    },
+    "property_type": "SPELL"
+  },
   "ArmaIncendiaria": {
     "descrizione": [
       "Il beneficiario è in grado di incantare tutte le armi che impugna, le quali vengono avvolte da minacciose fiamme.",
@@ -11637,7 +11670,7 @@
       "pp": "3",
       "proiettile": "Energetico",
       "raggio": "0",
-      "recupero": "6",
+      "recupero": "5",
       "scuola": "Sotterfugio",
       "tags": "TECNICHEMARZIALI,SELFTARGET, RISOLUTO",
       "tempo": "8",

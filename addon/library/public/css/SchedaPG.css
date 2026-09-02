@@ -232,7 +232,31 @@ body {
     border-radius: 50%;
     background: var(--accent-color);
     color: var(--bg-color);
-    font-size: 8px;
+    line-height: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 2px var(--bg-card);
+    animation: nextPulse 1.6s ease-in-out infinite;
+}
+
+.next-badge svg {
+    display: block;
+    width: 11px;
+    height: 11px;
+}
+
+.low-badge {
+    position: absolute;
+    top: 15px;
+    right: -6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--bg-color);
+    font-size: 10px;
     line-height: 15px;
     text-align: center;
     box-shadow: 0 0 0 2px var(--bg-card);

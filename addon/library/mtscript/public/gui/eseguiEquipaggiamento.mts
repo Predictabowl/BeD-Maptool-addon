@@ -116,5 +116,5 @@
 [macro("mobs/applyIngombroPenalties@this"): oToken]
 
 [h:closeDialog("DialogCambioArmi")]
-[macro("gui/updateSchedaAttacco@this"): json.append(oToken,"Scheda")]
+[h: execFunction("guiUpdateSchedaArmi", json.append("", oToken),0,"all")]
 [macro("gui/updateUIOverlay@this"): oToken]

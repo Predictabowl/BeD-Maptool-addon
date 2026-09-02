@@ -19,6 +19,7 @@
 [h: appendMessaggio(source,sKey2,popMessaggio(source,"criticalResult"))]
 [h: appendMessaggio(source,sKey2,popMessaggio(source,"coperturaResult"))]
 [h: appendMessaggio(source,sKey2,popMessaggio(source,"difesaResult"))]
+[h: appendMessaggio(source,sKey2,popMessaggio(source,"strSpellDamage"))]
 [h: appendMessaggio(source,sKey2,popMessaggio(source,"dannoArma"))]
 [h: appendMessaggio(source,sKey2,popMessaggio(target,"strDanno"))]
 [h: appendMessaggio(source,sKey2,popMessaggio(source,"strCura"))]

@@ -49,7 +49,7 @@
 [h: sThemePreferenze = "Spell_Dialogs_Theme"]
 [h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
-[h: broadcast(strformat("width=%{iLarg}; height=%{iAltezza}"))]
+[h: pSize = strformat("width=%{iLarg}; height=%{iAltezza}")]
 [dialog5(sDialog,strformat("temporary=1; %{pSize}; closebutton=0")):{
 	<html>
 	
