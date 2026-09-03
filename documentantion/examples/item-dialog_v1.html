@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Dettaglio Oggetto</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=Homemade+Apple&family=Macondo&family=New+Rocker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+
+<style>
+    * { box-sizing: border-box; }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 12px;
+        width: 420px;
+    }
+
+    /* Colors specific to this dialog only - not shared tokens.
+       Combat-only attributes reuse the existing accent (gold, already
+       tied to "offensive/attack" elsewhere in this ruleset). Passive
+       attributes get a cooler, calmer hue since they're always-on. */
+    :root {
+        --passive-color: #6fa39c;
+    }
+
+    .item-dialog {
+        background-color: var(--bg-card);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* ===================== HEADER ===================== */
+    .item-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px;
+        border-bottom: 1px solid var(--border-color);
+        background: linear-gradient(180deg, rgba(212,154,64,0.10), transparent 70%);
+    }
+
+    .item-icon-frame {
+        flex-shrink: 0;
+        width: 64px;
+        height: 64px;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 0 0 0 2px var(--accent-color);
+    }
+
+    .item-icon-frame img {
+        width: 64px;
+        height: 64px;
+        display: block;
+        /* icon already ships with its own dark-gray border baked in */
+    }
+
+    .item-header-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .item-name {
+        font-family: var(--font-title);
+        color: var(--accent-color);
+        font-size: 21px;
+        letter-spacing: 0.3px;
+        line-height: 1.15;
+    }
+
+    .item-tags {
+        margin-top: 4px;
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .item-tag {
+        font-size: 11px;
+        color: var(--stat-label-color);
+        background-color: var(--stats-bg);
+        border-radius: 4px;
+        padding: 2px 7px;
+    }
+
+    /* ===================== SHARED SECTION CHROME ===================== */
+    .item-section {
+        padding: 10px 14px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .item-section:last-child {
+        border-bottom: none;
+    }
+
+    .section-title {
+        font-family: var(--font-title);
+        font-size: 13px;
+        color: var(--accent-color);
+        letter-spacing: 0.3px;
+        margin-bottom: 6px;
+        opacity: 0.9;
+    }
+
+    .section-title.passive {
+        color: var(--passive-color);
+    }
+
+    /* ===================== WEAPON DAMAGE ===================== */
+    .damage-row {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+
+    .damage-row:last-of-type {
+        margin-bottom: 10px;
+    }
+
+    .damage-row .hand-label {
+        font-size: 11px;
+        color: var(--stat-label-color);
+        min-width: 52px;
+    }
+
+    .damage-row .dmg-value {
+        font-weight: bold;
+        color: var(--generic-stat-color);
+    }
+
+    .damage-row img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .weapon-substats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .substat-cell {
+        background-color: var(--stats-bg);
+        border-radius: 5px;
+        padding: 4px 8px;
+    }
+
+    .substat-cell .k {
+        display: block;
+        font-size: 10px;
+        color: var(--stat-label-color);
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    .substat-cell .v {
+        font-size: 14px;
+        font-weight: bold;
+        color: var(--generic-stat-color);
+    }
+
+    /* ===================== ATTRIBUTE LISTS ===================== */
+    .attr-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .attr-chip {
+        display: flex;
+        align-items: baseline;
+        gap: 5px;
+        background-color: var(--stats-bg);
+        border-left: 2px solid var(--accent-color);
+        border-radius: 3px;
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+
+    .attr-chip.passive {
+        border-left-color: var(--passive-color);
+    }
+
+    .attr-chip .attr-k {
+        color: var(--stat-label-color);
+    }
+
+    .attr-chip .attr-v {
+        font-weight: bold;
+        color: var(--generic-stat-color);
+    }
+
+    /* ===================== RUNES ===================== */
+    .rune-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 0;
+    }
+
+    .rune-row + .rune-row {
+        border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .rune-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        flex-shrink: 0;
+        opacity: 0.9;
+    }
+
+    .rune-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .rune-spell-link {
+        font-family: var(--font-spell);
+        font-size: 14px;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .rune-meta {
+        display: flex;
+        gap: 12px;
+        font-size: 11px;
+        color: var(--stat-label-color);
+    }
+
+    .rune-meta .charges-none {
+        opacity: 0.75;
+        font-style: italic;
+    }
+
+    /* ===================== DESCRIPTION ===================== */
+    .flavour-text p {
+        font-family: var(--font-book);
+        font-size: 15px;
+        color: var(--accent-color);
+        opacity: 0.85;
+        line-height: 1.5;
+        margin-bottom: 6px;
+        padding-left: 10px;
+        border-left: 2px solid var(--border-color);
+    }
+
+    .description-text p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 6px;
+        opacity: 0.9;
+    }
+
+    .description-text p:last-child,
+    .flavour-text p:last-child {
+        margin-bottom: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="item-dialog">
+
+    <!-- ===================== HEADER ===================== -->
+    <div class="item-header">
+        <div class="item-icon-frame">
+            <img src="../../addon/library/public/icons/items/swords/inv_sword_draenei_01.png" alt="Spada del Crepuscolo">
+        </div>
+        <div class="item-header-info">
+            <div class="item-name">Spada del Crepuscolo</div>
+            <div class="item-tags">
+                <span class="item-tag">Ingombro 3</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== WEAPON BLOCK (omit entirely if not a weapon) ===================== -->
+    <div class="item-section">
+        <div class="damage-row">
+            <span class="hand-label">1 Mano</span>
+            <span class="dmg-value">2d6+1</span>
+            <img src="../../addon/library/public/icons/gui/slash_icon.png" alt="Taglio">
+        </div>
+        <div class="damage-row">
+            <span class="hand-label">2 Mani</span>
+            <span class="dmg-value">3d6+3</span>
+            <img src="../../addon/library/public/icons/gui/slash_icon.png" alt="Taglio">
+            <img src="../../addon/library/public/icons/gui/pierce_icon.png" alt="Punta">
+        </div>
+        <div class="weapon-substats">
+            <div class="substat-cell"><span class="k">Car. Arma</span><span class="v">Bilanciata</span></div>
+            <div class="substat-cell"><span class="k">Portata</span><span class="v">1</span></div>
+        </div>
+    </div>
+
+    <!-- ===================== WEAPON ATTRIBUTES (active only when attacking) ===================== -->
+    <div class="item-section">
+        <div class="section-title">Attributi in Combattimento</div>
+        <div class="attr-list">
+            <div class="attr-chip"><span class="attr-k">Critico</span><span class="attr-v">+5%</span></div>
+            <div class="attr-chip"><span class="attr-k">LA</span><span class="attr-v">+2</span></div>
+            <div class="attr-chip"><span class="attr-k">Potenza Critico</span><span class="attr-v">+20%</span></div>
+        </div>
+    </div>
+
+    <!-- ===================== OTHER ATTRIBUTES (passive, always on) ===================== -->
+    <div class="item-section">
+        <div class="section-title passive">Altri Attributi</div>
+        <div class="attr-list">
+            <div class="attr-chip passive"><span class="attr-k">LD Taglio</span><span class="attr-v">+1</span></div>
+            <div class="attr-chip passive"><span class="attr-k">Resistenza Fuoco</span><span class="attr-v">+10</span></div>
+        </div>
+    </div>
+
+    <!-- ===================== RUNES ===================== -->
+    <div class="item-section">
+        <div class="section-title">Rune</div>
+
+        <div class="rune-row">
+            <img class="rune-icon" src="../../addon/library/public/icons/spells/spell_frost_frostshock.png" alt="Bagliore Gelido">
+            <div class="rune-info">
+                <a href="#" class="rune-spell-link">Bagliore Gelido</a>
+                <div class="rune-meta">
+                    <span>Livello 2</span>
+                    <span>Cariche 2/3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rune-row">
+            <img class="rune-icon" src="../../addon/library/public/icons/spells/ability_rogue_masterofsubtlety.png" alt="Ultimo Sussurro">
+            <div class="rune-info">
+                <a href="#" class="rune-spell-link">Ultimo Sussurro</a>
+                <div class="rune-meta">
+                    <span>Livello 5</span>
+                    <span class="charges-none">Cariche 1 &mdash; non si ricarica</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== DESCRIPTION (both parts optional) ===================== -->
+    <div class="item-section">
+        <div class="flavour-text">
+            <p>Forgiata quando l'ultimo sole toccò la lama, non ha più smesso di ricordarlo.</p>
+        </div>
+        <div class="description-text">
+            <p>Lama a filo singolo in acciaio runico, bilanciata per essere impugnata a una o due mani. L'elsa reca incise due rune ancora attive.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

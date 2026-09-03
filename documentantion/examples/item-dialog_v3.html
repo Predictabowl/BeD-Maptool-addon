@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Dettaglio Oggetto</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=Homemade+Apple&family=Macondo&family=New+Rocker&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+<link rel="stylesheet" href="../../addon/library/public/css/ItemDialog.css">
+
+</head>
+<body>
+
+<div class="item-dialog">
+
+    <!-- ===================== HEADER ===================== -->
+    <div class="item-header">
+        <div class="item-icon-frame">
+            <img src="../../addon/library/public/icons/items/swords/inv_sword_draenei_01.png" alt="Spada del Crepuscolo">
+        </div>
+        <div class="item-header-info">
+            <div class="item-name">Spada del Crepuscolo</div>
+            <div class="item-tags">
+                <span class="item-tag">Spada</span>
+                <span class="item-tag">Mischia</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== WEAPON BLOCK (omit entirely if not a weapon) ===================== -->
+    <div class="item-section">
+        <div class="damage-row">
+            <span class="hand-label">1 Mano</span>
+            <span class="dmg-value">2d6+1</span>
+            <img src="../../addon/library/public/icons/gui/slash_icon.png" alt="Taglio">
+        </div>
+        <div class="damage-row">
+            <span class="hand-label">2 Mani</span>
+            <span class="dmg-value">3d6+3</span>
+            <img src="../../addon/library/public/icons/gui/slash_icon.png" alt="Taglio">
+            <img src="../../addon/library/public/icons/gui/pierce_icon.png" alt="Punta">
+        </div>
+        <div class="weapon-substats">
+            <div class="substat-cell"><span class="k">Car. Arma</span><span class="v">Bilanciata</span></div>
+            <div class="substat-cell"><span class="k">Portata</span><span class="v">1</span></div>
+            <div class="substat-cell"><span class="k">Ingombro</span><span class="v">4</span></div>
+        </div>
+    </div>
+
+    <!-- ===================== WEAPON ATTRIBUTES (active only when attacking) ===================== -->
+    <div class="item-section">
+        <div class="section-title combat">Attributi da Attacco</div>
+        <div class="attr-list">
+            <div class="attr-chip"><span class="attr-k">Critico</span><span class="attr-v">+5%</span></div>
+            <div class="attr-chip"><span class="attr-k">LA</span><span class="attr-v">+2</span></div>
+            <div class="attr-chip"><span class="attr-k">Potenza Critico</span><span class="attr-v">+20%</span></div>
+        </div>
+    </div>
+
+    <!-- ===================== OTHER ATTRIBUTES (passive, always on) ===================== -->
+    <div class="item-section">
+        <div class="section-title passive">Attributi Generali</div>
+        <div class="attr-list">
+            <div class="attr-chip passive"><span class="attr-k">LD Taglio</span><span class="attr-v">+1</span></div>
+            <div class="attr-chip passive"><span class="attr-k">Resistenza Fuoco</span><span class="attr-v">+10</span></div>
+        </div>
+    </div>
+
+    <!-- ===================== RUNES ===================== -->
+    <div class="item-section">
+        <div class="section-title">Rune</div>
+
+        <div class="rune-row">
+            <img class="rune-icon" src="../../addon/library/public/icons/spells/spell_frost_frostshock.png" alt="Bagliore Gelido">
+            <div class="rune-info">
+                <a href="#" class="rune-spell-link">Bagliore Gelido</a>
+                <div class="rune-meta">
+                    <span>Livello 2</span>
+                    <span>Cariche 2/3</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rune-row">
+            <img class="rune-icon" src="../../addon/library/public/icons/spells/ability_rogue_masterofsubtlety.png" alt="Ultimo Sussurro">
+            <div class="rune-info">
+                <a href="#" class="rune-spell-link">Ultimo Sussurro</a>
+                <div class="rune-meta">
+                    <span>Livello 5</span>
+                    <span class="charges-none">Cariche 1 &mdash; non si ricarica</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== DESCRIPTION (both parts optional) ===================== -->
+    <div class="item-section">
+        <div class="flavour-text">
+            <p>Forgiata quando l'ultimo sole toccò la lama, non ha più smesso di ricordarlo.</p>
+        </div>
+        <div class="description-text">
+            <p>Lama a filo singolo in acciaio runico, bilanciata per essere impugnata a una o due mani. L'elsa reca incise due rune ancora attive.</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

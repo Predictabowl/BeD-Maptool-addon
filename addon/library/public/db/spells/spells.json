@@ -10605,7 +10605,7 @@
       "Funziona come Scarica Elementale Minore, ma infligge 1d6 danni per LP."
     ],
     "id": "ScaricaElementaleMaggioreGelo",
-    "image": "5afad13bc31324a869bc3182ea56715a.png",
+    "image": "spell_frost_frostshock.png",
     "nome_decorativo": "Scarica Gelida maggiore",
     "properties": {
       "area": "0",

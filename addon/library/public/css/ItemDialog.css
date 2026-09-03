@@ -1,0 +1,277 @@
+/* ItemDialog.css
+   Styles specific to the item detail dialog. Loaded after GlobalCss.css,
+   which supplies all the shared tokens (fonts, --bg-*, --accent-color,
+   --stats-bg, --stat-label-color, etc). This file only adds what's local
+   to this one component. */
+
+:root {
+    /* Combat-only and passive attributes get their own paired hues rather
+       than reusing --accent-color everywhere - gold stays reserved for
+       structural elements (title, icon frame, neutral section headers)
+       so it doesn't flatten into a wash of the same color. Red/teal is a
+       natural complementary pair, and also isn't borrowed from
+       --azione-color or --bg-offensivo, which already carry their own
+       specific meaning elsewhere in this ruleset. */
+    --combat-color: #c1524a;
+    --passive-color: #6fa39c;
+}
+
+.light-mode {
+    /* Same relationship GlobalCss uses for --accent-color: lighter/warmer
+       in dark mode, deeper/richer in light mode so it still reads against
+       the cream background instead of washing out. */
+    --combat-color: #96332b;
+    --passive-color: #2f6b62;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 12px;
+    width: 420px;
+}
+
+.item-dialog {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ===================== HEADER ===================== */
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border-bottom: 1px solid var(--border-color);
+    background: linear-gradient(180deg, rgba(212,154,64,0.10), transparent 70%);
+}
+
+.item-icon-frame {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.item-icon-frame img {
+    width: 64px;
+    height: 64px;
+    display: block;
+    /* icon already ships with its own dark-gray border baked in */
+}
+
+.item-header-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-name {
+    font-family: var(--font-title);
+    color: var(--accent-color);
+    font-size: 21px;
+    letter-spacing: 0.3px;
+    line-height: 1.15;
+}
+
+.item-tags {
+    margin-top: 4px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.item-tag {
+    font-size: 11px;
+    color: var(--stat-label-color);
+    background-color: var(--stats-bg);
+    border-radius: 4px;
+    padding: 2px 7px;
+}
+
+/* ===================== SHARED SECTION CHROME ===================== */
+.item-section {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.item-section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 13px;
+    color: var(--accent-color);
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.section-title.combat {
+    color: var(--combat-color);
+}
+
+.section-title.passive {
+    color: var(--passive-color);
+}
+
+/* ===================== WEAPON DAMAGE ===================== */
+.damage-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+.damage-row:last-of-type {
+    margin-bottom: 10px;
+}
+
+.damage-row .hand-label {
+    font-size: 11px;
+    color: var(--stat-label-color);
+    min-width: 52px;
+}
+
+.damage-row .dmg-value {
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}
+
+.damage-row img {
+    width: 18px;
+    height: 18px;
+}
+
+.weapon-substats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
+
+.substat-cell {
+    background-color: var(--stats-bg);
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+.substat-cell .k {
+    display: block;
+    font-size: 10px;
+    color: var(--stat-label-color);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.substat-cell .v {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}
+
+/* ===================== ATTRIBUTE LISTS ===================== */
+.attr-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.attr-chip {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    background-color: var(--stats-bg);
+    border-left: 2px solid var(--combat-color);
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-size: 12px;
+}
+
+.attr-chip.passive {
+    border-left-color: var(--passive-color);
+}
+
+.attr-chip .attr-k {
+    color: var(--stat-label-color);
+}
+
+.attr-chip .attr-v {
+    font-weight: bold;
+    color: var(--generic-stat-color);
+}
+
+/* ===================== RUNES ===================== */
+.rune-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 0;
+}
+
+.rune-row + .rune-row {
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.rune-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    flex-shrink: 0;
+    opacity: 0.9;
+}
+
+.rune-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.rune-spell-link {
+    font-family: var(--font-spell);
+    font-size: 14px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.rune-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 11px;
+    color: var(--stat-label-color);
+}
+
+.rune-meta .charges-none {
+    opacity: 0.75;
+    font-style: italic;
+}
+
+/* ===================== DESCRIPTION ===================== */
+.flavour-text p {
+    font-family: var(--font-book);
+    font-size: 15px;
+    color: var(--accent-color);
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    padding-left: 10px;
+    border-left: 2px solid var(--border-color);
+}
+
+.description-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+    opacity: 0.9;
+}
+
+.description-text p:last-child,
+.flavour-text p:last-child {
+    margin-bottom: 0;
+}

@@ -15,7 +15,7 @@
 	[h: sAttributiArma = strformat("%{sAttributiArma}<li>%s: %+d</li>", macro.return, iValue)]
 }]
 
-[dialog5(sDialog, strformat("temporary=1; width=450; height=500; closebutton=0; noframe=0;")):{
+[dialog5(sDialog, strformat('temporary=1; width=450; height=500; closebutton=0; noframe=0;')):{
 <html>
 
 <head> 
