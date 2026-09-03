@@ -42,7 +42,7 @@
         <div class="tab-panel active" id="tab-armi">
             <div class="weapon-toggle" id="armiToggle">
             </div>
-            <div id="armiPanel">
+            <div id="armiPanel">                
             </div>
 
             <div class="section-title">Offensivo (Generale)</div>
