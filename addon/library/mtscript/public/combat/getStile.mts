@@ -1,3 +1,4 @@
+<!-- DEPRACATED but still in use somewhere -->
 [h: target = arg(0)]
 [h: sStile = getProperty("Stile",target)]
 [h, switch(sStile), code:

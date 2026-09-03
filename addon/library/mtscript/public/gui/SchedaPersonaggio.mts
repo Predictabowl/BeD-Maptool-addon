@@ -6,9 +6,6 @@
 [h: sThemePreferenze = "Spell_Dialogs_Theme"]
 [h: bLightMode = getPreferenza("light_mode",tokenId,sThemePreferenze)]
 
-[h: oStili = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/config/stili.json")]
-[h: oStile = json.get(oStili, Stile)]
-
 [frame5(sFrame,strformat("scrollreset=0; value=%s;", tokenId)):{
 <html>
 <head>
@@ -26,8 +23,7 @@
                 <div class="player-name">[r: getName(tokenId)]</div>
                 <div class="style-row">
                     <span class="lbl">Stile:</span>
-                    <span id="styleSelect" onchange="setStyle(this.value)" data-stileid="[r: Stile]">
-                        [r: json.get(oStile, "name")]
+                    <span id="styleSelect">
                     <span>
                 </div>
             </div>
@@ -51,10 +47,12 @@
 
             <div class="section-title">Offensivo (Generale)</div>
             <div class="stat-grid cols-2">
-                [h: iVA = getVA(tokenId)]
-                <div class="stat-cell"><span class="k">VA</span><span class="v">[r: iVA] <small>([r: round(calcPercentMod(-iVA/100)*100,1)]%)</small></span></div>
-                [h: iMancare = getMancare(tokenId)]
-                <div class="stat-cell"><span class="k">Mancare</span><span class="v">[r: getMancare(tokenId)] <small>([r: round(getMancareProb(iMancare)*100,1)]%)</small></span></div>
+                <div class="stat-cell">
+                    <span class="k">VA</span><span class="v" id="VA"></span>
+                </div>
+                <div class="stat-cell">
+                    <span class="k">Mancare</span><span class="v" id="mancare"></span>
+                </div>
                 
             </div>
         </div>
@@ -74,19 +72,19 @@
                     <span class="k">
                         <img src="lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/slash_icon.png" alt="Taglio"> LD
                     </span>
-                    <span class="v">[r: getLD(tokenId, "T")]</span>
+                    <span class="v" id="LD-T"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">
                         <img src="lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/crush_icon.png" alt="Botta"> LD
                     </span>
-                    <span class="v">[r: getLD(tokenId, "B")]</span>
+                    <span class="v" id="LD-B"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">
                         <img src="lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/pierce_icon.png" alt="Punta"> LD
                     </span>
-                    <span class="v">[r: getLD(tokenId, "P")]</span>
+                    <span class="v" id="LD-P"></span>
                 </div>
             </div>
 
@@ -94,21 +92,15 @@
             <div class="stat-grid cols-3">
                 <div class="stat-cell">
                     <span class="k">Schivare</span>
-                    [h: iSchivare = getSchivare(tokenId)]
-                    <span class="v">
-                        [r: iSchivare] <small>([r: strformat("%.1f", getSchivareProb(iSchivare)*100)]%)</small>
-                    </span>
+                    <span class="v" id="schivare"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">Parare</span>
-                    [h: iParare = getParare(tokenId)]
-                    <span class="v">
-                        [r: iParare] <small>([r: strformat("%.1f", getParareProb(iParare)*100)]%)</small>
-                    </span>
+                    <span class="v" id="parare"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">Elusione</span>
-                    <span class="v">[r: getElusione(tokenId)]</span>
+                    <span class="v" id="elusione"></span>
                 </div>
             </div>
 
@@ -116,29 +108,29 @@
             <div class="stat-grid">
                 <div class="stat-cell">
                     <span class="k">Riflessi</span>
-                    <span class="v">[r: strformat("%+d", getTSRiflessi(tokenId))]</span>
+                    <span class="v" id="ts-rif"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">Tempra</span>
-                    <span class="v">[r: strformat("%+d", getTSTempra(tokenId))]</span>
+                    <span class="v" id="ts-tem"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">Volontà</span>
-                    <span class="v">[r: strformat("%+d", getTSVolonta(tokenId))]</span>
+                    <span class="v" id="ts-vol"></span>
                 </div>
             </div>
 
             <div class="section-title">Resistenze</div>
             <div class="resist-grid">
-                <div class="resist-cell"><span>Acqua</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Acqua"))]</span></div>
-                <div class="resist-cell"><span>Aria</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Aria"))]</span></div>
-                <div class="resist-cell"><span>Fuoco</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Fuoco"))]</span></div>
-                <div class="resist-cell"><span>Terra</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Terra"))]</span></div>
-                <div class="resist-cell"><span>Arcano</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Arcano"))]</span></div>
-                <div class="resist-cell"><span>Mentale</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Mentale"))]</span></div>
-                <div class="resist-cell"><span>Negativo</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Negativo"))]</span></div>
-                <div class="resist-cell"><span>Positivo</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Positivo"))]</span></div>
-                <div class="resist-cell"><span>Fisico</span><span class="v">[r: getResistance(json.set("", "target", tokenId, "elemento", "Fisico"))]</span></div>
+                <div class="resist-cell"><span>Acqua</span><span class="v" id="res-acqua"></span></div>
+                <div class="resist-cell"><span>Aria</span><span class="v" id="res-aria"></span></div>
+                <div class="resist-cell"><span>Fuoco</span><span class="v" id="res-fuoco"></span></div>
+                <div class="resist-cell"><span>Terra</span><span class="v" id="res-terra"></span></div>
+                <div class="resist-cell"><span>Arcano</span><span class="v" id="res-arcano"></span></div>
+                <div class="resist-cell"><span>Mentale</span><span class="v" id="res-mentale"></span></div>
+                <div class="resist-cell"><span>Negativo</span><span class="v" id="res-negativo"></span></div>
+                <div class="resist-cell"><span>Positivo</span><span class="v" id="res-positivo"></span></div>
+                <div class="resist-cell"><span>Fisico</span><span class="v" id="res-fisico"></span></div>
             </div>
         </div>
 
@@ -147,19 +139,19 @@
             <div class="section-title">Generale</div>
             <div class="kv-row">
                 <span>Iniziativa</span>
-                <span class="v">[r: strformat("1d24%+d",Tiro_Iniziativa)]</span>
+                <span class="v" id="iniziativa"></span>
             </div>
             <div class="kv-row">
                 <span>Tempo Movimento</span>
-                <span class="v" id="tempo-movimento">[r: getMoveTime(tokenId)]</span>
+                <span class="v" id="tempo-movimento"></span>
             </div>
             <div class="kv-row">
                 <span>Concentrazione</span>
-                <span class="v">[r: getConcentrazionePoteri(tokenId)]</span>
+                <span class="v" id="concentrazione"></span>
             </div>
             <div class="kv-row">
                 <span>Perturbazione</span>
-                <span class="v">[r: strformat("1d100%+d",getPerturbazionePoteri(tokenId))]</span>
+                <span class="v" id="perturbazione"></span>
             </div>
 
             <div class="section-title">Modificatori</div>
@@ -167,21 +159,19 @@
 								
                 <div class="stat-cell">
                     <span class="k">Danno Inflitto</span>
-                    [h, macro("core/getMDIPerc@this"): tokenId]
-                    <span class="v">[r: strformat("%+.1f", (calcPercentMod(macro.return)-1)*100)]%</span>
+                    <span class="v" id="MDI"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">Danno Ricevuto</span>
-                    <span class="v">[r: strformat("%+.1f", (calcPercentMod(Mod_Danno_in)-1)*100)]%</span>
+                    <span class="v" id="MDR"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">Cure Generate</span>
-                    [h, macro("core/getMCGPerc@this"): tokenId]
-                    <span class="v">[r: strformat("%+.1f", (calcPercentMod(macro.return)-1)*100)]%</span>
+                    <span class="v" id="MCG"></span>
                 </div>
                 <div class="stat-cell">
                     <span class="k">Cure Ricevute</span>
-                    <span class="v">[r: strformat("%+.1f", (calcPercentMod(Mod_Cura_in)-1)*100)]%</span>
+                    <span class="v" id="MCR"></span>
                 </div>
             </div>
 

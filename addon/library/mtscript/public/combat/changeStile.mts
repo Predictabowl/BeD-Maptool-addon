@@ -1,4 +1,4 @@
-<!-- DEPRECATED - but still used until replaced by applyChangeStile -->
+<!-- DEPRECATED - but still used until eventually replaced by applyChangeStile -->
 [h: oToken = arg(0)]
 [h: sNewStile = arg(1)]
 
@@ -25,6 +25,7 @@
 	[PA_Max = PA_Max -1]
 	[macro("mobs/getIdArmaEquip@this"): json.append(oToken,2)]
 	[macro("mobs/addEquipToSlotVeloce@this"): json.append(oToken,macro.return)]
+	[macro("combat/setArmaDaUsare@this"): json.append(oToken, 1)]
 	[macro("mobs/riponiArma@this"): json.append(oToken,2)]
 }]
 
@@ -45,6 +46,7 @@
 [h, if(macro.return), code:{
 	[macro("mobs/getIdArmaEquip@this"): json.append(oToken,2)]
 	[macro("mobs/addEquipToSlotVeloce@this"): json.append(oToken,macro.return)]
+	[macro("combat/setArmaDaUsare@this"): json.append(oToken, 1)]
 	[macro("mobs/riponiArma@this"): json.append(oToken,2)]
 	[Num_Attacchi = Num_Attacchi - 1]
 	[Num_Attacchi_Opp = Num_Attacchi_Opp - 1]

@@ -6,4 +6,4 @@
 
 [h: iArma = getArmaDaUsare(tokenId)]
 [h: jsParams = json.append("", iArma)]
-[h: runJsFunction(frameName, "frame", "buildArmi", "null", jsParams)]
+[h: runJsFunction(frameName, "frame", "buildSheet", "null", jsParams)]

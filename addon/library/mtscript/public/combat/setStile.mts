@@ -1,3 +1,4 @@
+<!-- DEPRECATED, but still in use somewhere -->
 [h: tokenId = arg(0)]
 [h: sStile = upper(arg(1))]
 [h: switchToken(tokenId)]

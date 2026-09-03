@@ -6,6 +6,7 @@ const ICONS = {
 
 let weapons = [];
 let powers = [];
+let otherValues;
 const NUM_FORMATTER = new Intl.NumberFormat('it-IT', { signDisplay: 'always' });
 const TOKEN_ID = document.body.dataset.tokenid;
 const TRIANGLE_RIGHT = `
@@ -13,9 +14,7 @@ const TRIANGLE_RIGHT = `
         <path d="M8 5v14l11-7z"/>
     </svg>`;
 
-const state = { activeWeapon: 1, nextAttackWeapon: 1, stile: "AS" };
-
-state.stile = document.getElementById("styleSelect").dataset.stileid;
+const state = { activeWeapon: 1, nextAttackWeapon: 1 };
 
 function dmgIcons(types) {
     return types.map(t => `<img src="${ICONS[t].src}" alt="${ICONS[t].alt}">`).join('');
@@ -89,6 +88,38 @@ function renderPoteri() {
     document.getElementById('poteriTable').innerHTML = `<thead>${headerRow1}${headerRow2}</thead><tbody>${bodyRows}</tbody>`;
 }
 
+function renderNonWeaponValues(){
+    document.getElementById("VA").innerHTML = `${otherValues.va} <small>(${otherValues.tempoPercent}%)</small>`;
+    document.getElementById("mancare").innerHTML = `${otherValues.mancare} <small>(${otherValues.mancarePercent}%)</small>`;
+    document.getElementById("LD-T").textContent = otherValues.ld_t;
+    document.getElementById("LD-B").textContent = otherValues.ld_b;
+    document.getElementById("LD-P").textContent = otherValues.ld_p;
+    document.getElementById("schivare").innerHTML =`${otherValues.schivare} <small>(${otherValues.schivarePercent}%)</small>`;
+    document.getElementById("parare").innerHTML = `${otherValues.parare} <small>(${otherValues.pararePercent}%)</small>`;
+    document.getElementById("elusione").textContent = otherValues.elusione;
+    document.getElementById("ts-rif").textContent = otherValues.ts_rif;
+    document.getElementById("ts-tem").textContent = otherValues.ts_tem;
+    document.getElementById("ts-vol").textContent = otherValues.ts_vol;
+    document.getElementById("res-acqua").textContent = otherValues.res_acqua;
+    document.getElementById("res-aria").textContent = otherValues.res_aria;
+    document.getElementById("res-fuoco").textContent = otherValues.res_fuoco;
+    document.getElementById("res-terra").textContent = otherValues.res_terra;
+    document.getElementById("res-arcano").textContent = otherValues.res_arcano;
+    document.getElementById("res-mentale").textContent = otherValues.res_mentale;
+    document.getElementById("res-negativo").textContent = otherValues.res_negativo;
+    document.getElementById("res-positivo").textContent = otherValues.res_positivo;
+    document.getElementById("res-fisico").textContent = otherValues.res_fisico;
+    document.getElementById("iniziativa").textContent = otherValues.iniziativa;
+    document.getElementById("tempo-movimento").textContent = otherValues.mov_time;
+    document.getElementById("concentrazione").textContent = otherValues.concentrazione;
+    document.getElementById("perturbazione").textContent = otherValues.perturbazione;
+    document.getElementById("MDI").textContent = `${otherValues.mdi}%`;
+    document.getElementById("MDR").textContent = `${otherValues.mdr}%`;
+    document.getElementById("MCG").textContent = `${otherValues.mcg}%`;
+    document.getElementById("MCR").textContent = `${otherValues.mcr}%`;
+    document.getElementById("styleSelect").textContent = otherValues.stile;
+}
+
 async function buildArmi() {
     const tokenId = document.body.dataset.tokenid;
     let bodyStr = JSON.stringify([tokenId, 1]);
@@ -114,7 +145,8 @@ async function buildArmi() {
     bodyStr = JSON.stringify([tokenId]);
     response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/combat/getArmaDaUsare', { method: 'POST', body: bodyStr });
     const weaponId = await response.text();
-    setNextAttackWeapon(Number.parseInt(weaponId));
+    state.nextAttackWeapon = Number.parseInt(weaponId);
+    renderArmi();
     buildPoteri();
 }
 
@@ -123,6 +155,12 @@ async function buildPoteri() {
     const response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/SchedaPersPowers', { method: 'POST', body: bodyStr });
     powers = await response.json();
     renderPoteri();
+}
+
+async function buildNonWeaponValues() {
+    const response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/CompileSchedaPersonaggioData', { method: 'POST', body: JSON.stringify([TOKEN_ID]) });
+    otherValues = await response.json();
+    renderNonWeaponValues();
 }
 
 async function setActiveWeapon(id) {
@@ -172,6 +210,7 @@ async function updateDannoArmi() {
 
 function buildSheet() {
     buildArmi();
+    buildNonWeaponValues();
 }
 
 buildSheet();
