@@ -84,7 +84,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
-        "categoria": "armaDistanza",
+        "categoria": "arma",
         "danno1H": "2d12",
         "danno2H": 0,
         "icona": "bows/Arco.png",
@@ -192,7 +192,7 @@
             "Tempo di Attacco": 18
         },
         "carArma": "Agile",
-        "categoria": "armaLancio",
+        "categoria": "arma",
         "danno1H": "3d7",
         "danno2H": 0,
         "icona": "throwing/ColtelloLancio.png",
@@ -270,7 +270,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "Agile",
-        "categoria": "armaLancio",
+        "categoria": "arma",
         "danno1H": "3d6+1",
         "danno2H": 0,
         "icona": "throwing/sling_icon.png",
@@ -293,7 +293,7 @@
             "Tempo di Attacco": 21
         },
         "carArma": "Massiccia",
-        "categoria": "armaDistanza",
+        "categoria": "arma",
         "danno1H": "3d9",
         "danno2H": 0,
         "icona": "bows/GrandeArco.png",
@@ -648,7 +648,7 @@
             "Tempo di Attacco": 18
         },
         "carArma": "Agile",
-        "categoria": "armaLancio",
+        "categoria": "arma",
         "danno1H": "2d11",
         "danno2H": 0,
         "icona": "throwing/ColtelloLancio.png",

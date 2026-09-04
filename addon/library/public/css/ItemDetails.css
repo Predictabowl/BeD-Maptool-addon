@@ -89,6 +89,7 @@ body {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
+    text-transform: capitalize;
 }
 
 .item-tag {
@@ -157,8 +158,12 @@ body {
 
 .weapon-substats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 6px;
+}
+
+.weapon-substats.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .substat-cell {

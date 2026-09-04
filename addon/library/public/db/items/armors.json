@@ -156,6 +156,7 @@
             "LD": 5
         },
         "ingombro": 3,
+        "addArmatura": 0,
         "potenziamento": 0,
         "categoria": "armatura",
         "icona": "armors/tunica-rinforzata.png"
@@ -166,6 +167,7 @@
             "LD": 6
         },
         "ingombro": 5,
+        "addArmatura": 0,
         "potenziamento": 0,
         "categoria": "armatura",
         "icona": "armors/tunica-rinforzata.png"
@@ -179,6 +181,7 @@
             "Res_Arcano": 1
         },
         "ingombro": 5,
+        "addArmatura": 0,
         "potenziamento": 0,
         "categoria": "armatura",
         "icona": "armors/inv_chest_cloth_17.png"
