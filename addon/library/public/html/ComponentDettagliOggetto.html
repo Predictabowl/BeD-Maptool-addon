@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<title>Dettaglio Oggetto</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=Homemade+Apple&family=Macondo&family=New+Rocker&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
-<link rel="stylesheet" href="../../addon/library/public/css/ItemDetails.css">
-
-</head>
-<body>
-
 <div class="item-dialog">
 
     <!-- ===================== HEADER ===================== -->
@@ -21,35 +6,36 @@
             <img src="../../addon/library/public/icons/items/swords/inv_sword_draenei_01.png" alt="Spada del Crepuscolo">
         </div>
         <div class="item-header-info">
-            <div class="item-name">Spada del Crepuscolo</div>
-            <div class="item-tags">
-                <span class="item-tag">Ingombro 3</span>
+            <div class="item-name" id="cdo-item-name">Spada del Crepuscolo</div>
+            <div class="item-tags" id="cdo-item-tags">
+                <span class="item-tag">Spada</span>
+                <span class="item-tag">Mischia</span>
             </div>
         </div>
     </div>
 
     <!-- ===================== WEAPON BLOCK (omit entirely if not a weapon) ===================== -->
-    <div class="item-section">
-        <div class="damage-row">
+    <div class="item-section" id="cdo-item-weapon-block">
+        <div class="damage-row" id="cdo-item-1h-dmg">
             <span class="hand-label">1 Mano</span>
             <span class="dmg-value">2d6+1</span>
             <img src="../../addon/library/public/icons/gui/slash_icon.png" alt="Taglio">
         </div>
-        <div class="damage-row">
+        <div class="damage-row" id="cdo-item-2h-dmg">
             <span class="hand-label">2 Mani</span>
             <span class="dmg-value">3d6+3</span>
             <img src="../../addon/library/public/icons/gui/slash_icon.png" alt="Taglio">
             <img src="../../addon/library/public/icons/gui/pierce_icon.png" alt="Punta">
         </div>
         <div class="weapon-substats">
-            <div class="substat-cell"><span class="k">Car. Arma</span><span class="v">Bilanciata</span></div>
-            <div class="substat-cell"><span class="k">Portata</span><span class="v">1</span></div>
-            <div class="substat-cell"><span class="k">Categoria</span><span class="v">Spada</span></div>
+            <div class="substat-cell"><span class="k">Car. Arma</span><span class="v" id="cdo-item-car-arma">Bilanciata</span></div>
+            <div class="substat-cell"><span class="k">Portata</span><span class="v" id="cdo-item-portata">1</span></div>
+            <div class="substat-cell"><span class="k">Ingombro</span><span class="v" id="cdo-item-ingombro">4</span></div>
         </div>
     </div>
 
     <!-- ===================== WEAPON ATTRIBUTES (active only when attacking) ===================== -->
-    <div class="item-section">
+    <div class="item-section" id="cdo-item-weapon-attr">
         <div class="section-title combat">Attributi da Attacco</div>
         <div class="attr-list">
             <div class="attr-chip"><span class="attr-k">Critico</span><span class="attr-v">+5%</span></div>
@@ -105,6 +91,5 @@
     </div>
 
 </div>
-
-</body>
-</html>
+<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/IconSources.js?cachelib=false" defer></script>
+<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/ComponentDettagliOggetto.js?cachelib=false" defer></script>
