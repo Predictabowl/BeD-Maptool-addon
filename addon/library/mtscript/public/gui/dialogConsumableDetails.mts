@@ -24,7 +24,7 @@
 <html>
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/SpellDetailsCssLink.html")]
-	<title> [r: getName(oToken)] - Descrizione Pergamena</title>
+	<title>[r: getName(oToken)] - Consumabile</title>
 </head>
 <body class="[r, if(bLightMode == 1): 'light-mode']">
 

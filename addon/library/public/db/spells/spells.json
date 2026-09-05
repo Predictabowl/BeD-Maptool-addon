@@ -4467,7 +4467,7 @@
   },
   "FavoreInstabile": {
     "descrizione": [
-      "Fin quando l’incantesimo è attivo il beneficiario guadagna 1d4 PA massimi ed attuali, decisi al momento del lancio."
+      "Ogni round il beneficiario guadagna 1d4 PA da utilizzare entro il termine del round stesso."
     ],
     "id": "FavoreInstabile",
     "image": "inv_fabric_felcloth_ebon.png",

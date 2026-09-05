@@ -15,7 +15,7 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_jewelry_ring_19.png",
-        "descrizione": ""
+        "descrizione": []
     },
     "ANELLO DEL FATTUCCHIERE-1": {
         "nome": "Anello del Fattucchiere",
@@ -25,7 +25,7 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_ring_80_05e.png",
-        "descrizione": ""
+        "descrizione": []
     },
     "ANELLO POTENZA CRITICO +1-1": {
         "nome": "Anello Potenza Critico +1",
@@ -51,7 +51,7 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_11_0_earthen_jewelcraftingring_color3.png",
-        "descrizione": ""
+        "descrizione": []
     },
     "ANELLO_MCR-1": {
         "nome": "Anello Rinvigorente +1",
@@ -60,7 +60,7 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_jewelry_ring_10.png",
-        "descrizione": ""
+        "descrizione": []
     },
     "ANELLO_MDR-1": {
         "nome": "Anello Barriera +1",
@@ -69,7 +69,7 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_jewelcrafting_80_lvlupring_purple.png",
-        "descrizione": ""
+        "descrizione": []
     },
     "ANELLO_PA-1": {
         "nome": "Azione Avventata",
@@ -79,7 +79,9 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_jewelry_ring_36.png",
-        "descrizione": "Questo anello rimuove i limiti subconsci dettati dalla prudenza, permettendo quindi di agire più efficacemente al prezzo di una maggiore esposizione al pericolo."
+        "descrizione": [
+            "Questo anello rimuove i limiti subconsci dettati dalla prudenza, permettendo quindi di agire più efficacemente al prezzo di una maggiore esposizione al pericolo."
+        ]
     },
     "ANELLO_RES_SANGUINAMENTO-1": {
         "nome": "Anello Coagulante +1",
@@ -88,7 +90,7 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_jewelcrafting_90_maxlvlring_red.png",
-        "descrizione": ""
+        "descrizione": []
     },
     "ANELLO_VA-3": {
         "nome": "Anello della Rapidità +3",
@@ -97,7 +99,7 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_ring_oribos_01_copper.png",
-        "descrizione": ""
+        "descrizione": []
     },
     "ANELLO_LUCE+1": {
         "nome": "Anello Sacro +1",
@@ -106,12 +108,13 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_jewelry_ring_33.png",
-        "descrizione": "Questo anello emette una lieve luce sacra.",
+        "descrizione": [
+            "Questo anello emette una lieve luce sacra."
+        ],
         "RuneInstallate": [
             "ToccoCuraFeriteLeggere-9"
         ]
-    }
-    ,
+    },
     "anello-minore-chaos-0": {
         "nome": "Anello Minore del Chaos",
         "attributi": {
@@ -119,7 +122,9 @@
         },
         "categoria": "Anello",
         "icona": "rings/inv_ring_bastion_02_pinkgold.png",
-        "descrizione": "Un anello instriso con l’energia del Chaos.",
+        "descrizione": [
+            "Un anello instriso con l’energia del Chaos."
+        ],
         "RuneInstallate": [
             "FavoreInstabile_9_1"
         ]

@@ -5,7 +5,6 @@ let displayItem = {};
 async function fillDettagliOggetto(jsonId) {
     const jsonString = document.getElementById(jsonId).dataset.oggettojson;
     await buildDisplayItem(jsonString);
-    // const displayItem = JSON.parse(document.getElementById(jsonId).dataset.oggettojson);
     document.getElementById("cdo-item-name").textContent = displayItem.nome;
     const iconEl = document.getElementById("cdo-item-icon");
     iconEl.setAttribute("alt", displayItem.nome);
@@ -15,7 +14,8 @@ async function fillDettagliOggetto(jsonId) {
     renderWeaponAttributes();
     renderGeneralAttributes();
     renderRunes();
-    // getDmgTypeIcon();
+    renderDescription();
+    updateSectionBorders();
 }
 
 function renderItemTags() {
@@ -79,7 +79,6 @@ function renderWeaponSubStats() {
             break;
         case 'armatura':
             // element.classList.remove("cols-3");
-            console.log();
             element.innerHTML = `
             <div class="substat-cell"><span class="k">Addestramento</span><span class="v" id="cdo-item-portata">${displayItem.addArmatura}</span></div>
             <div class="substat-cell"><span class="k">Ingombro</span><span class="v" id="cdo-item-ingombro">${displayItem.ingombro}</span></div>`;
@@ -135,17 +134,43 @@ function renderRunes(){
     }
 }
 
+function renderDescription(){
+    const descriptionEl = document.getElementById("cdo-item-description");
+    const flavourEl = document.getElementById("cdo-item-flavour-text");
+    if(!(displayItem.descrizione?.length > 0) && !(displayItem.flavour?.length > 0)) {
+        descriptionEl.parentElement.classList.add("hidden");
+        return;
+    } else {
+        descriptionEl.parentElement.classList.remove("hidden");
+    }
+    if(displayItem.descrizione?.length > 0){
+        descriptionEl.classList.remove("hidden");
+        descriptionEl.innerHTML = displayItem.descrizione.map(d => `<p>${d}</p>`).join('');
+    } else {
+        descriptionEl.classList.add("hidden");
+    }
+    if(displayItem.flavour?.length > 0){
+        flavourEl.classList.remove("hidden");
+        flavourEl.innerHTML = displayItem.flavour.map(f => `<p>${f}</p>`).join('');
+    } else {
+        flavourEl.classList.add("hidden");
+    }
+}
+
 async function buildDisplayItem(jsonString){
     const response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/buildDisplayDataFromItem', { method: 'POST', body: jsonString })
     displayItem = await response.json();
 }
 
-// [h: sNome = json.get(oOggetto, "nome")]
-// [h: sDialog = "DialogInfoOggetto-"+sNome]
-// [h: jAttributi = json.get(oOggetto, "attributi")]
-// [h: jAttributiArma = json.get(oOggetto, "attributiArma")]
-// [h: jDatiCustom = json.get(oOggetto, "datiCustom")]
-// [h, if(json.contains(jDatiCustom, "RuneInstallate")): aRune = json.get(jDatiCustom, "RuneInstallate"); aRune = "[]"]
+function updateSectionBorders() {
+    const sections = document.querySelectorAll('.item-section');
+    const visibleSections = Array.from(sections).filter(s => !s.classList.contains('hidden'));
+    sections.forEach(s => s.classList.remove('last-visible'));
+    if (visibleSections.length > 0) {
+        visibleSections[visibleSections.length - 1].classList.add('last-visible');
+    }
+}
+
 
 function checkAutofillOggetto() {
     if(document.getElementById("auto-fill-oggetto"))

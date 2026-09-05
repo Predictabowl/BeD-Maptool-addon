@@ -37,7 +37,7 @@
         "addArmatura": 0,
         "categoria": "scudo",
         "icona": "shields/inv_shield_19.png",
-        "descrizione": "Un piccolo scudo in grado di deflettere gli attacchi ancor prima che raggiungano il bersaglio. Permette di lanciare Barricata 1 volta al giorno.",
+        "descrizione": ["Un piccolo scudo in grado di deflettere gli attacchi ancor prima che raggiungano il bersaglio. Permette di lanciare Barricata 1 volta al giorno."],
         "RuneInstallate": [
             "Barricata-1"
         ]

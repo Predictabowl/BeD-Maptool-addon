@@ -106,7 +106,7 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-.item-section:last-child {
+.item-section.last-visible {
     border-bottom: none;
 }
 

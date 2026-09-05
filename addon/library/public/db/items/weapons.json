@@ -19,61 +19,6 @@
         "tipoArma": "Ascia",
         "tipoDanno": "T"
     },
-    "SCURE DI TIMON +1": {
-        "attributi": {},
-        "attributiArma": {
-            "LA": 1,
-            "LL": 1,
-            "CD": 1,
-            "Crit": 7,
-            "PCrit": 9,
-            "Tempo di Attacco": 19
-        },
-        "carArma": "Agile",
-        "danno1H": "3d8+1",
-        "danno2H": 0,
-        "icona": "axes/inv_axe_06.png",
-        "ingombro": 3,
-        "nome": "Scure di Timon",
-        "numAttacchi": 0,
-        "portata": 1,
-        "potenziamento": 1,
-        "tipoArma": "Ascia",
-        "tipoDanno": "T",
-        "RuneInstallate": [
-            "ArmaFulminante-11"
-        ],
-        "descrizione": "Un&#39arma dal passato avvolto nel mistero. Le origini della Scure di Timon sono del tutto sconosciute, ma la sua potenza è innegabile. Sulla possente lama d&#39acciaio sono incise due antiche rune del fulmine. Non appena viene impugnata, l&#39ascia si risveglia: la lama emette una tenue luce azzurrina e piccole scariche elettriche iniziano a sfrigolare lungo il filo, pronte a colpire."
-    },
-    "striscia_evasiva_+1": {
-        "attributi": {
-            "Schivare": 2
-        },
-        "attributiArma": {
-            "LA": 1,
-            "LL": 1,
-            "CD": 1,
-            "Crit": 8,
-            "PCrit": 13,
-            "Penetrazione": 1,
-            "Tempo di Attacco": 18
-        },
-        "carArma": "Agile",
-        "danno1H": "3d6+2",
-        "danno2H": 0,
-        "icona": "swords/inv_sword_draenei_01.png",
-        "ingombro": 4,
-        "nome": "Striscia Evasiva +1",
-        "numAttacchi": 0,
-        "portata": 1,
-        "potenziamento": 1,
-        "tipoArma": "Spada",
-        "tipoDanno": "P",
-        "RuneInstallate": [
-            "ManovraEvasiva_9_1"
-        ],
-        "descrizione": "Un&#39arma elegante e bilanciata, perfetta per la difesa."
-    },
     "ARCO CORTO-0": {
         "attributi": {
             "Num_Attacchi": 1
@@ -108,7 +53,9 @@
         "carArma": "Bilanciata",
         "danno1H": 0,
         "danno2H": "3d12+2",
-        "descrizione": "Un&#39ascia barbuta infusa dell&#39essenza di un drago verde.",
+        "descrizione": [
+            "Un&#39ascia barbuta infusa dell&#39essenza di un drago verde."
+        ],
         "icona": "axes/inv_axe_104.png",
         "ingombro": 7,
         "nome": "Servitore del Drago",
@@ -214,7 +161,7 @@
         "carArma": "Agile",
         "danno1H": "2d11",
         "danno2H": "",
-        "descrizione": "",
+        "descrizione": [],
         "icona": "swords/inv_sword_20.png",
         "ingombro": 3,
         "nome": "Daga",
@@ -234,7 +181,9 @@
         "carArma": "Agile",
         "danno1H": "2d11",
         "danno2H": "",
-        "descrizione": "Un´arma insidiosa spesso utilizzata da assissini e incantatori, perché in grado di migliorare notevolmente i critici",
+        "descrizione": [
+            "Un´arma insidiosa spesso utilizzata da assissini e incantatori, perché in grado di migliorare notevolmente i critici"
+        ],
         "icona": "swords/inv_sword_20.png",
         "ingombro": 3,
         "nome": "Daga Assassina",
@@ -520,7 +469,9 @@
         "carArma": "Agile",
         "danno1H": "3d8",
         "danno2H": 0,
-        "descrizione": "Questo mazzafrusto è adornato da quello che sembra un simbolo sacro, che rappresenta un´arpa a 5 corde fatta di foglie.",
+        "descrizione": [
+            "Questo mazzafrusto è adornato da quello che sembra un simbolo sacro, che rappresenta un´arpa a 5 corde fatta di foglie."
+        ],
         "icona": "maces/inv_mace_01.png",
         "ingombro": 3,
         "nome": "Mazzafrusto del Teurgo minore",
@@ -607,7 +558,9 @@
         "carArma": "Agile",
         "danno1H": "3d4+2",
         "danno2H": 0,
-        "descrizione": "Questo rasoio è chiaramente antico e molto usurato, nonostante ciò la lama è ancora affilatissima, dopotutto non c&#39era di meno da aspettarsi da un rasoio forgiato per barbe naniche.",
+        "descrizione": [
+            "Questo rasoio è chiaramente antico e molto usurato, nonostante ciò la lama è ancora affilatissima, dopotutto non c&#39era di meno da aspettarsi da un rasoio forgiato per barbe naniche."
+        ],
         "icona": "swords/inv_weapon_shortblade_13.png",
         "ingombro": 2,
         "nome": "Rasoio Nanico",
@@ -676,7 +629,9 @@
         "carArma": "Agile",
         "danno1H": "3d6",
         "danno2H": 0,
-        "descrizione": "Questi guanti ferrati sono stati benedetti sotto il nome di Moradin, e sono in grado di incrementare la potenza di tutti gli attacchi quando si combattono Non Morti.",
+        "descrizione": [
+            "Questi guanti ferrati sono stati benedetti sotto il nome di Moradin, e sono in grado di incrementare la potenza di tutti gli attacchi quando si combattono Non Morti."
+        ],
         "icona": "gloves/inv_gauntlets_30.png",
         "ingombro": 2,
         "nome": "Pugno Ferrato Benedetto",
@@ -771,6 +726,34 @@
         "tipoArma": "Ascia",
         "tipoDanno": "T"
     },
+    "SCURE DI TIMON +1": {
+        "attributi": {},
+        "attributiArma": {
+            "CD": 1,
+            "Crit": 7,
+            "LA": 1,
+            "LL": 1,
+            "PCrit": 9,
+            "Tempo di Attacco": 19
+        },
+        "carArma": "Agile",
+        "danno1H": "3d8+1",
+        "danno2H": 0,
+        "descrizione": [
+            "Un&#39arma dal passato avvolto nel mistero. Le origini della Scure di Timon sono del tutto sconosciute, ma la sua potenza è innegabile. Sulla possente lama d&#39acciaio sono incise due antiche rune del fulmine. Non appena viene impugnata, l&#39ascia si risveglia: la lama emette una tenue luce azzurrina e piccole scariche elettriche iniziano a sfrigolare lungo il filo, pronte a colpire."
+        ],
+        "icona": "axes/inv_axe_06.png",
+        "ingombro": 3,
+        "nome": "Scure di Timon",
+        "numAttacchi": 0,
+        "portata": 1,
+        "potenziamento": 1,
+        "RuneInstallate": [
+            "ArmaFulminante-11"
+        ],
+        "tipoArma": "Ascia",
+        "tipoDanno": "T"
+    },
     "SIMBOLO SACRO+1": {
         "attributi": {
             "Crit": 2
@@ -786,7 +769,9 @@
         "carArma": "CaP",
         "danno1H": "3d6",
         "danno2H": 0,
-        "descrizione": "Un simbolo sacro di un dimenticato dio della Guerra.",
+        "descrizione": [
+            "Un simbolo sacro di un dimenticato dio della Guerra."
+        ],
         "icona": "artifacts/ability_pvp_gladiatormedallion.png",
         "ingombro": 2,
         "nome": "Simulacro di Guerra +1",
@@ -848,7 +833,7 @@
         "carArma": "Bilanciata",
         "danno1H": "4d6+1",
         "danno2H": "4d+1",
-        "descrizione": "",
+        "descrizione": [],
         "icona": "swords/inv_sword_27.png",
         "ingombro": 4,
         "nome": "Spada Crociata",
@@ -870,7 +855,7 @@
         "carArma": "Bilanciata",
         "danno1H": "4d6+1",
         "danno2H": "4d+1",
-        "descrizione": "",
+        "descrizione": [],
         "icona": "swords/inv_sword_27.png",
         "ingombro": 4,
         "nome": "Spada Crociata +1",
@@ -917,6 +902,37 @@
         "tipoArma": "Spada",
         "tipoDanno": "P"
     },
+    "striscia_evasiva_+1": {
+        "attributi": {
+            "Schivare": 2
+        },
+        "attributiArma": {
+            "CD": 1,
+            "Crit": 8,
+            "LA": 1,
+            "LL": 1,
+            "PCrit": 13,
+            "Penetrazione": 1,
+            "Tempo di Attacco": 18
+        },
+        "carArma": "Agile",
+        "danno1H": "3d6+2",
+        "danno2H": 0,
+        "descrizione": [
+            "Un&#39arma elegante e bilanciata, perfetta per la difesa."
+        ],
+        "icona": "swords/inv_sword_draenei_01.png",
+        "ingombro": 4,
+        "nome": "Striscia Evasiva +1",
+        "numAttacchi": 0,
+        "portata": 1,
+        "potenziamento": 1,
+        "RuneInstallate": [
+            "ManovraEvasiva_9_1"
+        ],
+        "tipoArma": "Spada",
+        "tipoDanno": "P"
+    },
     "TABAR -1": {
         "attributi": {},
         "attributiArma": {
@@ -941,10 +957,10 @@
             "Num_Attacchi_Opp": -1
         },
         "attributiArma": {
-            "LA": 1,
-            "LL": 1,
             "CD": 2,
             "Crit": 6,
+            "LA": 1,
+            "LL": 1,
             "PCrit": 5,
             "Tempo di Attacco": 20
         },
@@ -1019,7 +1035,9 @@
         "carArma": "CaP",
         "danno1H": 0,
         "danno2H": "4d7",
-        "descrizione": "Questo sacro bastone, intessuto di legno chiaro e filamenti dorati, emana un bagliore tenue e costante che ricorda la prima luce dell’alba. Come gli altri paramenti della medesima forgia, funge da potente catalizzatore divino: pur ostacolando la furtività a causa del suo rifulgere, intensifica notevolmente il potere delle cure elargite e infonde nel portatore una profonda energia spirituale, agendo come un faro di speranza nelle tenebre.",
+        "descrizione": [
+            "Questo sacro bastone, intessuto di legno chiaro e filamenti dorati, emana un bagliore tenue e costante che ricorda la prima luce dell’alba. Come gli altri paramenti della medesima forgia, funge da potente catalizzatore divino: pur ostacolando la furtività a causa del suo rifulgere, intensifica notevolmente il potere delle cure elargite e infonde nel portatore una profonda energia spirituale, agendo come un faro di speranza nelle tenebre."
+        ],
         "icona": "artifacts/inv_staff_29.png",
         "ingombro": 7,
         "nome": "Pastorale della Prima Luce",

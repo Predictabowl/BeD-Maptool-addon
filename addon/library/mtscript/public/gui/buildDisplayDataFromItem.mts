@@ -8,7 +8,10 @@
 [h: jUpdatedAttArma = "{}"]
 [h,foreach(sAttr, jAttrs), code:{
     [h, macro("gui/getAttributeDisplayName@this"): sAttr]
-    [jUpdatedAttArma = json.set(jUpdatedAttArma, macro.return, json.get(jAttrs, sAttr))]
+    [label = macro.return]
+    [value = json.get(jAttrs, sAttr)]
+    [if(!math.isInt(value)): value = round(value*100)]
+    [jUpdatedAttArma = json.set(jUpdatedAttArma, label, value)]
 }]
 [h: oItem = json.set(oItem, "attributiArma", jUpdatedAttArma)]
 
@@ -16,7 +19,10 @@
 [h: jUpdatedAttrs = "{}"]
 [h,foreach(sAttr, jAttrs), code:{
     [h, macro("gui/getAttributeDisplayName@this"): sAttr]
-    [jUpdatedAttrs = json.set(jUpdatedAttrs, macro.return, json.get(jAttrs, sAttr))]
+    [label = macro.return]
+    [value = json.get(jAttrs, sAttr)]
+    [if(!math.isInt(value)): value = round(value*100)]
+    [jUpdatedAttrs = json.set(jUpdatedAttrs, label, value)]
 }]
 [h: oItem = json.set(oItem, "attributi", jUpdatedAttrs)]
 
@@ -36,6 +42,5 @@
 }]
 [h: jDatiCustom = json.set(jDatiCustom, "RuneInstallate", aRune)]
 [h: oItem = json.set(oItem, "datiCustom", jDatiCustom)]
-
 
 [h: return(0, oItem)]

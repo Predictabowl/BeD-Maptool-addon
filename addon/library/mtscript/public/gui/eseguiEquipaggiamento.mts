@@ -117,4 +117,5 @@
 
 [h:closeDialog("DialogCambioArmi")]
 [h: execFunction("guiUpdateSchedaArmi", json.append("", oToken),0,"all")]
+[h: execFunction("guiUpdateSpellsResource", json.append(oToken, "VA"), 0, "all")]
 [macro("gui/updateUIOverlay@this"): oToken]

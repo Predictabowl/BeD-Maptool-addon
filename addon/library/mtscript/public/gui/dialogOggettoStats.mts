@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: oOggetto = arg(0)]
 
 [h: sNome = json.get(oOggetto, "nome")]
