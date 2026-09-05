@@ -66,7 +66,7 @@
         "sDescr": "Il valore di elusione si somma al valore di Mancare per tutti gli effetti che bersagliano il soggetto, siano essi benefici o nocivi."
     },
     "energia distruttiva": {
-        "sDescr": "Meccanica propria degli incantesimi di tipo Offensivo di Stregoneria, che permette a tali incantesimi di essere più efficaci. Attivabile solo grazie ad abilità specifiche di classe."
+        "sDescr": "Meccanica propria degli incantesimi di tipo Offensivo di Stregoneria, che ne incrementa l'efficacia. Attivabile solo grazie ad abilità specifiche di classe."
     },
     "estenuante": {
         "sAcro": "Estenuante x",
