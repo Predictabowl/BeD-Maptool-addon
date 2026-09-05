@@ -4,7 +4,6 @@ async function apri_dialog_descrizione(event, token, spellId) {
     fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/dialogSpellDetails', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
 }
 
-
 async function toggleTheme(token, frameName){
     const body = document.body;
     body.classList.toggle('light-mode');

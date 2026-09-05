@@ -1,6 +1,4 @@
 [h: oOggetto = arg(0)]
-<!-- remember that gui/getItemDataFromToken must be used to build oOggetto, but not here, in the link in chat function
-otherwise won't be clickable anymore once the item is removed from the token inventory -->
 
 [h: sNome = json.get(oOggetto, "nome")]
 [h: sDialog = "DialogInfoOggetto-"+sNome]

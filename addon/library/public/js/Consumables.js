@@ -84,7 +84,7 @@ async function unequipItem(button) {
     const index = card.dataset.index;
     const bodyStr = JSON.stringify([getTokenId(), index]);
     fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/consumables/moveFromSlotVeloce', { method: 'POST', body: bodyStr })
-        .catch(err => console.error('Dialog request failed:', err));;
+        .catch(err => console.error('Dialog request failed:', err));
     document.getElementById('inventoryGrid').appendChild(card);
     button.innerHTML = ICON_PLUS;
     button.title = 'Equipaggia in Quickslot';

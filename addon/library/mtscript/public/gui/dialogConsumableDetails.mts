@@ -2,6 +2,7 @@
 [h: slotId = json.get(macro.args,"slotId")]
 [h: oItem = json.get(macro.args,"item")]
 
+[h, if(oToken == ""): oToken = getImpersonated()]
 [h, if(oItem == ""): oItem = getFromSlotVeloce(oToken, slotId)]
 [h: spellName = json.get(oItem, "libName")]
 [h: iLivello = json.get(oItem, "livello")]

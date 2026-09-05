@@ -1,8 +1,4 @@
-[h: tokenId = arg(0)]
-[h: itemId = arg(1)]
-
-[h, macro("mobs/findOggettoFromEquip@this"): json.append(tokenId, itemId)]
-[h: oItem = macro.return]
+[h: oItem = macro.args]
 [h: lDmgType = json.get(oItem, "tipoDanno")]
 [h, if(lDmgType != ""), code:{
     [oItem = json.set(oItem, "tipoDanno", json.fromList(lDmgType))]
@@ -35,7 +31,7 @@
     [h: spellId = json.get(oRuna, "libName")]
     [h: sImg = fetchSpellImage(spellId)]
     [h: sNome = fetchSpellProp(spellId,"nome_decorativo")]
-    [oRuna = json.set(oRuna, "icona", sImg, "name", sNome)]
+    [oRuna = json.set(oRuna, "iconAsset", sImg, "nomeDecorativo", sNome)]
     [aRune = json.append(aRune, oRuna)]
 }]
 [h: jDatiCustom = json.set(jDatiCustom, "RuneInstallate", aRune)]
