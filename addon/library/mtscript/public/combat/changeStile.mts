@@ -9,8 +9,11 @@
 	[return(0,0)]
 }]
 
+
 [h, macro("combat/getStile@this"): oToken]
 [h, if(sNewStile == macro.return): return (0,0)]
+
+
 
 [h: switchToken(oToken)]
 

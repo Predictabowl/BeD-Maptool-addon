@@ -31,10 +31,12 @@ body {
     color: var(--text-color);
     margin: 0;
     padding: 12px;
-    width: 420px;
 }
 
 .item-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -43,6 +45,40 @@ body {
 
 .hidden {
     display: none !important;
+}
+
+/* ===================== LINK TO CHAT ===================== */
+/* Card-level action, not tied to the name text - sits top-right like a
+   share/utility icon on any card. Positioned relative to .item-dialog so
+   it stays correctly anchored wherever this component ends up (standalone
+   dialog, hover popover, embedded in the equip screen). Gold matches the
+   other structural chrome (name, icon frame ring) rather than the
+   combat/passive pair, since this isn't an item attribute. */
+.link-chat-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: var(--stats-bg);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.link-chat-btn:hover {
+    color: var(--link-hover-color);
+    border-color: var(--accent-color);
+}
+
+.link-chat-btn svg {
+    width: 14px;
+    height: 14px;
 }
 
 /* ===================== HEADER ===================== */

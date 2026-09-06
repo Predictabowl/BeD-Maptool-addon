@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pannello Equipaggiamento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=Homemade+Apple&family=Macondo&family=New+Rocker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/ItemDetails.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* ItemDetails.css sets body { width: 420px } for its own standalone
+       preview - this page needs to override that since it's a much wider
+       panel, not the item dialog itself. */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 16px;
+            width: auto;
+        }
+
+        .equip-panel {
+            display: flex;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            width: 100%;
+            max-width: 980px;
+        }
+
+        .equip-section {
+            
+            max-width: 550px;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 16px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        /* ===================== HEADER ===================== */
+        .equip-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .equip-title {
+            font-family: var(--font-title);
+            color: var(--accent-color);
+            font-size: 22px;
+            letter-spacing: 0.3px;
+            margin-right: 8px;
+        }
+
+        .equip-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .info-badge {
+            font-size: 12px;
+            color: var(--stat-label-color);
+            background-color: var(--stats-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 4px 10px;
+        }
+
+        .info-badge b {
+            color: var(--generic-stat-color);
+            font-weight: bold;
+            margin-left: 4px;
+        }
+
+        /* Demo-only controls, not part of the final panel - just here to show
+       the visual states the design doc calls for. */
+        .demo-controls {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .demo-btn {
+            font-size: 11px;
+            padding: 5px 9px;
+            border-radius: 5px;
+            border: 1px dashed var(--border-color);
+            background: transparent;
+            color: var(--stat-label-color);
+            cursor: pointer;
+        }
+
+        .demo-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* ===================== MAIN: PAPERDOLL + UTILITY COLUMN ===================== */
+        .equip-main {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .slot-column {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            padding-top: 6px;
+        }
+
+        .slot-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .slot-label {
+            font-size: 10px;
+            color: var(--stat-label-color);
+            text-align: center;
+        }
+
+        .equip-slot {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background-color: var(--stats-bg);
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            transition: box-shadow 0.15s;
+        }
+
+        .equip-slot:hover {
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+
+        .equip-slot img.item-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 7px;
+            display: block;
+        }
+
+        .equip-slot.locked {
+            cursor: not-allowed;
+            opacity: 0.55;
+        }
+
+        .equip-slot.locked::after {
+            content: "\1F512";
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 7px;
+        }
+
+        @keyframes shakeInvalid {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-4px);
+            }
+
+            40% {
+                transform: translateX(4px);
+            }
+
+            60% {
+                transform: translateX(-4px);
+            }
+
+            80% {
+                transform: translateX(4px);
+            }
+        }
+
+        .equip-slot.invalid {
+            animation: shakeInvalid 0.4s ease;
+            box-shadow: 0 0 0 2px var(--combat-color);
+        }
+
+        .paperdoll-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            justify-content: space-between;
+            background-image: url('https://placehold.co/260x460/1c1815/35322c?text=Ritratto+Personaggio');
+            background-size: auto;
+            width: 350px;
+            background-repeat: no-repeat;
+            background-position: center;
+            flex-shrink: 0;
+        }
+
+        .paperdoll-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 6px;
+        }
+
+        .paperdoll-bg {
+            width: 230px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            display: block;
+        }
+
+        .utility-column {
+            /* Matches .item-dialog's intended max-width (420px, once
+           ItemDetails.css stops fixing it via body) so the dock fits the
+           component at its natural size instead of cramming it. */
+            width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .section-label {
+            font-family: var(--font-title);
+            font-size: 13px;
+            color: var(--accent-color);
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+
+        /* Quick weapons now live under the left slot column (see rationale
+       in chat) - vertical list, scrolls if it grows past the available
+       height, no artificial slot-count limit. */
+        .quick-weapons-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 210px;
+            overflow-y: auto;
+            margin-top: 8px;
+        }
+
+        .equip-slot.small {
+            width: 46px;
+            height: 46px;
+            background-size: 38px 38px;
+            align-self: center;
+        }
+
+        /* ===================== ITEM DESCRIPTION DOCK ===================== */
+        /* Just the docker per the brief - real content comes from
+       ComponentDettagliOggetto.js, not reproduced here. */
+        .item-dock {
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            min-height: 150px;
+            background-color: rgba(0, 0, 0, 0.10);
+            position: relative;
+        }
+
+        .dock-empty {
+            font-size: 12px;
+            color: var(--stat-label-color);
+            text-align: center;
+            opacity: 0.7;
+            padding: 46px 10px;
+        }
+
+        .dock-close-btn {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            background-color: var(--stats-bg);
+            color: var(--stat-label-color);
+            cursor: pointer;
+        }
+
+        .dock-close-btn:hover {
+            color: var(--combat-color);
+            border-color: var(--combat-color);
+        }
+
+        /* ===================== INVENTORY / EQUIPAGGIAMENTO ===================== */
+        .inventory-zone {
+            position: relative;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .inventory-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .inventory-header .hint {
+            font-size: 11px;
+            color: var(--stat-label-color);
+            opacity: 0.7;
+        }
+
+        .inventory-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            max-height: 168px;
+            overflow-y: auto;
+            padding: 4px 2px;
+        }
+
+        .inv-item {
+            width: 48px;
+            height: 48px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            background-color: var(--stats-bg);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .inv-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .inventory-lock-overlay {
+            position: absolute;
+            top: 34px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .inventory-lock-overlay .lock-icon {
+            font-size: 22px;
+        }
+
+        .inventory-lock-overlay .lock-text {
+            font-size: 12px;
+            color: var(--text-color);
+        }
+
+        .inventory-zone.combat-locked .inventory-lock-overlay {
+            display: flex;
+        }
+
+        .inventory-zone.combat-locked .inventory-grid {
+            filter: blur(1.5px);
+            pointer-events: none;
+        }
+
+        /* ===================== FOOTER ===================== */
+        .equip-footer {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .btn-cancel {
+            background: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 8px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-cancel:hover {
+            border-color: var(--combat-color);
+            color: var(--combat-color);
+        }
+
+        .btn-confirm {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            border: none;
+            padding: 8px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-confirm:hover {
+            opacity: 0.9;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="equip-panel">
+        <div class="equip-section">
+
+            <!-- ===================== HEADER ===================== -->
+            <div class="equip-header">
+                <div style="display:flex; align-items:center; flex-wrap:wrap; gap:14px;">
+                    <div class="equip-title">Equipaggiamento</div>
+                    <div class="equip-badges">
+                        <span class="info-badge">Stile <b id="styleValue">Arma a 2 Mani</b></span>
+                        <span class="info-badge">Ingombro <b>7 / 12</b></span>
+                        <span class="info-badge">Addestramento Armature <b>Leggera</b></span>
+                    </div>
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-btn" onclick="toggleCombat()">Simula Combattimento</button>
+                    <button class="demo-btn" onclick="toggleWeaponHands()">Cambia Arma Primaria (1M/2M)</button>
+                    <button class="demo-btn" onclick="simulateInvalidDrop()">Simula Slot Invalido</button>
+                </div>
+            </div>
+
+            <!-- ===================== PAPERDOLL + UTILITY COLUMN ===================== -->
+            <div class="equip-main">
+
+                <div style="margin-top:14px; padding-top:14px; border-top:1px dashed var(--border-color);">
+                    <div class="section-label" style="text-align:center;">Armi Rapide</div>
+                    <div class="quick-weapons-vertical">
+                        <div class="equip-slot small"
+                            onclick="openItemDock('Arco Corto', 'https://placehold.co/64x64/2a241f/d49a40?text=ARC')">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARC"
+                                alt="Arco Corto">
+                        </div>
+                        <div class="equip-slot small"
+                            onclick="openItemDock('Pugnale da Lancio', 'https://placehold.co/64x64/2a241f/d49a40?text=PUG')">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
+                                alt="Pugnale da Lancio">
+                        </div>
+                        <div class="equip-slot small"></div>
+                        <div class="equip-slot small"></div>
+                        <div class="equip-slot small"></div>
+                    </div>
+                </div>
+                <!-- LEFT SLOTS -->
+                <div class="paperdoll-container">
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-elmo"
+                            style="background-image:url('../../addon/library/public/icons/gui/ElmoBG.png')"
+                            onclick="openItemDock('Elmo Rinforzato', 'https://placehold.co/64x64/2a241f/d49a40?text=ELM')">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ELM"
+                                alt="Elmo Rinforzato">
+                        </div>
+                        <div class="slot-label">Elmo</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-amuleto"
+                            style="background-image:url('../../addon/library/public/icons/gui/AmuletoBG.png')"></div>
+                        <div class="slot-label">Amuleto</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-armatura"
+                            style="background-image:url('../../addon/library/public/icons/gui/ArmaturaBG.png')"
+                            onclick="openItemDock('Corazza di Cuoio', 'https://placehold.co/64x64/2a241f/d49a40?text=ARM')">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARM"
+                                alt="Corazza di Cuoio">
+                        </div>
+                        <div class="slot-label">Armatura</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-mantello"
+                            style="background-image:url('../../addon/library/public/icons/gui/MantelloBG.png')"
+                            onclick="openItemDock('Mantello Ombra', 'https://placehold.co/64x64/2a241f/d49a40?text=MAN')">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=MAN"
+                                alt="Mantello Ombra">
+                        </div>
+                        <div class="slot-label">Mantello</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-guanti"
+                            style="background-image:url('../../addon/library/public/icons/gui/GuantiBG.png')"></div>
+                        <div class="slot-label">Guanti</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-bracciali"
+                            style="background-image:url('../../addon/library/public/icons/gui/BraccialiBG.png')"></div>
+                        <div class="slot-label">Bracciali</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-primary"
+                            style="background-image:url('../../addon/library/public/icons/gui/ArmaBG.png')"
+                            onclick="openItemDock('Alabarda', 'https://placehold.co/64x64/2a241f/d49a40?text=2M')">
+                            <img class="item-icon" id="primary-weapon-icon"
+                                src="https://placehold.co/64x64/2a241f/d49a40?text=2M" alt="Alabarda">
+                        </div>
+                        <div class="slot-label">Arma Primaria</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot locked" id="slot-secondary"
+                            style="background-image:url('../../addon/library/public/icons/gui/ArmaBG.png')"></div>
+                        <div class="slot-label">Mano Secondaria</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-cintura"
+                            style="background-image:url('../../addon/library/public/icons/gui/CinturaBG.png')"></div>
+                        <div class="slot-label">Cintura</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-anello1"
+                            style="background-image:url('../../addon/library/public/icons/gui/AnelloBG.png')"
+                            onclick="openItemDock('Anello della Quiete', 'https://placehold.co/64x64/2a241f/d49a40?text=ANE')">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ANE"
+                                alt="Anello della Quiete">
+                        </div>
+                        <div class="slot-label">Anello 1</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-stivali"
+                            style="background-image:url('../../addon/library/public/icons/gui/StivaliBG.png')"
+                            onclick="openItemDock('Stivali del Viandante', 'https://placehold.co/64x64/2a241f/d49a40?text=STI')">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=STI"
+                                alt="Stivali del Viandante">
+                        </div>
+                        <div class="slot-label">Stivali</div>
+                    </div>
+                    <div class="slot-wrap">
+                        <div class="equip-slot" id="slot-anello2"
+                            style="background-image:url('../../addon/library/public/icons/gui/AnelloBG.png')"></div>
+                        <div class="slot-label">Anello 2</div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- ===================== EQUIPAGGIAMENTO / INVENTARIO ===================== -->
+            <div class="inventory-zone" id="inventoryZone">
+                <div class="inventory-header">
+                    <div class="section-label" style="margin-bottom:0;">Inventario</div>
+                    <span class="hint">Disponibile solo fuori combattimento</span>
+                </div>
+                <div class="inventory-grid">
+                    <div class="inv-item"
+                        onclick="openItemDock('Pozione Curativa', 'https://placehold.co/64x64/2a241f/d49a40?text=POZ')">
+                        <img src="https://placehold.co/64x64/2a241f/d49a40?text=POZ" alt="Pozione Curativa"></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                </div>
+                <div class="inventory-lock-overlay">
+                    <span class="lock-icon">&#128274;</span>
+                    <span class="lock-text">Bloccato durante il combattimento</span>
+                </div>
+            </div>
+
+            <!-- ===================== FOOTER ===================== -->
+            <div class="equip-footer">
+                <button class="btn-cancel" onclick="console.log('annulla - stub')">Annulla</button>
+                <button class="btn-confirm" onclick="console.log('conferma - stub')">Conferma</button>
+            </div>
+
+        </div>
+
+        <!-- UTILITY COLUMN: SOLO DOCK DESCRIZIONE OGGETTO -->
+        <div class="utility-column" id="descrizione-dock">
+            <div class="section-label">Descrizione Oggetto</div>
+            <div class="item-dock" id="itemDock">
+                <div class="dock-empty">Seleziona un oggetto per vederne i dettagli</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* All of this is demo-only wiring to show the visual states the design
+           doc calls for. Real drag&drop, macro calls and fetches are out of
+           scope for this example. */
+
+        function toggleCombat() {
+            document.getElementById('inventoryZone').classList.toggle('combat-locked');
+        }
+
+        let twoHanded = true; // starts locked, matching the equipped 2-handed weapon below
+        function toggleWeaponHands() {
+            twoHanded = !twoHanded;
+            const secondary = document.getElementById('slot-secondary');
+            const primaryIcon = document.getElementById('primary-weapon-icon');
+            const styleValue = document.getElementById('styleValue');
+
+            if (twoHanded) {
+                secondary.classList.add('locked');
+                primaryIcon.src = 'https://placehold.co/64x64/2a241f/d49a40?text=2M';
+                styleValue.textContent = 'Arma a 2 Mani';
+            } else {
+                secondary.classList.remove('locked');
+                primaryIcon.src = 'https://placehold.co/64x64/2a241f/d49a40?text=1M';
+                styleValue.textContent = 'Arma e Scudo';
+            }
+        }
+
+        function simulateInvalidDrop() {
+            const slot = document.getElementById('slot-elmo');
+            slot.classList.add('invalid');
+            setTimeout(() => slot.classList.remove('invalid'), 450);
+        }
+
+        function openItemDock(name, icon) {
+            document.getElementById('descrizione-dock').style.display='block';
+            document.getElementById('itemDock').innerHTML = `
+            <div class="item-dialog" style="position:relative; border:none;">
+                <button class="link-chat-btn" title="Invia link in chat" onclick="event.stopPropagation()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17H7a5 5 0 0 1 0-10h2"/>
+                        <path d="M15 7h2a5 5 0 0 1 0 10h-2"/>
+                        <line x1="8" y1="12" x2="16" y2="12"/>
+                    </svg>
+                </button>
+                <div class="item-header" style="border-bottom:none;">
+                    <div class="item-icon-frame"><img src="${icon}" alt="${name}"></div>
+                    <div class="item-header-info">
+                        <div class="item-name">${name}</div>
+                        <div class="item-tags"><span class="item-tag">anteprima</span></div>
+                    </div>
+                </div>
+                <div style="text-align:center; font-size:11px; opacity:0.55; padding:6px 10px 12px;">
+                    Contenuto completo generato da ComponentDettagliOggetto.js
+                </div>
+            </div>
+            <button class="dock-close-btn" onclick="closeItemDock()">Chiudi</button>
+        `;
+        }
+
+        function closeItemDock() {
+            document.getElementById('itemDock').innerHTML = '<div class="dock-empty">Seleziona un oggetto per vederne i dettagli</div>';
+            document.getElementById('descrizione-dock').style.display='none';
+        }
+    </script>
+
+</body>
+
+</html>

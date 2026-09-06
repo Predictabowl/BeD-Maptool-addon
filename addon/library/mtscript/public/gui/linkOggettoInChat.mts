@@ -1,15 +1,19 @@
 [h: oToken = json.get(macro.args, "token")]
 [h: sOggetto = json.get(macro.args, "itemId")]
+[h: oOggetto = json.get(macro.args, "jsonItem")]
 
-[h, macro("mobs/findOggettoFromEquip@this"): json.append(oToken, sOggetto)]
-[h: oOggetto = macro.return]
+[h, if(json.isEmpty(oOggetto)), code: {
+	[h, macro("mobs/findOggettoFromEquip@this"): json.append(oToken, sOggetto)]
+	[h: oOggetto = macro.return]
+}]
+[h, if(oToken == ""): oToken = getImpersonated()]
 
+[h, macro("items/getItemIcon@this"): oOggetto]
+[h: sImg = macro.return]
 [h: switchToken(oToken)]
 [h: sNome = json.get(oOggetto, "nome")]
 [h: sLink = macroLink(sNome, "gui/dialogDettagliOggetto@lib:it.aldinucci.piero.bed.maptool.ruleset", "", oOggetto)]
 [h: sTokenName = getName(oToken)]
-[h, macro("items/getItemIcon@this"): oOggetto]
-[h: sImg = macro.return]
 [h: tokenAsset = getTokenHandout()]
 [h: sMsg = strformat("<table><tr>
 		<td rowspan='2' style='border-right: 3px solid gray;'><img src='%{tokenAsset}' height='50'></td>

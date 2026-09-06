@@ -2,13 +2,11 @@ const NUM_FORMATTER = new Intl.NumberFormat('it-IT', { signDisplay: 'always' });
 let displayItem = {};
 
 
-async function fillDettagliOggetto(jsonId) {
-    const jsonString = document.getElementById(jsonId).dataset.oggettojson;
-    await buildDisplayItem(jsonString);
+function fillDettagliOggetto() {
     document.getElementById("cdo-item-name").textContent = displayItem.nome;
     const iconEl = document.getElementById("cdo-item-icon");
     iconEl.setAttribute("alt", displayItem.nome);
-    iconEl.setAttribute("src", displayItem.icona);
+    iconEl.setAttribute("src", displayItem.displayData.iconAsset);
     renderItemTags();
     renderWeaponBlock();
     renderWeaponAttributes();
@@ -42,7 +40,7 @@ function renderWeaponDmg() {
     const element1 = document.getElementById("cdo-item-1h-dmg");
     const element2 = document.getElementById("cdo-item-2h-dmg");
     if(displayItem.categoria == 'arma') {
-        const dmgTypes = displayItem.tipoDanno.map(d => `<img src="${getDmgTypeIcon(d)}" alt="${d}">`).join('');
+        const dmgTypes = displayItem.displayData.tipoDanno.map(d => `<img src="${getDmgTypeIcon(d)}" alt="${d}">`).join('');
         if(displayItem.danno1H != 0) {
             element1.classList.remove("hidden");
             element1.innerHTML = `
@@ -92,9 +90,9 @@ function renderWeaponSubStats() {
 
 function renderWeaponAttributes() {
     const element = document.getElementById("cdo-item-weapon-attr");
-    if(Object.keys(displayItem.attributiArma).length > 0) {
+    if(Object.keys(displayItem.displayData.attributiArma).length > 0) {
         element.classList.remove("hidden");
-        element.children[1].innerHTML = Object.entries(displayItem.attributiArma).map(([key,value]) =>
+        element.children[1].innerHTML = Object.entries(displayItem.displayData.attributiArma).map(([key,value]) =>
             `<div class="attr-chip"><span class="attr-k">${key}</span><span class="attr-v">${value}</span></div>`).join('');
         
     } else {
@@ -104,9 +102,9 @@ function renderWeaponAttributes() {
 
 function renderGeneralAttributes() {
     const element = document.getElementById("cdo-item-general-attr");
-    if(Object.keys(displayItem.attributi).length > 0) {
+    if(Object.keys(displayItem.displayData.attributi).length > 0) {
         element.classList.remove("hidden");
-        element.children[1].innerHTML = Object.entries(displayItem.attributi).map(([key,value]) =>
+        element.children[1].innerHTML = Object.entries(displayItem.displayData.attributi).map(([key,value]) =>
             `<div class="attr-chip passive"><span class="attr-k">${key}</span><span class="attr-v">${value}</span></div>`).join('');
         
     } else {
@@ -116,9 +114,9 @@ function renderGeneralAttributes() {
 
 function renderRunes(){
     const element = document.getElementById("cdo-item-runes");
-    if(displayItem.datiCustom?.RuneInstallate?.length > 0) {
+    if(displayItem.displayData?.RuneInstallate?.length > 0) {
         element.classList.remove("hidden");
-        element.innerHTML = displayItem.datiCustom.RuneInstallate.map((r,index) => `
+        element.innerHTML = displayItem.displayData.RuneInstallate.map((r,index) => `
             <div class="rune-row">
                 <img class="rune-icon" src="${r.iconAsset}" alt="${r.nomeDecorativo}">
                 <div class="rune-info">
@@ -157,10 +155,11 @@ function renderDescription(){
     }
 }
 
-async function buildDisplayItem(jsonString){
-    const response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/buildDisplayDataFromItem', { method: 'POST', body: jsonString })
-    displayItem = await response.json();
+async function buildDisplayItem(originalItem){
+    const response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/buildDisplayDataFromItem', { method: 'POST', body: originalItem })
+    displayItem = await response.json();    
 }
+
 
 function updateSectionBorders() {
     const sections = document.querySelectorAll('.item-section');
@@ -171,10 +170,18 @@ function updateSectionBorders() {
     }
 }
 
-
-function checkAutofillOggetto() {
-    if(document.getElementById("auto-fill-oggetto"))
-        fillDettagliOggetto("auto-fill-oggetto");
+async function checkAutofillOggetto() {
+    const originalEl = document.getElementById("auto-fill-oggetto");
+    if(!originalEl?.dataset.oggettojson)
+        return;
+    const itemJson = originalEl.dataset.oggettojson;
+    const itemObj = JSON.parse(itemJson);
+    if(itemJson.displayData){
+        displayItem = itemObj;
+    } else {
+        await buildDisplayItem(itemJson);
+    }
+    fillDettagliOggetto();
 }
 
 checkAutofillOggetto();
@@ -182,7 +189,12 @@ checkAutofillOggetto();
 
 async function apriDialogDescrizioneRuna(event, runaIndex) {
     event.stopPropagation();
-    const runa = displayItem.datiCustom.RuneInstallate[runaIndex];
+    const runa = displayItem.displayData.RuneInstallate[runaIndex];
     const bodyStr = JSON.stringify({ item: runa});
     fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/dialogConsumableDetails', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
+}
+
+async function linkItemToChat(){
+    const bodyStr = JSON.stringify({ jsonItem: displayItem });
+    fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/gui/linkOggettoInChat', { method: 'POST', body: bodyStr }).catch(err => console.error('Dialog request failed:', err));
 }
