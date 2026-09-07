@@ -30,6 +30,7 @@
         }
 
         .equip-panel {
+            position: relative;
             display: flex;
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
@@ -39,7 +40,7 @@
 
         .equip-section {
             
-            max-width: 550px;
+            max-width: 510px;
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 10px;
@@ -120,24 +121,71 @@
             justify-content: center;
         }
 
-        .slot-column {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            padding-top: 6px;
-        }
-
         .slot-wrap {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4px;
+            gap: 3px;
         }
 
+        /* Turned into a small chip (bg + padding) instead of bare text, so it
+           stays legible no matter what part of the portrait sits behind it. */
         .slot-label {
             font-size: 10px;
             color: var(--stat-label-color);
             text-align: center;
+            background-color: var(--stats-bg);
+            border-radius: 4px;
+            padding: 1px 7px;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
+
+        /* ===================== ITEM NAME TOOLTIP ===================== */
+        /* Real item name, shown on hover over a filled slot - distinct from
+           .slot-label (the static "Elmo"/"Armatura"/... caption). Single
+           shared element, repositioned via JS above or below the hovered
+           slot depending on available space, so it never gets clipped by
+           the top of the panel. */
+        .slot-tooltip {
+            position: absolute;
+            display: none;
+            pointer-events: none;
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-family: var(--font-title);
+            color: var(--accent-color);
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+            z-index: 50;
+            opacity: 0;
+            transition: opacity 0.12s ease-in-out;
+        }
+
+        .slot-tooltip.visible {
+            display: block;
+            opacity: 1;
+        }
+
+        .slot-tooltip::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+        }
+
+        .slot-tooltip:not(.tooltip-bottom)::after {
+            top: 100%;
+            border-top-color: var(--border-color);
+        }
+
+        .slot-tooltip.tooltip-bottom::after {
+            bottom: 100%;
+            border-bottom-color: var(--border-color);
         }
 
         .equip-slot {
@@ -216,7 +264,7 @@
             display: grid;
             grid-template-columns: auto auto;
             grid-column-gap: 0px;
-            grid-row-gap: 0px;
+            grid-row-gap: 16px;
             justify-content: space-between;
             background-image: url('https://placehold.co/260x460/1c1815/35322c?text=Ritratto+Personaggio');
             background-size: auto;
@@ -224,20 +272,6 @@
             background-repeat: no-repeat;
             background-position: center;
             flex-shrink: 0;
-        }
-
-        .paperdoll-center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 6px;
-        }
-
-        .paperdoll-bg {
-            width: 230px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            display: block;
         }
 
         .utility-column {
@@ -248,8 +282,17 @@
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
-            gap: 16px;
+            gap: 8px;
             transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        /* Slim bar pinned above the dock: holds only the close button, so
+           its position never depends on how tall the item description ends
+           up being. */
+        .dock-toolbar {
+            display: flex;
+            justify-content: flex-end;
+            min-height: 22px;
         }
 
         .section-label {
@@ -264,11 +307,12 @@
         /* Quick weapons now live under the left slot column (see rationale
        in chat) - vertical list, scrolls if it grows past the available
        height, no artificial slot-count limit. */
+
         .quick-weapons-vertical {
             display: flex;
             flex-direction: column;
             gap: 8px;
-            max-height: 210px;
+            height: 210px;
             overflow-y: auto;
             margin-top: 8px;
         }
@@ -278,17 +322,17 @@
             height: 46px;
             background-size: 38px 38px;
             align-self: center;
+            flex-shrink: 0;
         }
 
         /* ===================== ITEM DESCRIPTION DOCK ===================== */
         /* Just the docker per the brief - real content comes from
        ComponentDettagliOggetto.js, not reproduced here. */
         .item-dock {
-            border: 1px dashed var(--border-color);
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             min-height: 150px;
-            background-color: rgba(0, 0, 0, 0.10);
-            position: relative;
+            background-color: var(--stats-bg);
         }
 
         .dock-empty {
@@ -296,20 +340,25 @@
             color: var(--stat-label-color);
             text-align: center;
             opacity: 0.7;
-            padding: 46px 10px;
+            padding: 60px 10px;
         }
 
         .dock-close-btn {
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
             font-size: 11px;
-            padding: 3px 8px;
+            padding: 3px 10px;
             border-radius: 4px;
             border: 1px solid var(--border-color);
             background-color: var(--stats-bg);
             color: var(--stat-label-color);
             cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease-in-out, color 0.15s, border-color 0.15s;
+        }
+
+        .dock-toolbar.active .dock-close-btn {
+            opacity: 1;
+            pointer-events: auto;
         }
 
         .dock-close-btn:hover {
@@ -320,8 +369,21 @@
         /* ===================== INVENTORY / EQUIPAGGIAMENTO ===================== */
         .inventory-zone {
             position: relative;
-            padding-top: 12px;
-            border-top: 1px solid var(--border-color);
+            margin-top: 4px;
+            padding: 14px 14px 12px;
+            border-radius: 10px;
+            background-color: var(--stats-bg);
+            /* Recessed-tray look: shadow pushed in from every edge, heavier at
+           the top as if the rim above it casts the shadow down, with a
+           faint highlight along the bottom rim. Pure black/white at low
+           opacity, so it reads the same in both dark and light mode without
+           needing a dedicated variable. */
+            box-shadow:
+                inset 0 4px 8px rgba(0, 0, 0, 0.35),
+                inset 0 -2px 5px rgba(0, 0, 0, 0.2),
+                inset 4px 0 8px rgba(0, 0, 0, 0.15),
+                inset -4px 0 8px rgba(0, 0, 0, 0.15),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.06);
         }
 
         .inventory-header {
@@ -329,6 +391,11 @@
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 8px;
+            position: relative;
+        }
+
+        .inventory-header .section-label {
+            margin-bottom: 0;
         }
 
         .inventory-header .hint {
@@ -366,10 +433,10 @@
 
         .inventory-lock-overlay {
             position: absolute;
-            top: 34px;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 46px;
+            left: 14px;
+            right: 14px;
+            bottom: 12px;
             background: rgba(0, 0, 0, 0.6);
             display: none;
             align-items: center;
@@ -378,6 +445,7 @@
             gap: 4px;
             border-radius: 6px;
             text-align: center;
+            z-index: 2;
         }
 
         .inventory-lock-overlay .lock-icon {
@@ -386,7 +454,11 @@
 
         .inventory-lock-overlay .lock-text {
             font-size: 12px;
-            color: var(--text-color);
+            /* Fixed light color, not var(--text-color): this scrim is
+           deliberately dark in both themes, so the text needs to stay
+           light regardless - in light mode --text-color is near-black and
+           would be unreadable here. */
+            color: #f2ede4;
         }
 
         .inventory-zone.combat-locked .inventory-lock-overlay {
@@ -441,7 +513,7 @@
     </style>
 </head>
 
-<body>
+<body class="">
 
     <div class="equip-panel">
         <div class="equip-section">
@@ -463,23 +535,30 @@
                 </div>
             </div>
 
-            <!-- ===================== PAPERDOLL + UTILITY COLUMN ===================== -->
+            <!-- ===================== PAPERDOLL + QUICK WEAPONS ===================== -->
             <div class="equip-main">
 
-                <div style="margin-top:14px; padding-top:14px; border-top:1px dashed var(--border-color);">
+                <div class="inventory-zone quick-weapons-zone">
                     <div class="section-label" style="text-align:center;">Armi Rapide</div>
                     <div class="quick-weapons-vertical">
-                        <div class="equip-slot small"
-                            onclick="openItemDock('Arco Corto', 'https://placehold.co/64x64/2a241f/d49a40?text=ARC')">
+                        <div class="equip-slot small" data-item-name="Arco Corto"
+                            onclick="openItemD.ock('Arco Corto', 'https://placehold.co/64x64/2a241f/d49a40?text=ARC')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARC"
                                 alt="Arco Corto">
                         </div>
-                        <div class="equip-slot small"
-                            onclick="openItemDock('Pugnale da Lancio', 'https://placehold.co/64x64/2a241f/d49a40?text=PUG')">
+                        <div class="equip-slot small" data-item-name="Pugnale da Lancio"
+                            onclick="openItemDock('Pugnale da Lancio', 'https://placehold.co/64x64/2a241f/d49a40?text=PUG')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
                                 alt="Pugnale da Lancio">
                         </div>
-                        <div class="equip-slot small"></div>
+                        <div class="equip-slot small" data-item-name="Pugnale da Lancio"
+                            onclick="openItemDock('Pugnale da Lancio', 'https://placehold.co/64x64/2a241f/d49a40?text=PUG')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                            <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
+                                alt="Pugnale da Lancio">
+                        </div>
                         <div class="equip-slot small"></div>
                         <div class="equip-slot small"></div>
                     </div>
@@ -487,9 +566,10 @@
                 <!-- LEFT SLOTS -->
                 <div class="paperdoll-container">
                     <div class="slot-wrap">
-                        <div class="equip-slot" id="slot-elmo"
+                        <div class="equip-slot" id="slot-elmo" data-item-name="Elmo Rinforzato"
                             style="background-image:url('../../addon/library/public/icons/gui/ElmoBG.png')"
-                            onclick="openItemDock('Elmo Rinforzato', 'https://placehold.co/64x64/2a241f/d49a40?text=ELM')">
+                            onclick="openItemDock('Elmo Rinforzato', 'https://placehold.co/64x64/2a241f/d49a40?text=ELM')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ELM"
                                 alt="Elmo Rinforzato">
                         </div>
@@ -501,18 +581,20 @@
                         <div class="slot-label">Amuleto</div>
                     </div>
                     <div class="slot-wrap">
-                        <div class="equip-slot" id="slot-armatura"
+                        <div class="equip-slot" id="slot-armatura" data-item-name="Corazza di Cuoio"
                             style="background-image:url('../../addon/library/public/icons/gui/ArmaturaBG.png')"
-                            onclick="openItemDock('Corazza di Cuoio', 'https://placehold.co/64x64/2a241f/d49a40?text=ARM')">
+                            onclick="openItemDock('Corazza di Cuoio', 'https://placehold.co/64x64/2a241f/d49a40?text=ARM')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARM"
                                 alt="Corazza di Cuoio">
                         </div>
                         <div class="slot-label">Armatura</div>
                     </div>
                     <div class="slot-wrap">
-                        <div class="equip-slot" id="slot-mantello"
+                        <div class="equip-slot" id="slot-mantello" data-item-name="Mantello Ombra"
                             style="background-image:url('../../addon/library/public/icons/gui/MantelloBG.png')"
-                            onclick="openItemDock('Mantello Ombra', 'https://placehold.co/64x64/2a241f/d49a40?text=MAN')">
+                            onclick="openItemDock('Mantello Ombra', 'https://placehold.co/64x64/2a241f/d49a40?text=MAN')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=MAN"
                                 alt="Mantello Ombra">
                         </div>
@@ -529,9 +611,10 @@
                         <div class="slot-label">Bracciali</div>
                     </div>
                     <div class="slot-wrap">
-                        <div class="equip-slot" id="slot-primary"
+                        <div class="equip-slot" id="slot-primary" data-item-name="Alabarda"
                             style="background-image:url('../../addon/library/public/icons/gui/ArmaBG.png')"
-                            onclick="openItemDock('Alabarda', 'https://placehold.co/64x64/2a241f/d49a40?text=2M')">
+                            onclick="openItemDock('Alabarda', 'https://placehold.co/64x64/2a241f/d49a40?text=2M')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" id="primary-weapon-icon"
                                 src="https://placehold.co/64x64/2a241f/d49a40?text=2M" alt="Alabarda">
                         </div>
@@ -548,18 +631,20 @@
                         <div class="slot-label">Cintura</div>
                     </div>
                     <div class="slot-wrap">
-                        <div class="equip-slot" id="slot-anello1"
+                        <div class="equip-slot" id="slot-anello1" data-item-name="Anello della Quiete"
                             style="background-image:url('../../addon/library/public/icons/gui/AnelloBG.png')"
-                            onclick="openItemDock('Anello della Quiete', 'https://placehold.co/64x64/2a241f/d49a40?text=ANE')">
+                            onclick="openItemDock('Anello della Quiete', 'https://placehold.co/64x64/2a241f/d49a40?text=ANE')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ANE"
                                 alt="Anello della Quiete">
                         </div>
                         <div class="slot-label">Anello 1</div>
                     </div>
                     <div class="slot-wrap">
-                        <div class="equip-slot" id="slot-stivali"
+                        <div class="equip-slot" id="slot-stivali" data-item-name="Stivali del Viandante"
                             style="background-image:url('../../addon/library/public/icons/gui/StivaliBG.png')"
-                            onclick="openItemDock('Stivali del Viandante', 'https://placehold.co/64x64/2a241f/d49a40?text=STI')">
+                            onclick="openItemDock('Stivali del Viandante', 'https://placehold.co/64x64/2a241f/d49a40?text=STI')"
+                            onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
                             <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=STI"
                                 alt="Stivali del Viandante">
                         </div>
@@ -578,7 +663,7 @@
             <!-- ===================== EQUIPAGGIAMENTO / INVENTARIO ===================== -->
             <div class="inventory-zone" id="inventoryZone">
                 <div class="inventory-header">
-                    <div class="section-label" style="margin-bottom:0;">Inventario</div>
+                    <div class="section-label">Inventario</div>
                     <span class="hint">Disponibile solo fuori combattimento</span>
                 </div>
                 <div class="inventory-grid">
@@ -596,6 +681,7 @@
                     <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
                     <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
                     <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"></div>
                 </div>
                 <div class="inventory-lock-overlay">
                     <span class="lock-icon">&#128274;</span>
@@ -613,11 +699,16 @@
 
         <!-- UTILITY COLUMN: SOLO DOCK DESCRIZIONE OGGETTO -->
         <div class="utility-column" id="descrizione-dock">
-            <div class="section-label">Descrizione Oggetto</div>
+            <div class="dock-toolbar" id="dockToolbar">
+                <button class="dock-close-btn" onclick="closeItemDock()">Chiudi</button>
+            </div>
             <div class="item-dock" id="itemDock">
                 <div class="dock-empty">Seleziona un oggetto per vederne i dettagli</div>
             </div>
         </div>
+
+        <!-- Shared item-name tooltip, repositioned per slot by showSlotTooltip() -->
+        <div class="slot-tooltip" id="slotTooltip"></div>
     </div>
 
     <script>
@@ -656,6 +747,7 @@
         function openItemDock(name, icon) {
             document.getElementById('descrizione-dock').style.width='420px';
             document.getElementById('descrizione-dock').style.opacity=1;
+            document.getElementById('dockToolbar').classList.add('active');
             document.getElementById('itemDock').innerHTML = `
             <div class="item-dialog" style="position:relative; border:none;">
                 <button class="link-chat-btn" title="Invia link in chat" onclick="event.stopPropagation()">
@@ -676,7 +768,6 @@
                     Contenuto completo generato da ComponentDettagliOggetto.js
                 </div>
             </div>
-            <button class="dock-close-btn" onclick="closeItemDock()">Chiudi</button>
         `;
         }
 
@@ -684,6 +775,45 @@
             //document.getElementById('itemDock').innerHTML = '<div class="dock-empty">Seleziona un oggetto per vederne i dettagli</div>';
             document.getElementById('descrizione-dock').style.opacity=0;
             document.getElementById('descrizione-dock').style.width=0;
+            document.getElementById('dockToolbar').classList.remove('active');
+        }
+
+        /* Demo of the real item-name tooltip that will appear when hovering
+           an equipped item (separate concern from .slot-label, which is the
+           always-visible "Elmo"/"Armatura"/... slot caption). Only one
+           tooltip element exists; it's moved to whichever slot is hovered
+           and flipped to sit below the slot instead of above when there
+           isn't enough room above it (e.g. the top row). */
+        function showSlotTooltip(slotEl) {
+            const name = slotEl.dataset.itemName;
+            if (!name) return;
+
+            const tooltip = document.getElementById('slotTooltip');
+            const panel = document.querySelector('.equip-panel');
+            tooltip.textContent = name;
+            tooltip.classList.add('visible');
+
+            const panelRect = panel.getBoundingClientRect();
+            const slotRect = slotEl.getBoundingClientRect();
+            const tipRect = tooltip.getBoundingClientRect();
+
+            let top = slotRect.top - panelRect.top - tipRect.height - 10;
+            let placedBelow = false;
+            if (top < 0) {
+                top = slotRect.bottom - panelRect.top + 10;
+                placedBelow = true;
+            }
+
+            let left = slotRect.left - panelRect.left + (slotRect.width / 2) - (tipRect.width / 2);
+            left = Math.max(4, Math.min(left, panelRect.width - tipRect.width - 4));
+
+            tooltip.style.top = top + 'px';
+            tooltip.style.left = left + 'px';
+            tooltip.classList.toggle('tooltip-bottom', placedBelow);
+        }
+
+        function hideSlotTooltip() {
+            document.getElementById('slotTooltip').classList.remove('visible');
         }
     </script>
 
