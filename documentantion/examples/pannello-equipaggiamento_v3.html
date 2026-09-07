@@ -33,7 +33,7 @@
             display: flex;
             background-color: var(--bg-card);
             border: 1px solid var(--border-color);
-            width: 100%;
+            width: fit-content;
             max-width: 980px;
         }
 
@@ -244,10 +244,12 @@
             /* Matches .item-dialog's intended max-width (420px, once
            ItemDetails.css stops fixing it via body) so the dock fits the
            component at its natural size instead of cramming it. */
-            width: 420px;
+            width: 0px;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden;
             gap: 16px;
+            transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
 
         .section-label {
@@ -652,7 +654,8 @@
         }
 
         function openItemDock(name, icon) {
-            document.getElementById('descrizione-dock').style.display='block';
+            console.log("open!!");
+            document.getElementById('descrizione-dock').style.width='420px';
             document.getElementById('itemDock').innerHTML = `
             <div class="item-dialog" style="position:relative; border:none;">
                 <button class="link-chat-btn" title="Invia link in chat" onclick="event.stopPropagation()">
@@ -679,7 +682,7 @@
 
         function closeItemDock() {
             document.getElementById('itemDock').innerHTML = '<div class="dock-empty">Seleziona un oggetto per vederne i dettagli</div>';
-            document.getElementById('descrizione-dock').style.display='none';
+            document.getElementById('descrizione-dock').style.width=0;
         }
     </script>
 
