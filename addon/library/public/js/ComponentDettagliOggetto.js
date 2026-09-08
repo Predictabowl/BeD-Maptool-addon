@@ -168,6 +168,11 @@ function updateSectionBorders() {
     }
 }
 
+function setAndRenderDisplayItem(item){
+    displayItem = item;
+    fillDettagliOggetto();
+}
+
 async function checkAutofillOggetto() {
     const originalEl = document.getElementById("auto-fill-oggetto");
     if (!originalEl?.dataset.oggettojson)

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pannello Equipaggiamento</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Gabriela&family=Homemade+Apple&family=Macondo&family=New+Rocker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../addon/library/public/css/GlobalCss.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/ItemDetails.css">
+    <link rel="stylesheet" href="../../addon/library/public/css/PannelloEquipaggiamento.css">
+
+</head>
+
+<body class="">
+
+    <div class="equip-panel">
+        <div class="equip-section">
+
+            <!-- ===================== HEADER ===================== -->
+            <div class="equip-header">
+                <div style="display:flex; align-items:center; flex-wrap:wrap; gap:14px;">
+                    <div class="equip-title">Equipaggiamento</div>
+                    <div class="equip-badges">
+                        <span class="info-badge">Stile <b id="styleValue">Arma a 2 Mani</b></span>
+                        <span class="info-badge">Ingombro <b>7 / 12</b></span>
+                        <span class="info-badge">Addestramento Armature <b>Leggera</b></span>
+                    </div>
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-btn" onclick="toggleCombat()">Simula Combattimento</button>
+                    <button class="demo-btn" onclick="toggleWeaponHands()">Cambia Arma Primaria (1M/2M)</button>
+                    <button class="demo-btn" onclick="simulateInvalidDrop()">Simula Slot Invalido</button>
+                </div>
+            </div>
+
+            <!-- ===================== PAPERDOLL + QUICK WEAPONS ===================== -->
+            <div class="equip-main">
+
+                <div>
+                    <div class="section-label" style="text-align:center;">Armi Rapide</div>
+                    <div class="inventory-zone quick-weapons-vertical">
+                            <div class="equip-slot small" data-item-name="Arco Corto"
+                                onclick="openItemD.ock('Arco Corto', 'https://placehold.co/64x64/2a241f/d49a40?text=ARC')"
+                                onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                                <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARC"
+                                    alt="Arco Corto">
+                            </div>
+                            <div class="equip-slot small" data-item-name="Pugnale da Lancio"
+                                onclick="openItemDock('Pugnale da Lancio', 'https://placehold.co/64x64/2a241f/d49a40?text=PUG')"
+                                onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                                <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
+                                    alt="Pugnale da Lancio">
+                            </div>
+                            <div class="equip-slot small" data-item-name="Pugnale da Lancio"
+                                onclick="openItemDock('Pugnale da Lancio', 'https://placehold.co/64x64/2a241f/d49a40?text=PUG')"
+                                onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                                <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
+                                    alt="Pugnale da Lancio">
+                            </div>
+                            <div class="equip-slot small"></div>
+                            <div class="equip-slot small"></div>
+                    </div>
+                </div>
+                <!-- LEFT SLOTS -->
+                <div class="paperdoll-container" style="background-image: url('https://placehold.co/260x460/1c1815/35322c?text=Ritratto+Personaggio');">
+                    <div class="equip-slot" id="slot-elmo" data-item-name="Elmo Rinforzato"
+                        style="background-image:url('../../addon/library/public/icons/gui/ElmoBG.png')"
+                        onclick="openItemDock('Elmo Rinforzato', 'https://placehold.co/64x64/2a241f/d49a40?text=ELM')"
+                        onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                        <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ELM"
+                            alt="Elmo Rinforzato">
+                    </div>
+                    <div class="equip-slot" id="slot-amuleto"
+                            style="background-image:url('../../addon/library/public/icons/gui/AmuletoBG.png')"></div>
+                    <div class="equip-slot" id="slot-armatura" data-item-name="Corazza di Cuoio"
+                        style="background-image:url('../../addon/library/public/icons/gui/ArmaturaBG.png')"
+                        onclick="openItemDock('Corazza di Cuoio', 'https://placehold.co/64x64/2a241f/d49a40?text=ARM')"
+                        onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                        <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARM"
+                            alt="Corazza di Cuoio">
+                    </div>
+                    <div class="equip-slot" id="slot-mantello" data-item-name="Mantello Ombra"
+                        style="background-image:url('../../addon/library/public/icons/gui/MantelloBG.png')"
+                        onclick="openItemDock('Mantello Ombra', 'https://placehold.co/64x64/2a241f/d49a40?text=MAN')"
+                        onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                        <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=MAN"
+                            alt="Mantello Ombra">
+                    </div>
+                    <div class="equip-slot" id="slot-guanti"
+                        style="background-image:url('../../addon/library/public/icons/gui/GuantiBG.png')">
+                    </div>
+                    <div class="equip-slot" id="slot-bracciali"
+                            style="background-image:url('../../addon/library/public/icons/gui/BraccialiBG.png')"></div>
+                    <div class="equip-slot" id="slot-primary" data-item-name="Alabarda"
+                        style="background-image:url('../../addon/library/public/icons/gui/ArmaBG.png')"
+                        onclick="openItemDock('Alabarda', 'https://placehold.co/64x64/2a241f/d49a40?text=2M')"
+                        onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                        <img class="item-icon" id="primary-weapon-icon"
+                            src="https://placehold.co/64x64/2a241f/d49a40?text=2M" alt="Alabarda">
+                    </div>
+                    <div class="equip-slot locked" id="slot-secondary"
+                        style="background-image:url('../../addon/library/public/icons/gui/ArmaBG.png')"></div>
+                    <div class="equip-slot" id="slot-cintura"
+                        style="background-image:url('../../addon/library/public/icons/gui/CinturaBG.png')"></div>
+                    <div class="equip-slot" id="slot-anello1" data-item-name="Anello della Quiete"
+                        style="background-image:url('../../addon/library/public/icons/gui/AnelloBG.png')"
+                        onclick="openItemDock('Anello della Quiete', 'https://placehold.co/64x64/2a241f/d49a40?text=ANE')"
+                        onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                        <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ANE"
+                            alt="Anello della Quiete">
+                    </div>
+                    <div class="equip-slot" id="slot-stivali" data-item-name="Stivali del Viandante"
+                        style="background-image:url('../../addon/library/public/icons/gui/StivaliBG.png')"
+                        onclick="openItemDock('Stivali del Viandante', 'https://placehold.co/64x64/2a241f/d49a40?text=STI')"
+                        onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+                        <img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=STI"
+                            alt="Stivali del Viandante">
+                    </div>
+                    <div class="equip-slot" id="slot-anello2"
+                        style="background-image:url('../../addon/library/public/icons/gui/AnelloBG.png')"></div>
+                </div>
+
+
+            </div>
+
+            <!-- ===================== EQUIPAGGIAMENTO / INVENTARIO ===================== -->
+            <div class="inventory-zone" id="inventoryZone">
+                <div class="inventory-header">
+                    <div class="section-label">Inventario</div>
+                    <span class="hint">Disponibile solo fuori combattimento</span>
+                </div>
+                <div class="inventory-grid">
+                    <div class="inv-item"
+                        onclick="openItemDock('Pozione Curativa', 'https://placehold.co/64x64/2a241f/d49a40?text=POZ')">
+                        <img src="https://placehold.co/64x64/2a241f/d49a40?text=POZ" alt="Pozione Curativa"></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    <div class="inv-item"></div>
+                </div>
+                <div class="inventory-lock-overlay">
+                    <span class="lock-icon">&#128274;</span>
+                    <span class="lock-text">Bloccato durante il combattimento</span>
+                </div>
+            </div>
+
+            <!-- ===================== FOOTER ===================== -->
+            <div class="equip-footer">
+                <button class="btn-cancel" onclick="console.log('annulla - stub')">Annulla</button>
+                <button class="btn-confirm" onclick="console.log('conferma - stub')">Conferma</button>
+            </div>
+
+        </div>
+
+        <!-- UTILITY COLUMN: SOLO DOCK DESCRIZIONE OGGETTO -->
+        <div class="description-column description-closed" id="descrizione-dock">
+            <div class="dock-toolbar" id="dockToolbar">
+                <button class="dock-close-btn" onclick="closeItemDock()">Chiudi</button>
+            </div>
+            <div class="item-dock" id="itemDock">
+                <div class="dock-empty">Seleziona un oggetto per vederne i dettagli</div>
+            </div>
+        </div>
+
+        <!-- Shared item-name tooltip, repositioned per slot by showSlotTooltip() -->
+        <div class="slot-tooltip" id="slotTooltip"></div>
+    </div>
+
+    <script>
+        /* All of this is demo-only wiring to show the visual states the design
+           doc calls for. Real drag&drop, macro calls and fetches are out of
+           scope for this example. */
+
+        function toggleCombat() {
+            document.getElementById('inventoryZone').classList.toggle('combat-locked');
+        }
+
+        let twoHanded = true; // starts locked, matching the equipped 2-handed weapon below
+        function toggleWeaponHands() {
+            twoHanded = !twoHanded;
+            const secondary = document.getElementById('slot-secondary');
+            const primaryIcon = document.getElementById('primary-weapon-icon');
+            const styleValue = document.getElementById('styleValue');
+
+            if (twoHanded) {
+                secondary.classList.add('locked');
+                primaryIcon.src = 'https://placehold.co/64x64/2a241f/d49a40?text=2M';
+                styleValue.textContent = 'Arma a 2 Mani';
+            } else {
+                secondary.classList.remove('locked');
+                primaryIcon.src = 'https://placehold.co/64x64/2a241f/d49a40?text=1M';
+                styleValue.textContent = 'Arma e Scudo';
+            }
+        }
+
+        function simulateInvalidDrop() {
+            const slot = document.getElementById('slot-elmo');
+            slot.classList.add('invalid');
+            setTimeout(() => slot.classList.remove('invalid'), 450);
+        }
+
+        function openItemDock(name, icon) {
+            const dock = document.getElementById('descrizione-dock');
+            dock.classList.remove("description-closed");
+            document.getElementById('dockToolbar').classList.add('active');
+            dock.addEventListener('transitionend', function handler(e) {
+                if (e.propertyName === 'width') {
+                    dock.scrollIntoView({ behavior: 'smooth', inline: 'end', block: 'nearest' });
+                    dock.removeEventListener('transitionend', handler);
+                }
+            });
+            document.getElementById('itemDock').innerHTML = `
+            <div class="item-dialog" style="position:relative; border:none;">
+                <button class="link-chat-btn" title="Invia link in chat" onclick="event.stopPropagation()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 17H7a5 5 0 0 1 0-10h2"/>
+                        <path d="M15 7h2a5 5 0 0 1 0 10h-2"/>
+                        <line x1="8" y1="12" x2="16" y2="12"/>
+                    </svg>
+                </button>
+                <div class="item-header" style="border-bottom:none;">
+                    <div class="item-icon-frame"><img src="${icon}" alt="${name}"></div>
+                    <div class="item-header-info">
+                        <div class="item-name">${name}</div>
+                        <div class="item-tags"><span class="item-tag">anteprima</span></div>
+                    </div>
+                </div>
+                <div style="text-align:center; font-size:11px; opacity:0.55; padding:6px 10px 12px;">
+                    Contenuto completo generato da ComponentDettagliOggetto.js
+                </div>
+            </div>
+        `;
+        }
+
+        function closeItemDock() {
+            //document.getElementById('itemDock').innerHTML = '<div class="dock-empty">Seleziona un oggetto per vederne i dettagli</div>';
+            document.getElementById('descrizione-dock').classList.add("description-closed");
+            document.getElementById('dockToolbar').classList.remove('active');
+        }
+
+        /* Demo of the real item-name tooltip that will appear when hovering
+           an equipped item. Only one
+           tooltip element exists; it's moved to whichever slot is hovered
+           and flipped to sit below the slot instead of above when there
+           isn't enough room above it (e.g. the top row). */
+        function showSlotTooltip(slotEl) {
+            const name = slotEl.dataset.itemName;
+            if (!name) return;
+
+            const tooltip = document.getElementById('slotTooltip');
+            const panel = document.querySelector('.equip-panel');
+            tooltip.textContent = name;
+            tooltip.classList.add('visible');
+
+            const panelRect = panel.getBoundingClientRect();
+            const slotRect = slotEl.getBoundingClientRect();
+            const tipRect = tooltip.getBoundingClientRect();
+
+            let top = slotRect.top - panelRect.top - tipRect.height - 10;
+            let placedBelow = false;
+            if (top < 0) {
+                top = slotRect.bottom - panelRect.top + 10;
+                placedBelow = true;
+            }
+
+            let left = slotRect.left - panelRect.left + (slotRect.width / 2) - (tipRect.width / 2);
+            left = Math.max(4, Math.min(left, panelRect.width - tipRect.width - 4));
+
+            tooltip.style.top = top + 'px';
+            tooltip.style.left = left + 'px';
+            tooltip.classList.toggle('tooltip-bottom', placedBelow);
+        }
+
+        function hideSlotTooltip() {
+            document.getElementById('slotTooltip').classList.remove('visible');
+        }
+    </script>
+
+</body>
+
+</html>

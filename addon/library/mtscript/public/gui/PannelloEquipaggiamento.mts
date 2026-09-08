@@ -1,230 +1,197 @@
-[h: oToken = arg(0)]
+[h: tokenId = arg(0)]
 [h: sDialog = "DialogCambioArmi"]
 
-[h: switchToken(oToken)]
-[macro("mobs/getArmatura@this"): oToken]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconArmatura = macro.return]
+[h: switchToken(tokenId)]
 
-[h: iconAnello1 = ""]
-[h: iconAnello2 = ""]
-[h: iconAmuleto = ""]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"anello")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconAnello1 = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"anello",2)]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconAnello2 = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"amuleto")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconAmuleto = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"bracciali")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconBracciali = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"mantello")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconMantello = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"cintura")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconCintura = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"stivali")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconStivali = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"guanti")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconGuanti = macro.return]
-[macro("mobs/getAccessorioEquip@this"): json.append(oToken,"elmo")]
-[macro("gui/makeHtmlOggetto@this"): json.append(macro.return,oToken)]
-[h: iconElmo= macro.return]
-
-[h: oArma = getArma(oToken,1)]
-[macro("gui/makeHtmlOggetto@this"): json.append(oArma,oToken)]
-[h: iconArma = macro.return]
-[h, if(isStileDistanza(oToken)), code:{
-	[sSlotArma1Cat = "armaDistanza"]
-	[bgArma1 = "ArcoBG.png"]
-};{
-	[bgArma1 = "ArmaBG.png"]
-	[sSlotArma1Cat = "arma"]
-}]
-
-[h: iconArma2 = ""]
-[h: bgArma2 = ""]
-[h: sSlotArma2Cat = "bloccato"]
-[macro("combat/isStile2A@this"): oToken]
-[h: b2Armi = macro.return]
-[h, if(b2Armi), code:{
-	[h: bgArma2 = "ArmaBG.png"]
-	[h: oArma2 = getArma(oToken,2)]
-	[macro("gui/makeHtmlOggetto@this"): json.append(oArma2,oToken)]
-	[h: iconArma2 = macro.return]
-	[h: sSlotArma2Cat = "arma"]
-	
-}]
-
-[macro("combat/isStile2M@this"): oToken]
-[h: b2Mani = macro.return]
-
-[macro("combat/isStileAS@this"): oToken]
-[h: bScudo = macro.return]
-[h, if(bScudo), code:{
-	[h: bgArma2 = "ScudoBG.png"]
-	[macro("mobs/getScudo@this"): oToken]
-	[h: oArma2 = macro.return]
-	[macro("gui/makeHtmlOggetto@this"): json.append(oArma2,oToken)]
-	[h: iconArma2 = macro.return]
-	[h: sSlotArma2Cat = "scudo"]
-}]
-
-[macro("combat/isStile1A@this"): oToken]
-[h, if(macro.return), code:{
-	[h: bgArma2 = "LancioBG.png"]
-	[h: oArma2 = getArma(oToken,2)]
-	[macro("gui/makeHtmlOggetto@this"): json.append(oArma2,oToken)]
-	[h: iconArma2 = macro.return]
-	[h: sSlotArma2Cat = "armaLancio"]
-}]
-[h: iAddArmatura = getProperty("Add_Armature", oToken)]
 
 [h, if(isCombat()): sDisplayEquip = "none"; sDisplayEquip = "block"]
 
-[h, macro("combat/getStile@this"): oToken]
-[h: sStileOld = macro.return]
+[h: oStili = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/config/stili.json")]
 
-[h, macro("combat/getStileList@this"):0]
-[h: sListaStili = macro.return]
+[h: sThemePreferenze = "Spell_Dialogs_Theme"]
+[h: bLightMode = getPreferenza("light_mode",tokenId,sThemePreferenze)]
 
-
-[dialog5(sDialog, strformat("temporary=1; width=640; height=745; closebutton=0; noframe=1;")):{
+[dialog5(sDialog, strformat("temporary=0; width=525; height=870; closebutton=0; noframe=0;")):{
 <html>
 
 <head> 
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
-	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/Paperdoll.css?cachelib=true">
-	<title>Equipaggiamento</title>
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/ItemDetails.css?cachelib=false">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/PannelloEquipaggiamento.css?cachelib=false">
+	<title>[r: getName(tokenId)] - Equipaggiamento</title>
 	
 </head>
-<body align="center">
-	<div class="relevantTitle"> [r: getName(oToken)] </div>
-	<div style="display:grid; grid-template-columns: auto auto; place-content:start space-around; grid-gap:5px; margin-left:5px; margin-right:5px;">
-	
-	<!-- PAPERDOLL -->
-		<div style="background-image: url('[r: getTokenHandout()]'); background-size: auto 400px; width:300px; height:400px; background-repeat:no-repeat; background-position:center; grid-row: 1/ span 2;">
-			<div class="paperdoll-container">
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotElmo",iconElmo,"ElmoBG.png","elmo")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAmuleto",iconAmuleto,"AmuletoBG.png","amuleto")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotArmatura",iconArmatura,"ArmaturaBG.png","armatura")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotMantello",iconMantello,"MantelloBG.png","mantello")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotGuanti",iconGuanti,"GuantiBG.png","guanti")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotBracciali",iconBracciali,"BraccialiBG.png","bracciali")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotArma1",iconArma,bgArma1,sSlotArma1Cat)]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotArma2",iconArma2,bgArma2,sSlotArma2Cat)]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotCintura",iconCintura,"CinturaBG.png","cintura")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAnello1",iconAnello1,"AnelloBG.png","anello")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotStivali",iconStivali,"StivaliBG.png","stivali")]
-				[r, macro("gui/makeHtmlGridItem@this"):json.append("slotAnello2",iconAnello2,"AnelloBG.png","anello")]
-			</div>
-			
-		</div>
+<body class="[r, if(bLightMode == 1): 'light-mode']" data-tokenid="[r: tokenId]">
+	<div class="equip-panel">
+        <div class="equip-section">
 
-	<!--SLOT RAPIDI -->
-		<div style="width:max-content; height: max-content;">
-			<div class='div-stile' onclick='toggle_show_list();' style='cursor:grabbing;' id='currentStyleId' data-stile='[r: sStileOld]'>
-				[r: sStileOld]
-			</div>
-			<div id='dropdown-list' onclick='toggle_show_list();' class='div-list-window' style='display:none; margin-left:auto; margin-right:auto; left:390; right:60;'>
-			[r, foreach(sStileComb, sListaStili, ""), code:{
-				[h: sLink = macroLinkText("gui/changeStileFromDialog@lib:it.aldinucci.piero.bed.maptool.ruleset","none",json.append(oToken,sStileComb))]
-				<a href='[r: sLink]'><div class='div-list-item titleFont'>[r: sStileComb]</div></a>
-			}]
-			</div>
-			
-			<div class="quickWeaponTitle">
-				Armi Rapide
-			</div>
-			<div style="background-color:#FFECE6; box-shadow: inset 0px 0px 20px 5px orangered;">
-				<div id="slotRapidi" class="inventory-container" data-categoria="slotRapido" ondrop='drop(event)' ondragover='allowDrop(event)' ondragenter='dragEnter(event)' ondragleave='dragLeave(event)' style="width:276px; height:106px;">
-					[r, macro("gui/makeHtmlEquip@this"): json.append(oToken,1)]
-				</div>
-			</div>
-		</div>
-		
-	<!-- DESCRIZIONE -->
-		<div id="box-descrizione-oggetto" class="boxDescrizione">
-			<form id="linkInChatFormId" method="json" action="[r:macroLinkText("gui/linkOggettoInChat@lib:it.aldinucci.piero.bed.maptool.ruleset")]" style="margin:0px;">
-				<input type="hidden" name="itemId" value="" id="linkItemInputId">
-				<input type="hidden" name="token" value="[r: oToken]">
-			</form>
-			<div id="nomeOggetto" class="itemName" onclick="jsFormSubmit('linkInChatFormId')"></div>
-			<div id="datiArma" style="display:none; margin:0; padding:0;">
-				<div style="border-bottom:1px solid; padding-bottom:0; margin-bottom:3px;">
-					<div style="display:inline-grid; grid-template-columns: auto auto; justify-content: space-between; width:95%; padding:0; margin:0;">
-						<div style="margin:0; padding:0">
-							Danno 1M: <span id="descrDanno" style="color:darkorange;"></span> 
+            <!-- ===================== HEADER ===================== -->
+            <div class="equip-header">
+                <div class="equip-header-title-row">
+                    <div class="equip-title">Equipaggiamento</div>
+                    <div class="equip-badges">
+                        <span class="info-badge">Stile <b id="styleValue">[r :json.path.read(oStili, Stile+ ".name")]</b></span>
+                        <span class="info-badge">Ingombro <b><span id="carico-corrente">[r: getIngombroTotale(tokenId)]</span> / <span id="carico-max">[r:getCarico(tokenId)]</span></b></span>
+                        <span class="info-badge">Addestramento Armature <b>[r: Add_Armature]</b></span>
+                    </div>
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-btn" onclick="toggleCombat()">Simula Combattimento</button>
+                    <button class="demo-btn" onclick="toggleWeaponHands()">Cambia Arma Primaria (1M/2M)</button>
+                    <button class="demo-btn" onclick="simulateInvalidDrop()">Simula Slot Invalido</button>
+                </div>
+            </div>
+
+            <!-- ===================== PAPERDOLL + QUICK WEAPONS ===================== -->
+            <div class="equip-main">
+
+				<div>
+					<div class="section-label" style="text-align:center;">Armi Rapide</div>
+					<div class="inventory-zone quick-weapons-vertical">
+						<div class="equip-slot small" data-item-name="Arco Corto"
+							onclick="openItemD.ock('Arco Corto', 'https://placehold.co/64x64/2a241f/d49a40?text=ARC')"
+							onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+							<img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARC"
+								alt="Arco Corto">
 						</div>
-						<div id="descrCaA" style="margin:0; padding:0"></div>
-						<div style="margin:0; padding:0">
-							Danno 2M: <span id="descrDanno2M" style="color:darkorange;"></span> 
+						<div class="equip-slot small" data-item-name="Pugnale da Lancio"
+							onclick="openItemDock(this)"
+							onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+							<img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
+								alt="Pugnale da Lancio">
 						</div>
-						<div style="margin:0; padding:0">Portata: <span id="portataWId"></span></div>
+						<div class="equip-slot small" data-item-name="Pugnale da Lancio"
+							onclick="openItemDock(this)"
+							onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
+							<img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
+								alt="Pugnale da Lancio">
+						</div>
 					</div>
 				</div>
-				<ul id="listaAttributiArma" style="color:darkgreen; margin-bottom:0; margin-top:0;">
-				</ul>
-			</div>
-			<ul id="listaAttributi" style="color:blue; margin-bottom:0; margin-top:0;">
-			</ul>
-			<div style="display:inline-grid; grid-template-columns: auto auto; justify-content: space-between; align-items:center; width:95%; padding:0px;">
-				<div id="descrIngombro"></div>
-				<div id="descrAddestramento"></div>
-				<div id="listaRune"	style="display:grid; gap:4px; grid-template-columns: repeat(3,auto); justify-content:start;"></div>
-			</div>
-			<p id="descrizioneOggetto"></p>
-		</div>
-		
-		
-	<!-- EQUIPAGGIAMENTO-->
-		<div id="listaOggetti" style="display: [r: sDisplayEquip]; width:max-content; height: 410px; grid-column: 2; grid-row: 2/ span 2;">
-			<div class="inventoryTitle">Equipaggiamento</div>
-			<div style="background-color:lightyellow; box-shadow: inset 0px 0px 30px 5px gold;">
-				<div class="inventory-container" data-categoria="inventario" ondrop='drop(event)' ondragover='allowDrop(event)' ondragenter='dragEnter(event)' ondragleave='dragLeave(event)' style="width:276px; height:348px;">
-					[r, macro("gui/makeHtmlEquip@this"): oToken]
-				</div>
-			</div>
-			<div class="ingombroTitle">
-				Ingombro: <span id="carico-corrente">[r: getIngombroTotale(oToken)]</span>/<span id="carico-max">[r:getCarico(oToken)]</span>
-			</div>
-			<div class="addArmatureTitle">
-				Addestramento Armature: [r: iAddArmatura]
-			</div>
-		</div>
-	</div>
-	<div  style="display:flex; justify-content:space-evenly; margin-top:8px; margin-bottom:0px; padding-bottom:0px;">
-		<form id="equip-form" method="json" action="[r:macroLinkText("gui/inizioCambioArma@lib:it.aldinucci.piero.bed.maptool.ruleset")]" style="margin:0px;">
-			<input type="hidden" id="input-armatura" name="input-armatura" value="">
-			<input type="hidden" id="input-amuleto" name="input-amuleto" value="">
-			<input type="hidden" id="input-anello1" name="input-anello1" value="">
-			<input type="hidden" id="input-anello2" name="input-anello2" value="">
-			<input type="hidden" id="input-arma1" name="input-arma1" value="">
-			<input type="hidden" id="input-arma2" name="input-arma2" value="">
-			<input type="hidden" id="input-bracciali" name="input-bracciali" value="">
-			<input type="hidden" id="input-mantello" name="input-mantello" value="">
-			<input type="hidden" id="input-cintura" name="input-cintura" value="">
-			<input type="hidden" id="input-stivali" name="input-stivali" value="">
-			<input type="hidden" id="input-guanti" name="input-guanti" value="">
-			<input type="hidden" id="input-elmo" name="input-elmo" value="">
-			<input type="hidden" id="input-slotRapidi" name="input-slotRapidi"  value="">
-			<input type="hidden" name="token" value="[r: oToken]">
-			<input type="button" onclick="setInputValues()" name ="bottonw" value="Conferma">
-		</form>
-		<form method="json" action="[r:macroLinkText("gui/closeWindow@lib:it.aldinucci.piero.bed.maptool.ruleset")]" style="margin:0px;">
-			<input type="hidden" name="name" value="[r: sDialog]">
-			<input type="submit" name="button-annulla" value="Annulla">
-		</form>
-	</div>
-	<meta id="dataNode" data-dueMani="[r:b2Mani]" data-addestramento="[r: iAddArmatura]">
-	<div id="tooltipBox" class="hiddenBox">Test</div>
-	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/inventarioArmi.js?cachelib=true" defer></script>
+                <!-- LEFT SLOTS -->
+                <div class="paperdoll-container" style="background-image: url('[r: getTokenHandout()]');">
+					<div class="equip-slot" id="slot-elmo" data-item-name="Elmo Rinforzato"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ElmoBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"elmo")]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-amuleto"
+                            style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AmuletoBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"amuleto")]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-armatura" data-item-name="Corazza di Cuoio"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ArmaturaBG.png')">
+						[h, macro("mobs/getArmatura@this"): tokenId]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-mantello" data-item-name="Mantello Ombra"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/MantelloBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"mantello")]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-guanti"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/GuantiBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"guanti")]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-bracciali"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/BraccialiBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"bracciali")]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-primary" data-item-name="Alabarda"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ArmaBG.png')">
+						[r, macro("gui/buildHtmlEquipItem@this"): getArma(tokenId,1)]
+					</div>
+					<div class="equip-slot locked" id="slot-secondary"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ScudoBG.png')">
+						[h, if(Stile == "AS"), code: { 
+							[macro("mobs/getScudo@this"): tokenId]
+							[oArma2 = macro.return]
+						};{
+							[oArma2 = getArma(tokenId, 2)]
+						}]
+						[r, macro("gui/buildHtmlEquipItem@this"): oArma2]
+					</div>
+					<div class="equip-slot" id="slot-cintura"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/CinturaBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"cintura")]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-anello1" data-item-name="Anello della Quiete"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AnelloBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"anello", 1)]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-stivali" data-item-name="Stivali del Viandante"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/StivaliBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"stivali")]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+					<div class="equip-slot" id="slot-anello2"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AnelloBG.png')">
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"anello", 2)]
+						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
+					</div>
+                </div>
+
+
+            </div>
+
+            <!-- ===================== EQUIPAGGIAMENTO / INVENTARIO ===================== -->
+ 			<div class="inventory-section">
+                <div class="inventory-header">
+                    <div class="section-label">Inventario</div>
+                    <span class="hint">Disponibile solo fuori combattimento</span>
+                </div>
+                <div class="inventory-zone" id="inventoryZone">
+                    <div class="inventory-grid">
+                        <div class="inv-item"
+                            onclick="openItemDock(this)">
+                            <img src="https://placehold.co/64x64/2a241f/d49a40?text=POZ" alt="Pozione Curativa"></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                    </div>
+                    <div class="inventory-lock-overlay">
+                        <span class="lock-icon">&#128274;</span>
+                        <span class="lock-text">Bloccato durante il combattimento</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===================== FOOTER ===================== -->
+            <div class="equip-footer">
+                <button class="btn-cancel" onclick="console.log('annulla - stub')">Annulla</button>
+                <button class="btn-confirm" onclick="console.log('conferma - stub')">Conferma</button>
+            </div>
+
+        </div>
+
+        <!-- UTILITY COLUMN: SOLO DOCK DESCRIZIONE OGGETTO -->
+        <div class="description-column description-closed" id="descrizione-dock">
+            <div class="dock-toolbar" id="dockToolbar">
+                <button class="dock-close-btn" onclick="closeItemDock()">Chiudi</button>
+            </div>
+            <div class="item-dock" id="itemDock">
+				[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/ComponentDettagliOggetto.html")]
+            </div>
+        </div>
+
+        <!-- Shared item-name tooltip, repositioned per slot by showSlotTooltip() -->
+        <div class="slot-tooltip" id="slotTooltip"></div>
+    </div>
+
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/PannelloEquipaggiamento.js?cachelib=false" defer></script>
 </body>
 </html>
 }]
