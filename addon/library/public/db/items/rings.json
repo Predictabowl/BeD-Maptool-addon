@@ -13,7 +13,7 @@
         "attributi": {
             "Crit": 2
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_jewelry_ring_19.png",
         "descrizione": []
     },
@@ -23,7 +23,7 @@
             "CD_Base": 1,
             "LL_Base": -1
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_ring_80_05e.png",
         "descrizione": []
     },
@@ -32,7 +32,7 @@
         "attributi": {
             "PCrit": 1
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_jewelry_ring_14.png"
     },
     "ANELLO VITA MINORE-1": {
@@ -49,7 +49,7 @@
             "CD": 1,
             "Critico": -11
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_11_0_earthen_jewelcraftingring_color3.png",
         "descrizione": []
     },
@@ -58,7 +58,7 @@
         "attributi": {
             "Mod_Cura_In": 0.01
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_jewelry_ring_10.png",
         "descrizione": []
     },
@@ -67,7 +67,7 @@
         "attributi": {
             "Mod_Danno_In": -0.01
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_jewelcrafting_80_lvlupring_purple.png",
         "descrizione": []
     },
@@ -77,7 +77,7 @@
             "PA_Max": 1,
             "Mod_Danno_In": 0.07
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_jewelry_ring_36.png",
         "descrizione": [
             "Questo anello rimuove i limiti subconsci dettati dalla prudenza, permettendo quindi di agire più efficacemente al prezzo di una maggiore esposizione al pericolo."
@@ -88,7 +88,7 @@
         "attributi": {
             "Res_Sanguinamento": 1
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_jewelcrafting_90_maxlvlring_red.png",
         "descrizione": []
     },
@@ -97,7 +97,7 @@
         "attributi": {
             "VA": 3
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_ring_oribos_01_copper.png",
         "descrizione": []
     },
@@ -106,7 +106,7 @@
         "attributi": {
             "Mod_Cura_In": 0.01
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_jewelry_ring_33.png",
         "descrizione": [
             "Questo anello emette una lieve luce sacra."
@@ -120,7 +120,7 @@
         "attributi": {
             "PCrit": 1
         },
-        "categoria": "Anello",
+        "categoria": "anello",
         "icona": "rings/inv_ring_bastion_02_pinkgold.png",
         "descrizione": [
             "Un anello instriso con l’energia del Chaos."

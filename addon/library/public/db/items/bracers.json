@@ -4,7 +4,7 @@
         "attributi": {
             "PV_Max": 5
         },
-        "categoria": "Bracciali",
+        "categoria": "bracciali",
         "icona": "bracers/bracciali.png"
     },
     "BRACCIALI VITA+8": {
@@ -12,7 +12,7 @@
         "attributi": {
             "PV_Max": 8
         },
-        "categoria": "Bracciali",
+        "categoria": "bracciali",
         "icona": "bracers/inv_bracer_80.png"
     },
     "BRACCIALI_ACCURATEZZA1-1": {
@@ -20,7 +20,7 @@
         "attributi": {
             "Accuratezza": 1
         },
-        "categoria": "Bracciali",
+        "categoria": "bracciali",
         "icona": "bracers/inv_bracer_31b.png"
     },
     "BRACCIALI_PARARE1-1": {
@@ -28,7 +28,7 @@
         "attributi": {
             "Parare": 1
         },
-        "categoria": "Bracciali",
+        "categoria": "bracciali",
         "icona": "bracers/inv_bracer_07.png"
     },
     "BRACCIALI_PRECISIONE1-1": {
@@ -36,7 +36,7 @@
         "attributi": {
             "Mancare": -1
         },
-        "categoria": "Bracciali",
+        "categoria": "bracciali",
         "icona": "bracers/inv_bracer_09.png"
     }
 }

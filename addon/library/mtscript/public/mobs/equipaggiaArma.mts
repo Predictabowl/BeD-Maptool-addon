@@ -22,7 +22,8 @@ a mantenere le stringhe successive-->
 
 [macro("combat/isStile2M@this"): oToken]
 [h: b2M = macro.return]
-[if(b2M): sDanno = json.get(oArma,"danno2H"); sDanno = json.get(oArma,"danno1H")]
+[macro("combat/isStileDistanza@this"): oToken]
+[if(b2M || macro.return): sDanno = json.get(oArma,"danno2H"); sDanno = json.get(oArma,"danno1H")]
 [h: sDmgType = json.get(oArma, "tipoDanno")]
 
 

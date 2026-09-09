@@ -8,6 +8,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d8",
         "danno2H": 0,
         "icona": "axes/inv_axe_11.png",
@@ -30,8 +31,8 @@
         },
         "carArma": "Agile",
         "categoria": "arma",
-        "danno1H": "2d12",
-        "danno2H": 0,
+        "danno1H": 0,
+        "danno2H": "2d12",
         "icona": "bows/Arco.png",
         "ingombro": 5,
         "nome": "Arco Corto",
@@ -51,6 +52,7 @@
             "Tempo di Attacco": 22
         },
         "carArma": "Bilanciata",
+        "categoria": "arma",
         "danno1H": 0,
         "danno2H": "3d12+2",
         "descrizione": [
@@ -80,6 +82,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": "2d9",
         "danno2H": 0,
         "icona": "artifacts/inv_wand_02.png",
@@ -99,8 +102,9 @@
             "Tempo di Attacco": 23
         },
         "carArma": "Massiccia",
-        "danno1H": "3d12+1",
-        "danno2H": "",
+        "categoria": "arma",
+        "danno1H": 0,
+        "danno2H": "3d12+1",
         "icona": "bows/inv_weapon_crossbow_03.png",
         "ingombro": 8,
         "nome": "Balestra Pesante",
@@ -120,6 +124,7 @@
             "Tempo di Attacco": 17
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "4d5",
         "danno2H": 0,
         "icona": "swords/inv_knife_1h_revendrethquest_b_01.png",
@@ -159,8 +164,9 @@
             "Tempo di Attacco": 18
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "2d11",
-        "danno2H": "",
+        "danno2H": 0,
         "descrizione": [],
         "icona": "swords/inv_sword_20.png",
         "ingombro": 3,
@@ -179,8 +185,9 @@
             "Tempo di Attacco": 18
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "2d11",
-        "danno2H": "",
+        "danno2H": 0,
         "descrizione": [
             "Un´arma insidiosa spesso utilizzata da assissini e incantatori, perché in grado di migliorare notevolmente i critici"
         ],
@@ -200,6 +207,7 @@
             "Tempo di Attacco": 22
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": 0,
         "danno2H": "5d7",
         "icona": "swords/inv_sword_2h_panprog_b_01.png",
@@ -243,8 +251,8 @@
         },
         "carArma": "Massiccia",
         "categoria": "arma",
-        "danno1H": "3d9",
-        "danno2H": 0,
+        "danno1H": 0,
+        "danno2H": "3d9",
         "icona": "bows/GrandeArco.png",
         "idDB": "GRANDE ARCO-1",
         "ingombro": 8,
@@ -283,6 +291,7 @@
             "Tempo di Attacco": 16
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d6",
         "danno2H": 0,
         "icona": "swords/inv_weapon_shortblade_26.png",
@@ -302,6 +311,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": "2d12",
         "danno2H": "2d12",
         "icona": "spears/inv_spear_05.png",
@@ -322,6 +332,7 @@
             "Tempo di Attacco": 17
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "4d4",
         "danno2H": 0,
         "icona": "swords/inv_weapon_shortblade_15.png",
@@ -345,6 +356,7 @@
             "Tempo di Attacco": 17
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "4d4",
         "danno2H": 0,
         "icona": "swords/inv_weapon_shortblade_15.png",
@@ -363,6 +375,7 @@
             "Tempo di Attacco": 21
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": "4d6+1",
         "danno2H": "5d6",
         "icona": "axes/mannaia.png",
@@ -386,6 +399,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": "6d4",
         "danno2H": "6d4",
         "icona": "maces/Martello+1.png",
@@ -406,6 +420,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": "6d4",
         "danno2H": "6d4",
         "icona": "maces/Martello.png",
@@ -426,6 +441,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": "3d8+1",
         "danno2H": "3d8+1",
         "icona": "maces/MazzaChiodata.png",
@@ -446,7 +462,8 @@
             "Tempo di Attacco": 22
         },
         "carArma": "Massiccia",
-        "danno1H": "",
+        "categoria": "arma",
+        "danno1H": 0,
         "danno2H": "3d12",
         "icona": "maces/inv_mace_02.png",
         "ingombro": 7,
@@ -467,6 +484,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d8",
         "danno2H": 0,
         "descrizione": [
@@ -489,6 +507,7 @@
             "Tempo di Attacco": 22
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": 0,
         "danno2H": "4d9",
         "icona": "spears/inv_spear_06.png",
@@ -508,6 +527,7 @@
             "Tempo di Attacco": 16
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d4+2",
         "danno2H": 0,
         "icona": "swords/pugnale.png",
@@ -533,6 +553,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": "3d6",
         "danno2H": 0,
         "icona": "swords/inv_weapon_shortblade_15.png",
@@ -556,6 +577,7 @@
             "Tempo di Attacco": 16
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d4+2",
         "danno2H": 0,
         "descrizione": [
@@ -581,6 +603,7 @@
             "Tempo di Attacco": 16
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d4+2",
         "danno2H": 0,
         "icona": "swords/Pugnale.png",
@@ -627,6 +650,7 @@
             "Tempo di Attacco": 16
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d6",
         "danno2H": 0,
         "descrizione": [
@@ -659,6 +683,7 @@
             "Tempo di Attacco": 22
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": 0,
         "danno2H": "3d9",
         "icona": "artifacts/Scettro.png",
@@ -679,6 +704,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Bilanciata",
+        "categoria": "arma",
         "danno1H": "3d8",
         "danno2H": 0,
         "icona": "swords/inv_sword_36.png",
@@ -698,6 +724,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d8",
         "danno2H": 0,
         "icona": "swords/inv_sword_33.png",
@@ -716,6 +743,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d8+1",
         "danno2H": 0,
         "icona": "axes/inv_throwingaxe_01.png",
@@ -737,6 +765,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d8+1",
         "danno2H": 0,
         "descrizione": [
@@ -767,6 +796,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": "3d6",
         "danno2H": 0,
         "descrizione": [
@@ -791,6 +821,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "4d6",
         "danno2H": 0,
         "icona": "swords/spadaCorta.png",
@@ -813,6 +844,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "4d6",
         "danno2H": 0,
         "icona": "swords/inv_sword_1h_dragonquest_b_01.png",
@@ -831,6 +863,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "Bilanciata",
+        "categoria": "arma",
         "danno1H": "4d6+1",
         "danno2H": "4d+1",
         "descrizione": [],
@@ -853,6 +886,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "Bilanciata",
+        "categoria": "arma",
         "danno1H": "4d6+1",
         "danno2H": "4d+1",
         "descrizione": [],
@@ -872,6 +906,7 @@
             "Tempo di Attacco": 22
         },
         "carArma": "Massiccia",
+        "categoria": "arma",
         "danno1H": 0,
         "danno2H": "6d6",
         "icona": "swords/spadone.png",
@@ -892,6 +927,7 @@
             "Tempo di Attacco": 18
         },
         "carArma": "Bilanciata",
+        "categoria": "arma",
         "danno1H": "5d4",
         "danno2H": 0,
         "icona": "swords/inv_sword_draenei_01.png",
@@ -916,6 +952,7 @@
             "Tempo di Attacco": 18
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "3d6+2",
         "danno2H": 0,
         "descrizione": [
@@ -942,6 +979,7 @@
             "Tempo di Attacco": 19
         },
         "carArma": "Agile",
+        "categoria": "arma",
         "danno1H": "2d12",
         "danno2H": 0,
         "icona": "axes/inv_axe_17.png",
@@ -965,6 +1003,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": "4d4+1",
         "danno2H": 0,
         "icona": "artifacts/inv_misc_branch_01.png",
@@ -986,6 +1025,7 @@
             "Tempo di Attacco": 21
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": "2d10",
         "danno2H": 0,
         "icona": "artifacts/preservered_head_shrunken_heads_diablo2.png",
@@ -1007,6 +1047,7 @@
             "Tempo di Attacco": 20
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": "2d10",
         "danno2H": 0,
         "icona": "artifacts/inv_wand_07.png",
@@ -1033,6 +1074,7 @@
             "Tempo di Attacco": 22
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": 0,
         "danno2H": "4d7",
         "descrizione": [
@@ -1056,6 +1098,7 @@
             "Tempo di Attacco": 22
         },
         "carArma": "CaP",
+        "categoria": "arma",
         "danno1H": 0,
         "danno2H": "4d7",
         "icona": "artifacts/vincastro.png",

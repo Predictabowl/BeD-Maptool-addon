@@ -95,7 +95,7 @@
 [h: sListaStili = macro.return]
 
 
-[dialog5(sDialog, strformat("temporary=1; width=640; height=745; closebutton=0; noframe=1;")):{
+[dialog5(sDialog, strformat("temporary=1; width=640; height=745; closebutton=0; noframe=0;")):{
 <html>
 
 <head> 

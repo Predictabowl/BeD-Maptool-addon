@@ -22,7 +22,7 @@
 	
 </head>
 <body class="[r, if(bLightMode == 1): 'light-mode']" data-tokenid="[r: tokenId]">
-	<div class="equip-panel">
+	<div class="equip-panel" data-stili='[r: oStili]' id="equip-main-panel">
         <div class="equip-section">
 
             <!-- ===================== HEADER ===================== -->
@@ -47,64 +47,62 @@
 
 				<div>
 					<div class="section-label" style="text-align:center;">Armi Rapide</div>
-					<div class="inventory-zone quick-weapons-vertical">
-						<div class="equip-slot small" data-item-name="Arco Corto"
-							onclick="openItemD.ock('Arco Corto', 'https://placehold.co/64x64/2a241f/d49a40?text=ARC')"
-							onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
-							<img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=ARC"
-								alt="Arco Corto">
+					<div class="inventory-zone quick-weapons-vertical" data-allowed="arma,scudo" ondrop="finishDrop(event)"
+							data-slottype="quick-slot" ondragover="handleDragOver(event)">
+					[h, macro("mobs/getUnusedEquip@this"): json.append(tokenId, 1)]
+					[h: oQuickSlots = macro.return]
+					[r, foreach(sInvItem, oQuickSlots, ""), code: {
+						<div class="equip-slot small">
+							[r, macro("gui/buildHtmlEquipItem@this"):  json.get(oQuickSlots, sInvItem)]
 						</div>
-						<div class="equip-slot small" data-item-name="Pugnale da Lancio"
-							onclick="openItemDock(this)"
-							onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
-							<img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
-								alt="Pugnale da Lancio">
-						</div>
-						<div class="equip-slot small" data-item-name="Pugnale da Lancio"
-							onclick="openItemDock(this)"
-							onmouseenter="showSlotTooltip(this)" onmouseleave="hideSlotTooltip()">
-							<img class="item-icon" src="https://placehold.co/64x64/2a241f/d49a40?text=PUG"
-								alt="Pugnale da Lancio">
-						</div>
+					}]
 					</div>
 				</div>
                 <!-- LEFT SLOTS -->
                 <div class="paperdoll-container" style="background-image: url('[r: getTokenHandout()]');">
-					<div class="equip-slot" id="slot-elmo" data-item-name="Elmo Rinforzato"
-						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ElmoBG.png')">
+					<div class="equip-slot" id="slot-elmo" data-allowed="elmo" ondrop="finishDrop(event)"
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ElmoBG.png')"
+						data-slottype="elmo-slot" ondragover="handleDragOver(event)">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"elmo")]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-amuleto"
+					<div class="equip-slot" id="slot-amuleto" data-allowed="amuleto" ondrop="finishDrop(event)"
+							data-slottype="amuleto-slot" ondragover="handleDragOver(event)"
                             style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AmuletoBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"amuleto")]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-armatura" data-item-name="Corazza di Cuoio"
+					<div class="equip-slot" id="slot-armatura" data-allowed="armatura" ondrop="finishDrop(event)"
+						data-slottype="armatura-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ArmaturaBG.png')">
 						[h, macro("mobs/getArmatura@this"): tokenId]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-mantello" data-item-name="Mantello Ombra"
+					<div class="equip-slot" id="slot-mantello" data-allowed="mantello" ondrop="finishDrop(event)"
+						data-slottype="mantello-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/MantelloBG.png')">
-						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"mantello")]
+						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"Mantello")]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-guanti"
+					<div class="equip-slot" id="slot-guanti" data-allowed="guanti" ondrop="finishDrop(event)"
+						data-slottype="guanti-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/GuantiBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"guanti")]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-bracciali"
+					<div class="equip-slot" id="slot-bracciali" data-allowed="bracciali" ondrop="finishDrop(event)"
+						data-slottype="bracciali-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/BraccialiBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"bracciali")]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-primary" data-item-name="Alabarda"
+					<div class="equip-slot" id="slot-arma1" data-allowed="arma" ondrop="finishDrop(event)"
+						data-slottype="arma1-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ArmaBG.png')">
 						[r, macro("gui/buildHtmlEquipItem@this"): getArma(tokenId,1)]
 					</div>
-					<div class="equip-slot locked" id="slot-secondary"
+					<div class="equip-slot" id="slot-arma2" data-allowed="arma,scudo" ondrop="finishDrop(event)"
+						data-slottype="arma2-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/ScudoBG.png')">
 						[h, if(Stile == "AS"), code: { 
 							[macro("mobs/getScudo@this"): tokenId]
@@ -114,22 +112,26 @@
 						}]
 						[r, macro("gui/buildHtmlEquipItem@this"): oArma2]
 					</div>
-					<div class="equip-slot" id="slot-cintura"
+					<div class="equip-slot" id="slot-cintura" data-allowed="cintura" ondrop="finishDrop(event)"
+						data-slottype="cintura-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/CinturaBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"cintura")]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-anello1" data-item-name="Anello della Quiete"
+					<div class="equip-slot" id="slot-anello1" data-allowed="anello" ondrop="finishDrop(event)"
+						data-slottype="anello1-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AnelloBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"anello", 1)]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-stivali" data-item-name="Stivali del Viandante"
+					<div class="equip-slot" id="slot-stivali" data-allowed="stivali" ondrop="finishDrop(event)"
+						data-slottype="stivali-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/StivaliBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"stivali")]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>
-					<div class="equip-slot" id="slot-anello2"
+					<div class="equip-slot" id="slot-anello2" data-allowed="anello" ondrop="finishDrop(event)"
+						data-slottype="anello2-slot" ondragover="handleDragOver(event)"
 						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AnelloBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"anello", 2)]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
@@ -145,22 +147,15 @@
                     <div class="section-label">Inventario</div>
                     <span class="hint">Disponibile solo fuori combattimento</span>
                 </div>
-                <div class="inventory-zone" id="inventoryZone">
-                    <div class="inventory-grid">
-                        <div class="inv-item"
-                            onclick="openItemDock(this)">
-                            <img src="https://placehold.co/64x64/2a241f/d49a40?text=POZ" alt="Pozione Curativa"></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
-                        <div class="inv-item"><img src="https://placehold.co/64x64/2a241f/d49a40?text=OGG" alt=""></div>
+                <div class="inventory-zone inventory-general" id="inventoryZone">
+                    <div class="inventory-grid" ondrop="finishDrop(event)" data-allowed="all" data-slottype="inventory-slot" ondragover="handleDragOver(event)">
+					[h, macro("mobs/getUnusedEquip@this"): json.append(tokenId, 0)]
+					[h: oInventario = macro.return]
+					[r, foreach(sInvItem, oInventario, ""), code: {
+						<div class="inv-item">
+							[r, macro("gui/buildHtmlEquipItem@this"):  json.get(oInventario, sInvItem)]
+						</div>
+					}]
                     </div>
                     <div class="inventory-lock-overlay">
                         <span class="lock-icon">&#128274;</span>

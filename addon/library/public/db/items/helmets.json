@@ -4,7 +4,7 @@
         "attributi": {
             "Mod_Cura_Out": 0.01
         },
-        "categoria": "Elmo",
+        "categoria": "elmo",
         "icona": "helmets/inv_helmet_60.png",
         "descrizione": []
     },
@@ -13,7 +13,7 @@
         "attributi": {
             "Mod_Danno_In": -0.01
         },
-        "categoria": "Elmo",
+        "categoria": "elmo",
         "icona": "helmets/inv_helmet_31.png",
         "descrizione": [
             "Un umile cappuccio, non è il massimo ma è comunque in grado di offrire una minima protezione"
@@ -24,7 +24,7 @@
         "attributi": {
             "Mana_Max": 10
         },
-        "categoria": "Elmo",
+        "categoria": "elmo",
         "icona": "helmets/inv_crown_01.png",
         "descrizione": []
     },
@@ -33,7 +33,7 @@
         "attributi": {
             "Mod_Danno_In": -0.01
         },
-        "categoria": "Elmo",
+        "categoria": "elmo",
         "icona": "helmets/inv_helmet_10.png",
         "descrizione": []
     },
@@ -42,7 +42,7 @@
         "attributi": {
             "PV_Max": 6
         },
-        "categoria": "Elmo",
+        "categoria": "elmo",
         "icona": "helmets/elmo.png",
         "descrizione": []
     },
@@ -52,7 +52,7 @@
             "Res_Aria": 1,
             "Furtivita": -4
         },
-        "categoria": "Elmo",
+        "categoria": "elmo",
         "icona": "helmets/inv_helmet_69.png",
         "descrizione": [
             "Forgiato presumibilmente in Mithril, su questo elmo argenteo sono incise due rune del fulmine, che emanano periodicamente delle scariche elettriche. Tali rune conferiscono al proprietario la capacità di scagliare attacchi elettrici di intensità diversa, ognuno una volta al giorno.<br>Le scariche elettriche generate periodicamente non sono in grado di infliggere alcun danno, ma rendono il proprietario un bersaglio chiaramente individuabile anche a distanza."
@@ -69,7 +69,7 @@
             "Mod_Cura_Out": 0.01,
             "Furtivita": -1
         },
-        "categoria": "Elmo",
+        "categoria": "elmo",
         "icona": "helmets/inv_helm_cloth_undergroundquest_b_01.png",
         "descrizione": [
             "Questo sacro copricapo finemente ricamato emana un tenue e costante bagliore dorato, ostacolando i movimenti furtivi ma infondendo al portatore una profonda energia curativa. Benedetto dai sacerdoti dell’Alba, offre una solida protezione mistica contro le maledizioni."
