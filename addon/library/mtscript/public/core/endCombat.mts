@@ -7,5 +7,5 @@
 	[macro("class_skills/DisattivaTutteAbilita@this"): sTokenId]
 }]
 
-
 [h: removeAllFromInitiative()]
+[h, macro("gui/combatStatusUpdate@this"): 0]

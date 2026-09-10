@@ -27,4 +27,5 @@
 
 [macro("events/runDelaySafeMacros@this"): 0]
 [macro("utility/sortIniziativa@this"):0]
+[h, macro("gui/combatStatusUpdate@this"): 0]
 

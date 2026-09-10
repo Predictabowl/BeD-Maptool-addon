@@ -15,6 +15,10 @@
 
 [h, if(isCombat()): sDisplayEquip = "none"; sDisplayEquip = "block"]
 
+[h, if(sArma1 == "rimuovi"): arma1Id = ""; arma1Id = sArma1]
+[h, if(sArma2 == "rimuovi"): arma2Id = ""; arma2Id = sArma2]
+[h, macro("combat/autoUpdateStile@this"): json.append(oToken, arma1Id, arma2Id)]
+
 [macro("mobs/setEquipToSlotVeloce@this"): json.append(oToken,oSlotRapidi)]
 
 [h, if(sArmatura == "rimuovi"), code:{
@@ -92,7 +96,9 @@
 [macro("combat/isStileAS@this"): oToken]
 [h, if(macro.return), code:{
 	[sScudo = sArma2]
+	[sArma2 = ""]
 }]
+
 
 [macro("combat/isStile2A@this"): oToken]
 [h: b2Armi = macro.return]

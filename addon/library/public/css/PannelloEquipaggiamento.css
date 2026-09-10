@@ -479,7 +479,7 @@ ComponentDettagliOggetto.js, not reproduced here. */
 
 .inventory-lock-overlay {
     position: absolute;
-    top: 46px;
+    top: 14px;
     left: 14px;
     right: 14px;
     bottom: 12px;
@@ -553,4 +553,11 @@ ComponentDettagliOggetto.js, not reproduced here. */
 
 .btn-confirm:hover {
     opacity: 0.9;
+}
+
+.over-limit {
+    color: #ff4d4d;
+    /* Rosso allarme */
+    font-weight: 900;
+    text-shadow: 0 0 4px rgba(255, 77, 77, 0.4);
 }

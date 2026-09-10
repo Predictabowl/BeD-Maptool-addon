@@ -5,7 +5,10 @@
         "multiplier": 1.5,
         "hand1Types" : ["1hand"],
         "hand2Types" : [],
-        "shield": 1
+        "shield": 1,
+        "description":[
+            "Permette di sfuttare i bonus difensivi dello uno scudo"
+        ]
     },
     "1A": {
         "id": "1A",
@@ -15,7 +18,12 @@
             "PA_Max": 1
         },
         "hand1Types" : ["1hand"],
-        "hand2Types" : ["throw"]
+        "hand2Types" : ["throw"],
+        "description":[
+            "Permette l'uso di armi da lancio nella mano secondaria, i cui attacchi provocano però attacchi di opportunità.",
+            "Non è possibile infliggere attacchi di opportunità con l'arma da lancio.",
+            "+1 PA massimi"
+        ]
     },
     "2A": {
         "id": "2A",
@@ -25,7 +33,11 @@
             "Num_Attacchi_Opp": 1
         },
         "hand1Types" : ["1hand"],
-        "hand2Types" : ["1hand"]
+        "hand2Types" : ["1hand"],
+        "description":[
+            "+1 Attacco Basilare, +1 Attacco di opportunità.",
+            "Gli attacchi con l'arma primaria costano -1 PA"
+        ]
     },
     "2M": {
         "id": "2M",
@@ -33,7 +45,10 @@
         "multiplier": 2,
         "ranged": 0,
         "hand1Types" : ["2hand", "1hand"],
-        "hand2Types" : []
+        "hand2Types" : [],
+        "description":[
+            "+33% al modificatore dei danni dovuti ad LA, si applica anche per valori negativi."
+        ]
     },
     "AD": {
         "id": "AD",
@@ -51,6 +66,11 @@
             }
         ],
         "hand1Types" : ["ranged"],
-        "hand2Types" : []
+        "hand2Types" : [],
+        "description":[
+            "Permette di attaccare da notevole distanza, ma infligge una penalità di +20 Mancare quando si attaccano bersagli adiacenti.",
+            "Attaccare provoca attacchi di opportunità da parte degli avversari.",
+            "Non è possibile infliggere attacchi di opportunità."
+        ]
     }
 }

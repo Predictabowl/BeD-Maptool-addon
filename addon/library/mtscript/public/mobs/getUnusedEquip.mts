@@ -8,9 +8,8 @@
 	[oItem = json.get(Equipaggiamento,key)]
 	[macro("mobs/isOggettoEquip@this"): json.append(oToken,key)]
 	[if(!macro.return && json.contains(Armi,key) == bSlotRapido), code:{
-		[sCat = json.get(oItem,"categoria")]
-		[idDB = json.get(oItem,"idDB")]
-		[oList = json.set(oList,key,getOggettoFromDB(idDB,sCat))]
+		[macro("mobs/findOggettoFromEquip@this"): json.append(oToken, key)]
+		[oList = json.set(oList,key,macro.return)]
 	}]
 }]
 

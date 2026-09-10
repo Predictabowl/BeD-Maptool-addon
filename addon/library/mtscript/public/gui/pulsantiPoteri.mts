@@ -45,7 +45,7 @@
 		[if(isDialogVisible("DialogCambioArmi")), code:{
 			[closeDialog("DialogCambioArmi")]		
 		};{
-			[macro("gui/dialogCambioArma@this"): target]
+			[macro("gui/PannelloEquipaggiamento@this"): target]
 		}]
 	};
 	case "AbilitaClasse":{

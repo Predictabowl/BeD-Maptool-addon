@@ -1,37 +1,10 @@
-/* All of this is demo-only wiring to show the visual states the design
-           doc calls for. Real drag&drop, macro calls and fetches are out of
-           scope for this example. */
-
-function toggleCombat() {
-    document.getElementById('inventoryZone').classList.toggle('combat-locked');
-}
-
-let twoHanded = false; // starts locked, matching the equipped 2-handed weapon below
-function toggleWeaponHands() {
-    twoHanded = !twoHanded;
-    const secondary = document.getElementById('slot-arma2');
-    const primaryIcon = document.getElementById('primary-weapon-icon');
-    const styleValue = document.getElementById('styleValue');
-
-    if (twoHanded) {
-        secondary.classList.add('locked');
-        primaryIcon.src = 'https://placehold.co/64x64/2a241f/d49a40?text=2M';
-        styleValue.textContent = 'Arma a 2 Mani';
+function setCombat(isCombat) {
+    if(isCombat === 1) {
+        document.getElementById('inventoryZone').classList.add('combat-locked');
     } else {
-        secondary.classList.remove('locked');
-        primaryIcon.src = 'https://placehold.co/64x64/2a241f/d49a40?text=1M';
-        styleValue.textContent = 'Arma e Scudo';
+        document.getElementById('inventoryZone').classList.remove('combat-locked');
     }
 }
-
-function simulateInvalidDrop() {
-    const slot = document.getElementById('slot-elmo');
-    slot.classList.add('invalid');
-    setTimeout(() => slot.classList.remove('invalid'), 450);
-}
-
-/* End simulation
-*/
 
 const dragged = { element: null, type: null, container: null, data: null};
 const stili = JSON.parse(document.getElementById("equip-main-panel").dataset.stili);
@@ -157,6 +130,7 @@ function moveAwayTargetItem(target) {
     if(target.element) {
         const newContainer = buildDropContainer(dragged);
         newContainer.appendChild(target.element);
+        updateIngombro(target, dragged);
     }
 }
 
@@ -170,6 +144,7 @@ function moveDraggedToNewPosition(target){
     } else {
         newContainer.appendChild(dragged.element);
     }
+    updateIngombro(dragged, target);
 }
 
 function updateLockWeapon2() {
@@ -186,11 +161,8 @@ function updateLockWeapon2() {
 }
 
 async function updateStile() {
-    console.log("updateStile");
     const toCheck = ["arma", "scudo"];
-    console.log(dragged.data.categoria);
     if(toCheck.includes(dragged.data.categoria)){
-        console.log("controlliamo!");
         const w1 = document.getElementById('slot-arma1').querySelector("img");
         const w2 = document.getElementById('slot-arma2').querySelector("img");
         const bodyStr = JSON.stringify({
@@ -201,6 +173,19 @@ async function updateStile() {
         const stileId = await response.text();
         document.getElementById('styleValue').textContent = stileId == -1 ? "errore di stile!!" : stili[stileId].name;
     }
+}
+
+function updateIngombro(moved, target) {
+    if(moved.type === target.type) //this should be superfluousn but is for safety
+        return;
+    if(moved.type !== "inventory-slot" && target.type !== "inventory-slot")
+        return;
+    const mult = target.type === "inventory-slot" ? -1 : 1;
+    const ingCorrente = document.getElementById("carico-corrente");
+    const caricoMax = Number.parseInt(document.getElementById("carico-max").textContent);
+    const newIng = Number.parseInt(ingCorrente.textContent) + (mult * (moved.data.ingombro ?? 0));
+    ingCorrente.classList.toggle("over-limit", newIng > caricoMax);
+    ingCorrente.textContent = newIng; 
 }
 
 
@@ -257,4 +242,39 @@ function showSlotTooltip(slotEl) {
 
 function hideSlotTooltip() {
     document.getElementById('slotTooltip').classList.remove('visible');
+}
+
+//====================== FORM CAMBIO ARMA =================================
+function submitAllSlots(){
+	setInputSlot('slot-armatura','input-armatura');
+	setInputSlot('slot-amuleto','input-amuleto');
+	setInputSlot('slot-anello1','input-anello1');
+	setInputSlot('slot-anello2','input-anello2');
+	setInputSlot('slot-arma1','input-arma1');
+	setInputSlot('slot-arma2','input-arma2');
+	setInputSlot('slot-bracciali','input-bracciali');
+	setInputSlot('slot-mantello','input-mantello');
+	setInputSlot('slot-cintura','input-cintura');
+	setInputSlot('slot-stivali','input-stivali');
+	setInputSlot('slot-guanti','input-guanti');
+	setInputSlot('slot-elmo','input-elmo');
+	setInputSlotRapidi();
+	document.getElementById('equip-form').submit();
+}
+
+function setInputSlot(slotName,inputName){
+	const item = document.getElementById(slotName).querySelector("img");
+	let value;
+	if(item){
+		value = JSON.parse(item.dataset.jsonoggetto).localId;
+	} else {
+		value = 'rimuovi'
+	}
+	document.getElementById(inputName).setAttribute('value',value);
+}
+
+function setInputSlotRapidi(){
+	const quickWeapons = document.getElementById('slot-rapidi').querySelectorAll('img');
+    const arrayParam = [...quickWeapons].map( img => JSON.parse(img.dataset.jsonoggetto).localId);
+	document.getElementById('input-slotRapidi').setAttribute('value',arrayParam);
 }
