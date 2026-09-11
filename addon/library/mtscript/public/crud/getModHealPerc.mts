@@ -5,7 +5,9 @@
 [h: source = findToken(source)]
 
 [h, macro("core/getMCGPerc@this"): source]
-[h: dMod = macro.return + getProperty("Mod_Cura_In",target)]
+[h: dMod = macro.return]
+[h, macro("core/getMCRPerc@this"): target]
+[h: dMod = dMod + macro.return]
 [h: dMod = dMod + getStatModifier(source,"Mod_Cura_Out")]
 [h: dMod = dMod + getStatModifier(target,"Mod_Cura_In")]
 [h: oArma = getArma(source,iArma)]

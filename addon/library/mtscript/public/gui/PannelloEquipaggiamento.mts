@@ -118,7 +118,7 @@
 					</div>
 					<div class="equip-slot" id="slot-anello1" data-allowed="anello" ondrop="finishDrop(event)"
 						data-slottype="anello1-slot" ondragover="handleDragOver(event)"
-						style="background-image:urrunJsFunctionl('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AnelloBG.png')">
+						style="background-image:url('lib://it.aldinucci.piero.bed.maptool.ruleset/icons/gui/AnelloBG.png')">
 						[h, macro("mobs/getAccessorioEquip@this"): json.append(tokenId,"anello", 1)]
 						[r, macro("gui/buildHtmlEquipItem@this"): macro.return]
 					</div>

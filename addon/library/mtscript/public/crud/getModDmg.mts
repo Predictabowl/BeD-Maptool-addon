@@ -24,7 +24,8 @@
 [h, if(iCritFailTS > 0): dMod = dMod + 0.25]
 
 
-[h: dMod = dMod+ getProperty("Mod_Danno_In",target)]
+[h, macro("core/getMDRPerc@this"): target]
+[h: dMod = dMod + macro.return]
 [h: dMod = dMod + getStatModifier(source,"Mod_Danno_Out")]
 [h: dMod = dMod + getStatModifier(target,"Mod_Danno_In")]
 [h: dMod = dMod + getSpellStartData(source,"Mod_Danno_Out")]

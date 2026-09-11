@@ -20,8 +20,8 @@
         "hand1Types" : ["1hand"],
         "hand2Types" : ["throw"],
         "description":[
-            "Permette l'uso di armi da lancio nella mano secondaria, i cui attacchi provocano però attacchi di opportunità.",
-            "Non è possibile infliggere attacchi di opportunità con l'arma da lancio.",
+            "Permette l’uso di armi da lancio nella mano secondaria, i cui attacchi provocano però attacchi di opportunità.",
+            "Non è possibile infliggere attacchi di opportunità con l’arma da lancio.",
             "+1 PA massimi"
         ]
     },
@@ -36,7 +36,7 @@
         "hand2Types" : ["1hand"],
         "description":[
             "+1 Attacco Basilare, +1 Attacco di opportunità.",
-            "Gli attacchi con l'arma primaria costano -1 PA"
+            "Gli attacchi con l’arma primaria costano -1 PA"
         ]
     },
     "2M": {
