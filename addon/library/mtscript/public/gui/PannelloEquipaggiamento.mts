@@ -11,7 +11,7 @@
 [h: sThemePreferenze = "Spell_Dialogs_Theme"]
 [h: bLightMode = getPreferenza("light_mode",tokenId,sThemePreferenze)]
 
-[dialog5(sDialog, strformat("temporary=0; width=555; height=885; closebutton=0; noframe=0;")):{
+[dialog5(sDialog, strformat("temporary=0; width=555; height=895; closebutton=0; noframe=0;")):{
 <html>
 
 <head> 
@@ -32,15 +32,26 @@
                     <div class="equip-title">Equipaggiamento</div>
                     <div class="equip-badges">
                         <span class="info-badge">
-							Stile 
-							<a id="styleValue" class="conspicuous-trigger" onclick="openHeadlessPopup(event)" data-text_popup='[r: json.path.read(oStili, Stile+ ".description")]'>
+							Stile &nbsp;<span id="styleValue" class="conspicuous-trigger" onclick="openHeadlessPopup(event)" data-text_popup='[r: json.path.read(oStili, Stile+ ".description")]'>
 								[r :json.path.read(oStili, Stile+ ".name")]
-							</a>
+							</span>
 						</span>
 						[h: iCarico = getCarico(tokenId)]
 						[h: iIngombro = getIngombroTotale(tokenId)]
-                        <span class="info-badge">Ingombro <b><span class="[r, if(iIngombro > iCarico): 'over-limit']" id="carico-corrente">[r: iIngombro]</span> / <span id="carico-max">[r: iCarico]</span></b></span>
-                        <span class="info-badge">Addestramento Armature <b>[r: Add_Armature]</b></span>
+						[h: aMsg = json.append("", "L’ingombro residuo non occupato si traduce in slot aggiuntivi per Consumabili.")]
+                        <span class="info-badge">Ingombro &nbsp;
+							<span class="conspicuous-trigger" onclick="openHeadlessPopup(event)" data-text_popup='[r: aMsg]'>
+								<span class="[r, if(iIngombro > iCarico): 'over-limit']" id="carico-corrente">
+									[r: iIngombro]
+								</span> / <span id="carico-max">[r: iCarico]</span>
+							</span>
+						</span>
+						[h: aMsg2 = json.append("", "Indossare equipaggiamento che richiede un addestramento superiore al proprio, incrementa ulteriormente l’ingombro.")]
+                        <span class="info-badge">Addestramento Armature &nbsp;
+							<span class="conspicuous-trigger" onclick="openHeadlessPopup(event)" data-text_popup='[r: aMsg2]'>
+								[r: Add_Armature]
+							</span>
+						</span>
                     </div>
                 </div>
             </div>

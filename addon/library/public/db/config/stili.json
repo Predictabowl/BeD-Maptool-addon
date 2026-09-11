@@ -47,7 +47,7 @@
         "hand1Types" : ["2hand", "1hand"],
         "hand2Types" : [],
         "description":[
-            "+33% al modificatore dei danni dovuti ad LA, si applica anche per valori negativi."
+            "Incrementa i danni derivanti dal LA di +33%, si applica anche per valori negativi."
         ]
     },
     "AD": {

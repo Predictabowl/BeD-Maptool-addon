@@ -8,6 +8,7 @@ function setCombat(isCombat) {
 
 const dragged = { element: null, type: null, container: null, data: null};
 const stili = JSON.parse(document.getElementById("equip-main-panel").dataset.stili);
+const TOKEN_ID = document.body.dataset.tokenid;
 
 function handleDragOver(e) {
     e.preventDefault();
@@ -88,22 +89,6 @@ function finishDrop(ev){
     moveDraggedToNewPosition(target);
     updateLockWeapon2();
     updateStile();
-
-	// const targetType = getTargetType(target);
-
-	// if (isDropAllowed(dragged,target)){			
-	// 	var parent = dragged.parentElement;
-	// 	var targetCar = target.getAttribute('data-categoria');
-	// 	var replaced = null;
-	// 	if(target.firstElementChild && targetCar != 'inventario' && targetCar != 'slotRapido'){
-	// 		replaced = parent.appendChild(target.firstElementChild);
-	// 	}
-	// 	// updateCarico(parent.getAttribute('data-categoria'), targetCar, dragged, replaced);
-	// 	// updateMaxCarico(parent.getAttribute('data-categoria'), targetCar, dragged, replaced);
-	// 	target.appendChild(dragged);
-	// }
-	// target.classList.remove('drag-paperdoll-item');
-	// target.classList.remove('nodrag-paperdoll-item');
 }
 
 //Return the exact place where to append the item given its target
@@ -178,7 +163,7 @@ async function updateStile() {
     }
 }
 
-function updateIngombro(moved, target) {
+async function updateIngombro(moved, target) {
     if(moved.type === target.type) //this should be superfluousn but is for safety
         return;
     if(moved.type !== "inventory-slot" && target.type !== "inventory-slot")
@@ -186,7 +171,12 @@ function updateIngombro(moved, target) {
     const mult = target.type === "inventory-slot" ? -1 : 1;
     const ingCorrente = document.getElementById("carico-corrente");
     const caricoMax = Number.parseInt(document.getElementById("carico-max").textContent);
-    const newIng = Number.parseInt(ingCorrente.textContent) + (mult * (moved.data.ingombro ?? 0));
+    let response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/mobs/calcAddArmaturaPenalties', 
+        {   method: 'POST', 
+            body: JSON.stringify([TOKEN_ID, moved.data])
+        });
+    const armaturaPenalties = await response.json();
+    const newIng = Number.parseInt(ingCorrente.textContent) + (mult * ((moved.data.ingombro ?? 0) + armaturaPenalties.modIngombro));
     ingCorrente.classList.toggle("over-limit", newIng > caricoMax);
     ingCorrente.textContent = newIng; 
 }

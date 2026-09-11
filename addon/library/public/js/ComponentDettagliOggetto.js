@@ -74,15 +74,11 @@ function renderWeaponSubStats() {
             <div class="substat-cell"><span class="k">Ingombro</span><span class="v" id="cdo-item-ingombro">${displayItem.ingombro}</span></div>`;
             break;
         case 'armatura':
-            // element.classList.remove("cols-3");
-            element.innerHTML = `
-            <div class="substat-cell"><span class="k">Addestramento</span><span class="v" id="cdo-item-portata">${displayItem.addArmatura}</span></div>
-            <div class="substat-cell"><span class="k">Ingombro</span><span class="v" id="cdo-item-ingombro">${displayItem.ingombro}</span></div>`;
-            break;
         case 'scudo':
             // element.classList.remove("cols-3");
             element.innerHTML = `
-            <div class="substat-cell"><span class="k">Ingombro</span><span class="v" id="cdo-item-ingombro">${displayItem.ingombro}</span></div>`;
+            <div class="substat-cell"><span class="k">Addestramento</span><span class="v" id="cdo-item-portata">${displayItem.addArmatura}</span></div>
+            <div class="substat-cell"><span class="k">Ingombro</span><span class="v" id="cdo-item-ingombro">${displayItem.ingombro}</span></div>`;        
     }
 }
 

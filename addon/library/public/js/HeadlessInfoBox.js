@@ -1,3 +1,5 @@
+let lastPopupTrigger;
+
 function openHeadlessPopup(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -8,11 +10,13 @@ function openHeadlessPopup(event) {
     const descEl = document.getElementById("headless-popupDescription");
 
     // If this exact same link is clicked while its popup is open, close it (toggle behavior)
-    if (popup.hasAttribute("open") && descEl.textContent === text) {
+    if (popup.hasAttribute("open") && trigger === lastPopupTrigger) {
         popup.close();
+        lastPopupTrigger = null;
         return;
     }
 
+    lastPopupTrigger = trigger;
     descEl.innerHTML = textArray.map(row => `<p>${row}</p>`).join('');
     positionHeadlessPopup(trigger, popup);
 
