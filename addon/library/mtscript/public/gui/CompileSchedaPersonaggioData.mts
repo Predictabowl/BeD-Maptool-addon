@@ -32,6 +32,6 @@
 [h, macro("core/getMCRPerc@this"): tokenId]
 [h: jData =json.set(jData, "mcr", strformat("%+.1f", (calcPercentMod(macro.return)-1)*100.0))]
 [h: oStili = data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/db/config/stili.json")]
-[h: jData = json.set(jData, "stile", json.path.read(oStili, Stile + ".name"))]
+[h: jData = json.set(jData, "stile", json.get(oStili, Stile))]
 
 [h: return(0, jData)]

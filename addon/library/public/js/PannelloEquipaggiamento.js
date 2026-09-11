@@ -171,7 +171,10 @@ async function updateStile() {
         });
         let response = await fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/combat/inferStile', { method: 'POST', body: bodyStr });
         const stileId = await response.text();
-        document.getElementById('styleValue').textContent = stileId == -1 ? "errore di stile!!" : stili[stileId].name;
+        const stileEl = document.getElementById('styleValue');
+        stileEl.textContent = stileId == -1 ? "errore di stile!!" : stili[stileId].name;
+        stileEl.dataset.text_popup = stileId == -1 ? "errore di stile!!" : JSON.stringify(stili[stileId].description);
+        closeHeadlessPopup();
     }
 }
 

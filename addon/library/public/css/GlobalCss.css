@@ -247,3 +247,14 @@ form {
 }
 
 
+.conspicuous-trigger {
+    color: var(--generic-stat-color);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.conspicuous-trigger:hover {
+    text-shadow: 0 0 12px var(--accent-color, #8a2be2);
+    color: var(--accent-color);
+}

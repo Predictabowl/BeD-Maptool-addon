@@ -18,6 +18,7 @@
 	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
 	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/ItemDetails.css?cachelib=false">
 	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/PannelloEquipaggiamento.css?cachelib=false">
+	<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/InfoBox.css?cachelib=true">
 	<title>[r: getName(tokenId)] - Equipaggiamento</title>
 	
 </head>
@@ -30,7 +31,12 @@
                 <div class="equip-header-title-row">
                     <div class="equip-title">Equipaggiamento</div>
                     <div class="equip-badges">
-                        <span class="info-badge">Stile <b id="styleValue">[r :json.path.read(oStili, Stile+ ".name")]</b></span>
+                        <span class="info-badge">
+							Stile 
+							<a id="styleValue" class="conspicuous-trigger" onclick="openHeadlessPopup(event)" data-text_popup='[r: json.path.read(oStili, Stile+ ".description")]'>
+								[r :json.path.read(oStili, Stile+ ".name")]
+							</a>
+						</span>
 						[h: iCarico = getCarico(tokenId)]
 						[h: iIngombro = getIngombroTotale(tokenId)]
                         <span class="info-badge">Ingombro <b><span class="[r, if(iIngombro > iCarico): 'over-limit']" id="carico-corrente">[r: iIngombro]</span> / <span id="carico-max">[r: iCarico]</span></b></span>
@@ -204,6 +210,7 @@
 		<input type="hidden" id="input-slotRapidi" name="input-slotRapidi"  value="">
 		<input type="hidden" name="token" value="[r: tokenId]">
 	</form>
+	[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/HeadlessInfoBox.html")]
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/PannelloEquipaggiamento.js?cachelib=false" defer></script>
 </body>
 </html>

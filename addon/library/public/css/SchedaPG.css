@@ -76,15 +76,15 @@ body {
     opacity: 0.6;
 }
 
-#styleSelect {
+ #styleSelect {
     font-family: var(--font-default);
     font-size: 12px;
     background: transparent;
-    color: var(--accent-color);
-    border: none;
-    border-bottom: 1px solid var(--border-color);
+    /* color: var(--accent-color); */
+    /* border: none; */
+    /* border-bottom: 1px solid var(--border-color); */
     padding: 1px 2px;
-    cursor: pointer;
+    /* cursor: pointer; */
     max-width: 190px;
 }
 

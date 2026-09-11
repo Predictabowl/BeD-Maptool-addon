@@ -117,7 +117,10 @@ function renderNonWeaponValues(){
     document.getElementById("MDR").textContent = `${otherValues.mdr}%`;
     document.getElementById("MCG").textContent = `${otherValues.mcg}%`;
     document.getElementById("MCR").textContent = `${otherValues.mcr}%`;
-    document.getElementById("styleSelect").textContent = otherValues.stile;
+    const stileEl = document.getElementById("styleSelect");
+    stileEl.textContent = otherValues.stile.name;
+    stileEl.dataset.text_popup = JSON.stringify(otherValues.stile.description);
+    closeHeadlessPopup();
 }
 
 async function buildArmi() {

@@ -11,6 +11,7 @@
 <head>
     [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
     <link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/SchedaPG.css?cachelib=false">
+    <link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/InfoBox.css?cachelib=true">
     <title> [r: getName(tokenId)] - Scheda</title>
 </head>
 <body class="[r, if(bLightMode == 1): 'light-mode']" data-tokenid="[r: tokenId]">
@@ -23,7 +24,7 @@
                 <div class="player-name">[r: getName(tokenId)]</div>
                 <div class="style-row">
                     <span class="lbl">Stile:</span>
-                    <span id="styleSelect">
+                    <span id="styleSelect" class="conspicuous-trigger" onclick="openHeadlessPopup(event)">
                     <span>
                 </div>
             </div>
@@ -246,6 +247,7 @@
 
     </div>
 
+    [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/HeadlessInfoBox.html")]
     <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: tokenId]', '[r: sThemePreferenze]')">
         🌓
     </button>
