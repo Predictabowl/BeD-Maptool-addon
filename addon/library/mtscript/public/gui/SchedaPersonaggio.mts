@@ -67,7 +67,7 @@
 
         <!-- ===================== TAB: DIFESE ===================== -->
         <div class="tab-panel" id="tab-difese">
-            <div class="section-title">LD (Livello Difesa)</div>
+            <div class="section-title">Mitigazione</div>
             <div class="stat-grid cols-3">
                 <div class="stat-cell">
                     <span class="k">
@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="subsection-title">Mitigazione</div>
+            <div class="subsection-title">Evasione</div>
             <div class="stat-grid cols-3">
                 <div class="stat-cell">
                     <span class="k">Schivare</span>
@@ -132,6 +132,13 @@
                 <div class="resist-cell"><span>Negativo</span><span class="v" id="res-negativo"></span></div>
                 <div class="resist-cell"><span>Positivo</span><span class="v" id="res-positivo"></span></div>
                 <div class="resist-cell"><span>Fisico</span><span class="v" id="res-fisico"></span></div>
+            </div>
+            <div class="subsection-title">Secondarie</div>
+            <div class="resist-grid cols-2">
+                <div class="resist-cell"><span>Malattia</span><span class="v" id="res-malattia"></span></div>
+                <div class="resist-cell"><span>Maledizione</span><span class="v" id="res-maledizione"></span></div>
+                <div class="resist-cell"><span>Sanguinamento</span><span class="v" id="res-sanguinamento"></span></div>
+                <div class="resist-cell"><span>Veleno</span><span class="v" id="res-veleno"></span></div>
             </div>
         </div>
 
@@ -203,7 +210,7 @@
 
         <!-- ===================== TAB: BASE (CARATTERISTICHE) ===================== -->
         <div class="tab-panel" id="tab-base">
-            <div class="subsection-title" style="margin-top:0;">Caratteristiche Primarie</div>
+            <div class="section-title" style="margin-top:0;">Caratteristiche Primarie</div>
 
             <div class="core-columns">
                 <div class="core-list">
@@ -238,7 +245,6 @@
                     <div class="core-sub-label">Risolutezza</div><div class="core-sub-value">[r: Risolutezza]</div>
                 </div>
             </div>
-
             <div class="derived-row">
                 <span class="k">Caratteristica Mana</span>
                 <span class="v">[r: getCarM(tokenId)]</span>

@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: sId = arg(0)]
 [h: sContent = arg(1)]
 [h: sBGImage = arg(2)]

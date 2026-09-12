@@ -20,6 +20,14 @@
 [h: jData =json.set(jData, "res_negativo",getResistance(json.set("", "target", tokenId, "elemento", "Negativo")))]
 [h: jData =json.set(jData, "res_positivo",getResistance(json.set("", "target", tokenId, "elemento", "Positivo")))]
 [h: jData =json.set(jData, "res_fisico",getResistance(json.set("", "target", tokenId, "elemento", "Fisico")))]
+[h, macro("crud/getResistenzaExtra@this"): json.append(tokenId, "Malattia")]
+[h: jData =json.set(jData, "res_malattia", macro.return)]
+[h, macro("crud/getResistenzaExtra@this"): json.append(tokenId, "Maladizione")]
+[h: jData =json.set(jData, "res_maledizione", macro.return)]
+[h, macro("crud/getResistenzaExtra@this"): json.append(tokenId, "Sanguinamento")]
+[h: jData =json.set(jData, "res_sanguinamento", macro.return)]
+[h, macro("crud/getResistenzaExtra@this"): json.append(tokenId, "Veleno")]
+[h: jData =json.set(jData, "res_veleno", macro.return)]
 
 
 [h: jData =json.set(jData, "iniziativa", strformat("1d24%+d",Tiro_Iniziativa), "mov_time", getMoveTime(tokenId), "concentrazione", getConcentrazionePoteri(tokenId), "perturbazione", strformat("1d100%+d",getPerturbazionePoteri(tokenId)))]

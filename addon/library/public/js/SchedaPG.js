@@ -109,6 +109,10 @@ function renderNonWeaponValues(){
     document.getElementById("res-negativo").textContent = otherValues.res_negativo;
     document.getElementById("res-positivo").textContent = otherValues.res_positivo;
     document.getElementById("res-fisico").textContent = otherValues.res_fisico;
+    document.getElementById("res-malattia").textContent = otherValues.res_malattia;
+    document.getElementById("res-maledizione").textContent = otherValues.res_maledizione;
+    document.getElementById("res-sanguinamento").textContent = otherValues.res_sanguinamento;
+    document.getElementById("res-veleno").textContent = otherValues.res_veleno;
     document.getElementById("iniziativa").textContent = otherValues.iniziativa;
     document.getElementById("tempo-movimento").textContent = otherValues.mov_time;
     document.getElementById("concentrazione").textContent = otherValues.concentrazione;

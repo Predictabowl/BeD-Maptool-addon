@@ -38,7 +38,7 @@
 						</span>
 						[h: iCarico = getCarico(tokenId)]
 						[h: iIngombro = getIngombroTotale(tokenId)]
-						[h: aMsg = json.append("", "L’ingombro residuo non occupato si traduce in slot aggiuntivi per Consumabili, e viceversa.","Superare il limite comporta varie penalità di velocità, mitigazione e movimento, porporzionalmente alla quantità in eccesso.")]
+						[h: aMsg = json.append("", "L’ingombro residuo non occupato si traduce in slot aggiuntivi per Consumabili, e viceversa.","Superare il limite comporta varie penalità di velocità, evasione e movimento, porporzionalmente alla quantità in eccesso.")]
                         <span class="info-badge">Ingombro &nbsp;
 							<span class="conspicuous-trigger" onclick="openHeadlessPopup(event)" data-text_popup='[r: aMsg]'>
 								<span class="[r, if(iIngombro > iCarico): 'over-limit']" id="carico-corrente">

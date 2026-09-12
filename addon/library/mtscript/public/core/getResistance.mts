@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: target = json.get(macro.args,0)]
 [h: element = json.get(macro.args,1)]
 [macro("core/caseResistName@this"):element]
