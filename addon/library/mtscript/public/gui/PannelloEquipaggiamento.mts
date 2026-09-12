@@ -11,7 +11,7 @@
 [h: sThemePreferenze = "Spell_Dialogs_Theme"]
 [h: bLightMode = getPreferenza("light_mode",tokenId,sThemePreferenze)]
 
-[dialog5(sDialog, strformat("temporary=0; width=555; height=895; closebutton=0; noframe=0;")):{
+[dialog5(sDialog, strformat("temporary=1; width=560; height=895; closebutton=0; noframe=0;")):{
 <html>
 
 <head> 

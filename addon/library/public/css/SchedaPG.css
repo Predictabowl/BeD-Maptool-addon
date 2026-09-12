@@ -27,6 +27,11 @@ body {
     transition: background-color 0.2s ease;
 }
 
+.interacteable-cell:hover{
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+}
+
 /* ===================== HEADER ===================== */
 .sheet-header {
     display: flex;
@@ -165,6 +170,7 @@ body {
 }
 
 .stat-cell {
+    position: relative;
     background-color: var(--stats-bg);
     border: 1px solid var(--border-color);
     color: var(--stat-label-color);

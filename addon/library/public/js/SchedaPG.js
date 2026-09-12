@@ -13,8 +13,12 @@ const TRIANGLE_RIGHT = `
     <svg viewBox="0 0 24 24" width="8" height="8" fill="currentColor">
         <path d="M8 5v14l11-7z"/>
     </svg>`;
+const difesaAttivaIds = {
+    "parare": "parare-cell",
+    "schivare": "schivare-cell"
+}
 
-const state = { activeWeapon: 1, nextAttackWeapon: 1 };
+const state = { activeWeapon: 1, nextAttackWeapon: 1, difesaAttiva: "auto" };
 
 function dmgIcons(types) {
     return types.map(t => `<img src="${ICONS[t].src}" alt="${ICONS[t].alt}">`).join('');
@@ -125,6 +129,30 @@ function renderNonWeaponValues(){
     stileEl.textContent = otherValues.stile.name;
     stileEl.dataset.text_popup = JSON.stringify(otherValues.stile.description);
     closeHeadlessPopup();
+    state.difesaAttiva = otherValues.difesa_attiva;
+    updateDifesaAttivaBadge();
+}
+
+function updateDifesaAttivaBadge(){
+    const daId = difesaAttivaIds[state.difesaAttiva];
+    const  badge = document.getElementById("difesa-attiva-badge");
+    if(daId) {
+        const cell = document.getElementById(daId);
+        if(!cell.contains(badge))
+            cell.appendChild(badge);
+        badge.classList.remove("hidden");
+    } else {
+        badge.classList.add("hidden");
+    }
+}
+
+async function setDifesaAttiva(difesaAttiva){
+    state.difesaAttiva = state.difesaAttiva === difesaAttiva ? "auto" : difesaAttiva;
+    fetch('lib://it.aldinucci.piero.bed.maptool.ruleset/utility/setDifesaAttiva', { 
+        method: 'POST',
+        body: JSON.stringify([TOKEN_ID, state.difesaAttiva])
+    });
+    updateDifesaAttivaBadge();
 }
 
 async function buildArmi() {

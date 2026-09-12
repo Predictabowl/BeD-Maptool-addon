@@ -258,3 +258,7 @@ form {
     text-shadow: 0 0 12px var(--accent-color, #8a2be2);
     color: var(--accent-color);
 }
+
+.hidden {
+    display: none !important;
+}

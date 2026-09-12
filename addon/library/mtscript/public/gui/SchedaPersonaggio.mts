@@ -91,11 +91,16 @@
 
             <div class="subsection-title">Evasione</div>
             <div class="stat-grid cols-3">
-                <div class="stat-cell">
+                <div class="stat-cell interacteable-cell" title="Imposta difesa preferenziale" id="schivare-cell" onclick="setDifesaAttiva('schivare')">
                     <span class="k">Schivare</span>
                     <span class="v" id="schivare"></span>
+                    <span class="next-badge" title="Difesa Preferenziale" id="difesa-attiva-badge">
+                        <svg viewBox="0 0 24 24" width="8" height="8" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </span>
                 </div>
-                <div class="stat-cell">
+                <div class="stat-cell interacteable-cell"  title="Imposta difesa preferenziale" id="parare-cell" onclick="setDifesaAttiva('parare')">
                     <span class="k">Parare</span>
                     <span class="v" id="parare"></span>
                 </div>

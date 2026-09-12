@@ -1,5 +1,6 @@
-[h: target = macro.args]
-[h: tipoDif = getPreferenza("difesa_fisica_in_uso",target,"Combattimento")]
+[h: target = arg(0)]
+[h, macro("utility/getDifesaAttiva@this"): target]
+[h: tipoDif = macro.return]
 
 [h, if (tipoDif != "Schivare" && tipoDif != "Parare"), code:{
 	[h: iSch = getProperty("Schivare",target)]
