@@ -1,112 +1,128 @@
 {
     "BROCCHIERE-0": {
-        "nome": "Brocchiere",
+        "addArmatura": 0,
         "attributi": {
             "LD": 1,
             "LD_Spalle": -1,
             "Parare": 7,
             "Schivare": 6
         },
-        "ingombro": 3,
-        "addArmatura": 0,
         "categoria": "scudo",
-        "icona": "shields/inv_shield_09.png"
+        "descrizione": [
+            "Un piccolo scudo, progettato per la difesa personale piuttosto che all'utilizzo in guerra."
+        ],
+        "icona": "shields/inv_shield_09.png",
+        "ingombro": 3,
+        "nome": "Brocchiere"
     },
     "BROCCHIERE-1": {
-        "nome": "Brocchiere +1",
+        "addArmatura": 0,
         "attributi": {
             "LD": 1,
             "LD_Spalle": -1,
             "Parare": 10,
-            "Schivare": 6
+            "Schivare": 8
         },
-        "ingombro": 3,
-        "addArmatura": 0,
         "categoria": "scudo",
-        "icona": "shields/inv_shield_09.png"
+        "descrizione": [
+            "Un piccolo scudo, progettato per la difesa personale piuttosto che all'utilizzo in guerra."
+        ],        
+        "icona": "shields/inv_shield_09.png",
+        "ingombro": 3,
+        "nome": "Brocchiere +1"
     },
     "BROCCHIERE-3": {
-        "nome": "Fortificazione Portatile",
+        "addArmatura": 0,
         "attributi": {
             "LD": 1,
             "LD_Spalle": -1,
             "Parare": 9,
             "Schivare": 8
         },
-        "ingombro": 3,
-        "addArmatura": 0,
         "categoria": "scudo",
+        "descrizione": [
+            "Un piccolo scudo in grado di deflettere gli attacchi ancor prima che raggiungano il bersaglio. Permette di lanciare Barricata 1 volta al giorno."
+        ],
         "icona": "shields/inv_shield_19.png",
-        "descrizione": ["Un piccolo scudo in grado di deflettere gli attacchi ancor prima che raggiungano il bersaglio. Permette di lanciare Barricata 1 volta al giorno."],
+        "ingombro": 3,
+        "nome": "Fortificazione Portatile",
         "RuneInstallate": [
             "Barricata-1"
         ]
     },
+    "PAVESE+0": {
+        "addArmatura": 10,
+        "attributi": {
+            "Copertura Frontale": 10,
+            "LD": 4,
+            "LD_Spalle": -4,
+            "Parare": 15,
+            "Schivare": -10
+        },
+        "categoria": "scudo",
+        "complex_attributes": {
+            "Copertura Frontale": {
+                "direzione": 1,
+                "idCopertura": "scudo",
+                "key": "copertura"
+            }
+        },
+        "descrizione": [
+            "Un enorme scudo, così grande ed ingombrante da essere contemporanemte un intralcio ed un copertura per l’utilizzatore.",
+            "Per quanto non sia un buon compromesso per un normale combattentimento all’arma bianca, può fare la differenza contro gli incantesimi."
+        ],
+        "icona": "shields/inv_shield_03.png",
+        "ingombro": 10,
+        "nome": "Scudo Pavese"
+    },
     "SCUDO A MANDORLA +1-1": {
-        "nome": "Scudo a Mandorla +1",
+        "addArmatura": 6,
         "attributi": {
             "LD": 3,
             "LD_Spalle": -3,
             "Parare": 18
         },
-        "ingombro": 6,
-        "addArmatura": 6,
         "categoria": "scudo",
-        "icona": "shields/scudo.png"
+        "icona": "shields/scudo.png",
+        "ingombro": 6,
+        "nome": "Scudo a Mandorla +1"
     },
     "SCUDO A MANDORLA-1": {
-        "nome": "Scudo a Mandorla",
+        "addArmatura": 6,
         "attributi": {
             "LD": 3,
             "LD_Spalle": -3,
             "Parare": 15,
-            "Schivare": 0
+            "Schivare": -2
         },
+        "categoria": "scudo",
+        "icona": "shields/scudo.png",
         "ingombro": 6,
-        "addArmatura": 6,
-        "categoria": "scudo",
-        "icona": "shields/scudo.png"
-    },
-    "PAVESE+0": {
-        "nome": "Scudo Pavese",
-        "attributi": {
-            "LD": 4,
-            "LD_Spalle": -4,
-            "Parare": 15,
-            "Schivare": -10,
-            "Copertura Frontale": 10
-        },
-        "ingombro": 10,
-        "addArmatura": 10,
-        "categoria": "scudo",
-        "complex_attributes": {
-            "Copertura Frontale": {
-                "key": "copertura",
-                "direzione": 1,
-                "idCopertura": "scudo"
-            }
-        },
-        "icona": "shields/inv_shield_03.png"
+        "nome": "Scudo a Mandorla"
     },
     "TORRE+0": {
-        "nome": "Scudo Torre",
+        "addArmatura": 8,
         "attributi": {
+            "Copertura Frontale": 2,
             "LD": 4,
             "LD_Spalle": -4,
             "Parare": 15,
-            "Schivare": -6,
-            "Copertura Frontale": 2
+            "Schivare": -6
         },
-        "ingombro": 7,
-        "addArmatura": 8,
         "categoria": "scudo",
         "complex_attributes": {
             "Copertura Frontale": {
-                "key": "copertura",
                 "direzione": 1,
-                "idCopertura": "scudo"
+                "idCopertura": "scudo",
+                "key": "copertura"
             }
         },
-        "icona": "shields/inv_shield_03.png"
+        "descrizione": [
+            "Uno scudo molto grande, ragionevolmente dimensionato per offrire massima difesa in combattimento, posto che si possegga l’addestamento necessario per utilizzarlo.",
+            "Le sue dimensioni forniscono una modesta copertura che, occasionalmente, si può rivelare decisiva contro gli incantesimi."
+        ],
+        "icona": "shields/inv_shield_03.png",
+        "ingombro": 7,
+        "nome": "Scudo Torre"
     }
 }
