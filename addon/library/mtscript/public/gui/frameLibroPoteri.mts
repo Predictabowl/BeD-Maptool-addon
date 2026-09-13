@@ -47,13 +47,9 @@
 				Memorizzati: <span id="mem-num" data-max="[r: iMaxMem]" class='[r,if(iMemCount > iMaxMem): "over-limit"; ""]'>[r: iMemCount]</span>/[r: iMaxMem]
             </div>
         </div>
-
 		<input type="hidden" name="token" value="[r: oToken]">
 	</form>
 
-	<button class="theme-switch-btn" style="right:25px;" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')">
-		🌓
-	</button>
 
 
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/LibroIncantesimi.js?cachelib=true" defer></script>

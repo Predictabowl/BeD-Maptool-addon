@@ -44,7 +44,12 @@
 	</div>
 	[r, macro("gui/buildHeroicSkillsPanel@this"): oToken]
 
+	<button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: oToken]', '[r: sThemePreferenze]')">
+		🌓
+	</button>
+
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/ClassSkills.js?cachelib=true" defer></script>
+	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
 }]

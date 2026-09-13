@@ -404,7 +404,7 @@ ComponentDettagliOggetto.js, not reproduced here. */
 
 .inventory-zone {
     position: relative;
-    padding: 12px 14px 12px;
+    padding: 12px 0px 12px 12px;
     border-radius: 10px;
     background-color: var(--stats-bg);
     /* Recessed-tray look: shadow pushed in from every edge, heavier at

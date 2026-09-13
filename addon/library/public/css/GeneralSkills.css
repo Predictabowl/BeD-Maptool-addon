@@ -14,6 +14,7 @@ body {
     padding: 8px;
 }
 
+
 .capacita-frame {
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -69,7 +70,7 @@ body {
 /* --- Circumstance modifier bar --- */
 .circostanza-bar {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     gap: 8px;
     padding: 8px 12px;
     border-bottom: 1px solid var(--border-color);
@@ -85,11 +86,12 @@ body {
 }
 
 .circostanza-bar input {
-    width: 52px;
-    background-color: var(--bg-color);
+    width: 40px;
+    /* background-color: var(--bg-color); */
+    background-color: var(--stats-bg);
     border: 1px solid var(--border-color);
     color: var(--text-color);
-    border-radius: 4px;
+    /* border-radius: 4px; */
     padding: 2px 6px;
     text-align: center;
 }
@@ -215,4 +217,31 @@ body {
     opacity: 0.3;
     font-family: var(--font-default);
     font-size: 12px;
+}
+
+
+/* ================== INPUT BUTTONS ====================== */
+.number-input-wrapper {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.number-input-wrapper button {
+  background-color: var(--bg-color);
+  color: var(--stat-label-color);
+  border: none;
+  padding: 3px 3px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.number-input-wrapper button:hover {
+    /* border: 1px solid var(--accent-color); */
+  background-color: var(--stats-bg);
+  color: var(--accent-color);
+  font-weight: bolder;
 }

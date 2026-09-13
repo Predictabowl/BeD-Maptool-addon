@@ -28,7 +28,11 @@
 
 			<div class="circostanza-bar">
 				<label for="circostanza">Mod. Circostanza</label>
-				<input type="number" id="circostanza" value="0">
+				<div class="number-input-wrapper">
+					<button type="button" onclick="stepDown()">&lsaquo;</button>
+					<input type="number" id="circostanza" value="0">
+					<button type="button" onclick="stepUp()">&rsaquo;</button>
+				</div>
 				<span class="hint">sul prossimo tiro</span>
 			</div>
 

@@ -36,3 +36,12 @@ async function rollSkill(skillId) {
     document.getElementById("circostanza").value = 0;
 }
 
+function stepUp() {
+  const input = document.getElementById('circostanza');
+  input.stepUp();
+}
+
+function stepDown() {
+  const input = document.getElementById('circostanza');
+  input.stepDown();
+}

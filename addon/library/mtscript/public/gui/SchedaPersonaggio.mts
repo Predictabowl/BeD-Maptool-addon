@@ -255,13 +255,12 @@
                 <span class="v">[r: getCarM(tokenId)]</span>
             </div>
         </div>
-
+        <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: tokenId]', '[r: sThemePreferenze]')">
+            🌓
+        </button>
     </div>
 
     [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/HeadlessInfoBox.html")]
-    <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: tokenId]', '[r: sThemePreferenze]')">
-        🌓
-    </button>
     <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/SchedaPG.js?cachelib=false" defer></script>
     <script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>

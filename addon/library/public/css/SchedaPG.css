@@ -17,9 +17,12 @@ body {
     padding: 12px;
     width: 420px;
     transition: background-color 0.2s ease;
+    overflow: auto;
+    max-height: 100%;
 }
 
 .sheet {
+    position: relative;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -488,8 +491,8 @@ body {
 /* ==== Switch Button ==== */ 
 .theme-switch-btn {
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 5px;
+    right: 5px;
     z-index: 9999;
     background: transparent;
     border: none;
