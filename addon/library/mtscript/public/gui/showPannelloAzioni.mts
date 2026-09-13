@@ -1,3 +1,4 @@
+<!-- DEPRECATED, but still used -->
 [h: oToken = arg(0)]
 [h: sDialog = "DialogPannelloAzioni"]
 

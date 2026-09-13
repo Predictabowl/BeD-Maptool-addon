@@ -769,7 +769,9 @@
         "danno1H": "3d8+1",
         "danno2H": 0,
         "descrizione": [
-            "Un&#39arma dal passato avvolto nel mistero. Le origini della Scure di Timon sono del tutto sconosciute, ma la sua potenza è innegabile. Sulla possente lama d&#39acciaio sono incise due antiche rune del fulmine. Non appena viene impugnata, l&#39ascia si risveglia: la lama emette una tenue luce azzurrina e piccole scariche elettriche iniziano a sfrigolare lungo il filo, pronte a colpire."
+            "Un&#39arma dal passato avvolto nel mistero. Le origini della Scure di Timon sono sconosciute, ma la sua potenza è innegabile.", 
+            "La leggenda dice che fosse un’arma dai guerrieri della militaristica Legione, una delle tre istituzioni che governaneno il mondo di Cronos.",
+            "Sulla possente lama d&#39acciaio sono incise delle antiche rune del fulmine. Non appena viene impugnata, l&#39ascia si risveglia: la lama emette una tenue luce azzurrina e piccole scariche elettriche iniziano a sfrigolare lungo il filo, pronte a colpire."
         ],
         "icona": "axes/inv_axe_06.png",
         "ingombro": 3,

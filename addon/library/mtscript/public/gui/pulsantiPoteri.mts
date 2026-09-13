@@ -98,5 +98,8 @@
 	case "Capacita": {
 		[macro("gui/PannelloCapacita@this"): target]
 	};
+	case "trasferisciEquip":{
+		[macro("mobs/trasferisciEquipaggiamento@this"): json.append(target,getSelected())]
+	};
 	default :{}
 ]

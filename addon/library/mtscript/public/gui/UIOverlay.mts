@@ -139,6 +139,7 @@
 			</template>
 			<template id="submenu-consumabili">
 				<a onmouseup="scegliEvento(event,'Consumabili')">Consumabili</a>
+				<a onmouseup="scegliEvento(event,'trasferisciEquip')">Trasferisci Equip.</a>
 				<a onmouseup="scegliEvento(event,'Equipaggiamento')">Equipaggiamento</a>
 			</template>
 			<template id="submenu-bersaglio">

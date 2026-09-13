@@ -233,7 +233,7 @@ body {
   background-color: var(--bg-color);
   color: var(--stat-label-color);
   border: none;
-  padding: 3px 3px;
+  padding: 3px 4px;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.2s ease;
