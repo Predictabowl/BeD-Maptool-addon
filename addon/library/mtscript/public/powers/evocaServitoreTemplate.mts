@@ -77,6 +77,7 @@
 [macro("mechanics/setLivelloCreatura@this"): json.append(iLL, sSpawner, jRes)]
 [macro("mechanics/setSummonPoteri@this"): sSpawner] 
 [macro("mechanics/setSummonAbilita@this"): sSpawner] 
+[macro("mechanics/SetSpawnCaratteristiche@this"): sSpawner]
 [macro("events/eventInstaller@this"): json.append(sSpawner,"On_Death","despawnEvent","mechanics/despawnOnDeath@lib:it.aldinucci.piero.bed.maptool.ruleset","")]
 
 [h, if(isPC(source)): setPC(sSpawner); setNPC(sSpawner)]
