@@ -12,7 +12,7 @@
 <html>
 	<head> 
 			[r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/GlobalCssLink.html")]
-			<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/GeneralSkills.css?cachelib=false">
+			<link rel="stylesheet" type="text/css" href="lib://it.aldinucci.piero.bed.maptool.ruleset/css/GeneralSkills.css?cachelib=true">
 			<title>[r: getName(tokenId)] - Capacità Generali</title> 
 	</head>
 	<body class="[r, if(bLightMode == 1): 'light-mode']" data-tokenid="[r: tokenId]">
@@ -75,7 +75,7 @@
 
 		</div>
 
-		<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/GeneralSkills.js?cachelib=false" defer></script>
+		<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/GeneralSkills.js?cachelib=true" defer></script>
 	</body>
 </html>
 }]
