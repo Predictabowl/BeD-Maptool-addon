@@ -24,9 +24,8 @@ body {
     color: var(--text-color);
     padding: 0px;
     margin: 0px;
-    overflow: hidden;
-    /* display: flex; */
-    /* flex-direction: column; */
+    overflow: auto;
+    max-height: 100vh;
 }
 
 
@@ -46,9 +45,7 @@ span {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-auto-rows: max-content;
     gap: 2px;
-    overflow-y: auto;
     padding: 5px 3px 5px 3px;
-    max-height: 100vh;
 }
 
 
