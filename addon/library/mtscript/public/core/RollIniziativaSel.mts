@@ -5,7 +5,8 @@
 {
 	[r, if(getPropertyType(id) == "Basic"), code:{
 		[h: switchToken(id)]
-		[h: iniz = getProperty("Tiro_Iniziativa")]
+		[macro("crud/getIniziativa@this"): id]
+		[h: iniz = macro.return]
 		[macro("utility/rollIniziativa@this"): iniz]
 		[h: tiro = min(macro.return,iStart)]
 		[h: addToInitiative(1,tiro)]

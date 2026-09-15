@@ -30,7 +30,8 @@
 [h: jData =json.set(jData, "res_veleno", macro.return)]
 
 
-[h: jData =json.set(jData, "iniziativa", strformat("1d24%+d",Tiro_Iniziativa), "mov_time", getMoveTime(tokenId), "concentrazione", getConcentrazionePoteri(tokenId), "perturbazione", strformat("1d100%+d",getPerturbazionePoteri(tokenId)))]
+[h, macro("crud/getIniziativa@this"): tokenId]
+[h: jData =json.set(jData, "iniziativa", strformat("1d24%+d", macro.return), "mov_time", getMoveTime(tokenId), "concentrazione", getConcentrazionePoteri(tokenId), "perturbazione", strformat("1d100%+d",getPerturbazionePoteri(tokenId)))]
 [h, macro("core/getMDIPerc@this"): tokenId]
 [h: jData =json.set(jData, "mdi", strformat("%+.1f", (calcPercentMod(macro.return)-1)*100.0))]
 [h, macro("core/getMDRPerc@this"): tokenId]

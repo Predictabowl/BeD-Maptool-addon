@@ -1,3 +1,4 @@
+<!-- DEPRECATED -->
 [h: source = json.get(macro.args,0)]
 [h: sFrame = "Scheda"]
 [h, if(json.length(macro.args) > 1), code:{
@@ -249,7 +250,8 @@
 						<tbody>
 							<tr class="evenRow" title="Il tiro iniziativa di effettua all'inizio di ogni round">
 								<td class="description">Iniziativa</td>
-								<td class="table-data">[r: strformat("1d24%+d",Tiro_Iniziativa)]</td>
+								[h, macro("crud/getIniziativa@this"): id]
+								<td class="table-data">[r: strformat("1d24%+d", macro.return)]</td>
 							</tr>
 							<tr class="oddRow" title="Tempo richeisto per eseguire un'azione di Movimento">
 								<td class="description">Tempo Mov.</td>
