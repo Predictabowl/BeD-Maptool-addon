@@ -131,6 +131,7 @@
 [h: defineFunction("getPreferenza","crud/getPreference@this")]
 [h: defineFunction("getProprietaComposta","crud/getCompoundProperty@this")]
 [h: defineFunction("getPuntiEroe","class_skills/getPuntiEroe@this")]
+[h: defineFunction("getPVMax","crud/getPVMax@this")]
 [h: defineFunction("getRecuperoCostoMolt","powers/getRecuperoMultiplier@this")]
 [h: defineFunction("getResistance","crud/getResistance@this")]
 [h: defineFunction("getResistenzaExtra","crud/getResistenzaExtra@this")]
