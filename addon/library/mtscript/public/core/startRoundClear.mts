@@ -2,8 +2,8 @@
 
 [h: switchToken(id)]
 [h: PA = PA_Max]
-[h: MM = MM_Max]
-[h: PP = PP_Max]
+[h: MM = getMMMax(id)]
+[h: PP = getPPMax(id)]
 [h: resetAttacchiRimasti(id)]
 [h: resetPotereOffensivo(id)]
 [h: Messaggi = "{}"]

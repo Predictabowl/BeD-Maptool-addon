@@ -29,7 +29,6 @@
 [h, macro("crud/getResistenzaExtra@this"): json.append(tokenId, "Veleno")]
 [h: jData =json.set(jData, "res_veleno", macro.return)]
 
-
 [h, macro("crud/getIniziativa@this"): tokenId]
 [h: jData =json.set(jData, "iniziativa", strformat("1d24%+d", macro.return), "mov_time", getMoveTime(tokenId), "concentrazione", getConcentrazionePoteri(tokenId), "perturbazione", strformat("1d100%+d",getPerturbazionePoteri(tokenId)))]
 [h, macro("core/getMDIPerc@this"): tokenId]

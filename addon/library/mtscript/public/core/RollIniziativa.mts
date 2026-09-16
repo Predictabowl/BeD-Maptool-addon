@@ -6,7 +6,7 @@
 	[h: target = json.get(id,"tokenId")]
 	[h: switchToken(target)]
 	[setInitiativeHold(0)]
-	[macro("crud/getIniziativa@this"): id]
+	[macro("crud/getIniziativa@this"): target]
 	[h: iniz = macro.return]
 	[macro("utility/rollIniziativa@this"): iniz]
 	[h: tiro = macro.return]
