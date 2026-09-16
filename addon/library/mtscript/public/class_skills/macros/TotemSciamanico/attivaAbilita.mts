@@ -37,7 +37,7 @@
 [h: setProperty("Res_Negativo",Res_Negativo,sSpawner)]
 [h: setProperty("Res_Positivo",Res_Positivo,sSpawner)]
 [h: setProperty("Res_Fisico",Res_Fisico,sSpawner)]
-[h: iPV = floor(PV_Max/2)]
+[h: iPV = floor(getPVMax(source)/2)]
 [h: setProperty("PV_Max",iPV,sSpawner)]
 [h: setProperty("PV",iPV,sSpawner)]
 

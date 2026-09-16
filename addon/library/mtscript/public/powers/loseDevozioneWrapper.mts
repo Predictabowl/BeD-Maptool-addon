@@ -17,7 +17,7 @@
 [h, if(!bResult), code:{
 	[iScarto = json.get(jRollResult,3) - json.get(jRollResult,2)]
 	[switchToken(oToken)]
-	[iDanno = roundRoll(PV_Max * iScarto /10)]
+	[iDanno = roundRoll(getPVMax(oToken) * iScarto /10)]
 	[dannoTarget(oToken, iDanno, oToken)]
 	[sMsg = strformat("%{sMsg} | %s", json.get(jRollResult,1))]
 }]

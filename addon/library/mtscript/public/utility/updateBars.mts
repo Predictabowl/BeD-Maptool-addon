@@ -1,6 +1,6 @@
 [h: source = macro.args]
 [h: switchToken(source)]
-[h: bar.Health = PV/PV_Max]
+[h: bar.Health = PV/getPVMax(source)]
 [h, if(isBarVisible("Mana")), code:{
 	[h, if(Mana_Max>0): bar.Mana = Mana/Mana_Max]
 }]

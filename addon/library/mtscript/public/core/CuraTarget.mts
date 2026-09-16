@@ -35,9 +35,10 @@
 [h: switchToken(id)]
 [h, if(getPropertyType() != "Basic"): abort(0)] 
 [h: curaEff=guar]
-[h, if(PV+guar > PV_Max), CODE:{ 
-    [h: curaEff = PV_Max-PV]
-    [h: PV=PV_Max]
+[h: iPVMax = getPVMax(id)]
+[h, if(PV+guar > iPVMax), CODE:{ 
+    [h: curaEff = iPVMax-PV]
+    [h: PV=iPVMax]
 };{
     [h: PV = PV + guar]
 }]

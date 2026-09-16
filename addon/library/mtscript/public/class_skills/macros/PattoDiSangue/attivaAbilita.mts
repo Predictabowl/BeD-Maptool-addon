@@ -8,7 +8,7 @@
 [h:sNomeAb = "PattoDiSangue"]
 
 [h: switchToken(source)]
-[h: iDmg = ceil(PV_Max * 0.20)]
+[h: iDmg = ceil(getPVMax(source) * 0.20)]
 [h: jDannoArgs = json.set("", "target", source, "source", source, "valore", iDmg, "verbose", 0, "ignoreReductions", 1 )]
 [h: dannoTarget(jDannoArgs)]
 [h: recuperaMana(source, 90)]

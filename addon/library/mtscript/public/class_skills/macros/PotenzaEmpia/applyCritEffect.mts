@@ -2,7 +2,7 @@
 [h: iCrit = arg(1)]
 
 [h: switchToken(source)]
-[h: fPvPerc = PV/PV_Max]
+[h: fPvPerc = PV/getPVMax(source)]
 
 [h, if(fPvPerc > 0.5): return(0,"")]
 

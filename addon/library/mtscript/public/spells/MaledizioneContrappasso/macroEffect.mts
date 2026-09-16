@@ -6,7 +6,8 @@
 
 [h: sMsg = ""]
 [h: switchToken(target)]
-[h, if(PV < (PV_MAX/2)), code:{
+[h: iPVMax = getPVMax(target)]
+[h, if(PV < (iPVMax/2)), code:{
 	[spellId = "MaledizioneContrappasso"]
 	[iMancare = 24 * iMolt]
 	[pushStatModifier(source,"Mancare",iMancare)]
