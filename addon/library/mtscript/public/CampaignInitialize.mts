@@ -1,4 +1,4 @@
-[h: broadcast("Initializing B&D add on...")]
+[h: broadcast("Initializing B&D add on...", "self")]
 
 [h: defineFunction("addDannoArmaAgg","crud/addDannoArmaAgg@this")]
 [h: defineFunction("addPoteriMem","crud/addPoteriMemorizzati@this")]
@@ -64,7 +64,7 @@
 [h: defineFunction("getCaricheRuna","consumables/getCaricheRuna@this")]
 [h: defineFunction("getCarico","mobs/getCarico@this")]
 [h: defineFunction("getCarP","crud/getCarP@this")]
-[h: defineFunction("getCarM","crud/getCarMana@this")]
+[h: defineFunction("getCarMana","crud/getCarMana@this")]
 [h: defineFunction("getConcentrazionePoteri","crud/getConcentrazione@this")]
 [h: defineFunction("getCrit","crud/getCrit@this")]
 [h: defineFunction("getCritProb","crud/getCritProb@this")]
@@ -105,6 +105,7 @@
 [h: defineFunction("getMacroFromToken","mobs/getMacro@this")]
 [h: defineFunction("getMaeARap","combat/getMARapidita@this")]
 [h: defineFunction("getMaeATec","combat/getMATecnica@this")]
+[h: defineFunction("getManaMax","crud/getManaMax@this")]
 [h: defineFunction("getMancare","core/getMancare@this")]
 [h: defineFunction("getMancareProb","core/getMancareProb@this")]
 [h: defineFunction("getMessaggio","utility/getMessaggio@this")]
@@ -129,6 +130,7 @@
 [h: defineFunction("getPoteriMem","crud/getPoteriMemorizzati@this")]
 [h: defineFunction("getPoteriEquip","consumables/getPoteriEquip@this")]
 [h: defineFunction("getPoteriSpirito","powers/getPoteriSpirito@this")]
+[h: defineFunction("getPFMax","crud/getPFMax@this")]
 [h: defineFunction("getPPMax","crud/getPPMax@this")]
 [h: defineFunction("getPreferenza","crud/getPreference@this")]
 [h: defineFunction("getProprietaComposta","crud/getCompoundProperty@this")]
@@ -280,4 +282,4 @@
 [h: defineFunction("varX","powers/varX@this")]
 [h: defineFunction("visualizzaAura","utility/modStackCerchio@this")]
 
-[h: broadcast("Initialization complete.")]
+[h: broadcast("Initialization complete.", "self")]

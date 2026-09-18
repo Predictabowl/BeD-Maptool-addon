@@ -252,7 +252,7 @@
             </div>
             <div class="derived-row">
                 <span class="k">Caratteristica Mana</span>
-                <span class="v">[r: getCarM(tokenId)]</span>
+                <span class="v">[r: getCarMana(tokenId)]</span>
             </div>
         </div>
         <button class="theme-switch-btn" id="themeToggle" title="Cambia Tema" onclick="toggleTheme('[r: tokenId]', '[r: sThemePreferenze]')">

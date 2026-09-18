@@ -8,8 +8,8 @@
 	};{
 		[switchToken(id)]
 		[macro("mobs/riposoBasicRecovery@this"): id]
-		[h: PF = PF_Max]
-		[h: Mana = Mana_Max]
+		[h: PF = getPFMax(id)]
+		[h: Mana = getManaMax(id)]
 		[setTossicoLiv(id,0)]
 		[macro("consumables/ricaricaRuneGiornaliere@this"): id]
 		[macro("mobs/getPVRiposoLungo@this"): id]

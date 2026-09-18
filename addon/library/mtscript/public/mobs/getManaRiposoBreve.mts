@@ -7,7 +7,7 @@
 	[bUseFRM = json.contains(jOptions,"useFRM")]
 }]
 
-[h: iValue = getCarM(oToken)*30]
+[h: iValue = getCarMana(oToken)*30]
 [h, if(bUseFRM): iValue = roundRoll(iValue + getFRM(oToken))]
 
 [h: macro.return = iValue]
