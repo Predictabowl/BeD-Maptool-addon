@@ -1,0 +1,78 @@
+{
+    "Assassino": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0"
+    },
+    "Barbaro": {
+        "capacita-spiritica": "0.5",
+        "dottrine": "0",
+        "slot-incantesimi": "0"
+    },
+    "Bardo": {
+        "capacita-spiritica": "0",
+        "dottrine": "13/30",
+        "slot-incantesimi": "0"
+    },
+    "Cavaliere della Morte": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.35"
+    },
+    "Chierico": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.7"
+    },
+    "Druido": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.7"
+    },
+    "Guerriero": {},
+    "Guerriero Arcano": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.35"
+    },
+    "Inquisitore": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.35"
+    },
+    "Mago": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.7"
+    },
+    "Necromante": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.7"
+    },
+    "Paladino": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.35"
+    },
+    "Psionico": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0"
+    },
+    "Ranger": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.35"
+    },
+    "Sciamano": {
+        "capacita-spiritica": "1",
+        "dottrine": "13/15",
+        "slot-incantesimi": "0"
+    },
+    "Stregone": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0.7"
+    }
+}
