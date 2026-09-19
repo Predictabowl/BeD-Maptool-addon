@@ -1,4 +1,4 @@
-[h: oToken = arg(0)]
+[h, if(argCount() > 0): oToken = arg(0); oToken = currentToken()]
 
 
 [h: lCarP = getProperty("Car_Mana", oToken)]

@@ -89,7 +89,7 @@
 				</table>
 			</div>
 		</div>
-		<div class="mainRow"> Car. Mana [r: getCarM(oToken)]</div>
+		<div class="mainRow"> Car. Mana [r: getCarMana(oToken)]</div>
 	</div>
 	
 	</body>

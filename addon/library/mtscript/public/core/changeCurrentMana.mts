@@ -4,6 +4,9 @@
 	[if(argCount()>2): sMsgTag = arg(2); sMsgTag = ""]
 }]
 
-[macro("utility/modMinMax@this"): json.set("","target",target,"statToMod","Mana","maxStat","Mana_Max","modValue",iModMana)]
-[macro("utility/annunciaModificaStat@this"): json.set("","target",target,"colore","blue","nome","Punti Mana","valore",macro.return,"msgTag",sMsgTag)]
+[h: switchToken(target)]
+[h: iNewMana = min(getManaMax(target), max(0, Mana + iModMana))]
+[h: iOffSet = iNewMana - Mana]
+[h: Mana = iNewMana]
+[macro("utility/annunciaModificaStat@this"): json.set("","target",target,"colore","blue","nome","Punti Mana","valore",iOffSet,"msgTag",sMsgTag)]
 [macro("utility/updateBars@this"):target]

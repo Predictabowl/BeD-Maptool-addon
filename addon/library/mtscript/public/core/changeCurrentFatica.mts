@@ -9,6 +9,9 @@
 	[sMsgTag = ""]
 }]
 
-[macro("utility/modMinMax@this"): json.set("","target",target,"statToMod","PF","maxStat","PF_Max","modValue",modFatica)]
-[macro("utility/annunciaModificaStat@this"): json.set("","target",target,"colore","orange","nome","Punti Fatica","valore",macro.return,"msgTag",sMsgTag)]
+[h: switchToken(target)]
+[h: iNewPF = min(getPFMax(target), max(0, PF + modFatica))]
+[h: iOffSet = iNewPF - PF]
+[h: PF = iNewPF]
+[macro("utility/annunciaModificaStat@this"): json.set("","target",target,"colore","orange","nome","Punti Fatica","valore",iOffSet,"msgTag",sMsgTag)]
 [macro("utility/updateBars@this"):target]
