@@ -2,77 +2,124 @@
     "Assassino": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0"
+        "slot-incantesimi": "0",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.7"
+        }
     },
     "Barbaro": {
         "capacita-spiritica": "0.5",
         "dottrine": "0",
-        "slot-incantesimi": "0"
+        "slot-incantesimi": "0",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.3"
+        }
     },
     "Bardo": {
         "capacita-spiritica": "0",
         "dottrine": "13/30",
-        "slot-incantesimi": "0"
+        "slot-incantesimi": "0",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.3"
+        }
     },
     "Cavaliere della Morte": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.35"
+        "slot-incantesimi": "0.35",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.3"
+        }
     },
     "Chierico": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.7"
+        "slot-incantesimi": "0.7",
+        "tecniche-marziali": {}
     },
     "Druido": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.7"
+        "slot-incantesimi": "0.7",
+        "tecniche-marziali": {}
     },
-    "Guerriero": {},
+    "Guerriero": {
+        "capacita-spiritica": "0",
+        "dottrine": "0",
+        "slot-incantesimi": "0",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "19/30"
+        }
+    },
     "Guerriero Arcano": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.35"
+        "slot-incantesimi": "0.35",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.3"
+        }
     },
     "Inquisitore": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.35"
+        "slot-incantesimi": "0.35",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.3"
+        }
     },
     "Mago": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.7"
+        "slot-incantesimi": "0.7",
+        "tecniche-marziali": {}
     },
     "Necromante": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.7"
+        "slot-incantesimi": "0.7",
+        "tecniche-marziali": {}
     },
     "Paladino": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.35"
+        "slot-incantesimi": "0.35",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.3"
+        }
     },
     "Psionico": {
         "capacita-spiritica": "0",
-        "dottrine": "0",
-        "slot-incantesimi": "0"
+        "dottrine": "13/15",
+        "slot-incantesimi": "0",
+        "tecniche-marziali": {}
     },
     "Ranger": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.35"
+        "slot-incantesimi": "0.35",
+        "tecniche-marziali": {
+            "base": 1,
+            "progressione": "0.3"
+        }
     },
     "Sciamano": {
         "capacita-spiritica": "1",
-        "dottrine": "13/15",
-        "slot-incantesimi": "0"
+        "dottrine": "0",
+        "slot-incantesimi": "0",
+        "tecniche-marziali": {}
     },
     "Stregone": {
         "capacita-spiritica": "0",
         "dottrine": "0",
-        "slot-incantesimi": "0.7"
+        "slot-incantesimi": "0.7",
+        "tecniche-marziali": {}
     }
 }

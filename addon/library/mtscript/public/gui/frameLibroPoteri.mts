@@ -43,7 +43,8 @@
             </div>
 
             <div class="grimoire-counter">
-				[h: iMaxMem = getProperty("Inc_Memorizzabili",oToken)]
+				[h, macro("crud/getIncantesimiMax@this"): oToken]
+				[h: iMaxMem = macro.return]
 				Memorizzati: <span id="mem-num" data-max="[r: iMaxMem]" class='[r,if(iMemCount > iMaxMem): "over-limit"; ""]'>[r: iMemCount]</span>/[r: iMaxMem]
             </div>
         </div>

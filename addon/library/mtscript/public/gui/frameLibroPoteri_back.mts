@@ -50,7 +50,8 @@
 		<input type="submit" name="Annulla" value="Annulla" style="margin:5px"/>
 	</form>
 	<div style="text-align:center">
-		Memorizzati: <span id="mem-num">[r: iMemCount]</span>/[r: getProperty("Inc_Memorizzabili",oToken)]
+		[h, macro("crud/getIncantesimiMax@this"): oToken]
+		Memorizzati: <span id="mem-num">[r: iMemCount]</span>/[r: macro.return]
 	</div>
 
 	<!-- Form Nascosto per descrizione spell -->

@@ -62,7 +62,35 @@
         <div class="tab-panel" id="tab-magia">
             <div class="section-title">Scuole</div>
             <table class="poteri-table" id="poteriTable"></table>
-            <div class="hint">LL e CD sono derivati (LMM + bonus generale + bonus arma) e già riportati nella descrizione di ogni incantesimo/potere/tecnica &mdash; qui solo per riferimento rapido.</div>
+            <div class="hint">LL e CD sono derivati (LMM + bonus generale + bonus arma) e già riportati nella descrizione di ogni incantesimo/potere/tecnica.</div>
+            [h, macro("crud/getIncantesimiMax@this"): tokenId]
+            [r, if(macro.return > 0), code:{
+                <div class="kv-row">
+                    <span>Incantesimi Memorizzabili</span>
+                    <span class="v" id="incantesimi-memorizzabili">[r: macro.return]</span>
+                </div>
+            }]
+            [h, macro("crud/getCapacitaSpiritica@this"): tokenId]
+            [r, if(macro.return > 0), code:{
+                <div class="kv-row">
+                    <span>Capacità Spiritica</span>
+                    <span class="v" id="capacita-spiritica">[r: macro.return]</span>
+                </div>
+            }]
+            [h, macro("crud/getDottrineMax@this"): tokenId]
+            [r, if(macro.return > 0), code:{
+                <div class="kv-row">
+                    <span>Dottrine Conosciute</span>
+                    <span class="v" id="dottrine-conosciute">[r: macro.return]</span>
+                </div>
+            }]
+            [h, macro("crud/getTecnicheMax@this"): tokenId]
+            [r, if(macro.return > 0), code:{
+                <div class="kv-row">
+                    <span>Tecniche Marziali</span>
+                    <span class="v" id="tecniche-marziali">[r: macro.return]</span>
+                </div>
+            }]
         </div>
 
         <!-- ===================== TAB: DIFESE ===================== -->
