@@ -7,7 +7,9 @@
     },
     "ARMATURA": {
         "description": [
-            "Solo un potere Armatura può essere attivo su di una creatura."
+            "Solo un potere Armatura può essere attivo su di una creatura.",
+            "Se offre bonus LD allora questo è limitato a 10 - addestramento dell’armatura indossata.",
+            "Esempio: Se si indossa un’armatura con addestramento 6, il bonus massimo ricevibile è +4."
         ],
         "name": "Armatura"
     },
