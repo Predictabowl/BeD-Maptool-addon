@@ -12,7 +12,7 @@
 
 [h: sDialog = "DescrizioneIncantesimo"]
 [h, macro("gui/getVisibleSpellTraits@this"): spellName]
-[h: lTratti = macro.return]
+[h: aTratti = macro.return]
 
 [h, macro("consumables/getUseItemPrice@this"): json.append(oToken, spellName, sTipoConsumable)]
 [h: oConsumablePrices = macro.return]
@@ -43,8 +43,10 @@
                 <div class="chip-row">
 					[h: sTipo = fetchSpellProp(spellName,"tipo")]
                     <span class="chip type-chip [r: upper(sTipo)]">[r: sTipo]</span>
-					[r, foreach(sTratto, lTratti, ""), code:{
-                    	<span class="chip trait-chip">[r: sTratto]</span>
+                    [r, foreach(jTratto, aTratti, ""), code:{
+                    	<button class="chip trait-chip" data-text_popup='[r: json.get(jTratto,"description")]' onclick="openHeadlessPopup(event)">
+                            [r: json.get(jTratto, "name")]
+                        </button>
 					} ]
                 </div>
             </div>
@@ -173,6 +175,7 @@
     </dialog>
 
     [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/InfoBox.html")]
+    [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/HeadlessInfoBox.html")]
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>
 </html>
