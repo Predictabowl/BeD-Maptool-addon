@@ -39,7 +39,7 @@
 					[h: sTipo = fetchSpellProp(spellName,"tipo")]
                     <span class="chip type-chip [r: upper(sTipo)]">[r: sTipo]</span>
 					[r, foreach(jTratto, aTratti, ""), code:{
-                    	<button class="chip trait-chip" data-text_popup='[r: json.get(jTratto,"description")]' onclick="openHeadlessPopup(event)">
+                    	<button class="chip trait-chip interactive" data-text_popup='[r: json.get(jTratto,"description")]' onclick="openHeadlessPopup(event)">
                             [r: json.get(jTratto, "name")]
                         </button>
 					} ]

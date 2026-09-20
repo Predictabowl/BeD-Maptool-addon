@@ -7,8 +7,8 @@
 [h: bLightMode = getPreferenza("light_mode",oToken,sThemePreferenze)]
 
 
-[h: sTipo = upper(fetchClassSkillProp(skillId,"tipo"))]
-[h, macro("gui/getSkillTypeClass@this"): sTipo]
+[h: sTipo = fetchClassSkillProp(skillId,"tipo")]
+[h, macro("gui/getSkillTypeClass@this"): upper(sTipo)]
 [h: skillTypeClass = macro.return]
 [h, macro("class_skills/getAbilityDescription@this"): json.append(skillId, oToken)]
 [h: aText = macro.return]
@@ -54,11 +54,10 @@
                 <h2 class="spell-title">[r: sFluffName]</h2>
                 <div class="chip-row">
 					<span class="chip type-chip [r: skillTypeClass]">
-						[r: sTipo]
+						[r: lower(sTipo)]
 					</span>
 					[r, foreach(sTratto, aTratti, ""), code:{
-						[h, macro("utility/textProcessHTML2@this"): sTratto]
-                    	<span class="chip trait-chip">[r: macro.return]</span>
+                    	<span class="chip trait-chip">[r: lower(sTratto)]</span>
 					} ]
                 </div>
             </div>
