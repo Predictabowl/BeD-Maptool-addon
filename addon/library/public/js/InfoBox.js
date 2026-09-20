@@ -1,4 +1,8 @@
-async function openPopup(event) {
+function openPopup(event) {
+    internalOpenPopup(event, keyDescriptionsInfoBoxData);
+}
+
+async function internalOpenPopup(event, dataLoaderCallback) {
     event.preventDefault();
     event.stopPropagation();
     
@@ -17,49 +21,55 @@ async function openPopup(event) {
         return;
     }
 
+    // Populate content & track current key
+    titleEl.textContent = key;
+    popup.dataset.currentKey = key;
+
+    const data = await dataLoaderCallback(trigger);
+
+    // Handle acronym
+    if (data.acronimo && data.acronimo.trim() !== "") {
+        acronymEl.textContent = data.acronimo;
+        acronymEl.style.display = "inline-block";
+    } else {
+        acronymEl.style.display = "none";
+        acronymEl.textContent = "";
+    }
+
+    descEl.innerHTML = data.descrizione.map(d => `<p>${d}</p>`).join('') || "";
+
+    // Reposition only if the clicked trigger is NOT already inside the active popup
+    if (!clickedInsidePopup) {
+        positionPopup(trigger, popup);
+    }
+
+    // Ensure it's open
+    if (!popup.hasAttribute("open")) {
+        popup.show();
+    }
+
+}
+
+
+async function keyDescriptionsInfoBoxData(element) {
+    const key = element.textContent.trim();
     try {
-        // MapTool macro path
         const response = await fetch("lib://it.aldinucci.piero.bed.maptool.ruleset/utility/getInfoBoxData", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify([key])
-        });
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify([key])
+            });
 
-        if (!response.ok) {
-            throw new Error("Failed to fetch info box data");
-        }
+            if (!response.ok) {
+                throw new Error("Failed to fetch info box data");
+            }
 
-        const data = await response.json();
-
-        // Populate content & track current key
-        titleEl.textContent = key;
-        popup.dataset.currentKey = key;
-
-        // Handle acronym
-        if (data.acronimo && data.acronimo.trim() !== "") {
-            acronymEl.textContent = data.acronimo;
-            acronymEl.style.display = "inline-block";
-        } else {
-            acronymEl.style.display = "none";
-            acronymEl.textContent = "";
-        }
-
-        descEl.innerHTML = data.descrizione || "";
-
-        // Reposition only if the clicked trigger is NOT already inside the active popup
-        if (!clickedInsidePopup) {
-            positionPopup(trigger, popup);
-        }
-
-        // Ensure it's open
-        if (!popup.hasAttribute("open")) {
-            popup.show();
-        }
-
+        return await response.json();
     } catch (error) {
         console.error("Error loading info box data:", error);
     }
 }
+
 
 // Helper function to handle vertical and horizontal boundary calculations
 function positionPopup(trigger, popup) {

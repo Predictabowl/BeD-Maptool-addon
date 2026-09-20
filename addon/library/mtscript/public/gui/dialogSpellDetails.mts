@@ -4,7 +4,7 @@
 [h: sDialog = "DescrizioneIncantesimo"]
 
 [h, macro("gui/getVisibleSpellTraits@this"): spellName]
-[h: lTratti = macro.return]
+[h: aTratti = macro.return]
 [h, macro("gui/delSpellStatFromCache@this"):json.append(oToken,spellName)]
 [h, macro("gui/CompileSpellCardValues@this"):json.append(oToken,spellName)]
 [h: oSpellData = macro.return]
@@ -38,9 +38,10 @@
                 <div class="chip-row">
 					[h: sTipo = fetchSpellProp(spellName,"tipo")]
                     <span class="chip type-chip [r: upper(sTipo)]">[r: sTipo]</span>
-					[r, foreach(sTratto, lTratti, ""), code:{
-                        [h, macro("utility/textProcessHTML2@this"): sTratto]
-                    	<span class="chip trait-chip">[r: macro.return]</span>
+					[r, foreach(jTratto, aTratti, ""), code:{
+                    	<span class="chip trait-chip" data-text_popup='[r: json.get(jTratto,"description")]' onclick="openHeadlessPopup(event)">
+                            [r: json.get(jTratto, "name")]
+                        </span>
 					} ]
                 </div>
             </div>
@@ -173,6 +174,7 @@
     </dialog>
 
     [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/InfoBox.html")]
+    [r: data.getStaticData("it.aldinucci.piero.bed.maptool.ruleset", "public/html/HeadlessInfoBox.html")]
 
 	<script src="lib://it.aldinucci.piero.bed.maptool.ruleset/js/spellCommonScripts.js?cachelib=true" defer></script>
 </body>

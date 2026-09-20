@@ -86,9 +86,9 @@ body {
 
 .chip {
     font-family: var(--font-title);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
+    text-transform: capitalize;
     padding: 3px 10px;
     border-radius: 999px;
 }
@@ -102,6 +102,12 @@ body {
     background: transparent;
     border: 1px solid var(--border-color);
     color: var(--text-color);
+    cursor: pointer;
+}
+
+.chip.trait-chip:hover {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
 }
 
 /* --- Divisore ornamentale --- */

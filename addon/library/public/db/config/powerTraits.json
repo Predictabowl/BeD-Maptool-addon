@@ -1,0 +1,51 @@
+{
+    "AGGRESSIONE": {
+        "description": [
+            "Solo un potere Aggressione può essere attivo su di una creatura."
+        ],
+        "name": "Aggressione"
+    },
+    "ARMATURA": {
+        "description": [
+            "Solo un potere Armatura può essere attivo su di una creatura."
+        ],
+        "name": "Armatura"
+    },
+    "CONTROLLATO": {
+        "description": [
+            "Non colpisce gli alleati."
+        ],
+        "name": "Controllato"
+    },
+    "ESCLUSIVO": {
+        "description": [
+            "Può essere acquisito solamente tramite abilità di classe.",
+            "Non può essere riprodotto su rune o pergamene."
+        ],
+        "name": "Esclusivo"
+    },
+    "OPP": {
+        "description": [
+            "Può essere utilizzato per infliggere un attacco di opportunità."
+        ],
+        "name": "Opportunità"
+    },
+    "RISOLUTO": {
+        "description": [
+            "Ha +15 sulle prove di Concentrazione."
+        ],
+        "name": "Risoluto"
+    },
+    "SANGUINAMENTO": {
+        "description": [
+            "Si applica la resisitenza al Sanguinamento."
+        ],
+        "name": "Sanguinamento"
+    },
+    "VELENO": {
+        "description": [
+            "Si applica la resisitenza al Veleno."
+        ],
+        "name": "Veleno"
+    }
+}
