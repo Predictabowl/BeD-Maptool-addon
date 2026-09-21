@@ -22,6 +22,7 @@
     "ESCLUSIVO": {
         "description": [
             "Può essere acquisito solamente tramite abilità di classe.",
+            "Non conta ai fini del numero massimo di poteri memorizzabili e conosciuti.",
             "Non può essere riprodotto su rune o pergamene."
         ],
         "name": "Esclusivo"
