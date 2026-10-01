@@ -10,13 +10,19 @@
 [h: aResult = macro.return]
 
 [h: iMana = min(roundRoll(json.get(aResult,"mana")/2),Mana)]
-[h: iPA = min(roundRoll(json.get(aResult,"PA")/2),PA)]
-[h: iPF = min(roundRoll(json.get(aResult,"PF")/2),PF)]
-[h: iPP = min(roundRoll(json.get(aResult,"PP")/2),PP)]
-
 [h: Mana = Mana - iMana]
+[h: iPF = min(roundRoll(json.get(aResult,"PF")/2),PF)]
 [h: PF = PF - iPF]
-[h: PA = PA - iPA]
-[h: PP = PP - iPP]
-<!-- No need to calculate PA based on PP, PP will go on negative and will be payed on next power -->
+
+[h: iPP = PP - roundRoll(json.get(aResult,"PP")/2)]
+[h: iPA = min(iPP, 0)]
+[h: PP = max(iPP, 0)]
+
+[h: iMM = MM - roundRoll(json.get(aResult,"MM")/2)]
+[h: iPA = iPA + min(iMM, 0)]
+[h: MM = max(iMM, 0)]
+
+[h: iPA = PA + iPA - roundRoll(json.get(aResult,"PA")/2)]
+[h: PA = max(iPA, 0)]
+
 [h, macro("utility/updateBars@this"):target]
