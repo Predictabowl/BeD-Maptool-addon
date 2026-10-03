@@ -11,7 +11,7 @@
       "cariche_base": "",
       "durata": "0",
       "elemento": "Positivo",
-      "mm": "9",
+      "mm": "10",
       "opportunita": 1,
       "pa": "0",
       "pp": "0",
@@ -23,7 +23,7 @@
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "17",
+      "tossicita": "0",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -40,19 +40,19 @@
       "cariche_base": "",
       "durata": "0",
       "elemento": "Positivo",
-      "mm": "6",
+      "mm": "4",
       "opportunita": 1,
       "pa": "0",
       "pp": "0",
       "proiettile": "Materiale",
-      "raggio": "13",
+      "raggio": "10",
       "tags": "",
       "tempo": "14",
       "tipo": "Offensivo",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "4",
+      "tossicita": "0",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -69,19 +69,19 @@
       "cariche_base": "",
       "durata": "5",
       "elemento": "Fuoco",
-      "mm": "9",
+      "mm": "11",
       "opportunita": 1,
       "pa": "0",
       "pp": "0",
       "proiettile": "Materiale",
       "raggio": "12",
       "tags": "",
-      "tempo": "22",
+      "tempo": "24",
       "tipo": "Offensivo",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "19",
+      "tossicita": "0",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -98,19 +98,19 @@
       "cariche_base": "",
       "durata": "6",
       "elemento": "Terra",
-      "mm": "3",
+      "mm": "2",
       "opportunita": 0,
       "pa": "0",
       "pp": "0",
       "proiettile": "Energetico",
       "raggio": "0",
-      "tags": "ARMATURA, NOCRITICO, POZIONE, TOSSICO,OGGETTO",
-      "tempo": "10",
+      "tags": "ARMATURA,NOCRITICO,POZIONE,TOSSICO,OGGETTO",
+      "tempo": "6",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "9,VarO",
+      "tossicita": "13,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
@@ -127,14 +127,14 @@
       "cariche_base": "",
       "durata": "6",
       "elemento": "Terra",
-      "mm": "4",
+      "mm": "3",
       "opportunita": 0,
       "pa": "0",
       "pp": "0",
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "ARMATURA,NOCRITICO,POZIONE,TOSSICO,OGGETTO",
-      "tempo": "13",
+      "tempo": "8",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
@@ -610,7 +610,7 @@
   },
   "PozioneManaEstrema": {
     "descrizione": [
-      "Ripristina 225 Punti Mana."
+      "Ripristina 250 Punti Mana."
     ],
     "id": "PozioneManaEstrema",
     "image": "inv_potion_168.png",
@@ -620,26 +620,26 @@
       "cariche_base": "",
       "durata": "0",
       "elemento": "Negativo",
-      "mm": "8",
+      "mm": "10",
       "opportunita": 0,
       "pa": "0",
       "pp": "0",
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "21",
+      "tempo": "30",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "136",
+      "tossicita": "60,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
   },
   "PozioneManaMaggiore": {
     "descrizione": [
-      "Ripristina 135 Punti Mana."
+      "Ripristina 150 Punti Mana."
     ],
     "id": "PozioneManaMaggiore",
     "image": "inv_potion_73.png",
@@ -656,23 +656,52 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "16",
+      "tempo": "17",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "77",
+      "tossicita": "35,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
   },
   "PozioneManaMinore": {
     "descrizione": [
-      "Ripristina 45 Punti Mana."
+      "Ripristina 50 Punti Mana."
     ],
     "id": "PozioneManaMinore",
     "image": "inv_potion_70.png",
     "nome_decorativo": "Mana minore",
+    "properties": {
+      "area": "0",
+      "cariche_base": "",
+      "durata": "0",
+      "elemento": "Negativo",
+      "mm": "2",
+      "opportunita": 0,
+      "pa": "0",
+      "pp": "0",
+      "proiettile": "Energetico",
+      "raggio": "0",
+      "tags": "SOGLIAPOTERE",
+      "tempo": "9",
+      "tipo": "Supporto",
+      "tipo_aoe": "",
+      "tipo_bersaglio": "",
+      "tipo_oggetto": "POZIONE",
+      "tossicita": "11,VarO",
+      "ts": "no"
+    },
+    "property_type": "CONSUMABLE"
+  },
+  "PozioneManaModerata": {
+    "descrizione": [
+      "Ripristina 100 Punti Mana."
+    ],
+    "id": "PozioneManaModerata",
+    "image": "inv_potion_71.png",
+    "nome_decorativo": "Mana moderata",
     "properties": {
       "area": "0",
       "cariche_base": "",
@@ -685,48 +714,19 @@
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "13",
+      "tempo": "11",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "19",
-      "ts": "no"
-    },
-    "property_type": "CONSUMABLE"
-  },
-  "PozioneManaModerata": {
-    "descrizione": [
-      "Ripristina 90 Punti Mana."
-    ],
-    "id": "PozioneManaModerata",
-    "image": "inv_potion_71.png",
-    "nome_decorativo": "Mana moderata",
-    "properties": {
-      "area": "0",
-      "cariche_base": "",
-      "durata": "0",
-      "elemento": "Negativo",
-      "mm": "5",
-      "opportunita": 0,
-      "pa": "0",
-      "pp": "0",
-      "proiettile": "Energetico",
-      "raggio": "0",
-      "tags": "SOGLIAPOTERE",
-      "tempo": "15",
-      "tipo": "Supporto",
-      "tipo_aoe": "",
-      "tipo_bersaglio": "",
-      "tipo_oggetto": "POZIONE",
-      "tossicita": "48",
+      "tossicita": "22,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"
   },
   "PozioneManaSuperiore": {
     "descrizione": [
-      "Ripristina 180 Punti Mana."
+      "Ripristina 200 Punti Mana."
     ],
     "id": "PozioneManaSuperiore",
     "image": "inv_potion_137.png",
@@ -736,19 +736,19 @@
       "cariche_base": "",
       "durata": "0",
       "elemento": "Negativo",
-      "mm": "7",
+      "mm": "8",
       "opportunita": 0,
       "pa": "0",
       "pp": "0",
       "proiettile": "Energetico",
       "raggio": "0",
       "tags": "SOGLIAPOTERE",
-      "tempo": "19",
+      "tempo": "23",
       "tipo": "Supporto",
       "tipo_aoe": "",
       "tipo_bersaglio": "",
       "tipo_oggetto": "POZIONE",
-      "tossicita": "107",
+      "tossicita": "48,VarO",
       "ts": "no"
     },
     "property_type": "CONSUMABLE"

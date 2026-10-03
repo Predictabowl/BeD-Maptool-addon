@@ -2,6 +2,6 @@
 [h: target = json.get(macro.args,"target")]
 [h: oUseParam = json.get(macro.args,"useParam")]
 
-[h: iMana = 225]
+[h: iMana = 250]
 
 [macro("consumables/itemManaHealTemplate@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.set(macro.args,"mana",iMana,"libName","PozioneManaEstrema")]
