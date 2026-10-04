@@ -10,7 +10,7 @@
 [h, switch(tipoSconto), code:
 case "VarO":{
 	[macro("consumables/getLivelloOggetto@this"): oOggetto]
-	[iTox = baseM*varO(macro.return)]
+	[iTox = varO(macro.return, baseM)]
 	[bCrit = getUltimoCritico(oToken)]
 	[if(bCrit == 1): iTox = iTox * calcPercentMod(-getPCrit(oToken)/100)]
 	[iTox = round(iTox)]
