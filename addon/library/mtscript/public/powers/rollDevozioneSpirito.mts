@@ -11,7 +11,7 @@
 [h: iModSkill = getLivelloAbilita(oToken, "PlacareGliSpiriti")]
 [macro("powers/getModRichiamoSpirito@this"): json.append(oToken,sSpirito)]
 [h: iModDev = macro.return]
-[h: iModCar = getCarP(oToken)-5]
+[h: iModCar = getCarMana(oToken)-5]
 [h: iRoll = 1d20]
 [h: iStatMod = popStatModifier(oToken,"modRollDevozione")]
 [h: iCD = 15]

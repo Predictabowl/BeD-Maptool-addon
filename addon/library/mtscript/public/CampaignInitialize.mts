@@ -63,7 +63,6 @@
 [h: defineFunction("getCarCombinata","crud/getCarCombinata@this")]
 [h: defineFunction("getCaricheRuna","consumables/getCaricheRuna@this")]
 [h: defineFunction("getCarico","mobs/getCarico@this")]
-[h: defineFunction("getCarP","crud/getCarP@this")]
 [h: defineFunction("getCarMana","crud/getCarMana@this")]
 [h: defineFunction("getConcentrazionePoteri","crud/getConcentrazione@this")]
 [h: defineFunction("getCrit","crud/getCrit@this")]

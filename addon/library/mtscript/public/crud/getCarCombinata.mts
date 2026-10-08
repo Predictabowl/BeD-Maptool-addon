@@ -2,21 +2,24 @@
 [h, if(oToken == ""): oToken = currentToken()]
 [h: sCar1 = arg(1)]
 [h: sCar2 = arg(2)]
-[h, if(argCount() > 3): sCar3 = arg(3); sCar3 = ""]
-
-
-[h: iLivello = getProperty("Livello",oToken)]
-[h: iCar1 = getProperty(sCar1,oToken)]
-[h: iCar2 = getProperty(sCar2,oToken)]
-[h, if(sCar3 != ""), code:{
-	[iCar3 = getProperty(sCar3,oToken)]
-	[iResult = min(iCar1, iCar2, iCar3) + 3]
-
+[h, if(argCount() > 3), code: {
+	[sCar3 = arg(3)]
+	[sCar4 = arg(4)]
 };{
-	[iResult = min(iCar1, iCar2) + 2]
-
+	[sCar3 = sCar1]
+	[sCar4 = sCar2]
 }]
 
+
+[h: aCars = json.append(sCar1, sCar2, sCar3, sCar4)]
+[h: aCarVals = "[]"]
+[h, foreach(sCar, aCars), code:{
+	[iCar = getProperty(sCar,oToken) - json.count(aCars, sCar)]
+	[aCarVals = json.append(aCarVals, iCar)]
+}]
+[iResult = math.arrayMin(aCarVals) + 4]
+
+[h: iLivello = getProperty("Livello",oToken)]
 [h, if(iLivello > 6), code:{
 	[iMax = 10]
 };{
@@ -24,5 +27,4 @@
 }]
 
 [h: iResult = max(min(iResult,iMax),1)]
-
-[h: macro.return = iResult]
+[h: return(0, iResult)]

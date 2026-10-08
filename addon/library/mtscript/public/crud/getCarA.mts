@@ -17,7 +17,7 @@ case "Agile":{
 	[iReturn = Destrezza]
 };
 case "CaP":{
-	[iReturn = getCarP(oToken)]
+	[iReturn = getCarMana(oToken)]
 };
 case "Bilanciata":{
 	[iReturn = getCarCombinata(oToken,"Forza","Destrezza")]
