@@ -25,5 +25,5 @@
 ]
 
 [h: assert(isNumber(iReturn), "ERRORE: La Caratteristica Mana non è impostata correttamente.")]
-[h: setInMemoriaRound(oToken, "car-mana", iResult)]
+[h: setInMemoriaRound(oToken, "car-mana", iReturn)]
 [h: return(0, iReturn)]
