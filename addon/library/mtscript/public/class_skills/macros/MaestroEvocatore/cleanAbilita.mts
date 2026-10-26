@@ -3,6 +3,7 @@
 [h: iPP = 2]
 
 [h: addSpellMod(source,"SERVITORE","PP", iPP)]
+[h: addSpellMod(source,"SERVITORE","PPMant", iPP)]
 [h: addSpellMod(source,"SERVITORE","VA", -15)]
 
 [h: switchToken(source)]

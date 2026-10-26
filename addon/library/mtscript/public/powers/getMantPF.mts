@@ -11,7 +11,7 @@
 [h, if(sTag == "MANT"): Pfatica = listGet(Pfatica,2); return(0,0)]
 
 
-[macro("powers/getSpellMod@this"): json.append(source,libName,"PF")]
+[macro("powers/getSpellMod@this"): json.append(source,libName,"PFMant")]
 [h: iMod = json.get(macro.return,"mod")]
 [h: dPerc = json.get(macro.return,"perc")]
 

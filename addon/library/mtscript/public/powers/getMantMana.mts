@@ -9,7 +9,7 @@
 [h: scontoM = 0]
 [if(sTag == "MANT"): Pmana = listGet(Pmana,2); return (0,0)]
 
-[macro("powers/getSpellMod@this"): json.append(source,libName,"PM")]
+[macro("powers/getSpellMod@this"): json.append(source,libName,"PMMant")]
 [h: iMod = json.get(macro.return,"mod")]
 [h: dPerc = json.get(macro.return,"perc")]
 

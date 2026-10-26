@@ -9,13 +9,9 @@
 [h, if(sTag == "MANT"): Pazione = listGet(Pazione,2); return(0,0)]
 
 
-[macro("powers/getSpellMod@this"): json.append(source,libName,"PP")]
+[macro("powers/getSpellMod@this"): json.append(source,libName,"PPMant")]
 [h: iMod = json.get(macro.return,"mod")]
 [h: dPerc = json.get(macro.return,"perc")]
-
-[macro("powers/getSpellMod@this"): json.append(source,libName,"PPMant")]
-[h: iMod = iMod + json.get(macro.return,"mod")]
-[h: dPerc = dPerc + json.get(macro.return,"perc")]
 
 [macro("core/popStatModifier@this"):json.append(source,"PPCostMod")]
 [h: iMod = iMod + macro.return]
