@@ -3,7 +3,9 @@
 
 [h: bIsLib = matches(sToken,"[^:]+:[^:]+")]
 
-[h: oMemoria = getProperty("Json_mem",sToken)]
+[h, if(bIsLib): 
+	oMemoria = getLibProperty("Json_mem",sToken);
+	oMemoria = getProperty("Json_mem",sToken)]
 
 [assert(sToken != "","Token non trovato "+getMacroName())]
 
@@ -11,8 +13,6 @@
 [h: oMemoria = json.remove(oMemoria,sLabel)]
 
 
-[h, if(startsWith(sToken,"Lib:")), code:{
-	[setLibProperty("Json_mem",oMemoria,sToken)]
-};{
-	[setProperty("Json_mem",oMemoria,sToken)]
-}]
+[h, if(bIsLib):
+	setLibProperty("Json_mem",oMemoria,sToken);
+	setProperty("Json_mem",oMemoria,sToken)]
