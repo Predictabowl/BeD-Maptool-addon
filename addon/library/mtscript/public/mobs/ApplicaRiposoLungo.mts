@@ -16,6 +16,7 @@
 		[macro("core/CuraTarget@this"): json.append(id, macro.return, "", "",0,1)]
 		[delDaMemoria(id, "riposoBreve")]
 		[macro("powers/ifSpiritoRollDisattivazione@this"): id]
+		[modPuntiEroe(id, -1000)]
 		[sMsg = popMessaggio(id,"strCura")]
 		[if(sMsg != ""): broadcast(sMsg)]
 	}]
