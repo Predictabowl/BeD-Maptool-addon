@@ -9,7 +9,7 @@
 [h: sNome = json.get(macro.args,"nome")]
 
 [h: sControl = "setupMarchio"]
-<!-- sControl viene posto il Lista_Dati e dovrebbe essere eliminato quando il marchio ha finito il setup
+<!-- sControl viene posto in Lista_Dati e dovrebbe essere eliminato quando il marchio ha finito il setup
 in alcuni casi non viene eliminato, ad esempio con il marchio di classe dell'inquisitore lanciato con abilità di classe
 perché?
 l'evento eventFinishSetup dovrebbe pulire sempre tutto... quindi bisogna essere sicuri che sia un'azione
