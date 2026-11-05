@@ -1,6 +1,10 @@
 [h: source = arg(0)]
 
 [h: switchToken(source)]
+[h, if(PA >= PA_Max), code:{
+    [appendMessaggio(source,"strAbilitaAttivata","PA già al massimo")]
+    [return(0, 1)]
+}]
 [h: PA = PA +1]
 [h: sNomeAb = "Perseveranza"]
 [h: iAttivazioni = getDaMemoriaRound(source,sNomeAb)]
@@ -10,6 +14,6 @@
 
 [h, macro("gui/putSkillToRoundUpdate@this"): json.append(source, sNomeAb, "PF")]
 
-[h: appendMessaggio(source,"strAbilitaAttivata","+1 PA guadagnati")]
+[h: appendMessaggio(source,"strAbilitaAttivata","+1 PA recuperati")]
 [h: execFunction("guiUpdateClassSkillResource", json.append(source, sNomeAb, "PF"), 0, "all")]
 [h: return(0,0)]

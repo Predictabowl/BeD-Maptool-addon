@@ -711,7 +711,7 @@
     },
     "Perseveranza": {
         "descrizione": [
-            "Quando attivata il personaggio guadagna +1 PA.",
+            "Quando attivata il personaggio guadagna +1 PA, fino a raggiungere il proprio massimo.",
             "Ogni qual volta che viene attivata, il costo di attivazione incrementa cumulativamente di +1 PF fino al termine del round."
         ],
         "id": "Perseveranza",
