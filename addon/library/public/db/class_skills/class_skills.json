@@ -1,7 +1,9 @@
 {
     "AnalizzareNemico": {
         "descrizione": [
-            "Quando attivata su di una creatura come bersaglio, permette di scoprire una caratteristica a scelta dello stesso, fra le quali: 1 fra le resistenze, 1 fra i TS, LA, LD, Crit, Pcrit, Schivare, Parare, Elusione e altre caratteristiche minori o derivate a discrezione del Master.","Il successo non è automatico, e richiede di effettuare una prova","<div style=\"text-align:center\">1d20 + LPG + 2x Livello Abilità</div>e raggiungere una CD pari a<div style=\"text-align:center\">12 + Livello del bersaglio.</div>"
+            "Quando attivata su di una creatura come bersaglio, permette di scoprire una caratteristica a scelta dello stesso, fra le quali: 1 fra le resistenze, 1 fra i TS, LA, LD, Crit, Pcrit, Schivare, Parare, Elusione e altre caratteristiche minori o derivate a discrezione del Master.",
+            "Il successo non è automatico, e richiede di effettuare una prova",
+            "<div style=\"text-align:center\">1d20 + LPG + 2x Livello Abilità</div>e raggiungere una CD pari a<div style=\"text-align:center\">12 + Livello del bersaglio.</div>"
         ],
         "id": "AnalizzareNemico",
         "image": "ability_hunter_mastermarksman.png",
@@ -14,6 +16,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "0",
             "pf_liv": "0",
             "pp": "0",
@@ -37,6 +40,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "8",
             "pf_liv": "-2",
             "pp": "0",
@@ -60,6 +64,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "8",
             "pf_liv": "-3",
             "pp": "0",
@@ -83,6 +88,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "13",
             "pf_liv": "-4",
             "pp": "0",
@@ -106,6 +112,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "14",
             "pf_liv": "-4",
             "pp": "0",
@@ -116,7 +123,9 @@
     },
     "CavalcaTempesta": {
         "descrizione": [
-            "Mentre l’abilità è attiva il primo incantesimo lanciato dal personaggio si sprigiona un’esplosione di energia che colpisce tutti i nemici entro raggio 8 dal lanciatore, ed infligge danni con lo stesso LL e lo stesso elemento dell’incantesimo lanciato. L’ esplosione può generare un effetto critico, basato sull’arma con cui l’incantesimo originario viene lanciato.","Grado 1: Infligge 1d8 danni per LP","Grado 2: Infligge 1d11 danni per LP"
+            "Mentre l’abilità è attiva il primo incantesimo lanciato dal personaggio si sprigiona un’esplosione di energia che colpisce tutti i nemici entro raggio 8 dal lanciatore, ed infligge danni con lo stesso LL e lo stesso elemento dell’incantesimo lanciato. L’ esplosione può generare un effetto critico, basato sull’arma con cui l’incantesimo originario viene lanciato.",
+            "Grado 1: Infligge 1d8 danni per LP",
+            "Grado 2: Infligge 1d11 danni per LP"
         ],
         "id": "CavalcaTempesta",
         "image": "spell_nature_purge.jpg.png",
@@ -129,6 +138,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "0",
             "pf_liv": "0",
             "pp": "0",
@@ -152,6 +162,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "0",
             "pf_liv": "0",
             "pp": "0",
@@ -162,7 +173,8 @@
     },
     "Contrattacco": {
         "descrizione": [
-            "Mentre questa abilità è attiva, ogni volta che il personaggio Para o Schiva l’attacco di un avversario, allora il prossimo attacco inflitto entro il termine del round, se ha come bersaglio tale avversario, diventa un Attacco di opportunità.","Solo l’ultima parata o schivata effettuata conta ai fini di questa abilità."
+            "Mentre questa abilità è attiva, ogni volta che il personaggio Para o Schiva l’attacco di un avversario, allora il prossimo attacco inflitto entro il termine del round, se ha come bersaglio tale avversario, diventa un Attacco di opportunità.",
+            "Solo l’ultima parata o schivata effettuata conta ai fini di questa abilità."
         ],
         "id": "Contrattacco",
         "image": "ability_warrior_challange.png",
@@ -175,6 +187,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "31",
             "pf_liv": "-4",
             "pp": "0",
@@ -198,6 +211,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "12",
             "pf_liv": "-4",
             "pp": "0",
@@ -208,7 +222,8 @@
     },
     "Disimpegno": {
         "descrizione": [
-            "Quando attivata il personaggio guadagna +1 MM.","Mentre attiva il personaggio non provoca attacchi di opportunità quando effettua un’azione di movimento."
+            "Quando attivata il personaggio guadagna +1 MM.",
+            "Mentre attiva il personaggio non provoca attacchi di opportunità quando effettua un’azione di movimento."
         ],
         "id": "Disimpegno",
         "image": "ability_rogue_cheatdeath.png",
@@ -221,6 +236,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "8",
             "pf_liv": "-2",
             "pp": "0",
@@ -245,6 +261,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "30",
             "pf_liv": "-5",
             "pp": "0",
@@ -268,6 +285,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "2",
             "pf_liv": "0",
             "pp": "0",
@@ -278,7 +296,8 @@
     },
     "Espansione": {
         "descrizione": [
-            "Mentre questa abilità è attiva permette di estendere un qualsiasi Potere Spiritico a bersaglio singolo, non personale, trasformandolo in un potere ad area con raggio 3, ma lo sciamano subisce una penalità di -⁠30 VA al lancio dei poteri, +100% sui costi mana, -2 al Controllo Azione e +5 Mancare.","L’abilità ha effetto solamente se attivata prima della fase di dichiarazione del lancio dell’incantesimo."
+            "Mentre questa abilità è attiva permette di estendere un qualsiasi Potere Spiritico a bersaglio singolo, non personale, trasformandolo in un potere ad area con raggio 3, ma lo sciamano subisce una penalità di -\u206030 VA al lancio dei poteri, +100% sui costi mana, -2 al Controllo Azione e +5 Mancare.",
+            "L’abilità ha effetto solamente se attivata prima della fase di dichiarazione del lancio dell’incantesimo."
         ],
         "id": "Espansione",
         "image": "ability_argus_soulburst.png",
@@ -291,6 +310,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "21",
             "pf_liv": "-3",
             "pp": "0",
@@ -314,6 +334,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "6",
             "pf_liv": "0",
             "pp": "0",
@@ -324,7 +345,8 @@
     },
     "FiorituraPrematura": {
         "descrizione": [
-            "Grazie a questa capacità il personaggio è in grado di velocizzare drasticamente l'effetto dei propri incantesimi di guarigione. ","Mentre l'abilità è attiva gli incantesimi di Supporto che curano punti vita lanciati hanno effetto istantaneo invece di applicare una cura sul tempo. Grazie a questa abilità il personaggio può lanciare un incantesimo di cura su una creatura anche se questa già beneficia di tale incantesimo, perché l'effetto diventa istantaneo."
+            "Grazie a questa capacità il personaggio è in grado di velocizzare drasticamente l'effetto dei propri incantesimi di guarigione. ",
+            "Mentre l'abilità è attiva gli incantesimi di Supporto che curano punti vita lanciati hanno effetto istantaneo invece di applicare una cura sul tempo. Grazie a questa abilità il personaggio può lanciare un incantesimo di cura su una creatura anche se questa già beneficia di tale incantesimo, perché l'effetto diventa istantaneo."
         ],
         "id": "FiorituraPrematura",
         "image": "ability_evoker_emeraldblossom.png",
@@ -337,6 +359,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "27",
             "pf_liv": "-4",
             "pp": "0",
@@ -360,6 +383,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "0",
             "pf_liv": "0",
             "pp": "0",
@@ -383,6 +407,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "31",
             "pf_liv": "-5",
             "pp": "0",
@@ -408,6 +433,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "31",
             "pf_liv": "-4",
             "pp": "0",
@@ -431,6 +457,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "3",
             "pf_liv": "0",
             "pp": "0",
@@ -443,7 +470,8 @@
     },
     "Incalzare": {
         "descrizione": [
-            "Mentre questa abilità è attiva il personaggio ottiene un bonus di +5 VA, inoltre ogni volta che termina un’azione di movimento adiacente ad un avversario che non lo era precedentemente, allora tale avversario subisce una penalità di -2 MM e -3 Iniziativa.","Tale effetto si ripete per ogni avversario adiacente e per ogni volta che le condizioni vengono verificate."
+            "Mentre questa abilità è attiva il personaggio ottiene un bonus di +5 VA, inoltre ogni volta che termina un’azione di movimento adiacente ad un avversario che non lo era precedentemente, allora tale avversario subisce una penalità di -2 MM e -3 Iniziativa.",
+            "Tale effetto si ripete per ogni avversario adiacente e per ogni volta che le condizioni vengono verificate."
         ],
         "id": "Incalzare",
         "image": "059634d13dfac0acdd85273bfd4c5086.png",
@@ -456,6 +484,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "14",
             "pf_liv": "-3",
             "pp": "0",
@@ -479,6 +508,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "25",
             "pf_liv": "-4",
             "pp": "0",
@@ -489,7 +519,8 @@
     },
     "IntrappolareAnima": {
         "descrizione": [
-            "Questa abilità permette di guadagnare %s framment%s di anima da una creatura morta da non più di 10 minuti e tenerla imbrigliata nel proprio Necronomicon.","Non è possibile intrappolare l’anima da un cadavere dal quale l’anima è già stata rimossa, di conseguenza questa abilità non può essere utilizzata più di una volta per ogni cadavere."
+            "Questa abilità permette di guadagnare %s framment%s di anima da una creatura morta da non più di 10 minuti e tenerla imbrigliata nel proprio Necronomicon.",
+            "Non è possibile intrappolare l’anima da un cadavere dal quale l’anima è già stata rimossa, di conseguenza questa abilità non può essere utilizzata più di una volta per ogni cadavere."
         ],
         "id": "IntrappolareAnima",
         "image": "spell_shadow_haunting.png",
@@ -502,6 +533,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "10",
             "pf_liv": "0",
             "pp": "0",
@@ -514,7 +546,9 @@
     },
     "IspirazioneBardica": {
         "descrizione": [
-            "Attiva un Motivo di Sonata.","Il motivo attivato ha un bonus di potenza di +100%.","Al momento dell’attivazione il personaggio sceglie una creatura in linea visiva, o se stesso, come bersaglio. Mentre l’abilità è attiva il Motivo scelto si applica sul bersaglio prescelto."
+            "Attiva un Motivo di Sonata.",
+            "Il motivo attivato ha un bonus di potenza di +100%.",
+            "Al momento dell’attivazione il personaggio sceglie una creatura in linea visiva, o se stesso, come bersaglio. Mentre l’abilità è attiva il Motivo scelto si applica sul bersaglio prescelto."
         ],
         "id": "IspirazioneBardica",
         "image": "inspire_courage_icon_pathfinder_kingmaker_wiki_guide_80px.png",
@@ -526,9 +560,13 @@
             "eventi": "",
             "mana": "0",
             "mm": "0",
-            "pa": "{\"callback\":\"modOnAnotherAbility\",\"params\":[\"ArpeggioArmonico\",3,-1]}",
-            "pf_base": "22",
-            "pf_liv": "-4",
+            "pa": {
+                "callback":"modOnAnotherAbility",
+                "params": ["ArpeggioArmonico",6,-1]
+            },
+            "pa_liv": "-1",
+            "pf_base": "17",
+            "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE",
@@ -554,6 +592,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "30",
             "pf_liv": "-5",
             "pp": "0",
@@ -566,7 +605,12 @@
     },
     "LegameSpettrale(Old)": {
         "descrizione": [
-            "Un alone spettrale avvolge le mani della creatura prescelta come obbiettivo, che può essere solamente un Servitore del personaggio oppure una creatura consenziente.","Mentre questa abilità è attiva, ogni incantesimo con raggio 5 o inferiore lanciato dal necromante ha come origine la creatura prescelta, in questo modo l’incantatore può rimanere a distanza di sicurezza ed utilizzare incantesimi a corto raggio.","Se un incantesimo agisce sul lanciatore, allora il bersaglio del legame spettrale sarà automaticamente il recipiente dell’effetto.","Tutti gli incantesimi lanciati tramite Legame Spettrale hanno una penalità sul costo PP di +10%.","La creatura non può essere più lontana di 20 caselle dal necromante, altrimenti l'abilità non funziona.","Gli incantesimi si azionano in modo indipendente dalla creatura a cui vengono legati."
+            "Un alone spettrale avvolge le mani della creatura prescelta come obbiettivo, che può essere solamente un Servitore del personaggio oppure una creatura consenziente.",
+            "Mentre questa abilità è attiva, ogni incantesimo con raggio 5 o inferiore lanciato dal necromante ha come origine la creatura prescelta, in questo modo l’incantatore può rimanere a distanza di sicurezza ed utilizzare incantesimi a corto raggio.",
+            "Se un incantesimo agisce sul lanciatore, allora il bersaglio del legame spettrale sarà automaticamente il recipiente dell’effetto.",
+            "Tutti gli incantesimi lanciati tramite Legame Spettrale hanno una penalità sul costo PP di +10%.",
+            "La creatura non può essere più lontana di 20 caselle dal necromante, altrimenti l'abilità non funziona.",
+            "Gli incantesimi si azionano in modo indipendente dalla creatura a cui vengono legati."
         ],
         "id": "LegameSpettrale(Old)",
         "image": "357e15affa3e73b048fe38894add9375.png",
@@ -579,6 +623,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "22",
             "pf_liv": "-4",
             "pp": "0",
@@ -589,7 +634,9 @@
     },
     "MaestroEvocatore": {
         "descrizione": [
-            "Mentre questa abilità è attiva il personaggio ottiene dei bonus con i propri incantesimi di tipo Servitore, pari a +15 VA ed uno sconto sul costo di lancio e mantenimento di -2 PP.","Se attivata mentre un servitore è già attivo fa recuperare +2 PP.","Al momento della disattivazione il personaggio perde -2 PA."
+            "Mentre questa abilità è attiva il personaggio ottiene dei bonus con i propri incantesimi di tipo Servitore, pari a +15 VA ed uno sconto sul costo di lancio e mantenimento di -2 PP.",
+            "Se attivata mentre un servitore è già attivo fa recuperare +2 PP.",
+            "Al momento della disattivazione il personaggio perde -2 PA."
         ],
         "id": "MaestroEvocatore",
         "image": "ability_warlock_improveddemonictactics.png",
@@ -602,6 +649,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "25",
             "pf_liv": "-4",
             "pp": "0",
@@ -613,7 +661,9 @@
     "ManoSpettrale": {
         "descrizione": [
             "Attivare questa abilità consuma un Frammento d’Anima.",
-            "Il personaggio può proiettare un mano spettrale tramite la quale lanciare i propri incantesimi per estenderne il raggio d’azione.","Fin quando l’abilità è attiva tutti gli incantesimi lanciati dal personaggio che hanno un raggio d’azione pari a 5 o inferiore ottengono un incremento del loro raggio d’azione di +%s.","Gli incantesimi a raggio Tocco vengono estesi, ma questo non ne cambia le proprietà e caratteristiche.",
+            "Il personaggio può proiettare un mano spettrale tramite la quale lanciare i propri incantesimi per estenderne il raggio d’azione.",
+            "Fin quando l’abilità è attiva tutti gli incantesimi lanciati dal personaggio che hanno un raggio d’azione pari a 5 o inferiore ottengono un incremento del loro raggio d’azione di +%s.",
+            "Gli incantesimi a raggio Tocco vengono estesi, ma questo non ne cambia le proprietà e caratteristiche.",
             "Non ha effetto con incantesimi a raggio 0."
         ],
         "id": "ManoSpettrale",
@@ -627,6 +677,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "2",
             "pf_liv": "0",
             "pp": "0",
@@ -653,6 +704,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "25",
             "pf_liv": "-5",
             "pp": "0",
@@ -665,7 +717,9 @@
     },
     "NessunaPieta": {
         "descrizione": [
-            "Al momento dell’attivazione il personaggio sceglie un bersaglio.","Fin quando l’abilità è attiva, quando il bersaglio prescelto subisce un Attacco (da chiunque escluso il personaggio stesso) allora è possibile infliggere un Attacco di opportunità contro di lui. Tale opportunità non si cumula con quella offerta da altre altre abilità.","Questo effetto può verificarsi solamente una volta per round."
+            "Al momento dell’attivazione il personaggio sceglie un bersaglio.",
+            "Fin quando l’abilità è attiva, quando il bersaglio prescelto subisce un Attacco (da chiunque escluso il personaggio stesso) allora è possibile infliggere un Attacco di opportunità contro di lui. Tale opportunità non si cumula con quella offerta da altre altre abilità.",
+            "Questo effetto può verificarsi solamente una volta per round."
         ],
         "id": "NessunaPieta",
         "image": "scoundrel_knee_breaker-icon.png",
@@ -678,6 +732,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "24",
             "pf_liv": "-6",
             "pp": "0",
@@ -688,7 +743,10 @@
     },
     "PattoDiSangue": {
         "descrizione": [
-            "Il personaggio sacrifica il suo sangue al proprio patrono extraplanare per ottenere in cambio energia magica.","Questa abilità può essere attivata solamente in combattimento.","Quando l’abilità viene attivata il personaggio recupera 90 punti mana, ma subisce un danno pari al 20% dei propri PV massimi.","I danni vanno direttamente a colpire i PV del personaggio e non possono essere assorbiti, ridotti o rediretti con i consueti metodi. Questa abilità può uccidere lo stregone."
+            "Il personaggio sacrifica il suo sangue al proprio patrono extraplanare per ottenere in cambio energia magica.",
+            "Questa abilità può essere attivata solamente in combattimento.",
+            "Quando l’abilità viene attivata il personaggio recupera 90 punti mana, ma subisce un danno pari al 20% dei propri PV massimi.",
+            "I danni vanno direttamente a colpire i PV del personaggio e non possono essere assorbiti, ridotti o rediretti con i consueti metodi. Questa abilità può uccidere lo stregone."
         ],
         "id": "PattoDiSangue",
         "image": "scoundrel_adrenaline-icon.png",
@@ -701,6 +759,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "20",
             "pf_liv": "-3",
             "pp": "0",
@@ -725,6 +784,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "speciale",
             "pf_liv": "-1",
             "pp": "0",
@@ -748,6 +808,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "30",
             "pf_liv": "-4",
             "pp": "0",
@@ -760,7 +821,12 @@
     },
     "PotenzaPrimordiale": {
         "descrizione": [
-            "Quando attivata lo spirito attivo può effettuare un tiro per incrementare il proprio Mod. Devozione.","Al momento dell’attivazione il personaggio ottiene un bonus a scelta fra MDI, MCG oppure MCR, tale bonus viene ritenuto fin quando l’abilità è attiva.","La quantità del bonus dipende dal livello dell’abilità:","Liv 1: +86","Liv 2: +102","Liv 3: +118"
+            "Quando attivata lo spirito attivo può effettuare un tiro per incrementare il proprio Mod. Devozione.",
+            "Al momento dell’attivazione il personaggio ottiene un bonus a scelta fra MDI, MCG oppure MCR, tale bonus viene ritenuto fin quando l’abilità è attiva.",
+            "La quantità del bonus dipende dal livello dell’abilità:",
+            "Liv 1: +86",
+            "Liv 2: +102",
+            "Liv 3: +118"
         ],
         "id": "PotenzaPrimordiale",
         "image": "Infusione-Viol02.png",
@@ -773,6 +839,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "0",
             "pf_liv": "0",
             "pp": "0",
@@ -796,6 +863,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "0",
             "pf_liv": "0",
             "pp": "0",
@@ -819,6 +887,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "1",
             "pf_liv": "0",
             "pp": "0",
@@ -829,7 +898,8 @@
     },
     "RapiditadiLancio": {
         "descrizione": [
-            "Mentre l’abilità è attiva il personaggio ottiene un bonus di +25 VA quando lancia un incantesimo."," Deve essere attivata prima di iniziare a recitare un incantesimo."
+            "Mentre l’abilità è attiva il personaggio ottiene un bonus di +25 VA quando lancia un incantesimo.",
+            " Deve essere attivata prima di iniziare a recitare un incantesimo."
         ],
         "id": "RapiditadiLancio",
         "image": "ability_hunter_readiness.png",
@@ -842,6 +912,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "12",
             "pf_liv": "-3",
             "pp": "0",
@@ -852,7 +923,8 @@
     },
     "Rappresaglia": {
         "descrizione": [
-            "Mentre questa abilità è attiva, ogni qual volta il personaggio subisce danno da un attacco allora guadagna un bonus di +3 MDI per livello dell’abilità sul prossimo attacco se inflitto contro l’attaccante.","Tale effetto non è cumulabile e si considera solamente l’ultimo attaccante che ha inflitto danno, l’effetto svanisce al primo attacco inflitto o quando l’abilità viene disattivata."
+            "Mentre questa abilità è attiva, ogni qual volta il personaggio subisce danno da un attacco allora guadagna un bonus di +3 MDI per livello dell’abilità sul prossimo attacco se inflitto contro l’attaccante.",
+            "Tale effetto non è cumulabile e si considera solamente l’ultimo attaccante che ha inflitto danno, l’effetto svanisce al primo attacco inflitto o quando l’abilità viene disattivata."
         ],
         "id": "Rappresaglia",
         "image": "ability_warrior_revenge.png",
@@ -865,6 +937,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "11",
             "pf_liv": "0",
             "pp": "0",
@@ -875,7 +948,9 @@
     },
     "RichiamoSpiritico": {
         "descrizione": [
-            "Il personaggio può richiamare al proprio fianco uno dei propri spiriti, rendendolo Attivo e congedando automaticamente un eventuale spirito già attivo.","La probabilità di riuscita è quella base richiesta per l’attivazione di uno spirito (vedi Spiriti).","Lo spirito richiamato rimarrà attivo fin quando non viene congedato."
+            "Il personaggio può richiamare al proprio fianco uno dei propri spiriti, rendendolo Attivo e congedando automaticamente un eventuale spirito già attivo.",
+            "La probabilità di riuscita è quella base richiesta per l’attivazione di uno spirito (vedi Spiriti).",
+            "Lo spirito richiamato rimarrà attivo fin quando non viene congedato."
         ],
         "id": "RichiamoSpiritico",
         "image": "ability_ardenweald_druid.png",
@@ -888,6 +963,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "3",
+            "pa_liv": "0",
             "pf_base": "Speciale",
             "pf_liv": "0",
             "pp": "0",
@@ -911,6 +987,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "28",
             "pf_liv": "-4",
             "pp": "0",
@@ -934,6 +1011,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "1",
             "pf_liv": "0",
             "pp": "0",
@@ -958,6 +1036,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "30",
             "pf_liv": "-5",
             "pp": "0",
@@ -983,6 +1062,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "2",
+            "pa_liv": "0",
             "pf_base": "24",
             "pf_liv": "-6",
             "pp": "0",
@@ -1006,9 +1086,13 @@
             "eventi": "",
             "mana": "0",
             "mm": "0",
-            "pa": "{\"callback\":\"modOnAnotherAbility\",\"params\":[\"ArpeggioArmonico\",3,-1]}",
-            "pf_base": "speciale",
-            "pf_liv": "0",
+            "pa": {
+                "callback": "modOnAnotherAbility",
+                "params": ["ArpeggioArmonico",6,-1]
+            },
+            "pa_liv": "-1",
+            "pf_base": "16",
+            "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE",
@@ -1029,9 +1113,13 @@
             "eventi": "",
             "mana": "0",
             "mm": "0",
-            "pa": "{\"callback\":\"modOnAnotherAbility\",\"params\":[\"ArpeggioArmonico\",3,-1]}",
-            "pf_base": "28",
-            "pf_liv": "-4",
+            "pa": {
+                "callback":"modOnAnotherAbility",
+                "params": ["ArpeggioArmonico",7,-1]
+            },
+            "pa_liv": "0",
+            "pf_base": "20",
+            "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
             "tipo": "PECULIARE",
@@ -1053,6 +1141,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "1",
             "pf_liv": "0",
             "pp": "0",
@@ -1063,7 +1152,10 @@
     },
     "TotemSciamanico": {
         "descrizione": [
-            "Quando l’abilità viene attivata il personaggio crea un totem sul terreno entro un raggio d’azione di 3."," Il totem è un Servitore a tutti gli effetti (vedi “Compendio dei Poteri”), tuttavia si tratta di un oggetto inanimato che rimane immobile sul luogo prescelto per 12 round. Per quanto il totem non sia utile in combattimento di per se, può essere utilizzato con tutti quei poteri che richiedono la presenza di un spirito materializzato."," Il totem può essere distrutto normalmente, a tal fine tutte le sue statistiche difensive sono pari a quelle del personaggio stesso, con eccezione dei PV che sono pari al 50%. Essendo un oggetto inanimato però non può parare o schivare gli attacchi, e possiede le normali immunità agli effetti di tali oggetti."," Il totem non può essere spostato, ma è possibile lanciare un nuovo totem per sostituirlo. Ogni potere presente su di un totem scompare quando il totem svanisce."
+            "Quando l’abilità viene attivata il personaggio crea un totem sul terreno entro un raggio d’azione di 3.",
+            " Il totem è un Servitore a tutti gli effetti (vedi “Compendio dei Poteri”), tuttavia si tratta di un oggetto inanimato che rimane immobile sul luogo prescelto per 12 round. Per quanto il totem non sia utile in combattimento di per se, può essere utilizzato con tutti quei poteri che richiedono la presenza di un spirito materializzato.",
+            " Il totem può essere distrutto normalmente, a tal fine tutte le sue statistiche difensive sono pari a quelle del personaggio stesso, con eccezione dei PV che sono pari al 50%. Essendo un oggetto inanimato però non può parare o schivare gli attacchi, e possiede le normali immunità agli effetti di tali oggetti.",
+            " Il totem non può essere spostato, ma è possibile lanciare un nuovo totem per sostituirlo. Ogni potere presente su di un totem scompare quando il totem svanisce."
         ],
         "id": "TotemSciamanico",
         "image": "1f27fedeaa4b3edd611b8a42e2d85c9c.jpeg",
@@ -1076,6 +1168,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "1",
+            "pa_liv": "0",
             "pf_base": "1",
             "pf_liv": "0",
             "pp": "0",
@@ -1099,6 +1192,7 @@
             "mana": "0",
             "mm": "0",
             "pa": "0",
+            "pa_liv": "0",
             "pf_base": "1",
             "pf_liv": "0",
             "pp": "0",
