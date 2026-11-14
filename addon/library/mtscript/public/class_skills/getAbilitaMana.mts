@@ -4,7 +4,12 @@
 [h: iBase = fetchClassSkillProp(sLibAbilita,"Mana")]
 
 [h, if(iBase == ""): return(0,0)]
-[h, if(isNumber(iBase)): return(0, iBase)]
 
-[h: sCallback = json.get(iBase, "callback")]
-[h, macro("class_skills/macros/" + sCallback + "@this"): json.append(oToken, sLibAbilita, "Mana")]
+[h: iManaMod =  fetchClassSkillProp(sLibAbilita,"mana_liv")]
+[h, if(!isNumber(iManaMod)): iManaMod = 0]
+[h: iLiv = getLivelloAbilita(oToken,sLibAbilita)]
+
+[h: iManaTot = iBase+iManaMod*iLiv]
+[h, if(iManaTot < 0): iManaTot = 0]
+
+[h: return(0, iManaTot)]
