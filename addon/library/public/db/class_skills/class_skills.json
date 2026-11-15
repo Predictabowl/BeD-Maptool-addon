@@ -22,8 +22,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "AssoloVirtuoso": {
@@ -47,8 +47,8 @@
             "pf_liv": "-2",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "AttaccoPerforante": {
@@ -72,8 +72,8 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "AzionesullaDifensiva": {
@@ -97,8 +97,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "CambiareBersaglio": {
@@ -122,8 +122,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "CavalcaTempesta": {
@@ -149,13 +149,13 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "EROICA",
-            "tags": []
+            "tags": [],
+            "tipo": "EROICA"
         }
     },
     "ColpireAlleSpalle": {
         "descrizione": [
-            "Mentre l'abilità è attiva gli Attacchi alle Spalle ottengono un bonus di +%s LA."
+            "Mentre l’abilità è attiva gli Attacchi alle Spalle ottengono un bonus di +%s LA."
         ],
         "id": "ColpireAlleSpalle",
         "image": "scoundrel_backlash-icon.png",
@@ -174,8 +174,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "Contrattacco": {
@@ -200,8 +200,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "ControlloArea": {
@@ -210,7 +210,7 @@
         ],
         "id": "ControlloArea",
         "image": "spell_hunter_focusingshot.png",
-        "nome_decorativo": "Controllo dell'area",
+        "nome_decorativo": "Controllo dell’area",
         "properties": {
             "cleaner": "1",
             "durata": "1",
@@ -225,8 +225,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "Disimpegno": {
@@ -251,8 +251,8 @@
             "pf_liv": "-2",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "EnergiaDistruttiva": {
@@ -277,13 +277,13 @@
             "pf_liv": "-5",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "Esecuzione": {
         "descrizione": [
-            "Mentre l'abilità è attiva gli Attacchi di opportunità ottengono un bonus di +%s LA."
+            "Mentre l’abilità è attiva gli Attacchi di opportunità ottengono un bonus di +%s LA."
         ],
         "id": "Esecuzione",
         "image": "inv_sword_48.png",
@@ -302,8 +302,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "Espansione": {
@@ -328,8 +328,8 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "FerociaFerina": {
@@ -353,14 +353,14 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "FiorituraPrematura": {
         "descrizione": [
-            "Grazie a questa capacità il personaggio è in grado di velocizzare drasticamente l'effetto dei propri incantesimi di guarigione. ",
-            "Mentre l'abilità è attiva gli incantesimi di Supporto che curano punti vita lanciati hanno effetto istantaneo invece di applicare una cura sul tempo. Grazie a questa abilità il personaggio può lanciare un incantesimo di cura su una creatura anche se questa già beneficia di tale incantesimo, perché l'effetto diventa istantaneo."
+            "Grazie a questa capacità il personaggio è in grado di velocizzare drasticamente l’effetto dei propri incantesimi di guarigione. ",
+            "Mentre l’abilità è attiva gli incantesimi di Supporto che curano punti vita lanciati hanno effetto istantaneo invece di applicare una cura sul tempo. Grazie a questa abilità il personaggio può lanciare un incantesimo di cura su una creatura anche se questa già beneficia di tale incantesimo, perché l’effetto diventa istantaneo."
         ],
         "id": "FiorituraPrematura",
         "image": "ability_evoker_emeraldblossom.png",
@@ -379,8 +379,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "Fratturare": {
@@ -404,13 +404,13 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "FuriaSciamanica": {
         "descrizione": [
-            "Mentre l'abilità è attiva lo sciamano ottiene un bonus di +12 (+24) MDI."
+            "Mentre l’abilità è attiva lo sciamano ottiene un bonus di +12 (+24) MDI."
         ],
         "id": "FuriaSciamanica",
         "image": "spell_nature_shamanrage.png",
@@ -429,10 +429,10 @@
             "pf_liv": "-5",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
             "tags": [
                 "Sovraccarico Spiritico"
-            ]
+            ],
+            "tipo": "PECULIARE"
         }
     },
     "FuroreElementale": {
@@ -456,8 +456,37 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
+        }
+    },
+    "Implacabile": {
+        "descrizione": [
+            "Questa abilità è attivabile solamente se il personaggio è ancora in vita ed i suoi PV sono a 0 o meno.",
+            "Quando l’abilità viene attivata il personaggio recupera %s%% dei suoi PV massimi, e si rialza istantaneamente se Atterrato. Tuttavia subisce un effetto Sanguinamento per 5 round che gli infligge il 20%% dei propri PV massimi come danni al termine di ogni round.",
+            "L’abilità non può essere attivata se si è ancora sotto il suo effetto di Sanguinamento."
+        ],
+        "id": "Implacabile",
+        "image": "spell_nature_reincarnation.png",
+        "nome_decorativo": "Implacabile",
+        "properties": {
+            "cleaner": "0",
+            "durata": "Termine Round",
+            "estenuante": "10",
+            "eventi": "",
+            "mana": "0",
+            "mana_liv": "0",
+            "mm": "0",
+            "pa": "0",
+            "pa_liv": "0",
+            "pf_base": "5",
+            "pf_liv": "0",
+            "pp": "0",
+            "propertyType": "CLASS_SKILL",
+            "tags": [
+                "Estenuante"
+            ],
+            "tipo": "PECULIARE"
         }
     },
     "Inarrestabile": {
@@ -481,10 +510,10 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
             "tags": [
                 "Estenuante"
-            ]
+            ],
+            "tipo": "ATTIVA"
         }
     },
     "Incalzare": {
@@ -509,8 +538,8 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "InfusioneAbissale": {
@@ -534,8 +563,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "IntrappolareAnima": {
@@ -545,7 +574,7 @@
         ],
         "id": "IntrappolareAnima",
         "image": "spell_shadow_haunting.png",
-        "nome_decorativo": "Intrappolare l'anima",
+        "nome_decorativo": "Intrappolare l’anima",
         "properties": {
             "cleaner": "0",
             "durata": "0",
@@ -560,10 +589,10 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
             "tags": [
                 "Frammento d’Anima"
-            ]
+            ],
+            "tipo": "ATTIVA"
         }
     },
     "IspirazioneBardica": {
@@ -596,8 +625,8 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "LegameSpettrale": {
@@ -625,10 +654,10 @@
             "pf_liv": "-5",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
             "tags": [
                 "Frammento d’Anima"
-            ]
+            ],
+            "tipo": "PECULIARE"
         }
     },
     "LegameSpettrale(Old)": {
@@ -637,7 +666,7 @@
             "Mentre questa abilità è attiva, ogni incantesimo con raggio 5 o inferiore lanciato dal necromante ha come origine la creatura prescelta, in questo modo l’incantatore può rimanere a distanza di sicurezza ed utilizzare incantesimi a corto raggio.",
             "Se un incantesimo agisce sul lanciatore, allora il bersaglio del legame spettrale sarà automaticamente il recipiente dell’effetto.",
             "Tutti gli incantesimi lanciati tramite Legame Spettrale hanno una penalità sul costo PP di +10%.",
-            "La creatura non può essere più lontana di 20 caselle dal necromante, altrimenti l'abilità non funziona.",
+            "La creatura non può essere più lontana di 20 caselle dal necromante, altrimenti l’abilità non funziona.",
             "Gli incantesimi si azionano in modo indipendente dalla creatura a cui vengono legati."
         ],
         "id": "LegameSpettrale(Old)",
@@ -657,8 +686,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "MaestroEvocatore": {
@@ -684,8 +713,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "ManoSpettrale": {
@@ -713,10 +742,10 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
             "tags": [
                 "Frammento d’Anima"
-            ]
+            ],
+            "tipo": "PECULIARE"
         }
     },
     "Necropotenza": {
@@ -741,10 +770,10 @@
             "pf_liv": "-5",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
             "tags": [
                 "Frammento d’Anima"
-            ]
+            ],
+            "tipo": "PECULIARE"
         }
     },
     "NessunaPieta": {
@@ -770,8 +799,8 @@
             "pf_liv": "-6",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "PattoDiSangue": {
@@ -798,8 +827,8 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "Perseveranza": {
@@ -824,8 +853,8 @@
             "pf_liv": "-1",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "PotenzaEmpia": {
@@ -849,10 +878,10 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
             "tags": [
                 "Necrofuria"
-            ]
+            ],
+            "tipo": "PECULIARE"
         }
     },
     "PotenzaPrimordiale": {
@@ -881,13 +910,13 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "EROICA",
-            "tags": []
+            "tags": [],
+            "tipo": "EROICA"
         }
     },
     "PrecisioneLetale": {
         "descrizione": [
-            "Il primo colpo portato dopo che l'abilità è stata attivata, e mentre è ancora attiva, infligge danno bonus pari a +1d6 per livello dell’abilità. Tale danno è considerato danno dell’arma."
+            "Il primo colpo portato dopo che l’abilità è stata attivata, e mentre è ancora attiva, infligge danno bonus pari a +1d6 per livello dell’abilità. Tale danno è considerato danno dell’arma."
         ],
         "id": "PrecisioneLetale",
         "image": "scoundrel-14-20.png",
@@ -906,13 +935,13 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "Prontezza": {
         "descrizione": [
-            "Fin quando l'abilità è attiva il personaggio ottiene un bonus di +%s VA."
+            "Fin quando l’abilità è attiva il personaggio ottiene un bonus di +%s VA."
         ],
         "id": "Prontezza",
         "image": "petbattle_speed.png",
@@ -931,8 +960,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "RapiditadiLancio": {
@@ -957,13 +986,13 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "Rappresaglia": {
         "descrizione": [
-            "Mentre questa abilità è attiva, ogni qual volta il personaggio subisce danno da un attacco allora guadagna un bonus di +3 MDI per livello dell’abilità sul prossimo attacco se inflitto contro l’attaccante.",
+            "Mentre questa abilità è attiva, ogni qual volta il personaggio subisce danno da un attacco allora guadagna un bonus di +%s MDI sul prossimo attacco se inflitto contro l’attaccante.",
             "Tale effetto non è cumulabile e si considera solamente l’ultimo attaccante che ha inflitto danno, l’effetto svanisce al primo attacco inflitto o quando l’abilità viene disattivata."
         ],
         "id": "Rappresaglia",
@@ -983,8 +1012,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "RichiamoSpiritico": {
@@ -1010,8 +1039,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "RicostituenteNaturale": {
@@ -1035,8 +1064,8 @@
             "pf_liv": "-4",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "RiflessiFulminei": {
@@ -1060,8 +1089,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "RitualeOscuro": {
@@ -1086,10 +1115,10 @@
             "pf_liv": "-5",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
             "tags": [
                 "Frammento d’Anima"
-            ]
+            ],
+            "tipo": "PECULIARE"
         }
     },
     "SchivareProdigioso": {
@@ -1113,8 +1142,8 @@
             "pf_liv": "-6",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "SonataBardica": {
@@ -1146,8 +1175,8 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "SonataLibera": {
@@ -1178,8 +1207,8 @@
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "PECULIARE",
-            "tags": []
+            "tags": [],
+            "tipo": "PECULIARE"
         }
     },
     "TempraPossente": {
@@ -1203,8 +1232,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "TotemSciamanico": {
@@ -1231,8 +1260,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     },
     "VolontaFerrea": {
@@ -1256,8 +1285,8 @@
             "pf_liv": "0",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
-            "tipo": "ATTIVA",
-            "tags": []
+            "tags": [],
+            "tipo": "ATTIVA"
         }
     }
 }

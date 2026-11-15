@@ -11,7 +11,7 @@
 [h, if(target != sAttacker): return(0,"")]
 
 [h: jParams = json.set("","attackerRappresaglia",target)]
-[h: eventInstaller(source,"On_Attack",sLibName,buildClassSkillMacroName("Rappresaglia","onAttack"),jParams)]
+[h: eventInstaller(source,"On_Attack",sLibName,buildClassSkillMacroName(sLibName,"onAttack"),jParams)]
 
 [h: sNome = fetchClassSkillProp(sLibName,"nome_decorativo")]
 [h: sImg = fetchClassSkillImage(sLibName)]

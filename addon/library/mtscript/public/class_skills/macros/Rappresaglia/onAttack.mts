@@ -8,8 +8,9 @@
 
 [h, if(target != sAttacker): return(0,"")]
 
-[h: iLiv = getLivelloAbilita(source,sLibName)]
-[h: iMDI = iLiv*3]
+[h, macro(buildClassSkillMacroName(sLibName,"calcBonus")): source]
+[h: iMDI = macro.return]
+
 [h: pushStatModifier(source,"Mod_Danno_Out",iMDI/100)]
 
 [h: sNome = fetchClassSkillProp(sLibName,"nome_decorativo")]

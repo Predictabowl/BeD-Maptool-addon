@@ -1,4 +1,4 @@
-[h: target = arg(0)]
+[h, if(argCount() > 0) : target = arg(0); target = currentToken()]
 
 [h: switchToken(target)]
 [h: iMod = Parare + Risolutezza -5 +(Vigore -6)*3]
