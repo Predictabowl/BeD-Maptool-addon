@@ -1,11 +1,13 @@
 [h: source = json.get(macro.args,"source")]
 [h: target = json.get(macro.args,"target")]
-[h: sAttaccante = json.get(macro.args,"attaccante")]
+
+[h: spellName = "Difendere"]
+
+[h: aTargets = getDaMemoriaRound(source, spellName)]
 
 [macro("mechanics/getMarchioProp@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,"PROTEZIONE")]
 [h: origine = macro.return]
 
-[h: spellName = "Difendere"]
 [h: fluffName = fetchSpellProp(spellName,"nome_decorativo")]
 [h: effectName = strformat("Attivazione Marchio %{fluffName}")]
 [h: iBonus = -0.45]
@@ -13,9 +15,8 @@
 [h: iRange = getSpellRange(origine,spellName)]
 [h: iDistance = getDistance(origine,0,source)]
 
-
 [h,if(iDistance > iRange): return(0,"")]
-[h, if(target == sAttaccante), code:{
+[h, if(json.contains(aTargets, target)), code:{
 	
 	[macro("core/pushStatModifier@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,"Mod_Danno_In",iBonus)]
 	[h: iImage = fetchSpellImage("Difendere")]
