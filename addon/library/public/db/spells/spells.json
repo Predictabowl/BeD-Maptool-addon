@@ -3533,9 +3533,11 @@
   },
   "Decomposizione": {
     "descrizione": [
-      "Un miasma verdastro si espande nell’aria, corrodendo carne, metallo e speranza. Le vittime intrappolate nella nube sentono la propria struttura disfarsi lentamente, come se un esercito di vermi invisibili scavasse tra le loro fibre. Il processo è inarrestabile e persistente, e per chi già porta il veleno nel sangue la putrefazione divora con furia ancora maggiore.",
       "Ogni vittima subisce 1 danno per LP ogni round di durata.",
       "Condizionale: Se la vittima è sotto effetto di Veleno allora il danno incrementa a 1d2."
+    ],
+    "flavour": [
+      "Un miasma verdastro si espande nell’aria, corrodendo carne, metallo e speranza. Le vittime intrappolate nella nube sentono la propria struttura disfarsi lentamente, come se un esercito di vermi invisibili scavasse tra le loro fibre. Il processo è inarrestabile e persistente, e per chi già porta il veleno nel sangue la putrefazione divora con furia ancora maggiore."
     ],
     "id": "Decomposizione",
     "image": "spell_fire_felfirenova.png",
