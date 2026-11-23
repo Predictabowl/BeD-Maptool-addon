@@ -1,6 +1,6 @@
 [h: source = arg(0)]
 
-[h:sNomeAb = "SonataLibera"]
+[h:sNomeAb = "SonataIstintiva"]
 
 
 [macro("class_skills/applicaAuraSonata@lib:it.aldinucci.piero.bed.maptool.ruleset"): json.append(source,1)]

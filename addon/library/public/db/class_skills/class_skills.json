@@ -606,22 +606,18 @@
         "nome_decorativo": "Ispirazione Bardica",
         "properties": {
             "cleaner": "1",
-            "durata": "4",
+            "durata": {
+                "callback": "modOnAnotherAbility",
+                "params": ["ArpeggioArmonico", 4, 1 ]
+            },
             "estenuante": "0",
             "eventi": "",
-            "mana": "36",
+            "mana": "47",
             "mana_liv": "-7",
             "mm": "0",
-            "pa": {
-                "callback": "modOnAnotherAbility",
-                "params": [
-                    "ArpeggioArmonico",
-                    2,
-                    -1
-                ]
-            },
+            "pa": "2",
             "pa_liv": "0",
-            "pf_base": "14",
+            "pf_base": "16",
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
@@ -1149,29 +1145,25 @@
     "SonataBardica": {
         "descrizione": [
             "Attiva un Motivo di Sonata.",
-            "Mentre l’abilità è attiva il Motivo scelto si applica sul bardo e su tutti gli alleati nell’area d’effetto, ma il bardo subisce una penalità di -1 PA massimi ed attuali fin quando l’abilità è attiva."
+            "Mentre l’abilità è attiva il Motivo scelto si applica sul bardo e su tutti gli alleati nell’area d’effetto."
         ],
         "id": "SonataBardica",
         "image": "bard_talent_pathfinder_wotr_wiki_guide_64x.png",
         "nome_decorativo": "Sonata Bardica",
         "properties": {
             "cleaner": "1",
-            "durata": "4",
+            "durata": {
+                "callback": "modOnAnotherAbility",
+                "params": ["ArpeggioArmonico", 4, 1 ]
+            },
             "estenuante": "0",
             "eventi": "",
-            "mana": "36",
+            "mana": "45",
             "mana_liv": "-7",
             "mm": "0",
-            "pa": {
-                "callback": "modOnAnotherAbility",
-                "params": [
-                    "ArpeggioArmonico",
-                    2,
-                    -1
-                ]
-            },
+            "pa": "3",
             "pa_liv": "0",
-            "pf_base": "14",
+            "pf_base": "16",
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
@@ -1179,31 +1171,28 @@
             "tipo": "PECULIARE"
         }
     },
-    "SonataLibera": {
+    "SonataIstintiva": {
         "descrizione": [
-            "Attiva un Motivo Sonata esattamente come Sonata Bardica, ma non infligge penalità ."
+            "Il bardo è suona istintivamente, ed intesse la musica senza la necessità di focalizzarsi su essa.",
+            "Attiva un Motivo Sonata esattamente come Sonata Bardica."
         ],
-        "id": "SonataLibera",
+        "id": "SonataIstintiva",
         "image": "inv_misc_trinket_goldenharp.png",
-        "nome_decorativo": "Sonata Libera",
+        "nome_decorativo": "Sonata Istitinva",
         "properties": {
             "cleaner": "1",
-            "durata": "4",
+            "durata": {
+                "callback": "modOnAnotherAbility",
+                "params": ["ArpeggioArmonico", 4, 1 ]
+            },
             "estenuante": "0",
             "eventi": "",
-            "mana": "47",
+            "mana": "56",
             "mana_liv": "-7",
             "mm": "0",
-            "pa": {
-                "callback": "modOnAnotherAbility",
-                "params": [
-                    "ArpeggioArmonico",
-                    2,
-                    -1
-                ]
-            },
+            "pa": "0",
             "pa_liv": "0",
-            "pf_base": "17",
+            "pf_base": "19",
             "pf_liv": "-3",
             "pp": "0",
             "propertyType": "CLASS_SKILL",
