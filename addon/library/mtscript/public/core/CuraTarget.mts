@@ -7,6 +7,7 @@
 	[if(argCount()>3): origine = arg(3); origine = ""]
 	[if(argCount()>4): verbose = arg(4); verbose = 1]
 	[if(argCount()>5): bMsg = arg(5); bMsg = 1]
+	[bSkipEvents = 0]
 };{
 	[h: id = json.get(macro.args,"target")]
 	[h: source = json.get(macro.args,"source")]
