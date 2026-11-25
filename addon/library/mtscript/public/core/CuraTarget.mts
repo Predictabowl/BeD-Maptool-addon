@@ -13,12 +13,13 @@
 	[h: guar = json.get(macro.args,"valore")]
 	[h: origine = json.get(macro.args,"origine")]
 	[h: verbose = json.get(macro.args,"verbose")]
-	[h: bMsg =json.get(macro.args,"messaggi")]
+	[h: bMsg = json.get(macro.args,"messaggi")]
+	[h: bSkipEvents = json.get(macro.args,"skipEvents")]
 }]
 [h, if (origine != ""): origine = origine+" "]
 
 
-[h, if(source != ""), code:{
+[h, if(source != "" && bSkipEvents != 1), code:{
 	[target = id]
 	[h: eventParam = json.set("","cura",guar)]
 	[macro("events/runEvents@this"): json.set("","source",source,"target",target,"event","On_Heal","eventParam",eventParam)]
